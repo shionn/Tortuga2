@@ -6,6 +6,7 @@ import com.jme3.light.AmbientLight;
 import com.jme3.light.DirectionalLight;
 import com.jme3.light.LightProbe;
 import com.jme3.material.Material;
+import com.jme3.material.Materials;
 import com.jme3.math.ColorRGBA;
 import com.jme3.math.Quaternion;
 import com.jme3.math.Vector3f;
@@ -74,7 +75,7 @@ public class Tortuga extends SimpleApplication {
 //		waterProcessor = new SimpleWaterProcessor(assetManager);
 
 		FilterPostProcessor fpp = new FilterPostProcessor(assetManager);
-		fpp.addFilter(buildShadow(sun));
+//		fpp.addFilter(buildShadow(sun));
 		fpp.addFilter(buildWater(sun));
 
 		viewPort.addProcessor(fpp);
@@ -82,7 +83,7 @@ public class Tortuga extends SimpleApplication {
 
 	private Spatial buildBoat() {
 //		Texture texture = assetManager.loadTexture("Models/Textures/colormap.png");
-//		Material mat = new Material(assetManager, "Common/MatDefs/Light/Lighting.j3md");
+//		Material mat = new Material(assetManager, Materials.LIGHTING);
 //		mat.setBoolean("UseMaterialColors", true);
 //		mat.setBoolean("UseVertexColor", true);
 //		mat.setBoolean("SeparateTexCoord", true);
@@ -95,13 +96,21 @@ public class Tortuga extends SimpleApplication {
 		boat.depthFirstTraversal(new SceneGraphVisitorAdapter() {
 			@Override
 			public void visit(Geometry geom) {
-				Material material = geom.getMaterial();
-				Object value = material.getParam("BaseColorMap").getValue();
-				material.setParam("EmissiveMap", value);
-				material.setParam("BaseColor", ColorRGBA.White.mult(.4f));
-				material.setParam("Emissive", ColorRGBA.White.mult(.6f));
-//				value = material.getParam("BaseColor").getValue();
-//				material.setParam("Emissive", value);
+//				Material material = geom.getMaterial();
+//				Object value = material.getParam("BaseColorMap").getValue();
+//				material.setParam("EmissiveMap", value);
+//				material.setParam("BaseColor", ColorRGBA.White.mult(.4f));
+//				material.setParam("Emissive", ColorRGBA.White.mult(.6f));
+
+				Material original = geom.getMaterial();
+				Object texture = original.getParam("BaseColorMap").getValue();
+				Material mat = new Material(assetManager, Materials.LIGHTING);
+				mat.setParam("DiffuseMap", texture);
+//				mat.setParam("UseMaterialColors", true);
+//				mat.setParam("Diffuse", ColorRGBA.White);
+//				mat.setParam("Ambient", ColorRGBA.White.mult(.5f));
+
+				geom.setMaterial(mat);
 			}
 		});
 //		boat.addMatParamOverride(new MatParamOverride(VarType.Vector4, "Emissive", ColorRGBA.White.mult(.4f)));
