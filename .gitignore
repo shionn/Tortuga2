@@ -1,0 +1,16 @@
+/.gradle/
+/.nb-gradle/
+/build/
+/private/
+/*.dll
+/*.dylib
+/*.so
+
+/.idea/
+
+local.properties
+.classpath
+.settings/
+.vscode/
+target/
+.project
