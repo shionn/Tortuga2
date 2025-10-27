@@ -13,7 +13,6 @@ import com.jme3.renderer.queue.RenderQueue.ShadowMode;
 import com.jme3.scene.Node;
 import com.jme3.scene.Spatial;
 import com.jme3.shadow.DirectionalLightShadowFilter;
-import com.jme3.shadow.EdgeFilteringMode;
 import com.jme3.terrain.geomipmap.TerrainLodControl;
 import com.jme3.terrain.geomipmap.TerrainQuad;
 import com.jme3.terrain.geomipmap.lodcalc.DistanceLodCalculator;
@@ -56,7 +55,7 @@ public class Tortuga extends SimpleApplication {
 		sceneNode.attachChild(loadMap());
 		DirectionalLight sun = new DirectionalLight(new Vector3f(-1, -1, -1).normalize(), ColorRGBA.White);
 		rootNode.addLight(sun);
-		sceneNode.addLight(buildProbe(sceneNode));
+//		sceneNode.addLight(buildProbe(sceneNode));
 
 		rootNode.attachChild(sceneNode);
 		rootNode.attachChild(createSky());
@@ -65,8 +64,8 @@ public class Tortuga extends SimpleApplication {
 //		waterProcessor = new SimpleWaterProcessor(assetManager);
 
 		FilterPostProcessor fpp = new FilterPostProcessor(assetManager);
-		fpp.addFilter(buildWater(sun));
 		fpp.addFilter(buildShadow(sun));
+		fpp.addFilter(buildWater(sun));
 
 		viewPort.addProcessor(fpp);
 	}
@@ -95,34 +94,45 @@ public class Tortuga extends SimpleApplication {
         water.setMaxAmplitude(2f);
         water.setFoamTexture((Texture2D) assetManager.loadTexture("Common/MatDefs/Water/Textures/foam2.jpg"));
         water.setRefractionStrength(0.2f);
-//        water.setWaterHeight(initialWaterHeight);
+		water.setWaterHeight(0);
+		water.setSpeed(.5f);
 		return water;
-//		FilterPostProcessor fpp = new FilterPostProcessor(assetManager);
-//		fpp.addFilter(water);
-//		return fpp;
 	}
 
 	private Spatial loadMap() {
-		Material material = new Material(assetManager, "Common/MatDefs/Terrain/Terrain.j3md");
+		Material material = new Material(assetManager, "Common/MatDefs/Terrain/TerrainLighting.j3md");
 		material.setBoolean("useTriPlanarMapping", false);
-		material.setTexture("Alpha", assetManager.loadTexture("Textures/Terrain/splat/alphamap.png"));
+		material.setBoolean("WardIso", true);
+		material.setTexture("AlphaMap", assetManager.loadTexture("Textures/Terrain/splat/alphamap.png"));
 
 		Texture grass = assetManager.loadTexture("Textures/Terrain/splat/grass.jpg");
 		grass.setWrap(WrapMode.Repeat);
-		material.setTexture("Tex1", grass);
-		material.setFloat("Tex1Scale", grassScale);
+		Texture grassN = assetManager.loadTexture("Textures/Terrain/splat/grass_normal.jpg");
+		grassN.setWrap(WrapMode.Repeat);
+		material.setTexture("DiffuseMap", grass);
+		material.setTexture("NormalMap", grassN);
+		material.setFloat("DiffuseMap_0_scale", 64);
+//		material.setFloat("Tex1Scale", grassScale);
 
 		// DIRT texture
 		Texture dirt = assetManager.loadTexture("Textures/Terrain/splat/dirt.jpg");
 		dirt.setWrap(WrapMode.Repeat);
-		material.setTexture("Tex2", dirt);
-		material.setFloat("Tex2Scale", dirtScale);
+		Texture dirtN = assetManager.loadTexture("Textures/Terrain/splat/dirt_normal.png");
+		dirtN.setWrap(WrapMode.Repeat);
+		material.setTexture("DiffuseMap_1", dirt);
+		material.setTexture("NormalMap_1", dirtN);
+		material.setFloat("DiffuseMap_1_scale", 16);
+//		material.setFloat("DiffuseMap_2", dirtScale);
 
 		// ROCK texture
 		Texture rock = assetManager.loadTexture("Textures/Terrain/splat/road.jpg");
 		rock.setWrap(WrapMode.Repeat);
-		material.setTexture("Tex3", rock);
-		material.setFloat("Tex3Scale", rockScale);
+		Texture rockN = assetManager.loadTexture("Textures/Terrain/splat/road_normal.png");
+		rockN.setWrap(WrapMode.Repeat);
+		material.setTexture("DiffuseMap_2", rock);
+		material.setTexture("NormalMap_2", rockN);
+		material.setFloat("DiffuseMap_2_scale", 128);
+//		material.setFloat("Tex3Scale", rockScale);
 
 		Texture heightMapImage = assetManager.loadTexture("Textures/Terrain/splat/mountains1024.jpg");
 		AbstractHeightMap heightmap = new ImageBasedHeightMap(heightMapImage.getImage(), 1f);
@@ -134,6 +144,7 @@ public class Tortuga extends SimpleApplication {
 		control.setLodCalculator(new DistanceLodCalculator(65, 2.7f)); // patch size, and a multiplier
 		terrain.setLocalScale(2f, 0.5f, 2f);
 		terrain.setLocalTranslation(0, -60, 0);
+		terrain.setShadowMode(ShadowMode.Receive);
 //		terrain.setShadowMode(ShadowMode.CastAndReceive);
 
 		return terrain;
@@ -144,8 +155,8 @@ public class Tortuga extends SimpleApplication {
 		dlsf.setLight(sun);
 		dlsf.setEnabled(true);
 //		dlsf.setLambda(.1f);
-		dlsf.setEdgesThickness(100);
-		dlsf.setEdgeFilteringMode(EdgeFilteringMode.PCF8);
+//		dlsf.setEdgesThickness(100);
+//		dlsf.setEdgeFilteringMode(EdgeFilteringMode.PCF8);
 //		dlsf.setShadowZExtend(10);
 		dlsf.setShadowIntensity(.8f);
 		return dlsf;
