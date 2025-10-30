@@ -18,13 +18,13 @@
 transform = Transform3D(101, 0, 0, 0, 1, 0, 0, 0, 101, 0, 0, 0)
 
 [node name="rocks-sand-c2" parent="." instance=ExtResource("2_77dp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4783573, 0, -9.17427)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.4783573, 0, -9.17427)
 
 [node name="ship-large2" parent="." instance=ExtResource("3_5tkv4")]
 transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -2.2296145, -1.1020808, 8.051644)
 
 [node name="ship-wreck2" parent="." instance=ExtResource("8_uty7l")]
-transform = Transform3D(0.70710677, 0.6123724, 0.35355338, -0.70710677, 0.6123724, 0.35355338, 0, -0.5, 0.8660254, -10, 0, -10)
+transform = Transform3D(0.9258903, -0.3271777, -0.18889616, 0.3741423, 0.8634335, 0.33837914, 0.05238915, -0.38397592, 0.9218557, -9.224075, -0.43822098, -11.850965)
 
 [node name="structure-fence2" parent="." instance=ExtResource("9_45l4g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -17)
