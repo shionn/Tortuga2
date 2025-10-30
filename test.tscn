@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dxkgapjtrucm5" path="res://assets/pirate/ship-wreck.glb" id="8_uty7l"]
 [ext_resource type="PackedScene" uid="uid://c82g8o71h2ofm" path="res://assets/pirate/structure-fence.glb" id="9_45l4g"]
 [ext_resource type="PackedScene" uid="uid://b64bffoiqdexy" path="res://assets/pirate/structure-platform-dock-small.glb" id="10_4uo0j"]
-[ext_resource type="PackedScene" uid="uid://c5o4y67ic3vrp" path="res://assets/character/character-male-b.glb" id="11_77dp3"]
+[ext_resource type="PackedScene" uid="uid://bx7xynpbusro6" path="res://player.tscn" id="11_77dp3"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -67,14 +67,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.5, -5)
 [node name="structure-platform-dock-small2" parent="Island" instance=ExtResource("10_4uo0j")]
 transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -2, 0, 4)
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.49999997, -0.22414389, 0.8365163, 1.5426819e-08, 0.9659259, 0.25881907, -0.86602545, 0.12940954, -0.48296285, 18, 7, -11)
-
-[node name="character-male-b2" parent="." instance=ExtResource("11_77dp3")]
-transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 10, 0.50000006, -3)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.34202006, 0.9396927, 0, -0.9396927, -0.34202006, -26, 16, -2)
 light_indirect_energy = 2.0
 light_bake_mode = 1
 shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("11_77dp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.838689, 1.6434529, -4.3372307)

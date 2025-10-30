@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bvyn2cpekf7ag"
-path="res://.godot/imported/patch-sand.glb-fbd7b9dbc91b51729c5c5c891548d06d.scn"
+path="res://.godot/imported/patch-sand.glb-beb4045d048d8e6b1041015b0a4987fd.scn"
 
 [deps]
 
-source_file="res://assets/pirate/patch-sand.glb"
-dest_files=["res://.godot/imported/patch-sand.glb-fbd7b9dbc91b51729c5c5c891548d06d.scn"]
+source_file="res:///assets/pirate/patch-sand.glb"
+dest_files=["res://.godot/imported/patch-sand.glb-beb4045d048d8e6b1041015b0a4987fd.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_convex.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
