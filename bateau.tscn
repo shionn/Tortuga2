@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dac1cbndt3704"]
+
+[ext_resource type="PackedScene" uid="uid://djvw5nqnu6f6w" path="res://assets/pirate/ship-pirate-large.glb" id="1_esu1g"]
+[ext_resource type="Script" uid="uid://duuuaun43orxg" path="res://boat.gd" id="2_ete15"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ete15"]
+size = Vector3(4, 4, 10)
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+
+[node name="ship-pirate-large2" parent="." instance=ExtResource("1_esu1g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="ship-pirate-large2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+spring_length = 10.0
+
+[node name="Camera3D" type="Camera3D" parent="ship-pirate-large2/SpringArm3D"]
+
+[node name="truc" type="Area3D" parent="."]
+script = ExtResource("2_ete15")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="truc"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9, -1)
+shape = SubResource("BoxShape3D_ete15")
+
+[connection signal="area_entered" from="truc" to="truc" method="_on_area_entered"]
+[connection signal="body_entered" from="truc" to="truc" method="_on_body_entered"]
+[connection signal="body_shape_entered" from="truc" to="truc" method="_on_body_shape_entered"]

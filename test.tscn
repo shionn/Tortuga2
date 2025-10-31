@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://dsqow0eck281j"]
+[gd_scene load_steps=14 format=3 uid="uid://dsqow0eck281j"]
 
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://water/WaterPlane.tscn" id="1_00tp4"]
 [ext_resource type="PackedScene" uid="uid://dduiadwp0ahav" path="res://assets/pirate/rocks-sand-c.glb" id="2_77dp3"]
-[ext_resource type="PackedScene" uid="uid://yxvr2sg18lx5" path="res://assets/pirate/ship-large.glb" id="3_5tkv4"]
 [ext_resource type="PackedScene" uid="uid://bvyn2cpekf7ag" path="res://assets/pirate/patch-sand.glb" id="4_0m0f1"]
 [ext_resource type="PackedScene" uid="uid://dvmo6h4nm5lcb" path="res://assets/pirate/patch-grass.glb" id="5_b0q6j"]
 [ext_resource type="PackedScene" uid="uid://nuvlejq8qd0s" path="res://assets/pirate/palm-bend.glb" id="6_mhym6"]
@@ -10,7 +9,12 @@
 [ext_resource type="PackedScene" uid="uid://dxkgapjtrucm5" path="res://assets/pirate/ship-wreck.glb" id="8_uty7l"]
 [ext_resource type="PackedScene" uid="uid://c82g8o71h2ofm" path="res://assets/pirate/structure-fence.glb" id="9_45l4g"]
 [ext_resource type="PackedScene" uid="uid://b64bffoiqdexy" path="res://assets/pirate/structure-platform-dock-small.glb" id="10_4uo0j"]
+[ext_resource type="PackedScene" uid="uid://dac1cbndt3704" path="res://bateau.tscn" id="11_5tkv4"]
 [ext_resource type="PackedScene" uid="uid://bx7xynpbusro6" path="res://player.tscn" id="11_77dp3"]
+[ext_resource type="Script" uid="uid://duuuaun43orxg" path="res://boat.gd" id="12_5tkv4"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_0m0f1"]
+radius = 1.0
 
 [node name="Node3D" type="Node3D"]
 
@@ -19,9 +23,6 @@ transform = Transform3D(101, 0, 0, 0, 1, 0, 0, 0, 101, 0, 0, 0)
 
 [node name="rocks-sand-c2" parent="." instance=ExtResource("2_77dp3")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.4783573, 0, -9.17427)
-
-[node name="ship-large2" parent="." instance=ExtResource("3_5tkv4")]
-transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -2.2296145, -1.1020808, 8.051644)
 
 [node name="ship-wreck2" parent="." instance=ExtResource("8_uty7l")]
 transform = Transform3D(0.9258903, -0.3271777, -0.18889616, 0.3741423, 0.8634335, 0.33837914, 0.05238915, -0.38397592, 0.9218557, -9.224075, -0.43822098, -11.850965)
@@ -75,3 +76,13 @@ shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("11_77dp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.838689, 1.6434529, -4.3372307)
+
+[node name="Bateau" parent="." instance=ExtResource("11_5tkv4")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -2.4, 0, 8.099999)
+
+[node name="TestArea3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.5, -5)
+script = ExtResource("12_5tkv4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestArea3D"]
+shape = SubResource("SphereShape3D_0m0f1")
