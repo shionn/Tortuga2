@@ -1,6 +1,5 @@
 extends CharacterBody3D
 
-
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
@@ -10,12 +9,13 @@ const JUMP_VELOCITY = 4.5
 @onready var _animation := $Pivot/character/AnimationPlayer as AnimationPlayer
 
 func _physics_process(delta: float) -> void:
-	# ftomber si on est en l'air
+
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
-	_handle_move()
-	_handle_jump()
+	if _camera.current :
+		_handle_move()
+		_handle_jump()
 
 	move_and_slide()
 
