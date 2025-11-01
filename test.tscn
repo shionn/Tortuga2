@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dsqow0eck281j"]
+[gd_scene load_steps=15 format=3 uid="uid://dsqow0eck281j"]
 
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://water/WaterPlane.tscn" id="1_00tp4"]
 [ext_resource type="PackedScene" uid="uid://dduiadwp0ahav" path="res://assets/pirate/rocks-sand-c.glb" id="2_77dp3"]
@@ -11,6 +11,14 @@
 [ext_resource type="PackedScene" uid="uid://b64bffoiqdexy" path="res://assets/pirate/structure-platform-dock-small.glb" id="10_4uo0j"]
 [ext_resource type="PackedScene" uid="uid://dac1cbndt3704" path="res://bateau.tscn" id="11_5tkv4"]
 [ext_resource type="PackedScene" uid="uid://bx7xynpbusro6" path="res://player.tscn" id="11_77dp3"]
+[ext_resource type="Texture2D" uid="uid://dkbvuj0x8xueg" path="res://assets/sand.png" id="12_5tkv4"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_5tkv4"]
+size = Vector2(1000, 1000)
+orientation = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0m0f1"]
+albedo_texture = ExtResource("12_5tkv4")
 
 [node name="Node3D" type="Node3D"]
 
@@ -77,3 +85,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.838689, 1.6434529, -4.33723
 
 [node name="Bateau" parent="." instance=ExtResource("11_5tkv4")]
 transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -2.4, 0, 8.099999)
+
+[node name="ground" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ground"]
+cast_shadow = 0
+lod_bias = 0.001
+mesh = SubResource("QuadMesh_5tkv4")
+surface_material_override/0 = SubResource("StandardMaterial3D_0m0f1")
