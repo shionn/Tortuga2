@@ -1,63 +1,141 @@
-[gd_scene load_steps=6 format=3 uid="uid://c8y6go07dabnn"]
+[gd_scene load_steps=9 format=3 uid="uid://c8y6go07dabnn"]
 
 [ext_resource type="PackedScene" uid="uid://bdxu0f56q80mw" path="res://assets/town/wall-door.glb" id="1_bbxwq"]
 [ext_resource type="PackedScene" uid="uid://bn2k1c6mt0j5l" path="res://assets/town/wall-window-shutters.glb" id="2_83rxu"]
 [ext_resource type="PackedScene" uid="uid://6v1bhowsnc7u" path="res://assets/town/wall-detail-horizontal.glb" id="3_jimjm"]
 [ext_resource type="PackedScene" uid="uid://bax6i7talpivu" path="res://assets/town/stairs-stone-round.glb" id="4_jimjm"]
-[ext_resource type="PackedScene" uid="uid://bi815v5v0sl8q" path="res://assets/town/planks.glb" id="5_iyupi"]
+[ext_resource type="PackedScene" uid="uid://7ho8oexfjeam" path="res://assets/town/roof-high-left.glb" id="5_ya2vs"]
+[ext_resource type="PackedScene" uid="uid://cnyqkjvjwoe5w" path="res://assets/town/roof-high-right.glb" id="6_08fns"]
+[ext_resource type="PackedScene" uid="uid://d24y2qoa6ycia" path="res://assets/town/roof-high.glb" id="7_8r8ek"]
+[ext_resource type="PackedScene" uid="uid://dbk72njpbd4xb" path="res://assets/town/wall-detail-cross.glb" id="8_yxo8k"]
 
 [node name="TortugaAuberge" type="Node3D"]
 
 [node name="wall-door2" parent="." instance=ExtResource("1_bbxwq")]
-transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 1, 0, 1)
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 1, 0, 0.9)
 
-[node name="wall-window-shutters2" parent="." instance=ExtResource("2_83rxu")]
-transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 0, 0, 1)
+[node name="wall-window-shutters20" parent="." instance=ExtResource("2_83rxu")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 0, 1, 0.90000004)
+
+[node name="wall-window-shutters18" parent="." instance=ExtResource("2_83rxu")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 1, 1, 0.9)
+
+[node name="wall-window-shutters19" parent="." instance=ExtResource("2_83rxu")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 1, 2, 0.9)
 
 [node name="wall-window-shutters3" parent="." instance=ExtResource("2_83rxu")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1, 0, 1)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0.9)
 
 [node name="wall-window-shutters4" parent="." instance=ExtResource("2_83rxu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0, 1)
+
+[node name="wall-window-shutters16" parent="." instance=ExtResource("2_83rxu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 1, 1)
 
 [node name="wall-window-shutters5" parent="." instance=ExtResource("2_83rxu")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, 2)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, 1.9)
+
+[node name="wall-window-shutters14" parent="." instance=ExtResource("2_83rxu")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 1, 1.9)
+
+[node name="wall-window-shutters15" parent="." instance=ExtResource("2_83rxu")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 1, 1.9)
 
 [node name="wall-window-shutters6" parent="." instance=ExtResource("2_83rxu")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 0, 2)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 0, 1.9)
 
 [node name="wall-window-shutters7" parent="." instance=ExtResource("2_83rxu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0, 0)
+
+[node name="wall-window-shutters21" parent="." instance=ExtResource("2_83rxu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 1, 0)
+
+[node name="wall-window-shutters22" parent="." instance=ExtResource("2_83rxu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 1, -1)
 
 [node name="wall-window-shutters8" parent="." instance=ExtResource("2_83rxu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0, -1)
 
 [node name="wall-detail-horizontal2" parent="." instance=ExtResource("3_jimjm")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1, 0, -2)
+transform = Transform3D(0.0024068737, 0.0022515985, -0.9999946, 0.0010928169, 0.9999969, 0.0022542267, 0.9999965, -0.0010982219, 0.0024044123, 0, 0, -1.9)
 
 [node name="wall-detail-horizontal3" parent="." instance=ExtResource("3_jimjm")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, -2)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, -1.9)
 
 [node name="wall-detail-horizontal4" parent="." instance=ExtResource("3_jimjm")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4, 0, -1)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.9, 0, -1)
 
 [node name="wall-window-shutters9" parent="." instance=ExtResource("2_83rxu")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4, 0, 1)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.9, 0, 1)
+
+[node name="wall-window-shutters27" parent="." instance=ExtResource("2_83rxu")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.9, 1, 1)
+
+[node name="wall-window-shutters28" parent="." instance=ExtResource("2_83rxu")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.9, 1, -1)
+
+[node name="wall-window-shutters29" parent="." instance=ExtResource("2_83rxu")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.9, 1, 0)
 
 [node name="wall-window-shutters10" parent="." instance=ExtResource("2_83rxu")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4, 0, 0)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.9, 0, 0)
 
-[node name="wall-window-shutters11" parent="." instance=ExtResource("2_83rxu")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, -2)
+[node name="wall-window-shutters24" parent="." instance=ExtResource("2_83rxu")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 1, -1.9)
+
+[node name="wall-window-shutters25" parent="." instance=ExtResource("2_83rxu")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, 1, -1.9)
+
+[node name="wall-window-shutters30" parent="." instance=ExtResource("2_83rxu")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 2, -1.9)
+
+[node name="wall-window-shutters31" parent="." instance=ExtResource("2_83rxu")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, 2, -1.9)
+
+[node name="wall-window-shutters26" parent="." instance=ExtResource("2_83rxu")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 1, -1.9)
+
+[node name="wall-window-shutters23" parent="." instance=ExtResource("2_83rxu")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1, -1.9)
 
 [node name="wall-window-shutters12" parent="." instance=ExtResource("2_83rxu")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 0, -2)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 0, -1.9)
 
 [node name="wall-window-shutters13" parent="." instance=ExtResource("2_83rxu")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, 0, -2)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, 0, -1.9)
 
 [node name="stairs-stone-round2" parent="." instance=ExtResource("4_jimjm")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 0, -1)
 
-[node name="planks2" parent="." instance=ExtResource("5_iyupi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+[node name="roof-high-left2" parent="." instance=ExtResource("5_ya2vs")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 2, 1)
+
+[node name="roof-high-left5" parent="." instance=ExtResource("5_ya2vs")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2, 3, 0)
+
+[node name="roof-high-left3" parent="." instance=ExtResource("5_ya2vs")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 0, 2, -1)
+
+[node name="roof-high-left4" parent="." instance=ExtResource("5_ya2vs")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 1, 3, -1)
+
+[node name="roof-high-right2" parent="." instance=ExtResource("6_08fns")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 1)
+
+[node name="roof-high-right4" parent="." instance=ExtResource("6_08fns")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 2, -1)
+
+[node name="roof-high-right5" parent="." instance=ExtResource("6_08fns")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2, 3, -1)
+
+[node name="roof-high-right3" parent="." instance=ExtResource("6_08fns")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="roof-high-right6" parent="." instance=ExtResource("6_08fns")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 0)
+
+[node name="roof-high2" parent="." instance=ExtResource("7_8r8ek")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3, 2, 0)
+
+[node name="wall-detail-cross2" parent="." instance=ExtResource("8_yxo8k")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 2, 0.9)
