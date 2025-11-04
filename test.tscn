@@ -1,78 +1,92 @@
-[gd_scene load_steps=15 format=3 uid="uid://dsqow0eck281j"]
+[gd_scene load_steps=16 format=3 uid="uid://dsqow0eck281j"]
 
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://water/WaterPlane.tscn" id="1_00tp4"]
-[ext_resource type="PackedScene" uid="uid://dduiadwp0ahav" path="res://assets/pirate/rocks-sand-c.glb" id="2_77dp3"]
-[ext_resource type="PackedScene" uid="uid://bvyn2cpekf7ag" path="res://assets/pirate/patch-sand.glb" id="4_0m0f1"]
-[ext_resource type="PackedScene" uid="uid://dvmo6h4nm5lcb" path="res://assets/pirate/patch-grass.glb" id="5_b0q6j"]
-[ext_resource type="PackedScene" uid="uid://nuvlejq8qd0s" path="res://assets/pirate/palm-bend.glb" id="6_mhym6"]
-[ext_resource type="PackedScene" uid="uid://m5x8alnnip8v" path="res://assets/pirate/grass-patch.glb" id="7_a3se8"]
-[ext_resource type="PackedScene" uid="uid://dxkgapjtrucm5" path="res://assets/pirate/ship-wreck.glb" id="8_uty7l"]
-[ext_resource type="PackedScene" uid="uid://c82g8o71h2ofm" path="res://assets/pirate/structure-fence.glb" id="9_45l4g"]
-[ext_resource type="PackedScene" uid="uid://b64bffoiqdexy" path="res://assets/pirate/structure-platform-dock-small.glb" id="10_4uo0j"]
+[ext_resource type="PackedScene" uid="uid://c8y6go07dabnn" path="res://tortuga_auberge.tscn" id="4_ykrsh"]
 [ext_resource type="PackedScene" uid="uid://dac1cbndt3704" path="res://bateau.tscn" id="11_5tkv4"]
 [ext_resource type="PackedScene" uid="uid://bx7xynpbusro6" path="res://player.tscn" id="11_77dp3"]
 [ext_resource type="Texture2D" uid="uid://dkbvuj0x8xueg" path="res://assets/sand.png" id="12_5tkv4"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_5tkv4"]
-size = Vector2(1000, 1000)
-orientation = 1
+[sub_resource type="Gradient" id="Gradient_xersf"]
+offsets = PackedFloat32Array(0.2, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_00tp4"]
+noise_type = 2
+frequency = 0.03
+cellular_jitter = 3.0
+cellular_return_type = 0
+domain_warp_enabled = true
+domain_warp_type = 1
+domain_warp_amplitude = 50.0
+domain_warp_fractal_type = 2
+domain_warp_fractal_lacunarity = 1.5
+domain_warp_fractal_gain = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_77dp3"]
+noise = SubResource("FastNoiseLite_00tp4")
+color_ramp = SubResource("Gradient_xersf")
+seamless = true
+
+[sub_resource type="Terrain3DMaterial" id="Terrain3DMaterial_5tkv4"]
+_shader_parameters = {
+&"bias_distance": 512.0,
+&"blend_sharpness": 0.5,
+&"depth_blur": 0.0,
+&"enable_macro_variation": true,
+&"enable_projection": true,
+&"flat_terrain_normals": false,
+&"macro_variation1": Color(1, 1, 1, 1),
+&"macro_variation2": Color(1, 1, 1, 1),
+&"macro_variation_slope": 0.333,
+&"mipmap_bias": 1.0,
+&"noise1_angle": 0.0,
+&"noise1_offset": Vector2(0.5, 0.5),
+&"noise1_scale": 0.04,
+&"noise2_scale": 0.076,
+&"noise_texture": SubResource("NoiseTexture2D_77dp3"),
+&"projection_threshold": 0.8
+}
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0m0f1"]
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+backlight_enabled = true
+backlight = Color(0.5, 0.5, 0.5, 1)
+distance_fade_mode = 1
+distance_fade_min_distance = 128.0
+distance_fade_max_distance = 96.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_b0q6j"]
+generated_type = 1
+height_offset = 0.5
+material_override = SubResource("StandardMaterial3D_0m0f1")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Image" id="Image_mhym6"]
+data = {
+"data": PackedByteArray(255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 255, 73, 146, 36, 73, 146, 36, 95, 132, 95, 115, 170, 170, 170, 170, 255, 0, 64, 2, 36, 73, 146, 36, 255, 123, 0, 0, 80, 80, 85, 85, 255, 0, 72, 146, 36, 73, 146, 36, 255, 123, 0, 0, 84, 85, 85, 85),
+"format": "DXT5 RGBA8",
+"height": 32,
+"mipmaps": true,
+"width": 32
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_a3se8"]
+image = SubResource("Image_mhym6")
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_uty7l"]
+name = "sand"
 albedo_texture = ExtResource("12_5tkv4")
+normal_texture = SubResource("ImageTexture_a3se8")
+
+[sub_resource type="Terrain3DAssets" id="Terrain3DAssets_45l4g"]
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_b0q6j")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_uty7l")])
 
 [node name="Node3D" type="Node3D"]
-
-[node name="WaterPlane" parent="." instance=ExtResource("1_00tp4")]
-transform = Transform3D(101, 0, 0, 0, 1, 0, 0, 0, 101, 0, 0, 0)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="rocks-sand-c2" parent="." instance=ExtResource("2_77dp3")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.4783573, 0, -9.17427)
-
-[node name="ship-wreck2" parent="." instance=ExtResource("8_uty7l")]
-transform = Transform3D(0.9258903, -0.3271777, -0.18889616, 0.3741423, 0.8634335, 0.33837914, 0.05238915, -0.38397592, 0.9218557, -9.224075, -0.43822098, -11.850965)
-
-[node name="structure-fence2" parent="." instance=ExtResource("9_45l4g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -17)
-
-[node name="Island" type="Node3D" parent="."]
-
-[node name="patch-sand2" parent="Island" instance=ExtResource("4_0m0f1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0431633, 0, 1.3511953)
-
-[node name="patch-sand3" parent="Island" instance=ExtResource("4_0m0f1")]
-transform = Transform3D(0.69055426, 0, -0.7232806, 0, 1, 0, 0.7232806, 0, 0.69055426, 5.205625, 0, 2.2498837)
-
-[node name="patch-sand4" parent="Island" instance=ExtResource("4_0m0f1")]
-transform = Transform3D(0.6073897, 0, 0.79440403, 0, 1, 0, -0.79440403, 0, 0.6073897, -1.0232334, 0, -2.9933472)
-
-[node name="patch-sand5" parent="Island" instance=ExtResource("4_0m0f1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.18439, 0, -6.910328)
-
-[node name="patch-sand6" parent="Island" instance=ExtResource("4_0m0f1")]
-transform = Transform3D(0.65054893, 0, 0.7594644, 0, 1, 0, -0.7594644, 0, 0.65054893, 10.426167, 0, 0.64492893)
-
-[node name="patch-sand7" parent="Island" instance=ExtResource("4_0m0f1")]
-transform = Transform3D(-0.47901365, 0, 0.87780744, 0, 1, 0, -0.87780744, 0, -0.47901365, 7.58179, 9.536743e-07, -7.5588884)
-
-[node name="patch-sand8" parent="Island" instance=ExtResource("4_0m0f1")]
-transform = Transform3D(0.36015967, 0, -0.93289065, 0, 1, 0, 0.93289065, 0, 0.36015967, 11.852693, 0, -4.9421782)
-
-[node name="patch-grass3" parent="Island" instance=ExtResource("5_b0q6j")]
-transform = Transform3D(1.5588455, 0, 1.1928204, 0, 1, 0, -0.9000001, 0, 2.0660253, 8.244358, 0.20000005, -3.092904)
-
-[node name="patch-grass4" parent="Island" instance=ExtResource("5_b0q6j")]
-transform = Transform3D(-1.7386664, 0, 0.61744905, 0, 1, 0, -0.46587408, 0, -2.3043518, 2.244358, 0.20000005, -3.092904)
-
-[node name="palm-bend2" parent="Island" instance=ExtResource("6_mhym6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0.1, 0)
-
-[node name="grass-patch2" parent="Island" instance=ExtResource("7_a3se8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.5, -5)
-
-[node name="structure-platform-dock-small2" parent="Island" instance=ExtResource("10_4uo0j")]
-transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -2, 0, 4)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.34202006, 0.9396927, 0, -0.9396927, -0.34202006, -26, 16, -2)
@@ -81,16 +95,22 @@ light_bake_mode = 1
 shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("11_77dp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.838689, 1.6434529, -4.3372307)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.838689, 16.07585, -31.745834)
 
 [node name="Bateau" parent="." instance=ExtResource("11_5tkv4")]
-transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -2.4, 0, 8.099999)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.4, 10, 8.1)
 
-[node name="ground" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
+[node name="WaterPlane" parent="." instance=ExtResource("1_00tp4")]
+transform = Transform3D(2045, 0, 0, 0, 1, 0, 0, 0, 2045, 0, 10, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="ground"]
-cast_shadow = 0
-lod_bias = 0.001
-mesh = SubResource("QuadMesh_5tkv4")
-surface_material_override/0 = SubResource("StandardMaterial3D_0m0f1")
+[node name="Tortuga" type="Node3D" parent="."]
+
+[node name="TortugaAuberge" parent="Tortuga" instance=ExtResource("4_ykrsh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.56113, 13.579203, -35.43884)
+
+[node name="Terrain3D" type="Terrain3D" parent="."]
+data_directory = "res://terrain"
+material = SubResource("Terrain3DMaterial_5tkv4")
+assets = SubResource("Terrain3DAssets_45l4g")
+top_level = true
+metadata/_edit_lock_ = true
