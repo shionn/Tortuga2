@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dx8mf6okqe5rg"]
+[gd_scene load_steps=10 format=3 uid="uid://dx8mf6okqe5rg"]
 
 [ext_resource type="PackedScene" uid="uid://dac1cbndt3704" path="res://bateau.tscn" id="1_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://water/WaterPlane.tscn" id="2_036b0"]
 [ext_resource type="PackedScene" uid="uid://dh1ggm1b16mh5" path="res://assets/mine/tortuga.glb" id="4_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://dvmo6h4nm5lcb" path="res://assets/pirate/patch-grass.glb" id="4_ioo17"]
 [ext_resource type="PackedScene" uid="uid://bx7xynpbusro6" path="res://player.tscn" id="4_pkg7o"]
+[ext_resource type="PackedScene" uid="uid://c8y6go07dabnn" path="res://tortuga_auberge.tscn" id="5_036b0"]
+[ext_resource type="PackedScene" uid="uid://68p1mdtc5dsi" path="res://assets/pirate/rocks-b.glb" id="7_wse8f"]
+[ext_resource type="PackedScene" uid="uid://c1sc7qjitvtsi" path="res://assets/pirate/rocks-a.glb" id="8_ic0uy"]
+[ext_resource type="PackedScene" uid="uid://bf22buyf0a347" path="res://assets/pirate/rocks-c.glb" id="9_k3n1d"]
 
 [node name="World" type="Node3D"]
 
@@ -11,7 +16,7 @@
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 
 [node name="Player" parent="." instance=ExtResource("4_pkg7o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83.051765, 8.968449, 20.692783)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.198475, 3.140501, -47.22146)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.34202006, 0.9396927, 0, -0.9396927, -0.34202006, -26, 16, -2)
@@ -22,5 +27,67 @@ shadow_enabled = true
 [node name="WaterPlane" parent="." instance=ExtResource("2_036b0")]
 transform = Transform3D(2045, 0, 0, 0, 1, 0, 0, 0, 2045, 0, 0, 0)
 
-[node name="tortuga" parent="." instance=ExtResource("4_aqk2v")]
+[node name="TortugaNode" type="Node3D" parent="."]
+
+[node name="patch-grass2" parent="TortugaNode" instance=ExtResource("4_ioo17")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 101.52045, 0.5000036, 51.4064)
+
+[node name="patch-grass3" parent="TortugaNode" instance=ExtResource("4_ioo17")]
+transform = Transform3D(-0.09127549, 0, 4.9991665, 0, 5, 0, -4.9991665, 0, -0.09127549, 66.833466, 0.49999976, 4.8667793)
+
+[node name="patch-grass7" parent="TortugaNode" instance=ExtResource("4_ioo17")]
+transform = Transform3D(0.30689782, 0, 4.990572, 0, 5, 0, -4.990572, 0, 0.30689782, 62.327457, 0.5000074, 14.465626)
+
+[node name="patch-grass4" parent="TortugaNode" instance=ExtResource("4_ioo17")]
+transform = Transform3D(0.3706295, 0, -4.9862447, 0, 4.9999995, 0, 4.9862447, 0, 0.3706295, 62.58001, 0.49999595, 30.985199)
+
+[node name="patch-grass5" parent="TortugaNode" instance=ExtResource("4_ioo17")]
+transform = Transform3D(-0.18923616, 0, 4.9964175, 0, 4.9999995, 0, -4.9964175, 0, -0.18923616, 103.05289, 0.5000036, 39.723694)
+
+[node name="patch-grass9" parent="TortugaNode" instance=ExtResource("4_ioo17")]
+transform = Transform3D(-2.2039268, 0, 4.4880624, 0, 4.9999995, 0, -4.4880624, 0, -2.2039268, 94.37546, 0.5000036, 25.440273)
+
+[node name="patch-grass10" parent="TortugaNode" instance=ExtResource("4_ioo17")]
+transform = Transform3D(0.35139382, 0, -4.9876366, 0, 5, 0, 4.9876366, 0, 0.35139382, 85.30421, 0.5000036, 12.781059)
+
+[node name="patch-grass11" parent="TortugaNode" instance=ExtResource("4_ioo17")]
+transform = Transform3D(0.35139382, 0, -4.9876366, 0, 5, 0, 4.9876366, 0, 0.35139382, 76.34403, 0.5000036, 5.391039)
+
+[node name="patch-grass12" parent="TortugaNode" instance=ExtResource("4_ioo17")]
+transform = Transform3D(-1.6557014, 0, -4.7179074, 0, 5, 0, 4.7179074, 0, -1.6557014, 76.52552, 1.4999998, 22.05553)
+
+[node name="patch-grass13" parent="TortugaNode" instance=ExtResource("4_ioo17")]
+transform = Transform3D(3.2571821, 0, -3.7935162, 0, 5.0000005, 0, 3.7935162, 0, 3.2571821, 90.166756, 1.499996, 39.64831)
+
+[node name="patch-grass14" parent="TortugaNode" instance=ExtResource("4_ioo17")]
+transform = Transform3D(-4.428833, 0, -2.3206544, 0, 5.0000005, 0, 2.3206544, 0, -4.428833, 82.60124, 1.499996, 32.102604)
+
+[node name="patch-grass6" parent="TortugaNode" instance=ExtResource("4_ioo17")]
+transform = Transform3D(3.5888088, 0, -3.481444, 0, 4.999999, 0, 3.481444, 0, 3.5888088, 86.43967, 0.5000036, 52.139202)
+
+[node name="patch-grass8" parent="TortugaNode" instance=ExtResource("4_ioo17")]
+transform = Transform3D(2.9783912, 0, -4.0161157, 0, 4.9999995, 0, 4.0161157, 0, 2.9783912, 73.24274, 0.5000036, 43.242126)
+
+[node name="TortugaAuberge" parent="TortugaNode" instance=ExtResource("5_036b0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 28.241098, 0.479074, -53.166214)
+
+[node name="tortuga" parent="TortugaNode" instance=ExtResource("4_aqk2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 214.18991, 0, -184.66998)
+
+[node name="rocks-b2" parent="." instance=ExtResource("7_wse8f")]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 229.80261, 0.500021, -345.6221)
+
+[node name="rocks-b3" parent="." instance=ExtResource("7_wse8f")]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 229.80261, 0.500021, -345.6221)
+
+[node name="rocks-a2" parent="." instance=ExtResource("8_ic0uy")]
+transform = Transform3D(-1.0212708, 0, 19.97391, 0, 20, 0, -19.97391, 0, -1.0212708, 77.94537, 0.49997902, -312.66083)
+
+[node name="rocks-a3" parent="." instance=ExtResource("8_ic0uy")]
+transform = Transform3D(-24.49131, 0, -5.017544, 0, 25, 0, 5.017544, 0, -24.49131, 323.27124, 0.49997902, -323.31088)
+
+[node name="rocks-c2" parent="." instance=ExtResource("9_k3n1d")]
+transform = Transform3D(24.49306, 0, -5.008995, 0, 25, 0, 5.008995, 0, 24.49306, 391.60886, 0.49997902, -296.60165)
+
+[node name="rocks-c3" parent="." instance=ExtResource("9_k3n1d")]
+transform = Transform3D(5.3845625, 0, 14.000234, 0, 14.999999, 0, -14.000234, 0, 5.3845625, 96.799385, 0.49997902, -188.77654)
