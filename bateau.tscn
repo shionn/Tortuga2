@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://dac1cbndt3704"]
 
-[ext_resource type="PackedScene" uid="uid://ma5xc1dct0ng" path="res://assets/pirate/ship-pirate-large.glb" id="1_esu1g"]
+[ext_resource type="PackedScene" uid="uid://ma5xc1dct0ng" path="res://assets/pirate/boats/ship-pirate-large.glb" id="1_esu1g"]
 [ext_resource type="Script" uid="uid://duuuaun43orxg" path="res://boat.gd" id="2_ete15"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ete15"]
