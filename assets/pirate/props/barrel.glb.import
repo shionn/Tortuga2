@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://f25oaswt3cuq"
-path="res://.godot/imported/barrel.glb-9d1a6d4da70ad60d8f46dddbf5c7696f.scn"
+path="res://.godot/imported/barrel.glb-f11303941a43862421f37edc0e9a52ae.scn"
 
 [deps]
 
-source_file="res://assets/pirate/props/barrel.glb"
-dest_files=["res://.godot/imported/barrel.glb-9d1a6d4da70ad60d8f46dddbf5c7696f.scn"]
+source_file="res:///assets/pirate/props/barrel.glb"
+dest_files=["res://.godot/imported/barrel.glb-f11303941a43862421f37edc0e9a52ae.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

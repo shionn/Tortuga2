@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://18y7vrqa6q77"
-path="res://.godot/imported/tower-square-top-roof-rounded.glb-5ccdf9abb75eaa19feca69aaccb18f48.scn"
+path="res://.godot/imported/tower-square-top-roof-rounded.glb-fcc84ad4b9e29e67979327c873fb4cb2.scn"
 
 [deps]
 
-source_file="res://assets/castle/towers/tower-square-top-roof-rounded.glb"
-dest_files=["res://.godot/imported/tower-square-top-roof-rounded.glb-5ccdf9abb75eaa19feca69aaccb18f48.scn"]
+source_file="res:///assets/castle/towers/tower-square-top-roof-rounded.glb"
+dest_files=["res://.godot/imported/tower-square-top-roof-rounded.glb-fcc84ad4b9e29e67979327c873fb4cb2.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

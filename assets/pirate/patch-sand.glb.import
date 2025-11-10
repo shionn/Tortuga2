@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bvyn2cpekf7ag"
-path="res://.godot/imported/patch-sand.glb-beb4045d048d8e6b1041015b0a4987fd.scn"
+path="res://.godot/imported/patch-sand.glb-fbd7b9dbc91b51729c5c5c891548d06d.scn"
 
 [deps]
 
-source_file="res:///assets/pirate/patch-sand.glb"
-dest_files=["res://.godot/imported/patch-sand.glb-beb4045d048d8e6b1041015b0a4987fd.scn"]
+source_file="res://assets/pirate/patch-sand.glb"
+dest_files=["res://.godot/imported/patch-sand.glb-fbd7b9dbc91b51729c5c5c891548d06d.scn"]
 
 [params]
 

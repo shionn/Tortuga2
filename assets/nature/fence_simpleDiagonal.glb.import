@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://mhels1l1i6gt"
-path="res://.godot/imported/fence_simpleDiagonal.glb-ba81c1495f447b9d5626fb5ca383fdfa.scn"
+path="res://.godot/imported/fence_simpleDiagonal.glb-312c567e0a54a9c799ba469518e58939.scn"
 
 [deps]
 
-source_file="res://assets/nature/fence_simpleDiagonal.glb"
-dest_files=["res://.godot/imported/fence_simpleDiagonal.glb-ba81c1495f447b9d5626fb5ca383fdfa.scn"]
+source_file="res:///assets/nature/fence_simpleDiagonal.glb"
+dest_files=["res://.godot/imported/fence_simpleDiagonal.glb-312c567e0a54a9c799ba469518e58939.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

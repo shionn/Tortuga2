@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b66ksrua8aixn"
-path="res://.godot/imported/fence_bendCenter.glb-c2f136fe775844d2e7d908d516d75e35.scn"
+path="res://.godot/imported/fence_bendCenter.glb-d9c62cf54fa86fcf57c4b0ab6e7b7617.scn"
 
 [deps]
 
-source_file="res://assets/nature/fence_bendCenter.glb"
-dest_files=["res://.godot/imported/fence_bendCenter.glb-c2f136fe775844d2e7d908d516d75e35.scn"]
+source_file="res:///assets/nature/fence_bendCenter.glb"
+dest_files=["res://.godot/imported/fence_bendCenter.glb-d9c62cf54fa86fcf57c4b0ab6e7b7617.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
