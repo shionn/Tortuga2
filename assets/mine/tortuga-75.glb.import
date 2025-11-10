@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://nuvlejq8qd0s"
-path="res://.godot/imported/palm-bend.glb-34a12edc3d992d8341b192dc7ad61e86.scn"
+uid="uid://dh1ggm1b16mh5"
+path="res://.godot/imported/tortuga-75.glb-7e6e8421c80bf9821d9366833d4221fe.scn"
 
 [deps]
 
-source_file="res:///assets/pirate/plant/palm-bend.glb"
-dest_files=["res://.godot/imported/palm-bend.glb-34a12edc3d992d8341b192dc7ad61e86.scn"]
+source_file="res://assets/mine/tortuga-75.glb"
+dest_files=["res://.godot/imported/tortuga-75.glb-7e6e8421c80bf9821d9366833d4221fe.scn"]
 
 [params]
 
