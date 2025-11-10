@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dx8mf6okqe5rg"]
+[gd_scene load_steps=14 format=3 uid="uid://dx8mf6okqe5rg"]
 
 [ext_resource type="PackedScene" uid="uid://dac1cbndt3704" path="res://bateau.tscn" id="1_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://water/WaterPlane.tscn" id="2_036b0"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dmaafib4va3vr" path="res://assets/pirate/flag/flag-pirate-high-pennant.glb" id="10_wse8f"]
 [ext_resource type="PackedScene" uid="uid://cxya32nmglnq4" path="res://tortuga_wall.tscn" id="11_ic0uy"]
 [ext_resource type="PackedScene" uid="uid://d2d7oty4ebqab" path="res://tortuga_capitainerie.tscn" id="12_k3n1d"]
+[ext_resource type="PackedScene" uid="uid://bvyn2cpekf7ag" path="res://assets/pirate/patch-sand.glb" id="13_2o6r5"]
 
 [node name="World" type="Node3D"]
 
@@ -127,3 +128,6 @@ transform = Transform3D(2.5526812, 0, 1.5760138, 0, 3.0000005, 0, -1.5760138, 0,
 
 [node name="TortugaCapitainerie" parent="." instance=ExtResource("12_k3n1d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.465139, -0.9058405, 0.0020108223)
+
+[node name="patch-sand2" parent="." instance=ExtResource("13_2o6r5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.15869, 0.5, 22.995789)
