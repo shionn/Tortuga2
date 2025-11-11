@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c7t8de7fwy8al"
-path="res://.godot/imported/hedge-large-curved.glb-a4c238485a176703abe570a31cfbf386.scn"
+path="res://.godot/imported/hedge-large-curved.glb-0d4f35c8fbb39ce69dc90c2bff9b478a.scn"
 
 [deps]
 
-source_file="res://assets/town/fence-hedge/hedge-large-curved.glb"
-dest_files=["res://.godot/imported/hedge-large-curved.glb-a4c238485a176703abe570a31cfbf386.scn"]
+source_file="res:///assets/town/fence-hedge/hedge-large-curved.glb"
+dest_files=["res://.godot/imported/hedge-large-curved.glb-0d4f35c8fbb39ce69dc90c2bff9b478a.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

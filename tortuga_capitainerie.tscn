@@ -29,7 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://dj2jytbjf6lck" path="res://assets/town/roof/roof.glb" id="15_ttdk3"]
 [ext_resource type="PackedScene" uid="uid://c3kfygcrdkb66" path="res://assets/town/roof/roof-flat.glb" id="17_16yrr"]
 [ext_resource type="PackedScene" uid="uid://g11svthqgtcs" path="res://assets/town/banner-green.glb" id="17_ttdk3"]
-[ext_resource type="PackedScene" uid="uid://cgwwol2ja1lfe" path="res://assets/town/overhang.glb" id="18_s634d"]
+[ext_resource type="PackedScene" uid="uid://cgwwol2ja1lfe" path="res://assets/town/props/overhang.glb" id="18_s634d"]
 [ext_resource type="PackedScene" uid="uid://dx4s7axo4o001" path="res://assets/town/props/stall.glb" id="19_y4ccv"]
 [ext_resource type="PackedScene" uid="uid://bkylul71s3oe7" path="res://assets/town/props/stall-bench.glb" id="21_kugcr"]
 
@@ -473,6 +473,11 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.67573845, 1.4499999,
 
 [node name="banner-green3" parent="Capitainerie/Stair" instance=ExtResource("17_ttdk3")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.67573845, 1.4499999, -1.5)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Capitainerie/Stair"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.5, 2.5, -0.5)
+shadow_enabled = true
+distance_fade_enabled = true
 
 [node name="roof" type="Node3D" parent="Capitainerie"]
 

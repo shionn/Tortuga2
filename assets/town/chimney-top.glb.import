@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bvssfm8gng07x"
-path="res://.godot/imported/chimney-top.glb-df7a2b8b9b6568e2d7fd4f416d561932.scn"
+path="res://.godot/imported/chimney-top.glb-4f300f0b181ddf72968606d8edfaa488.scn"
 
 [deps]
 
-source_file="res://assets/town/chimney-top.glb"
-dest_files=["res://.godot/imported/chimney-top.glb-df7a2b8b9b6568e2d7fd4f416d561932.scn"]
+source_file="res:///assets/town/chimney-top.glb"
+dest_files=["res://.godot/imported/chimney-top.glb-4f300f0b181ddf72968606d8edfaa488.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
