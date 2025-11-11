@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dru71m0k1pta1"
-path="res://.godot/imported/crate.glb-d559fa26c38329843d90de41de11a65c.scn"
+path="res://.godot/imported/crate.glb-b67461c8d1a9d4f681eef7c382262bab.scn"
 
 [deps]
 
-source_file="res://assets/pirate/props/crate.glb"
-dest_files=["res://.godot/imported/crate.glb-d559fa26c38329843d90de41de11a65c.scn"]
+source_file="res:///assets/pirate/props/crate.glb"
+dest_files=["res://.godot/imported/crate.glb-b67461c8d1a9d4f681eef7c382262bab.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

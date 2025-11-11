@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dckvtvj57ydmh"
-path="res://.godot/imported/cart.glb-5f0f8c6116ee8fabc72dfaefb3039eba.scn"
+path="res://.godot/imported/cart.glb-52c63af27c53d039a9de5249b50afdc8.scn"
 
 [deps]
 
-source_file="res://assets/town/cart.glb"
-dest_files=["res://.godot/imported/cart.glb-5f0f8c6116ee8fabc72dfaefb3039eba.scn"]
+source_file="res:///assets/town/cart.glb"
+dest_files=["res://.godot/imported/cart.glb-52c63af27c53d039a9de5249b50afdc8.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

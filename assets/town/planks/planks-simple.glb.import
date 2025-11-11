@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bs2i6jgk7ixh6"
-path="res://.godot/imported/structure-platform.glb-e0af101ae0cdd1208e2a47479795a1c8.scn"
+uid="uid://vw74rm8d4xum"
+path="res://.godot/imported/planks-simple.glb-f25a7f09821624761c32ef0f7d28e249.scn"
 
 [deps]
 
-source_file="res:///assets/pirate/structures/structure-platform.glb"
-dest_files=["res://.godot/imported/structure-platform.glb-e0af101ae0cdd1208e2a47479795a1c8.scn"]
+source_file="res:///assets/town/planks/planks-simple.glb"
+dest_files=["res://.godot/imported/planks-simple.glb-f25a7f09821624761c32ef0f7d28e249.scn"]
 
 [params]
 

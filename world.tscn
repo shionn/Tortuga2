@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dx8mf6okqe5rg"]
+[gd_scene load_steps=20 format=3 uid="uid://dx8mf6okqe5rg"]
 
 [ext_resource type="PackedScene" uid="uid://dac1cbndt3704" path="res://bateau.tscn" id="1_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://water/WaterPlane.tscn" id="2_036b0"]
@@ -16,6 +16,9 @@
 [ext_resource type="PackedScene" uid="uid://cxya32nmglnq4" path="res://tortuga_wall.tscn" id="11_ic0uy"]
 [ext_resource type="PackedScene" uid="uid://d2d7oty4ebqab" path="res://tortuga_capitainerie.tscn" id="12_k3n1d"]
 [ext_resource type="PackedScene" uid="uid://dn1b4sjm530aw" path="res://assets/pirate/plant/grass.glb" id="13_2o6r5"]
+[ext_resource type="PackedScene" uid="uid://cy1emgfc3p51p" path="res://assets/pirate/structures/structure-fence-sides.glb" id="17_cbp6q"]
+[ext_resource type="PackedScene" uid="uid://vw74rm8d4xum" path="res://assets/town/planks/planks-simple.glb" id="18_26xuy"]
+[ext_resource type="PackedScene" uid="uid://bw666kf55m31r" path="res://assets/pirate/structures/structure-platform-dock-long.glb" id="19_bc84e"]
 
 [node name="World" type="Node3D"]
 
@@ -23,7 +26,7 @@
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.0513577, 0, 2.2277167)
 
 [node name="Player" parent="." instance=ExtResource("4_pkg7o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.198475, 3.140501, -47.22146)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.198475, 0.81313133, -34.090683)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-1, 8.2150535e-08, 2.990035e-08, 0, -0.34202012, 0.9396926, 8.742278e-08, 0.9396926, 0.34202012, -26, 16, -2)
@@ -392,5 +395,26 @@ transform = Transform3D(0.12976128, 0, 1.9957862, 0, 2, 0, -1.9957862, 0, 0.1297
 [node name="palm-detailed-bend4" parent="TortugaNode/MontagneCapitainerie" instance=ExtResource("8_2u3nc")]
 transform = Transform3D(0.8736978, 0, 1.7990699, 0, 2, 0, -1.7990699, 0, 0.8736978, 20.505272, 1.1, 29.933527)
 
+[node name="structure-fence-sides2" parent="TortugaNode/MontagneCapitainerie" instance=ExtResource("17_cbp6q")]
+transform = Transform3D(0.9156135, 0, 0.40205964, 0, 1, 0, -0.40205964, 0, 0.9156135, -11.641991, 1.2499988, -6.381798)
+
+[node name="planks-simple" parent="TortugaNode/MontagneCapitainerie" instance=ExtResource("18_26xuy")]
+transform = Transform3D(0.92502415, -0.24420033, 2.6192396, 0, 0.76604444, 5.7850885, -0.37990826, -0.59459406, 6.377486, -10.193649, 6.1821833, -2.3039293)
+
+[node name="planks-simple4" parent="TortugaNode/MontagneCapitainerie" instance=ExtResource("18_26xuy")]
+transform = Transform3D(0.9329599, -0.23139092, 3.0333695, 2.184814e-08, 0.7660444, 7.0706644, -0.35998031, -0.59969515, 7.861576, -5.79974, 18.377083, 9.33781)
+
+[node name="planks-simple3" parent="TortugaNode/MontagneCapitainerie" instance=ExtResource("18_26xuy")]
+transform = Transform3D(-0.7950608, -0.38986972, 3.7170296, 8.977561e-08, 0.76604444, 5.1423006, -0.6065297, 0.5110552, -4.872415, -1.9206696, 11.3401575, 3.729897)
+
+[node name="planks-simple5" parent="TortugaNode/MontagneCapitainerie" instance=ExtResource("18_26xuy")]
+transform = Transform3D(0.637424, 0.107234694, -6.1041164, 0, 0.9902679, 1.1133847, 0.77051324, -0.08871226, 5.0497646, -3.6479912, 14.363393, 1.4490407)
+
+[node name="planks-simple2" parent="TortugaNode/MontagneCapitainerie" instance=ExtResource("18_26xuy")]
+transform = Transform3D(-0.40992305, -0.5231706, 2.9886596, 0, 0.81915206, 2.2943053, -0.9121202, 0.23512217, -1.3431567, -14.245804, 2.3290534, -5.1347685)
+
 [node name="grass18" parent="TortugaNode/MontagneCapitainerie" instance=ExtResource("13_2o6r5")]
 transform = Transform3D(1.4169015, 0, 1.4115207, 0, 2, 0, -1.4115207, 0, 1.4169015, -20.871, 1.25, -0.751)
+
+[node name="structure-platform-dock-long" parent="." instance=ExtResource("19_bc84e")]
+transform = Transform3D(0.64694947, 0, -0.76253283, 0, 1, 0, 0.76253283, 0, 0.64694947, -63.978493, 14.506603, 1.7107499)

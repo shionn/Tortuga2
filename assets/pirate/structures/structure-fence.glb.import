@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c82g8o71h2ofm"
-path="res://.godot/imported/structure-fence.glb-996b0a8f25ca8332d310a50f3f086b4e.scn"
+path="res://.godot/imported/structure-fence.glb-6a38077f4d25a710fa0c3a4ee39e043f.scn"
 
 [deps]
 
-source_file="res://assets/pirate/structures/structure-fence.glb"
-dest_files=["res://.godot/imported/structure-fence.glb-996b0a8f25ca8332d310a50f3f086b4e.scn"]
+source_file="res:///assets/pirate/structures/structure-fence.glb"
+dest_files=["res://.godot/imported/structure-fence.glb-6a38077f4d25a710fa0c3a4ee39e043f.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
