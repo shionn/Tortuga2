@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bvn3m6m7g5463"
-path="res://.godot/imported/wall-wood-detail-horizontal.glb-dedcaa4e18b72de378f8d3cee3859b5b.scn"
+path="res://.godot/imported/wall-wood-detail-horizontal.glb-6a144c856897c4662fb29a27863fcf7a.scn"
 
 [deps]
 
-source_file="res:///assets/town/walls/wall-wood-detail-horizontal.glb"
-dest_files=["res://.godot/imported/wall-wood-detail-horizontal.glb-dedcaa4e18b72de378f8d3cee3859b5b.scn"]
+source_file="res://assets/town/walls/wall-wood-detail-horizontal.glb"
+dest_files=["res://.godot/imported/wall-wood-detail-horizontal.glb-6a144c856897c4662fb29a27863fcf7a.scn"]
 
 [params]
 

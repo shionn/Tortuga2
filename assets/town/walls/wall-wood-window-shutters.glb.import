@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://gixsyjseb3bu"
-path="res://.godot/imported/wall-wood-window-shutters.glb-c7f4f712db3dac6c6441c436118b08e9.scn"
+path="res://.godot/imported/wall-wood-window-shutters.glb-4fb80f2dadcb3b1c03b1be27532a49e7.scn"
 
 [deps]
 
-source_file="res:///assets/town/walls/wall-wood-window-shutters.glb"
-dest_files=["res://.godot/imported/wall-wood-window-shutters.glb-c7f4f712db3dac6c6441c436118b08e9.scn"]
+source_file="res://assets/town/walls/wall-wood-window-shutters.glb"
+dest_files=["res://.godot/imported/wall-wood-window-shutters.glb-4fb80f2dadcb3b1c03b1be27532a49e7.scn"]
 
 [params]
 

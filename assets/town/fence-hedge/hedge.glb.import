@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://nnlilh34hq42"
-path="res://.godot/imported/hedge.glb-5aa6855ca7227f5179374b076ad7f9f6.scn"
+path="res://.godot/imported/hedge.glb-57f4aa7ee479d96460aff45544d37bd5.scn"
 
 [deps]
 
-source_file="res:///assets/town/fence-hedge/hedge.glb"
-dest_files=["res://.godot/imported/hedge.glb-5aa6855ca7227f5179374b076ad7f9f6.scn"]
+source_file="res://assets/town/fence-hedge/hedge.glb"
+dest_files=["res://.godot/imported/hedge.glb-57f4aa7ee479d96460aff45544d37bd5.scn"]
 
 [params]
 

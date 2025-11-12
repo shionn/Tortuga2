@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://rmo2r5tklm5x"
-path="res://.godot/imported/wall-wood-block-half.glb-cfc1bdfe7a1378106e5fdc88c21557ba.scn"
+path="res://.godot/imported/wall-wood-block-half.glb-8295186bff482889153b9da25fc6fe9a.scn"
 
 [deps]
 
-source_file="res:///assets/town/walls/wall-wood-block-half.glb"
-dest_files=["res://.godot/imported/wall-wood-block-half.glb-cfc1bdfe7a1378106e5fdc88c21557ba.scn"]
+source_file="res://assets/town/walls/wall-wood-block-half.glb"
+dest_files=["res://.godot/imported/wall-wood-block-half.glb-8295186bff482889153b9da25fc6fe9a.scn"]
 
 [params]
 

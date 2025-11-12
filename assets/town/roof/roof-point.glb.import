@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d3k6pjo57mt0k"
-path="res://.godot/imported/roof-point.glb-2c241c747d678a0877077c8e0e46e2d8.scn"
+path="res://.godot/imported/roof-point.glb-22dae1fb965df31c39afbbfbbd5aa0ef.scn"
 
 [deps]
 
-source_file="res:///assets/town/roof/roof-point.glb"
-dest_files=["res://.godot/imported/roof-point.glb-2c241c747d678a0877077c8e0e46e2d8.scn"]
+source_file="res://assets/town/roof/roof-point.glb"
+dest_files=["res://.godot/imported/roof-point.glb-22dae1fb965df31c39afbbfbbd5aa0ef.scn"]
 
 [params]
 

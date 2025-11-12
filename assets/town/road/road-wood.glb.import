@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dvn116r1fxtxs"
-path="res://.godot/imported/road-wood.glb-3b14e449a3dead34962876e4723aedda.scn"
+path="res://.godot/imported/road-wood.glb-be7a90159a36e401b8c1b47d2d17922f.scn"
 
 [deps]
 
-source_file="res:///assets/town/road/road-wood.glb"
-dest_files=["res://.godot/imported/road-wood.glb-3b14e449a3dead34962876e4723aedda.scn"]
+source_file="res://assets/town/road/road-wood.glb"
+dest_files=["res://.godot/imported/road-wood.glb-be7a90159a36e401b8c1b47d2d17922f.scn"]
 
 [params]
 

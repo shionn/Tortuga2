@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b0qkxu35va12y"
-path="res://.godot/imported/road-corner-inner.glb-bc26f271402243cf6da74ae23cdeee52.scn"
+path="res://.godot/imported/road-corner-inner.glb-301bc9caf5cedc8d9d66c8ba816ae920.scn"
 
 [deps]
 
-source_file="res:///assets/town/road/road-corner-inner.glb"
-dest_files=["res://.godot/imported/road-corner-inner.glb-bc26f271402243cf6da74ae23cdeee52.scn"]
+source_file="res://assets/town/road/road-corner-inner.glb"
+dest_files=["res://.godot/imported/road-corner-inner.glb-301bc9caf5cedc8d9d66c8ba816ae920.scn"]
 
 [params]
 

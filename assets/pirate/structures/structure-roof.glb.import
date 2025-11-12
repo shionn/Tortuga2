@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d4junndljdvo0"
-path="res://.godot/imported/structure-roof.glb-fc61f6993836d298daddf9b4ec636a51.scn"
+path="res://.godot/imported/structure-roof.glb-25f2063520a12bd38d03cfefe8f2f435.scn"
 
 [deps]
 
-source_file="res:///assets/pirate/structures/structure-roof.glb"
-dest_files=["res://.godot/imported/structure-roof.glb-fc61f6993836d298daddf9b4ec636a51.scn"]
+source_file="res://assets/pirate/structures/structure-roof.glb"
+dest_files=["res://.godot/imported/structure-roof.glb-25f2063520a12bd38d03cfefe8f2f435.scn"]
 
 [params]
 

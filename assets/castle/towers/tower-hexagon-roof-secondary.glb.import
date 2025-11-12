@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cqy252iqid0gq"
-path="res://.godot/imported/tower-hexagon-roof-secondary.glb-367ef379853cda84f679ae568bc20320.scn"
+path="res://.godot/imported/tower-hexagon-roof-secondary.glb-423eb0f15468aeb812c1575587284c7f.scn"
 
 [deps]
 
-source_file="res:///assets/castle/towers/tower-hexagon-roof-secondary.glb"
-dest_files=["res://.godot/imported/tower-hexagon-roof-secondary.glb-367ef379853cda84f679ae568bc20320.scn"]
+source_file="res://assets/castle/towers/tower-hexagon-roof-secondary.glb"
+dest_files=["res://.godot/imported/tower-hexagon-roof-secondary.glb-423eb0f15468aeb812c1575587284c7f.scn"]
 
 [params]
 

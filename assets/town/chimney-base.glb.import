@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cjfpfmw4hxv3n"
-path="res://.godot/imported/chimney-base.glb-f08ad6c508434cd45939856c2b56311e.scn"
+path="res://.godot/imported/chimney-base.glb-8ade047cc46061060cb53bbd4f813fb4.scn"
 
 [deps]
 
-source_file="res:///assets/town/chimney-base.glb"
-dest_files=["res://.godot/imported/chimney-base.glb-f08ad6c508434cd45939856c2b56311e.scn"]
+source_file="res://assets/town/chimney-base.glb"
+dest_files=["res://.godot/imported/chimney-base.glb-8ade047cc46061060cb53bbd4f813fb4.scn"]
 
 [params]
 

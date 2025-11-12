@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://baqwl2vqqq3n1"
-path="res://.godot/imported/bed_floor.glb-e0e63568433edced8829af25aa5fa593.scn"
+path="res://.godot/imported/bed_floor.glb-c1b18c43b9c603c4b435cc0099e00aed.scn"
 
 [deps]
 
-source_file="res:///assets/nature/bed_floor.glb"
-dest_files=["res://.godot/imported/bed_floor.glb-e0e63568433edced8829af25aa5fa593.scn"]
+source_file="res://assets/nature/bed_floor.glb"
+dest_files=["res://.godot/imported/bed_floor.glb-c1b18c43b9c603c4b435cc0099e00aed.scn"]
 
 [params]
 

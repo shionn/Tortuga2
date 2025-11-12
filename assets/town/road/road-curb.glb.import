@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://di0a7aprkr5fh"
-path="res://.godot/imported/road-curb.glb-bb72ab5fde5ac4597dc22ab8b7f869c1.scn"
+path="res://.godot/imported/road-curb.glb-a1532c62919684d49b51f7b1afa24f51.scn"
 
 [deps]
 
-source_file="res:///assets/town/road/road-curb.glb"
-dest_files=["res://.godot/imported/road-curb.glb-bb72ab5fde5ac4597dc22ab8b7f869c1.scn"]
+source_file="res://assets/town/road/road-curb.glb"
+dest_files=["res://.godot/imported/road-curb.glb-a1532c62919684d49b51f7b1afa24f51.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dy5dkxywlqt2i"
-path="res://.godot/imported/wall-wood-doorway-square-wide-curved.glb-ac592e0a87f86ae64ad26cbe6978755d.scn"
+path="res://.godot/imported/wall-wood-doorway-square-wide-curved.glb-9b6d399bc66922c96fa6ce60eb42e4e2.scn"
 
 [deps]
 
-source_file="res:///assets/town/walls/wall-wood-doorway-square-wide-curved.glb"
-dest_files=["res://.godot/imported/wall-wood-doorway-square-wide-curved.glb-ac592e0a87f86ae64ad26cbe6978755d.scn"]
+source_file="res://assets/town/walls/wall-wood-doorway-square-wide-curved.glb"
+dest_files=["res://.godot/imported/wall-wood-doorway-square-wide-curved.glb-9b6d399bc66922c96fa6ce60eb42e4e2.scn"]
 
 [params]
 

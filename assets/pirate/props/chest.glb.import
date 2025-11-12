@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://rht7nkabco3w"
-path="res://.godot/imported/chest.glb-424dc7010f447196cd8656dbfb38c32e.scn"
+path="res://.godot/imported/chest.glb-c35e33f94bf432f87c5640f949e63570.scn"
 
 [deps]
 
-source_file="res:///assets/pirate/props/chest.glb"
-dest_files=["res://.godot/imported/chest.glb-424dc7010f447196cd8656dbfb38c32e.scn"]
+source_file="res://assets/pirate/props/chest.glb"
+dest_files=["res://.godot/imported/chest.glb-c35e33f94bf432f87c5640f949e63570.scn"]
 
 [params]
 

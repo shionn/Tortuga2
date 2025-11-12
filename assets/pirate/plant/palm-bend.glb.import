@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://nuvlejq8qd0s"
-path="res://.godot/imported/palm-bend.glb-34a12edc3d992d8341b192dc7ad61e86.scn"
+path="res://.godot/imported/palm-bend.glb-99fdbda20513d74a8f0eeb7900450e06.scn"
 
 [deps]
 
-source_file="res:///assets/pirate/plant/palm-bend.glb"
-dest_files=["res://.godot/imported/palm-bend.glb-34a12edc3d992d8341b192dc7ad61e86.scn"]
+source_file="res://assets/pirate/plant/palm-bend.glb"
+dest_files=["res://.godot/imported/palm-bend.glb-99fdbda20513d74a8f0eeb7900450e06.scn"]
 
 [params]
 

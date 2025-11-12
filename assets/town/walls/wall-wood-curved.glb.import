@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dhm53cxuts0cm"
-path="res://.godot/imported/wall-wood-curved.glb-4211eff3640609d7889eeaeefd3b4405.scn"
+path="res://.godot/imported/wall-wood-curved.glb-f9918ab67b82b3c5e1da329c0bc64204.scn"
 
 [deps]
 
-source_file="res:///assets/town/walls/wall-wood-curved.glb"
-dest_files=["res://.godot/imported/wall-wood-curved.glb-4211eff3640609d7889eeaeefd3b4405.scn"]
+source_file="res://assets/town/walls/wall-wood-curved.glb"
+dest_files=["res://.godot/imported/wall-wood-curved.glb-f9918ab67b82b3c5e1da329c0bc64204.scn"]
 
 [params]
 

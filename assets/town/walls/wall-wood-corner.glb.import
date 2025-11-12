@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cmci4x26h7dnk"
-path="res://.godot/imported/wall-wood-corner.glb-3b82ba0dc2c1c163f0c03f614ae05fe7.scn"
+path="res://.godot/imported/wall-wood-corner.glb-e05493e89c230b6f062a10ac0165716d.scn"
 
 [deps]
 
-source_file="res:///assets/town/walls/wall-wood-corner.glb"
-dest_files=["res://.godot/imported/wall-wood-corner.glb-3b82ba0dc2c1c163f0c03f614ae05fe7.scn"]
+source_file="res://assets/town/walls/wall-wood-corner.glb"
+dest_files=["res://.godot/imported/wall-wood-corner.glb-e05493e89c230b6f062a10ac0165716d.scn"]
 
 [params]
 

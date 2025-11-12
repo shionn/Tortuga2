@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c82g8o71h2ofm"
-path="res://.godot/imported/structure-fence.glb-6a38077f4d25a710fa0c3a4ee39e043f.scn"
+path="res://.godot/imported/structure-fence.glb-996b0a8f25ca8332d310a50f3f086b4e.scn"
 
 [deps]
 
-source_file="res:///assets/pirate/structures/structure-fence.glb"
-dest_files=["res://.godot/imported/structure-fence.glb-6a38077f4d25a710fa0c3a4ee39e043f.scn"]
+source_file="res://assets/pirate/structures/structure-fence.glb"
+dest_files=["res://.godot/imported/structure-fence.glb-996b0a8f25ca8332d310a50f3f086b4e.scn"]
 
 [params]
 

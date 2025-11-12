@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://crylsg6rmjh6j"
-path="res://.godot/imported/structure-platform-small.glb-8a4d131434f1d55be0975cbbb8773a87.scn"
+path="res://.godot/imported/structure-platform-small.glb-f34d67305538d9a63ea000ce043d99ed.scn"
 
 [deps]
 
-source_file="res:///assets/pirate/structures/structure-platform-small.glb"
-dest_files=["res://.godot/imported/structure-platform-small.glb-8a4d131434f1d55be0975cbbb8773a87.scn"]
+source_file="res://assets/pirate/structures/structure-platform-small.glb"
+dest_files=["res://.godot/imported/structure-platform-small.glb-f34d67305538d9a63ea000ce043d99ed.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://jnd7rhtd0iu5"
-path="res://.godot/imported/roof-gable-top.glb-e648f25b0f32907afa50d11405fa2f1c.scn"
+path="res://.godot/imported/roof-gable-top.glb-eb56058fc930e2f363b6111cf376ca7c.scn"
 
 [deps]
 
-source_file="res:///assets/town/roof/roof-gable-top.glb"
-dest_files=["res://.godot/imported/roof-gable-top.glb-e648f25b0f32907afa50d11405fa2f1c.scn"]
+source_file="res://assets/town/roof/roof-gable-top.glb"
+dest_files=["res://.godot/imported/roof-gable-top.glb-eb56058fc930e2f363b6111cf376ca7c.scn"]
 
 [params]
 

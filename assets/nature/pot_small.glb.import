@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bxca075phk4n5"
-path="res://.godot/imported/pot_small.glb-c941b46f5b684ac740b028c2c7dd1755.scn"
+path="res://.godot/imported/pot_small.glb-bd6764b84e8557ea9f1d4ad2b7fe0641.scn"
 
 [deps]
 
-source_file="res:///assets/nature/pot_small.glb"
-dest_files=["res://.godot/imported/pot_small.glb-c941b46f5b684ac740b028c2c7dd1755.scn"]
+source_file="res://assets/nature/pot_small.glb"
+dest_files=["res://.godot/imported/pot_small.glb-bd6764b84e8557ea9f1d4ad2b7fe0641.scn"]
 
 [params]
 

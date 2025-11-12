@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dyet6elbhx3gi"
-path="res://.godot/imported/planks-opening.glb-f3078287c450cfb0e1b1c3e9ff675b6b.scn"
+path="res://.godot/imported/planks-opening.glb-08b69af7fe89f3e3ac02813f2e0a7082.scn"
 
 [deps]
 
-source_file="res:///assets/town/planks/planks-opening.glb"
-dest_files=["res://.godot/imported/planks-opening.glb-f3078287c450cfb0e1b1c3e9ff675b6b.scn"]
+source_file="res://assets/town/planks/planks-opening.glb"
+dest_files=["res://.godot/imported/planks-opening.glb-08b69af7fe89f3e3ac02813f2e0a7082.scn"]
 
 [params]
 

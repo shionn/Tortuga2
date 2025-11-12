@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bl8gqk34ub2cy"
-path="res://.godot/imported/crate-bottles.glb-1ce8be37ac4f720c4c1471d096275698.scn"
+path="res://.godot/imported/crate-bottles.glb-b9043de2301e391aaff61b3cfba2ad44.scn"
 
 [deps]
 
-source_file="res:///assets/pirate/props/crate-bottles.glb"
-dest_files=["res://.godot/imported/crate-bottles.glb-1ce8be37ac4f720c4c1471d096275698.scn"]
+source_file="res://assets/pirate/props/crate-bottles.glb"
+dest_files=["res://.godot/imported/crate-bottles.glb-b9043de2301e391aaff61b3cfba2ad44.scn"]
 
 [params]
 

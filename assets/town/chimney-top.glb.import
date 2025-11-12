@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bvssfm8gng07x"
-path="res://.godot/imported/chimney-top.glb-4f300f0b181ddf72968606d8edfaa488.scn"
+path="res://.godot/imported/chimney-top.glb-df7a2b8b9b6568e2d7fd4f416d561932.scn"
 
 [deps]
 
-source_file="res:///assets/town/chimney-top.glb"
-dest_files=["res://.godot/imported/chimney-top.glb-4f300f0b181ddf72968606d8edfaa488.scn"]
+source_file="res://assets/town/chimney-top.glb"
+dest_files=["res://.godot/imported/chimney-top.glb-df7a2b8b9b6568e2d7fd4f416d561932.scn"]
 
 [params]
 

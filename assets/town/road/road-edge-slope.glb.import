@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dj51fea758s6v"
-path="res://.godot/imported/road-edge-slope.glb-d4ffe056a2b96e815d91bf7d1fe4e746.scn"
+path="res://.godot/imported/road-edge-slope.glb-ea2bb2b3ff66edb469143e9521c40f89.scn"
 
 [deps]
 
-source_file="res:///assets/town/road/road-edge-slope.glb"
-dest_files=["res://.godot/imported/road-edge-slope.glb-d4ffe056a2b96e815d91bf7d1fe4e746.scn"]
+source_file="res://assets/town/road/road-edge-slope.glb"
+dest_files=["res://.godot/imported/road-edge-slope.glb-ea2bb2b3ff66edb469143e9521c40f89.scn"]
 
 [params]
 

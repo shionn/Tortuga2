@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://eflbjn4io8m2"
-path="res://.godot/imported/stairs-wide-wood-handrail.glb-cfd83e12772a257be9a9e641c9529a07.scn"
+path="res://.godot/imported/stairs-wide-wood-handrail.glb-d85d6bdfb5020cd3cf62ad3eaa358283.scn"
 
 [deps]
 
-source_file="res:///assets/town/stairs/stairs-wide-wood-handrail.glb"
-dest_files=["res://.godot/imported/stairs-wide-wood-handrail.glb-cfd83e12772a257be9a9e641c9529a07.scn"]
+source_file="res://assets/town/stairs/stairs-wide-wood-handrail.glb"
+dest_files=["res://.godot/imported/stairs-wide-wood-handrail.glb-d85d6bdfb5020cd3cf62ad3eaa358283.scn"]
 
 [params]
 

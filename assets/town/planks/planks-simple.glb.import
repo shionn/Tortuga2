@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://vw74rm8d4xum"
-path="res://.godot/imported/planks-simple.glb-f25a7f09821624761c32ef0f7d28e249.scn"
+path="res://.godot/imported/planks-simple.glb-c914171505a0a1a8b26929679ac74c01.scn"
 
 [deps]
 
-source_file="res:///assets/town/planks/planks-simple.glb"
-dest_files=["res://.godot/imported/planks-simple.glb-f25a7f09821624761c32ef0f7d28e249.scn"]
+source_file="res://assets/town/planks/planks-simple.glb"
+dest_files=["res://.godot/imported/planks-simple.glb-c914171505a0a1a8b26929679ac74c01.scn"]
 
 [params]
 

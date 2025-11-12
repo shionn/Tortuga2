@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dyajmtdrrcbf4"
-path="res://.godot/imported/wall-wood-detail-cross.glb-b75927442ecf6c89757e47387b6a8651.scn"
+path="res://.godot/imported/wall-wood-detail-cross.glb-fee52846900b5a7709c8a15adc4ee37f.scn"
 
 [deps]
 
-source_file="res:///assets/town/walls/wall-wood-detail-cross.glb"
-dest_files=["res://.godot/imported/wall-wood-detail-cross.glb-b75927442ecf6c89757e47387b6a8651.scn"]
+source_file="res://assets/town/walls/wall-wood-detail-cross.glb"
+dest_files=["res://.godot/imported/wall-wood-detail-cross.glb-fee52846900b5a7709c8a15adc4ee37f.scn"]
 
 [params]
 

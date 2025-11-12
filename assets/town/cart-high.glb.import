@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://brdffnbsuw5n5"
-path="res://.godot/imported/cart-high.glb-d00924d58b494e61148ddc13afe21eaf.scn"
+path="res://.godot/imported/cart-high.glb-3940f6a5ee13cbd1386955e2f0716a18.scn"
 
 [deps]
 
-source_file="res:///assets/town/cart-high.glb"
-dest_files=["res://.godot/imported/cart-high.glb-d00924d58b494e61148ddc13afe21eaf.scn"]
+source_file="res://assets/town/cart-high.glb"
+dest_files=["res://.godot/imported/cart-high.glb-3940f6a5ee13cbd1386955e2f0716a18.scn"]
 
 [params]
 

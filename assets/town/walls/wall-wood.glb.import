@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://desnmlm7k7b3"
-path="res://.godot/imported/wall-wood.glb-035f50db6728290163482aaef48d4345.scn"
+path="res://.godot/imported/wall-wood.glb-34f10f24b1364cfa1ced73862561e419.scn"
 
 [deps]
 
-source_file="res:///assets/town/walls/wall-wood.glb"
-dest_files=["res://.godot/imported/wall-wood.glb-035f50db6728290163482aaef48d4345.scn"]
+source_file="res://assets/town/walls/wall-wood.glb"
+dest_files=["res://.godot/imported/wall-wood.glb-34f10f24b1364cfa1ced73862561e419.scn"]
 
 [params]
 

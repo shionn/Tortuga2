@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c7fgeoflk102b"
-path="res://.godot/imported/platform-planks.glb-082c654232a9a186992691a898286f4c.scn"
+path="res://.godot/imported/platform-planks.glb-962bc3654feae58ef9c487f315c32e88.scn"
 
 [deps]
 
-source_file="res:///assets/pirate/platform-planks.glb"
-dest_files=["res://.godot/imported/platform-planks.glb-082c654232a9a186992691a898286f4c.scn"]
+source_file="res://assets/pirate/plant/platform-planks.glb"
+dest_files=["res://.godot/imported/platform-planks.glb-962bc3654feae58ef9c487f315c32e88.scn"]
 
 [params]
 

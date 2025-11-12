@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dqtrbt7o4adew"
-path="res://.godot/imported/wall-wood-doorway-round.glb-100acc68cb66a04fac661962be8e3986.scn"
+path="res://.godot/imported/wall-wood-doorway-round.glb-a1dc1ed80ac6e2b9d921cad9af8b5de2.scn"
 
 [deps]
 
-source_file="res:///assets/town/walls/wall-wood-doorway-round.glb"
-dest_files=["res://.godot/imported/wall-wood-doorway-round.glb-100acc68cb66a04fac661962be8e3986.scn"]
+source_file="res://assets/town/walls/wall-wood-doorway-round.glb"
+dest_files=["res://.godot/imported/wall-wood-doorway-round.glb-a1dc1ed80ac6e2b9d921cad9af8b5de2.scn"]
 
 [params]
 
