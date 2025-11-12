@@ -945,6 +945,7 @@ transform = Transform3D(0.95293695, 0, 1.7583832, 0, 2, 0, -1.7583832, 0, 0.9529
 transform = Transform3D(1.9949017, 0, -0.14271647, 0, 2, 0, 0.14271647, 0, 1.9949017, 6.6109333, 0.5329056, -14.000969)
 
 [node name="Reserve" parent="TortugaNode/ColineAuberge" instance=ExtResource("21_bc84e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.1746, 0.55148315, -5.6029015)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.1746, 0.12559128, -5.6029015)
+metadata/_edit_group_ = true
 
 [connection signal="ready" from="." to="." method="_on_ready"]
