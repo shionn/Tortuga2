@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bmx33gnpvrr0r"
-path="res://.godot/imported/windmill.glb-d0f18e860d21191a7f44fa4efc884619.scn"
+path="res://.godot/imported/windmill.glb-b433fe5c998c01859c298e2bb6b0427e.scn"
 
 [deps]
 
-source_file="res://assets/windmill.glb"
-dest_files=["res://.godot/imported/windmill.glb-d0f18e860d21191a7f44fa4efc884619.scn"]
+source_file="res://assets/town/windmill.glb"
+dest_files=["res://.godot/imported/windmill.glb-b433fe5c998c01859c298e2bb6b0427e.scn"]
 
 [params]
 
