@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ch857433rcqcp"
-path="res://.godot/imported/wall-half.glb-b2f2859d93c0f8fff41883b0f6201aa1.scn"
+path="res://.godot/imported/wall-half.glb-a7940c6d90dc6c33163a1c5e7f55d176.scn"
 
 [deps]
 
-source_file="res://assets/castle/walls/wall-half.glb"
-dest_files=["res://.godot/imported/wall-half.glb-b2f2859d93c0f8fff41883b0f6201aa1.scn"]
+source_file="res:///assets/castle/walls/wall-half.glb"
+dest_files=["res://.godot/imported/wall-half.glb-a7940c6d90dc6c33163a1c5e7f55d176.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

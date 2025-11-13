@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cka2axc2d45d6"
-path="res://.godot/imported/wall-narrow-wood-fence.glb-bde6c095d1caca91e14579ba2e7b698f.scn"
+path="res://.godot/imported/wall-narrow-wood-fence.glb-02dc720c50bac8627aec63c1760ef756.scn"
 
 [deps]
 
-source_file="res://assets/castle/walls/wall-narrow-wood-fence.glb"
-dest_files=["res://.godot/imported/wall-narrow-wood-fence.glb-bde6c095d1caca91e14579ba2e7b698f.scn"]
+source_file="res:///assets/castle/walls/wall-narrow-wood-fence.glb"
+dest_files=["res://.godot/imported/wall-narrow-wood-fence.glb-02dc720c50bac8627aec63c1760ef756.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

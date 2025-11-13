@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b0uvb14gq80wi"
-path="res://.godot/imported/wall-corner-diagonal-half.glb-2ba2541b3e1ee682487c938c94ee9f31.scn"
+path="res://.godot/imported/wall-corner-diagonal-half.glb-d52f30ac3e7b720da8e178f406d0d55e.scn"
 
 [deps]
 
-source_file="res://assets/town/walls/wall-corner-diagonal-half.glb"
-dest_files=["res://.godot/imported/wall-corner-diagonal-half.glb-2ba2541b3e1ee682487c938c94ee9f31.scn"]
+source_file="res:///assets/town/walls/wall-corner-diagonal-half.glb"
+dest_files=["res://.godot/imported/wall-corner-diagonal-half.glb-d52f30ac3e7b720da8e178f406d0d55e.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

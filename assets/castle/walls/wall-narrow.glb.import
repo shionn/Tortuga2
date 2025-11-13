@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://05fj00dxh3nl"
-path="res://.godot/imported/wall-narrow.glb-e7f46de9113b1b12ddb7a5466c55e4fc.scn"
+path="res://.godot/imported/wall-narrow.glb-d2fb7c7baa9590f448335b39d89519c5.scn"
 
 [deps]
 
-source_file="res://assets/castle/walls/wall-narrow.glb"
-dest_files=["res://.godot/imported/wall-narrow.glb-e7f46de9113b1b12ddb7a5466c55e4fc.scn"]
+source_file="res:///assets/castle/walls/wall-narrow.glb"
+dest_files=["res://.godot/imported/wall-narrow.glb-d2fb7c7baa9590f448335b39d89519c5.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

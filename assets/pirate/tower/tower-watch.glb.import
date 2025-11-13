@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cx66322mqijhu"
-path="res://.godot/imported/tower-watch.glb-f6b97511e620ce4563b177f0090dc4f7.scn"
+path="res://.godot/imported/tower-watch.glb-b99b1a15dac0c8f81e32c4f91a4c4318.scn"
 
 [deps]
 
-source_file="res://assets/pirate/tower/tower-watch.glb"
-dest_files=["res://.godot/imported/tower-watch.glb-f6b97511e620ce4563b177f0090dc4f7.scn"]
+source_file="res:///assets/pirate/tower/tower-watch.glb"
+dest_files=["res://.godot/imported/tower-watch.glb-b99b1a15dac0c8f81e32c4f91a4c4318.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

@@ -1,6 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://dx8mf6okqe5rg"]
+[gd_scene load_steps=25 format=3 uid="uid://dx8mf6okqe5rg"]
 
-[ext_resource type="Script" uid="uid://bla8jb6w1cmfh" path="res://world.gd" id="1_26xuy"]
+[ext_resource type="Script" path="res://world.gd" id="1_26xuy"]
 [ext_resource type="PackedScene" uid="uid://dac1cbndt3704" path="res://bateau.tscn" id="1_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://water/WaterPlane.tscn" id="2_036b0"]
 [ext_resource type="PackedScene" uid="uid://dvmo6h4nm5lcb" path="res://assets/pirate/patch-grass.glb" id="4_ioo17"]
@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://bw666kf55m31r" path="res://assets/pirate/structures/structure-platform-dock-long.glb" id="19_bc84e"]
 [ext_resource type="PackedScene" uid="uid://biadyt2j3gtyg" path="res://reserve.tscn" id="21_bc84e"]
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://debug_info.gd" id="22_wukud"]
+[ext_resource type="PackedScene" uid="uid://blifncbh7xys7" path="res://coffre.tscn" id="23_il2jm"]
+[ext_resource type="PackedScene" uid="uid://ukreens1wy4a" path="res://wall_coffre.tscn" id="24_wjb0r"]
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_26xuy")
@@ -949,11 +951,17 @@ transform = Transform3D(1.9949017, 0, -0.14271647, 0, 2, 0, 0.14271647, 0, 1.994
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.1746, 0.12559128, -5.6029015)
 metadata/_edit_group_ = true
 
+[node name="Coffre" parent="TortugaNode" instance=ExtResource("23_il2jm")]
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, 50, 0.5230274, -4)
+
 [node name="DebugInfo" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Un text
 Autre ligne"
 script = ExtResource("22_wukud")
+
+[node name="WallCoffre" parent="." instance=ExtResource("24_wjb0r")]
+transform = Transform3D(0.34306955, 0, -0.93931, 0, 1, 0, 0.93931, 0, 0.34306955, 60.687218, 0.4999987, -7.9749527)
 
 [connection signal="ready" from="." to="." method="_on_ready"]

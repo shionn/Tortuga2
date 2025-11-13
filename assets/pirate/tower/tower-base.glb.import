@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dlk4bljk3v20q"
-path="res://.godot/imported/tower-base.glb-02ed6a692bdb2a941199de808945f8d3.scn"
+path="res://.godot/imported/tower-base.glb-cd6410982db19e86ad12ae233ced2c29.scn"
 
 [deps]
 
-source_file="res://assets/pirate/tower/tower-base.glb"
-dest_files=["res://.godot/imported/tower-base.glb-02ed6a692bdb2a941199de808945f8d3.scn"]
+source_file="res:///assets/pirate/tower/tower-base.glb"
+dest_files=["res://.godot/imported/tower-base.glb-cd6410982db19e86ad12ae233ced2c29.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

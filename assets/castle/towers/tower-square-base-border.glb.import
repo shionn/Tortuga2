@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bak2dp5m5dfpk"
-path="res://.godot/imported/tower-square-base-border.glb-b49f9e315aee8a730f11cb50bef32016.scn"
+path="res://.godot/imported/tower-square-base-border.glb-e18a4bb691910e033e34c1ed9973430b.scn"
 
 [deps]
 
-source_file="res://assets/castle/towers/tower-square-base-border.glb"
-dest_files=["res://.godot/imported/tower-square-base-border.glb-b49f9e315aee8a730f11cb50bef32016.scn"]
+source_file="res:///assets/castle/towers/tower-square-base-border.glb"
+dest_files=["res://.godot/imported/tower-square-base-border.glb-e18a4bb691910e033e34c1ed9973430b.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://x2fbf5wpnkty"
-path="res://.godot/imported/wall-curved.glb-47efd63f44d4a71d07aa3e52473a2003.scn"
+path="res://.godot/imported/wall-curved.glb-ea2f11f073dc3fc10e278f6a7df9861b.scn"
 
 [deps]
 
-source_file="res://assets/town/walls/wall-curved.glb"
-dest_files=["res://.godot/imported/wall-curved.glb-47efd63f44d4a71d07aa3e52473a2003.scn"]
+source_file="res:///assets/town/walls/wall-curved.glb"
+dest_files=["res://.godot/imported/wall-curved.glb-ea2f11f073dc3fc10e278f6a7df9861b.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

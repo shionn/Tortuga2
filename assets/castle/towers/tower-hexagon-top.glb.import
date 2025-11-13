@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bn8hdhq3qqw5r"
-path="res://.godot/imported/tower-hexagon-top.glb-67b81ef8aeb1d6469602fb7d11c88804.scn"
+path="res://.godot/imported/tower-hexagon-top.glb-f23e0230a7519e9b8b5cbb81a5c69dee.scn"
 
 [deps]
 
-source_file="res://assets/castle/towers/tower-hexagon-top.glb"
-dest_files=["res://.godot/imported/tower-hexagon-top.glb-67b81ef8aeb1d6469602fb7d11c88804.scn"]
+source_file="res:///assets/castle/towers/tower-hexagon-top.glb"
+dest_files=["res://.godot/imported/tower-hexagon-top.glb-f23e0230a7519e9b8b5cbb81a5c69dee.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

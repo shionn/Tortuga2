@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ljc46npispf7"
-path="res://.godot/imported/tower-slant-roof.glb-d5e0c465e6eec6851b8fd4bc57c5ad17.scn"
+path="res://.godot/imported/tower-slant-roof.glb-3f2925b25f668dab1af6a7bb65bd81e2.scn"
 
 [deps]
 
-source_file="res://assets/castle/towers/tower-slant-roof.glb"
-dest_files=["res://.godot/imported/tower-slant-roof.glb-d5e0c465e6eec6851b8fd4bc57c5ad17.scn"]
+source_file="res:///assets/castle/towers/tower-slant-roof.glb"
+dest_files=["res://.godot/imported/tower-slant-roof.glb-3f2925b25f668dab1af6a7bb65bd81e2.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

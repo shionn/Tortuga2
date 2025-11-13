@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bs0kl4reyolos"
-path="res://.godot/imported/wall-pillar.glb-9ab903a97b13eda004ef33c40ea0e2ec.scn"
+path="res://.godot/imported/wall-pillar.glb-7b63d40bbf269dc4b344af61a2242e57.scn"
 
 [deps]
 
-source_file="res://assets/castle/walls/wall-pillar.glb"
-dest_files=["res://.godot/imported/wall-pillar.glb-9ab903a97b13eda004ef33c40ea0e2ec.scn"]
+source_file="res:///assets/castle/walls/wall-pillar.glb"
+dest_files=["res://.godot/imported/wall-pillar.glb-7b63d40bbf269dc4b344af61a2242e57.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

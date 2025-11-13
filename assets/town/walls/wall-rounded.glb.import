@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dxswlwu3kfq6e"
-path="res://.godot/imported/wall-rounded.glb-7dc81d75d67564f0b009401db66ad813.scn"
+path="res://.godot/imported/wall-rounded.glb-4217eb20c4ae94f527706d97731e12fc.scn"
 
 [deps]
 
-source_file="res://assets/town/walls/wall-rounded.glb"
-dest_files=["res://.godot/imported/wall-rounded.glb-7dc81d75d67564f0b009401db66ad813.scn"]
+source_file="res:///assets/town/walls/wall-rounded.glb"
+dest_files=["res://.godot/imported/wall-rounded.glb-4217eb20c4ae94f527706d97731e12fc.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

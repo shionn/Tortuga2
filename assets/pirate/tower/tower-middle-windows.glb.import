@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://db2w3uu7td241"
-path="res://.godot/imported/tower-middle-windows.glb-6ddb26702dd835113c5e09ff3748dd6a.scn"
+path="res://.godot/imported/tower-middle-windows.glb-eff1e39bc1f525a9600c117511d05e0d.scn"
 
 [deps]
 
-source_file="res://assets/pirate/tower/tower-middle-windows.glb"
-dest_files=["res://.godot/imported/tower-middle-windows.glb-6ddb26702dd835113c5e09ff3748dd6a.scn"]
+source_file="res:///assets/pirate/tower/tower-middle-windows.glb"
+dest_files=["res://.godot/imported/tower-middle-windows.glb-eff1e39bc1f525a9600c117511d05e0d.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
