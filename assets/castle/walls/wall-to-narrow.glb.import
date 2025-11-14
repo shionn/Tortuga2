@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://5wg2sl1112m8"
-path="res://.godot/imported/wall-to-narrow.glb-d3350e1c278a166bf5bd64b7a4f5c370.scn"
+path="res://.godot/imported/wall-to-narrow.glb-31ba80f2c47263834d8dad70a27bb463.scn"
 
 [deps]
 
-source_file="res:///assets/castle/walls/wall-to-narrow.glb"
-dest_files=["res://.godot/imported/wall-to-narrow.glb-d3350e1c278a166bf5bd64b7a4f5c370.scn"]
+source_file="res://assets/castle/walls/wall-to-narrow.glb"
+dest_files=["res://.godot/imported/wall-to-narrow.glb-31ba80f2c47263834d8dad70a27bb463.scn"]
 
 [params]
 

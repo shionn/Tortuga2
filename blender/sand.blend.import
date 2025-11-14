@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bivrosonpaxwm"
-path="res://.godot/imported/sand.blend-9905f9697a693f04e55a4cdc1a2f13bd.scn"
+valid=false
 
 [deps]
 
 source_file="res://blender/sand.blend"
-dest_files=["res://.godot/imported/sand.blend-9905f9697a693f04e55a4cdc1a2f13bd.scn"]
 
 [params]
 

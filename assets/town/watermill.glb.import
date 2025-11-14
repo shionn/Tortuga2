@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b08ldwug6ehf7"
-path="res://.godot/imported/watermill.glb-fb65053cc75535f15aba56ab06005755.scn"
+path="res://.godot/imported/watermill.glb-2132be8f331d1124fa1840368f44096f.scn"
 
 [deps]
 
-source_file="res:///assets/town/watermill.glb"
-dest_files=["res://.godot/imported/watermill.glb-fb65053cc75535f15aba56ab06005755.scn"]
+source_file="res://assets/town/watermill.glb"
+dest_files=["res://.godot/imported/watermill.glb-2132be8f331d1124fa1840368f44096f.scn"]
 
 [params]
 

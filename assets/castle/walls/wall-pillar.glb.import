@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bs0kl4reyolos"
-path="res://.godot/imported/wall-pillar.glb-7b63d40bbf269dc4b344af61a2242e57.scn"
+path="res://.godot/imported/wall-pillar.glb-9ab903a97b13eda004ef33c40ea0e2ec.scn"
 
 [deps]
 
-source_file="res:///assets/castle/walls/wall-pillar.glb"
-dest_files=["res://.godot/imported/wall-pillar.glb-7b63d40bbf269dc4b344af61a2242e57.scn"]
+source_file="res://assets/castle/walls/wall-pillar.glb"
+dest_files=["res://.godot/imported/wall-pillar.glb-9ab903a97b13eda004ef33c40ea0e2ec.scn"]
 
 [params]
 

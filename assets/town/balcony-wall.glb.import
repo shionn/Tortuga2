@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://nndjtu8uvne4"
-path="res://.godot/imported/balcony-wall.glb-6bb39025436e47de7233bde036b3aa77.scn"
+path="res://.godot/imported/balcony-wall.glb-a7b7ac598cb6a8ccfd2d800795531a95.scn"
 
 [deps]
 
-source_file="res:///assets/town/balcony-wall.glb"
-dest_files=["res://.godot/imported/balcony-wall.glb-6bb39025436e47de7233bde036b3aa77.scn"]
+source_file="res://assets/town/balcony-wall.glb"
+dest_files=["res://.godot/imported/balcony-wall.glb-a7b7ac598cb6a8ccfd2d800795531a95.scn"]
 
 [params]
 

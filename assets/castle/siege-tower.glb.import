@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dejpb512d0vd7"
-path="res://.godot/imported/siege-tower.glb-9afb9d142d07c8c1da7a06a9fb4cfca6.scn"
+path="res://.godot/imported/siege-tower.glb-a77cb65d4791ec5c0e4462a4b206df69.scn"
 
 [deps]
 
-source_file="res:///assets/castle/siege-tower.glb"
-dest_files=["res://.godot/imported/siege-tower.glb-9afb9d142d07c8c1da7a06a9fb4cfca6.scn"]
+source_file="res://assets/castle/siege-tower.glb"
+dest_files=["res://.godot/imported/siege-tower.glb-a77cb65d4791ec5c0e4462a4b206df69.scn"]
 
 [params]
 

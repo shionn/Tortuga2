@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bb82mf151s51"
-path="res://.godot/imported/tower-square.glb-2627126414153e1c21eeb78c22ddc9fe.scn"
+path="res://.godot/imported/tower-square.glb-1b3793bb012705c8e2cc7ebdaf0c9881.scn"
 
 [deps]
 
-source_file="res:///assets/castle/towers/tower-square.glb"
-dest_files=["res://.godot/imported/tower-square.glb-2627126414153e1c21eeb78c22ddc9fe.scn"]
+source_file="res://assets/castle/towers/tower-square.glb"
+dest_files=["res://.godot/imported/tower-square.glb-1b3793bb012705c8e2cc7ebdaf0c9881.scn"]
 
 [params]
 

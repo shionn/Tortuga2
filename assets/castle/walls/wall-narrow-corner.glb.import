@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bp7kewf8y7um6"
-path="res://.godot/imported/wall-narrow-corner.glb-ae6f7cedeec8617838f0b582fd35541a.scn"
+path="res://.godot/imported/wall-narrow-corner.glb-29e2b449fc0111db12d8dc4150b49afb.scn"
 
 [deps]
 
-source_file="res:///assets/castle/walls/wall-narrow-corner.glb"
-dest_files=["res://.godot/imported/wall-narrow-corner.glb-ae6f7cedeec8617838f0b582fd35541a.scn"]
+source_file="res://assets/castle/walls/wall-narrow-corner.glb"
+dest_files=["res://.godot/imported/wall-narrow-corner.glb-29e2b449fc0111db12d8dc4150b49afb.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bib2maqcvnppx"
-path="res://.godot/imported/wall-slope.glb-2ba26a3812db48e0f73b9b8ed9610967.scn"
+path="res://.godot/imported/wall-slope.glb-85d070efde3934e0a7d3486d4d4edc95.scn"
 
 [deps]
 
-source_file="res:///assets/town/walls/wall-slope.glb"
-dest_files=["res://.godot/imported/wall-slope.glb-2ba26a3812db48e0f73b9b8ed9610967.scn"]
+source_file="res://assets/town/walls/wall-slope.glb"
+dest_files=["res://.godot/imported/wall-slope.glb-85d070efde3934e0a7d3486d4d4edc95.scn"]
 
 [params]
 

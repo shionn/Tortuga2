@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d4aauxrmhaqjh"
-path="res://.godot/imported/wall-corner-edge.glb-300f1b3865f3c4a8c2ab4413a4b8f325.scn"
+path="res://.godot/imported/wall-corner-edge.glb-c8bb0edc4f0b77574e3537d9a34647bf.scn"
 
 [deps]
 
-source_file="res:///assets/town/walls/wall-corner-edge.glb"
-dest_files=["res://.godot/imported/wall-corner-edge.glb-300f1b3865f3c4a8c2ab4413a4b8f325.scn"]
+source_file="res://assets/town/walls/wall-corner-edge.glb"
+dest_files=["res://.godot/imported/wall-corner-edge.glb-c8bb0edc4f0b77574e3537d9a34647bf.scn"]
 
 [params]
 

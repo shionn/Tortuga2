@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b0uvb14gq80wi"
-path="res://.godot/imported/wall-corner-diagonal-half.glb-d52f30ac3e7b720da8e178f406d0d55e.scn"
+path="res://.godot/imported/wall-corner-diagonal-half.glb-2ba2541b3e1ee682487c938c94ee9f31.scn"
 
 [deps]
 
-source_file="res:///assets/town/walls/wall-corner-diagonal-half.glb"
-dest_files=["res://.godot/imported/wall-corner-diagonal-half.glb-d52f30ac3e7b720da8e178f406d0d55e.scn"]
+source_file="res://assets/town/walls/wall-corner-diagonal-half.glb"
+dest_files=["res://.godot/imported/wall-corner-diagonal-half.glb-2ba2541b3e1ee682487c938c94ee9f31.scn"]
 
 [params]
 

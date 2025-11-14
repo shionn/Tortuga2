@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://crvg1mfjqjj3v"
-path="res://.godot/imported/tower-middle.glb-ff6072aaf15c19088daaafad2abba2d4.scn"
+path="res://.godot/imported/tower-middle.glb-d75ee2c4a0e4bb64b03de1eb8b7a75d1.scn"
 
 [deps]
 
-source_file="res:///assets/pirate/tower/tower-middle.glb"
-dest_files=["res://.godot/imported/tower-middle.glb-ff6072aaf15c19088daaafad2abba2d4.scn"]
+source_file="res://assets/pirate/tower/tower-middle.glb"
+dest_files=["res://.godot/imported/tower-middle.glb-d75ee2c4a0e4bb64b03de1eb8b7a75d1.scn"]
 
 [params]
 

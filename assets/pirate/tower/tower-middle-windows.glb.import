@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://db2w3uu7td241"
-path="res://.godot/imported/tower-middle-windows.glb-eff1e39bc1f525a9600c117511d05e0d.scn"
+path="res://.godot/imported/tower-middle-windows.glb-6ddb26702dd835113c5e09ff3748dd6a.scn"
 
 [deps]
 
-source_file="res:///assets/pirate/tower/tower-middle-windows.glb"
-dest_files=["res://.godot/imported/tower-middle-windows.glb-eff1e39bc1f525a9600c117511d05e0d.scn"]
+source_file="res://assets/pirate/tower/tower-middle-windows.glb"
+dest_files=["res://.godot/imported/tower-middle-windows.glb-6ddb26702dd835113c5e09ff3748dd6a.scn"]
 
 [params]
 

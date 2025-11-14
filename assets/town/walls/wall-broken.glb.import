@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cfyeqqnwb4xgm"
-path="res://.godot/imported/wall-broken.glb-0ad61c64bc2cef9dac451acc12040001.scn"
+path="res://.godot/imported/wall-broken.glb-e1eade4c1dc3ccc815bc387fa5647d89.scn"
 
 [deps]
 
-source_file="res:///assets/town/walls/wall-broken.glb"
-dest_files=["res://.godot/imported/wall-broken.glb-0ad61c64bc2cef9dac451acc12040001.scn"]
+source_file="res://assets/town/walls/wall-broken.glb"
+dest_files=["res://.godot/imported/wall-broken.glb-e1eade4c1dc3ccc815bc387fa5647d89.scn"]
 
 [params]
 
