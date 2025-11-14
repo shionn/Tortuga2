@@ -1,33 +1,33 @@
 [gd_scene load_steps=11 format=3 uid="uid://cmvqtrxe3klxe"]
 
-[ext_resource type="Shader" uid="uid://bok3vbwsjgxtc" path="res://shaders/water.gdshader" id="1_fay6q"]
-[ext_resource type="Script" uid="uid://cjimb7p4itwss" path="res://WaterPlane.gd" id="2_r1r5a"]
+[ext_resource type="Shader" uid="uid://bok3vbwsjgxtc" path="res://water/shaders/water.gdshader" id="1_fay6q"]
+[ext_resource type="Script" uid="uid://cjimb7p4itwss" path="res://water/WaterPlane.gd" id="2_r1r5a"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_senhm"]
 noise_type = 3
 fractal_type = 2
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_71h1u"]
+noise = SubResource("FastNoiseLite_senhm")
 seamless = true
 as_normal_map = true
 bump_strength = 5.0
-noise = SubResource("FastNoiseLite_senhm")
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_tpevt"]
 noise_type = 3
 fractal_type = 2
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_pttm7"]
+noise = SubResource("FastNoiseLite_tpevt")
 seamless = true
 as_normal_map = true
 bump_strength = 5.0
-noise = SubResource("FastNoiseLite_tpevt")
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_nwab4"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_q042o"]
-seamless = true
 noise = SubResource("FastNoiseLite_nwab4")
+seamless = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_okayy"]
 render_priority = 0

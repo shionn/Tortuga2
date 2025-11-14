@@ -43,7 +43,7 @@ light_bake_mode = 1
 shadow_enabled = true
 
 [node name="WaterPlane" parent="." instance=ExtResource("2_036b0")]
-transform = Transform3D(2045, 0, 0, 0, 1, 0, 0, 0, 2045, 0, 0, 0)
+transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 0, 0, 0)
 
 [node name="TortugaNode" type="Node3D" parent="."]
 
@@ -350,7 +350,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 23.894, 1.25, 31.876)
 transform = Transform3D(-0.08947065, 0, 1.9979978, 0, 2, 0, -1.9979978, 0, -0.08947065, 24.453, 1.25, 21.95)
 
 [node name="grass4" parent="TortugaNode/MontagneCapitainerie" instance=ExtResource("13_2o6r5")]
-transform = Transform3D(1.2984183, 0, 1.52122, 0, 2, 0, -1.52122, 0, 1.2984183, 20.446, 1.25, -21.72)
+transform = Transform3D(1.2984183, 0, 1.52122, 0, 2, 0, -1.52122, 0, 1.2984183, 21.446, 1.25, -16.72)
 
 [node name="grass5" parent="TortugaNode/MontagneCapitainerie" instance=ExtResource("13_2o6r5")]
 transform = Transform3D(1.9881768, 0, -0.21714365, 0, 2, 0, 0.21714365, 0, 1.9881768, 10.558, 1.25, -22.159)
@@ -368,7 +368,7 @@ transform = Transform3D(1.9935887, 0, -0.1600151, 0, 2, 0, 0.1600151, 0, 1.99358
 transform = Transform3D(1.9935887, 0, -0.1600151, 0, 2, 0, 0.1600151, 0, 1.9935887, 13.978001, 1.25, -44.804)
 
 [node name="grass9" parent="TortugaNode/MontagneCapitainerie" instance=ExtResource("13_2o6r5")]
-transform = Transform3D(1.9935887, 0, -0.1600151, 0, 2, 0, 0.1600151, 0, 1.9935887, 18.997, 1.25, -30.367)
+transform = Transform3D(1.9935887, 0, -0.1600151, 0, 2, 0, 0.1600151, 0, 1.9935887, 18.197002, 1.25, -30.667)
 
 [node name="grass10" parent="TortugaNode/MontagneCapitainerie" instance=ExtResource("13_2o6r5")]
 transform = Transform3D(1.9935887, 0, -0.1600151, 0, 2, 0, 0.1600151, 0, 1.9935887, 10.586998, 1.25, -37.658)
@@ -477,7 +477,7 @@ transform = Transform3D(32, 0, 0, 0, 1, 0, 0, 0, 25, 38.371864, 0.79999995, -47.
 skeleton = NodePath("../../..")
 
 [node name="grass-plant39" parent="TortugaNode/MontagneCapitainerie" instance=ExtResource("10_2u3nc")]
-transform = Transform3D(0.53421956, 0, 0.84534574, 0, 1, 0, -0.84534574, 0, 0.53421956, 17.614418, 1.2329037, -25.626747)
+transform = Transform3D(0.53421956, 0, 0.84534574, 0, 1, 0, -0.84534574, 0, 0.53421956, 15.414417, 1.2329037, -27.326748)
 
 [node name="grass-plant58" parent="TortugaNode/MontagneCapitainerie" instance=ExtResource("10_2u3nc")]
 transform = Transform3D(0.53421956, 0, 0.84534574, 0, 1, 0, -0.84534574, 0, 0.53421956, 9.614418, 1.2329037, -15.626747)
@@ -534,7 +534,7 @@ transform = Transform3D(1.1353714, 0, 1.6464908, 0, 2, 0, -1.6464908, 0, 1.13537
 transform = Transform3D(1.1353714, 0, 1.6464908, 0, 2, 0, -1.6464908, 0, 1.1353714, 31.306286, 1.25, -28.631325)
 
 [node name="grass47" parent="TortugaNode/MontagneCapitainerie" instance=ExtResource("13_2o6r5")]
-transform = Transform3D(0.3520736, 0, 1.9687669, 0, 2, 0, -1.9687669, 0, 0.3520736, 25.314377, 1.25, -27.684837)
+transform = Transform3D(0.3520736, 0, 1.9687669, 0, 2, 0, -1.9687669, 0, 0.3520736, 28.314377, 1.25, -27.684837)
 
 [node name="grass-plant53" parent="TortugaNode/MontagneCapitainerie" instance=ExtResource("10_2u3nc")]
 transform = Transform3D(-0.46498114, 0, 0.8853206, 0, 1, 0, -0.8853206, 0, -0.46498114, 27.516937, 1.2329037, -32.00547)
@@ -543,7 +543,7 @@ transform = Transform3D(-0.46498114, 0, 0.8853206, 0, 1, 0, -0.8853206, 0, -0.46
 transform = Transform3D(0.16001505, 0, 1.9935884, 0, 2, 0, -1.9935884, 0, 0.16001505, 33.799355, 1.25, -35.105965)
 
 [node name="grass60" parent="TortugaNode/MontagneCapitainerie" instance=ExtResource("13_2o6r5")]
-transform = Transform3D(0.16001505, 0, 1.9935884, 0, 2, 0, -1.9935884, 0, 0.16001505, 13.799355, 1.25, -21.105965)
+transform = Transform3D(0.16001505, 0, 1.9935884, 0, 2, 0, -1.9935884, 0, 0.16001505, 12.999355, 1.25, -17.205965)
 
 [node name="grass49" parent="TortugaNode/MontagneCapitainerie" instance=ExtResource("13_2o6r5")]
 transform = Transform3D(0.16001505, 0, 1.9935884, 0, 2, 0, -1.9935884, 0, 0.16001505, 40.945354, 1.25, -31.714966)
