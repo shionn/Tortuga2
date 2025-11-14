@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cyf26hdagg1d8"
-path="res://.godot/imported/wheelchair-deluxe.glb-62163505135e1fecc08c85192c269f96.scn"
+path="res://.godot/imported/wheelchair-deluxe.glb-491dd25f2572b8c136f73636c85f77a1.scn"
 
 [deps]
 
-source_file="res://assets/character/wheelchair-deluxe.glb"
-dest_files=["res://.godot/imported/wheelchair-deluxe.glb-62163505135e1fecc08c85192c269f96.scn"]
+source_file="res:///assets/character/wheelchair-deluxe.glb"
+dest_files=["res://.godot/imported/wheelchair-deluxe.glb-491dd25f2572b8c136f73636c85f77a1.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
