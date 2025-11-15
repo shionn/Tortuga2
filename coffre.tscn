@@ -113,6 +113,10 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1, 
 [node name="flag-banner-long3" parent="stair" instance=ExtResource("7_r46nr")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 1.7, 2)
 
+[node name="OmniLight3D" type="OmniLight3D" parent="stair"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8, 0)
+shadow_enabled = true
+
 [node name="roof" type="Node3D" parent="."]
 
 [node name="roof-high-corner2" parent="roof" instance=ExtResource("9_a5a8v")]

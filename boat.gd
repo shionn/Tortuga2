@@ -5,6 +5,8 @@ extends CharacterBody3D
 @onready var _player := $"../Player" as CharacterBody3D
 @onready var _player_camera := $"../Player/CameraPivot/StringArm3D/Camera3D" as Camera3D
 
+var _speed := 0 as float
+
 func _physics_process(delta: float) -> void:
 	if _activation.overlaps_body(_player) and Input.is_action_just_pressed("control_boat") :
 		if _camera.current :
@@ -12,7 +14,7 @@ func _physics_process(delta: float) -> void:
 		else :
 			_camera.make_current()
 	
-	velocity -= velocity*.5*delta
+	_speed -= _speed*.5*delta
 	
 	
 	if _camera.current :
@@ -22,17 +24,21 @@ func _physics_process(delta: float) -> void:
 func _handle_move(delta : float) -> void: 
 	if Input.is_action_pressed("ui_right") :
 		rotate_y(-1*delta)
+		#velocity.rotated(Vector3.UP, -1*delta)
 	if Input.is_action_pressed("ui_left") :
 		rotate_y(1*delta)
-	var dir = 0
+		#velocity.rotated(Vector3.UP, 1*delta)
 	if Input.is_action_pressed("ui_up") :
-		dir = 1
+		_speed += 10.0*delta
 	if Input.is_action_pressed("ui_down") :
-		dir = dir -1;
-	if dir != 0: 
-		var move := Vector3(0, 0, dir).rotated(Vector3.UP,global_rotation.y)
-		move *= 10*delta
-		velocity+=move
+		_speed -= 10.0*delta
+
+
+	#if abs(_speed) > 0.001 : 
+	velocity = Vector3(0, 0, _speed).rotated(Vector3.UP,global_rotation.y)
+		
+	#	move *= 10*delta
+	#	velocity+=move
 		
 		
 	

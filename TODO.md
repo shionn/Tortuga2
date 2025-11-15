@@ -1,5 +1,4 @@
 - nager ? - TP hors de l'eau si trop profond ? 
 - pnj 
-- auberge : mettre des tables à l'étage à la place des lits.
 - armurerie.
 - faire un script de generation des binaire
