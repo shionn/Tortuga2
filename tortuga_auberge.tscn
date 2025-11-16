@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://c8y6go07dabnn"]
+[gd_scene load_steps=35 format=3 uid="uid://c8y6go07dabnn"]
 
 [ext_resource type="PackedScene" uid="uid://bn2k1c6mt0j5l" path="res://assets/town/walls/wall-window-shutters.glb" id="2_83rxu"]
 [ext_resource type="PackedScene" uid="uid://cj2lgbr3jctjg" path="res://assets/town/fence-hedge/hedge-gate.glb" id="2_g4xan"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://dvn116r1fxtxs" path="res://assets/town/road/road-wood.glb" id="19_css0i"]
 [ext_resource type="PackedScene" uid="uid://ckl0cxjsbj1sn" path="res://assets/town/roof/roof-corner-round.glb" id="22_hij4y"]
 [ext_resource type="PackedScene" uid="uid://ck66mrk1gxs6f" path="res://assets/town/roof/roof-corner-inner.glb" id="23_kj4nn"]
+[ext_resource type="PackedScene" uid="uid://ciw6p0lmnge3f" path="res://pnjs/tortuga_serveuse_auberge.tscn" id="23_wgia6"]
 [ext_resource type="PackedScene" uid="uid://d0mdhn6dked7d" path="res://assets/town/roof/roof-window.glb" id="24_pqrr8"]
 [ext_resource type="PackedScene" uid="uid://dj2jytbjf6lck" path="res://assets/town/roof/roof.glb" id="25_07vwk"]
 [ext_resource type="PackedScene" uid="uid://vkh0e522oxpg" path="res://assets/town/roof/roof-gable-end.glb" id="26_kkq1q"]
@@ -176,6 +177,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21707611, 0)
 
 [node name="rdc" type="Node3D" parent="."]
 
+[node name="stall4" parent="rdc" instance=ExtResource("6_08fns")]
+transform = Transform3D(-4.371139e-08, 0, -1, -6.357304e-08, 1, 2.7788656e-15, 1, 6.357304e-08, -4.371139e-08, 0.5, 1.907191e-07, -3)
+
 [node name="wall-window-shutters3" parent="rdc" instance=ExtResource("2_83rxu")]
 transform = Transform3D(-1.509958e-07, -1.5156992e-14, 2, 2.842171e-14, 2, 1.5156992e-14, -2, 2.842171e-14, -1.509958e-07, -3, -6.357304e-08, 1)
 
@@ -232,9 +236,6 @@ transform = Transform3D(-4.371139e-08, 0, -1, -6.357304e-08, 1, 2.7788656e-15, 1
 
 [node name="stall3" parent="rdc" instance=ExtResource("6_08fns")]
 transform = Transform3D(-4.371139e-08, 0, -1, -6.357304e-08, 1, 2.7788656e-15, 1, 6.357304e-08, -4.371139e-08, 1.5, 1.907191e-07, -3)
-
-[node name="stall4" parent="rdc" instance=ExtResource("6_08fns")]
-transform = Transform3D(-4.371139e-08, 0, -1, -6.357304e-08, 1, 2.7788656e-15, 1, 6.357304e-08, -4.371139e-08, 0.5, 1.907191e-07, -3)
 
 [node name="stall5" parent="rdc" instance=ExtResource("6_08fns")]
 transform = Transform3D(1, 0, 0, 0, 1, -6.357304e-08, 0, 6.357304e-08, 1, 1, -9.535955e-08, 1.5)
@@ -355,6 +356,9 @@ transform = Transform3D(0.22981334, 1.2259186e-08, -0.1928363, -1.2259189e-08, 0
 transform = Transform3D(1, 0, 0, 0, -1, 1.509958e-07, 0, -1.509958e-07, -1, 0, 1.9, -2)
 shadow_enabled = true
 distance_fade_enabled = true
+
+[node name="tortuga-serveuse-auberge" parent="rdc" instance=ExtResource("23_wgia6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3.6)
 
 [node name="Stair" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)

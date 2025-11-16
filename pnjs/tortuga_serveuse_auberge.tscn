@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ciw6p0lmnge3f"]
+
+[ext_resource type="Script" uid="uid://citajx8vwcbd6" path="res://pnjs/tortuga_serveuse_auberge.gd" id="1_rwguv"]
+[ext_resource type="PackedScene" uid="uid://dj7aq7h57gvln" path="res://assets/character/character-female-c.glb" id="2_xoufm"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rwguv"]
+radius = 0.2
+height = 0.7
+
+[node name="tortuga-serveuse-auberge" type="Node3D"]
+script = ExtResource("1_rwguv")
+
+[node name="character" parent="." instance=ExtResource("2_xoufm")]
+
+[node name="activation" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activation"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0)
+shape = SubResource("CapsuleShape3D_rwguv")
+
+[connection signal="input_event" from="activation" to="." method="_on_activation_input_event"]
+[connection signal="mouse_entered" from="activation" to="." method="_on_activation_mouse_entered"]
+[connection signal="mouse_exited" from="activation" to="." method="_on_activation_mouse_exited"]

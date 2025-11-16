@@ -44,7 +44,6 @@ floor_max_angle = 0.0
 script = ExtResource("2_ete15")
 
 [node name="activation" type="Area3D" parent="."]
-visible = false
 collision_layer = 2
 collision_mask = 2
 
