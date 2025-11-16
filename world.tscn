@@ -1235,6 +1235,36 @@ text = "Un text
 Autre ligne"
 script = ExtResource("22_wukud")
 
+[node name="Panel" type="Panel" parent="."]
+layout_direction = 2
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -200.0
+offset_right = 320.0
+offset_bottom = 200.0
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 385.0
+
+[node name="Label" type="Label" parent="Panel/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 360)
+layout_mode = 2
+text = "ceci est un text tres tres tre long"
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Panel/GridContainer"]
+layout_mode = 2
+text = "Fermer
+"
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_bh8nc")
 
