@@ -16,7 +16,7 @@ size = Vector3(1.669812, 1.4109375, 0.6600586)
 size = Vector3(4.4, 1.4, 2.2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_na3tx"]
-size = Vector3(4.4, 1.6, 10.6)
+size = Vector3(4.4, 1.6, 10.7)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7u31y"]
 size = Vector3(0.30203858, 0.5, 1.2)
@@ -38,7 +38,7 @@ size = Vector3(0.6, 0.2, 1.272583)
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 collision_layer = 2
-slide_on_ceiling = false
+axis_lock_linear_y = true
 wall_min_slide_angle = 0.0
 floor_max_angle = 0.0
 script = ExtResource("2_ete15")
@@ -71,7 +71,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9604645e-08, 1.8, -5.3)
 shape = SubResource("BoxShape3D_g7rty")
 
 [node name="ground" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, -0.6999998)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, -0.7499995)
 shape = SubResource("BoxShape3D_na3tx")
 
 [node name="barriere" type="CollisionShape3D" parent="."]

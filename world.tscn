@@ -22,12 +22,12 @@
 [ext_resource type="PackedScene" uid="uid://bw666kf55m31r" path="res://assets/pirate/structures/structure-platform-dock-long.glb" id="19_bc84e"]
 [ext_resource type="PackedScene" uid="uid://brird11bbbwv0" path="res://tortuga_dortoir.tscn" id="20_bo7i5"]
 [ext_resource type="PackedScene" uid="uid://biadyt2j3gtyg" path="res://reserve.tscn" id="21_bc84e"]
-[ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://debug_info.gd" id="22_wukud"]
 [ext_resource type="PackedScene" uid="uid://blifncbh7xys7" path="res://coffre.tscn" id="23_il2jm"]
 [ext_resource type="PackedScene" uid="uid://ukreens1wy4a" path="res://wall_coffre.tscn" id="24_wjb0r"]
 [ext_resource type="PackedScene" uid="uid://bagm6lyjb83lg" path="res://tortuga_brasserie.tscn" id="25_mc2jv"]
 [ext_resource type="Script" uid="uid://36k2ttv8736a" path="res://addons/vaporwavesky/vaporwave_sky_material.gd" id="27_o3ebs"]
 [ext_resource type="Shader" uid="uid://bdgkouhd5s065" path="res://addons/vaporwavesky/vaporwave.gdshader" id="28_k83mh"]
+[ext_resource type="PackedScene" uid="uid://balodqhfj5pj3" path="res://gui/gui.tscn" id="28_o3ebs"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qktwf"]
 shader = ExtResource("28_k83mh")
@@ -1228,44 +1228,9 @@ transform = Transform3D(0.34306955, 0, -0.93931, 0, 1, 0, 0.93931, 0, 0.34306955
 [node name="TortugaBrasserie" parent="TortugaNode" instance=ExtResource("25_mc2jv")]
 transform = Transform3D(0.8191521, 0, -0.57357645, 0, 1, 0, 0.57357645, 0, 0.8191521, -7.1000004, 1.7999998, -44.399998)
 
-[node name="DebugInfo" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Un text
-Autre ligne"
-script = ExtResource("22_wukud")
-
-[node name="Panel" type="Panel" parent="."]
-layout_direction = 2
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 20.0
-offset_top = -200.0
-offset_right = 320.0
-offset_bottom = 200.0
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="GridContainer" type="GridContainer" parent="Panel"]
-layout_mode = 0
-offset_right = 300.0
-offset_bottom = 385.0
-
-[node name="Label" type="Label" parent="Panel/GridContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(300, 360)
-layout_mode = 2
-text = "ceci est un text tres tres tre long"
-autowrap_mode = 2
-
-[node name="Button" type="Button" parent="Panel/GridContainer"]
-layout_mode = 2
-text = "Fermer
-"
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_bh8nc")
+
+[node name="Gui" parent="." instance=ExtResource("28_o3ebs")]
 
 [connection signal="ready" from="." to="." method="_on_ready"]
