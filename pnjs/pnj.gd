@@ -1,5 +1,6 @@
 extends Node3D
 
+@onready var _character := $character as Node3D
 @onready var _animation := $character/AnimationPlayer as AnimationPlayer
 @onready var _name_3d := $name as Label3D
 @onready var _gui := $"/root/World/Gui" as Control
@@ -12,7 +13,7 @@ func _ready() -> void:
 	_name_3d.text = _pnj_name
 	_animation.get_animation("idle").loop_mode = Animation.LOOP_LINEAR
 	_animation.play("idle")
-
+	
 func _process(delta: float) -> void:
 	_name_3d.look_at(_player.global_position, Vector3.UP, true)
 
