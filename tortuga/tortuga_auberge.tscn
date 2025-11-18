@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://c8y6go07dabnn"]
+[gd_scene load_steps=36 format=3 uid="uid://c8y6go07dabnn"]
 
 [ext_resource type="PackedScene" uid="uid://bn2k1c6mt0j5l" path="res://assets/town/walls/wall-window-shutters.glb" id="2_83rxu"]
 [ext_resource type="PackedScene" uid="uid://cj2lgbr3jctjg" path="res://assets/town/fence-hedge/hedge-gate.glb" id="2_g4xan"]
@@ -25,8 +25,9 @@
 [ext_resource type="PackedScene" uid="uid://dvn116r1fxtxs" path="res://assets/town/road/road-wood.glb" id="19_css0i"]
 [ext_resource type="PackedScene" uid="uid://ckl0cxjsbj1sn" path="res://assets/town/roof/roof-corner-round.glb" id="22_hij4y"]
 [ext_resource type="PackedScene" uid="uid://ck66mrk1gxs6f" path="res://assets/town/roof/roof-corner-inner.glb" id="23_kj4nn"]
-[ext_resource type="PackedScene" uid="uid://ciw6p0lmnge3f" path="res://pnjs/tortuga_serveuse_auberge.tscn" id="23_wgia6"]
+[ext_resource type="PackedScene" uid="uid://ciw6p0lmnge3f" path="res://pnjs/pnj-fc.tscn" id="23_wgia6"]
 [ext_resource type="PackedScene" uid="uid://d0mdhn6dked7d" path="res://assets/town/roof/roof-window.glb" id="24_pqrr8"]
+[ext_resource type="Script" uid="uid://6g0doqkkb66y" path="res://pnjs/tortuga/serveurse-auberge-maya.gd" id="24_xpx3v"]
 [ext_resource type="PackedScene" uid="uid://dj2jytbjf6lck" path="res://assets/town/roof/roof.glb" id="25_07vwk"]
 [ext_resource type="PackedScene" uid="uid://vkh0e522oxpg" path="res://assets/town/roof/roof-gable-end.glb" id="26_kkq1q"]
 [ext_resource type="PackedScene" uid="uid://doosub3t1qspl" path="res://assets/town/roof/roof-gable.glb" id="27_yxeqk"]
@@ -359,6 +360,7 @@ distance_fade_enabled = true
 
 [node name="tortuga-serveuse-auberge" parent="rdc" instance=ExtResource("23_wgia6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3.6)
+script = ExtResource("24_xpx3v")
 
 [node name="Stair" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)

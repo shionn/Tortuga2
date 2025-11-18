@@ -4,11 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c0k3ivajt7j1a"
-valid=false
+path="res://.godot/imported/stricture-plateform-dock-long.blend-b7ca38b888dc6aeaad8268812afeb741.scn"
 
 [deps]
 
 source_file="res://blender/stricture-plateform-dock-long.blend"
+dest_files=["res://.godot/imported/stricture-plateform-dock-long.blend-b7ca38b888dc6aeaad8268812afeb741.scn"]
 
 [params]
 

@@ -1,20 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://ciw6p0lmnge3f"]
+[gd_scene load_steps=3 format=3 uid="uid://br4iwpqgohn4f"]
 
-[ext_resource type="Script" uid="uid://citajx8vwcbd6" path="res://pnjs/tortuga_serveuse_auberge.gd" id="1_rwguv"]
-[ext_resource type="PackedScene" uid="uid://dj7aq7h57gvln" path="res://assets/character/character-female-c.glb" id="2_xoufm"]
+[ext_resource type="PackedScene" uid="uid://dt8xikej6hhld" path="res://assets/character/character-male-a.glb" id="1_2snbk"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rwguv"]
 radius = 0.2
 height = 0.7
 
-[node name="tortuga-serveuse-auberge" type="Node3D"]
-script = ExtResource("1_rwguv")
+[node name="pnj" type="Node3D"]
 
 [node name="name" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 text = "PnjName"
 
-[node name="character" parent="." instance=ExtResource("2_xoufm")]
+[node name="character" parent="." instance=ExtResource("1_2snbk")]
 
 [node name="activation" type="Area3D" parent="."]
 

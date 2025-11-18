@@ -4,11 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ciy8387q2gf5b"
-valid=false
+path="res://.godot/imported/planks.blend-27b6a4c1c55cb6bc83bfb26e30bd11dd.scn"
 
 [deps]
 
 source_file="res://blender/planks.blend"
+dest_files=["res://.godot/imported/planks.blend-27b6a4c1c55cb6bc83bfb26e30bd11dd.scn"]
 
 [params]
 
