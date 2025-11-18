@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=3 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://gui/gui.gd" id="1_0fbet"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yw5qc"]
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
 
 [node name="Gui" type="Control"]
 layout_mode = 3
@@ -16,8 +19,8 @@ script = ExtResource("1_0fbet")
 layout_mode = 1
 offset_right = 85.0
 offset_bottom = 49.0
-text = "Un text
-Autre ligne"
+text = "PlayerPosition
+FPS"
 
 [node name="Left" type="Control" parent="."]
 layout_mode = 1
@@ -53,6 +56,12 @@ theme_override_constants/margin_bottom = 5
 layout_mode = 2
 theme_override_constants/separation = 5
 alignment = 1
+
+[node name="Title" type="Label" parent="Left/Dialog/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_yw5qc")
+text = "Title"
+horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Left/Dialog/MarginContainer/VBoxContainer"]
 layout_mode = 2

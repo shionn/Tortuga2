@@ -10,6 +10,10 @@ height = 0.7
 [node name="tortuga-serveuse-auberge" type="Node3D"]
 script = ExtResource("1_rwguv")
 
+[node name="name" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+text = "PnjName"
+
 [node name="character" parent="." instance=ExtResource("2_xoufm")]
 
 [node name="activation" type="Area3D" parent="."]
