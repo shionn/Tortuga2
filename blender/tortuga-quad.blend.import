@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cueaeblntrp4v"
-path="res://.godot/imported/tortuga-quad.blend-f6fe6cb73dbc03949742e90d25aa7c54.scn"
+valid=false
 
 [deps]
 
 source_file="res://blender/tortuga-quad.blend"
-dest_files=["res://.godot/imported/tortuga-quad.blend-f6fe6cb73dbc03949742e90d25aa7c54.scn"]
 
 [params]
 
