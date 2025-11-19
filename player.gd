@@ -8,16 +8,24 @@ const JUMP_VELOCITY = 4.5
 @onready var _pivot := $Pivot as Node3D
 @onready var _animation := $Pivot/character/AnimationPlayer as AnimationPlayer
 
+var _last_floor_position : Vector3
+
 func _physics_process(delta: float) -> void:
 
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	elif position.y > 0.1 :
+		_last_floor_position = position
 	
 	if _camera.current :
 		_handle_move()
 		_handle_jump()
 
 	move_and_slide()
+	
+	if position.y < -1 :
+		position = _last_floor_position
+		
 
 func _handle_move() -> void: 
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
