@@ -21,7 +21,11 @@ func _physics_process(delta: float) -> void:
 		_handle_move()
 		_handle_jump()
 
-	move_and_slide()
+	
+	#if is_on_floor() && position.y<0:
+	#	position = position - get_position_delta()
+		
+		
 	
 	if position.y < -1 :
 		position = _last_floor_position
