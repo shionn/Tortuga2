@@ -1,6 +1,6 @@
 [gd_scene load_steps=35 format=3 uid="uid://dx8mf6okqe5rg"]
 
-[ext_resource type="Script" path="res://world.gd" id="1_26xuy"]
+[ext_resource type="Script" uid="uid://bla8jb6w1cmfh" path="res://world.gd" id="1_26xuy"]
 [ext_resource type="PackedScene" uid="uid://dac1cbndt3704" path="res://bateau.tscn" id="1_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://water/WaterPlane.tscn" id="2_036b0"]
 [ext_resource type="PackedScene" uid="uid://dvmo6h4nm5lcb" path="res://assets/pirate/patch-grass.glb" id="4_ioo17"]

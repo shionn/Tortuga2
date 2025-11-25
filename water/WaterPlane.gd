@@ -1,8 +1,11 @@
 extends MeshInstance3D
 
 @onready var _body = $StaticBody3D as StaticBody3D
+@onready var _player =$/root/World/Player as CharacterBody3D
 
 func _ready() -> void:
+	_body.set_physics_process()
+	#_player.add_collision_exception_with($".")
 	pass
 
 func set_perspective(perspective: bool) -> void:
