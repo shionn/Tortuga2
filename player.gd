@@ -10,6 +10,9 @@ const JUMP_VELOCITY = 4.5
 
 var _last_floor_position : Vector3
 
+func _ready() -> void:
+	pass
+
 func _physics_process(delta: float) -> void:
 
 	if not is_on_floor():
@@ -28,6 +31,7 @@ func _physics_process(delta: float) -> void:
 	
 	if position.y < -1 :
 		position = _last_floor_position
+
 		
 
 func _handle_move() -> void: 
@@ -57,8 +61,12 @@ func _handle_jump() -> void :
 		_animation.queue("fall")
 
 
-@export var tilt_limit = deg_to_rad(75)
-@export_range(0.0, 1.0) var mouse_sensitivity = 0.01
+#@export var tilt_limit = deg_to_rad(75)
+#@export_range(0.0, 1.0) var mouse_sensitivity = 0.01
+
+const tilt_limit = deg_to_rad(75)
+const mouse_sensitivity = 0.01
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and Input.is_action_just_pressed("move_camera"):
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
