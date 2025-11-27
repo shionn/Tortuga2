@@ -14,18 +14,17 @@ func _physics_process(delta: float) -> void:
 
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-	elif position.y > 0.1 :
+	elif position.y > -.5 :
 		_last_floor_position = position
 	
 	if _camera.current :
 		_handle_move()
 		_handle_jump()
 
+	move_and_slide()
 	
-	#if is_on_floor() && position.y<0:
-	#	position = position - get_position_delta()
-		
-		
+	if is_on_floor() && position.y<-.5:
+		position = position - get_position_delta()
 	
 	if position.y < -1 :
 		position = _last_floor_position
