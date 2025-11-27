@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dx8mf6okqe5rg"]
+[gd_scene load_steps=34 format=3 uid="uid://dx8mf6okqe5rg"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_26xuy"]
 [ext_resource type="PackedScene" uid="uid://dac1cbndt3704" path="res://bateau.tscn" id="1_aqk2v"]
@@ -30,8 +30,6 @@
 [ext_resource type="Shader" uid="uid://bdgkouhd5s065" path="res://addons/vaporwavesky/vaporwave.gdshader" id="28_k83mh"]
 [ext_resource type="PackedScene" uid="uid://balodqhfj5pj3" path="res://gui/gui.tscn" id="28_o3ebs"]
 [ext_resource type="PackedScene" uid="uid://c3gkyonxb0bpp" path="res://addons/nap_map_generator/map_generator_viewport.tscn" id="30_qktwf"]
-
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_qktwf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qktwf"]
 shader = ExtResource("28_k83mh")
@@ -95,16 +93,23 @@ light_indirect_energy = 2.0
 light_bake_mode = 1
 shadow_enabled = true
 
-[node name="WaterPlane" parent="." instance=ExtResource("2_036b0")]
-transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 0, 0, 0)
+[node name="sea" type="Node3D" parent="."]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="WaterPlane"]
-collision_layer = 128
-collision_mask = 0
+[node name="WaterPlane" parent="sea" instance=ExtResource("2_036b0")]
+transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, -250, 0, 250)
+skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="WaterPlane/StaticBody3D"]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
-shape = SubResource("WorldBoundaryShape3D_qktwf")
+[node name="WaterPlane2" parent="sea" instance=ExtResource("2_036b0")]
+transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 250, 0, 250)
+skeleton = NodePath("../..")
+
+[node name="WaterPlane3" parent="sea" instance=ExtResource("2_036b0")]
+transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 250, 0, -250)
+skeleton = NodePath("../..")
+
+[node name="WaterPlane4" parent="sea" instance=ExtResource("2_036b0")]
+transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, -250, 0, -250)
+skeleton = NodePath("../..")
 
 [node name="TortugaNode" type="Node3D" parent="."]
 

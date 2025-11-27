@@ -2,8 +2,6 @@ extends MeshInstance3D
 
 @onready var _body = $StaticBody3D as StaticBody3D
 
-func _ready() -> void:
-	pass
 
 func set_perspective(perspective: bool) -> void:
 	var material : = get_active_material(0);
