@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cqhtr500ti2eu"
-path="res://.godot/imported/platform.glb-47f2346a02d39483209b030420a6a529.scn"
+path="res://.godot/imported/platform.glb-59035bda3a72196cd5a06723522617f4.scn"
 
 [deps]
 
-source_file="res://assets/pirate/platform.glb"
-dest_files=["res://.godot/imported/platform.glb-47f2346a02d39483209b030420a6a529.scn"]
+source_file="res:///assets/pirate/structures/platform.glb"
+dest_files=["res://.godot/imported/platform.glb-59035bda3a72196cd5a06723522617f4.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
