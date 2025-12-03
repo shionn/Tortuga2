@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://dx8mf6okqe5rg"]
+[gd_scene load_steps=43 format=3 uid="uid://dx8mf6okqe5rg"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_26xuy"]
 [ext_resource type="PackedScene" uid="uid://dac1cbndt3704" path="res://bateau.tscn" id="1_aqk2v"]
@@ -37,6 +37,7 @@
 [ext_resource type="Shader" uid="uid://bdgkouhd5s065" path="res://addons/vaporwavesky/vaporwave.gdshader" id="28_k83mh"]
 [ext_resource type="PackedScene" uid="uid://balodqhfj5pj3" path="res://gui/gui.tscn" id="28_o3ebs"]
 [ext_resource type="PackedScene" uid="uid://c3gkyonxb0bpp" path="res://addons/nap_map_generator/map_generator_viewport.tscn" id="30_qktwf"]
+[ext_resource type="PackedScene" uid="uid://d3ntcxuu0k0c2" path="res://assets/mini-dungeon/banner.glb" id="38_yx0jh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g1i3r"]
 size = Vector3(2.2, 0.2, 2.4)
@@ -95,7 +96,7 @@ script = ExtResource("1_26xuy")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.0513577, 0, 8.227716)
 
 [node name="Player" parent="." instance=ExtResource("4_pkg7o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 250.19849, 0.81313133, -318.0907)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 1.5, -37)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-1, 8.2150535e-08, 2.990035e-08, 0, -0.34202012, 0.9396926, 8.742278e-08, 0.9396926, 0.34202012, -26, 16, -2)
@@ -311,6 +312,7 @@ transform = Transform3D(11.200185, 0, -4.3076496, 0, 11.999999, 0, 4.3076496, 0,
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="TortugaNode/mountain"]
 transform = Transform3D(0.76604444, 0, 0.6427876, 0, 1, 0, -0.6427876, 0, 0.76604444, 250.5, 1.2, -309.8)
 collision_mask = 0
+input_ray_pickable = false
 script = ExtResource("15_g1i3r")
 
 [node name="Timer" type="Timer" parent="TortugaNode/mountain/AnimatableBody3D"]
@@ -320,13 +322,28 @@ one_shot = true
 transform = Transform3D(1.0000001, 0, 1.7881393e-07, 0, 0.99999994, 6.2156964e-09, -1.4901161e-07, 0, 1.0000002, -0.20007324, 0.10001004, 3.0517578e-05)
 shape = SubResource("BoxShape3D_g1i3r")
 
-[node name="platform2" parent="TortugaNode/mountain/AnimatableBody3D" instance=ExtResource("14_g1i3r")]
+[node name="platform3" parent="TortugaNode/mountain/AnimatableBody3D" instance=ExtResource("14_g1i3r")]
 
-[node name="structure-platform2" parent="TortugaNode/mountain" instance=ExtResource("16_g1i3r")]
+[node name="structure-platform-b-1" parent="TortugaNode/mountain" instance=ExtResource("16_g1i3r")]
 transform = Transform3D(0.64278764, 0, -0.76604444, 0, 1, 0, 0.76604444, 0, 0.64278764, 252.4, 0.5, -311.4)
 
-[node name="platform2" parent="TortugaNode/mountain" instance=ExtResource("14_6ah6f")]
+[node name="platform-b-1" parent="TortugaNode/mountain" instance=ExtResource("14_6ah6f")]
 transform = Transform3D(-0.6427875, 0.2993174, 0.70514745, 0, 0.9205048, -0.39073104, -0.7660443, -0.2511571, -0.59168905, 254.2, 0.75, -312.9)
+
+[node name="platform-h-1" parent="TortugaNode/mountain" instance=ExtResource("14_6ah6f")]
+transform = Transform3D(0.64278764, 0, -0.76604444, 0, 1, 0, 0.76604444, 0, 0.64278764, 244.6, 72.8, -305.00003)
+
+[node name="platform-h-2" parent="TortugaNode/mountain" instance=ExtResource("14_6ah6f")]
+transform = Transform3D(0.64278764, 0, -0.76604444, 0, 1, 0, 0.76604444, 0, 0.64278764, 246.5, 72.8, -306.60004)
+
+[node name="platform-h-3" parent="TortugaNode/mountain" instance=ExtResource("14_6ah6f")]
+transform = Transform3D(0.64278764, 0, -0.76604444, 0, 1, 0, 0.76604444, 0, 0.64278764, 248.4, 72.8, -308.20004)
+
+[node name="planks-simple" parent="TortugaNode/mountain" instance=ExtResource("18_26xuy")]
+transform = Transform3D(36.99711, 1.8626554, 1.0352762, -32.139378, 2.2981334, -3.5527145e-15, -9.913345, -0.499097, 3.8637033, 200.4, 86.5, -275.3)
+
+[node name="flag-pirate-high-pennant2" parent="TortugaNode/mountain" instance=ExtResource("10_wse8f")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 150.9, 110.100006, -265.1)
 
 [node name="coline-montagne" type="Node3D" parent="TortugaNode"]
 transform = Transform3D(0.99931294, 0, 0.037062302, 0, 1, 0, -0.037062302, 0, 0.99931294, -7.2949123, 0, -23.624184)
@@ -1866,6 +1883,9 @@ environment = SubResource("Environment_bh8nc")
 [node name="Gui" parent="." instance=ExtResource("28_o3ebs")]
 
 [node name="MapGeneratorViewport" parent="." instance=ExtResource("30_qktwf")]
+
+[node name="banner2" parent="." instance=ExtResource("38_yx0jh")]
+transform = Transform3D(9.659258, 0, -2.5881906, 0, 10, 0, 2.5881906, 0, 9.659258, 152.2, 83.9, -238.7)
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="timeout" from="TortugaNode/mountain/AnimatableBody3D/Timer" to="TortugaNode/mountain/AnimatableBody3D" method="_on_timer_timeout"]
