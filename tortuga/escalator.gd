@@ -1,26 +1,32 @@
-extends Node3D
+extends AnimatableBody3D
 
 const SPEED := 5
-const BOTTOM := .3
-const UP := 50
+const BOTTOM := 1.2
+const UP := 10 
 var dir := Vector3.UP
 @onready var _timer := $Timer as Timer
 
 func _process(delta: float) -> void:
 	if position.y <BOTTOM and dir.y < 0: 
+		print("call up")
 		dir = Vector3.ZERO
-		print("timer start")
+		constant_linear_velocity = Vector3.UP
 		_timer.start(5)
 	if position.y > UP and dir.y > 0 : 
+		print("call down")
 		dir = Vector3.ZERO
-		print("timer start")
+		constant_linear_velocity = Vector3.DOWN
 		_timer.start(5)
-	
-	translate(SPEED*delta*dir)
+
+	#translate(SPEED*delta*dir)
+
 
 func _on_timer_timeout():
-	print("_on_timer_timeout")
+	print("_on_timer_timeout ")
+	print(position.y)
 	if position.y <BOTTOM : 
+		print("go up")
 		dir = Vector3.UP
 	if position.y > UP : 
+		print ("go down")
 		dir = Vector3.DOWN

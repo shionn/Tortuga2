@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://dx8mf6okqe5rg"]
+[gd_scene load_steps=42 format=3 uid="uid://dx8mf6okqe5rg"]
 
 [ext_resource type="Script" uid="uid://bla8jb6w1cmfh" path="res://world.gd" id="1_26xuy"]
 [ext_resource type="PackedScene" uid="uid://dac1cbndt3704" path="res://bateau.tscn" id="1_aqk2v"]
@@ -18,8 +18,10 @@
 [ext_resource type="PackedScene" uid="uid://d2d7oty4ebqab" path="res://tortuga/tortuga_capitainerie.tscn" id="12_k3n1d"]
 [ext_resource type="PackedScene" uid="uid://dn1b4sjm530aw" path="res://assets/pirate/plant/grass.glb" id="13_2o6r5"]
 [ext_resource type="PackedScene" uid="uid://cqhtr500ti2eu" path="res://assets/pirate/structures/platform.glb" id="14_6ah6f"]
+[ext_resource type="PackedScene" uid="uid://ckwih5ror4ch4" path="res://assets/pirate/structures/platform-no-colid.glb" id="14_g1i3r"]
 [ext_resource type="Script" uid="uid://de6fro5s3yle8" path="res://tortuga/escalator.gd" id="15_g1i3r"]
 [ext_resource type="PackedScene" uid="uid://bccgsgntmpy52" path="res://assets/pirate/plant/palm-straight.glb" id="15_gggvi"]
+[ext_resource type="PackedScene" uid="uid://bs2i6jgk7ixh6" path="res://assets/pirate/structures/structure-platform.glb" id="16_g1i3r"]
 [ext_resource type="PackedScene" uid="uid://drk5dqotdgk20" path="res://assets/pirate/plant/palm-detailed-straight.glb" id="16_w44yn"]
 [ext_resource type="PackedScene" uid="uid://m5x8alnnip8v" path="res://assets/pirate/plant/grass-patch.glb" id="17_6ah6f"]
 [ext_resource type="PackedScene" uid="uid://cy1emgfc3p51p" path="res://assets/pirate/structures/structure-fence-sides.glb" id="17_cbp6q"]
@@ -35,6 +37,9 @@
 [ext_resource type="Shader" uid="uid://bdgkouhd5s065" path="res://addons/vaporwavesky/vaporwave.gdshader" id="28_k83mh"]
 [ext_resource type="PackedScene" uid="uid://balodqhfj5pj3" path="res://gui/gui.tscn" id="28_o3ebs"]
 [ext_resource type="PackedScene" uid="uid://c3gkyonxb0bpp" path="res://addons/nap_map_generator/map_generator_viewport.tscn" id="30_qktwf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g1i3r"]
+size = Vector3(2.2, 0.2, 2.4)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qktwf"]
 shader = ExtResource("28_k83mh")
@@ -303,11 +308,25 @@ transform = Transform3D(-7.3106384, 0, 16.448544, 0, 18, 0, -16.448544, 0, -7.31
 [node name="rocks-c4" parent="TortugaNode/mountain" instance=ExtResource("9_k3n1d")]
 transform = Transform3D(11.200185, 0, -4.3076496, 0, 11.999999, 0, 4.3076496, 0, 11.200185, -0.8669739, 0.49996376, -104.7684)
 
-[node name="escalator" parent="TortugaNode/mountain" instance=ExtResource("14_6ah6f")]
-transform = Transform3D(0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071067, 251.4, 0.5, -310.3)
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="TortugaNode/mountain"]
+transform = Transform3D(0.76604444, 0, 0.6427876, 0, 1, 0, -0.6427876, 0, 0.76604444, 250.5, 1.1999999, -309.8)
+collision_mask = 0
+constant_linear_velocity = Vector3(0, 1, 0)
 script = ExtResource("15_g1i3r")
 
-[node name="Timer" type="Timer" parent="TortugaNode/mountain/escalator"]
+[node name="Timer" type="Timer" parent="TortugaNode/mountain/AnimatableBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TortugaNode/mountain/AnimatableBody3D"]
+transform = Transform3D(1.0000001, 0, 1.7881393e-07, 0, 0.99999994, 6.2156964e-09, -1.4901161e-07, 0, 1.0000002, -0.20007324, 0.10001004, 3.0517578e-05)
+shape = SubResource("BoxShape3D_g1i3r")
+
+[node name="platform2" parent="TortugaNode/mountain/AnimatableBody3D" instance=ExtResource("14_g1i3r")]
+
+[node name="structure-platform2" parent="TortugaNode/mountain" instance=ExtResource("16_g1i3r")]
+transform = Transform3D(0.64278764, 0, -0.76604444, 0, 1, 0, 0.76604444, 0, 0.64278764, 252.4, 0.5, -311.4)
+
+[node name="platform2" parent="TortugaNode/mountain" instance=ExtResource("14_6ah6f")]
+transform = Transform3D(-0.6427875, 0.2993174, 0.70514745, 0, 0.9205048, -0.39073104, -0.7660443, -0.2511571, -0.59168905, 254.2, 0.75, -312.9)
 
 [node name="coline-montagne" type="Node3D" parent="TortugaNode"]
 transform = Transform3D(0.99931294, 0, 0.037062302, 0, 1, 0, -0.037062302, 0, 0.99931294, -7.2949123, 0, -23.624184)
@@ -1849,4 +1868,4 @@ environment = SubResource("Environment_bh8nc")
 [node name="MapGeneratorViewport" parent="." instance=ExtResource("30_qktwf")]
 
 [connection signal="ready" from="." to="." method="_on_ready"]
-[connection signal="timeout" from="TortugaNode/mountain/escalator/Timer" to="TortugaNode/mountain/escalator" method="_on_timer_timeout"]
+[connection signal="timeout" from="TortugaNode/mountain/AnimatableBody3D/Timer" to="TortugaNode/mountain/AnimatableBody3D" method="_on_timer_timeout"]
