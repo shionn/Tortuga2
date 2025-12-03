@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 		dir = Vector3.ZERO
 		constant_linear_velocity = Vector3.DOWN
 		_timer.start(5)
-
+	
 	#translate(SPEED*delta*dir)
 
 
@@ -27,6 +27,8 @@ func _on_timer_timeout():
 	if position.y <BOTTOM : 
 		print("go up")
 		dir = Vector3.UP
+		constant_linear_velocity = Vector3.UP
 	if position.y > UP : 
 		print ("go down")
 		dir = Vector3.DOWN
+		constant_linear_velocity = Vector3.DOWN

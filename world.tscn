@@ -1,6 +1,6 @@
 [gd_scene load_steps=42 format=3 uid="uid://dx8mf6okqe5rg"]
 
-[ext_resource type="Script" uid="uid://bla8jb6w1cmfh" path="res://world.gd" id="1_26xuy"]
+[ext_resource type="Script" path="res://world.gd" id="1_26xuy"]
 [ext_resource type="PackedScene" uid="uid://dac1cbndt3704" path="res://bateau.tscn" id="1_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://water/WaterPlane.tscn" id="2_036b0"]
 [ext_resource type="PackedScene" uid="uid://dvmo6h4nm5lcb" path="res://assets/pirate/patch-grass.glb" id="4_ioo17"]
@@ -95,7 +95,7 @@ script = ExtResource("1_26xuy")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.0513577, 0, 8.227716)
 
 [node name="Player" parent="." instance=ExtResource("4_pkg7o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.198475, 0.81313133, -34.090683)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 250.19849, 0.81313133, -318.0907)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-1, 8.2150535e-08, 2.990035e-08, 0, -0.34202012, 0.9396926, 8.742278e-08, 0.9396926, 0.34202012, -26, 16, -2)
@@ -309,12 +309,12 @@ transform = Transform3D(-7.3106384, 0, 16.448544, 0, 18, 0, -16.448544, 0, -7.31
 transform = Transform3D(11.200185, 0, -4.3076496, 0, 11.999999, 0, 4.3076496, 0, 11.200185, -0.8669739, 0.49996376, -104.7684)
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="TortugaNode/mountain"]
-transform = Transform3D(0.76604444, 0, 0.6427876, 0, 1, 0, -0.6427876, 0, 0.76604444, 250.5, 1.1999999, -309.8)
+transform = Transform3D(0.76604444, 0, 0.6427876, 0, 1, 0, -0.6427876, 0, 0.76604444, 250.5, 1.2, -309.8)
 collision_mask = 0
-constant_linear_velocity = Vector3(0, 1, 0)
 script = ExtResource("15_g1i3r")
 
 [node name="Timer" type="Timer" parent="TortugaNode/mountain/AnimatableBody3D"]
+one_shot = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TortugaNode/mountain/AnimatableBody3D"]
 transform = Transform3D(1.0000001, 0, 1.7881393e-07, 0, 0.99999994, 6.2156964e-09, -1.4901161e-07, 0, 1.0000002, -0.20007324, 0.10001004, 3.0517578e-05)
