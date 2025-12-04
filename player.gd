@@ -76,3 +76,4 @@ func _unhandled_input(event: InputEvent) -> void:
 		_camera_pivot.rotation.x -= event.relative.y * mouse_sensitivity
 		_camera_pivot.rotation.x = clampf(_camera_pivot.rotation.x, -tilt_limit, tilt_limit)
 		_camera_pivot.rotation.y += -event.relative.x * mouse_sensitivity
+		
