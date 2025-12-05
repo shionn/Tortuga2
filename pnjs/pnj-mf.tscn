@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://crjxhxqifx1sn"]
 
-[ext_resource type="PackedScene" uid="uid://1y08u4spyqps" path="res://assets/character/character-male-f.glb" id="1_6yta2"]
+[ext_resource type="PackedScene" uid="uid://1y08u4spyqps" path="res://assets/character/base/character-male-f.glb" id="1_6yta2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rwguv"]
 radius = 0.2
