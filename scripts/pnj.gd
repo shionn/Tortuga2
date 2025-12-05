@@ -16,6 +16,8 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	_name_3d.look_at(_player.global_position, Vector3.UP, true)
+	_name_3d.rotation.x=0
+	_name_3d.rotation.z=0
 
 func _on_activation_mouse_entered() -> void:
 	Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)

@@ -18,7 +18,6 @@ func _process(delta: float) -> void:
 	_debug_info.text = str(_player.global_position)
 	_debug_info.text += "\nfps: " + str(Engine.get_frames_per_second())
 	_compass_arrow.rotation = -_player_camera.rotation.y
-	print(rad_to_deg(-_player_camera.rotation.y))
 
 func _on_close_dialog_button_pressed() -> void:
 	_dialog.hide()
