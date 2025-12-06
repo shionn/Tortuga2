@@ -1,6 +1,9 @@
-[gd_scene load_steps=32 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=36 format=3 uid="uid://byfhqtkkcefl2"]
 
+[ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/bouteille_note_lisible.gd" id="1_c7jrm"]
 [ext_resource type="PackedScene" uid="uid://dvplfstqecj42" path="res://assets/mine/tortuga-60.glb" id="1_hh6n0"]
+[ext_resource type="Script" uid="uid://bkxghrcx478fh" path="res://scripts/tortuga/bouteille_note_illisible.gd" id="1_jit35"]
+[ext_resource type="PackedScene" uid="uid://b5xtrnp1f2eg7" path="res://assets/pirate/props/bottle.glb" id="1_wohch"]
 [ext_resource type="PackedScene" uid="uid://dn1b4sjm530aw" path="res://assets/pirate/plant/grass.glb" id="2_wohch"]
 [ext_resource type="PackedScene" uid="uid://dvmo6h4nm5lcb" path="res://assets/pirate/patch-grass.glb" id="3_jit35"]
 [ext_resource type="PackedScene" uid="uid://nuvlejq8qd0s" path="res://assets/pirate/plant/palm-bend.glb" id="4_c7jrm"]
@@ -31,10 +34,93 @@
 [ext_resource type="PackedScene" uid="uid://bagm6lyjb83lg" path="res://tortuga/tortuga_brasserie.tscn" id="29_w1jow"]
 [ext_resource type="PackedScene" uid="uid://bqwr1sdl4wvhs" path="res://tortuga/tortuga_armurerie.tscn" id="30_5obc8"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_c7jrm"]
+size = Vector3(0.2, 0.44476318, 0.2)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_g1i3r"]
 size = Vector3(2.2, 0.2, 2.4)
 
 [node name="TortugaNode" type="Node3D"]
+
+[node name="objects" type="Node3D" parent="."]
+
+[node name="bouteille-note-lisible" type="Node3D" parent="objects"]
+transform = Transform3D(-0.6123724, 0.35355338, 0.7071067, 0.5, 0.8660254, 0, -0.61237246, 0.35355335, -0.70710677, -15.100001, -0.20000002, 7.0000005)
+script = ExtResource("1_c7jrm")
+
+[node name="bottle2" parent="objects/bouteille-note-lisible" instance=ExtResource("1_wohch")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="objects/bouteille-note-lisible"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="objects/bouteille-note-lisible/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22238159, 0)
+shape = SubResource("BoxShape3D_c7jrm")
+
+[node name="bouteille-note-illisible" type="Node3D" parent="objects"]
+transform = Transform3D(0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 0, 0, 1, 34.2, -0.19999999, 39.9)
+script = ExtResource("1_jit35")
+
+[node name="bottle2" parent="objects/bouteille-note-illisible" instance=ExtResource("1_wohch")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="objects/bouteille-note-illisible"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="objects/bouteille-note-illisible/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22238159, 0)
+shape = SubResource("BoxShape3D_c7jrm")
+
+[node name="bouteille-note-illisible2" type="Node3D" parent="objects"]
+transform = Transform3D(0.75, -0.4330127, 0.5, 0.5, 0.8660254, 0, -0.4330127, 0.25, 0.8660254, 34.2, -0.19999999, 0.9000015)
+script = ExtResource("1_jit35")
+
+[node name="bottle2" parent="objects/bouteille-note-illisible2" instance=ExtResource("1_wohch")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="objects/bouteille-note-illisible2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="objects/bouteille-note-illisible2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22238159, 0)
+shape = SubResource("BoxShape3D_c7jrm")
+
+[node name="bouteille-note-illisible3" type="Node3D" parent="objects"]
+transform = Transform3D(0.75, -0.4330127, 0.5, 0.5, 0.8660254, 0, -0.4330127, 0.25, 0.8660254, 21, 1.4901161e-08, -25.9)
+script = ExtResource("1_jit35")
+
+[node name="bottle2" parent="objects/bouteille-note-illisible3" instance=ExtResource("1_wohch")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="objects/bouteille-note-illisible3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="objects/bouteille-note-illisible3/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22238159, 0)
+shape = SubResource("BoxShape3D_c7jrm")
+
+[node name="bouteille-note-illisible4" type="Node3D" parent="objects"]
+transform = Transform3D(-0.6123724, 0.35355338, 0.7071067, 0.5, 0.8660254, 0, -0.61237246, 0.35355335, -0.70710677, -15, -0.3, -5.8999996)
+script = ExtResource("1_jit35")
+
+[node name="bottle2" parent="objects/bouteille-note-illisible4" instance=ExtResource("1_wohch")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="objects/bouteille-note-illisible4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="objects/bouteille-note-illisible4/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22238159, 0)
+shape = SubResource("BoxShape3D_c7jrm")
+
+[node name="bouteille-note-illisible5" type="Node3D" parent="objects"]
+transform = Transform3D(0.75, -0.43301266, 0.49999994, 0.5, 0.8660254, 0, -0.43301266, 0.25, 0.86602527, -10.5, -0.10000001, 25.800001)
+script = ExtResource("1_jit35")
+
+[node name="bottle2" parent="objects/bouteille-note-illisible5" instance=ExtResource("1_wohch")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="objects/bouteille-note-illisible5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="objects/bouteille-note-illisible5/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22238159, 0)
+shape = SubResource("BoxShape3D_c7jrm")
 
 [node name="tortuga-60" parent="." instance=ExtResource("1_hh6n0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 168.15813, 0, -145.42403)
@@ -1812,4 +1898,22 @@ skeleton = NodePath("../..")
 transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, -250, 0, -250)
 skeleton = NodePath("../..")
 
+[connection signal="input_event" from="objects/bouteille-note-lisible/Area3D" to="objects/bouteille-note-lisible" method="_on_input_event"]
+[connection signal="mouse_entered" from="objects/bouteille-note-lisible/Area3D" to="objects/bouteille-note-lisible" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="objects/bouteille-note-lisible/Area3D" to="objects/bouteille-note-lisible" method="_on_mouse_exited"]
+[connection signal="input_event" from="objects/bouteille-note-illisible/Area3D" to="objects/bouteille-note-illisible" method="_on_input_event"]
+[connection signal="mouse_entered" from="objects/bouteille-note-illisible/Area3D" to="objects/bouteille-note-illisible" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="objects/bouteille-note-illisible/Area3D" to="objects/bouteille-note-illisible" method="_on_mouse_exited"]
+[connection signal="input_event" from="objects/bouteille-note-illisible2/Area3D" to="objects/bouteille-note-illisible2" method="_on_input_event"]
+[connection signal="mouse_entered" from="objects/bouteille-note-illisible2/Area3D" to="objects/bouteille-note-illisible2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="objects/bouteille-note-illisible2/Area3D" to="objects/bouteille-note-illisible2" method="_on_mouse_exited"]
+[connection signal="input_event" from="objects/bouteille-note-illisible3/Area3D" to="objects/bouteille-note-illisible3" method="_on_input_event"]
+[connection signal="mouse_entered" from="objects/bouteille-note-illisible3/Area3D" to="objects/bouteille-note-illisible3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="objects/bouteille-note-illisible3/Area3D" to="objects/bouteille-note-illisible3" method="_on_mouse_exited"]
+[connection signal="input_event" from="objects/bouteille-note-illisible4/Area3D" to="objects/bouteille-note-illisible4" method="_on_input_event"]
+[connection signal="mouse_entered" from="objects/bouteille-note-illisible4/Area3D" to="objects/bouteille-note-illisible4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="objects/bouteille-note-illisible4/Area3D" to="objects/bouteille-note-illisible4" method="_on_mouse_exited"]
+[connection signal="input_event" from="objects/bouteille-note-illisible5/Area3D" to="objects/bouteille-note-illisible5" method="_on_input_event"]
+[connection signal="mouse_entered" from="objects/bouteille-note-illisible5/Area3D" to="objects/bouteille-note-illisible5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="objects/bouteille-note-illisible5/Area3D" to="objects/bouteille-note-illisible5" method="_on_mouse_exited"]
 [connection signal="timeout" from="mountain/AnimatableBody3D/Timer" to="mountain/AnimatableBody3D" method="_on_timer_timeout"]
