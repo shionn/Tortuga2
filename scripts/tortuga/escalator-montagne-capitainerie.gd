@@ -1,4 +1,4 @@
 extends "res://scripts/escalator.gd"
 
 func _init() -> void:
-	end = 9.4
+	end = 9.7

@@ -8,28 +8,19 @@ var end := 0
 var dir := Vector3.UP
 
 func _physics_process(delta: float) -> void:
-	#dir = Vector3.DOWN
 	if position.y < start and dir.y < 0: 
 		print("call up")
 		dir = Vector3.ZERO
-		#constant_linear_velocity = Vector3.UP
 		_timer.start(5)
 	if position.y > end and dir.y > 0 : 
 		print("call down")
 		dir = Vector3.ZERO
-		#constant_linear_velocity = Vector3.DOWN
 		_timer.start(5)
 	global_translate(SPEED*dir*delta)
 	
 
 func _on_timer_timeout():
-	print("_on_timer_timeout ")
-	print(position.y)
 	if position.y < start : 
-		print("go up")
 		dir = Vector3.UP
-		#constant_linear_velocity = Vector3.UP
 	if position.y > end : 
-		print ("go down")
 		dir = Vector3.DOWN
-		#constant_linear_velocity = Vector3.DOWN
