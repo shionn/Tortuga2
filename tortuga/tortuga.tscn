@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=38 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/bouteille_note_lisible.gd" id="1_c7jrm"]
 [ext_resource type="PackedScene" uid="uid://dvplfstqecj42" path="res://assets/mine/tortuga-60.glb" id="1_hh6n0"]
@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cbasjmgb4ls33" path="res://assets/pirate/rocks-b.glb" id="7_h2gq6"]
 [ext_resource type="PackedScene" uid="uid://c1sc7qjitvtsi" path="res://assets/pirate/rocks-a.glb" id="8_ggmis"]
 [ext_resource type="PackedScene" uid="uid://chxfr2yagmg24" path="res://assets/pirate/rocks-c.glb" id="9_1lej4"]
-[ext_resource type="Script" uid="uid://de6fro5s3yle8" path="res://scripts/escalator.gd" id="10_acrrl"]
+[ext_resource type="Script" uid="uid://de6fro5s3yle8" path="res://scripts/escalator-old.gd" id="10_acrrl"]
 [ext_resource type="PackedScene" uid="uid://ckwih5ror4ch4" path="res://assets/pirate/structures/platform-no-colid.glb" id="11_tny17"]
 [ext_resource type="PackedScene" uid="uid://bs2i6jgk7ixh6" path="res://assets/pirate/structures/structure-platform.glb" id="12_2w2tg"]
 [ext_resource type="PackedScene" uid="uid://cqhtr500ti2eu" path="res://assets/pirate/structures/platform.glb" id="13_1y57q"]
@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://water/WaterPlane.tscn" id="23_nxrjy"]
 [ext_resource type="PackedScene" uid="uid://c8y6go07dabnn" path="res://tortuga/tortuga_auberge.tscn" id="24_ew2kh"]
 [ext_resource type="PackedScene" uid="uid://biadyt2j3gtyg" path="res://tortuga/tortuga_reserve.tscn" id="25_2pcv4"]
+[ext_resource type="Script" uid="uid://ekwnilnqcg3k" path="res://scripts/tortuga/escalator-montagne-capitainerie.gd" id="25_iswrd"]
 [ext_resource type="PackedScene" uid="uid://brird11bbbwv0" path="res://tortuga/tortuga_dortoir.tscn" id="26_ntxr1"]
 [ext_resource type="PackedScene" uid="uid://blifncbh7xys7" path="res://tortuga/tortuga_reserve_d_or.tscn" id="27_veopy"]
 [ext_resource type="PackedScene" uid="uid://ukreens1wy4a" path="res://tortuga/wall_coffre.tscn" id="28_b2pjt"]
@@ -39,6 +40,9 @@ size = Vector3(0.2, 0.44476318, 0.2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g1i3r"]
 size = Vector3(2.2, 0.2, 2.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iswrd"]
+size = Vector3(2.5, 0.3, 2.5)
 
 [node name="TortugaNode" type="Node3D"]
 
@@ -1255,6 +1259,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.465139, -0.9058405, 6.002
 [node name="MontagneCapitainerie" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.371864, 0.5, -2.9431152)
 
+[node name="Escalator" type="Node3D" parent="MontagneCapitainerie"]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 1.9000015, 22.2, 16.1)
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="MontagneCapitainerie/Escalator"]
+script = ExtResource("25_iswrd")
+
+[node name="platform" parent="MontagneCapitainerie/Escalator/AnimatableBody3D" instance=ExtResource("11_tny17")]
+
+[node name="Timer" type="Timer" parent="MontagneCapitainerie/Escalator/AnimatableBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MontagneCapitainerie/Escalator/AnimatableBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10000038, 0)
+shape = SubResource("BoxShape3D_iswrd")
+
 [node name="patch-grass2" parent="MontagneCapitainerie" instance=ExtResource("3_jit35")]
 transform = Transform3D(-1.9739598, 0, 4.593853, 0, 5, 0, -4.593853, 0, -1.9739598, -17.462662, 0, -4.213158)
 
@@ -2219,3 +2237,4 @@ skeleton = NodePath("../..")
 [connection signal="mouse_entered" from="objects/bouteille-note-illisible5/Area3D" to="objects/bouteille-note-illisible5" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="objects/bouteille-note-illisible5/Area3D" to="objects/bouteille-note-illisible5" method="_on_mouse_exited"]
 [connection signal="timeout" from="mountain/AnimatableBody3D/Timer" to="mountain/AnimatableBody3D" method="_on_timer_timeout"]
+[connection signal="timeout" from="MontagneCapitainerie/Escalator/AnimatableBody3D/Timer" to="MontagneCapitainerie/Escalator/AnimatableBody3D" method="_on_timer_timeout"]

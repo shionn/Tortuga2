@@ -1,21 +1,20 @@
 extends AnimatableBody3D
 
 const SPEED := 5
+const BOTTOM := 1.2
+const UP := 72.8
+var dir := Vector3.UP
 @onready var _timer := $Timer as Timer
 
-var start := 0
-var end := 0 
-var dir := Vector3.UP
 
 func _physics_process(delta: float) -> void:
-	#dir = Vector3.DOWN
-	if position.y < start and dir.y < 0: 
-		print("call up")
+	if position.y <BOTTOM and dir.y < 0: 
+		#print("call up")
 		dir = Vector3.ZERO
 		#constant_linear_velocity = Vector3.UP
 		_timer.start(5)
-	if position.y > end and dir.y > 0 : 
-		print("call down")
+	if position.y > UP and dir.y > 0 : 
+		#print("call down")
 		dir = Vector3.ZERO
 		#constant_linear_velocity = Vector3.DOWN
 		_timer.start(5)
@@ -23,13 +22,13 @@ func _physics_process(delta: float) -> void:
 	
 
 func _on_timer_timeout():
-	print("_on_timer_timeout ")
-	print(position.y)
-	if position.y < start : 
-		print("go up")
+	#print("_on_timer_timeout ")
+	#print(position.y)
+	if position.y <BOTTOM : 
+		#print("go up")
 		dir = Vector3.UP
 		#constant_linear_velocity = Vector3.UP
-	if position.y > end : 
-		print ("go down")
+	if position.y > UP : 
+		#print ("go down")
 		dir = Vector3.DOWN
 		#constant_linear_velocity = Vector3.DOWN
