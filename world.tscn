@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dx8mf6okqe5rg"]
+[gd_scene load_steps=12 format=3 uid="uid://dx8mf6okqe5rg"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_26xuy"]
 [ext_resource type="PackedScene" uid="uid://dac1cbndt3704" path="res://bateau.tscn" id="1_aqk2v"]
@@ -8,7 +8,6 @@
 [ext_resource type="Shader" uid="uid://bdgkouhd5s065" path="res://addons/vaporwavesky/vaporwave.gdshader" id="28_k83mh"]
 [ext_resource type="PackedScene" uid="uid://balodqhfj5pj3" path="res://gui/gui.tscn" id="28_o3ebs"]
 [ext_resource type="PackedScene" uid="uid://c3gkyonxb0bpp" path="res://addons/nap_map_generator/map_generator_viewport.tscn" id="30_qktwf"]
-[ext_resource type="PackedScene" uid="uid://d3ntcxuu0k0c2" path="res://assets/mini-dungeon/banner.glb" id="38_yx0jh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qktwf"]
 shader = ExtResource("28_k83mh")
@@ -82,8 +81,5 @@ environment = SubResource("Environment_bh8nc")
 [node name="Gui" parent="." instance=ExtResource("28_o3ebs")]
 
 [node name="MapGeneratorViewport" parent="." instance=ExtResource("30_qktwf")]
-
-[node name="banner2" parent="." instance=ExtResource("38_yx0jh")]
-transform = Transform3D(9.659258, 0, -2.5881906, 0, 10, 0, 2.5881906, 0, 9.659258, 152.2, 83.9, -238.7)
 
 [connection signal="ready" from="." to="." method="_on_ready"]
