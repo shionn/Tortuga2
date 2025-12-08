@@ -9,11 +9,9 @@ var dir := Vector3.UP
 
 func _physics_process(delta: float) -> void:
 	if position.y < start and dir.y < 0: 
-		print("call up")
 		dir = Vector3.ZERO
 		_timer.start(5)
 	if position.y > end and dir.y > 0 : 
-		print("call down")
 		dir = Vector3.ZERO
 		_timer.start(5)
 	global_translate(SPEED*dir*delta)

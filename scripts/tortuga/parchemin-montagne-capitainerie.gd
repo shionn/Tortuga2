@@ -9,4 +9,5 @@ Le tonneau de Rhum isolé,
 Tu devrais découvrir près de l'étang, 
 Et d'un pas rapide te diriger, 
 Pour te rapprocher un peu plus du trésor.
-""")
+
+7""")

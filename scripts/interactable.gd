@@ -6,7 +6,10 @@ func on_interact() -> void:
 	pass
 
 func open_text(title: String, text: String) -> void: 
-	_gui.openDialog(title, text)
+	_gui.open_dialog(title, text)
+
+func open_question(title: String, callback: Callable) -> void:
+	_gui.open_question(title,callback)
 
 func _on_mouse_entered() -> void:
 	Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)

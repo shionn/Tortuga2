@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=55 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/bouteille_note_lisible.gd" id="1_c7jrm"]
 [ext_resource type="PackedScene" uid="uid://dvplfstqecj42" path="res://assets/mine/tortuga-60.glb" id="1_hh6n0"]
@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://cy1emgfc3p51p" path="res://assets/pirate/structures/structure-fence-sides.glb" id="21_lrpya"]
 [ext_resource type="PackedScene" uid="uid://bw666kf55m31r" path="res://assets/pirate/structures/structure-platform-dock-long.glb" id="22_8hael"]
 [ext_resource type="PackedScene" uid="uid://rht7nkabco3w" path="res://assets/pirate/props/chest.glb" id="22_aveh0"]
+[ext_resource type="Script" uid="uid://s2din2pw3tj7" path="res://scripts/tortuga/coffre-barde-drue.gd" id="23_bsjpt"]
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://water/WaterPlane.tscn" id="23_nxrjy"]
 [ext_resource type="PackedScene" uid="uid://c8y6go07dabnn" path="res://tortuga/tortuga_auberge.tscn" id="24_ew2kh"]
 [ext_resource type="PackedScene" uid="uid://biadyt2j3gtyg" path="res://tortuga/tortuga_reserve.tscn" id="25_2pcv4"]
@@ -55,6 +56,9 @@ size = Vector3(0.2, 0.44476318, 0.2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_aveh0"]
 size = Vector3(0.4, 0.5, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bsjpt"]
+size = Vector3(1.2, 1, 1.2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g1i3r"]
 size = Vector3(2.2, 0.2, 2.4)
@@ -595,6 +599,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -245)
 
 [node name="chest2" parent="mountain/tresor-barbe-drue" instance=ExtResource("22_aveh0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, 0)
+script = ExtResource("23_bsjpt")
+
+[node name="Area3D" type="Area3D" parent="mountain/tresor-barbe-drue/chest2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mountain/tresor-barbe-drue/chest2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_bsjpt")
 
 [node name="grass-patch2" parent="mountain/tresor-barbe-drue" instance=ExtResource("18_bsjpt")]
 transform = Transform3D(3, 0, 0, 0, 5, 0, 0, 0, 3, 1, 0.39999998, 9)
@@ -2382,6 +2393,9 @@ skeleton = NodePath("../..")
 [connection signal="input_event" from="mountain/tomb-barbe-drue/gravestone-cross2/Area3D" to="mountain/tomb-barbe-drue/gravestone-cross2" method="_on_input_event"]
 [connection signal="mouse_entered" from="mountain/tomb-barbe-drue/gravestone-cross2/Area3D" to="mountain/tomb-barbe-drue/gravestone-cross2" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="mountain/tomb-barbe-drue/gravestone-cross2/Area3D" to="mountain/tomb-barbe-drue/gravestone-cross2" method="_on_mouse_exited"]
+[connection signal="input_event" from="mountain/tresor-barbe-drue/chest2/Area3D" to="mountain/tresor-barbe-drue/chest2" method="_on_input_event"]
+[connection signal="mouse_entered" from="mountain/tresor-barbe-drue/chest2/Area3D" to="mountain/tresor-barbe-drue/chest2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="mountain/tresor-barbe-drue/chest2/Area3D" to="mountain/tresor-barbe-drue/chest2" method="_on_mouse_exited"]
 [connection signal="timeout" from="mountain/AnimatableBody3D/Timer" to="mountain/AnimatableBody3D" method="_on_timer_timeout"]
 [connection signal="timeout" from="MontagneCapitainerie/Escalator/AnimatableBody3D/Timer" to="MontagneCapitainerie/Escalator/AnimatableBody3D" method="_on_timer_timeout"]
 [connection signal="input_event" from="MontagneCapitainerie/crate2/oga_scroll/Area3D" to="MontagneCapitainerie/crate2/oga_scroll" method="_on_input_event"]

@@ -27,4 +27,4 @@ func _on_activation_mouse_exited() -> void:
 
 func _on_activation_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	if event is InputEventMouseButton and Input.is_action_just_pressed("interact"): 
-		_gui.openDialog(_pnj_name, _pnj_dialog)
+		_gui.open_dialog(_pnj_name, _pnj_dialog)

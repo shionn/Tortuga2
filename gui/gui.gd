@@ -2,17 +2,31 @@ extends Control
 
 @onready var _player := $"../Player" as CharacterBody3D
 @onready var _debug_info := $DebugInfo as Label
-@onready var _dialog := $Left/Dialog as Panel
-@onready var _dialog_text := $Left/Dialog/MarginContainer/VBoxContainer/RichTextLabel as RichTextLabel
-@onready var _dialog_title := $Left/Dialog/MarginContainer/VBoxContainer/Title as Label
+
+@onready var _dialog := $Dialog as Control
+@onready var _dialog_text := $Dialog/Panel/MarginContainer/VBoxContainer/RichTextLabel as RichTextLabel
+@onready var _dialog_title := $Dialog/Panel/MarginContainer/VBoxContainer/Title as Label
+
+@onready var _input := $Input as Control
+@onready var _input_text := $Input/Panel/MarginContainer/VBoxContainer/LineEdit as LineEdit
+@onready var _input_title := $Input/Panel/MarginContainer/VBoxContainer/Title as Label
+
 @onready var _player_camera := $"../Player/CameraPivot" as Node3D
 @onready var _compass_arrow := $Compass/Arrow as TextureRect
 
-func openDialog(title: String, text: String) -> void: 
+var callback : Callable
+
+func open_dialog(title: String, text: String) -> void: 
 	_dialog_text.clear()
 	_dialog_text.add_text(text)
 	_dialog_title.text = title
 	_dialog.show()
+
+func open_question(title: String, callback: Callable) -> void:
+	_input_title.text = title
+	_input_text.text = ""
+	_input.show()
+	self.callback = callback
 
 func _process(delta: float) -> void:
 	_debug_info.text = str(_player.global_position)
@@ -21,3 +35,8 @@ func _process(delta: float) -> void:
 
 func _on_close_dialog_button_pressed() -> void:
 	_dialog.hide()
+
+
+func _on_validate_input_button_pressed() -> void:
+	_input.hide()
+	callback.call(_input_text.text)
