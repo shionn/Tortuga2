@@ -28,23 +28,8 @@ offset_bottom = 49.0
 text = "PlayerPosition
 FPS"
 
-[node name="Dialog" type="Control" parent="."]
+[node name="Dialog" type="Panel" parent="."]
 visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
-
-[node name="Panel" type="Panel" parent="Dialog"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -59,7 +44,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="Dialog/Panel"]
+[node name="MarginContainer" type="MarginContainer" parent="Dialog"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -71,29 +56,30 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Dialog/Panel/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialog/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 5
 alignment = 1
 
-[node name="Title" type="Label" parent="Dialog/Panel/MarginContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="Dialog/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_yw5qc")
 text = "Title"
 horizontal_alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Dialog/Panel/MarginContainer/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialog/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Ceci est un essai de text
 
 Sur plusieurs lignes en plus"
 
-[node name="CloseDialogButton" type="Button" parent="Dialog/Panel/MarginContainer/VBoxContainer"]
+[node name="CloseDialogButton" type="Button" parent="Dialog/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Fermer"
 
 [node name="DialogAndImg" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -163,6 +149,8 @@ Sur plusieurs lignes en plus"
 [node name="TextureRect" type="TextureRect" parent="DialogAndImg/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+expand_mode = 3
+stretch_mode = 5
 
 [node name="CloseDialogButton" type="Button" parent="DialogAndImg/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -319,6 +307,6 @@ layout_mode = 2
 text = "Valider
 "
 
-[connection signal="pressed" from="Dialog/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_button_pressed"]
-[connection signal="pressed" from="DialogAndImg/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_button_pressed"]
+[connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_button_pressed"]
+[connection signal="pressed" from="DialogAndImg/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_and_img_button_pressed"]
 [connection signal="pressed" from="Input/Panel/MarginContainer/VBoxContainer/ValidateButton" to="." method="_on_validate_input_button_pressed"]

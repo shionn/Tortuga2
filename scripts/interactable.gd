@@ -9,7 +9,10 @@ func open_text(title: String, text: String, size = Vector2(400,400)) -> void:
 	_gui.open_dialog(title, text, size)
 
 func open_alert(title: String, text: String) -> void: 
-	_gui.open_dialog(title, text, Vector2(200,100))
+	_gui.open_dialog(title, text, Vector2(250,150))
+
+func open_dialog_and_img(title: String, text: String, img: Resource) -> void:
+	_gui.open_dialog_and_img(title, text, img)
 
 func open_question(title: String, callback: Callable) -> void:
 	_gui.open_question(title,callback)
