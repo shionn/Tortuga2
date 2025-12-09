@@ -31,7 +31,6 @@ func open_dialog(title: String, text: String, size: Vector2 = Vector2(400,400)) 
 	_dialog_text.add_text(text)
 	_dialog_title.text = title
 	_dialog.show()
-	print("aze")
 
 func open_dialog_and_img(title: String, text: String, img: Resource) -> void:
 	_dialog_img_text.clear()
