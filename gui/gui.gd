@@ -4,6 +4,7 @@ extends Control
 @onready var _debug_info := $DebugInfo as Label
 
 @onready var _dialog := $Dialog as Control
+@onready var _dialog_panel := $Dialog/Panel as Panel
 @onready var _dialog_text := $Dialog/Panel/MarginContainer/VBoxContainer/RichTextLabel as RichTextLabel
 @onready var _dialog_title := $Dialog/Panel/MarginContainer/VBoxContainer/Title as Label
 
@@ -16,7 +17,8 @@ extends Control
 
 var callback : Callable
 
-func open_dialog(title: String, text: String) -> void: 
+func open_dialog(title: String, text: String, size: Vector2 = Vector2(400,400)) -> void: 
+	_dialog_panel.size = size
 	_dialog_text.clear()
 	_dialog_text.add_text(text)
 	_dialog_title.text = title

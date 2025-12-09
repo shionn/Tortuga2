@@ -58,7 +58,7 @@ size = Vector3(0.2, 0.44476318, 0.2)
 size = Vector3(0.4, 0.5, 0.2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bsjpt"]
-size = Vector3(1.2, 1, 1.2)
+size = Vector3(1.2, 1.1, 1.4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g1i3r"]
 size = Vector3(2.2, 0.2, 2.4)
@@ -604,7 +604,7 @@ script = ExtResource("23_bsjpt")
 [node name="Area3D" type="Area3D" parent="mountain/tresor-barbe-drue/chest2"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="mountain/tresor-barbe-drue/chest2/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.54999995, 0)
 shape = SubResource("BoxShape3D_bsjpt")
 
 [node name="grass-patch2" parent="mountain/tresor-barbe-drue" instance=ExtResource("18_bsjpt")]

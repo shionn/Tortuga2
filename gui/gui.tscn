@@ -31,20 +31,33 @@ FPS"
 [node name="Dialog" type="Control" parent="."]
 visible = false
 layout_mode = 1
-anchors_preset = 4
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
+anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = -20.0
 offset_top = -20.0
-offset_right = 40.0
+offset_right = 20.0
 offset_bottom = 20.0
+grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="Panel" type="Panel" parent="Dialog"]
-layout_mode = 0
-offset_left = 20.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
 offset_top = -200.0
-offset_right = 320.0
+offset_right = 200.0
 offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Dialog/Panel"]
 layout_mode = 1
@@ -77,6 +90,81 @@ text = "Ceci est un essai de text
 Sur plusieurs lignes en plus"
 
 [node name="CloseDialogButton" type="Button" parent="Dialog/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Fermer"
+
+[node name="DialogAndImg" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Panel" type="Panel" parent="DialogAndImg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -200.0
+offset_right = 400.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogAndImg/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogAndImg/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="Title" type="Label" parent="DialogAndImg/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_yw5qc")
+text = "Title"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DialogAndImg/Panel/MarginContainer/VBoxContainer"]
+layout_direction = 2
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogAndImg/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Ceci est un essai de text
+
+Sur plusieurs lignes en plus"
+
+[node name="TextureRect" type="TextureRect" parent="DialogAndImg/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CloseDialogButton" type="Button" parent="DialogAndImg/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Fermer"
 
@@ -232,4 +320,5 @@ text = "Valider
 "
 
 [connection signal="pressed" from="Dialog/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_button_pressed"]
+[connection signal="pressed" from="DialogAndImg/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_button_pressed"]
 [connection signal="pressed" from="Input/Panel/MarginContainer/VBoxContainer/ValidateButton" to="." method="_on_validate_input_button_pressed"]
