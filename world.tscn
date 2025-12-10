@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dx8mf6okqe5rg"]
+[gd_scene load_steps=11 format=3 uid="uid://dx8mf6okqe5rg"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_26xuy"]
 [ext_resource type="PackedScene" uid="uid://dac1cbndt3704" path="res://bateau.tscn" id="1_aqk2v"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://36k2ttv8736a" path="res://addons/vaporwavesky/vaporwave_sky_material.gd" id="27_o3ebs"]
 [ext_resource type="Shader" uid="uid://bdgkouhd5s065" path="res://addons/vaporwavesky/vaporwave.gdshader" id="28_k83mh"]
 [ext_resource type="PackedScene" uid="uid://balodqhfj5pj3" path="res://gui/gui.tscn" id="28_o3ebs"]
-[ext_resource type="PackedScene" uid="uid://c3gkyonxb0bpp" path="res://addons/nap_map_generator/map_generator_viewport.tscn" id="30_qktwf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qktwf"]
 shader = ExtResource("28_k83mh")
@@ -49,12 +48,12 @@ shader_parameter/sun_banding_stop_height = 0.7
 shader_parameter/sun_banding_thickness = 0.01
 script = ExtResource("27_o3ebs")
 
-[sub_resource type="Sky" id="Sky_ehl48"]
+[sub_resource type="Sky" id="Sky_pkg7o"]
 sky_material = SubResource("ShaderMaterial_qktwf")
 
 [sub_resource type="Environment" id="Environment_bh8nc"]
 background_mode = 2
-sky = SubResource("Sky_ehl48")
+sky = SubResource("Sky_pkg7o")
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_26xuy")
@@ -79,7 +78,5 @@ shadow_enabled = true
 environment = SubResource("Environment_bh8nc")
 
 [node name="Gui" parent="." instance=ExtResource("28_o3ebs")]
-
-[node name="MapGeneratorViewport" parent="." instance=ExtResource("30_qktwf")]
 
 [connection signal="ready" from="." to="." method="_on_ready"]

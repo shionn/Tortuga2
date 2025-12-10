@@ -1,0 +1,261 @@
+[gd_scene load_steps=24 format=3 uid="uid://t4s4b68q68yv"]
+
+[ext_resource type="PackedScene" uid="uid://cobvp8rhk1h0s" path="res://assets/character/base/character-male-d.glb" id="1_xssot"]
+[ext_resource type="PackedScene" uid="uid://d4hl0amhnq7od" path="res://assets/character/base/character-female-b.glb" id="2_v73gb"]
+[ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://water/WaterPlane.tscn" id="3_3bk5d"]
+[ext_resource type="PackedScene" uid="uid://dj7aq7h57gvln" path="res://assets/character/base/character-female-c.glb" id="3_r51yi"]
+[ext_resource type="PackedScene" uid="uid://je5poeq5gbnv" path="res://assets/character/base/character-female-d.glb" id="4_n1bwd"]
+[ext_resource type="Script" uid="uid://b2fytbhcgn6ew" path="res://scripts/character-select.gd" id="5_hqma5"]
+[ext_resource type="PackedScene" uid="uid://dfnhs40xvapl3" path="res://assets/character/base/character-female-e.glb" id="5_pyb0f"]
+[ext_resource type="PackedScene" uid="uid://ce4m8drvdclf6" path="res://assets/character/base/character-female-f.glb" id="6_7u5l0"]
+[ext_resource type="PackedScene" uid="uid://dt8xikej6hhld" path="res://assets/character/base/character-male-a.glb" id="7_60ydl"]
+[ext_resource type="PackedScene" uid="uid://c5o4y67ic3vrp" path="res://assets/character/base/character-male-b.glb" id="8_ajswk"]
+[ext_resource type="PackedScene" uid="uid://b2qtcc1xvlpgx" path="res://assets/character/base/character-male-e.glb" id="9_3bk5d"]
+[ext_resource type="PackedScene" uid="uid://1y08u4spyqps" path="res://assets/character/base/character-male-f.glb" id="10_hqma5"]
+[ext_resource type="PackedScene" uid="uid://b74k6p4g3plcr" path="res://assets/character/dungeon/character-human.glb" id="11_7u5l0"]
+[ext_resource type="PackedScene" uid="uid://cs7q7slxxr7jt" path="res://assets/character/dungeon/character-orc.glb" id="12_60ydl"]
+[ext_resource type="PackedScene" uid="uid://cjxowsxfha55l" path="res://assets/character/graveyard/character-keeper.glb" id="13_ajswk"]
+[ext_resource type="PackedScene" uid="uid://baslvpyulsodd" path="res://assets/character/graveyard/character-skeleton.glb" id="14_3bk5d"]
+[ext_resource type="PackedScene" uid="uid://daprf7gjltcb8" path="res://assets/character/graveyard/character-vampire.glb" id="15_hqma5"]
+[ext_resource type="Script" uid="uid://36k2ttv8736a" path="res://addons/vaporwavesky/vaporwave_sky_material.gd" id="16_ajswk"]
+[ext_resource type="Shader" uid="uid://bdgkouhd5s065" path="res://addons/vaporwavesky/vaporwave.gdshader" id="17_3bk5d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3bk5d"]
+size = Vector3(0.4, 0.7, 0.4)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ajswk"]
+shader = ExtResource("17_3bk5d")
+shader_parameter/sky_color = Color(0.58841985, 0.530811, 0.84994173, 1)
+shader_parameter/sky_horizon_color = Color(0.34300283, 0.39093456, 0.8653529, 1)
+shader_parameter/sky_horizon_decay = 10.000000149012
+shader_parameter/ground_color = Color(0.93333334, 0.7294118, 0.53333336, 1)
+shader_parameter/ground_horizon_color = Color(0.93333334, 0.7294118, 0.53333336, 1)
+shader_parameter/ground_horizon_decay = 1.0
+shader_parameter/stars_enabled = true
+shader_parameter/stars_below_horizon = false
+shader_parameter/star_color = Color(0.95, 0.9, 0.6, 1)
+shader_parameter/star_radius = 0.3
+shader_parameter/star_density = 5.0
+shader_parameter/star_randomness = 1.0
+shader_parameter/star_seed = Vector2(0, 0)
+shader_parameter/grid_enabled = false
+shader_parameter/grid_color = Color(0.18, 0.92, 0.74, 1)
+shader_parameter/grid_depth = 2.0
+shader_parameter/grid_spacing = 1.0
+shader_parameter/grid_thickness = 0.03
+shader_parameter/grid_max_distance = 25.0
+shader_parameter/grid_max_distance_fade = 0.3
+shader_parameter/grid_energy = 1.0
+shader_parameter/sun_radius = 7.5000000968578
+shader_parameter/sun_smoothing = 0.35
+shader_parameter/sun_glow_color = Color(0.96, 0.9, 0.35, 1)
+shader_parameter/sun_glow_radius = 30.0
+shader_parameter/sun_glow_intensity = 0.5
+shader_parameter/sun_gradient_enabled = true
+shader_parameter/sun_color_1 = Color(0.96, 0.9, 0.35, 1)
+shader_parameter/sun_color_2 = Color(0.96, 0.35, 0.9, 1)
+shader_parameter/sun_gradient_pos_frac = 0.3499999921768
+shader_parameter/sun_gradient_span_frac = 0.8
+shader_parameter/sun_banding_enabled = false
+shader_parameter/sun_banding_base_gap = 0.03
+shader_parameter/sun_banding_gap_mul = 1.1
+shader_parameter/sun_banding_stop_height = 0.7
+shader_parameter/sun_banding_thickness = 0.01
+script = ExtResource("16_ajswk")
+
+[sub_resource type="Sky" id="Sky_3bk5d"]
+sky_material = SubResource("ShaderMaterial_ajswk")
+
+[sub_resource type="Environment" id="Environment_hqma5"]
+background_mode = 2
+sky = SubResource("Sky_3bk5d")
+
+[node name="SelectCharacter" type="Node3D"]
+
+[node name="characters" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
+
+[node name="character-female-b" parent="characters" instance=ExtResource("2_v73gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 0)
+script = ExtResource("5_hqma5")
+character = "base/character-female-b.glb"
+
+[node name="Area3D" type="Area3D" parent="characters/character-female-b"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="characters/character-female-b/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4901161e-08, 0.35000002, -1.4901161e-08)
+shape = SubResource("BoxShape3D_3bk5d")
+
+[node name="character-female-c" parent="characters" instance=ExtResource("3_r51yi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 0)
+script = ExtResource("5_hqma5")
+character = "base/character-female-c.glb"
+
+[node name="Area3D" type="Area3D" parent="characters/character-female-c"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="characters/character-female-c/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4901161e-08, 0.35000002, -1.4901161e-08)
+shape = SubResource("BoxShape3D_3bk5d")
+
+[node name="character-female-d" parent="characters" instance=ExtResource("4_n1bwd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("5_hqma5")
+character = "base/character-female-d.glb"
+
+[node name="Area3D" type="Area3D" parent="characters/character-female-d"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="characters/character-female-d/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4901161e-08, 0.35000002, -1.4901161e-08)
+shape = SubResource("BoxShape3D_3bk5d")
+
+[node name="character-female-e" parent="characters" instance=ExtResource("5_pyb0f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
+script = ExtResource("5_hqma5")
+character = "base/character-female-e.glb"
+
+[node name="Area3D" type="Area3D" parent="characters/character-female-e"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="characters/character-female-e/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4901161e-08, 0.35000002, -1.4901161e-08)
+shape = SubResource("BoxShape3D_3bk5d")
+
+[node name="character-female-f" parent="characters" instance=ExtResource("6_7u5l0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 0)
+script = ExtResource("5_hqma5")
+character = "base/character-female-f.glb"
+
+[node name="Area3D" type="Area3D" parent="characters/character-female-f"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="characters/character-female-f/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4901161e-08, 0.35000002, -1.4901161e-08)
+shape = SubResource("BoxShape3D_3bk5d")
+
+[node name="character-male-a" parent="characters" instance=ExtResource("7_60ydl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+script = ExtResource("5_hqma5")
+character = "base/character-male-a.glb"
+
+[node name="Area3D" type="Area3D" parent="characters/character-male-a"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="characters/character-male-a/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4901161e-08, 0.35000002, -1.4901161e-08)
+shape = SubResource("BoxShape3D_3bk5d")
+
+[node name="character-male-b" parent="characters" instance=ExtResource("8_ajswk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+script = ExtResource("5_hqma5")
+character = "base/character-male-b.glb"
+
+[node name="Area3D" type="Area3D" parent="characters/character-male-b"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="characters/character-male-b/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4901161e-08, 0.35000002, -1.4901161e-08)
+shape = SubResource("BoxShape3D_3bk5d")
+
+[node name="character-male-d" parent="characters" instance=ExtResource("1_xssot")]
+script = ExtResource("5_hqma5")
+character = "base/character-male-d.glb"
+
+[node name="Area3D" type="Area3D" parent="characters/character-male-d"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="characters/character-male-d/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4901161e-08, 0.35000002, -1.4901161e-08)
+shape = SubResource("BoxShape3D_3bk5d")
+
+[node name="character-male-e" parent="characters" instance=ExtResource("9_3bk5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+script = ExtResource("5_hqma5")
+character = "base/character-male-e.glb"
+
+[node name="Area3D" type="Area3D" parent="characters/character-male-e"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="characters/character-male-e/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4901161e-08, 0.35000002, -1.4901161e-08)
+shape = SubResource("BoxShape3D_3bk5d")
+
+[node name="character-male-f" parent="characters" instance=ExtResource("10_hqma5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+script = ExtResource("5_hqma5")
+character = "base/character-male-f.glb"
+
+[node name="Area3D" type="Area3D" parent="characters/character-male-f"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="characters/character-male-f/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4901161e-08, 0.35000002, -1.4901161e-08)
+shape = SubResource("BoxShape3D_3bk5d")
+
+[node name="character-human" parent="characters" instance=ExtResource("11_7u5l0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, 0)
+script = ExtResource("5_hqma5")
+character = "dungeon/character-human.glb"
+
+[node name="Area3D" type="Area3D" parent="characters/character-human"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="characters/character-human/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4901161e-08, 0.35000002, -1.4901161e-08)
+shape = SubResource("BoxShape3D_3bk5d")
+
+[node name="character-orc" parent="characters" instance=ExtResource("12_60ydl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, 0)
+script = ExtResource("5_hqma5")
+character = "dungeon/character-orc.glb"
+
+[node name="Area3D" type="Area3D" parent="characters/character-orc"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="characters/character-orc/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4901161e-08, 0.35000002, -1.4901161e-08)
+shape = SubResource("BoxShape3D_3bk5d")
+
+[node name="character-keeper" parent="characters" instance=ExtResource("13_ajswk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+script = ExtResource("5_hqma5")
+character = "graveyard/character-keeper.glb"
+
+[node name="Area3D" type="Area3D" parent="characters/character-keeper"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="characters/character-keeper/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4901161e-08, 0.35000002, -1.4901161e-08)
+shape = SubResource("BoxShape3D_3bk5d")
+
+[node name="character-skeleton" parent="characters" instance=ExtResource("14_3bk5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1, 0)
+script = ExtResource("5_hqma5")
+character = "graveyard/character-skeleton.glb"
+
+[node name="Area3D" type="Area3D" parent="characters/character-skeleton"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="characters/character-skeleton/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4901161e-08, 0.35000002, -1.4901161e-08)
+shape = SubResource("BoxShape3D_3bk5d")
+
+[node name="character-vampire" parent="characters" instance=ExtResource("15_hqma5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, 0)
+script = ExtResource("5_hqma5")
+character = "graveyard/character-vampire.glb"
+
+[node name="Area3D" type="Area3D" parent="characters/character-vampire"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="characters/character-vampire/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4901161e-08, 0.35000002, -1.4901161e-08)
+shape = SubResource("BoxShape3D_3bk5d")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 2)
+projection = 1
+size = 4.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_hqma5")
+
+[node name="WaterPlane" parent="." instance=ExtResource("3_3bk5d")]
+transform = Transform3D(200, 0, 0, 0, 1, 0, 0, 0, 200, 0, 0, 0)
+visible = false
+skeleton = NodePath("../..")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0)
+text = "Séléctionner votre avatar"
+
+[connection signal="input_event" from="characters/character-male-d/Area3D" to="characters/character-male-d" method="_on_input_event"]
+[connection signal="mouse_entered" from="characters/character-male-d/Area3D" to="characters/character-male-d" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="characters/character-male-d/Area3D" to="characters/character-male-d" method="_on_mouse_exited"]

@@ -3,5 +3,6 @@ extends "res://scripts/pnj.gd"
 func _init() -> void:
 	_pnj_name = "Odette <Serveuse>"
 	_pnj_dialog = """Bonjour qu'est ce que je vous sert? 
+Les clients sont négligents, ils oublient souvent des choses sur les tables. 
 
-Tiens au fait y a un type qui a oublié quelque chose sur la Table du fond là..."""
+N'oubliez rien en repartant rien en repartant."""

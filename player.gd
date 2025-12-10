@@ -1,4 +1,7 @@
 extends CharacterBody3D
+class_name Player
+
+static var model = "";
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -6,11 +9,18 @@ const JUMP_VELOCITY = 4.5
 @onready var _camera := $CameraPivot/SpringArm3D/Camera3D as Camera3D
 @onready var _camera_pivot := $CameraPivot as Node3D
 @onready var _pivot := $Pivot as Node3D
-@onready var _animation := $Pivot/character/AnimationPlayer as AnimationPlayer
+@onready var _character := $Pivot/character as Node3D
 
+var _animation : AnimationPlayer
 var _last_floor_position : Vector3
 
 func _ready() -> void:
+	print(model)
+	var packed = load(model) as PackedScene
+	var node = packed.instantiate()
+	_pivot.remove_child(_character)
+	_pivot.add_child(node)
+	_animation = node.get_child(1)
 	pass
 
 func _physics_process(delta: float) -> void:
