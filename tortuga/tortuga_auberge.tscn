@@ -443,7 +443,6 @@ script = ExtResource("30_pnv0v")
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 
 [node name="Area3D" type="Area3D" parent="Stair/indice"]
-script = ExtResource("30_pnv0v")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Stair/indice/Area3D"]
 transform = Transform3D(1.000001, 2.9802322e-08, 7.450581e-09, -3.874302e-07, 1, -2.9802322e-08, 3.3527613e-08, 7.450581e-09, 1, 0.0011608601, -0.038084984, 1.1920929e-07)
@@ -744,16 +743,3 @@ transform = Transform3D(-1.2, 0, 1.8119498e-07, 0, 1.2, 0, -1.8119498e-07, 0, -1
 
 [node name="cart-high2" parent="." instance=ExtResource("33_rlpm6")]
 transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 4, -0.013186552, -7)
-
-[connection signal="input_event" from="rdc/menu/Area3D" to="rdc/menu" method="_on_input_event"]
-[connection signal="mouse_entered" from="rdc/menu/Area3D" to="rdc/menu" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="rdc/menu/Area3D" to="rdc/menu" method="_on_mouse_exited"]
-[connection signal="input_event" from="rdc/menu2/Area3D" to="rdc/menu2" method="_on_input_event"]
-[connection signal="mouse_entered" from="rdc/menu2/Area3D" to="rdc/menu2" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="rdc/menu2/Area3D" to="rdc/menu2" method="_on_mouse_exited"]
-[connection signal="input_event" from="Stair/menu/Area3D" to="Stair/menu" method="_on_input_event"]
-[connection signal="mouse_entered" from="Stair/menu/Area3D" to="Stair/menu" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Stair/menu/Area3D" to="Stair/menu" method="_on_mouse_exited"]
-[connection signal="input_event" from="Stair/indice/Area3D" to="Stair/indice" method="_on_input_event"]
-[connection signal="mouse_entered" from="Stair/indice/Area3D" to="Stair/indice" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Stair/indice/Area3D" to="Stair/indice" method="_on_mouse_exited"]

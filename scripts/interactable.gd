@@ -1,6 +1,12 @@
 extends Node
 
 @onready var _gui := $"/root/World/Gui" as Control
+@onready var area := $Area3D as Area3D
+
+func _ready() -> void:
+	area.connect("mouse_entered", _on_mouse_entered)
+	area.connect("mouse_exited", _on_mouse_exited)
+	area.connect("input_event", _on_input_event)
 
 func on_interact() -> void: 
 	pass

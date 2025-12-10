@@ -1,5 +1,6 @@
 extends "res://scripts/interactable.gd"
 
+
 func on_interact() -> void:
 	open_text("Bouteille", """Cette bouteille contient une note illisible. 
 
