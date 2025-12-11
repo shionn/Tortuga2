@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bun08nin6q33j"]
+[gd_scene load_steps=25 format=3 uid="uid://bun08nin6q33j"]
 
 [ext_resource type="PackedScene" uid="uid://dsqb6308w0ec1" path="res://assets/town/road/road.glb" id="1_55bef"]
 [ext_resource type="PackedScene" uid="uid://snopmjtfskcu" path="res://assets/town/walls/wall-doorway-round.glb" id="2_e4gn3"]
@@ -23,7 +23,6 @@
 [ext_resource type="PackedScene" uid="uid://dj2jytbjf6lck" path="res://assets/town/roof/roof.glb" id="19_x1bvn"]
 [ext_resource type="PackedScene" uid="uid://bc1akwrvuvm4b" path="res://pnjs/pnj-md.tscn" id="21_x1bvn"]
 [ext_resource type="Script" uid="uid://f07fb775kj21" path="res://scripts/tortuga/pnj-manoir-majordhomme.gd" id="22_x1bvn"]
-[ext_resource type="PackedScene" uid="uid://d2wdleawrxfo2" path="res://assets/props/BarbarianThrone.glb" id="24_xr2ab"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kd4xx"]
 size = Vector3(1.4150696, 0.13238525, 1)
@@ -227,6 +226,3 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 
 
 [node name="banner-green3" parent="." instance=ExtResource("16_rd2vw")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, 2.7, -3.25)
-
-[node name="BarbarianThrone" parent="." instance=ExtResource("24_xr2ab")]
-transform = Transform3D(-1.3113416e-08, 0, 0.29999998, 0, 0.29999998, 0, -0.29999998, 0, -1.3113416e-08, -3, 2, -1)
