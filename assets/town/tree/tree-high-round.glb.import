@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cu8rgabg41c1f"
-path="res://.godot/imported/tree-high.glb-94043d65e04381028a572ddc20e8a8bb.scn"
+uid="uid://d1datnt7aivk5"
+path="res://.godot/imported/tree-high-round.glb-36dd0f9044acff2bd1f4b8cc27bbabdf.scn"
 
 [deps]
 
-source_file="res://assets/town/tree-high.glb"
-dest_files=["res://.godot/imported/tree-high.glb-94043d65e04381028a572ddc20e8a8bb.scn"]
+source_file="res://assets/town/tree/tree-high-round.glb"
+dest_files=["res://.godot/imported/tree-high-round.glb-36dd0f9044acff2bd1f4b8cc27bbabdf.scn"]
 
 [params]
 

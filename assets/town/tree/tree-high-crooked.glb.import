@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bhh588on30ni6"
-path="res://.godot/imported/tree-crooked.glb-fb910be1b4862f137357c987480223d7.scn"
+uid="uid://05ieq4i1qkjk"
+path="res://.godot/imported/tree-high-crooked.glb-66d3fba28cbcf493db3d02913c04e56f.scn"
 
 [deps]
 
-source_file="res://assets/town/tree-crooked.glb"
-dest_files=["res://.godot/imported/tree-crooked.glb-fb910be1b4862f137357c987480223d7.scn"]
+source_file="res://assets/town/tree/tree-high-crooked.glb"
+dest_files=["res://.godot/imported/tree-high-crooked.glb-66d3fba28cbcf493db3d02913c04e56f.scn"]
 
 [params]
 
