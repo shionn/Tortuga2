@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dx8mf6okqe5rg"]
 
-[ext_resource type="Script" path="res://world.gd" id="1_26xuy"]
+[ext_resource type="Script" uid="uid://bla8jb6w1cmfh" path="res://scripts/world.gd" id="1_26xuy"]
 [ext_resource type="PackedScene" uid="uid://dac1cbndt3704" path="res://bateau.tscn" id="1_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://bx7xynpbusro6" path="res://player.tscn" id="4_pkg7o"]
 [ext_resource type="PackedScene" uid="uid://byfhqtkkcefl2" path="res://tortuga/tortuga.tscn" id="5_wse8f"]

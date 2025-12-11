@@ -2,30 +2,33 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h68cek51vakm"
-path.bptc="res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.bptc.ctex"
-path.astc="res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.astc.ctex"
+uid="uid://ckkfoork2k3r"
+path.s3tc="res://.godot/imported/barrel-2_barrel 2.png-e57619cb046bf7af4e19a5be2b0e34e1.s3tc.ctex"
+path.etc2="res://.godot/imported/barrel-2_barrel 2.png-e57619cb046bf7af4e19a5be2b0e34e1.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "3b3dd84ea4fb45ebb04c9b277600cbe5"
+}
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=["res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.bptc.ctex", "res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.astc.ctex"]
+source_file="res://assets/low-poly-rpg-item-2/barrel-2_barrel 2.png"
+dest_files=["res://.godot/imported/barrel-2_barrel 2.png-e57619cb046bf7af4e19a5be2b0e34e1.s3tc.ctex", "res://.godot/imported/barrel-2_barrel 2.png-e57619cb046bf7af4e19a5be2b0e34e1.etc2.ctex"]
 
 [params]
 
 compress/mode=2
-compress/high_quality=true
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=2
+compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -39,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0
