@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://doitu0gjannph"
-path="res://.godot/imported/gravestone-broken.glb-2e1004c0e87de6b5470d9c72db56372c.scn"
+path="res://.godot/imported/gravestone-broken.glb-03dc7a78fed17d6c40dc182fb9aaeb7d.scn"
 
 [deps]
 
-source_file="res:///assets/graveyard/gravestone/gravestone-broken.glb"
-dest_files=["res://.godot/imported/gravestone-broken.glb-2e1004c0e87de6b5470d9c72db56372c.scn"]
+source_file="res://assets/graveyard/gravestone/gravestone-broken.glb"
+dest_files=["res://.godot/imported/gravestone-broken.glb-03dc7a78fed17d6c40dc182fb9aaeb7d.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://gjk5y26xk1ud"
-path="res://.godot/imported/gravestone-bevel.glb-7afd847f5d48fbdb14a3cf555d212fe6.scn"
+path="res://.godot/imported/gravestone-bevel.glb-512c742aea773b6633014422ca1d6e91.scn"
 
 [deps]
 
-source_file="res:///assets/graveyard/gravestone/gravestone-bevel.glb"
-dest_files=["res://.godot/imported/gravestone-bevel.glb-7afd847f5d48fbdb14a3cf555d212fe6.scn"]
+source_file="res://assets/graveyard/gravestone/gravestone-bevel.glb"
+dest_files=["res://.godot/imported/gravestone-bevel.glb-512c742aea773b6633014422ca1d6e91.scn"]
 
 [params]
 

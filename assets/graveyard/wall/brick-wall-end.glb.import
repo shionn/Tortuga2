@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bnpao1cdi5aee"
-path="res://.godot/imported/brick-wall-end.glb-60bbdf32aa9eb5fa859319d61c7342e2.scn"
+path="res://.godot/imported/brick-wall-end.glb-b07a94f64127535785bdb0a8b60f5a85.scn"
 
 [deps]
 
-source_file="res:///assets/graveyard/wall/brick-wall-end.glb"
-dest_files=["res://.godot/imported/brick-wall-end.glb-60bbdf32aa9eb5fa859319d61c7342e2.scn"]
+source_file="res://assets/graveyard/wall/brick-wall-end.glb"
+dest_files=["res://.godot/imported/brick-wall-end.glb-b07a94f64127535785bdb0a8b60f5a85.scn"]
 
 [params]
 
