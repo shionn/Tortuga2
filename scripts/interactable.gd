@@ -9,7 +9,7 @@ func _ready() -> void:
 	area.connect("input_event", _on_input_event)
 
 func on_interact() -> void: 
-	pass
+	print("on_interact is not overwrite")
 
 func open_text(title: String, text: String, size = Vector2(400,400)) -> void: 
 	_gui.open_dialog(title, text, size)
