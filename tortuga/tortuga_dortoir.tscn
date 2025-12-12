@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://eflbjn4io8m2" path="res://assets/town/stairs/stairs-wide-wood-handrail.glb" id="5_b0sk0"]
 [ext_resource type="PackedScene" uid="uid://dvn116r1fxtxs" path="res://assets/town/road/road-wood.glb" id="6_d8tdb"]
 [ext_resource type="PackedScene" uid="uid://bi0rgxdomkpgp" path="res://assets/town/fence-hedge/balcony-wall-fence.glb" id="7_d8tdb"]
-[ext_resource type="PackedScene" uid="uid://b5vkbbk6ethhq" path="res://assets/nature/bed.glb" id="8_g6x1p"]
+[ext_resource type="PackedScene" uid="uid://b5vkbbk6ethhq" path="res://assets/nature/props/bed.glb" id="8_g6x1p"]
 [ext_resource type="PackedScene" uid="uid://86dcdsinmla4" path="res://assets/town/walls/wall-wood-window-round.glb" id="9_g6x1p"]
 [ext_resource type="PackedScene" uid="uid://bpjhrdyngxsjn" path="res://assets/town/fence-hedge/fence.glb" id="10_qnjnv"]
 [ext_resource type="PackedScene" uid="uid://tcq66ekm1qts" path="res://assets/town/roof/roof-high-corner.glb" id="12_qnjnv"]
