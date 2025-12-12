@@ -1,4 +1,4 @@
-extends "res://scripts/pnj.gd"
+extends "res://scripts/pnj-old.gd"
 
 func _init() -> void:
 	_pnj_name = "Maya <Tenancière>"

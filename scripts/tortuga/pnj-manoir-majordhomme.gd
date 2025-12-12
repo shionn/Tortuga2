@@ -1,4 +1,4 @@
-extends "res://scripts/pnj-p.gd"
+extends "res://scripts/pnj.gd"
 
 
 func on_interact() -> void:
