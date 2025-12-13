@@ -50,7 +50,7 @@ pnj_name = "Majordome"
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.6000001, 2.2, -1)
 script = ExtResource("5_ujpvh")
 model = ExtResource("6_3oy5l")
-pnj_name = "Whisp"
+pnj_name = "Whisp <Capitaine>"
 
 [node name="rdc" type="Node3D" parent="."]
 

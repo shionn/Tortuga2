@@ -1,8 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://blifncbh7xys7"]
+[gd_scene load_steps=15 format=3 uid="uid://blifncbh7xys7"]
 
+[ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://pnjs/pnj.tscn" id="1_se30r"]
 [ext_resource type="PackedScene" uid="uid://dsqb6308w0ec1" path="res://assets/town/road/road.glb" id="1_swdsd"]
+[ext_resource type="Script" uid="uid://btaaritfvvsfe" path="res://scripts/tortuga/pnj-coffre-garde.gd" id="2_q30s0"]
 [ext_resource type="PackedScene" uid="uid://snopmjtfskcu" path="res://assets/town/walls/wall-doorway-round.glb" id="2_r46nr"]
 [ext_resource type="PackedScene" uid="uid://ij20frlxbbln" path="res://assets/town/walls/wall-window-stone.glb" id="3_d22ov"]
+[ext_resource type="PackedScene" uid="uid://b74k6p4g3plcr" path="res://assets/character/dungeon/character-human.glb" id="3_wjnk2"]
 [ext_resource type="PackedScene" uid="uid://6v1bhowsnc7u" path="res://assets/town/walls/wall-detail-horizontal.glb" id="4_68v6p"]
 [ext_resource type="PackedScene" uid="uid://bx0r6vahjplt0" path="res://assets/town/walls/wall-detail-diagonal.glb" id="5_j36l5"]
 [ext_resource type="PackedScene" uid="uid://dbk72njpbd4xb" path="res://assets/town/walls/wall-detail-cross.glb" id="6_a5a8v"]
@@ -10,8 +13,15 @@
 [ext_resource type="PackedScene" uid="uid://bxfxur5p8lqge" path="res://assets/castle/flag-banner-long.glb" id="7_r46nr"]
 [ext_resource type="PackedScene" uid="uid://tcq66ekm1qts" path="res://assets/town/roof/roof-high-corner.glb" id="9_a5a8v"]
 [ext_resource type="PackedScene" uid="uid://d24y2qoa6ycia" path="res://assets/town/roof/roof-high.glb" id="10_1ut30"]
+[ext_resource type="PackedScene" uid="uid://ndbqstytxls7" path="res://assets/castle/metal-gate.glb" id="11_78cum"]
 
 [node name="Coffre" type="Node3D"]
+
+[node name="garde" parent="." instance=ExtResource("1_se30r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2.5)
+script = ExtResource("2_q30s0")
+model = ExtResource("3_wjnk2")
+pnj_name = "Lilio <Garde>"
 
 [node name="road2" parent="." instance=ExtResource("1_swdsd")]
 transform = Transform3D(-6, 5.2453663e-07, 0, -5.2453663e-07, -6, 0, 0, 0, 6, 0, 0, 0)
@@ -136,3 +146,6 @@ transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 0, 4
 
 [node name="roof-high3" parent="roof" instance=ExtResource("10_1ut30")]
 transform = Transform3D(2.6226832e-07, 0, -2, 0, 2, 0, 2, 0, 2.6226832e-07, 0, 4, -1)
+
+[node name="metal-gate2" parent="." instance=ExtResource("11_78cum")]
+transform = Transform3D(-4.371139e-08, 0, -2, 0, 2, 0, 1, 0, -8.742278e-08, 0, 0, 1.9)
