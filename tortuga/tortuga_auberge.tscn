@@ -1,14 +1,18 @@
-[gd_scene load_steps=47 format=3 uid="uid://c8y6go07dabnn"]
+[gd_scene load_steps=48 format=3 uid="uid://c8y6go07dabnn"]
 
+[ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://pnjs/pnj.tscn" id="1_hrd0d"]
 [ext_resource type="PackedScene" uid="uid://bn2k1c6mt0j5l" path="res://assets/town/walls/wall-window-shutters.glb" id="2_83rxu"]
 [ext_resource type="PackedScene" uid="uid://cj2lgbr3jctjg" path="res://assets/town/fence-hedge/hedge-gate.glb" id="2_g4xan"]
 [ext_resource type="PackedScene" uid="uid://ba3btavlna1xw" path="res://assets/town/fence-hedge/hedge-curved.glb" id="3_7ouha"]
+[ext_resource type="PackedScene" uid="uid://dj7aq7h57gvln" path="res://assets/character/base/character-female-c.glb" id="3_hrd0d"]
 [ext_resource type="PackedScene" uid="uid://nnlilh34hq42" path="res://assets/town/fence-hedge/hedge.glb" id="4_4iy6t"]
+[ext_resource type="PackedScene" uid="uid://d4hl0amhnq7od" path="res://assets/character/base/character-female-b.glb" id="4_s2xlh"]
 [ext_resource type="PackedScene" uid="uid://dru71m0k1pta1" path="res://assets/pirate/props/crate.glb" id="5_wgia6"]
 [ext_resource type="PackedScene" uid="uid://f25oaswt3cuq" path="res://assets/pirate/props/barrel.glb" id="5_ya2vs"]
 [ext_resource type="PackedScene" uid="uid://dx4s7axo4o001" path="res://assets/town/props/stall.glb" id="6_08fns"]
 [ext_resource type="PackedScene" uid="uid://ijxychwr7t7d" path="res://assets/town/props/stall-green.glb" id="6_rlpm6"]
 [ext_resource type="PackedScene" uid="uid://cjfpfmw4hxv3n" path="res://assets/town/chimney-base.glb" id="7_8r8ek"]
+[ext_resource type="PackedScene" uid="uid://1y08u4spyqps" path="res://assets/character/base/character-male-f.glb" id="7_hrd0d"]
 [ext_resource type="PackedScene" uid="uid://dda8wlcpbj2uc" path="res://assets/town/chimney.glb" id="8_dqx5n"]
 [ext_resource type="PackedScene" uid="uid://bxca075phk4n5" path="res://assets/nature/plant/pot_small.glb" id="8_hno7j"]
 [ext_resource type="PackedScene" uid="uid://dbk72njpbd4xb" path="res://assets/town/walls/wall-detail-cross.glb" id="8_yxo8k"]
@@ -27,16 +31,13 @@
 [ext_resource type="PackedScene" uid="uid://dvn116r1fxtxs" path="res://assets/town/road/road-wood.glb" id="19_css0i"]
 [ext_resource type="PackedScene" uid="uid://ckl0cxjsbj1sn" path="res://assets/town/roof/roof-corner-round.glb" id="22_hij4y"]
 [ext_resource type="PackedScene" uid="uid://ck66mrk1gxs6f" path="res://assets/town/roof/roof-corner-inner.glb" id="23_kj4nn"]
-[ext_resource type="PackedScene" uid="uid://ciw6p0lmnge3f" path="res://pnjs/pnj-fc.tscn" id="23_wgia6"]
 [ext_resource type="PackedScene" uid="uid://d0mdhn6dked7d" path="res://assets/town/roof/roof-window.glb" id="24_pqrr8"]
 [ext_resource type="Script" uid="uid://6g0doqkkb66y" path="res://scripts/tortuga/pnj-auberge-tenanciere-maya.gd" id="24_xpx3v"]
 [ext_resource type="PackedScene" uid="uid://dj2jytbjf6lck" path="res://assets/town/roof/roof.glb" id="25_07vwk"]
-[ext_resource type="PackedScene" uid="uid://b0o6r3bbrst8i" path="res://pnjs/pnj-fb.tscn" id="25_ocxea"]
 [ext_resource type="PackedScene" uid="uid://vkh0e522oxpg" path="res://assets/town/roof/roof-gable-end.glb" id="26_kkq1q"]
 [ext_resource type="Script" uid="uid://rieow3666kg7" path="res://scripts/tortuga/pnj-auberge-serveuse-odette.gd" id="26_sv4c2"]
 [ext_resource type="PackedScene" uid="uid://doosub3t1qspl" path="res://assets/town/roof/roof-gable.glb" id="27_yxeqk"]
 [ext_resource type="PackedScene" uid="uid://bvssfm8gng07x" path="res://assets/town/chimney-top.glb" id="28_07vwk"]
-[ext_resource type="PackedScene" uid="uid://crjxhxqifx1sn" path="res://pnjs/pnj-mf.tscn" id="29_drpsi"]
 [ext_resource type="Script" uid="uid://3plkcr3fqhuq" path="res://scripts/tortuga/pnj-auberge-inconnu.gd" id="30_hrd0d"]
 [ext_resource type="Script" uid="uid://cmu61sdcappxu" path="res://scripts/tortuga/auberge-indice.gd" id="30_pnv0v"]
 [ext_resource type="PackedScene" uid="uid://brdffnbsuw5n5" path="res://assets/town/cart-high.glb" id="33_rlpm6"]
@@ -58,6 +59,24 @@ size = Vector3(0.14355469, 0.1, 0.5018921)
 size = Vector3(0.13014454, 0.14038867, 0.05)
 
 [node name="TortugaAuberge" type="Node3D"]
+
+[node name="pnj-maya" parent="." instance=ExtResource("1_hrd0d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3.6)
+script = ExtResource("24_xpx3v")
+model = ExtResource("3_hrd0d")
+pnj_name = "Maya <Tenancière>"
+
+[node name="pnj-odette" parent="." instance=ExtResource("1_hrd0d")]
+transform = Transform3D(0.49999997, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.49999997, -3.3, 0, -2.8)
+script = ExtResource("26_sv4c2")
+model = ExtResource("4_s2xlh")
+pnj_name = "Odette <Serveuse>"
+
+[node name="pnj-bertran" parent="." instance=ExtResource("1_hrd0d")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, 2.2, 2, 0.4)
+script = ExtResource("30_hrd0d")
+model = ExtResource("7_hrd0d")
+pnj_name = "Bertan"
 
 [node name="ground" type="Node3D" parent="."]
 
@@ -194,14 +213,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.299999, 0, 0.9)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21707611, 0)
 
 [node name="rdc" type="Node3D" parent="."]
-
-[node name="tenanciere-maya" parent="rdc" instance=ExtResource("23_wgia6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3.6)
-script = ExtResource("24_xpx3v")
-
-[node name="serveuse-odette" parent="rdc" instance=ExtResource("25_ocxea")]
-transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -3.3, 0, -2.8)
-script = ExtResource("26_sv4c2")
 
 [node name="menu" type="Node3D" parent="rdc"]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2, 1, -0.03033688)
@@ -411,16 +422,6 @@ distance_fade_enabled = true
 
 [node name="Stair" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-
-[node name="pnj" parent="Stair" instance=ExtResource("29_drpsi")]
-transform = Transform3D(-0.819152, 0, 0.57357645, 0, 1, 0, -0.57357645, 0, -0.819152, 1.8999999, 0, 0.6)
-script = ExtResource("30_hrd0d")
-
-[node name="Area3D" type="Area3D" parent="Stair/pnj"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Stair/pnj/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0070102215, -0.036502123, 0)
-shape = SubResource("BoxShape3D_ilbcv")
 
 [node name="menu" type="Node3D" parent="Stair"]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2, 1, -0.03033688)
