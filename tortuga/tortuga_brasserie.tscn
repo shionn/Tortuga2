@@ -1,7 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://bagm6lyjb83lg"]
+[gd_scene load_steps=28 format=3 uid="uid://bagm6lyjb83lg"]
 
 [ext_resource type="PackedScene" uid="uid://dsqb6308w0ec1" path="res://assets/town/road/road.glb" id="1_7gyju"]
+[ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://pnjs/pnj.tscn" id="1_trwrq"]
+[ext_resource type="Script" uid="uid://bpgpkbjhuub13" path="res://scripts/tortuga/pnj-brasserie-alchimiste-adan.gd" id="2_4ldne"]
 [ext_resource type="PackedScene" uid="uid://dqtrbt7o4adew" path="res://assets/town/walls/wall-wood-doorway-round.glb" id="2_42mc8"]
+[ext_resource type="PackedScene" uid="uid://dt8xikej6hhld" path="res://assets/character/base/character-male-a.glb" id="3_4ldne"]
 [ext_resource type="PackedScene" uid="uid://gixsyjseb3bu" path="res://assets/town/walls/wall-wood-window-shutters.glb" id="3_kmifm"]
 [ext_resource type="PackedScene" uid="uid://86dcdsinmla4" path="res://assets/town/walls/wall-wood-window-round.glb" id="4_mgtqm"]
 [ext_resource type="PackedScene" uid="uid://desnmlm7k7b3" path="res://assets/town/walls/wall-wood.glb" id="5_g635n"]
@@ -26,6 +29,12 @@
 [ext_resource type="PackedScene" uid="uid://snopmjtfskcu" path="res://assets/town/walls/wall-doorway-round.glb" id="23_42mc8"]
 
 [node name="TortugaBrasserie" type="Node3D"]
+
+[node name="pnj" parent="." instance=ExtResource("1_trwrq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1.7)
+script = ExtResource("2_4ldne")
+model = ExtResource("3_4ldne")
+pnj_name = "Adan <Alchimiste>"
 
 [node name="road2" parent="." instance=ExtResource("1_7gyju")]
 transform = Transform3D(11, 0, 0, 0, -6, -9.0597484e-07, 0, 9.0597484e-07, -6, 1.5, 0, -1)
@@ -94,7 +103,8 @@ transform = Transform3D(2.6226832e-07, 0, -2, 0, 2, 0, 2, 0, 2.6226832e-07, -2.9
 transform = Transform3D(2, 0, 3.496911e-07, 0, 2, 0, -3.496911e-07, 0, 2, -4.7999997, 0, -1.1920929e-07)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="rdc"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.95, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.9, -1)
+shadow_enabled = true
 
 [node name="roof" type="Node3D" parent="."]
 
