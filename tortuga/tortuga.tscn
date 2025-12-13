@@ -278,7 +278,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.05945, 1.4999999, 24.11815
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, -107)
 
 [node name="bouteille-note-lisible" type="Node3D" parent="Plage"]
-transform = Transform3D(-0.6123724, 0.35355338, 0.7071067, 0.5, 0.8660254, 0, -0.61237246, 0.35355335, -0.70710677, -57.100002, -0.20000002, 114)
+transform = Transform3D(-0.6123724, 0.35355338, 0.7071067, 0.5, 0.8660254, 0, -0.61237246, 0.35355335, -0.70710677, -45.600002, -0.20000002, 120.2)
 script = ExtResource("1_c7jrm")
 
 [node name="bottle2" parent="Plage/bouteille-note-lisible" instance=ExtResource("1_wohch")]
@@ -559,10 +559,10 @@ transform = Transform3D(11.200185, 0, -4.3076496, 0, 11.999999, 0, 4.3076496, 0,
 [node name="mountain" type="Node3D" parent="."]
 
 [node name="tomb-barbe-drue" type="Node3D" parent="mountain"]
-transform = Transform3D(0.80426157, 0, 0.59427553, 0, 1, 0, -0.59427553, 0, 0.80426157, 16.800001, 0.5, -226.20001)
+transform = Transform3D(0.80426157, 0, 0.5942755, 0, 1, 0, -0.5942755, 0, 0.80426157, 16.800001, 0.5, -226.20001)
 
 [node name="gravestone-cross2" parent="mountain/tomb-barbe-drue" instance=ExtResource("17_l2qgb")]
-transform = Transform3D(-2.9802322e-08, 0, -1, 0, 1, 0, 1, 0, -2.9802322e-08, -0.36013794, 0, -0.017425537)
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -0.36013794, 0, -0.017425537)
 script = ExtResource("18_pie5s")
 
 [node name="Area3D" type="Area3D" parent="mountain/tomb-barbe-drue/gravestone-cross2"]
@@ -907,11 +907,29 @@ transform = Transform3D(1.4142135, 0, 1.4142135, 0, 2, 0, -1.4142135, 0, 1.41421
 [node name="palm-bend3" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
 transform = Transform3D(1.4142135, 0, 1.4142135, 0, 2, 0, -1.4142135, 0, 1.4142135, -25, 1.5, 19)
 
+[node name="palm-bend14" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(0.99999994, 0, -1.7320507, 0, 2, 0, 1.7320507, 0, 0.99999994, -13, 1.5, 16)
+
+[node name="palm-bend15" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(1.9318514, 0, 0.5176381, 0, 2, 0, -0.5176381, 0, 1.9318514, 6, 1.5, 27)
+
 [node name="palm-bend5" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
 transform = Transform3D(-0.9999999, 0, 1.7320508, 0, 2, 0, -1.7320508, 0, -0.9999999, -32, 1.5, -10)
 
+[node name="palm-bend19" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(1.7320508, 0, 0.9999998, 0, 2, 0, -0.9999998, 0, 1.7320508, -39, 0.5, 3)
+
+[node name="palm-bend29" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(1.9318515, 0, 0.5176379, 0, 2, 0, -0.5176379, 0, 1.9318515, -28, 0.5, -33)
+
 [node name="palm-bend6" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
 transform = Transform3D(1.4142134, 0, 1.4142134, 0, 2, 0, -1.4142134, 0, 1.4142134, 0, 1.5, -74)
+
+[node name="palm-bend25" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(-1.7320505, 0, 0.9999999, 0, 2, 0, -0.9999999, 0, -1.7320505, 5, 1.5, -66)
+
+[node name="palm-bend26" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(1.9999998, 0, 1.1920929e-07, 0, 2, 0, -1.1920929e-07, 0, 1.9999998, -12, 1.5, -73)
 
 [node name="palm-bend7" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
 transform = Transform3D(-0.99999976, 0, 1.7320507, 0, 2, 0, -1.7320507, 0, -0.99999976, 6, 1.5, -44)
@@ -922,14 +940,47 @@ transform = Transform3D(-1.9999998, 0, 0, 0, 2, 0, 0, 0, -1.9999998, 9, 2.7, -29
 [node name="palm-bend11" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
 transform = Transform3D(-0.9999998, 0, -1.7320507, 0, 2, 0, 1.7320507, 0, -0.9999998, 11, 2.7, -10)
 
+[node name="palm-bend22" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(-1.7320504, 0, -0.9999999, 0, 2, 0, 0.9999999, 0, -1.7320504, 2, 2.7, -13)
+
+[node name="palm-bend18" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(1.9999996, 0, 1.7881393e-07, 0, 2, 0, -1.7881393e-07, 0, 1.9999996, 5, 2.7, -5)
+
+[node name="palm-bend21" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(0.9999999, 0, -1.7320503, 0, 2, 0, 1.7320503, 0, 0.9999999, -4, 2.7, -4)
+
+[node name="palm-bend17" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(-1.7320504, 0, 0.9999996, 0, 2, 0, -0.9999996, 0, -1.7320504, 15, 2.7, -19)
+
+[node name="palm-bend16" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(-1.9999998, 0, 0, 0, 2, 0, 0, 0, -1.9999998, 29, 2.7, 2)
+
 [node name="palm-bend12" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
 transform = Transform3D(1.7320505, 0, -0.9999997, 0, 2, 0, 0.9999997, 0, 1.7320505, -2, 2.7, 6)
 
 [node name="palm-bend13" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
 transform = Transform3D(1.931851, 0, 0.5176381, 0, 2, 0, -0.5176381, 0, 1.931851, -23, 2.7, 5)
 
+[node name="palm-bend20" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(1.7320504, 0, -0.9999996, 0, 2, 0, 0.9999996, 0, 1.7320504, -21, 2.7, -3)
+
 [node name="palm-bend10" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
 transform = Transform3D(-0.5176381, 0, 1.9318514, 0, 2, 0, -1.9318514, 0, -0.5176381, -15, 2.7, -29)
+
+[node name="palm-bend30" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(1.4142137, 0, 1.4142135, 0, 2, 0, -1.4142135, 0, 1.4142137, -21, 2.7, -31)
+
+[node name="palm-bend23" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(-2, 0, 0, 0, 2, 0, 0, 0, -2, 1, 2.7, -32)
+
+[node name="palm-bend24" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(-0.51763815, 0, -1.9318516, 0, 2, 0, 1.9318516, 0, -0.51763815, -8, 2.7, -34)
+
+[node name="palm-bend28" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(-0.51763815, 0, -1.9318516, 0, 2, 0, 1.9318516, 0, -0.51763815, -4, 2.7, -41)
+
+[node name="palm-bend27" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(1.7320507, 0, -1.0000001, 0, 2, 0, 1.0000001, 0, 1.7320507, -14, 2.7, -44)
 
 [node name="palm-bend8" parent="ColineDerriereMontagne" instance=ExtResource("4_c7jrm")]
 transform = Transform3D(-1.9999998, 0, 0, 0, 2, 0, 0, 0, -1.9999998, 38, 1.5, -16)
@@ -940,8 +991,17 @@ transform = Transform3D(0, 0, 1.9999999, 0, 2, 0, -1.9999999, 0, 0, 32, 1.5, 13)
 [node name="palm-detailed-bend2" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
 transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 39, 1.7, 2)
 
+[node name="palm-detailed-bend19" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
+transform = Transform3D(-1.7320509, 0, 0.9999999, 0, 2, 0, -0.9999999, 0, -1.7320509, 38, 1.7, -6)
+
+[node name="palm-detailed-bend18" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 26, 1.7, 20)
+
 [node name="palm-detailed-bend3" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
 transform = Transform3D(1.9318516, 0, 0.5176382, 0, 2, 0, -0.5176382, 0, 1.9318516, -42, 1.7, 13)
+
+[node name="palm-detailed-bend14" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
+transform = Transform3D(1.1920929e-07, 0, -2, 0, 2, 0, 2, 0, 1.1920929e-07, -33, 1.7, 14)
 
 [node name="palm-detailed-bend4" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
 transform = Transform3D(-1.0000001, 0, 1.7320507, 0, 2, 0, -1.7320507, 0, -1.0000001, -4, 1.7, 23)
@@ -949,23 +1009,56 @@ transform = Transform3D(-1.0000001, 0, 1.7320507, 0, 2, 0, -1.7320507, 0, -1.000
 [node name="palm-detailed-bend6" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
 transform = Transform3D(-1.0000001, 0, 1.7320507, 0, 2, 0, -1.7320507, 0, -1.0000001, -10, 1.7, -87)
 
+[node name="palm-detailed-bend27" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
+transform = Transform3D(1.9318517, 0, 0.5176383, 0, 2, 0, -0.5176383, 0, 1.9318517, 6, 1.7, -84)
+
 [node name="palm-detailed-bend7" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
-transform = Transform3D(-2, 0, -4.172325e-07, 0, 2, 0, 4.172325e-07, 0, -2, -15, 1.7, -60)
+transform = Transform3D(-2, 0, -4.172325e-07, 0, 2, 0, 4.172325e-07, 0, -2, -18, 1.7, -60)
+
+[node name="palm-detailed-bend28" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
+transform = Transform3D(0.99999976, 0, 1.732051, 0, 2, 0, -1.732051, 0, 0.99999976, -8, 1.7, -60)
+
+[node name="palm-detailed-bend26" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
+transform = Transform3D(-2, 0, -4.172325e-07, 0, 2, 0, 4.172325e-07, 0, -2, 4, 1.7, -56)
 
 [node name="palm-detailed-bend10" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
-transform = Transform3D(1.4142133, 0, 1.4142138, 0, 2, 0, -1.4142138, 0, 1.4142133, -8, 2.7, -46)
+transform = Transform3D(1.9318517, 0, -0.51763785, 0, 2, 0, 0.51763785, 0, 1.9318517, -4, 2.7, -52)
 
 [node name="palm-detailed-bend11" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
 transform = Transform3D(-1.0000002, 0, 1.7320507, 0, 2, 0, -1.7320507, 0, -1.0000002, -13, 2.7, -6)
 
+[node name="palm-detailed-bend23" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
+transform = Transform3D(0.99999994, 0, 1.7320509, 0, 2, 0, -1.7320509, 0, 0.99999994, -14, 2.7, 5)
+
+[node name="palm-detailed-bend22" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
+transform = Transform3D(1.1920929e-07, 0, -2, 0, 2, 0, 2, 0, 1.1920929e-07, -25, 2.7, -12)
+
 [node name="palm-detailed-bend13" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
-transform = Transform3D(-1.9318517, 0, 0.51763785, 0, 2, 0, -0.51763785, 0, -1.9318517, 16, 2.7, 1)
+transform = Transform3D(-1.9318517, 0, 0.51763785, 0, 2, 0, -0.51763785, 0, -1.9318517, 17, 2.7, 3)
+
+[node name="palm-detailed-bend21" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
+transform = Transform3D(2.3841858e-07, 0, -2, 0, 2, 0, 2, 0, 2.3841858e-07, 9, 2.7, 3)
+
+[node name="palm-detailed-bend15" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
+transform = Transform3D(-0.51763827, 0, 1.9318516, 0, 2, 0, -1.9318516, 0, -0.51763827, 4, 2.7, 11)
 
 [node name="palm-detailed-bend12" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
 transform = Transform3D(1.9318515, 0, 0.5176383, 0, 2, 0, -0.5176383, 0, 1.9318515, -2, 2.7, -23)
 
+[node name="palm-detailed-bend24" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
+transform = Transform3D(1.4142137, 0, -1.4142134, 0, 2, 0, 1.4142134, 0, 1.4142137, -6, 2.7, -13)
+
+[node name="palm-detailed-bend25" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
+transform = Transform3D(1.1920929e-07, 0, -1.9999999, 0, 2, 0, 1.9999999, 0, 1.1920929e-07, -16, 2.7, -15)
+
+[node name="palm-detailed-bend20" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
+transform = Transform3D(1.7320509, 0, -0.99999976, 0, 2, 0, 0.99999976, 0, 1.7320509, 8, 2.7, -21)
+
 [node name="palm-detailed-bend9" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
 transform = Transform3D(1.4142138, 0, -1.4142133, 0, 2, 0, 1.4142133, 0, 1.4142138, -31, 1.7, -23)
+
+[node name="palm-detailed-bend29" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
+transform = Transform3D(1.4142138, 0, -1.4142133, 0, 2, 0, 1.4142133, 0, 1.4142138, -25, 1.7, -41)
 
 [node name="palm-detailed-bend8" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
 transform = Transform3D(-1.0000004, 0, 1.7320507, 0, 2, 0, -1.7320507, 0, -1.0000004, 17, 1.7, -32)
@@ -973,11 +1066,20 @@ transform = Transform3D(-1.0000004, 0, 1.7320507, 0, 2, 0, -1.7320507, 0, -1.000
 [node name="palm-detailed-bend5" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
 transform = Transform3D(2.0000002, 0, 1.1920929e-07, 0, 2, 0, -1.1920929e-07, 0, 2.0000002, 20, 1.7, 23)
 
+[node name="palm-detailed-bend17" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
+transform = Transform3D(-0.517638, 0, -1.9318519, 0, 2, 0, 1.9318519, 0, -0.517638, 23, 1.7, 13)
+
+[node name="palm-detailed-bend16" parent="ColineDerriereMontagne" instance=ExtResource("5_iswrd")]
+transform = Transform3D(2.0000002, 0, 1.1920929e-07, 0, 2, 0, -1.1920929e-07, 0, 2.0000002, 14, 1.7, 29)
+
 [node name="palm-straight2" parent="ColineDerriereMontagne" instance=ExtResource("16_pie5s")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 12, 2.6, 15)
 
 [node name="palm-detailed-straight2" parent="ColineDerriereMontagne" instance=ExtResource("17_aveh0")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 26, 2.8, -17)
+
+[node name="palm-detailed-straight3" parent="ColineDerriereMontagne" instance=ExtResource("17_aveh0")]
+transform = Transform3D(0.99999994, 0, -1.7320509, 0, 2, 0, 1.7320509, 0, 0.99999994, 23, 2.8, -5)
 
 [node name="grass-patch2" parent="ColineDerriereMontagne" instance=ExtResource("18_bsjpt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1.6999999, 22)
@@ -1398,17 +1500,17 @@ script = ExtResource("25_iswrd")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10000038, 0)
 shape = SubResource("BoxShape3D_iswrd")
 
-[node name="crate2" parent="MontagneCapitainerie" instance=ExtResource("26_h2gq6")]
-transform = Transform3D(2.9802322e-08, 0, 1, 0, 1, 0, -1, 0, 2.9802322e-08, 3.6718674, 31.8, 8.843115)
-
-[node name="oga_scroll" parent="MontagneCapitainerie/crate2" instance=ExtResource("27_ggmis")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.19999981, 0.20000076, 0)
+[node name="oga_scroll" parent="MontagneCapitainerie" instance=ExtResource("27_ggmis")]
+transform = Transform3D(-1, 0, -1.3909066e-08, 0, 1, 0, 1.3909066e-08, 0, -1, 3.6718674, 31.899998, 9.243114)
 script = ExtResource("28_ggmis")
 
-[node name="Area3D" type="Area3D" parent="MontagneCapitainerie/crate2/oga_scroll"]
+[node name="Area3D" type="Area3D" parent="MontagneCapitainerie/oga_scroll"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MontagneCapitainerie/crate2/oga_scroll/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MontagneCapitainerie/oga_scroll/Area3D"]
 shape = SubResource("BoxShape3D_1lej4")
+
+[node name="crate2" parent="MontagneCapitainerie" instance=ExtResource("26_h2gq6")]
+transform = Transform3D(3.774895e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, 3.774895e-08, 3.6718674, 31.8, 9.143115)
 
 [node name="patch-grass2" parent="MontagneCapitainerie" instance=ExtResource("3_jit35")]
 transform = Transform3D(-1.9739598, 0, 4.593853, 0, 5, 0, -4.593853, 0, -1.9739598, -17.462662, 0, -4.213158)
@@ -1799,7 +1901,7 @@ transform = Transform3D(-0.21999964, 0, 0.9755001, 0, 1, 0, -0.9755001, 0, -0.21
 transform = Transform3D(-1.3113416e-07, 0, 3, 0, 5, 0, -3, 0, -1.3113416e-07, 29.971865, 1.2, -60.156883)
 
 [node name="crate-bottles2" parent="MontagneCapitainerie" instance=ExtResource("31_acrrl")]
-transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, 30.371864, 1.1, -58.056885)
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, 30.371864, 1.2, -58.056885)
 
 [node name="barrel2" parent="MontagneCapitainerie" instance=ExtResource("32_tny17")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.971865, 1.2, -58.056885)

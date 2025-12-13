@@ -7,6 +7,7 @@ func _ready() -> void:
 func on_interact() -> void:
 	open_text(pnj_name,"""Salut. Tortuga est méconnaissable ce matin. 
 
-Il nous faut comprendre quoi faire, généralement on apprend plein de chose dans la taverne, commence donc par la.
+Il nous faut comprendre ce qu'il se passe, pour y faire face, et peut être empécher que cela survienne à nouveau.
+Généralement on apprend plein de chose dans la taverne, commence donc par la.
 
 TODO a revoir""")
