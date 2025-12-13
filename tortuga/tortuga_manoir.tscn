@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://eflbjn4io8m2" path="res://assets/town/stairs/stairs-wide-wood-handrail.glb" id="4_xe3wf"]
 [ext_resource type="PackedScene" uid="uid://dbk72njpbd4xb" path="res://assets/town/walls/wall-detail-cross.glb" id="5_dfxvo"]
 [ext_resource type="Script" uid="uid://b0uwkt4hddhgf" path="res://scripts/tortuga/pnj-manoir-whisp.gd" id="5_ujpvh"]
+[ext_resource type="PackedScene" uid="uid://baslvpyulsodd" path="res://assets/character/graveyard/character-skeleton.glb" id="6_3oy5l"]
 [ext_resource type="PackedScene" uid="uid://bx0r6vahjplt0" path="res://assets/town/walls/wall-detail-diagonal.glb" id="6_ukcn8"]
 [ext_resource type="PackedScene" uid="uid://6v1bhowsnc7u" path="res://assets/town/walls/wall-detail-horizontal.glb" id="7_8dpel"]
 [ext_resource type="PackedScene" uid="uid://f25oaswt3cuq" path="res://assets/pirate/props/barrel.glb" id="7_bcdce"]
@@ -28,7 +29,6 @@
 [ext_resource type="PackedScene" uid="uid://bvssfm8gng07x" path="res://assets/town/chimney-top.glb" id="21_ujpvh"]
 [ext_resource type="PackedScene" uid="uid://bkylul71s3oe7" path="res://assets/town/props/stall-bench.glb" id="22_jtkrg"]
 [ext_resource type="Script" uid="uid://f07fb775kj21" path="res://scripts/tortuga/pnj-manoir-majordhomme.gd" id="22_x1bvn"]
-[ext_resource type="PackedScene" uid="uid://du2n4jxjbxbeh" path="res://pnjs/pnj-skeleton.tscn" id="23_54w07"]
 [ext_resource type="PackedScene" uid="uid://d0g1hgqjf8714" path="res://assets/graveyard/candle.glb" id="27_5mpnp"]
 [ext_resource type="PackedScene" uid="uid://bcgxjpoukucvk" path="res://assets/graveyard/candle-multiple.glb" id="28_3oy5l"]
 
@@ -40,15 +40,17 @@ size = Vector3(1.4150696, 0.13238525, 1)
 [node name="road2" parent="." instance=ExtResource("1_55bef")]
 transform = Transform3D(-10, -1.2079664e-06, 0, 1.509958e-06, -8, 0, 0, 0, 8, -0.1, 0, 0)
 
-[node name="pnj" parent="." instance=ExtResource("2_3oy5l")]
+[node name="pnj-majordome" parent="." instance=ExtResource("2_3oy5l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1.3)
 script = ExtResource("22_x1bvn")
 model = ExtResource("4_vy2c6")
 pnj_name = "Majordome"
 
-[node name="pnj-whisp" parent="." instance=ExtResource("23_54w07")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.6, 2.1999998, -1)
+[node name="pnj-whisp" parent="." instance=ExtResource("2_3oy5l")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.6000001, 2.2, -1)
 script = ExtResource("5_ujpvh")
+model = ExtResource("6_3oy5l")
+pnj_name = "Whisp"
 
 [node name="rdc" type="Node3D" parent="."]
 

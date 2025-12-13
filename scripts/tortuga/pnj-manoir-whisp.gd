@@ -1,15 +1,12 @@
-extends "res://scripts/pnj-old.gd"
-
-func _init() -> void:
-	_pnj_name = "Whisp"
-	_pnj_dialog = """Salut. Tortuga est méconnaissable ce matin. 
-
-Il nous faut comprendre quoi faire, généralement on apprend plein de chose dans la taverne, commence donc par la.
-
-TODO a revoir"""
+extends "res://scripts/pnj.gd"
 
 func _ready() -> void:
 	super._ready()
-	#_animation.get_animation("idle").loop_mode = Animation.LOOP_LINEAR
 	_animation.play("sit")
-	
+
+func on_interact() -> void:
+	open_text(pnj_name,"""Salut. Tortuga est méconnaissable ce matin. 
+
+Il nous faut comprendre quoi faire, généralement on apprend plein de chose dans la taverne, commence donc par la.
+
+TODO a revoir""")

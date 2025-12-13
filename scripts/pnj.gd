@@ -5,17 +5,19 @@ extends "res://scripts/interactable.gd"
 
 @onready var _name_3d := $name as Label3D
 @onready var _player := $"/root/World/Player/CameraPivot/SpringArm3D/Camera3D" as Camera3D
+@onready var _character := $character as Node3D
 
 var _animation : AnimationPlayer
 
 func _ready() -> void:
 	super._ready()
-	var graphic = model.instantiate()
-	add_child(graphic)
+	remove_child(_character)
+	_character = model.instantiate()
+	add_child(_character)
 	
 	_name_3d.text = pnj_name
 	
-	_animation = graphic.get_child(1)
+	_animation = _character.get_child(1)
 	_animation.get_animation("idle").loop_mode = Animation.LOOP_LINEAR
 	_animation.play("idle")
 

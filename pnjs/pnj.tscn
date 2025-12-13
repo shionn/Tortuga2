@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cy4nht2h8osif"]
+[gd_scene load_steps=3 format=3 uid="uid://cy4nht2h8osif"]
+
+[ext_resource type="PackedScene" uid="uid://dbglnuyw67vwg" path="res://assets/character/base/character-male-c.glb" id="1_fkmdp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rwguv"]
 radius = 0.2
@@ -9,6 +11,8 @@ height = 0.7
 [node name="name" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 text = "PnjName"
+
+[node name="character" parent="." instance=ExtResource("1_fkmdp")]
 
 [node name="Area3D" type="Area3D" parent="."]
 
