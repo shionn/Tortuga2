@@ -1,7 +1,7 @@
 [gd_scene load_steps=33 format=3 uid="uid://bun08nin6q33j"]
 
 [ext_resource type="PackedScene" uid="uid://dsqb6308w0ec1" path="res://assets/town/road/road.glb" id="1_55bef"]
-[ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://pnjs/pnj.tscn" id="2_3oy5l"]
+[ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="2_3oy5l"]
 [ext_resource type="PackedScene" uid="uid://snopmjtfskcu" path="res://assets/town/walls/wall-doorway-round.glb" id="2_e4gn3"]
 [ext_resource type="PackedScene" uid="uid://bn2k1c6mt0j5l" path="res://assets/town/walls/wall-window-shutters.glb" id="3_a1a07"]
 [ext_resource type="PackedScene" uid="uid://cobvp8rhk1h0s" path="res://assets/character/base/character-male-d.glb" id="4_vy2c6"]

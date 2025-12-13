@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://blifncbh7xys7"]
 
-[ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://pnjs/pnj.tscn" id="1_se30r"]
+[ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="1_se30r"]
 [ext_resource type="PackedScene" uid="uid://dsqb6308w0ec1" path="res://assets/town/road/road.glb" id="1_swdsd"]
 [ext_resource type="Script" uid="uid://btaaritfvvsfe" path="res://scripts/tortuga/pnj-coffre-garde.gd" id="2_q30s0"]
 [ext_resource type="PackedScene" uid="uid://snopmjtfskcu" path="res://assets/town/walls/wall-doorway-round.glb" id="2_r46nr"]

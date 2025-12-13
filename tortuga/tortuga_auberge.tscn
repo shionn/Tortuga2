@@ -1,6 +1,6 @@
 [gd_scene load_steps=48 format=3 uid="uid://c8y6go07dabnn"]
 
-[ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://pnjs/pnj.tscn" id="1_hrd0d"]
+[ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="1_hrd0d"]
 [ext_resource type="PackedScene" uid="uid://bn2k1c6mt0j5l" path="res://assets/town/walls/wall-window-shutters.glb" id="2_83rxu"]
 [ext_resource type="PackedScene" uid="uid://cj2lgbr3jctjg" path="res://assets/town/fence-hedge/hedge-gate.glb" id="2_g4xan"]
 [ext_resource type="PackedScene" uid="uid://ba3btavlna1xw" path="res://assets/town/fence-hedge/hedge-curved.glb" id="3_7ouha"]
