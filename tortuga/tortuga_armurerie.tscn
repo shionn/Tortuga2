@@ -1,8 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://bqwr1sdl4wvhs"]
+[gd_scene load_steps=21 format=3 uid="uid://bqwr1sdl4wvhs"]
 
+[ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="1_egqyo"]
 [ext_resource type="PackedScene" uid="uid://diuwrvkauw1fs" path="res://assets/town/walls/wall.glb" id="1_ndcds"]
+[ext_resource type="Script" uid="uid://boejw0vogjed3" path="res://scripts/tortuga/pnj-armurerie-orco.gd" id="2_44ywi"]
 [ext_resource type="PackedScene" uid="uid://6v1bhowsnc7u" path="res://assets/town/walls/wall-detail-horizontal.glb" id="2_ui4if"]
 [ext_resource type="PackedScene" uid="uid://b0rsxyuwbu5tw" path="res://assets/town/walls/wall-window-round.glb" id="3_8mqbv"]
+[ext_resource type="PackedScene" uid="uid://cs7q7slxxr7jt" path="res://assets/character/dungeon/character-orc.glb" id="3_76b1l"]
 [ext_resource type="PackedScene" uid="uid://bd5wqe11im0fb" path="res://assets/town/walls/wall-doorway-square.glb" id="4_sdewj"]
 [ext_resource type="PackedScene" uid="uid://bx0r6vahjplt0" path="res://assets/town/walls/wall-detail-diagonal.glb" id="5_q67i5"]
 [ext_resource type="PackedScene" uid="uid://dsqb6308w0ec1" path="res://assets/town/road/road.glb" id="6_cjaaf"]
@@ -19,6 +22,13 @@
 [ext_resource type="PackedScene" uid="uid://dj2jytbjf6lck" path="res://assets/town/roof/roof.glb" id="16_mqv4l"]
 
 [node name="TortugaArmurerie" type="Node3D"]
+
+[node name="pnj-orco" parent="." instance=ExtResource("1_egqyo")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1, 0, -2)
+script = ExtResource("2_44ywi")
+model = ExtResource("3_76b1l")
+pnj_name = "Orco"
+pnj_role = "Armurier"
 
 [node name="ground" type="Node3D" parent="."]
 
@@ -68,10 +78,10 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.5, 0.47604632, 2.3999
 transform = Transform3D(0.49998266, 0.00086101826, 0.004074387, -0.0008671743, 0.4999987, 0.00075213134, -0.004073081, -0.00075917086, 0.49998283, 1.336591, 0.20000002, 2.438254)
 
 [node name="bottle2" parent="ground" instance=ExtResource("8_h4toq")]
-transform = Transform3D(0.3, -1.8826541e-11, -2.7939678e-10, 1.8826541e-11, 0.3, 3.4924598e-11, 2.7939678e-10, -3.4924598e-11, 0.3, -0.09999998, 0.39999998, -0.20000035)
+transform = Transform3D(0.3, -1.8826541e-11, -2.7939678e-10, 1.8826541e-11, 0.3, 3.4924598e-11, 2.7939678e-10, -3.4924598e-11, 0.3, -0.09999998, 0.36685854, -0.20000035)
 
 [node name="bottle3" parent="ground" instance=ExtResource("8_h4toq")]
-transform = Transform3D(0.3, -1.8826541e-11, -2.7939678e-10, 1.8826541e-11, 0.3, 3.4924598e-11, 2.7939678e-10, -3.4924598e-11, 0.3, -0.09954457, 0.39999998, -0.31560794)
+transform = Transform3D(0.3, -1.8826541e-11, -2.7939678e-10, 1.8826541e-11, 0.3, 3.4924598e-11, 2.7939678e-10, -3.4924598e-11, 0.3, -0.09954457, 0.36685854, -0.31560794)
 
 [node name="crate2" parent="ground" instance=ExtResource("9_ruvfp")]
 transform = Transform3D(-2.1855694e-08, 6.884685e-18, 0.5, -6.9388956e-18, 0.5, -6.8846854e-18, -0.5, -6.9388956e-18, -2.1855694e-08, 0.1, 8.940697e-08, 2.5999997)
@@ -107,7 +117,7 @@ transform = Transform3D(-1.7484556e-08, 5.5077474e-18, 0.4, -5.551115e-18, 0.4, 
 transform = Transform3D(-1.7484556e-08, 5.5077474e-18, 0.4, -5.551115e-18, 0.4, -5.5077478e-18, -0.4, -5.551115e-18, -1.7484556e-08, -0.30000007, 1.5000001, 2.755482)
 
 [node name="bottle4" parent="ground" instance=ExtResource("8_h4toq")]
-transform = Transform3D(0.3, -1.8826541e-11, -2.7939678e-10, 1.8826541e-11, 0.3, 3.4924598e-11, 2.7939678e-10, -3.4924598e-11, 0.3, -0.09954457, 0.39999998, -0.42907712)
+transform = Transform3D(0.3, -1.8826541e-11, -2.7939678e-10, 1.8826541e-11, 0.3, 3.4924598e-11, 2.7939678e-10, -3.4924598e-11, 0.3, -0.09954457, 0.36685854, -0.42907712)
 
 [node name="cannon-ball9" parent="ground" instance=ExtResource("7_mckex")]
 transform = Transform3D(0.49998266, 0.00086101826, 0.004074387, -0.0008671743, 0.4999987, 0.00075213134, -0.004073081, -0.00075917086, 0.49998283, -0.763409, 0.20000002, 2.6382542)
