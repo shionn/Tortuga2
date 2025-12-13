@@ -307,6 +307,76 @@ layout_mode = 2
 text = "Valider
 "
 
+[node name="InputYesNo" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="InputYesNo"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -100.0
+offset_right = 150.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="InputYesNo/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InputYesNo/Panel/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="InputYesNo/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Titre"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="InputYesNo/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Ceci est un essai de text
+
+Sur plusieurs lignes en plus"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InputYesNo/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="NoButton" type="Button" parent="InputYesNo/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Non"
+
+[node name="YesButton" type="Button" parent="InputYesNo/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Oui
+"
+
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_button_pressed"]
 [connection signal="pressed" from="DialogAndImg/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_and_img_button_pressed"]
 [connection signal="pressed" from="Input/Panel/MarginContainer/VBoxContainer/ValidateButton" to="." method="_on_validate_input_button_pressed"]
+[connection signal="pressed" from="InputYesNo/Panel/MarginContainer/VBoxContainer/HBoxContainer/NoButton" to="." method="_on_no_button_pressed"]
+[connection signal="pressed" from="InputYesNo/Panel/MarginContainer/VBoxContainer/HBoxContainer/YesButton" to="." method="_on_yes_button_pressed"]
