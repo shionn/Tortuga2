@@ -64,13 +64,15 @@ size = Vector3(0.13014454, 0.14038867, 0.05)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3.6)
 script = ExtResource("24_xpx3v")
 model = ExtResource("3_hrd0d")
-pnj_name = "Maya <Tenancière>"
+pnj_name = "Maya"
+pnj_role = "Tenancière"
 
 [node name="pnj-odette" parent="." instance=ExtResource("1_hrd0d")]
 transform = Transform3D(0.49999997, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.49999997, -3.3, 0, -2.8)
 script = ExtResource("26_sv4c2")
 model = ExtResource("4_s2xlh")
-pnj_name = "Odette <Serveuse>"
+pnj_name = "Odette"
+pnj_role = "Serveuse"
 
 [node name="pnj-bertran" parent="." instance=ExtResource("1_hrd0d")]
 transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, 2.2, 2, 0.4)

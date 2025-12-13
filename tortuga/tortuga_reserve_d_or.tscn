@@ -21,7 +21,8 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2.5)
 script = ExtResource("2_q30s0")
 model = ExtResource("3_wjnk2")
-pnj_name = "Lilio <Garde>"
+pnj_name = "Lilio"
+pnj_role = "Garde"
 
 [node name="road2" parent="." instance=ExtResource("1_swdsd")]
 transform = Transform3D(-6, 5.2453663e-07, 0, -5.2453663e-07, -6, 0, 0, 0, 6, 0, 0, 0)
