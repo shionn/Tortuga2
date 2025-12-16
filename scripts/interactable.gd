@@ -31,4 +31,5 @@ func _on_mouse_exited() -> void:
 
 func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	if event is InputEventMouseButton and Input.is_action_just_pressed("interact"): 
+		Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 		on_interact()
