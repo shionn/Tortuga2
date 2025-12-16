@@ -14,6 +14,8 @@ const JUMP_VELOCITY = 4.5
 var _animation : AnimationPlayer
 var _last_floor_position : Vector3
 
+var _bag = Bag.new()
+
 func _ready() -> void:
 	print(model)
 	var packed = load(model) as PackedScene
