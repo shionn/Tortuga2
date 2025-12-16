@@ -15,7 +15,6 @@ var _animation : AnimationPlayer
 var _last_floor_position : Vector3
 
 func _ready() -> void:
-	print(model)
 	var packed = load(model) as PackedScene
 	var node = packed.instantiate()
 	_pivot.remove_child(_character)

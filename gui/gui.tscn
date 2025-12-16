@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=12 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://gui/gui.gd" id="1_0fbet"]
 [ext_resource type="Texture2D" uid="uid://dyq75clqrse1h" path="res://assets/gui/ui-adventure/minimap_ring_brown_detail.png" id="2_ioifv"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://cdqtjkc7ao1xk" path="res://assets/gui/ui-adventure/minimap_compass_toon_e.png" id="5_bk7cs"]
 [ext_resource type="Texture2D" uid="uid://bkfc3jdh67dmb" path="res://assets/gui/ui-adventure/minimap_compass_toon_w.png" id="6_kvi6p"]
 [ext_resource type="Texture2D" uid="uid://cs7ory4pceeli" path="res://assets/gui/ui-adventure/minimap_arrow_a.png" id="7_bk7cs"]
+[ext_resource type="Script" uid="uid://djo8cqueirt8b" path="res://gui/menu.gd" id="8_4q42c"]
+[ext_resource type="Texture2D" uid="uid://g5kgt7lnwfw0" path="res://assets/gui/fanatisy-magic-set/bag-h-48.png" id="8_kvi6p"]
+[ext_resource type="Script" uid="uid://dbsmc7uqhq2bx" path="res://gui/bag.gd" id="9_xqkfk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yw5qc"]
 bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
@@ -304,8 +307,7 @@ layout_mode = 2
 
 [node name="ValidateButton" type="Button" parent="Input/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Valider
-"
+text = "Valider"
 
 [node name="InputYesNo" type="Control" parent="."]
 visible = false
@@ -333,6 +335,70 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="InputYesNo/Panel"]
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("8_4q42c")
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -46.0
+offset_top = -42.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/MarginContainer"]
+layout_mode = 2
+
+[node name="BagButton" type="TextureButton" parent="Menu/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("8_kvi6p")
+
+[node name="Bag" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_right = -10.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("9_xqkfk")
+
+[node name="Panel" type="Panel" parent="Bag"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -200.0
+offset_bottom = 200.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Bag/Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -372,11 +438,33 @@ text = "Non"
 [node name="YesButton" type="Button" parent="InputYesNo/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Oui
-"
+text = "Oui"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Bag/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="Title" type="Label" parent="Bag/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_yw5qc")
+text = "Sac"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Bag/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CloseButton" type="Button" parent="Bag/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Fermer"
 
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_button_pressed"]
 [connection signal="pressed" from="DialogAndImg/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_and_img_button_pressed"]
 [connection signal="pressed" from="Input/Panel/MarginContainer/VBoxContainer/ValidateButton" to="." method="_on_validate_input_button_pressed"]
 [connection signal="pressed" from="InputYesNo/Panel/MarginContainer/VBoxContainer/HBoxContainer/NoButton" to="." method="_on_no_button_pressed"]
 [connection signal="pressed" from="InputYesNo/Panel/MarginContainer/VBoxContainer/HBoxContainer/YesButton" to="." method="_on_yes_button_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/HBoxContainer/BagButton" to="Menu" method="_on_bag_button_pressed"]
+[connection signal="visibility_changed" from="Bag" to="Bag" method="_on_visibility_changed"]
+[connection signal="pressed" from="Bag/Panel/MarginContainer/VBoxContainer/CloseButton" to="Bag" method="_on_close_button_pressed"]
+

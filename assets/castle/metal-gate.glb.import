@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ndbqstytxls7"
-path="res://.godot/imported/metal-gate.glb-73de989753453a957e7f0c593677dca8.scn"
+path="res://.godot/imported/metal-gate.glb-67db76b3dcadea10ae7835acc485119b.scn"
 
 [deps]
 
-source_file="res:///assets/castle/metal-gate.glb"
-dest_files=["res://.godot/imported/metal-gate.glb-73de989753453a957e7f0c593677dca8.scn"]
+source_file="res://assets/castle/metal-gate.glb"
+dest_files=["res://.godot/imported/metal-gate.glb-67db76b3dcadea10ae7835acc485119b.scn"]
 
 [params]
 

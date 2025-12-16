@@ -9,3 +9,4 @@
 - https://opengameart.org/content/pirate-game-tune
 - https://opengameart.org/content/pirate-theme
 - https://opengameart.org/content/loop-pirates-ahoy
+- https://opengameart.org/content/fantasy-magic-set
