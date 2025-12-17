@@ -1,4 +1,5 @@
 extends Node
+class_name Interactable
 
 @onready var _gui := $"/root/World/Gui" as Control
 @onready var area := $Area3D as Area3D
@@ -10,6 +11,9 @@ func _ready() -> void:
 
 func on_interact() -> void: 
 	print("on_interact is not overwrite")
+
+func on_item_drop(item : Item) -> void: 
+	print("on drop is not overwrite")
 
 func open_text(title: String, text: String, size = Vector2(400,400)) -> void: 
 	_gui.open_dialog(title, text, size)
@@ -25,13 +29,13 @@ func open_question(title: String, callback: Callable) -> void:
 
 func _on_mouse_entered() -> void:
 	if Item.drag != null:
-		Item.drag.button.set_default_cursor_shape(Control.CURSOR_CAN_DROP)
+		Item.drag.on_enter(self)
 	else : 
 		Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
 
 func _on_mouse_exited() -> void:
 	if Item.drag != null:
-		Item.drag.button.set_default_cursor_shape(Control.CURSOR_DRAG)
+		Item.drag.on_exit(self)
 	else :
 		Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 
