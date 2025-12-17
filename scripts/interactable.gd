@@ -27,7 +27,6 @@ func _on_mouse_entered() -> void:
 	if Item.drag != null:
 		Item.drag.button.set_default_cursor_shape(Control.CURSOR_CAN_DROP)
 	else : 
-		print("interactable _ on mouse_entered")
 		Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
 
 func _on_mouse_exited() -> void:
