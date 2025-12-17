@@ -1,0 +1,14 @@
+extends "res://scripts/pnj.gd"
+
+const _TEXT = """Je peu recharger votre ancienne partie si vous le souhaitez.
+Voulez-vous charger votre partie ?"""
+
+func on_interact() -> void:
+	gui.open_yes_no_question("Recharger", _TEXT, _on_no, _on_yes)
+	
+func _on_no() -> void:
+	pass
+
+func _on_yes() -> void:
+	bag.load()
+	pass

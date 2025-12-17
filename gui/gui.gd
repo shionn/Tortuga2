@@ -1,4 +1,5 @@
 extends Control
+class_name Gui
 
 @onready var _player := $"../Player" as CharacterBody3D
 @onready var _debug_info := $DebugInfo as Label
