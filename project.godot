@@ -24,6 +24,10 @@ window/size/viewport_height=800
 
 enabled=PackedStringArray("res://addons/physics_collision_import_generator/plugin.cfg", "res://addons/vaporwavesky/plugin.cfg")
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 ui_left={

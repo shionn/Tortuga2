@@ -1,5 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://t4s4b68q68yv"]
+[gd_scene load_steps=25 format=3 uid="uid://t4s4b68q68yv"]
 
+[ext_resource type="Script" uid="uid://cu2gbhyvavoha" path="res://scripts/game_init.gd" id="1_varcb"]
 [ext_resource type="PackedScene" uid="uid://cobvp8rhk1h0s" path="res://assets/character/base/character-male-d.glb" id="1_xssot"]
 [ext_resource type="PackedScene" uid="uid://d4hl0amhnq7od" path="res://assets/character/base/character-female-b.glb" id="2_v73gb"]
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://water/WaterPlane.tscn" id="3_3bk5d"]
@@ -71,6 +72,7 @@ background_mode = 2
 sky = SubResource("Sky_3bk5d")
 
 [node name="SelectCharacter" type="Node3D"]
+script = ExtResource("1_varcb")
 
 [node name="characters" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)

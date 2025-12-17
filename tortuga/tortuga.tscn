@@ -1,9 +1,11 @@
-[gd_scene load_steps=56 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=59 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/bouteille_note_lisible.gd" id="1_c7jrm"]
+[ext_resource type="PackedScene" uid="uid://ckm421dtlx0gu" path="res://assets/mini-dungeon/chest.glb" id="1_eu0va"]
 [ext_resource type="PackedScene" uid="uid://dvplfstqecj42" path="res://assets/mine/tortuga-60.glb" id="1_hh6n0"]
 [ext_resource type="Script" uid="uid://bkxghrcx478fh" path="res://scripts/tortuga/bouteille_note_illisible.gd" id="1_jit35"]
 [ext_resource type="PackedScene" uid="uid://b5xtrnp1f2eg7" path="res://assets/pirate/props/bottle.glb" id="1_wohch"]
+[ext_resource type="Script" uid="uid://bda1t66dfjc7y" path="res://scripts/items/test-loot-chest.gd" id="2_lrpya"]
 [ext_resource type="PackedScene" uid="uid://dn1b4sjm530aw" path="res://assets/pirate/plant/grass.glb" id="2_wohch"]
 [ext_resource type="PackedScene" uid="uid://dvmo6h4nm5lcb" path="res://assets/pirate/patch-grass.glb" id="3_jit35"]
 [ext_resource type="PackedScene" uid="uid://nuvlejq8qd0s" path="res://assets/pirate/plant/palm-bend.glb" id="4_c7jrm"]
@@ -41,13 +43,16 @@
 [ext_resource type="PackedScene" uid="uid://brird11bbbwv0" path="res://tortuga/tortuga_dortoir.tscn" id="26_ntxr1"]
 [ext_resource type="PackedScene" uid="uid://dpjhqteufdpw7" path="res://assets/props/oga_scroll.glb" id="27_ggmis"]
 [ext_resource type="PackedScene" uid="uid://blifncbh7xys7" path="res://tortuga/tortuga_reserve_d_or.tscn" id="27_veopy"]
-[ext_resource type="PackedScene" uid="uid://ukreens1wy4a" path="res://tortuga/wall_coffre.tscn" id="28_b2pjt"]
+[ext_resource type="PackedScene" uid="uid://ukreens1wy4a" path="res://tortuga/tortuga_wall_coffre.tscn" id="28_b2pjt"]
 [ext_resource type="Script" uid="uid://co84wje5bypgt" path="res://scripts/tortuga/parchemin-montagne-capitainerie.gd" id="28_ggmis"]
 [ext_resource type="PackedScene" uid="uid://bagm6lyjb83lg" path="res://tortuga/tortuga_brasserie.tscn" id="29_w1jow"]
 [ext_resource type="PackedScene" uid="uid://bqwr1sdl4wvhs" path="res://tortuga/tortuga_armurerie.tscn" id="30_5obc8"]
 [ext_resource type="PackedScene" uid="uid://bl8gqk34ub2cy" path="res://assets/pirate/props/crate-bottles.glb" id="31_acrrl"]
 [ext_resource type="PackedScene" uid="uid://f25oaswt3cuq" path="res://assets/pirate/props/barrel.glb" id="32_tny17"]
 [ext_resource type="PackedScene" uid="uid://bun08nin6q33j" path="res://tortuga/tortuga_manoir.tscn" id="48_n6usc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lrpya"]
+size = Vector3(0.6, 0.7, 0.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2w2tg"]
 size = Vector3(0.3, 0.15, 0.1)
@@ -71,6 +76,16 @@ size = Vector3(2.5, 0.3, 2.5)
 size = Vector3(0.3, 0.15, 0.15)
 
 [node name="TortugaNode" type="Node3D"]
+
+[node name="chest2" parent="." instance=ExtResource("1_eu0va")]
+transform = Transform3D(0.57357645, 0, 0.81915206, 0, 1, 0, -0.81915206, 0, 0.57357645, 36, 1.4380165, -29.400002)
+script = ExtResource("2_lrpya")
+
+[node name="Area3D" type="Area3D" parent="chest2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="chest2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5258789e-05, 0.14999998, -0.049999237)
+shape = SubResource("BoxShape3D_lrpya")
 
 [node name="tortuga-60" parent="." instance=ExtResource("1_hh6n0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 168.15813, 0, -145.42403)
@@ -1916,7 +1931,7 @@ transform = Transform3D(1.6082383, 0, -3.6624541, 0, 4, 0, 3.6624541, 0, 1.60823
 transform = Transform3D(0.27380204, 0, -3.9906182, 0, 4, 0, 3.9906182, 0, 0.27380204, 23.904846, -0.46709442, 11.030815)
 
 [node name="patch-grass4" parent="ColineAuberge" instance=ExtResource("3_jit35")]
-transform = Transform3D(-1.2440985, 0, 3.8016076, 0, 4, 0, -3.8016076, 0, -1.2440985, 10.197884, -0.46709442, 8.920696)
+transform = Transform3D(-1.2440985, 0, 3.8016076, 0, 4, 0, -3.8016076, 0, -1.2440985, 10.197882, -0.46709442, 8.920696)
 
 [node name="patch-grass5" parent="ColineAuberge" instance=ExtResource("3_jit35")]
 transform = Transform3D(-3.9972754, 0, 0.14762199, 0, 4, 0, -0.14762199, 0, -3.9972754, -0.35336304, -0.46709442, 1.4333878)

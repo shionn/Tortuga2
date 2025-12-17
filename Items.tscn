@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://hnv8gk7c1e0s"]
+
+[ext_resource type="Script" uid="uid://bjgelhrinh3uw" path="res://scripts/items/test_item.gd" id="1_rgffq"]
+[ext_resource type="Texture2D" uid="uid://g5kgt7lnwfw0" path="res://assets/gui/fanatisy-magic-set/bag-h-48.png" id="2_dphic"]
+
+[node name="Items" type="Node"]
+
+[node name="test-item" type="Node" parent="."]
+script = ExtResource("1_rgffq")
+icon = ExtResource("2_dphic")
