@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=13 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://gui/gui.gd" id="1_0fbet"]
 [ext_resource type="Texture2D" uid="uid://dyq75clqrse1h" path="res://assets/gui/ui-adventure/minimap_ring_brown_detail.png" id="2_ioifv"]
@@ -7,9 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://cdqtjkc7ao1xk" path="res://assets/gui/ui-adventure/minimap_compass_toon_e.png" id="5_bk7cs"]
 [ext_resource type="Texture2D" uid="uid://bkfc3jdh67dmb" path="res://assets/gui/ui-adventure/minimap_compass_toon_w.png" id="6_kvi6p"]
 [ext_resource type="Texture2D" uid="uid://cs7ory4pceeli" path="res://assets/gui/ui-adventure/minimap_arrow_a.png" id="7_bk7cs"]
-[ext_resource type="Script" uid="uid://djo8cqueirt8b" path="res://gui/menu.gd" id="8_4q42c"]
+[ext_resource type="Script" path="res://gui/menu.gd" id="8_4q42c"]
 [ext_resource type="Texture2D" uid="uid://g5kgt7lnwfw0" path="res://assets/gui/fanatisy-magic-set/bag-h-48.png" id="8_kvi6p"]
 [ext_resource type="Script" uid="uid://dbsmc7uqhq2bx" path="res://gui/bag.gd" id="9_xqkfk"]
+[ext_resource type="Script" uid="uid://ci8ygrslxb0ka" path="res://scripts/item.gd" id="11_s1h2m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yw5qc"]
 bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
@@ -459,6 +460,19 @@ size_flags_vertical = 3
 [node name="CloseButton" type="Button" parent="Bag/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Fermer"
+
+[node name="Items" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_left = -100.0
+offset_right = -100.0
+
+[node name="TestItem" type="TextureButton" parent="Items"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("8_kvi6p")
+script = ExtResource("11_s1h2m")
 
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_button_pressed"]
 [connection signal="pressed" from="DialogAndImg/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_and_img_button_pressed"]

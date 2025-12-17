@@ -1,38 +1,43 @@
-extends Node
+extends TextureButton
 class_name Item
 
-static var drag : Item = null;
+@onready var _bag = $"../../Bag" as Bag
 
-@export var icon : Resource
+#static var drag : Item = null;
+
+#@export var icon : Resource
 	
-var button : TextureButton
+#var button : TextureButton
 var _interactable : Interactable
 
-func connect_to(but : TextureButton) -> void :
-	button = but
-	but.connect("pressed", on_activate)
-	but.set_default_cursor_shape(Control.CURSOR_POINTING_HAND)
-	but.connect("button_down", _on_button_down)
-	but.connect("button_up", _on_button_up)
+
+func _ready() -> void:
+	set_default_cursor_shape(Control.CURSOR_POINTING_HAND)
+	connect("pressed", on_activate)
+	connect("button_down", _on_button_down)
+	connect("button_up", _on_button_up)
+	
+#func connect_to(but : TextureButton) -> void :
+#	button = but
 
 func on_enter(interactable : Interactable) -> void :
 	self._interactable = interactable
-	Item.drag.button.set_default_cursor_shape(Control.CURSOR_CAN_DROP)
+	set_default_cursor_shape(Control.CURSOR_CAN_DROP)
 
 func on_exit(interactable : Interactable) -> void :
 	if self._interactable == interactable :
 		self._interactable = null
-	Item.drag.button.set_default_cursor_shape(Control.CURSOR_DRAG)
+		set_default_cursor_shape(Control.CURSOR_DRAG)
 
 func _on_button_down() -> void: 
-	drag = self
-	button.set_default_cursor_shape(Control.CURSOR_DRAG)
+	_bag.drag = self
+	set_default_cursor_shape(Control.CURSOR_DRAG)
 
 func _on_button_up() -> void: 
 	if _interactable != null :
 		_interactable.on_item_drop(self)
-	drag = null
-	button.set_default_cursor_shape(Control.CURSOR_POINTING_HAND)
+	_bag.drag = null
+	set_default_cursor_shape(Control.CURSOR_POINTING_HAND)
 
 func on_activate() -> void: 
 	print("Item on_activate not implemented")

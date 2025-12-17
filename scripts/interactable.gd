@@ -2,6 +2,7 @@ extends Node
 class_name Interactable
 
 @onready var _gui := $"/root/World/Gui" as Control
+@onready var bag := $"/root/World/Gui/Bag" as Bag
 @onready var area := $Area3D as Area3D
 
 func _ready() -> void:
@@ -28,14 +29,14 @@ func open_question(title: String, callback: Callable) -> void:
 	_gui.open_question(title,callback)
 
 func _on_mouse_entered() -> void:
-	if Item.drag != null:
-		Item.drag.on_enter(self)
+	if bag and bag.drag != null:
+		bag.drag.on_enter(self)
 	else : 
 		Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
 
 func _on_mouse_exited() -> void:
-	if Item.drag != null:
-		Item.drag.on_exit(self)
+	if bag and bag.drag != null:
+		bag.drag.on_exit(self)
 	else :
 		Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 
