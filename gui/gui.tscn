@@ -412,6 +412,7 @@ layout_mode = 2
 [node name="BagButton" type="TextureButton" parent="Menu/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Inventaire"
 texture_normal = ExtResource("8_kvi6p")
 
 [node name="Bag" type="Control" parent="."]
@@ -478,26 +479,42 @@ anchors_preset = 0
 offset_left = -100.0
 offset_right = -100.0
 
-[node name="TestItem" type="TextureButton" parent="Items"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture_normal = ExtResource("8_kvi6p")
-script = ExtResource("11_s1h2m")
-
 [node name="TresorBarbeDrue" type="TextureButton" parent="Items"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+tooltip_text = "Trésor de Barbe Drue"
 texture_normal = ExtResource("12_22my7")
 script = ExtResource("11_s1h2m")
+description = "C'est le trésor de Barbe Drue"
 
 [node name="ParcheminBarbeDrue" type="TextureButton" parent="Items"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+tooltip_text = "Parchemin de Barbe Drue"
 texture_normal = ExtResource("13_qv6l0")
 script = ExtResource("11_s1h2m")
+description = "C'est le parchemin du trésor de Barbe Drue.
+
+Je ne comprends rien à ce qui est écrit dessus."
+
+[node name="Console" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+offset_right = 400.0
+grow_vertical = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Console"]
+layout_mode = 2
+scroll_following = true
 
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_button_pressed"]
 [connection signal="pressed" from="DialogAndImg/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_and_img_button_pressed"]

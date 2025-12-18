@@ -3,6 +3,7 @@ class_name Bag
 
 @onready var _grid = $Panel/MarginContainer/VBoxContainer/GridContainer as GridContainer
 @onready var _items = $"../Items" as Control
+@onready var _console = $"../Console/RichTextLabel" as RichTextLabel
 
 var drag : Item
 
@@ -12,9 +13,14 @@ func _on_visibility_changed() -> void:
 	pass
 
 func loot(item : Item) -> void :
-	# TODO chat log
-	_items.remove_child(item)
-	_grid.add_child(item)
+	if _items.is_ancestor_of(item) :
+		_items.remove_child(item)
+		_grid.add_child(item)
+		_console.append_text("Vous obtenez <"+item.tooltip_text+">")
+		_console.newline()
+	else :
+		print("bordel")
+		print(item)
 
 func _on_close_button_pressed() -> void:
 	hide()

@@ -1,8 +1,8 @@
 extends "res://scripts/interactable.gd"
 
 @onready var _bag = $"/root/World/Gui/Bag" as Bag
-@onready var _item_tresor = $"/root/World/Gui/Items/TresorBarbeDrue" as Bag
-@onready var _item_parchemin = $"/root/World/Gui/Items/ParcheminBarbeDrue" as Bag
+@onready var _item_tresor = $"/root/World/Gui/Items/TresorBarbeDrue" as Item
+@onready var _item_parchemin = $"/root/World/Gui/Items/ParcheminBarbeDrue" as Item
 
 const _TEXT =  """Vous avez résolue l'énigme de Barbe Drue
 

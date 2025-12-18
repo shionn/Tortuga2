@@ -2,6 +2,9 @@ extends TextureButton
 class_name Item
 
 @onready var _bag = $"../../Bag" as Bag
+@onready var _gui = $"../.." as Gui
+
+@export_multiline var description: String
 
 var _interactable : Interactable
 
@@ -31,4 +34,5 @@ func _on_button_up() -> void:
 	set_default_cursor_shape(Control.CURSOR_POINTING_HAND)
 
 func on_activate() -> void: 
-	print("Item on_activate not implemented")
+	_gui.open_dialog(self.tooltip_text, self.description)
+	
