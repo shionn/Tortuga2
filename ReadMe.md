@@ -10,3 +10,7 @@
 - https://opengameart.org/content/pirate-theme
 - https://opengameart.org/content/loop-pirates-ahoy
 - https://opengameart.org/content/fantasy-magic-set
+- https://opengameart.org/content/resouces-pack-1
+
+## non importer mais pourrai etre simpa : 
+- paper : https://opengameart.org/content/papers
