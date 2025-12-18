@@ -69,18 +69,18 @@ func _handle_jump() -> void :
 	if not is_on_floor() and velocity.y < -0.05:
 		_animation.queue("fall")
 
-
-#@export var tilt_limit = deg_to_rad(75)
-#@export_range(0.0, 1.0) var mouse_sensitivity = 0.01
-
 const tilt_limit = deg_to_rad(75)
 const mouse_sensitivity = 0.01
 
+var _previous_mouse_position : Vector2
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and Input.is_action_just_pressed("move_camera"):
+		_previous_mouse_position = (event as InputEventMouseButton).position
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	elif event is InputEventMouseButton and Input.is_action_just_released("move_camera") :
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		Input.warp_mouse(_previous_mouse_position)
 	elif event is InputEventMouseMotion and Input.is_action_pressed("move_camera"):
 		_camera_pivot.rotation.x -= event.relative.y * mouse_sensitivity
 		_camera_pivot.rotation.x = clampf(_camera_pivot.rotation.x, -tilt_limit, tilt_limit)

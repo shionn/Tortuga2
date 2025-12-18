@@ -15,7 +15,10 @@ Pour le déchiffrer vous trouverez un sage.
 Pour prouvez que vous avez fini cette quête reporter le code \"Par ma barbe rousse et drue\" dans le canal discord des quêtes."""
 
 func on_interact() -> void:
-	open_question("Entrez le code", on_answer)
+	if _bag.contain(_item_tresor) :
+		open_alert("Coffre vide", "Le coffre est vide")
+	else :
+		open_question("Entrez le code", on_answer)
 
 func on_answer(answer: String) -> void:
 	if answer == "14738":
