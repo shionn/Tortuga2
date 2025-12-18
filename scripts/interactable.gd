@@ -14,7 +14,7 @@ func on_interact() -> void:
 	print("on_interact is not overwrite")
 
 func on_item_drop(item : Item) -> void: 
-	print("on drop is not overwrite")
+	open_alert("Oups", "Non ca ne marche pas")
 
 func _on_mouse_entered() -> void:
 	if bag and bag.drag != null:

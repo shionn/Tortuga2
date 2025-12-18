@@ -21,12 +21,18 @@ class_name Gui
 @onready var _input_yn_text := $InputYesNo/Panel/MarginContainer/VBoxContainer/RichTextLabel as RichTextLabel
 @onready var _input_yn_title := $InputYesNo/Panel/MarginContainer/VBoxContainer/Title as Label
 
+@onready var _console := $Console/RichTextLabel as RichTextLabel
+
 @onready var _player_camera := $"../Player/CameraPivot" as Node3D
 @onready var _compass_arrow := $Compass/Arrow as TextureRect
 
 var callback : Callable
 var callback_no : Callable
 var callback_yes : Callable
+
+func append_to_console(text: String) -> void:
+	_console.append_text(text)
+	_console.newline()
 
 func open_dialog(title: String, text: String, size: Vector2 = Vector2(400,400)) -> void: 
 	_dialog.set_size(size)

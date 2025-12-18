@@ -11,4 +11,5 @@ func _on_no() -> void:
 
 func _on_yes() -> void:
 	bag.load()
+	gui.append_to_console("Partie chargée")
 	pass

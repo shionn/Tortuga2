@@ -4,6 +4,7 @@ class_name Bag
 @onready var _grid = $Panel/MarginContainer/VBoxContainer/GridContainer as GridContainer
 @onready var _items = $"../Items" as Control
 @onready var _console = $"../Console/RichTextLabel" as RichTextLabel
+@onready var _gui = $".." as Gui
 
 var drag : Item
 
@@ -16,8 +17,7 @@ func loot(item : Item) -> void :
 	if _items.is_ancestor_of(item) :
 		_items.remove_child(item)
 		_grid.add_child(item)
-		_console.append_text("Vous obtenez <"+item.tooltip_text+">")
-		_console.newline()
+		_gui.append_to_console("Vous obtenez <"+item.tooltip_text+">")
 	else :
 		print("bordel")
 		print(item)

@@ -32,3 +32,6 @@ func _process(delta: float) -> void:
 	_name_3d.rotation.x=0
 	_name_3d.rotation.z=0
 	_role_3d.rotation = _name_3d.rotation
+
+func on_item_drop(item : Item) -> void:
+	open_alert(pnj_name, "Je n'ai que faire de ça.")

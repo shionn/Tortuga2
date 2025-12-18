@@ -11,4 +11,5 @@ func _on_no() -> void:
 
 func _on_yes() -> void:
 	bag.save()
+	gui.append_to_console("Partie sauvegardée")
 	pass
