@@ -1,5 +1,10 @@
 
 
+# TODO
+- ecran d'acceuil
+- ecran d'aide
+- faire un script de generation des binaire
+
 
 
 # Ressources

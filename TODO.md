@@ -1,4 +1,0 @@
-- nager ? - TP hors de l'eau si trop profond ? 
-- pnj 
-- armurerie.
-- faire un script de generation des binaire
