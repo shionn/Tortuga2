@@ -10,17 +10,35 @@ var drag : Item
 
 
 
-func _on_visibility_changed() -> void:
-	pass
+#func loot(item : Item) -> void :
+#	if _items.is_ancestor_of(item) :
+#		_items.remove_child(item)
+#		_grid.add_child(item)
+#		_gui.append_to_console("Vous obtenez <"+item.tooltip_text+">")
+#	else :
+#		print("bordel")
+#		print(item)
 
-func loot(item : Item) -> void :
-	if _items.is_ancestor_of(item) :
+func loot(item_name : String) -> void :
+	var item = _items.get_node(item_name)
+	if item and _items.is_ancestor_of(item) :
 		_items.remove_child(item)
 		_grid.add_child(item)
 		_gui.append_to_console("Vous obtenez <"+item.tooltip_text+">")
 	else :
 		print("bordel")
-		print(item)
+		print(item_name)
+
+func unloot(item_name : String) -> void :
+	var item = _grid.get_node(item_name)
+	if item :
+		_grid.remove_child(item)
+		_items.add_child(item)
+
+func contain(item_name : String) -> bool:
+	return _grid.get_node(item_name) != null
+	
+
 
 func _on_close_button_pressed() -> void:
 	hide()
