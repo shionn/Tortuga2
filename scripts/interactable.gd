@@ -38,7 +38,7 @@ func open_text(title: String, text: String, size = Vector2(400,400)) -> void:
 	gui.open_dialog(title, text, size)
 
 func open_alert(title: String, text: String) -> void: 
-	gui.open_dialog(title, text, Vector2(250,150))
+	gui.open_dialog(title, text, Vector2(300,200))
 
 func open_dialog_and_img(title: String, text: String, img: Resource) -> void:
 	gui.open_dialog_and_img(title, text, img)

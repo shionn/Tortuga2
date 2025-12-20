@@ -4,4 +4,4 @@ extends "res://scripts/interactable.gd"
 
 func on_interact() -> void:
 	Player.model = "res://assets/character/" + character
-	get_tree().change_scene_to_file("res://world.tscn")
+	get_tree().change_scene_to_file("res://scenes/world.tscn")
