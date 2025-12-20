@@ -2,18 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo33knfan1yx7"
-path.s3tc="res://.godot/imported/colormap.png-bcb3b8ef87cb7c0229b5743b6e276f9c.s3tc.ctex"
-path.etc2="res://.godot/imported/colormap.png-bcb3b8ef87cb7c0229b5743b6e276f9c.etc2.ctex"
+uid="uid://dgi7x4t1mxv1c"
+path.s3tc="res://.godot/imported/SignPlate1_SignPlate1.png-7f77c2a6be77affbdda27501cb8ce149.s3tc.ctex"
+path.etc2="res://.godot/imported/SignPlate1_SignPlate1.png-7f77c2a6be77affbdda27501cb8ce149.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "a6d70174a83ddc3d3d7370e77750a28b"
+}
 
 [deps]
 
-source_file="res://blender/textures/colormap.png"
-dest_files=["res://.godot/imported/colormap.png-bcb3b8ef87cb7c0229b5743b6e276f9c.s3tc.ctex", "res://.godot/imported/colormap.png-bcb3b8ef87cb7c0229b5743b6e276f9c.etc2.ctex"]
+source_file="res://assets/props/SignPlate1_SignPlate1.png"
+dest_files=["res://.godot/imported/SignPlate1_SignPlate1.png-7f77c2a6be77affbdda27501cb8ce149.s3tc.ctex", "res://.godot/imported/SignPlate1_SignPlate1.png-7f77c2a6be77affbdda27501cb8ce149.etc2.ctex"]
 
 [params]
 

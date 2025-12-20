@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cu2gbhyvavoha" path="res://scripts/game_init.gd" id="1_varcb"]
 [ext_resource type="PackedScene" uid="uid://cobvp8rhk1h0s" path="res://assets/character/base/character-male-d.glb" id="1_xssot"]
 [ext_resource type="PackedScene" uid="uid://d4hl0amhnq7od" path="res://assets/character/base/character-female-b.glb" id="2_v73gb"]
-[ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://water/WaterPlane.tscn" id="3_3bk5d"]
+[ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://scenes/water/WaterPlane.tscn" id="3_3bk5d"]
 [ext_resource type="PackedScene" uid="uid://dj7aq7h57gvln" path="res://assets/character/base/character-female-c.glb" id="3_r51yi"]
 [ext_resource type="PackedScene" uid="uid://je5poeq5gbnv" path="res://assets/character/base/character-female-d.glb" id="4_n1bwd"]
 [ext_resource type="Script" uid="uid://b2fytbhcgn6ew" path="res://scripts/character-select.gd" id="5_hqma5"]

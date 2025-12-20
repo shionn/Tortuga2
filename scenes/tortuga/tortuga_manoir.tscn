@@ -1,6 +1,7 @@
-[gd_scene load_steps=34 format=3 uid="uid://bun08nin6q33j"]
+[gd_scene load_steps=35 format=3 uid="uid://bun08nin6q33j"]
 
 [ext_resource type="PackedScene" uid="uid://dsqb6308w0ec1" path="res://assets/town/road/road.glb" id="1_55bef"]
+[ext_resource type="PackedScene" uid="uid://ctoomevb22cit" path="res://scenes/props/sign.tscn" id="1_h8d57"]
 [ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="2_3oy5l"]
 [ext_resource type="PackedScene" uid="uid://snopmjtfskcu" path="res://assets/town/walls/wall-doorway-round.glb" id="2_e4gn3"]
 [ext_resource type="PackedScene" uid="uid://bn2k1c6mt0j5l" path="res://assets/town/walls/wall-window-shutters.glb" id="3_a1a07"]
@@ -37,6 +38,10 @@
 size = Vector3(1.4150696, 0.13238525, 1)
 
 [node name="TortugaManoir" type="Node3D"]
+
+[node name="Sign" parent="." instance=ExtResource("1_h8d57")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 3.3)
+text = "Manoir de Whisp"
 
 [node name="road2" parent="." instance=ExtResource("1_55bef")]
 transform = Transform3D(-10, -1.2079664e-06, 0, 1.509958e-06, -8, 0, 0, 0, 8, -0.1, 0, 0)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://by03qbtrcleb0"
-path="res://.godot/imported/image.png-7fee56e48dea15896224b7046f83d6b1.ctex"
+uid="uid://pvmbclri70b1"
+path="res://.godot/imported/whisp.png-f1e7096d00e7fcb00bf51cc52558bad2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://blender/image.png"
-dest_files=["res://.godot/imported/image.png-7fee56e48dea15896224b7046f83d6b1.ctex"]
+source_file="res://assets/imgs/whisp.png"
+dest_files=["res://.godot/imported/whisp.png-f1e7096d00e7fcb00bf51cc52558bad2.ctex"]
 
 [params]
 

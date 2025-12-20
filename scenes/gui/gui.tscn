@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=19 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://scripts/gui/gui.gd" id="1_0fbet"]
 [ext_resource type="Texture2D" uid="uid://dyq75clqrse1h" path="res://assets/gui/ui-adventure/minimap_ring_brown_detail.png" id="2_ioifv"]
@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://bdwj56k1xgcnx" path="res://assets/imgs/treasures-h-48.png" id="12_22my7"]
 [ext_resource type="Texture2D" uid="uid://pgvj03mb7u4r" path="res://assets/gui/fanatisy-magic-set/parchment-h-48.png" id="13_qv6l0"]
 [ext_resource type="Script" uid="uid://cxj5rc85fvvek" path="res://scripts/gui/help.gd" id="15_j4srl"]
+[ext_resource type="Script" uid="uid://b6vmysw3vlje5" path="res://scripts/gui/acceuil.gd" id="16_3deuf"]
+[ext_resource type="Texture2D" uid="uid://pvmbclri70b1" path="res://assets/imgs/whisp.png" id="17_r82fa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yw5qc"]
 bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
@@ -585,6 +587,66 @@ text = "
 layout_mode = 2
 text = "Fermer"
 
+[node name="Acceuil" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+script = ExtResource("16_3deuf")
+
+[node name="Panel" type="Panel" parent="Acceuil"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Acceuil/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Acceuil/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Title" type="Label" parent="Acceuil/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_yw5qc")
+text = "Aide : Commande et Indice"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Acceuil/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Acceuil/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+
+
+"
+
+[node name="TextureRect" type="TextureRect" parent="Acceuil/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("17_r82fa")
+expand_mode = 3
+
+[node name="Button" type="Button" parent="Acceuil/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Fermer"
+
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_button_pressed"]
 [connection signal="pressed" from="DialogAndImg/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_and_img_button_pressed"]
 [connection signal="pressed" from="Input/Panel/MarginContainer/VBoxContainer/ValidateButton" to="." method="_on_validate_input_button_pressed"]
@@ -594,3 +656,4 @@ text = "Fermer"
 [connection signal="pressed" from="Menu/MarginContainer/HBoxContainer/HelpButton" to="Help" method="_on_help_button_pressed"]
 [connection signal="pressed" from="Bag/Panel/MarginContainer/VBoxContainer/CloseButton" to="Bag" method="_on_close_button_pressed"]
 [connection signal="pressed" from="Help/Panel/MarginContainer/VBoxContainer/Button" to="Help" method="_on_help_button_pressed"]
+[connection signal="pressed" from="Acceuil/Panel/MarginContainer/VBoxContainer/Button" to="Acceuil" method="_on_button_pressed"]

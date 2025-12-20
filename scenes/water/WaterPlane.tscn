@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://cmvqtrxe3klxe"]
 
-[ext_resource type="Shader" uid="uid://bok3vbwsjgxtc" path="res://water/shaders/water.gdshader" id="1_fay6q"]
-[ext_resource type="Script" uid="uid://cjimb7p4itwss" path="res://water/WaterPlane.gd" id="2_r1r5a"]
+[ext_resource type="Shader" uid="uid://bok3vbwsjgxtc" path="res://scenes/water/shaders/water.gdshader" id="1_fay6q"]
+[ext_resource type="Script" uid="uid://cjimb7p4itwss" path="res://scenes/water/WaterPlane.gd" id="2_r1r5a"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_senhm"]
 noise_type = 3

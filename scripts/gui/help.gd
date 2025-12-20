@@ -10,6 +10,8 @@ func _on_help_button_pressed() -> void:
 		_text.append_text(_TEXT)
 		if _bag.empty() :
 			_text.append_text(_BAG_EMPTY_HELP)
+		else :
+			_text.append_text(_BAG_NOT_EMPTY_HELP)
 		show()
 
 const _TEXT = """Bienvenue dans [color=green]Tortuga 2[/color].
