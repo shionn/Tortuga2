@@ -535,6 +535,7 @@ theme_override_constants/margin_bottom = 5
 [node name="RichTextLabel" type="RichTextLabel" parent="Console"]
 layout_mode = 2
 scroll_following = true
+scroll_following_visible_characters = true
 
 [node name="Help" type="MarginContainer" parent="."]
 visible = false

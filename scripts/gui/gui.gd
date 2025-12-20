@@ -1,7 +1,7 @@
 extends Control
 class_name Gui
 
-@onready var _player := $"../Player" as CharacterBody3D
+@onready var _player := $"../Player" as Player
 @onready var _debug_info := $DebugInfo as Label
 
 @onready var _dialog := $Dialog as Panel
@@ -67,7 +67,7 @@ func open_yes_no_question(title: String, question: String, on_no: Callable, on_y
 	_input_yn.show()
 
 func _process(delta: float) -> void:
-	_debug_info.text = str(_player.global_position)
+	_debug_info.text = str(_player.global_position) + " " + str(rad_to_deg(_player._pivot.rotation.y))
 	_debug_info.text += "\nfps: " + str(Engine.get_frames_per_second())
 	_compass_arrow.rotation = -_player_camera.rotation.y
 

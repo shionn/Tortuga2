@@ -4,6 +4,9 @@ class_name Interactable
 @onready var gui := $"/root/World/Gui" as Gui
 @onready var bag := $"/root/World/Gui/Bag" as Bag
 @onready var _area := $Area3D as Area3D
+@onready var player = $"/root/World/Player" as Player
+
+@export var interactable_distance = 2 as float
 
 func _ready() -> void:
 	_area.connect("mouse_entered", _on_mouse_entered)
@@ -30,8 +33,13 @@ func _on_mouse_exited() -> void:
 
 func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	if event is InputEventMouseButton and Input.is_action_just_pressed("interact"): 
-		Input.set_default_cursor_shape(Input.CURSOR_ARROW)
-		on_interact()
+		if player :
+			if player.global_position.distance_to(self.global_position) < interactable_distance :
+				on_interact()
+			else :
+				gui.append_to_console("Trop loin")
+		else :
+			on_interact()
 
 # a supprimer
 func open_text(title: String, text: String, size = Vector2(400,400)) -> void: 

@@ -6,6 +6,8 @@ static var model = "";
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
+enum STATUT { MOVING, SIT }
+
 @onready var _camera := $CameraPivot/SpringArm3D/Camera3D as Camera3D
 @onready var _camera_pivot := $CameraPivot as Node3D
 @onready var _pivot := $Pivot as Node3D
@@ -14,13 +16,19 @@ const JUMP_VELOCITY = 4.5
 var _animation : AnimationPlayer
 var _last_floor_position : Vector3
 
+var state = STATUT.MOVING
+
+func sit(look_at = 0) -> void: 
+	state = STATUT.SIT
+	_animation.play("sit")
+	_pivot.rotation.y = look_at
+
 func _ready() -> void:
 	var packed = load(model) as PackedScene
 	var node = packed.instantiate()
 	_pivot.remove_child(_character)
 	_pivot.add_child(node)
 	_animation = node.get_child(1)
-	pass
 
 func _physics_process(delta: float) -> void:
 
@@ -51,6 +59,7 @@ func _handle_move() -> void:
 	direction = direction.normalized();
 	
 	if direction:
+		state = STATUT.MOVING
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 		_pivot.rotation.y = atan2(direction.x,direction.z)
@@ -59,11 +68,12 @@ func _handle_move() -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-		if is_on_floor(): 
+		if is_on_floor() && state == STATUT.MOVING : 
 			_animation.play("idle")
 
 func _handle_jump() -> void :
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		state = STATUT.MOVING
 		velocity.y = JUMP_VELOCITY
 		_animation.play("jump")
 	if not is_on_floor() and velocity.y < -0.05:

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://brv33ya43adf8"]
+
+[ext_resource type="PackedScene" uid="uid://hmn0yn1hggw5" path="res://assets/town/props/stall-stool.glb" id="1_rw0pl"]
+[ext_resource type="Script" uid="uid://13ah461yh33r" path="res://scripts/props/stool.gd" id="1_u7xta"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u7xta"]
+size = Vector3(0.26168212, 0.04753418, 0.26199952)
+
+[node name="Stool" type="Node3D"]
+script = ExtResource("1_u7xta")
+
+[node name="stall-stool2" parent="." instance=ExtResource("1_rw0pl")]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0018127412, 0.20264895, 0.0001770109)
+shape = SubResource("BoxShape3D_u7xta")
