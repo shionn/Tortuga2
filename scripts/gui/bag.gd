@@ -8,17 +8,6 @@ class_name Bag
 
 var drag : Item
 
-
-
-#func loot(item : Item) -> void :
-#	if _items.is_ancestor_of(item) :
-#		_items.remove_child(item)
-#		_grid.add_child(item)
-#		_gui.append_to_console("Vous obtenez <"+item.tooltip_text+">")
-#	else :
-#		print("bordel")
-#		print(item)
-
 func loot(item_name : String) -> void :
 	var item = _items.get_node(item_name)
 	if item and _items.is_ancestor_of(item) :
@@ -38,7 +27,8 @@ func unloot(item_name : String) -> void :
 func contain(item_name : String) -> bool:
 	return _grid.get_node(item_name) != null
 	
-
+func empty() :
+	return _grid.get_child_count() == 0
 
 func _on_close_button_pressed() -> void:
 	hide()
