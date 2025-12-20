@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=17 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://scripts/gui/gui.gd" id="1_0fbet"]
 [ext_resource type="Texture2D" uid="uid://dyq75clqrse1h" path="res://assets/gui/ui-adventure/minimap_ring_brown_detail.png" id="2_ioifv"]
@@ -10,9 +10,11 @@
 [ext_resource type="Script" uid="uid://djo8cqueirt8b" path="res://scripts/menu.gd" id="8_4q42c"]
 [ext_resource type="Texture2D" uid="uid://g5kgt7lnwfw0" path="res://assets/gui/fanatisy-magic-set/bag-h-48.png" id="8_kvi6p"]
 [ext_resource type="Script" uid="uid://dbsmc7uqhq2bx" path="res://scripts/gui/bag.gd" id="9_xqkfk"]
+[ext_resource type="Texture2D" uid="uid://iaqinuj6nrko" path="res://assets/gui/cursor-pack/mark_question-48.png" id="10_dfalf"]
 [ext_resource type="Script" uid="uid://ci8ygrslxb0ka" path="res://scripts/gui/item.gd" id="11_s1h2m"]
 [ext_resource type="Texture2D" uid="uid://bdwj56k1xgcnx" path="res://assets/imgs/treasures-h-48.png" id="12_22my7"]
 [ext_resource type="Texture2D" uid="uid://pgvj03mb7u4r" path="res://assets/gui/fanatisy-magic-set/parchment-h-48.png" id="13_qv6l0"]
+[ext_resource type="Script" uid="uid://cxj5rc85fvvek" path="res://scripts/gui/help.gd" id="15_j4srl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yw5qc"]
 bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
@@ -408,12 +410,18 @@ theme_override_constants/margin_bottom = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Menu/MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 5
 
 [node name="BagButton" type="TextureButton" parent="Menu/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Inventaire"
 texture_normal = ExtResource("8_kvi6p")
+
+[node name="HelpButton" type="TextureButton" parent="Menu/MarginContainer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Aide"
+texture_normal = ExtResource("10_dfalf")
 
 [node name="Bag" type="Control" parent="."]
 visible = false
@@ -526,10 +534,63 @@ theme_override_constants/margin_bottom = 5
 layout_mode = 2
 scroll_following = true
 
+[node name="Help" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+script = ExtResource("15_j4srl")
+
+[node name="Panel" type="Panel" parent="Help"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Help/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Help/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Title" type="Label" parent="Help/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_yw5qc")
+text = "Aide : Commande et Indice"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Help/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "
+
+
+"
+
+[node name="Button" type="Button" parent="Help/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Fermer"
+
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_button_pressed"]
 [connection signal="pressed" from="DialogAndImg/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_and_img_button_pressed"]
 [connection signal="pressed" from="Input/Panel/MarginContainer/VBoxContainer/ValidateButton" to="." method="_on_validate_input_button_pressed"]
 [connection signal="pressed" from="InputYesNo/Panel/MarginContainer/VBoxContainer/HBoxContainer/NoButton" to="." method="_on_no_button_pressed"]
 [connection signal="pressed" from="InputYesNo/Panel/MarginContainer/VBoxContainer/HBoxContainer/YesButton" to="." method="_on_yes_button_pressed"]
 [connection signal="pressed" from="Menu/MarginContainer/HBoxContainer/BagButton" to="Menu" method="_on_bag_button_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/HBoxContainer/HelpButton" to="Help" method="_on_help_button_pressed"]
 [connection signal="pressed" from="Bag/Panel/MarginContainer/VBoxContainer/CloseButton" to="Bag" method="_on_close_button_pressed"]
+[connection signal="pressed" from="Help/Panel/MarginContainer/VBoxContainer/Button" to="Help" method="_on_help_button_pressed"]

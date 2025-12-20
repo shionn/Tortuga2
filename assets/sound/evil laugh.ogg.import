@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bseh7kgl7fh7j"
+path="res://.godot/imported/evil laugh.ogg-bf3f69ebeca2d7cccc614c88f2ffd8db.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sound/evil laugh.ogg"
+dest_files=["res://.godot/imported/evil laugh.ogg-bf3f69ebeca2d7cccc614c88f2ffd8db.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

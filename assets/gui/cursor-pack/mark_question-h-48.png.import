@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d20cj2aeo0ubc"
-path="res://.godot/imported/bag-h-32.png-6787d6e5929186f8c8169c71ffee00ba.ctex"
+uid="uid://cy4p4srbi7uft"
+path="res://.godot/imported/mark_question-h-48.png-50dc73472ad113e2c7942b19bd43f9c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gui/fanatisy-magic-set/bag-h-32.png"
-dest_files=["res://.godot/imported/bag-h-32.png-6787d6e5929186f8c8169c71ffee00ba.ctex"]
+source_file="res://assets/gui/cursor-pack/mark_question-h-48.png"
+dest_files=["res://.godot/imported/mark_question-h-48.png-50dc73472ad113e2c7942b19bd43f9c9.ctex"]
 
 [params]
 
