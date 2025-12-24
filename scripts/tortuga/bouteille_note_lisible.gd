@@ -4,11 +4,13 @@ func on_interact() -> void:
 	open_text("Bouteille", """Cette bouteille contient une note. 
 
 Bravo tu es valeureux et malin,
-Mais cela ne suffira pas pour arpenter le chemin,
-Robuste tu dois être,
-Pour atteindre le Haut Mat qui trône au dessus de l'ile,
-Lui qui surveille si des êtres villes,
-Du butin voudraient s'emparer,
-Mais garde le chemin à ses pieds.
+Mais cela ne suffira pas,
+Car pour arpenter le chemin,
+Robustes et forts seront tes pas !
+
+Pour atteindre le Mat  à la cime de l'île,
+Celui qui protège le trésor contre les êtres Vils,
+Qui du butin voulaient s'emparer,
+Barbe Drue sur le chemin d'un pas sûr devait rester.
 
 3""")
