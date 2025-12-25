@@ -37,6 +37,8 @@ Interagir avec le clic gauche
 Orienter la caméra avec le clic droit
 [/ul]
 
+[color=yellow]Pour sauvegarder ou reprendre votre aventure, aller voir Dupont et Dupond dans le dortoire.[/color]
+
 """
 const _BAG_EMPTY_HELP = """Aide de jeu : [color=yellow]Va donc voir whisp, il t'indiquera sûrement ou commencer ta quête.[/color]"""
 
