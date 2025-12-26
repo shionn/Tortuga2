@@ -17,6 +17,7 @@ func on_interact() -> void:
 	print("on_interact is not overwrite")
 
 func on_item_drop(item : Item) -> void: 
+	player.play_anim_no()
 	open_alert("Oups", "Non ca ne marche pas")
 
 func _on_mouse_entered() -> void:
