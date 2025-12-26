@@ -83,8 +83,10 @@ func _on_validate_input_button_pressed() -> void:
 
 func _on_no_button_pressed() -> void:
 	_input_yn.hide()
+	_player.play_anim_no()
 	self.callback_no.call()
 
 func _on_yes_button_pressed() -> void:
 	_input_yn.hide()
+	_player.play_anim_yes()
 	self.callback_yes.call()

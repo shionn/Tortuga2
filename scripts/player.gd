@@ -6,7 +6,7 @@ static var model = "";
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
-enum STATUT { MOVING, SIT }
+enum STATUT { MOVING, IDLE, SIT }
 
 @onready var _camera := $CameraPivot/SpringArm3D/Camera3D as Camera3D
 @onready var _camera_pivot := $CameraPivot as Node3D
@@ -23,12 +23,29 @@ func sit(look_at = 0) -> void:
 	_animation.play("sit")
 	_pivot.rotation.y = look_at
 
+func play_anim_interact() -> void:
+	_animation.play("interact-right")
+	if (state == STATUT.IDLE):
+		_animation.queue("idle")
+
+func play_anim_yes() -> void:
+	_animation.play("emote-yes")
+	if (state == STATUT.IDLE):
+		_animation.queue("idle")
+
+func play_anim_no() -> void:
+	_animation.play("emote-no")
+	if (state == STATUT.IDLE):
+		_animation.queue("idle")
+
+
 func _ready() -> void:
 	var packed = load(model) as PackedScene
 	var node = packed.instantiate()
 	_pivot.remove_child(_character)
 	_pivot.add_child(node)
 	_animation = node.get_child(1)
+	_animation.get_animation("idle").loop_mode = Animation.LOOP_LINEAR
 
 func _physics_process(delta: float) -> void:
 
@@ -69,6 +86,8 @@ func _handle_move() -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		if is_on_floor() && state == STATUT.MOVING : 
+			print("start idle")
+			state = STATUT.IDLE
 			_animation.play("idle")
 
 func _handle_jump() -> void :
