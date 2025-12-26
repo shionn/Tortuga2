@@ -1,8 +1,7 @@
 
 
 # TODO
-- ecran d'acceuil
-- ecran d'aide
+- message ephemere dans la console
 - faire un script de generation des binaire
 
 

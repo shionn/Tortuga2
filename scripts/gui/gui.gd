@@ -21,7 +21,7 @@ class_name Gui
 @onready var _input_yn_text := $InputYesNo/Panel/MarginContainer/VBoxContainer/RichTextLabel as RichTextLabel
 @onready var _input_yn_title := $InputYesNo/Panel/MarginContainer/VBoxContainer/Title as Label
 
-@onready var _console := $Console/RichTextLabel as RichTextLabel
+@onready var _console := $Console/Panel/RichTextLabel as RichTextLabel
 
 @onready var _player_camera := $"../Player/CameraPivot" as Node3D
 @onready var _compass_arrow := $Compass/Arrow as TextureRect
@@ -59,7 +59,7 @@ func open_question(title: String, callback: Callable) -> void:
 	self.callback = callback
 
 func open_yes_no_question(title: String, question: String, on_no: Callable, on_yes: Callable) -> void:
-	_input_title.text = title
+	_input_yn_title.text = title
 	_input_yn_text.clear()
 	_input_yn_text.add_text(question)
 	self.callback_no = on_no

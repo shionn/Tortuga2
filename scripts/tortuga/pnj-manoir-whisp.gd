@@ -29,4 +29,4 @@ Il te faut déposer cette part de tes gains au coffre."""
 
 const TEXT_PARCHEMIN_BARBE_DRUE = """Quel étrange parchemin, je n'y comprend rien. 
 
-Il doit bien y avoir un herudie au village pour te le traduire."""
+Il doit bien y avoir une érudite au village pour te le traduire."""
