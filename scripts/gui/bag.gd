@@ -8,6 +8,11 @@ class_name Bag
 
 var drag : Item
 
+func _process(delta: float) -> void:
+	if drag != null :
+		drag.global_position = get_viewport().get_mouse_position() + Vector2(5,5)
+	
+
 func loot(item_name : String) -> void :
 	var item = _items.get_node(item_name)
 	if item and _items.is_ancestor_of(item) :

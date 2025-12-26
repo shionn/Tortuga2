@@ -23,11 +23,16 @@ func on_exit(interactable : Interactable) -> void :
 		self._interactable = null
 		set_default_cursor_shape(Control.CURSOR_DRAG)
 
+var _initial_position:Vector2
+
 func _on_button_down() -> void: 
+	_initial_position = global_position
 	_bag.drag = self
 	set_default_cursor_shape(Control.CURSOR_DRAG)
 
 func _on_button_up() -> void: 
+	if _initial_position != null :
+		global_position = _initial_position
 	if _interactable != null :
 		_interactable.on_item_drop(self)
 	_bag.drag = null
