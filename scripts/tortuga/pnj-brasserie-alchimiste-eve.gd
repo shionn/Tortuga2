@@ -2,7 +2,7 @@ extends "res://scripts/pnj.gd"
 
 const _TEXT_PRESENTATION = """Bonjour, 
 
-Je suis Eve l'achimiste de l'île, je sais faire de puissante potion. 
+Je suis Eve l'alchimiste de l'île, je sais faire de puissante potion. 
 Mais je suis surtout connu pour ma bière et mon rhum."""
 
 const _TEXT_PARCHEMIN_BARBE_DRUE = """Hum ce parchemin n’est pas dans langue étrangère, mais il est codé, je peux te le décoder mais je ne peux pas encore le faire. 

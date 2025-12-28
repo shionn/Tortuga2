@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=60 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/bouteille_note_lisible.gd" id="1_c7jrm"]
 [ext_resource type="PackedScene" uid="uid://dvplfstqecj42" path="res://assets/mine/tortuga-60.glb" id="1_hh6n0"]
@@ -47,6 +47,10 @@
 [ext_resource type="PackedScene" uid="uid://bqwr1sdl4wvhs" path="res://scenes/tortuga/tortuga_armurerie.tscn" id="30_5obc8"]
 [ext_resource type="PackedScene" uid="uid://bl8gqk34ub2cy" path="res://assets/pirate/props/crate-bottles.glb" id="31_acrrl"]
 [ext_resource type="PackedScene" uid="uid://f25oaswt3cuq" path="res://assets/pirate/props/barrel.glb" id="32_tny17"]
+[ext_resource type="PackedScene" uid="uid://dr8atgydxkkga" path="res://scenes/tortuga/tortuga_champ_culture.tscn" id="43_3anhr"]
+[ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="44_gnvru"]
+[ext_resource type="Script" uid="uid://jpax05wqdl26" path="res://scripts/tortuga/pnj-fermier-nino.gd" id="45_3lmt7"]
+[ext_resource type="PackedScene" uid="uid://cjxowsxfha55l" path="res://assets/character/graveyard/character-keeper.glb" id="46_mi0el"]
 [ext_resource type="PackedScene" uid="uid://bun08nin6q33j" path="res://scenes/tortuga/tortuga_manoir.tscn" id="48_n6usc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2w2tg"]
@@ -1909,6 +1913,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.971865, 1.2, -58.056885)
 [node name="ColineAuberge" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.906, 0.9, -43)
 
+[node name="TortugaAuberge" parent="ColineAuberge" instance=ExtResource("24_ew2kh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2570171, 0.5500001, 0.67819595)
+
+[node name="Reserve" parent="ColineAuberge" instance=ExtResource("25_2pcv4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.1746, 0.12559128, -5.6029015)
+metadata/_edit_group_ = true
+
+[node name="Culture" parent="ColineAuberge" instance=ExtResource("43_3anhr")]
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, 17.999998, 0.5, -17)
+
+[node name="pnj" parent="ColineAuberge/Culture" instance=ExtResource("44_gnvru")]
+transform = Transform3D(0.9396926, 0, 0.34202015, 0, 1, 0, -0.34202015, 0, 0.9396926, 1.028, -0.02, 2.346)
+script = ExtResource("45_3lmt7")
+model = ExtResource("46_mi0el")
+pnj_name = "Nino"
+pnj_role = "Fermier"
+
 [node name="patch-grass2" parent="ColineAuberge" instance=ExtResource("3_jit35")]
 transform = Transform3D(1.6082383, 0, -3.6624541, 0, 4, 0, 3.6624541, 0, 1.6082383, 17.593147, -0.46709442, 20.525314)
 
@@ -1944,9 +1965,6 @@ transform = Transform3D(-2.0661943, 0, -3.4250321, 0, 4, 0, 3.4250321, 0, -2.066
 
 [node name="patch-grass12" parent="ColineAuberge" instance=ExtResource("3_jit35")]
 transform = Transform3D(2.8838496, 0, -2.7718976, 0, 4, 0, 2.7718976, 0, 2.8838496, 35.536743, -0.46709442, -24.096306)
-
-[node name="TortugaAuberge" parent="ColineAuberge" instance=ExtResource("24_ew2kh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2570171, 0.5500001, 0.67819595)
 
 [node name="grass2" parent="ColineAuberge" instance=ExtResource("2_wohch")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.713915, 0.5329094, -2.2308311)
@@ -2252,16 +2270,16 @@ transform = Transform3D(-0.64471054, 0, -0.7644271, 0, 1, 0, 0.7644271, 0, -0.64
 transform = Transform3D(-0.64471054, 0, -0.7644271, 0, 1, 0, 0.7644271, 0, -0.64471054, 29.384283, 0.5329037, -28.953796)
 
 [node name="grass80" parent="ColineAuberge" instance=ExtResource("2_wohch")]
-transform = Transform3D(-0.64471054, 0, -0.7644271, 0, 1, 0, 0.7644271, 0, -0.64471054, 20.382582, 0.5329056, -15.857712)
+transform = Transform3D(-0.64471054, 0, -0.7644271, 0, 1, 0, 0.7644271, 0, -0.64471054, 23.68258, 0.5329056, -11.757713)
 
 [node name="grass81" parent="ColineAuberge" instance=ExtResource("2_wohch")]
 transform = Transform3D(-0.64471054, 0, -0.7644271, 0, 1, 0, 0.7644271, 0, -0.64471054, 23.989225, 0.5329056, -15.129822)
 
 [node name="grass82" parent="ColineAuberge" instance=ExtResource("2_wohch")]
-transform = Transform3D(-0.64471054, 0, -0.7644271, 0, 1, 0, 0.7644271, 0, -0.64471054, 19.894388, 0.5329056, -19.252838)
+transform = Transform3D(-0.64471054, 0, -0.7644271, 0, 1, 0, 0.7644271, 0, -0.64471054, 18.894388, 0.5329056, -23.252838)
 
 [node name="grass-plant28" parent="ColineAuberge" instance=ExtResource("6_j21kd")]
-transform = Transform3D(-0.64471054, 0, -0.7644271, 0, 1, 0, 0.7644271, 0, -0.64471054, 21.167349, 0.5329037, -17.543045)
+transform = Transform3D(-0.64471054, 0, -0.7644271, 0, 1, 0, 0.7644271, 0, -0.64471054, 25.167349, 0.5329037, -18.543045)
 
 [node name="grass83" parent="ColineAuberge" instance=ExtResource("2_wohch")]
 transform = Transform3D(-0.64471054, 0, -0.7644271, 0, 1, 0, 0.7644271, 0, -0.64471054, 31.064905, 0.5329056, -14.800777)
@@ -2286,6 +2304,9 @@ transform = Transform3D(-0.64471054, 0, -0.7644271, 0, 1, 0, 0.7644271, 0, -0.64
 
 [node name="grass-plant30" parent="ColineAuberge" instance=ExtResource("6_j21kd")]
 transform = Transform3D(-0.64471054, 0, -0.7644271, 0, 1, 0, 0.7644271, 0, -0.64471054, 23.919504, 0.5329037, -24.365326)
+
+[node name="grass-plant40" parent="ColineAuberge" instance=ExtResource("6_j21kd")]
+transform = Transform3D(-0.64471054, 0, -0.7644271, 0, 1, 0, 0.7644271, 0, -0.64471054, 21.519503, 0.5329037, -30.365326)
 
 [node name="grass89" parent="ColineAuberge" instance=ExtResource("2_wohch")]
 transform = Transform3D(0.97237444, 0, -0.23342782, 0, 1, 0, 0.23342782, 0, 0.97237444, 37.394768, 0.5329056, -20.095924)
@@ -2312,7 +2333,7 @@ transform = Transform3D(0.97237444, 0, -0.23342782, 0, 1, 0, 0.23342782, 0, 0.97
 transform = Transform3D(0.97237444, 0, -0.23342782, 0, 1, 0, 0.23342782, 0, 0.97237444, 26.624983, 0.5329037, -13.103088)
 
 [node name="grass95" parent="ColineAuberge" instance=ExtResource("2_wohch")]
-transform = Transform3D(0.97237444, 0, -0.23342782, 0, 1, 0, 0.23342782, 0, 0.97237444, 17.006727, 0.5329056, -17.99527)
+transform = Transform3D(0.97237444, 0, -0.23342782, 0, 1, 0, 0.23342782, 0, 0.97237444, 22.806726, 0.5329056, -13.49527)
 
 [node name="grass96" parent="ColineAuberge" instance=ExtResource("2_wohch")]
 transform = Transform3D(0.97237444, 0, -0.23342782, 0, 1, 0, 0.23342782, 0, 0.97237444, 16.039877, 0.5329056, -21.545326)
@@ -2333,7 +2354,7 @@ transform = Transform3D(0.97237444, 0, -0.23342782, 0, 1, 0, 0.23342782, 0, 0.97
 transform = Transform3D(0.97237444, 0, -0.23342782, 0, 1, 0, 0.23342782, 0, 0.97237444, 19.531149, 0.5329056, -7.4554253)
 
 [node name="grass-plant34" parent="ColineAuberge" instance=ExtResource("6_j21kd")]
-transform = Transform3D(0.97237444, 0, -0.23342782, 0, 1, 0, 0.23342782, 0, 0.97237444, 20.488493, 0.5329037, -9.359974)
+transform = Transform3D(0.97237444, 0, -0.23342782, 0, 1, 0, 0.23342782, 0, 0.97237444, 21.188494, 0.5329037, -10.759975)
 
 [node name="grass101" parent="ColineAuberge" instance=ExtResource("2_wohch")]
 transform = Transform3D(0.97237444, 0, -0.23342782, 0, 1, 0, 0.23342782, 0, 0.97237444, 39.75183, 0.5329056, -10.765347)
@@ -2427,10 +2448,6 @@ transform = Transform3D(0.95293695, 0, 1.7583832, 0, 2, 0, -1.7583832, 0, 0.9529
 
 [node name="palm-detailed-bend8" parent="ColineAuberge" instance=ExtResource("5_iswrd")]
 transform = Transform3D(1.9949017, 0, -0.14271647, 0, 2, 0, 0.14271647, 0, 1.9949017, 6.6109333, 0.5329056, -14.000969)
-
-[node name="Reserve" parent="ColineAuberge" instance=ExtResource("25_2pcv4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.1746, 0.12559128, -5.6029015)
-metadata/_edit_group_ = true
 
 [node name="TortugaDortoir" parent="." instance=ExtResource("26_ntxr1")]
 transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -36, 1.8, -27)

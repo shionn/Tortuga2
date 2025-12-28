@@ -1,7 +1,7 @@
 extends CharacterBody3D
 class_name Player
 
-static var model = "";
+static var model = ""
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -41,7 +41,9 @@ func play_anim_no() -> void:
 
 func _ready() -> void:
 	var packed = load(model) as PackedScene
-	var node = packed.instantiate()
+	var node = packed.instantiate() 
+	if model.contains("keeper") || model.contains("vampire") : 
+		node.position.y=-0.02
 	_pivot.remove_child(_character)
 	_pivot.add_child(node)
 	_animation = node.get_child(1)
@@ -86,7 +88,6 @@ func _handle_move() -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		if is_on_floor() && state == STATUT.MOVING : 
-			print("start idle")
 			state = STATUT.IDLE
 			_animation.play("idle")
 
