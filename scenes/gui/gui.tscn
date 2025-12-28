@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=21 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://scripts/gui/gui.gd" id="1_0fbet"]
 [ext_resource type="Texture2D" uid="uid://dyq75clqrse1h" path="res://assets/gui/ui-adventure/minimap_ring_brown_detail.png" id="2_ioifv"]
@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://cxj5rc85fvvek" path="res://scripts/gui/help.gd" id="15_j4srl"]
 [ext_resource type="Script" uid="uid://b6vmysw3vlje5" path="res://scripts/gui/acceuil.gd" id="16_3deuf"]
 [ext_resource type="Texture2D" uid="uid://pvmbclri70b1" path="res://assets/imgs/whisp.png" id="17_r82fa"]
+[ext_resource type="Texture2D" uid="uid://bmblv1t7mtklt" path="res://assets/gui/fruit-icons-redo/red-apple-h-48.png" id="19_ukjlc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yw5qc"]
 bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
@@ -658,6 +659,15 @@ texture_normal = ExtResource("12_22my7")
 script = ExtResource("11_s1h2m")
 description = "C'est le trésor de Barbe Drue. 
 Mais la taxe sur les gains affairant à la piraterie est passée par la. "
+
+[node name="FruitDefendu" type="TextureButton" parent="Items"]
+layout_mode = 0
+offset_right = 55.0
+offset_bottom = 48.0
+tooltip_text = "Fruit défendu"
+texture_normal = ExtResource("19_ukjlc")
+script = ExtResource("11_s1h2m")
+description = "Ce fruit pousse sur un arbre inaccessible. Il nous est défendu. "
 
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_button_pressed"]
 [connection signal="pressed" from="DialogAndImg/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_and_img_button_pressed"]

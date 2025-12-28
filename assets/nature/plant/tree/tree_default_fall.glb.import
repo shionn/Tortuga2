@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bb747ld75ixfs"
-path="res://.godot/imported/tree_default_fall.glb-cbc08e9871ffa1b7024d7e67205368d5.scn"
+path="res://.godot/imported/tree_default_fall.glb-4fb2bb139850c2b5443d9f3a182678fc.scn"
 
 [deps]
 
-source_file="res://assets/nature/plant/tree/tree_default_fall.glb"
-dest_files=["res://.godot/imported/tree_default_fall.glb-cbc08e9871ffa1b7024d7e67205368d5.scn"]
+source_file="res:///assets/nature/plant/tree/tree_default_fall.glb"
+dest_files=["res://.godot/imported/tree_default_fall.glb-4fb2bb139850c2b5443d9f3a182678fc.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

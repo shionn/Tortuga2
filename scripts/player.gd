@@ -15,8 +15,8 @@ enum STATUT { MOVING, IDLE, SIT }
 
 var _animation : AnimationPlayer
 var _last_floor_position : Vector3
-
 var state = STATUT.MOVING
+# start : 39, 1.5, -25
 
 func sit(look_at = 0) -> void: 
 	state = STATUT.SIT

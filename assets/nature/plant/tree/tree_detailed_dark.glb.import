@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bbwotylt8kjx"
-path="res://.godot/imported/tree_detailed_dark.glb-d006908ef139386e99f0ec4514dfe616.scn"
+path="res://.godot/imported/tree_detailed_dark.glb-e496dc10eea9b651ce8559f9feb24f9f.scn"
 
 [deps]
 
-source_file="res://assets/nature/plant/tree/tree_detailed_dark.glb"
-dest_files=["res://.godot/imported/tree_detailed_dark.glb-d006908ef139386e99f0ec4514dfe616.scn"]
+source_file="res:///assets/nature/plant/tree/tree_detailed_dark.glb"
+dest_files=["res://.godot/imported/tree_detailed_dark.glb-e496dc10eea9b651ce8559f9feb24f9f.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
