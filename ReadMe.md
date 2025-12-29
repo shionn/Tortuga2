@@ -25,7 +25,12 @@
 - https://opengameart.org/content/rpg-item-collection-2
 - https://opengameart.org/content/sign-plate-1
 - https://opengameart.org/content/fruit-pack-01
-- https://opengameart.org/content/gems
+- https://opengameart.org/content/gems ?
+- https://opengameart.org/content/broken-stone-slab ?
+- https://opengameart.org/content/inventory-items ?
+- https://opengameart.org/content/rpg-item-collection-1 ?
+- https://opengameart.org/content/rpg-item-collection-3 ?
+- https://opengameart.org/content/lowpoly-crystals-pack ?
 
 ## non importer mais pourrai etre simpa : 
 - paper : https://opengameart.org/content/papers
