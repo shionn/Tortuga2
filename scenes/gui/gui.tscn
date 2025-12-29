@@ -88,12 +88,16 @@ text = "Ceci est un essai de text
 
 Sur plusieurs lignes en plus"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Dialog/MarginContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="CloseDialogButton" type="Button" parent="Dialog/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="OptionButton" type="Button" parent="Dialog/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Option"
+text = "Option"
+
+[node name="CloseButton" type="Button" parent="Dialog/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Fermer"
 text = "Fermer"
 
 [node name="DialogAndImg" type="Control" parent="."]
@@ -675,7 +679,8 @@ texture_normal = ExtResource("19_ukjlc")
 script = ExtResource("11_s1h2m")
 description = "Ce fruit pousse sur un arbre inaccessible. Il nous est défendu. "
 
-[connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/HBoxContainer/CloseDialogButton" to="Dialog" method="_on_close"]
+[connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton" to="Dialog" method="_on_option_button_pressed"]
+[connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/CloseButton" to="Dialog" method="_on_close"]
 [connection signal="pressed" from="DialogAndImg/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_and_img_button_pressed"]
 [connection signal="pressed" from="Input/Panel/MarginContainer/VBoxContainer/ValidateButton" to="." method="_on_validate_input_button_pressed"]
 [connection signal="pressed" from="InputYesNo/Panel/MarginContainer/VBoxContainer/HBoxContainer/NoButton" to="." method="_on_no_button_pressed"]

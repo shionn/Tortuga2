@@ -32,8 +32,9 @@ func append_to_console(text: String) -> void:
 	_console.append_text(text)
 	_console.newline()
 
-func open_dialog(title: String, text: String, size: Vector2 = Vector2(400,400)) -> void: 
+func open_dialog(title: String, text: String, size: Vector2 = Vector2(400,400)) -> Dialog: 
 	_dialog.open_dialog(title, text, size)
+	return _dialog
 
 func open_dialog_and_img(title: String, text: String, img: Resource) -> void:
 	_dialog_img_text.clear()

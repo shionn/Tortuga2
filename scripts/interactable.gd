@@ -43,8 +43,8 @@ func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, n
 			on_interact()
 
 # a supprimer
-func open_text(title: String, text: String, size = Vector2(400,400)) -> void: 
-	gui.open_dialog(title, text, size)
+func open_text(title: String, text: String, size = Vector2(400,400)) -> Dialog: 
+	return gui.open_dialog(title, text, size)
 
 func open_alert(title: String, text: String) -> void: 
 	gui.open_dialog(title, text, Vector2(300,200))
