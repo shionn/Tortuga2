@@ -3,6 +3,8 @@ extends "res://scripts/interactable.gd"
 @export var model : Resource
 @export var pnj_name : String
 @export var pnj_role = ""
+@export var animation_name = "idle"
+@export var animation_loop = true
 
 @onready var _name_3d := $name as Label3D
 @onready var _role_3d := $role as Label3D
@@ -24,8 +26,9 @@ func _ready() -> void:
 		_role_3d.text = "<"+pnj_role+">"
 	
 	_animation = _character.get_child(1)
-	_animation.get_animation("idle").loop_mode = Animation.LOOP_LINEAR
-	_animation.play("idle")
+	if animation_loop :
+		_animation.get_animation(animation_name).loop_mode = Animation.LOOP_LINEAR
+	_animation.play(animation_name)
 
 func _process(delta: float) -> void:
 	_name_3d.look_at(_player_camera.global_position, Vector3.UP, true)
