@@ -5,8 +5,6 @@ class_name Gui
 @onready var _debug_info := $DebugInfo as Label
 
 @onready var _dialog := $Dialog as Panel
-@onready var _dialog_text := $Dialog/MarginContainer/VBoxContainer/RichTextLabel as RichTextLabel
-@onready var _dialog_title := $Dialog/MarginContainer/VBoxContainer/Title as Label
 
 @onready var _dialog_img := $DialogAndImg as Control
 @onready var _dialog_img_text := $DialogAndImg/Panel/MarginContainer/VBoxContainer/HBoxContainer/RichTextLabel as RichTextLabel
@@ -35,15 +33,7 @@ func append_to_console(text: String) -> void:
 	_console.newline()
 
 func open_dialog(title: String, text: String, size: Vector2 = Vector2(400,400)) -> void: 
-	_dialog.set_size(size)
-	_dialog.offset_top=-size.y/2
-	_dialog.offset_bottom=size.y/2
-	_dialog.offset_left=-size.x/2
-	_dialog.offset_right=size.x/2
-	_dialog_text.clear()
-	_dialog_text.add_text(text)
-	_dialog_title.text = title
-	_dialog.show()
+	_dialog.open_dialog(title, text, size)
 
 func open_dialog_and_img(title: String, text: String, img: Resource) -> void:
 	_dialog_img_text.clear()
@@ -70,9 +60,6 @@ func _process(delta: float) -> void:
 	_debug_info.text = str(_player.global_position) + " " + str(rad_to_deg(_player._pivot.rotation.y))
 	_debug_info.text += "\nfps: " + str(Engine.get_frames_per_second())
 	_compass_arrow.rotation = -_player_camera.rotation.y
-
-func _on_close_dialog_button_pressed() -> void:
-	_dialog.hide()
 
 func _on_close_dialog_and_img_button_pressed() -> void:
 	_dialog_img.hide()

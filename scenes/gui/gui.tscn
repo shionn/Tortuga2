@@ -1,6 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=22 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://scripts/gui/gui.gd" id="1_0fbet"]
+[ext_resource type="Script" uid="uid://ikfx1cjqumpb" path="res://scripts/gui/dialog.gd" id="2_bgohe"]
 [ext_resource type="Texture2D" uid="uid://dyq75clqrse1h" path="res://assets/gui/ui-adventure/minimap_ring_brown_detail.png" id="2_ioifv"]
 [ext_resource type="Texture2D" uid="uid://ctudwtb3qq5jg" path="res://assets/gui/ui-adventure/minimap_compass_toon_n.png" id="3_q46mf"]
 [ext_resource type="Texture2D" uid="uid://6r2enbextcew" path="res://assets/gui/ui-adventure/minimap_compass_toon_s.png" id="4_ytf3d"]
@@ -55,6 +56,7 @@ offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+script = ExtResource("2_bgohe")
 
 [node name="MarginContainer" type="MarginContainer" parent="Dialog"]
 layout_mode = 1
@@ -86,8 +88,12 @@ text = "Ceci est un essai de text
 
 Sur plusieurs lignes en plus"
 
-[node name="CloseDialogButton" type="Button" parent="Dialog/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Dialog/MarginContainer/VBoxContainer"]
 layout_mode = 2
+
+[node name="CloseDialogButton" type="Button" parent="Dialog/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
 text = "Fermer"
 
 [node name="DialogAndImg" type="Control" parent="."]
@@ -669,7 +675,7 @@ texture_normal = ExtResource("19_ukjlc")
 script = ExtResource("11_s1h2m")
 description = "Ce fruit pousse sur un arbre inaccessible. Il nous est défendu. "
 
-[connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_button_pressed"]
+[connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/HBoxContainer/CloseDialogButton" to="Dialog" method="_on_close"]
 [connection signal="pressed" from="DialogAndImg/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_and_img_button_pressed"]
 [connection signal="pressed" from="Input/Panel/MarginContainer/VBoxContainer/ValidateButton" to="." method="_on_validate_input_button_pressed"]
 [connection signal="pressed" from="InputYesNo/Panel/MarginContainer/VBoxContainer/HBoxContainer/NoButton" to="." method="_on_no_button_pressed"]
