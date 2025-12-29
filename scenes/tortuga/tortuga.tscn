@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=64 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/bouteille_note_lisible.gd" id="1_c7jrm"]
 [ext_resource type="PackedScene" uid="uid://dvplfstqecj42" path="res://assets/mine/tortuga-60.glb" id="1_hh6n0"]
@@ -34,24 +34,17 @@
 [ext_resource type="PackedScene" uid="uid://rht7nkabco3w" path="res://assets/pirate/props/chest.glb" id="22_aveh0"]
 [ext_resource type="Script" uid="uid://s2din2pw3tj7" path="res://scripts/tortuga/coffre-barde-drue.gd" id="23_bsjpt"]
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://scenes/water/WaterPlane.tscn" id="23_nxrjy"]
+[ext_resource type="PackedScene" uid="uid://bc454sdsvgswp" path="res://scenes/tortuga/tortuga_oasis_arbre_defendu.tscn" id="24_6ef8d"]
 [ext_resource type="PackedScene" uid="uid://c8y6go07dabnn" path="res://scenes/tortuga/tortuga_auberge.tscn" id="24_ew2kh"]
-[ext_resource type="PackedScene" uid="uid://bvyn2cpekf7ag" path="res://assets/pirate/patch-sand.glb" id="24_ljn7o"]
-[ext_resource type="PackedScene" uid="uid://bbwotylt8kjx" path="res://assets/nature/plant/tree/tree_detailed_dark.glb" id="24_y2tec"]
 [ext_resource type="PackedScene" uid="uid://biadyt2j3gtyg" path="res://scenes/tortuga/tortuga_reserve.tscn" id="25_2pcv4"]
-[ext_resource type="Script" uid="uid://ellbqcwcqt7a" path="res://scripts/tortuga/arbre-fruit-defendu.gd" id="25_duvqq"]
 [ext_resource type="Script" uid="uid://ekwnilnqcg3k" path="res://scripts/tortuga/escalator-montagne-capitainerie.gd" id="25_iswrd"]
-[ext_resource type="PackedScene" uid="uid://crylsg6rmjh6j" path="res://assets/pirate/structures/structure-platform-small.glb" id="26_6ef8d"]
-[ext_resource type="PackedScene" uid="uid://bcgy2mim171r0" path="res://assets/fruit-pack-1/apple.glb" id="26_dl2hs"]
 [ext_resource type="PackedScene" uid="uid://dru71m0k1pta1" path="res://assets/pirate/props/crate.glb" id="26_h2gq6"]
 [ext_resource type="PackedScene" uid="uid://brird11bbbwv0" path="res://scenes/tortuga/tortuga_dortoir.tscn" id="26_ntxr1"]
-[ext_resource type="PackedScene" uid="uid://egwkb7kxe1bp" path="res://assets/nature/plant/tree/tree_default.glb" id="27_7h4df"]
 [ext_resource type="PackedScene" uid="uid://dpjhqteufdpw7" path="res://assets/props/oga_scroll.glb" id="27_ggmis"]
 [ext_resource type="PackedScene" uid="uid://blifncbh7xys7" path="res://scenes/tortuga/tortuga_reserve_d_or.tscn" id="27_veopy"]
 [ext_resource type="PackedScene" uid="uid://ukreens1wy4a" path="res://scenes/tortuga/tortuga_wall_coffre.tscn" id="28_b2pjt"]
-[ext_resource type="PackedScene" uid="uid://c4nbtbsyny7lm" path="res://assets/nature/plant/tree/tree_default_dark.glb" id="28_e43uk"]
 [ext_resource type="Script" uid="uid://co84wje5bypgt" path="res://scripts/tortuga/parchemin-montagne-capitainerie.gd" id="28_ggmis"]
 [ext_resource type="PackedScene" uid="uid://bagm6lyjb83lg" path="res://scenes/tortuga/tortuga_brasserie.tscn" id="29_w1jow"]
-[ext_resource type="PackedScene" uid="uid://bb747ld75ixfs" path="res://assets/nature/plant/tree/tree_default_fall.glb" id="29_xiick"]
 [ext_resource type="PackedScene" uid="uid://bqwr1sdl4wvhs" path="res://scenes/tortuga/tortuga_armurerie.tscn" id="30_5obc8"]
 [ext_resource type="PackedScene" uid="uid://bl8gqk34ub2cy" path="res://assets/pirate/props/crate-bottles.glb" id="31_acrrl"]
 [ext_resource type="PackedScene" uid="uid://cj2nivoroln0s" path="res://assets/nature/plant/crops/crops_bambooStageB.glb" id="32_67xyg"]
@@ -74,9 +67,6 @@ size = Vector3(0.4, 0.5, 0.2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bsjpt"]
 size = Vector3(1.2, 1.1, 1.4)
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_dl2hs"]
-radius = 0.2667705
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g1i3r"]
 size = Vector3(2.2, 0.2, 2.4)
@@ -646,327 +636,11 @@ transform = Transform3D(3, 0, 0, 0, 5, 0, 0, 0, 3, -2, 0.39999998, 7)
 [node name="grass-patch5" parent="mountain/tresor-barbe-drue" instance=ExtResource("18_bsjpt")]
 transform = Transform3D(3, 0, 0, 0, 5, 0, 0, 0, 3, -5, 0.39999998, 1)
 
-[node name="oasis-arbre-defendu" type="Node3D" parent="mountain"]
+[node name="patch-grass2" parent="mountain/tresor-barbe-drue" instance=ExtResource("3_jit35")]
+transform = Transform3D(2.4999998, 0, -4.3301272, 0, 3, 0, 4.3301272, 0, 2.4999998, 1, 0.3, 3)
+
+[node name="oasis-arbre-defendu" parent="mountain" instance=ExtResource("24_6ef8d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 161, 102.5, -266)
-
-[node name="arbre-defendu" parent="mountain/oasis-arbre-defendu" instance=ExtResource("24_y2tec")]
-transform = Transform3D(6.928203, 0, -4, 0, 8, 0, 4, 0, 6.928203, -1.300003, 1.300003, 0.4000244)
-
-[node name="apple" parent="mountain/oasis-arbre-defendu/arbre-defendu" instance=ExtResource("26_dl2hs")]
-transform = Transform3D(0.39999995, 0, 0, 0, 0.4, 0, 0, 0, 0.39999995, 0.019527435, 0.27499962, -0.1411705)
-script = ExtResource("25_duvqq")
-interactable_distance = 4.0
-
-[node name="Area3D" type="Area3D" parent="mountain/oasis-arbre-defendu/arbre-defendu/apple"]
-transform = Transform3D(0.27063295, 0, 0.15625003, 0, 0.31249997, 0, -0.15625003, 0, 0.27063295, 0.24050522, -1.09375, 0.041557312)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="mountain/oasis-arbre-defendu/arbre-defendu/apple/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.594223, 3.4789047, -0.5073242)
-shape = SubResource("SphereShape3D_dl2hs")
-
-[node name="WaterBrasserie" parent="mountain/oasis-arbre-defendu" instance=ExtResource("23_nxrjy")]
-transform = Transform3D(24, 0, 0, 0, 1, 0, 0, 0, 34, -1.3281403, 0.5, -1.256897)
-skeleton = NodePath("../../..")
-
-[node name="grass-plant2" parent="mountain/oasis-arbre-defendu" instance=ExtResource("6_j21kd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 20)
-
-[node name="grass-plant8" parent="mountain/oasis-arbre-defendu" instance=ExtResource("6_j21kd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1, 14)
-
-[node name="grass-plant9" parent="mountain/oasis-arbre-defendu" instance=ExtResource("6_j21kd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 1, -4)
-
-[node name="grass-plant10" parent="mountain/oasis-arbre-defendu" instance=ExtResource("6_j21kd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 1, -8)
-
-[node name="grass-plant11" parent="mountain/oasis-arbre-defendu" instance=ExtResource("6_j21kd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -18)
-
-[node name="grass-plant12" parent="mountain/oasis-arbre-defendu" instance=ExtResource("6_j21kd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, -18)
-
-[node name="grass-plant4" parent="mountain/oasis-arbre-defendu" instance=ExtResource("6_j21kd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, 12)
-
-[node name="grass-plant5" parent="mountain/oasis-arbre-defendu" instance=ExtResource("6_j21kd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 1, 11)
-
-[node name="grass-plant6" parent="mountain/oasis-arbre-defendu" instance=ExtResource("6_j21kd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1, 0)
-
-[node name="grass-plant7" parent="mountain/oasis-arbre-defendu" instance=ExtResource("6_j21kd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -3)
-
-[node name="grass-plant3" parent="mountain/oasis-arbre-defendu" instance=ExtResource("6_j21kd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 16)
-
-[node name="grass2" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.300003, 1, 19.199997)
-
-[node name="grass12" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -3.699997, 1, 19.199997)
-
-[node name="grass13" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.699997, 1, 15.199997)
-
-[node name="grass14" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -13.699997, 1, 17.199997)
-
-[node name="grass16" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -18.699997, 1, 15.199997)
-
-[node name="grass17" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -19.699997, 1, 9.200012)
-
-[node name="grass18" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -17.699997, 1, 4.200012)
-
-[node name="grass19" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -21.699997, 1, 4.200012)
-
-[node name="grass20" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -19.699997, 1, -2.7999878)
-
-[node name="grass21" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -21.699997, 1, -7.799988)
-
-[node name="grass22" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -16.699997, 1, -12.799988)
-
-[node name="grass23" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -12.699997, 1, -11.799988)
-
-[node name="grass24" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -10.699997, 1, -19.799988)
-
-[node name="grass25" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.699997, 1, -15.799988)
-
-[node name="grass26" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2.699997, 1, -19.799988)
-
-[node name="grass27" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.300003, 1, -13.799988)
-
-[node name="grass28" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.300003, 1, -15.799988)
-
-[node name="grass29" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.300003, 1, -10.799988)
-
-[node name="grass30" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(1.7320508, 0, -1, 0, 2, 0, 1, 0, 1.7320508, 13.300003, 1, -12.799988)
-
-[node name="grass15" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -13.699997, 1, 9.200012)
-
-[node name="grass3" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(0.99999994, 0, 1.7320509, 0, 2, 0, -1.7320509, 0, 0.99999994, 4.300003, 1, 15.199997)
-
-[node name="grass4" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(1.9318516, 0, 0.5176382, 0, 2, 0, -0.5176382, 0, 1.9318516, 10.300003, 1, 14.199997)
-
-[node name="grass5" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(1.9318516, 0, 0.5176382, 0, 2, 0, -0.5176382, 0, 1.9318516, 10.300003, 1, 8.200012)
-
-[node name="grass6" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(1.4142137, 0, -1.4142135, 0, 2, 0, 1.4142135, 0, 1.4142137, 13.300003, 1, 3.2000122)
-
-[node name="grass9" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(1.4142137, 0, -1.4142135, 0, 2, 0, 1.4142135, 0, 1.4142137, 16.300003, 1, -4.799988)
-
-[node name="grass10" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(1.4142137, 0, -1.4142135, 0, 2, 0, 1.4142135, 0, 1.4142137, 11.300003, 1, -5.799988)
-
-[node name="grass11" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(1.4142137, 0, -1.4142135, 0, 2, 0, 1.4142135, 0, 1.4142137, -4.699997, 1, 3.2000122)
-
-[node name="grass7" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(1.9318516, 0, 0.5176382, 0, 2, 0, -0.5176382, 0, 1.9318516, 16.300003, 1, 6.200012)
-
-[node name="grass8" parent="mountain/oasis-arbre-defendu" instance=ExtResource("2_wohch")]
-transform = Transform3D(1.4142134, 0, 1.4142137, 0, 2, 0, -1.4142137, 0, 1.4142134, 19.300003, 1, 2.2000122)
-
-[node name="tree_default2" parent="mountain/oasis-arbre-defendu" instance=ExtResource("27_7h4df")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -13, 1, -17)
-
-[node name="tree_default5" parent="mountain/oasis-arbre-defendu" instance=ExtResource("27_7h4df")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -14, 1, -8)
-
-[node name="tree_default6" parent="mountain/oasis-arbre-defendu" instance=ExtResource("27_7h4df")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -9, 1, 12)
-
-[node name="tree_default8" parent="mountain/oasis-arbre-defendu" instance=ExtResource("27_7h4df")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1, 1, 14)
-
-[node name="tree_default10" parent="mountain/oasis-arbre-defendu" instance=ExtResource("27_7h4df")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 9, 1, 16)
-
-[node name="tree_default11" parent="mountain/oasis-arbre-defendu" instance=ExtResource("27_7h4df")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 20, 1, 5)
-
-[node name="tree_default12" parent="mountain/oasis-arbre-defendu" instance=ExtResource("27_7h4df")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 12, 1, -8)
-
-[node name="tree_default9" parent="mountain/oasis-arbre-defendu" instance=ExtResource("27_7h4df")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 1, 1, 21)
-
-[node name="tree_default7" parent="mountain/oasis-arbre-defendu" instance=ExtResource("27_7h4df")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -17, 1, 15)
-
-[node name="tree_default4" parent="mountain/oasis-arbre-defendu" instance=ExtResource("27_7h4df")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 1, -20)
-
-[node name="tree_default3" parent="mountain/oasis-arbre-defendu" instance=ExtResource("27_7h4df")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 2, 1, -13)
-
-[node name="tree_default_dark2" parent="mountain/oasis-arbre-defendu" instance=ExtResource("28_e43uk")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 17.600006, 1, -5.700012)
-
-[node name="tree_default_dark3" parent="mountain/oasis-arbre-defendu" instance=ExtResource("28_e43uk")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 12.600006, 1, 4.299988)
-
-[node name="tree_default_dark4" parent="mountain/oasis-arbre-defendu" instance=ExtResource("28_e43uk")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -9.399994, 1, -13.700012)
-
-[node name="tree_default_dark5" parent="mountain/oasis-arbre-defendu" instance=ExtResource("28_e43uk")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -22.399994, 1, 0.2999878)
-
-[node name="tree_default_dark7" parent="mountain/oasis-arbre-defendu" instance=ExtResource("28_e43uk")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -15.899994, 1, 6.899994)
-
-[node name="tree_default_dark8" parent="mountain/oasis-arbre-defendu" instance=ExtResource("28_e43uk")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -7.899994, 1, 17.899994)
-
-[node name="tree_default_dark6" parent="mountain/oasis-arbre-defendu" instance=ExtResource("28_e43uk")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -19.399994, 1, -10.700012)
-
-[node name="tree_default_fall2" parent="mountain/oasis-arbre-defendu" instance=ExtResource("29_xiick")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 13, 1, 9)
-
-[node name="tree_default_fall5" parent="mountain/oasis-arbre-defendu" instance=ExtResource("29_xiick")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -20, 1, 11)
-
-[node name="tree_default_fall3" parent="mountain/oasis-arbre-defendu" instance=ExtResource("29_xiick")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -6, 1, -22)
-
-[node name="tree_default_fall4" parent="mountain/oasis-arbre-defendu" instance=ExtResource("29_xiick")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 12, 1, -17)
-
-[node name="patch-grass2" parent="mountain/oasis-arbre-defendu" instance=ExtResource("3_jit35")]
-transform = Transform3D(-0.77645713, 0, -2.8977776, 0, 4, 0, 2.8977776, 0, -0.77645713, -17, 0, 11)
-
-[node name="patch-grass3" parent="mountain/oasis-arbre-defendu" instance=ExtResource("3_jit35")]
-transform = Transform3D(2.5980766, 0, -1.5000002, 0, 4, 0, 1.5000002, 0, 2.5980766, -11, 0, 15)
-
-[node name="patch-grass4" parent="mountain/oasis-arbre-defendu" instance=ExtResource("3_jit35")]
-transform = Transform3D(-0.7764573, 0, 2.8977776, 0, 3.9999998, 0, -2.8977776, 0, -0.7764573, -20.899979, 0, -4.0999756)
-
-[node name="patch-grass6" parent="mountain/oasis-arbre-defendu" instance=ExtResource("3_jit35")]
-transform = Transform3D(2.5980763, 0, 1.5000001, 0, 3.9999998, 0, -1.5000001, 0, 2.5980763, -14.9999695, 0, -10.899963)
-
-[node name="patch-grass7" parent="mountain/oasis-arbre-defendu" instance=ExtResource("3_jit35")]
-transform = Transform3D(2.5980763, 0, 1.5000001, 0, 3.9999998, 0, -1.5000001, 0, 2.5980763, -7.4999695, 0, -18.199951)
-
-[node name="patch-grass8" parent="mountain/oasis-arbre-defendu" instance=ExtResource("3_jit35")]
-transform = Transform3D(-2.5980763, 0, 1.4999998, 0, 3.9999998, 0, -1.4999998, 0, -2.5980763, 2.9000397, 0, -16.699951)
-
-[node name="patch-grass9" parent="mountain/oasis-arbre-defendu" instance=ExtResource("3_jit35")]
-transform = Transform3D(2.12132, 0, -2.12132, 0, 3.9999998, 0, 2.12132, 0, 2.12132, 11.600037, 0, -12.799927)
-
-[node name="patch-grass10" parent="mountain/oasis-arbre-defendu" instance=ExtResource("3_jit35")]
-transform = Transform3D(-0.77645683, 0, 2.897777, 0, 3.9999998, 0, -2.897777, 0, -0.77645683, 15.300034, 0, 2.3000488)
-
-[node name="patch-grass12" parent="mountain/oasis-arbre-defendu" instance=ExtResource("3_jit35")]
-transform = Transform3D(-2.9544234, 0, 0.5209445, 0, 3.9999998, 0, -0.5209445, 0, -2.9544234, -1.2999725, 0, 17.500046)
-
-[node name="patch-grass13" parent="mountain/oasis-arbre-defendu" instance=ExtResource("3_jit35")]
-transform = Transform3D(2.2981331, 0, 1.9283628, 0, 3.9999998, 0, -1.9283628, 0, 2.2981331, 6.2000275, 0, 15.000046)
-
-[node name="patch-grass14" parent="mountain/oasis-arbre-defendu" instance=ExtResource("3_jit35")]
-transform = Transform3D(2.457456, 0, 1.7207289, 0, 3.9999995, 0, -1.7207289, 0, 2.457456, 12.400024, 0, 9.000061)
-
-[node name="patch-grass11" parent="mountain/oasis-arbre-defendu" instance=ExtResource("3_jit35")]
-transform = Transform3D(-1.668891e-07, 0, -2.9999995, 0, 3.9999998, 0, 2.9999995, 0, -1.668891e-07, 13.800018, 0, -3.6999512)
-
-[node name="patch-grass15" parent="mountain/oasis-arbre-defendu" instance=ExtResource("3_jit35")]
-transform = Transform3D(2.9999995, 0, -3.5754965e-08, 0, 3.9999998, 0, 3.5754965e-08, 0, 2.9999995, -5.1999664, 0, 0.20004272)
-
-[node name="patch-grass5" parent="mountain/oasis-arbre-defendu" instance=ExtResource("3_jit35")]
-transform = Transform3D(-0.7764573, 0, 2.8977776, 0, 3.9999998, 0, -2.8977776, 0, -0.7764573, -18.899979, 0, 3.2000122)
-
-[node name="patch-sand2" parent="mountain/oasis-arbre-defendu" instance=ExtResource("24_ljn7o")]
-transform = Transform3D(4.829629, 0, -1.5529143, 0, 1, 0, 1.2940953, 0, 5.795555, -2.8, -0.22, -1.9)
-
-[node name="structure-platform-small2" parent="mountain/oasis-arbre-defendu" instance=ExtResource("26_6ef8d")]
-transform = Transform3D(-0.08715578, 0, -0.9961947, 0, 1, 0, 0.9961947, 0, -0.08715578, 1.8999939, 0, 0.3999939)
-
-[node name="structure-platform-small3" parent="mountain/oasis-arbre-defendu" instance=ExtResource("26_6ef8d")]
-transform = Transform3D(0.16773123, 0.25881904, -0.9512512, -0.04494345, 0.9659258, 0.25488698, 0.9848077, 0, 0.17364815, 4.299988, -0.29999542, 0.2999878)
-
-[node name="structure-platform-small4" parent="mountain/oasis-arbre-defendu" instance=ExtResource("26_6ef8d")]
-transform = Transform3D(-0.1677313, -0.258819, -0.9512512, -0.04494347, 0.9659258, -0.254887, 0.9848077, 0, -0.17364822, 7.400009, -0.30000305, 0.2999878)
-
-[node name="structure-platform-small5" parent="mountain/oasis-arbre-defendu" instance=ExtResource("26_6ef8d")]
-transform = Transform3D(0.17364813, 0, -0.9848077, 0, 1, 0, 0.9848077, 0, 0.17364813, 9.700012, 0, 0.2999878)
-
-[node name="crops_bambooStageB2" parent="mountain/oasis-arbre-defendu" instance=ExtResource("32_67xyg")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4, 0.099998474, 8)
-
-[node name="crops_bambooStageB3" parent="mountain/oasis-arbre-defendu" instance=ExtResource("32_67xyg")]
-transform = Transform3D(0.99999994, 0, 1.7320509, 0, 2, 0, -1.7320509, 0, 0.99999994, 2, 0.099998474, 3)
-
-[node name="crops_bambooStageB4" parent="mountain/oasis-arbre-defendu" instance=ExtResource("32_67xyg")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6, 0.099998474, 4)
-
-[node name="crops_bambooStageB5" parent="mountain/oasis-arbre-defendu" instance=ExtResource("32_67xyg")]
-transform = Transform3D(1.4142135, 0, 1.4142135, 0, 2, 0, -1.4142135, 0, 1.4142135, 9, 0.099998474, 3)
-
-[node name="crops_bambooStageB6" parent="mountain/oasis-arbre-defendu" instance=ExtResource("32_67xyg")]
-transform = Transform3D(1.9318516, 0, -0.5176382, 0, 2, 0, 0.5176382, 0, 1.9318516, -1, 0.099998474, 5)
-
-[node name="crops_bambooStageB20" parent="mountain/oasis-arbre-defendu" instance=ExtResource("32_67xyg")]
-transform = Transform3D(1.9318516, 0, -0.5176382, 0, 2, 0, 0.5176382, 0, 1.9318516, 3.199997, 0.099998474, 5.799988)
-
-[node name="crops_bambooStageB7" parent="mountain/oasis-arbre-defendu" instance=ExtResource("32_67xyg")]
-transform = Transform3D(1.4142137, 0, 1.4142135, 0, 2, 0, -1.4142135, 0, 1.4142137, -7, 0.099998474, 7)
-
-[node name="crops_bambooStageB8" parent="mountain/oasis-arbre-defendu" instance=ExtResource("32_67xyg")]
-transform = Transform3D(1.4142134, 0, -1.4142138, 0, 2, 0, 1.4142138, 0, 1.4142134, -4, 0.099998474, 10)
-
-[node name="crops_bambooStageB9" parent="mountain/oasis-arbre-defendu" instance=ExtResource("32_67xyg")]
-transform = Transform3D(1.4142137, 0, 1.4142135, 0, 2, 0, -1.4142135, 0, 1.4142137, 1, 0.099998474, 10)
-
-[node name="crops_bambooStageB10" parent="mountain/oasis-arbre-defendu" instance=ExtResource("32_67xyg")]
-transform = Transform3D(1.4142137, 0, 1.4142135, 0, 2, 0, -1.4142135, 0, 1.4142137, 2, 0.099998474, -3)
-
-[node name="crops_bambooStageB11" parent="mountain/oasis-arbre-defendu" instance=ExtResource("32_67xyg")]
-transform = Transform3D(1.9318516, 0, -0.5176383, 0, 2, 0, 0.5176383, 0, 1.9318516, 7, 0.099998474, -3)
-
-[node name="crops_bambooStageB12" parent="mountain/oasis-arbre-defendu" instance=ExtResource("32_67xyg")]
-transform = Transform3D(1.9318516, 0, -0.5176383, 0, 2, 0, 0.5176383, 0, 1.9318516, 1, 0.099998474, -10)
-
-[node name="crops_bambooStageB13" parent="mountain/oasis-arbre-defendu" instance=ExtResource("32_67xyg")]
-transform = Transform3D(1.4142137, 0, 1.4142135, 0, 2, 0, -1.4142135, 0, 1.4142137, -8, 0.099998474, -8)
-
-[node name="crops_bambooStageB14" parent="mountain/oasis-arbre-defendu" instance=ExtResource("32_67xyg")]
-transform = Transform3D(1.4142137, 0, 1.4142135, 0, 2, 0, -1.4142135, 0, 1.4142137, -3, 0.099998474, -13)
-
-[node name="crops_bambooStageB15" parent="mountain/oasis-arbre-defendu" instance=ExtResource("32_67xyg")]
-transform = Transform3D(1.7320508, 0, -1, 0, 2, 0, 1, 0, 1.7320508, -1, 0.099998474, -7)
-
-[node name="crops_bambooStageB16" parent="mountain/oasis-arbre-defendu" instance=ExtResource("32_67xyg")]
-transform = Transform3D(1.7320508, 0, -1, 0, 2, 0, 1, 0, 1.7320508, 5, 0.099998474, -10)
-
-[node name="crops_bambooStageB17" parent="mountain/oasis-arbre-defendu" instance=ExtResource("32_67xyg")]
-transform = Transform3D(1.7320508, 0, -1, 0, 2, 0, 1, 0, 1.7320508, 7, 0.099998474, -7)
-
-[node name="crops_bambooStageB18" parent="mountain/oasis-arbre-defendu" instance=ExtResource("32_67xyg")]
-transform = Transform3D(1.4142137, 0, 1.4142134, 0, 2, 0, -1.4142134, 0, 1.4142137, 4, 0.099998474, -6)
-
-[node name="crops_bambooStageB19" parent="mountain/oasis-arbre-defendu" instance=ExtResource("32_67xyg")]
-transform = Transform3D(1.4142137, 0, 1.4142134, 0, 2, 0, -1.4142134, 0, 1.4142137, -4, 0.099998474, -10)
 
 [node name="rocks-b2" parent="mountain" instance=ExtResource("7_h2gq6")]
 transform = Transform3D(29.67364, 0, -4.4130487, 0, 29.999998, 0, 4.4130487, 0, 29.67364, 160.48563, 0.50003624, -267.35916)
