@@ -3,6 +3,7 @@ extends Object
 class_name Tags
 
 const CHERCHE_FRUIT_DEFENDU = "search_fruit_defendu"
+const CHERCHE_FRUIT_DEFENDU_2 = "search_fruit_defendu_2"
 
 var tags : Array[String] = []
 

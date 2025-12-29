@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://brird11bbbwv0"]
+[gd_scene load_steps=20 format=3 uid="uid://brird11bbbwv0"]
 
 [ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="1_1ebyv"]
 [ext_resource type="PackedScene" uid="uid://dsqb6308w0ec1" path="res://assets/town/road/road.glb" id="1_b0sk0"]
@@ -9,6 +9,8 @@
 [ext_resource type="Script" uid="uid://bkbt1gtntn7q5" path="res://scripts/tortuga/pnj-dortoir-dupont-load.gd" id="4_hkud5"]
 [ext_resource type="PackedScene" uid="uid://ytsdil2082qg" path="res://assets/town/walls/wall-wood-corner-diagonal.glb" id="4_i8nn1"]
 [ext_resource type="PackedScene" uid="uid://eflbjn4io8m2" path="res://assets/town/stairs/stairs-wide-wood-handrail.glb" id="5_b0sk0"]
+[ext_resource type="Script" uid="uid://b2bg21i135mtg" path="res://scripts/tortuga/pnj-cartographe.gd" id="5_xdcba"]
+[ext_resource type="PackedScene" uid="uid://dt8xikej6hhld" path="res://assets/character/base/character-male-a.glb" id="6_8jhy7"]
 [ext_resource type="PackedScene" uid="uid://dvn116r1fxtxs" path="res://assets/town/road/road-wood.glb" id="6_d8tdb"]
 [ext_resource type="PackedScene" uid="uid://bi0rgxdomkpgp" path="res://assets/town/fence-hedge/balcony-wall-fence.glb" id="7_d8tdb"]
 [ext_resource type="PackedScene" uid="uid://b5vkbbk6ethhq" path="res://assets/nature/props/bed.glb" id="8_g6x1p"]
@@ -35,6 +37,13 @@ script = ExtResource("4_hkud5")
 model = ExtResource("3_sas7l")
 pnj_name = "Dupont"
 pnj_role = "Charger"
+
+[node name="cartographe" parent="." instance=ExtResource("1_1ebyv")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 5.4, 4.02, 3)
+script = ExtResource("5_xdcba")
+model = ExtResource("6_8jhy7")
+pnj_name = "Zackari"
+pnj_role = "Cartographe"
 
 [node name="road2" parent="." instance=ExtResource("1_b0sk0")]
 transform = Transform3D(15, 0, 0, 0, -10, -1.2079664e-06, 0, 1.509958e-06, -8, 0, 0, 0)

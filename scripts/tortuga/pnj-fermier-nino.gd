@@ -7,7 +7,8 @@ func on_interact() -> void:
 		dialog.set_option("Je cherche le Fruit Défendu", on_search_fruit)
 
 func on_search_fruit() -> void:
-	gui.open_dialog(pnj_name, _TEXT_SEARCH_FRUIT)
+	gui.open_dialog(pnj_name, _TEXT_SEARCH_FRUIT, Vector2(400,500))
+	player.tags.add(Tags.CHERCHE_FRUIT_DEFENDU_2)
 
 const _TEXT = """Bonjour aventurier.ère, je suis le seul jardinier de l’île. Ne marche pas dans mes cultures. Si vous abîmez mes cultures, nous n’aurons plus de houblon pour que Eve puisse en faire de la bonne bière !
 
