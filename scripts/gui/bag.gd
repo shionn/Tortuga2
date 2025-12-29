@@ -46,8 +46,9 @@ func save() -> void :
 	file.store_line(json_string)
 
 func load() -> void : 
-	var file = FileAccess.open("user://bag.save", FileAccess.READ)
-	for item_name in JSON.parse_string(file.get_line()) :
-		var item = _items.get_node(item_name)
-		_items.remove_child(item)
-		_grid.add_child(item)
+	if FileAccess.file_exists("user://bag.save") :
+		var file = FileAccess.open("user://bag.save", FileAccess.READ)
+		for item_name in JSON.parse_string(file.get_line()) :
+			var item = _items.get_node(item_name)
+			_items.remove_child(item)
+			_grid.add_child(item)

@@ -18,6 +18,8 @@ var _last_floor_position : Vector3
 var state = STATUT.MOVING
 # start : 39, 1.5, -25
 
+var tags = Tags.new()
+
 func sit(look_at = 0) -> void: 
 	state = STATUT.SIT
 	_animation.play("sit")
