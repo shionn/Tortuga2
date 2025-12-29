@@ -36,6 +36,9 @@ func open_dialog(title: String, text: String, size: Vector2 = Vector2(400,400)) 
 	_dialog.open_dialog(title, text, size)
 	return _dialog
 
+func open_alert(title: String, text: String, size: Vector2 = Vector2(300,200)) -> Dialog: 
+	return open_dialog(title, text, size)
+
 func open_dialog_and_img(title: String, text: String, img: Resource) -> void:
 	_dialog_img_text.clear()
 	_dialog_img_text.add_text(text)
@@ -61,6 +64,8 @@ func _process(delta: float) -> void:
 	_debug_info.text = str(_player.global_position) + " " + str(rad_to_deg(_player._pivot.rotation.y))
 	_debug_info.text += "\nfps: " + str(Engine.get_frames_per_second())
 	_compass_arrow.rotation = -_player_camera.rotation.y
+	if Input.is_action_just_pressed("debug") :
+		append_to_console(str(_player.tags.tags))
 
 func _on_close_dialog_and_img_button_pressed() -> void:
 	_dialog_img.hide()

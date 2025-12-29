@@ -18,6 +18,6 @@ func on_item_drop(item : Item) -> void:
 	if item.name == "ParcheminBarbeDrue" :
 		open_text(pnj_name, _TEXT_PARCHEMIN_BARBE_DRUE)
 		gui.append_to_console("Félicitation, vous avez achevé la première quête. Penser à sauvegarder.")
-		player.tags.add(Tags.CHERCHE_FRUIT_DEFENDU)
+		#player.tags.add(Tags.FORBID_FRUIT_SEARCH)
 	else : 
 		super.on_item_drop(item)
