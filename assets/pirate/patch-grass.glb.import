@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dvmo6h4nm5lcb"
-path="res://.godot/imported/patch-grass.glb-0316109212479705f55108090d0f27ec.scn"
+uid="uid://0orcol7h3owh"
+path="res://.godot/imported/patch-grass.glb-576ff5b88e8b16f43f621284b92a73d4.scn"
 
 [deps]
 
-source_file="res://assets/pirate/patch-grass.glb"
-dest_files=["res://.godot/imported/patch-grass.glb-0316109212479705f55108090d0f27ec.scn"]
+source_file="res:///assets/pirate/patch-grass.glb"
+dest_files=["res://.godot/imported/patch-grass.glb-576ff5b88e8b16f43f621284b92a73d4.scn"]
 
 [params]
 

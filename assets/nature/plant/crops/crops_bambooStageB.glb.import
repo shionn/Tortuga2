@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c8qicwadth05u"
-path="res://.godot/imported/crops_leafsStageA.glb-4bd0dd9f59f0a9af9add2571a46c1166.scn"
+uid="uid://cj2nivoroln0s"
+path="res://.godot/imported/crops_bambooStageB.glb-6103e0a5dc9ca51d9fc8c4dfbeadb981.scn"
 
 [deps]
 
-source_file="res://assets/nature/crops/crops_leafsStageA.glb"
-dest_files=["res://.godot/imported/crops_leafsStageA.glb-4bd0dd9f59f0a9af9add2571a46c1166.scn"]
+source_file="res://assets/nature/plant/crops/crops_bambooStageB.glb"
+dest_files=["res://.godot/imported/crops_bambooStageB.glb-6103e0a5dc9ca51d9fc8c4dfbeadb981.scn"]
 
 [params]
 

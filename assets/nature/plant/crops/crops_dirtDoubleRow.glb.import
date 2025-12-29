@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://be0qmiygft2vk"
-path="res://.godot/imported/statue_ring.glb-07b87c2d05011610d6c106af0c86ddba.scn"
+uid="uid://dkt6c2a320y62"
+path="res://.godot/imported/crops_dirtDoubleRow.glb-01ffdc717001defa91c02547935244e8.scn"
 
 [deps]
 
-source_file="res:///assets/nature/statue/statue_ring.glb"
-dest_files=["res://.godot/imported/statue_ring.glb-07b87c2d05011610d6c106af0c86ddba.scn"]
+source_file="res://assets/nature/plant/crops/crops_dirtDoubleRow.glb"
+dest_files=["res://.godot/imported/crops_dirtDoubleRow.glb-01ffdc717001defa91c02547935244e8.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_box.gd"
+import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

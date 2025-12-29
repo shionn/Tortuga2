@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://2rpqdrfpplsi"
-path="res://.godot/imported/crops_bambooStageA.glb-9b83176a3c6416707900e32be5542631.scn"
+uid="uid://brhmtbq2y1ey"
+path="res://.godot/imported/crop_pumpkin.glb-814661ac8735972a6ed71acdcbb99b00.scn"
 
 [deps]
 
-source_file="res://assets/nature/crops/crops_bambooStageA.glb"
-dest_files=["res://.godot/imported/crops_bambooStageA.glb-9b83176a3c6416707900e32be5542631.scn"]
+source_file="res://assets/nature/plant/crops/crop_pumpkin.glb"
+dest_files=["res://.godot/imported/crop_pumpkin.glb-814661ac8735972a6ed71acdcbb99b00.scn"]
 
 [params]
 

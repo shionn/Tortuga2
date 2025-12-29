@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://d4ajcpq1slmbn"
-path="res://.godot/imported/crops_dirtRowCorner.glb-0b021ef73bbe51df2d1c37848d71c8b1.scn"
+uid="uid://c0htv6s8qrlof"
+path="res://.godot/imported/crops_leafsStageB.glb-815bc9f8b9293590372caac9c6237b97.scn"
 
 [deps]
 
-source_file="res://assets/nature/crops/crops_dirtRowCorner.glb"
-dest_files=["res://.godot/imported/crops_dirtRowCorner.glb-0b021ef73bbe51df2d1c37848d71c8b1.scn"]
+source_file="res://assets/nature/plant/crops/crops_leafsStageB.glb"
+dest_files=["res://.godot/imported/crops_leafsStageB.glb-815bc9f8b9293590372caac9c6237b97.scn"]
 
 [params]
 

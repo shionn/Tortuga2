@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cj2nivoroln0s"
-path="res://.godot/imported/crops_bambooStageB.glb-92fa7181275a484b898b000321791af4.scn"
+uid="uid://bve7fhysh6svl"
+path="res://.godot/imported/crops_dirtSingle.glb-b05e2de92007944481989cc558f5ea95.scn"
 
 [deps]
 
-source_file="res://assets/nature/crops/crops_bambooStageB.glb"
-dest_files=["res://.godot/imported/crops_bambooStageB.glb-92fa7181275a484b898b000321791af4.scn"]
+source_file="res://assets/nature/plant/crops/crops_dirtSingle.glb"
+dest_files=["res://.godot/imported/crops_dirtSingle.glb-b05e2de92007944481989cc558f5ea95.scn"]
 
 [params]
 

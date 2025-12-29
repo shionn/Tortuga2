@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://brhmtbq2y1ey"
-path="res://.godot/imported/crop_pumpkin.glb-2af33fd4cde9eca6a32cc354a0ad5ab8.scn"
+uid="uid://cmqmfj1g31flv"
+path="res://.godot/imported/crops_dirtDoubleRowEnd.glb-196517539755e87e14e14147e0e11446.scn"
 
 [deps]
 
-source_file="res://assets/nature/crops/crop_pumpkin.glb"
-dest_files=["res://.godot/imported/crop_pumpkin.glb-2af33fd4cde9eca6a32cc354a0ad5ab8.scn"]
+source_file="res://assets/nature/plant/crops/crops_dirtDoubleRowEnd.glb"
+dest_files=["res://.godot/imported/crops_dirtDoubleRowEnd.glb-196517539755e87e14e14147e0e11446.scn"]
 
 [params]
 

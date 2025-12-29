@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dvp83ks5jsjs8"
-path="res://.godot/imported/crops_dirtRow.glb-2351b02e73092c80d7ede563e5dc8047.scn"
+uid="uid://5hft8xcwmxjo"
+path="res://.godot/imported/crop_melon.glb-6f539160a42c306d0eb38be0528db23a.scn"
 
 [deps]
 
-source_file="res://assets/nature/crops/crops_dirtRow.glb"
-dest_files=["res://.godot/imported/crops_dirtRow.glb-2351b02e73092c80d7ede563e5dc8047.scn"]
+source_file="res://assets/nature/plant/crops/crop_melon.glb"
+dest_files=["res://.godot/imported/crop_melon.glb-6f539160a42c306d0eb38be0528db23a.scn"]
 
 [params]
 
