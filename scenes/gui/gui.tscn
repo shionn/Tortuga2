@@ -684,8 +684,10 @@ description = "Ce fruit pousse sur un arbre inaccessible. Il nous est défendu. 
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+tooltip_text = "Crystal de Téléportation"
 texture_normal = ExtResource("21_looj0")
 script = ExtResource("11_s1h2m")
+description = "Ce crystal permet d'activer le téléporteur dans la forêt. "
 
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton" to="Dialog" method="_on_option_button_pressed"]
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/CloseButton" to="Dialog" method="_on_close"]
