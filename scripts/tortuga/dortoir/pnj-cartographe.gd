@@ -9,6 +9,17 @@ func on_search_montain() -> void:
 	gui.open_dialog(pnj_name, _TEXT_TELEPORTEUR)
 	player.tags.add(Tags.FORBID_FRUIT_SEARCH_TELEPORT)
 
+func on_item_drop(item : Item) -> void:
+	if item.name == Bag.PageHungConnutFrag1 or item.name == Bag.PageHungConnutFrag2 or item.name == Bag.PageHungConnutFrag3 :
+		player.play_anim_interact()
+		if bag.contain(Bag.PageHungConnutFrag1) and bag.contain(Bag.PageHungConnutFrag2) and bag.contain(Bag.PageHungConnutFrag3) :
+			play_anim_no()
+		else :
+			play_anim_yes()
+	else :
+		super.on_item_drop(item)
+	
+
 const _TEXT = """Bonjour aventurier.ère, je suis le cartographe officiel du capitaine Whisp. 
 
 Pas un seul endroit de cette île ne m'est inconnu. Les cartes n’ont aucun secret pour moi."""

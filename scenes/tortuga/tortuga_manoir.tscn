@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cobvp8rhk1h0s" path="res://assets/character/base/character-male-d.glb" id="4_vy2c6"]
 [ext_resource type="PackedScene" uid="uid://eflbjn4io8m2" path="res://assets/town/stairs/stairs-wide-wood-handrail.glb" id="4_xe3wf"]
 [ext_resource type="PackedScene" uid="uid://dbk72njpbd4xb" path="res://assets/town/walls/wall-detail-cross.glb" id="5_dfxvo"]
-[ext_resource type="Script" uid="uid://b0uwkt4hddhgf" path="res://scripts/tortuga/pnj-manoir-whisp.gd" id="5_ujpvh"]
+[ext_resource type="Script" uid="uid://b0uwkt4hddhgf" path="res://scripts/tortuga/manoir/pnj-manoir-whisp.gd" id="5_ujpvh"]
 [ext_resource type="PackedScene" uid="uid://baslvpyulsodd" path="res://assets/character/graveyard/character-skeleton.glb" id="6_3oy5l"]
 [ext_resource type="PackedScene" uid="uid://bx0r6vahjplt0" path="res://assets/town/walls/wall-detail-diagonal.glb" id="6_ukcn8"]
 [ext_resource type="PackedScene" uid="uid://6v1bhowsnc7u" path="res://assets/town/walls/wall-detail-horizontal.glb" id="7_8dpel"]
@@ -30,7 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://dda8wlcpbj2uc" path="res://assets/town/chimney.glb" id="20_54w07"]
 [ext_resource type="PackedScene" uid="uid://bvssfm8gng07x" path="res://assets/town/chimney-top.glb" id="21_ujpvh"]
 [ext_resource type="PackedScene" uid="uid://bkylul71s3oe7" path="res://assets/town/props/stall-bench.glb" id="22_jtkrg"]
-[ext_resource type="Script" uid="uid://f07fb775kj21" path="res://scripts/tortuga/pnj-manoir-majordhomme.gd" id="22_x1bvn"]
+[ext_resource type="Script" uid="uid://f07fb775kj21" path="res://scripts/tortuga/manoir/pnj-manoir-majordhomme.gd" id="22_x1bvn"]
 [ext_resource type="PackedScene" uid="uid://d0g1hgqjf8714" path="res://assets/graveyard/candle.glb" id="27_5mpnp"]
 [ext_resource type="PackedScene" uid="uid://bcgxjpoukucvk" path="res://assets/graveyard/candle-multiple.glb" id="28_3oy5l"]
 

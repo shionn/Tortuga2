@@ -1,9 +1,13 @@
 extends Control
 class_name Bag
 
+const CarteHungConnut = "CarteHungConnut"
 const CrystalTeleportation = "CrystalTeleportation"
 const FruitDefendu = "FruitDefendu"
 const Melon = "Melon"
+const PageHungConnutFrag1 = "PageHungConnutFrag1"
+const PageHungConnutFrag2 = "PageHungConnutFrag2"
+const PageHungConnutFrag3 = "PageHungConnutFrag3"
 const ParcheminBarbeDrue = "ParcheminBarbeDrue"
 const ParcheminBarbeDrueDecoder = "ParcheminBarbeDrueDecoder"
 const PotionDegrisement = "PotionDegrisement"

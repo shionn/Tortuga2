@@ -1,16 +1,16 @@
 [gd_scene load_steps=70 format=3 uid="uid://byfhqtkkcefl2"]
 
-[ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/bouteille_note_lisible.gd" id="1_c7jrm"]
+[ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/barbe-drue/bouteille_note_lisible.gd" id="1_c7jrm"]
 [ext_resource type="PackedScene" uid="uid://dvplfstqecj42" path="res://assets/mine/tortuga-60.glb" id="1_hh6n0"]
-[ext_resource type="Script" uid="uid://bkxghrcx478fh" path="res://scripts/tortuga/bouteille_note_illisible.gd" id="1_jit35"]
+[ext_resource type="Script" uid="uid://bkxghrcx478fh" path="res://scripts/tortuga/barbe-drue/bouteille_note_illisible.gd" id="1_jit35"]
 [ext_resource type="PackedScene" uid="uid://b5xtrnp1f2eg7" path="res://assets/pirate/props/bottle.glb" id="1_wohch"]
 [ext_resource type="PackedScene" uid="uid://dn1b4sjm530aw" path="res://assets/pirate/plant/grass.glb" id="2_wohch"]
-[ext_resource type="Script" uid="uid://d16eq5jx6cour" path="res://scripts/tortuga/parchemin-hung-connut.gd" id="3_7h4df"]
+[ext_resource type="Script" uid="uid://d16eq5jx6cour" path="res://scripts/tortuga/hung-connut/page-hung-connut.gd" id="3_7h4df"]
 [ext_resource type="PackedScene" uid="uid://0orcol7h3owh" path="res://assets/pirate/patch-grass.glb" id="3_jit35"]
 [ext_resource type="PackedScene" uid="uid://nuvlejq8qd0s" path="res://assets/pirate/plant/palm-bend.glb" id="4_c7jrm"]
 [ext_resource type="PackedScene" uid="uid://biv43nrtuadi8" path="res://assets/pirate/plant/palm-detailed-bend.glb" id="5_iswrd"]
 [ext_resource type="PackedScene" uid="uid://bagjq72im08wg" path="res://assets/pirate/plant/grass-plant.glb" id="6_j21kd"]
-[ext_resource type="Script" uid="uid://b8l6pcos8ev35" path="res://scripts/tortuga/parchemin-coline-q1.gd" id="6_tny17"]
+[ext_resource type="Script" uid="uid://b8l6pcos8ev35" path="res://scripts/tortuga/barbe-drue/parchemin-coline-q1.gd" id="6_tny17"]
 [ext_resource type="PackedScene" uid="uid://cbasjmgb4ls33" path="res://assets/pirate/rocks-b.glb" id="7_h2gq6"]
 [ext_resource type="PackedScene" uid="uid://c1sc7qjitvtsi" path="res://assets/pirate/rocks-a.glb" id="8_ggmis"]
 [ext_resource type="PackedScene" uid="uid://chxfr2yagmg24" path="res://assets/pirate/rocks-c.glb" id="9_1lej4"]
@@ -26,7 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://cw6drohyqv0hi" path="res://assets/graveyard/gravestone/gravestone-cross.glb" id="17_l2qgb"]
 [ext_resource type="PackedScene" uid="uid://cddoflww4nmld" path="res://assets/graveyard/wall/brick-wall.glb" id="18_8eg22"]
 [ext_resource type="PackedScene" uid="uid://m5x8alnnip8v" path="res://assets/pirate/plant/grass-patch.glb" id="18_bsjpt"]
-[ext_resource type="Script" uid="uid://c645dmkubin6h" path="res://scripts/tortuga/tomb-barde-drue.gd" id="18_pie5s"]
+[ext_resource type="Script" uid="uid://c645dmkubin6h" path="res://scripts/tortuga/barbe-drue/tomb-barde-drue.gd" id="18_pie5s"]
 [ext_resource type="PackedScene" uid="uid://dqjvdao1ganeg" path="res://assets/nature/path/path_stone.glb" id="19_duvqq"]
 [ext_resource type="PackedScene" uid="uid://cxya32nmglnq4" path="res://scenes/tortuga/tortuga_wall.tscn" id="19_n6usc"]
 [ext_resource type="PackedScene" uid="uid://d2d7oty4ebqab" path="res://scenes/tortuga/tortuga_capitainerie.tscn" id="20_eu0va"]
@@ -45,7 +45,7 @@
 [ext_resource type="PackedScene" uid="uid://dpjhqteufdpw7" path="res://assets/props/oga_scroll.glb" id="27_ggmis"]
 [ext_resource type="PackedScene" uid="uid://blifncbh7xys7" path="res://scenes/tortuga/tortuga_reserve_d_or.tscn" id="27_veopy"]
 [ext_resource type="PackedScene" uid="uid://ukreens1wy4a" path="res://scenes/tortuga/tortuga_wall_coffre.tscn" id="28_b2pjt"]
-[ext_resource type="Script" uid="uid://co84wje5bypgt" path="res://scripts/tortuga/parchemin-montagne-capitainerie.gd" id="28_ggmis"]
+[ext_resource type="Script" uid="uid://co84wje5bypgt" path="res://scripts/tortuga/barbe-drue/parchemin-montagne-capitainerie.gd" id="28_ggmis"]
 [ext_resource type="PackedScene" uid="uid://bagm6lyjb83lg" path="res://scenes/tortuga/tortuga_brasserie.tscn" id="29_w1jow"]
 [ext_resource type="PackedScene" uid="uid://bqwr1sdl4wvhs" path="res://scenes/tortuga/tortuga_armurerie.tscn" id="30_5obc8"]
 [ext_resource type="PackedScene" uid="uid://bl8gqk34ub2cy" path="res://assets/pirate/props/crate-bottles.glb" id="31_acrrl"]
@@ -100,10 +100,35 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8750305, 0, 0)
 transform = Transform3D(0.3461886, 0.9063078, 0.24240386, -0.7424039, 0.42261824, -0.51983684, -0.57357645, 0, 0.81915206, 64.87503, 0.07070817, 53.299995)
 visible = false
 script = ExtResource("3_7h4df")
+item = "PageHungConnutFrag1"
 
 [node name="Area3D" type="Area3D" parent="coline/parchemin-hung-connut-1"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="coline/parchemin-hung-connut-1/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.046980113, 0)
+shape = SubResource("BoxShape3D_2w2tg")
+
+[node name="parchemin-hung-connut-2" parent="coline" instance=ExtResource("27_ggmis")]
+transform = Transform3D(0.3461886, 0.9063078, 0.24240386, -0.7424039, 0.42261824, -0.51983684, -0.57357645, 0, 0.81915206, 103.07504, 1.4707083, 46.699993)
+visible = false
+script = ExtResource("3_7h4df")
+item = "PageHungConnutFrag2"
+
+[node name="Area3D" type="Area3D" parent="coline/parchemin-hung-connut-2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="coline/parchemin-hung-connut-2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.046980113, 0)
+shape = SubResource("BoxShape3D_2w2tg")
+
+[node name="parchemin-hung-connut-3" parent="coline" instance=ExtResource("27_ggmis")]
+transform = Transform3D(-0.6015662, -0.07898995, 0.7949079, -0.74240386, 0.42261818, -0.5198368, -0.2948807, -0.902859, -0.3128752, 77.77504, 0.47070825, -5.100007)
+visible = false
+script = ExtResource("3_7h4df")
+item = "PageHungConnutFrag2"
+
+[node name="Area3D" type="Area3D" parent="coline/parchemin-hung-connut-3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="coline/parchemin-hung-connut-3/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.046980113, 0)
 shape = SubResource("BoxShape3D_2w2tg")
 
@@ -2758,5 +2783,7 @@ skeleton = NodePath("../..")
 transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 44, 1.5, -31)
 
 [connection signal="body_entered" from="coline/Area3D" to="coline/parchemin-hung-connut-1" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="coline/Area3D" to="coline/parchemin-hung-connut-2" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="coline/Area3D" to="coline/parchemin-hung-connut-3" method="_on_area_3d_body_entered"]
 [connection signal="timeout" from="mountain/AnimatableBody3D/Timer" to="mountain/AnimatableBody3D" method="_on_timer_timeout"]
 [connection signal="timeout" from="MontagneCapitainerie/Escalator/AnimatableBody3D/Timer" to="MontagneCapitainerie/Escalator/AnimatableBody3D" method="_on_timer_timeout"]
