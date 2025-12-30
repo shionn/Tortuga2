@@ -42,7 +42,7 @@ pnj_role = "Charger"
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 5.4, 4.02, 3)
 script = ExtResource("5_xdcba")
 model = ExtResource("6_8jhy7")
-pnj_name = "Zackari"
+pnj_name = "Zakari"
 pnj_role = "Cartographe"
 
 [node name="road2" parent="." instance=ExtResource("1_b0sk0")]

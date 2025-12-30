@@ -124,7 +124,7 @@ shape = SubResource("BoxShape3D_2w2tg")
 transform = Transform3D(-0.6015662, -0.07898995, 0.7949079, -0.74240386, 0.42261818, -0.5198368, -0.2948807, -0.902859, -0.3128752, 77.77504, 0.47070825, -5.100007)
 visible = false
 script = ExtResource("3_7h4df")
-item = "PageHungConnutFrag2"
+item = "PageHungConnutFrag3"
 
 [node name="Area3D" type="Area3D" parent="coline/parchemin-hung-connut-3"]
 

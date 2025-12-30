@@ -13,9 +13,12 @@ func on_item_drop(item : Item) -> void:
 	if item.name == Bag.PageHungConnutFrag1 or item.name == Bag.PageHungConnutFrag2 or item.name == Bag.PageHungConnutFrag3 :
 		player.play_anim_interact()
 		if bag.contain(Bag.PageHungConnutFrag1) and bag.contain(Bag.PageHungConnutFrag2) and bag.contain(Bag.PageHungConnutFrag3) :
-			play_anim_no()
-		else :
 			play_anim_yes()
+			gui.open_dialog(pnj_name, TEXT_FRAGMENT_HUNG_COMPLET)
+			gui.append_to_console("Félicitation, vous avez achevé la première quête. Penser à sauvegarder.")
+		else :
+			play_anim_no()
+			gui.open_dialog(pnj_name, _TEXT_MISSING_PAGE)
 	else :
 		super.on_item_drop(item)
 	
@@ -27,3 +30,13 @@ Pas un seul endroit de cette île ne m'est inconnu. Les cartes n’ont aucun sec
 const _TEXT_TELEPORTEUR = """Tu veux atteindre le sommet de la plus haute montagne de l’île ? Aucun alpinisme ne le pourrait. Quand j’ai exploré l'île pour en faire une carte complète, j’ai trouvé une pierre étrange dans la forêt au nord. 
 
 En déchiffrant les glyphes gravés dessus, j’ai compris qu’il s’agissait d’un téléporteur qui semble mener au sommet de la montagne. Mais celui-ci a besoin d'une pierre pour être activé, elle serait au fond de la baie, les gardes de la capitainerie l'ont fouillé de fond en comble pour moi mais ils n'ont rien trouvé."""
+
+const _TEXT_MISSING_PAGE = """Que veux tu que je fasse de cela?
+Il manque des pages pour que je puisse en faire une carte complète.
+
+Il devrait y avoir trois fragments."""
+
+const TEXT_FRAGMENT_HUNG_COMPLET = """Ça va être de la tarte. Reviens dans quelque jours et la carte sera prête. 
+
+Pour avancer plus loin, il nous faut accomplir une quête de peinture. 
+Pour prouvez que vous avez fini cette quête reporter le code \"par mon compas et ma lunette\" dans le canal discord des quêtes."""
