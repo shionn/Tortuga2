@@ -20,10 +20,17 @@ var state = STATUT.MOVING
 
 var tags = Tags.new()
 
-func sit(look_at = 0) -> void: 
+func sit(position : Vector3, look_at = 0) -> void: 
 	state = STATUT.SIT
+	self.position = position
 	_animation.play("sit")
 	_pivot.rotation.y = look_at
+
+func teleport(position : Vector3, look_at = 0) -> void:
+	self.position = position
+	_pivot.rotation.y = look_at
+	_camera_pivot.rotation.y = look_at + PI
+	
 
 func play_anim_interact() -> void:
 	_animation.play("interact-right")
