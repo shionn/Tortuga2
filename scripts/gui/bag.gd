@@ -2,6 +2,7 @@ extends Control
 class_name Bag
 
 const CrystalTeleportation = "CrystalTeleportation"
+const Melon = "Melon"
 
 @onready var _grid = $Panel/MarginContainer/VBoxContainer/GridContainer as GridContainer
 @onready var _items = $"../Items" as Control
@@ -9,6 +10,10 @@ const CrystalTeleportation = "CrystalTeleportation"
 @onready var _gui = $".." as Gui
 
 var drag : Item
+
+func _ready() -> void:
+	# uniquement pour dev ne pas laisser
+	load_game()
 
 func _process(delta: float) -> void:
 	if drag != null :
@@ -40,14 +45,14 @@ func empty() :
 func _on_close_button_pressed() -> void:
 	hide()
 
-func save() -> void :
+func save_game() -> void :
 	var file = FileAccess.open("user://bag.save", FileAccess.WRITE)
 	var item_names = []
 	for item in _grid.get_children() : item_names.append(item.name)
 	var json_string = JSON.stringify(item_names)
 	file.store_line(json_string)
 
-func load() -> void : 
+func load_game() -> void : 
 	if FileAccess.file_exists("user://bag.save") :
 		var file = FileAccess.open("user://bag.save", FileAccess.READ)
 		for item_name in JSON.parse_string(file.get_line()) :

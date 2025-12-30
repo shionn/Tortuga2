@@ -20,11 +20,11 @@ func have(tag:String) -> bool :
 func remove(tag:String) -> void :
 	tags.erase(tag)
 	
-func save() -> void :
+func save_game() -> void :
 	var file = FileAccess.open("user://tags.save", FileAccess.WRITE)
 	file.store_line(JSON.stringify(tags))
 
-func load() -> void : 
+func load_game() -> void : 
 	if FileAccess.file_exists("user://tags.save") :
 		var file = FileAccess.open("user://tags.save", FileAccess.READ)
 		tags.clear()

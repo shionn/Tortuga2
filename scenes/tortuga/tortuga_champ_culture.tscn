@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dr8atgydxkkga"]
+[gd_scene load_steps=13 format=3 uid="uid://dr8atgydxkkga"]
 
 [ext_resource type="PackedScene" uid="uid://bpjhrdyngxsjn" path="res://assets/town/fence-hedge/fence.glb" id="1_qyevh"]
 [ext_resource type="PackedScene" uid="uid://cck1c4xn4v2k7" path="res://assets/town/fence-hedge/fence-gate.glb" id="2_ja88i"]
@@ -9,49 +9,116 @@
 [ext_resource type="PackedScene" uid="uid://shbtqtwdmk1j" path="res://assets/nature/plant/crops/crops_dirtRowEnd.glb" id="7_g2sn3"]
 [ext_resource type="PackedScene" uid="uid://bdj1fsawyqs20" path="res://assets/nature/plant/crops/crop_carrot.glb" id="8_ggy3x"]
 [ext_resource type="PackedScene" uid="uid://dctyc7h2rad0r" path="res://assets/nature/plant/crops/crops_wheatStageA.glb" id="9_lt4hb"]
+[ext_resource type="PackedScene" uid="uid://5hft8xcwmxjo" path="res://assets/nature/plant/crops/crop_melon.glb" id="10_lt4hb"]
+[ext_resource type="Script" uid="uid://wff5kowb2n5l" path="res://scripts/tortuga/culture-melon.gd" id="11_u0kcl"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_u0kcl"]
+radius = 0.25131527
 
 [node name="culture" type="Node3D"]
 
-[node name="fence2" parent="." instance=ExtResource("1_qyevh")]
+[node name="crop_melon2" parent="." instance=ExtResource("10_lt4hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0.1, -5)
+script = ExtResource("11_u0kcl")
+
+[node name="Area3D" type="Area3D" parent="crop_melon2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="crop_melon2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.098754995, 0)
+shape = SubResource("SphereShape3D_u0kcl")
+
+[node name="crop_melon3" parent="." instance=ExtResource("10_lt4hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0.1, -5)
+script = ExtResource("11_u0kcl")
+
+[node name="Area3D" type="Area3D" parent="crop_melon3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="crop_melon3/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.098754995, 0)
+shape = SubResource("SphereShape3D_u0kcl")
+
+[node name="crop_melon4" parent="." instance=ExtResource("10_lt4hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.1, -5)
+script = ExtResource("11_u0kcl")
+
+[node name="Area3D" type="Area3D" parent="crop_melon4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="crop_melon4/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.098754995, 0)
+shape = SubResource("SphereShape3D_u0kcl")
+
+[node name="crop_melon5" parent="." instance=ExtResource("10_lt4hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0.1, -5)
+script = ExtResource("11_u0kcl")
+
+[node name="Area3D" type="Area3D" parent="crop_melon5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="crop_melon5/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.098754995, 0)
+shape = SubResource("SphereShape3D_u0kcl")
+
+[node name="crop_melon6" parent="." instance=ExtResource("10_lt4hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.79999995, 0.1, -5)
+script = ExtResource("11_u0kcl")
+
+[node name="Area3D" type="Area3D" parent="crop_melon6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="crop_melon6/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.098754995, 0)
+shape = SubResource("SphereShape3D_u0kcl")
+
+[node name="crop_melon7" parent="." instance=ExtResource("10_lt4hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.1, -5)
+script = ExtResource("11_u0kcl")
+
+[node name="Area3D" type="Area3D" parent="crop_melon7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="crop_melon7/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.098754995, 0)
+shape = SubResource("SphereShape3D_u0kcl")
+
+[node name="Fences" type="Node3D" parent="."]
+
+[node name="fence2" parent="Fences" instance=ExtResource("1_qyevh")]
 transform = Transform3D(-2, 0, -3.019916e-07, 0, 2, 0, 3.019916e-07, 0, -2, -2, 0, -1)
 
-[node name="fence6" parent="." instance=ExtResource("1_qyevh")]
+[node name="fence6" parent="Fences" instance=ExtResource("1_qyevh")]
 transform = Transform3D(-2, 0, -3.019916e-07, 0, 2, 0, 3.019916e-07, 0, -2, -2, 0, -5)
 
-[node name="fence7" parent="." instance=ExtResource("1_qyevh")]
+[node name="fence7" parent="Fences" instance=ExtResource("1_qyevh")]
 transform = Transform3D(-2.1456883e-07, 0, 2, 0, 2, 0, -2, 0, -2.1456883e-07, -2, 0, -5)
 
-[node name="fence8" parent="." instance=ExtResource("1_qyevh")]
+[node name="fence8" parent="Fences" instance=ExtResource("1_qyevh")]
 transform = Transform3D(-2.1456883e-07, 0, 2, 0, 2, 0, -2, 0, -2.1456883e-07, 2, 0, -5)
 
-[node name="fence3" parent="." instance=ExtResource("1_qyevh")]
+[node name="fence3" parent="Fences" instance=ExtResource("1_qyevh")]
 transform = Transform3D(-2, 0, 3.019916e-07, 0, 2, 0, -3.019916e-07, 0, -2, -2, 0, 1)
 
-[node name="fence4" parent="." instance=ExtResource("1_qyevh")]
+[node name="fence4" parent="Fences" instance=ExtResource("1_qyevh")]
 transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -2, 0, 1)
 
-[node name="fence-gate2" parent="." instance=ExtResource("2_ja88i")]
+[node name="fence-gate2" parent="Fences" instance=ExtResource("2_ja88i")]
 transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 0, 0, 1)
 
-[node name="fence5" parent="." instance=ExtResource("1_qyevh")]
+[node name="fence5" parent="Fences" instance=ExtResource("1_qyevh")]
 transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 2, 0, 1)
 
-[node name="fence9" parent="." instance=ExtResource("1_qyevh")]
+[node name="fence9" parent="Fences" instance=ExtResource("1_qyevh")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2, 0, -1)
 
-[node name="fence10" parent="." instance=ExtResource("1_qyevh")]
+[node name="fence10" parent="Fences" instance=ExtResource("1_qyevh")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2, 0, -5)
 
-[node name="fence11" parent="." instance=ExtResource("1_qyevh")]
+[node name="fence11" parent="Fences" instance=ExtResource("1_qyevh")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2, 0, -3)
 
-[node name="fence-broken2" parent="." instance=ExtResource("3_gmwra")]
+[node name="fence-broken2" parent="Fences" instance=ExtResource("3_gmwra")]
 transform = Transform3D(-2, 0, -3.019916e-07, 0, 2, 0, 3.019916e-07, 0, -2, -2, 0, -3)
 
-[node name="fence-broken4" parent="." instance=ExtResource("3_gmwra")]
+[node name="fence-broken4" parent="Fences" instance=ExtResource("3_gmwra")]
 transform = Transform3D(-2.1456883e-07, 0, 2, 0, 2, 0, -2, 0, -2.1456883e-07, 0, 0, -5)
 
-[node name="fence-broken3" parent="." instance=ExtResource("3_gmwra")]
+[node name="fence-broken3" parent="Fences" instance=ExtResource("3_gmwra")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2, 0, 1)
 
 [node name="tool-shovel2" parent="." instance=ExtResource("4_gmwra")]
@@ -270,15 +337,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.05, -5)
 [node name="crops_dirtRowEnd23" parent="." instance=ExtResource("7_g2sn3")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.5000002, 0.05, -5)
 
-[node name="crops_wheatStageA8" parent="." instance=ExtResource("9_lt4hb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0.1, -5)
-
-[node name="crops_wheatStageA9" parent="." instance=ExtResource("9_lt4hb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1000001, 0.1, -5)
-
-[node name="crops_wheatStageA10" parent="." instance=ExtResource("9_lt4hb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.1, -5)
-
 [node name="crops_dirtRow13" parent="." instance=ExtResource("6_trbxq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.05, -5)
 
@@ -287,15 +345,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.05, -5)
 
 [node name="crops_dirtRowEnd25" parent="." instance=ExtResource("7_g2sn3")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.49999976, 0.05, -5)
-
-[node name="crops_wheatStageA11" parent="." instance=ExtResource("9_lt4hb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0.1, -5)
-
-[node name="crops_wheatStageA12" parent="." instance=ExtResource("9_lt4hb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.89999986, 0.1, -5)
-
-[node name="crops_wheatStageA13" parent="." instance=ExtResource("9_lt4hb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.1, -5)
 
 [node name="crops_dirtRow14" parent="." instance=ExtResource("6_trbxq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.05, -4)

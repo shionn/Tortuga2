@@ -10,7 +10,7 @@ func _on_no() -> void:
 	pass
 
 func _on_yes() -> void:
-	bag.load()
-	player.tags.load()
+	bag.load_game()
+	player.tags.load_game()
 	gui.append_to_console("Partie chargée")
 	pass

@@ -10,7 +10,7 @@ func _on_no() -> void:
 	pass
 
 func _on_yes() -> void:
-	bag.save()
-	player.tags.save()
+	bag.save_game()
+	player.tags.save_game()
 	gui.append_to_console("Partie sauvegardée")
 	pass

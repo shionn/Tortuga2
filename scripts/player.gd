@@ -50,6 +50,8 @@ func _ready() -> void:
 	_pivot.add_child(node)
 	_animation = node.get_child(1)
 	_animation.get_animation("idle").loop_mode = Animation.LOOP_LINEAR
+	# uniquement pour le dev ne pas garder
+	tags.load_game()
 
 func _physics_process(delta: float) -> void:
 

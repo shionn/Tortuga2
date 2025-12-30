@@ -1,7 +1,7 @@
-[gd_scene load_steps=23 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=24 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://scripts/gui/gui.gd" id="1_0fbet"]
-[ext_resource type="Script" uid="uid://ikfx1cjqumpb" path="res://scripts/gui/dialog.gd" id="2_bgohe"]
+[ext_resource type="Script" path="res://scripts/gui/dialog.gd" id="2_bgohe"]
 [ext_resource type="Texture2D" uid="uid://dyq75clqrse1h" path="res://assets/gui/ui-adventure/minimap_ring_brown_detail.png" id="2_ioifv"]
 [ext_resource type="Texture2D" uid="uid://ctudwtb3qq5jg" path="res://assets/gui/ui-adventure/minimap_compass_toon_n.png" id="3_q46mf"]
 [ext_resource type="Texture2D" uid="uid://6r2enbextcew" path="res://assets/gui/ui-adventure/minimap_compass_toon_s.png" id="4_ytf3d"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://pvmbclri70b1" path="res://assets/imgs/whisp.png" id="17_r82fa"]
 [ext_resource type="Texture2D" uid="uid://bmblv1t7mtklt" path="res://assets/gui/fruit-icons-redo/red-apple-h-48.png" id="19_ukjlc"]
 [ext_resource type="Texture2D" uid="uid://cygakm7juveua" path="res://assets/gui/resources-pack-1/Crystal-h-48.png" id="21_looj0"]
+[ext_resource type="Texture2D" uid="uid://bs0icmlv8xa0a" path="res://assets/gui/fruit-icons-redo/watermelon-h-48.png" id="22_rex2l"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yw5qc"]
 bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
@@ -688,6 +689,15 @@ tooltip_text = "Crystal de Téléportation"
 texture_normal = ExtResource("21_looj0")
 script = ExtResource("11_s1h2m")
 description = "Ce crystal permet d'activer le téléporteur dans la forêt. "
+
+[node name="Melon" type="TextureButton" parent="Items"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+tooltip_text = "Melon"
+texture_normal = ExtResource("22_rex2l")
+script = ExtResource("11_s1h2m")
+description = "Ce melon semble délicieux."
 
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton" to="Dialog" method="_on_option_button_pressed"]
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/CloseButton" to="Dialog" method="_on_close"]

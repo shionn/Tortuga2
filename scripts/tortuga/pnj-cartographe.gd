@@ -15,4 +15,4 @@ Pas un seul endroit de cette île ne m'est inconnu. Les cartes n’ont aucun sec
 
 const _TEXT_TELEPORTEUR = """Tu veux atteindre le sommet de la plus haute montagne de l’île ? Aucun alpinisme ne le pourrait. Quand j’ai exploré l'île pour en faire une carte complète, j’ai trouvé une pierre étrange dans la forêt au nord. 
 
-En déchiffrant les glyphes gravés dessus, j’ai compris qu’il s’agissait d’un téléporteur qui semble mener au sommet de la montagne. Mais celui-ci a besoin d'une pierre pour être activé, elle serait au fond de la baie, nous l’avons fouillé de fond en comble mais nous n’avons rien trouvé."""
+En déchiffrant les glyphes gravés dessus, j’ai compris qu’il s’agissait d’un téléporteur qui semble mener au sommet de la montagne. Mais celui-ci a besoin d'une pierre pour être activé, elle serait au fond de la baie, les gardes de la capitainerie l'ont fouillé de fond en comble pour moi mais ils n'ont rien trouvé."""
