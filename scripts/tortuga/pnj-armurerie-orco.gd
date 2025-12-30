@@ -1,7 +1,7 @@
 extends "res://scripts/pnj.gd"
 
 func on_interact() -> void:
-	open_text(pnj_name, """Bonjour. 
+	gui.open_dialog(pnj_name, """Bonjour. 
 
 Mon nom est imprononçable pour vous les humains. Vos semblables m'appellent Orco, je suis l'armurier du village. 
 

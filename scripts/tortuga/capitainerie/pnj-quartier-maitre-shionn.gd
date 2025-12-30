@@ -1,7 +1,7 @@
 extends "res://scripts/pnj.gd"
 
 func on_interact() -> void:
-	open_text(pnj_name, _TEXT)
+	gui.open_dialog(pnj_name, _TEXT)
 	
 	
 const _TEXT = """Bonjour, 

@@ -2,7 +2,7 @@ extends "res://scripts/interactable.gd"
 
 
 func on_interact() -> void:
-	open_text("Bouteille", """Cette bouteille contient une note illisible. 
+	gui.open_dialog("Bouteille", """Cette bouteille contient une note illisible. 
 
 B.... .. .s ..l..r... .. mal...
 ...s .... n. ..ff... ..s,

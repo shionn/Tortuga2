@@ -9,6 +9,14 @@ class_name Dialog
 var callback : Callable
 
 func open_dialog(title: String, text: String, size: Vector2 = Vector2(400,400)) -> void: 
+	self._open(title, text, size)
+	self.position.x = 10
+
+func open_alert(title: String, text: String, size: Vector2 = Vector2(300,200)) -> void :
+	self._open(title, text, size)
+	self.position.x = get_viewport_rect().size.x/2 - size.x/2
+	
+func _open(title: String, text: String, size: Vector2) -> void :
 	self.set_size(size)
 	self.offset_top=-size.y/2
 	self.offset_bottom=size.y/2
@@ -19,6 +27,7 @@ func open_dialog(title: String, text: String, size: Vector2 = Vector2(400,400)) 
 	_dialog_title.text = title
 	_option_button.hide()
 	self.show()
+	
 
 func set_option(text:String, callback: Callable) -> void:
 	self.callback = callback

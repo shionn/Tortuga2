@@ -37,7 +37,8 @@ func open_dialog(title: String, text: String, size: Vector2 = Vector2(400,400)) 
 	return _dialog
 
 func open_alert(title: String, text: String, size: Vector2 = Vector2(300,200)) -> Dialog: 
-	return open_dialog(title, text, size)
+	_dialog.open_alert(title, text, size)
+	return _dialog
 
 func open_dialog_and_img(title: String, text: String, img: Resource) -> void:
 	_dialog_img_text.clear()

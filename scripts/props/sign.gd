@@ -4,4 +4,4 @@ extends "res://scripts/interactable.gd"
 @export_multiline var text : String
 
 func on_interact() -> void:
-	open_alert(title, text)
+	gui.open_alert(title, text)

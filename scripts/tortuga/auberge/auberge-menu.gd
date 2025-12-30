@@ -1,7 +1,7 @@
 extends "res://scripts/interactable.gd"
 
 func on_interact() -> void:
-	open_text("Menu", """
+	gui.open_dialog("Menu", """
 Café			1 pa
 Biere			1 pa
 Rhum			2 pa

@@ -5,14 +5,14 @@ func _ready() -> void:
 	_animation.play("sit")
 
 func on_interact() -> void:
-	open_text(pnj_name,TEXT_INTRO)
+	gui.open_dialog(pnj_name,TEXT_INTRO)
 	$Laugh.play()
 
 func on_item_drop(item : Item) -> void:
 	if item.name == 'TresorBarbeDrue' :
-		open_text(pnj_name,TEXT_TRESOR_BARBE_DRUE)
+		gui.open_dialog(pnj_name,TEXT_TRESOR_BARBE_DRUE)
 	elif item.name == 'ParcheminBarbeDrue' :
-		open_text(pnj_name,TEXT_PARCHEMIN_BARBE_DRUE)
+		gui.open_dialog(pnj_name,TEXT_PARCHEMIN_BARBE_DRUE)
 	elif item.name == Bag.PageHungConnutFrag1 or item.name == Bag.PageHungConnutFrag2 or item.name == Bag.PageHungConnutFrag3 :
 		gui.open_dialog(pnj_name, TEXT_FRAGMENT_HUNG_CONNUT)
 	else :

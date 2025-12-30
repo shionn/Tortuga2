@@ -11,7 +11,7 @@ Pour le déchiffrer vous trouverez un sage."""
 func on_interact() -> void:
 	# 
 	if player.tags.have(Tags.TREASUR_BARBE_DRUE_OPENED) or bag.contain(Bag.TresorBarbeDrue) or  bag.contain(Bag.TresorBarbeDrueNet) : 
-		open_alert("Coffre vide", "Le coffre est vide")
+		gui.open_alert("Coffre vide", "Le coffre est vide")
 	else :
 		open_question("Entrez le code", on_answer)
 
@@ -22,4 +22,4 @@ func on_answer(answer: String) -> void:
 		bag.loot(Bag.ParcheminBarbeDrue)
 		player.tags.add(Tags.TREASUR_BARBE_DRUE_OPENED)
 	else :
-		open_alert("Mauvais code", "Le coffre ne s'ouvre pas.")
+		gui.open_alert("Mauvais code", "Le coffre ne s'ouvre pas.")

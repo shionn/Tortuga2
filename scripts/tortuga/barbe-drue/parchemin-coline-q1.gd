@@ -1,7 +1,7 @@
 extends "res://scripts/interactable.gd"
 
 func on_interact() -> void:
-	open_text("Parchemin", """Au nord, 
+	gui.open_dialog("Parchemin", """Au nord, 
 Après les monts qui forment la pair,
 Non loin d'une forêt courbée,
 Se tient ma demeure éternelle.

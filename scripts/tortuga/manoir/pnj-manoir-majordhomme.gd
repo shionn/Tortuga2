@@ -2,6 +2,6 @@ extends "res://scripts/pnj.gd"
 
 
 func on_interact() -> void:
-	open_text(pnj_name, """Salut Pirate. 
+	gui.open_dialogs(pnj_name, """Salut Pirate. 
 	
 Le Capitaine Whisp est haut il t'attend il a une mission pour toi.""")

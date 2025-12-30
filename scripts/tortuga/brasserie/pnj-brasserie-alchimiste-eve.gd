@@ -13,7 +13,7 @@ func on_search_sobering_potion() -> void:
 
 func on_item_drop(item : Item) -> void:
 	if item.name == Bag.ParcheminBarbeDrue :
-		open_text(pnj_name, _TEXT_PARCHEMIN_BARBE_DRUE)
+		gui.open_dialog(pnj_name, _TEXT_PARCHEMIN_BARBE_DRUE)
 		gui.append_to_console("Félicitation, vous avez achevé la première quête. Penser à sauvegarder.")
 		# a decommanté pour lancer la quete numero 2
 		#player.tags.add(Tags.FORBID_FRUIT_SEARCH)

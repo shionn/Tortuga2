@@ -1,7 +1,7 @@
 extends "res://scripts/interactable.gd"
 
 func on_interact() -> void:
-	open_text("Parchemin", """Bravo tu es allé déjà très loin,
+	gui.open_dialog("Parchemin", """Bravo tu es allé déjà très loin,
 Le trésor est presque entre tes mains,
 Mais Barbe Drue était très malin,
 Depuis le mat tu vois loin,

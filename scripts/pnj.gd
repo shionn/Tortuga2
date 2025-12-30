@@ -39,7 +39,7 @@ func _process(delta: float) -> void:
 
 func on_item_drop(item : Item) -> void:
 	play_anim_no()
-	open_alert(pnj_name, "Je n'ai que faire de ça.")
+	gui.open_alert(pnj_name, "Je n'ai que faire de ça.")
 
 func play_anim_no() -> void : 
 	_animation.play("emote-no")

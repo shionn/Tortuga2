@@ -18,7 +18,7 @@ func on_interact() -> void:
 
 func on_item_drop(item : Item) -> void: 
 	player.play_anim_no()
-	open_alert("Oups", "Non ca ne marche pas")
+	gui.open_alert("Oups", "Non ca ne marche pas")
 
 func _on_mouse_entered() -> void:
 	if bag and bag.drag != null:
@@ -41,13 +41,6 @@ func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, n
 				gui.append_to_console("Trop loin")
 		else :
 			on_interact()
-
-# a supprimer
-func open_text(title: String, text: String, size = Vector2(400,400)) -> Dialog: 
-	return gui.open_dialog(title, text, size)
-
-func open_alert(title: String, text: String) -> void: 
-	gui.open_dialog(title, text, Vector2(300,200))
 
 func open_dialog_and_img(title: String, text: String, img: Resource) -> void:
 	gui.open_dialog_and_img(title, text, img)
