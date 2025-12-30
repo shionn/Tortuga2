@@ -1,7 +1,5 @@
 extends "res://scripts/interactable.gd"
 
-@onready var _bag = $"/root/World/Gui/Bag" as Bag
-
 const _TEXT =  """Vous avez résolue l'énigme de Barbe Drue
 
 Dans ce coffre en plus t'as amas d'or, et de rubis vous trouverez également un parchemin,
@@ -12,7 +10,7 @@ Pour le déchiffrer vous trouverez un sage."""
 
 func on_interact() -> void:
 	# 
-	if _bag.contain('TresorBarbeDrue') or  _bag.contain('TresorBarbeDrueNet') : 
+	if player.tags.have(Tags.TREASUR_BARBE_DRUE_OPENED) or bag.contain(Bag.TresorBarbeDrue) or  bag.contain(Bag.TresorBarbeDrueNet) : 
 		open_alert("Coffre vide", "Le coffre est vide")
 	else :
 		open_question("Entrez le code", on_answer)
@@ -20,7 +18,8 @@ func on_interact() -> void:
 func on_answer(answer: String) -> void:
 	if answer == "14738":
 		open_dialog_and_img("Félicitation", _TEXT, load("res://assets/imgs/treasures.png"))
-		_bag.loot('TresorBarbeDrue')
-		_bag.loot('ParcheminBarbeDrue')
+		bag.loot(Bag.TresorBarbeDrue)
+		bag.loot(Bag.ParcheminBarbeDrue)
+		player.tags.add(Tags.TREASUR_BARBE_DRUE_OPENED)
 	else :
 		open_alert("Mauvais code", "Le coffre ne s'ouvre pas.")

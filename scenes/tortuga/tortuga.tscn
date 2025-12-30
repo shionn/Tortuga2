@@ -76,7 +76,7 @@ size = Vector3(1.2, 1.1, 1.4)
 size = Vector3(2.2, 0.2, 2.4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ienh3"]
-size = Vector3(0.6, 0.6, 0.25)
+size = Vector3(0.62, 1, 0.42)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iswrd"]
 size = Vector3(2.5, 0.3, 2.5)
@@ -844,7 +844,7 @@ script = ExtResource("36_5xhig")
 [node name="Area3D" type="Area3D" parent="ColineDerriereMontagne/Teleporteur/statue_ring2"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ColineDerriereMontagne/Teleporteur/statue_ring2/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46223164, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2622316, 0)
 shape = SubResource("BoxShape3D_ienh3")
 
 [node name="plante" type="Node3D" parent="ColineDerriereMontagne"]

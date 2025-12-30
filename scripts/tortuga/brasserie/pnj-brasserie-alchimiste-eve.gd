@@ -25,6 +25,15 @@ func on_item_drop(item : Item) -> void:
 		player.tags.add(Tags.BRASSERIE_HAVE_SOBERING_POTION)
 		player.play_anim_interact()
 		bag.unloot(Bag.Melon)
+	elif item.name == Bag.FruitDefendu :
+		gui.open_dialog(pnj_name, _TEXT_GIVE_FRUIT)
+		player.tags.remove(Tags.FORBID_FRUIT_SEARCH)
+		player.tags.remove(Tags.FORBID_FRUIT_SEARCH_MONTAGNE)
+		player.tags.remove(Tags.FORBID_FRUIT_SEARCH_TELEPORT)
+		bag.unloot(Bag.ParcheminBarbeDrue)
+		bag.unloot(Bag.FruitDefendu)
+		bag.loot(Bag.ParcheminBarbeDrueDecoder)
+		pass
 	else : 
 		super.on_item_drop(item)
 
@@ -52,3 +61,9 @@ const _TEXT_GIVE_MELON = """Ha, du melon ! Je vais enfin pouvoir finir mes potio
 Bien sûr, sans melon la potion fonctionne très bien. Mais son goût est horrible.
 
 Si tu en veux, sert toi dans la caisse à côté de toi."""
+
+const _TEXT_GIVE_FRUIT = """Salut Compagnon,
+
+Oooh vous êtes génial, vous avez trouvé le fruit défendu? Incroyable je suis tellement heureuse voici le parchemin décrypté. 
+
+Je viens juste de le finir, c'est un code très ancien."""

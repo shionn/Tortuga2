@@ -2,9 +2,13 @@ extends Control
 class_name Bag
 
 const CrystalTeleportation = "CrystalTeleportation"
+const FruitDefendu = "FruitDefendu"
 const Melon = "Melon"
-const PotionDegrisement = "PotionDegrisement"
 const ParcheminBarbeDrue = "ParcheminBarbeDrue"
+const ParcheminBarbeDrueDecoder = "ParcheminBarbeDrueDecoder"
+const PotionDegrisement = "PotionDegrisement"
+const TresorBarbeDrue = "TresorBarbeDrue"
+const TresorBarbeDrueNet = "TresorBarbeDrueNet"
 
 @onready var _grid = $Panel/MarginContainer/VBoxContainer/GridContainer as GridContainer
 @onready var _items = $"../Items" as Control
