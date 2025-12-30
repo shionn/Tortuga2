@@ -3,14 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="1_37eor"]
 [ext_resource type="PackedScene" uid="uid://h386a44aelmc" path="res://assets/town/walls/wall-arch-top.glb" id="1_kxu0y"]
 [ext_resource type="PackedScene" uid="uid://cey7n6kj43a6y" path="res://assets/low-poly-rpg-item-2/crystal-blue.glb" id="1_v60b6"]
-[ext_resource type="Script" uid="uid://cfkdie18bfc5s" path="res://scripts/tortuga/pnj-quartier-maitre-shionn.gd" id="2_0xb0s"]
+[ext_resource type="Script" uid="uid://cfkdie18bfc5s" path="res://scripts/tortuga/capitainerie/pnj-quartier-maitre-shionn.gd" id="2_0xb0s"]
 [ext_resource type="PackedScene" uid="uid://dsqb6308w0ec1" path="res://assets/town/road/road.glb" id="2_g6mws"]
-[ext_resource type="Script" uid="uid://cybfspphquq8e" path="res://scripts/tortuga/crystal_teleporteur.gd" id="2_rckht"]
+[ext_resource type="Script" uid="uid://cybfspphquq8e" path="res://scripts/tortuga/capitainerie/crystal_teleporteur.gd" id="2_rckht"]
 [ext_resource type="PackedScene" uid="uid://c5o4y67ic3vrp" path="res://assets/character/base/character-male-b.glb" id="3_0xb0s"]
 [ext_resource type="PackedScene" uid="uid://bw666kf55m31r" path="res://assets/pirate/structures/structure-platform-dock-long.glb" id="3_g6mws"]
 [ext_resource type="PackedScene" uid="uid://duxk68dw5p4ar" path="res://assets/town/walls/wall-arch.glb" id="4_7masi"]
 [ext_resource type="PackedScene" uid="uid://dvn116r1fxtxs" path="res://assets/town/road/road-wood.glb" id="4_7uxyy"]
-[ext_resource type="Script" uid="uid://bgr31sneitoih" path="res://scripts/tortuga/pnj-capitainerie-garde.gd" id="4_yhvfd"]
+[ext_resource type="Script" uid="uid://bgr31sneitoih" path="res://scripts/tortuga/capitainerie/pnj-capitainerie-garde.gd" id="4_yhvfd"]
 [ext_resource type="PackedScene" uid="uid://diuwrvkauw1fs" path="res://assets/town/walls/wall.glb" id="5_7uxyy"]
 [ext_resource type="PackedScene" uid="uid://bpjhrdyngxsjn" path="res://assets/town/fence-hedge/fence.glb" id="5_gfsu3"]
 [ext_resource type="PackedScene" uid="uid://b74k6p4g3plcr" path="res://assets/character/dungeon/character-human.glb" id="5_t3mk0"]
@@ -626,5 +626,5 @@ collision_mask = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 3.5, 0)
 shape = SubResource("BoxShape3D_rckht")
 
-[connection signal="body_entered" from="Area3D" to="pnj-garde" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Area3D" to="crystal-blue" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Area3D" to="pnj-garde" method="_on_area_3d_body_entered"]

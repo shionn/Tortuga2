@@ -3,17 +3,15 @@ class_name Bag
 
 const CrystalTeleportation = "CrystalTeleportation"
 const Melon = "Melon"
+const PotionDegrisement = "PotionDegrisement"
+const ParcheminBarbeDrue = "ParcheminBarbeDrue"
 
 @onready var _grid = $Panel/MarginContainer/VBoxContainer/GridContainer as GridContainer
 @onready var _items = $"../Items" as Control
 @onready var _console = $"../Console/RichTextLabel" as RichTextLabel
 @onready var _gui = $".." as Gui
 
-var drag : Item
-
-func _ready() -> void:
-	# uniquement pour dev ne pas laisser
-	load_game()
+var drag : Item = null
 
 func _process(delta: float) -> void:
 	if drag != null :

@@ -43,8 +43,8 @@ func on_item_drop(item : Item) -> void:
 
 func play_anim_no() -> void : 
 	_animation.play("emote-no")
-	_animation.queue("idle")
+	_animation.queue(animation_name)
 
 func play_anim_yes() -> void : 
 	_animation.play("emote-yes")
-	_animation.queue("idle")
+	_animation.queue(animation_name)

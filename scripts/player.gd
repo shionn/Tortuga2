@@ -50,8 +50,6 @@ func _ready() -> void:
 	_pivot.add_child(node)
 	_animation = node.get_child(1)
 	_animation.get_animation("idle").loop_mode = Animation.LOOP_LINEAR
-	# uniquement pour le dev ne pas garder
-	tags.load_game()
 
 func _physics_process(delta: float) -> void:
 
@@ -75,7 +73,7 @@ func _physics_process(delta: float) -> void:
 		
 
 func _handle_move() -> void: 
-	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var input_dir := Input.get_vector("move_left", "move_righ", "move_front", "move_back")
 	var cam_basis := _camera.get_global_transform().basis
 	var direction := cam_basis * Vector3(input_dir.x, 0, input_dir.y)
 	direction.y = 0
@@ -96,7 +94,7 @@ func _handle_move() -> void:
 			_animation.play("idle")
 
 func _handle_jump() -> void :
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		state = STATUT.MOVING
 		velocity.y = JUMP_VELOCITY
 		_animation.play("jump")

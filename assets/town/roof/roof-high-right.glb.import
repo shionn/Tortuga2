@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cnyqkjvjwoe5w"
-path="res://.godot/imported/roof-high-right.glb-68128480cf2162775ccb0bcb2cbb2cb2.scn"
+path="res://.godot/imported/roof-high-right.glb-e9712485466786ef7119adecaa3b6166.scn"
 
 [deps]
 
-source_file="res://assets/town/roof/roof-high-right.glb"
-dest_files=["res://.godot/imported/roof-high-right.glb-68128480cf2162775ccb0bcb2cbb2cb2.scn"]
+source_file="res:///assets/town/roof/roof-high-right.glb"
+dest_files=["res://.godot/imported/roof-high-right.glb-e9712485466786ef7119adecaa3b6166.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_box.gd"
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

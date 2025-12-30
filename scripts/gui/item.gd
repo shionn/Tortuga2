@@ -14,7 +14,11 @@ func _ready() -> void:
 	connect("pressed", on_activate)
 	connect("button_down", _on_button_down)
 	connect("button_up", _on_button_up)
-	
+
+#func _process(delta: float) -> void:
+#	if name == "Melon" and global_position.x > 0:
+#		print(global_position)
+
 func on_enter(interactable : Interactable) -> void :
 	self._interactable = interactable
 	set_default_cursor_shape(Control.CURSOR_CAN_DROP)
@@ -28,7 +32,7 @@ var _initial_position:Vector2
 
 func _on_button_down() -> void: 
 	_initial_position = global_position
-	_bag.drag = self
+	_bag.drag = self 
 	set_default_cursor_shape(Control.CURSOR_DRAG)
 
 func _on_button_up() -> void: 
