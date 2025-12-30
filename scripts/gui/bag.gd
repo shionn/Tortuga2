@@ -1,6 +1,8 @@
 extends Control
 class_name Bag
 
+const CrystalTeleportation = "CrystalTeleportation"
+
 @onready var _grid = $Panel/MarginContainer/VBoxContainer/GridContainer as GridContainer
 @onready var _items = $"../Items" as Control
 @onready var _console = $"../Console/RichTextLabel" as RichTextLabel

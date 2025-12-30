@@ -31,6 +31,7 @@
 - https://opengameart.org/content/rpg-item-collection-1 ?
 - https://opengameart.org/content/rpg-item-collection-3 ?
 - https://opengameart.org/content/lowpoly-crystals-pack ?
+- https://opengameart.org/content/lowpoly-crystals ?
 
 ## non importer mais pourrai etre simpa : 
 - paper : https://opengameart.org/content/papers

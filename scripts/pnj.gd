@@ -26,6 +26,7 @@ func _ready() -> void:
 		_role_3d.text = "<"+pnj_role+">"
 	
 	_animation = _character.get_child(1)
+	_animation.get_animation("idle").loop_mode = Animation.LOOP_LINEAR
 	if animation_loop :
 		_animation.get_animation(animation_name).loop_mode = Animation.LOOP_LINEAR
 	_animation.play(animation_name)

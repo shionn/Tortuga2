@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=23 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://scripts/gui/gui.gd" id="1_0fbet"]
 [ext_resource type="Script" uid="uid://ikfx1cjqumpb" path="res://scripts/gui/dialog.gd" id="2_bgohe"]
@@ -20,6 +20,7 @@
 [ext_resource type="Script" uid="uid://b6vmysw3vlje5" path="res://scripts/gui/acceuil.gd" id="16_3deuf"]
 [ext_resource type="Texture2D" uid="uid://pvmbclri70b1" path="res://assets/imgs/whisp.png" id="17_r82fa"]
 [ext_resource type="Texture2D" uid="uid://bmblv1t7mtklt" path="res://assets/gui/fruit-icons-redo/red-apple-h-48.png" id="19_ukjlc"]
+[ext_resource type="Texture2D" uid="uid://cygakm7juveua" path="res://assets/gui/resources-pack-1/Crystal-h-48.png" id="21_looj0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yw5qc"]
 bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
@@ -678,6 +679,13 @@ tooltip_text = "Fruit défendu"
 texture_normal = ExtResource("19_ukjlc")
 script = ExtResource("11_s1h2m")
 description = "Ce fruit pousse sur un arbre inaccessible. Il nous est défendu. "
+
+[node name="CrystalTeleportation" type="TextureButton" parent="Items"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("21_looj0")
+script = ExtResource("11_s1h2m")
 
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton" to="Dialog" method="_on_option_button_pressed"]
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/CloseButton" to="Dialog" method="_on_close"]
