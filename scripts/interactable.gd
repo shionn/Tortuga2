@@ -6,7 +6,7 @@ class_name Interactable
 @onready var _area := $Area3D as Area3D
 @onready var player = $"/root/World/Player" as Player
 
-@export var interactable_distance = 2 as float
+@export var interactable_distance = 3 as float
 
 func _ready() -> void:
 	_area.connect("mouse_entered", _on_mouse_entered)

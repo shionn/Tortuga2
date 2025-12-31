@@ -7,7 +7,8 @@ extends CharacterBody3D
 var _speed := 0 as float
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("control_boat") :
+	# Je desactive le control du bateau pour l'instant
+	if Input.is_action_just_pressed("control_boat") and false :
 		if _camera.current :
 			_camera.clear_current()
 		elif _activation.overlaps_body(_player) :
