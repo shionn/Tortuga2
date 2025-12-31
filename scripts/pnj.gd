@@ -5,6 +5,7 @@ extends "res://scripts/interactable.gd"
 @export var pnj_role = ""
 @export var animation_name = "idle"
 @export var animation_loop = true
+@export var model_scale = 1.0
 
 @onready var _name_3d := $name as Label3D
 @onready var _role_3d := $role as Label3D
@@ -17,6 +18,7 @@ func _ready() -> void:
 	super._ready()
 	remove_child(_character)
 	_character = model.instantiate()
+	if model_scale != 1 : _character.scale = Vector3(model_scale,model_scale,model_scale)
 	add_child(_character)
 	
 	_name_3d.text = pnj_name
@@ -26,7 +28,7 @@ func _ready() -> void:
 		_role_3d.text = "<"+pnj_role+">"
 	
 	_animation = _character.get_child(1)
-	_animation.get_animation("idle").loop_mode = Animation.LOOP_LINEAR
+	_animation.get_animation(animation_name).loop_mode = Animation.LOOP_LINEAR
 	if animation_loop :
 		_animation.get_animation(animation_name).loop_mode = Animation.LOOP_LINEAR
 	_animation.play(animation_name)
