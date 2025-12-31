@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://brird11bbbwv0"]
+[gd_scene load_steps=23 format=3 uid="uid://brird11bbbwv0"]
 
 [ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="1_1ebyv"]
 [ext_resource type="PackedScene" uid="uid://dsqb6308w0ec1" path="res://assets/town/road/road.glb" id="1_b0sk0"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://dt8xikej6hhld" path="res://assets/character/base/character-male-a.glb" id="6_8jhy7"]
 [ext_resource type="PackedScene" uid="uid://dvn116r1fxtxs" path="res://assets/town/road/road-wood.glb" id="6_d8tdb"]
 [ext_resource type="PackedScene" uid="uid://bi0rgxdomkpgp" path="res://assets/town/fence-hedge/balcony-wall-fence.glb" id="7_d8tdb"]
+[ext_resource type="Script" uid="uid://dq44k72mkqsce" path="res://scripts/tortuga/dortoir/charpentier-ryland.gd" id="7_frco2"]
+[ext_resource type="PackedScene" uid="uid://b2qtcc1xvlpgx" path="res://assets/character/base/character-male-e.glb" id="8_cosmj"]
 [ext_resource type="PackedScene" uid="uid://b5vkbbk6ethhq" path="res://assets/nature/props/bed.glb" id="8_g6x1p"]
 [ext_resource type="PackedScene" uid="uid://86dcdsinmla4" path="res://assets/town/walls/wall-wood-window-round.glb" id="9_g6x1p"]
 [ext_resource type="PackedScene" uid="uid://bpjhrdyngxsjn" path="res://assets/town/fence-hedge/fence.glb" id="10_qnjnv"]
@@ -45,6 +47,13 @@ script = ExtResource("5_xdcba")
 model = ExtResource("6_8jhy7")
 pnj_name = "Zakari"
 pnj_role = "Cartographe"
+
+[node name="Ryland" parent="." instance=ExtResource("1_1ebyv")]
+transform = Transform3D(-0.8660254, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.8660254, -5.3, 2.02, -3)
+script = ExtResource("7_frco2")
+model = ExtResource("8_cosmj")
+pnj_name = "Ryland"
+pnj_role = "Charpentier"
 
 [node name="road2" parent="." instance=ExtResource("1_b0sk0")]
 transform = Transform3D(15, 0, 0, 0, -10, -1.2079664e-06, 0, 1.509958e-06, -8, 0, 0, 0)
@@ -143,17 +152,20 @@ shadow_enabled = true
 [node name="Stair1" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
+[node name="telescope" parent="Stair1" instance=ExtResource("19_xln1q")]
+transform = Transform3D(0.27762488, -0.10104719, -0.052094426, 0.10260601, 0.2819077, 0, 0.048952762, -0.017817346, 0.29544216, 7, 2.8670344, 3.3)
+
 [node name="road-wood" parent="Stair1" instance=ExtResource("6_d8tdb")]
-transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 8, 4, 0, 0)
+transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 8, 4, -0.01, 0)
 
 [node name="road-wood2" parent="Stair1" instance=ExtResource("6_d8tdb")]
-transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 8, -4, 0, 0)
+transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 8, -4, -0.01, 0)
 
 [node name="road-wood3" parent="Stair1" instance=ExtResource("6_d8tdb")]
-transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, -2.5)
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 3, 0, -0.01, -2.5)
 
 [node name="road-wood4" parent="Stair1" instance=ExtResource("6_d8tdb")]
-transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, 2.5)
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 3, 0, -0.01, 2.5)
 
 [node name="wall-wood-window-glass13" parent="Stair1" instance=ExtResource("3_gm81c")]
 transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 2, 0, 2)
@@ -314,16 +326,16 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
 
 [node name="road-wood" parent="Stair2" instance=ExtResource("6_d8tdb")]
-transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 8, 4, 0, 0)
+transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 8, 4, -0.01, 0)
 
 [node name="road-wood2" parent="Stair2" instance=ExtResource("6_d8tdb")]
-transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 8, -4, 0, 0)
+transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 8, -4, -0.01, 0)
 
 [node name="road-wood3" parent="Stair2" instance=ExtResource("6_d8tdb")]
-transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, -2.5)
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 3, 0, -0.01, -2.5)
 
 [node name="road-wood4" parent="Stair2" instance=ExtResource("6_d8tdb")]
-transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, 2.5)
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 3, 0, -0.01, 2.5)
 
 [node name="wall-wood-window-glass13" parent="Stair2" instance=ExtResource("3_gm81c")]
 transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 2, 0, 2)
@@ -591,6 +603,3 @@ transform = Transform3D(-4.3711387e-07, 0, -2, 0, 2, 0, 2, 0, -4.3711387e-07, -2
 
 [node name="roof-high13" parent="roof2" instance=ExtResource("13_ldcuj")]
 transform = Transform3D(2.6226832e-07, 0, 2, 0, 2, 0, -2, 0, 2.6226832e-07, -4, 6, 2.9999998)
-
-[node name="telescope" parent="." instance=ExtResource("19_xln1q")]
-transform = Transform3D(0.27762488, -0.10104719, -0.052094426, 0.10260601, 0.2819077, 0, 0.048952762, -0.017817346, 0.29544216, 7, 4.8670344, 3.3)
