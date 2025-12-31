@@ -1,10 +1,12 @@
-[gd_scene load_steps=49 format=3 uid="uid://c8y6go07dabnn"]
+[gd_scene load_steps=51 format=3 uid="uid://c8y6go07dabnn"]
 
 [ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="1_hrd0d"]
 [ext_resource type="PackedScene" uid="uid://bn2k1c6mt0j5l" path="res://assets/town/walls/wall-window-shutters.glb" id="2_83rxu"]
 [ext_resource type="PackedScene" uid="uid://cj2lgbr3jctjg" path="res://assets/town/fence-hedge/hedge-gate.glb" id="2_g4xan"]
+[ext_resource type="Script" uid="uid://cg75617b4cto3" path="res://scripts/tortuga/brasserie/gustave-vendeur-itinerant.gd" id="2_o63fr"]
 [ext_resource type="PackedScene" uid="uid://ba3btavlna1xw" path="res://assets/town/fence-hedge/hedge-curved.glb" id="3_7ouha"]
 [ext_resource type="PackedScene" uid="uid://dj7aq7h57gvln" path="res://assets/character/base/character-female-c.glb" id="3_hrd0d"]
+[ext_resource type="PackedScene" uid="uid://cjxowsxfha55l" path="res://assets/character/graveyard/character-keeper.glb" id="3_ucrqo"]
 [ext_resource type="PackedScene" uid="uid://nnlilh34hq42" path="res://assets/town/fence-hedge/hedge.glb" id="4_4iy6t"]
 [ext_resource type="PackedScene" uid="uid://d4hl0amhnq7od" path="res://assets/character/base/character-female-b.glb" id="4_s2xlh"]
 [ext_resource type="PackedScene" uid="uid://dru71m0k1pta1" path="res://assets/pirate/props/crate.glb" id="5_wgia6"]
@@ -60,6 +62,13 @@ size = Vector3(0.14355469, 0.1, 0.5018921)
 size = Vector3(0.13014454, 0.14038867, 0.05)
 
 [node name="TortugaAuberge" type="Node3D"]
+
+[node name="gustave" parent="." instance=ExtResource("1_hrd0d")]
+transform = Transform3D(-0.7660444, 0, -0.6427877, 0, 1, 0, 0.6427877, 0, -0.7660444, 2.7, -0.05, -6.6)
+script = ExtResource("2_o63fr")
+model = ExtResource("3_ucrqo")
+pnj_name = "Gustave"
+pnj_role = "Vendeur Itinérant"
 
 [node name="Stool" parent="." instance=ExtResource("44_o63fr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30000007, 0, -2.4)
