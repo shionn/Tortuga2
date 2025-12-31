@@ -63,11 +63,11 @@ size = Vector3(0.13014454, 0.14038867, 0.05)
 
 [node name="TortugaAuberge" type="Node3D"]
 
-[node name="gustave" parent="." instance=ExtResource("1_hrd0d")]
+[node name="gustaf" parent="." instance=ExtResource("1_hrd0d")]
 transform = Transform3D(-0.7660444, 0, -0.6427877, 0, 1, 0, 0.6427877, 0, -0.7660444, 2.7, -0.05, -6.6)
 script = ExtResource("2_o63fr")
 model = ExtResource("3_ucrqo")
-pnj_name = "Gustave"
+pnj_name = "Gustaf"
 pnj_role = "Vendeur Itinérant"
 
 [node name="Stool" parent="." instance=ExtResource("44_o63fr")]
