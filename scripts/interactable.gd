@@ -36,8 +36,10 @@ func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, n
 	if event is InputEventMouseButton and Input.is_action_just_pressed("interact"): 
 		if player :
 			if player.global_position.distance_to(self.global_position) < interactable_distance :
+				player.play_anim_interact()
 				on_interact()
 			else :
+				player.play_anim_no()
 				gui.append_to_console("Trop loin")
 		else :
 			on_interact()

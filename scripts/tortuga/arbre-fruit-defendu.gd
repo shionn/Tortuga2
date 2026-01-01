@@ -1,7 +1,6 @@
 extends "res://scripts/interactable.gd"
 
 func on_interact() -> void:
-	player.play_anim_interact()
 	visible = false
 	bag.loot(Bag.FruitDefendu)
 	player.tags.add(Tags.FORBID_FRUIT_LOOTED)

@@ -69,7 +69,6 @@ script = ExtResource("2_0xb0s")
 model = ExtResource("3_0xb0s")
 pnj_name = "Rurick"
 pnj_role = "Quartier Maître"
-interactable_distance = 3.0
 
 [node name="pnj-garde" parent="." instance=ExtResource("1_37eor")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 2.1, -3)

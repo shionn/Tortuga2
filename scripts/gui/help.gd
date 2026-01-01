@@ -35,6 +35,7 @@ Se déplacer avec ZQSD
 Sauter avec la touche espace
 Interagir avec le clic gauche
 Orienter la caméra avec le clic droit
+Ouvrir et Fermer le Sac avec I
 [/ul]
 
 [color=yellow]Pour sauvegarder ou reprendre votre aventure, aller voir Dupont et Dupond dans le dortoire.[/color]

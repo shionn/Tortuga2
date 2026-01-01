@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4g8d08ibg0qg"]
+
+[ext_resource type="Script" uid="uid://dg05c4558isl5" path="res://scripts/tortuga/teleporteur.gd" id="1_c8i0i"]
+[ext_resource type="PackedScene" uid="uid://be0qmiygft2vk" path="res://assets/nature/statue/statue_ring.glb" id="2_3d2bl"]
+[ext_resource type="AudioStream" uid="uid://cdo68mhun7oca" path="res://assets/sound/teleport.ogg" id="3_iprx4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_63a04"]
+size = Vector3(0.62, 1, 0.42)
+
+[node name="Teleporteur" type="Node3D"]
+script = ExtResource("1_c8i0i")
+
+[node name="statue_ring2" parent="." instance=ExtResource("2_3d2bl")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2622316, 0)
+shape = SubResource("BoxShape3D_63a04")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_iprx4")

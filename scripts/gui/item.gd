@@ -39,8 +39,12 @@ func _on_button_up() -> void:
 	if _initial_position != null :
 		global_position = _initial_position
 	if _interactable != null :
-		_player.play_anim_interact()
-		_interactable.on_item_drop(self)
+		if _player.global_position.distance_to(_interactable.global_position) < _interactable.interactable_distance :
+			_player.play_anim_interact()
+			_interactable.on_item_drop(self)
+		else :
+			_player.play_anim_no()
+			_gui.append_to_console("Trop loin")
 	_bag.drag = null
 	set_default_cursor_shape(Control.CURSOR_POINTING_HAND)
 

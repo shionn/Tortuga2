@@ -650,7 +650,7 @@ texture_normal = ExtResource("13_qv6l0")
 script = ExtResource("11_s1h2m")
 description = "Todo ouvrir une carte"
 
-[node name="CrystalTeleportation" type="TextureButton" parent="Items"]
+[node name="CrystalTeleportationOasis" type="TextureButton" parent="Items"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 48.0

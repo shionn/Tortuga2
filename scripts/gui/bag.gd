@@ -2,7 +2,7 @@ extends Control
 class_name Bag
 
 const CarteHungConnut = "CarteHungConnut"
-const CrystalTeleportation = "CrystalTeleportation"
+const CrystalTeleportationOasis = "CrystalTeleportationOasis"
 const FruitDefendu = "FruitDefendu"
 const Melon = "Melon"
 const PageHungConnutFrag1 = "PageHungConnutFrag1"
@@ -32,13 +32,14 @@ func loot(item_name : String) -> void :
 		_grid.add_child(item)
 		_gui.append_to_console("Vous obtenez <"+item.tooltip_text+">")
 	else :
-		print("bordel")
+		print("loot error")
 		print(item_name)
 
 func unloot(item_name : String) -> void :
 	var item = _grid.get_node(item_name)
 	if item :
 		_grid.remove_child(item)
+		item.global_position = Vector2(-100,-100)
 		_items.add_child(item)
 
 func contain(item_name : String) -> bool:
