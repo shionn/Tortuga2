@@ -1,6 +1,6 @@
 extends "res://scripts/interactable.gd"
 
-@export_multiline var desciption : String = "Cette pierre permet de se téléporter mais il me faut la pierre pour l’activer."
+@export_multiline var desciption : String = "Cette pierre permet de se téléporter mais il me faut le cristal pour l’activer."
 @export var return_crystal : String
 
 @onready var _audio = $AudioStreamPlayer

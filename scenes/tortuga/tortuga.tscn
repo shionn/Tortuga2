@@ -892,7 +892,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83, 0, -178)
 
 [node name="Teleporteur" parent="ColineDerriereMontagne" instance=ExtResource("37_7h4df")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 3, -5)
-desciption = "Cette pierre permet de se téléporter au sommet de la montagne mais il me faut la pierre pour l’activer."
+desciption = "Cette pierre permet de se téléporter au sommet de la montagne mais il me faut un cristal pour l’activer."
 
 [node name="path_stoneEnd2" parent="ColineDerriereMontagne" instance=ExtResource("41_67xyg")]
 transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, -8.400002, 3, -6)
