@@ -62,11 +62,13 @@ func open_yes_no_question(title: String, question: String, on_no: Callable, on_y
 	_input_yn.show()
 
 func _process(delta: float) -> void:
-	_debug_info.text = str(_player.global_position) + " " + str(rad_to_deg(_player._pivot.rotation.y))
-	_debug_info.text += "\nfps: " + str(Engine.get_frames_per_second())
+	_debug_info.text = "fps: " + str(Engine.get_frames_per_second())
 	_compass_arrow.rotation = -_player_camera.rotation.y
 	if Input.is_action_just_pressed("debug") :
 		append_to_console(str(_player.tags.tags))
+		append_to_console(str(_player.global_position) + " " + str(rad_to_deg(_player._pivot.rotation.y)))
+	if Input.is_action_just_pressed("open_bag") :
+		$Bag.visible = not $Bag.visible
 
 func _on_close_dialog_and_img_button_pressed() -> void:
 	_dialog_img.hide()

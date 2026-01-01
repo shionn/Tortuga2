@@ -15,8 +15,7 @@ func on_item_drop(item : Item) -> void:
 	if item.name == Bag.ParcheminBarbeDrue :
 		gui.open_dialog(pnj_name, _TEXT_PARCHEMIN_BARBE_DRUE)
 		gui.append_to_console("Félicitation, vous avez achevé la première quête. Penser à sauvegarder.")
-		# a decommanté pour lancer la quete numero 2
-		#player.tags.add(Tags.FORBID_FRUIT_SEARCH)
+		player.tags.add(Tags.FORBID_FRUIT_SEARCH)
 		player.play_anim_interact()
 	elif item.name == Bag.Melon && not player.tags.have(Tags.BRASSERIE_HAVE_SOBERING_POTION) :
 		gui.open_dialog(pnj_name,_TEXT_GIVE_MELON)
@@ -42,11 +41,12 @@ const _TEXT_PRESENTATION = """Bonjour,
 Je suis Eve l'alchimiste de l'île, je sais faire de puissante potion. 
 Mais je suis surtout connu pour ma bière et mon rhum."""
 
-const _TEXT_PARCHEMIN_BARBE_DRUE = """Hum ce parchemin n’est pas dans langue étrangère, mais il est codé, je peux te le décoder mais je ne peux pas encore le faire. 
-	
-Pour avancer plus loin, il nous faut accomplir une quête de peinture. 
-Pour prouvez que vous avez fini cette quête reporter le code \"Par ma barbe rousse et drue\" dans le canal discord des quêtes. 
-Cela permettra de lancer la quête de peinture qui débloquerait la suite."""
+const _TEXT_PARCHEMIN_BARBE_DRUE = """Salut Compagnon,
+Hum ce parchemin n’est pas dans langue étrangère, mais il est codé. Je peux vous le décoder bien sûr mais en échange d’un service.
+
+Une légende raconte qu’il existe un fruit défendu qui pousse sur cette île mais personne ne l’a jamais  trouvé. Il aurait des propriétés curatives importantes et pourrait m’aider à créer des potions plus efficaces. Je n’ai pas plus d’information sur ce fruit. 
+
+Quand vous reviendrez avec le fruit, le parchemin sera prêt. Bonne chance!"""
 
 const _TEXT_SEARCH_SOBERING = """Tu veux une potion de dégrisement ? 
 
