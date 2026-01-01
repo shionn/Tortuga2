@@ -88,7 +88,19 @@ text = "Ceci est un essai de text
 
 Sur plusieurs lignes en plus"
 
-[node name="OptionButton" type="Button" parent="Dialog/MarginContainer/VBoxContainer"]
+[node name="OptionButton1" type="Button" parent="Dialog/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Option"
+text = "Option"
+
+[node name="OptionButton2" type="Button" parent="Dialog/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Option"
+text = "Option"
+
+[node name="OptionButton3" type="Button" parent="Dialog/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Option"
@@ -769,7 +781,9 @@ script = ExtResource("11_s1h2m")
 description = "C'est le trésor de Barbe Drue. 
 Mais la taxe sur les gains affairant à la piraterie est passée par la. "
 
-[connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton" to="Dialog" method="_on_option_button_pressed"]
+[connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton1" to="Dialog" method="_on_option_button_1_pressed"]
+[connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton2" to="Dialog" method="_on_option_button_2_pressed"]
+[connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton3" to="Dialog" method="_on_option_button_3_pressed"]
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/CloseButton" to="Dialog" method="_on_close"]
 [connection signal="pressed" from="DialogAndImg/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_and_img_button_pressed"]
 [connection signal="pressed" from="Input/Panel/MarginContainer/VBoxContainer/ValidateButton" to="." method="_on_validate_input_button_pressed"]

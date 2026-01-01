@@ -4,9 +4,13 @@ class_name Dialog
 
 @onready var _dialog_text := $MarginContainer/VBoxContainer/RichTextLabel as RichTextLabel
 @onready var _dialog_title := $MarginContainer/VBoxContainer/Title as Label
-@onready var _option_button := $MarginContainer/VBoxContainer/OptionButton as Button
+@onready var _option_button1 := $MarginContainer/VBoxContainer/OptionButton1 as Button
+@onready var _option_button2 := $MarginContainer/VBoxContainer/OptionButton2 as Button
+@onready var _option_button3 := $MarginContainer/VBoxContainer/OptionButton3 as Button
 
-var callback : Callable
+var _callback1 : Callable
+var _callback2 : Callable
+var _callback3 : Callable
 
 func open_dialog(title: String, text: String, size: Vector2 = Vector2(400,400)) -> void: 
 	self._open(title, text, size)
@@ -25,18 +29,37 @@ func _open(title: String, text: String, size: Vector2) -> void :
 	_dialog_text.clear()
 	_dialog_text.add_text(text)
 	_dialog_title.text = title
-	_option_button.hide()
+	_option_button1.hide()
+	_option_button2.hide()
+	_option_button3.hide()
 	self.show()
 	
 
 func set_option(text:String, callback: Callable) -> void:
-	self.callback = callback
-	_option_button.text = text
-	_option_button.show()
+	if not _option_button1.visible:
+		_callback1 = callback
+		_option_button1.text = text
+		_option_button1.show()
+	elif not _option_button2.visible:
+		_callback2 = callback
+		_option_button2.text = text
+		_option_button2.show()
+	elif not _option_button3.visible:
+		_callback3 = callback
+		_option_button3.text = text
+		_option_button3.show()
 
 func _on_close() -> void:
 	self.hide()
 
+func _on_option_button_1_pressed() -> void:
+	_callback1.call()
+	self.hide()
 
-func _on_option_button_pressed() -> void:
-	callback.call()
+func _on_option_button_2_pressed() -> void:
+	_callback2.call()
+	self.hide()
+
+func _on_option_button_3_pressed() -> void:
+	_callback3.call()
+	self.hide()
