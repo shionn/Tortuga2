@@ -1,9 +1,12 @@
 extends "res://scripts/pnj.gd"
 
 func on_interact() -> void:
-	gui.open_dialog(pnj_name, _TEXT)
-	
-	
+	gui.open_dialog(pnj_name, _TEXT).with_options([
+		Dialogs.default_search_forbid_fruit_option(self),
+		Dialogs.default_search_forbid_fruit_montain_option(self),
+		Dialogs.default_search_forbid_fruit_teleport_option(self)
+	])
+ 
 const _TEXT = """Bonjour, 
 
 Je suis le chef de la capitainerie. Aucun bateau ne quitte le port sans ma permission. 

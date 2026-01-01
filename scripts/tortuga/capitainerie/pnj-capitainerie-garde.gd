@@ -2,9 +2,15 @@ extends "res://scripts/pnj.gd"
 
 func on_interact() -> void:
 	if (player.tags.have(Tags.GUARD_HARBOUR_OFFICE_SOBERING)) :
-		var dialog = gui.open_dialog(pnj_name, _TEXT_SOBRE)
-		if (player.tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT)) :
-			dialog.set_option("Crystal de téléportation ?", on_search_crystal)
+		gui.open_dialog(pnj_name, _TEXT_SOBRE).with_options([
+			Dialogs.default_search_forbid_fruit_option(self),
+			Dialogs.default_search_forbid_fruit_montain_option(self),
+			PnjDialogOption.new(
+				func () : return player.tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT),
+				Dialogs.question_search_forbid_fruit_teleport,
+				func () : gui.open_dialog(pnj_name, _TEXT_INDICE_CRYSTAL)
+			)
+		])
 	else :
 		gui.open_dialog(pnj_name, _TEXT)
 		if player.tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT) :
@@ -17,15 +23,9 @@ func on_item_drop(item : Item) -> void:
 		player.tags.remove(Tags.SEARCH_SOBERING_POTION)
 		animation_name = "idle"
 		play_anim_yes()
-		var dialog = gui.open_dialog(pnj_name, _TEXT_SOBRE)
-		if (player.tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT)) :
-			dialog.set_option("Crystal de téléportation ?", on_search_crystal)
+		on_interact()
 	else :
 		super.on_item_drop(item)
-
-func on_search_crystal() -> void:
-	gui.open_dialog(pnj_name, _TEXT_INDICE_CRYSTAL)
-
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if (player.tags.have(Tags.GUARD_HARBOUR_OFFICE_SOBERING)) :

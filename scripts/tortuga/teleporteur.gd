@@ -14,9 +14,10 @@ func on_interact() -> void:
 func on_item_drop(item : Item) -> void:
 	if not return_crystal.is_empty() && item.name == return_crystal :
 		_audio.play()
-		player.teleport(Vector3(75,3,-185), deg_to_rad(1))
+		player.teleport(Vector3(75.0,3.0,-185.0), deg_to_rad(1.0))
 	elif item.name == Bag.CrystalTeleportationOasis : 
 		_audio.play()
-		player.teleport(Vector3(172,105,-253), deg_to_rad(-133))
+		player.teleport(Vector3(172.0,105.0,-253.0), deg_to_rad(-133.0))
+		player.tags.remove(Tags.FORBID_FRUIT_SEARCH_MONTAGNE)
 	else :
 		super.on_item_drop(item)

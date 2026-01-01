@@ -12,20 +12,26 @@ var _callback1 : Callable
 var _callback2 : Callable
 var _callback3 : Callable
 
-func open_dialog(title: String, text: String, size: Vector2 = Vector2(400,400)) -> void: 
-	self._open(title, text, size)
+func open_dialog(title: String, text: String, _size: Vector2 = Vector2(400,400)) -> void: 
+	self._open(title, text, _size)
 	self.position.x = 10
 
-func open_alert(title: String, text: String, size: Vector2 = Vector2(300,200)) -> void :
-	self._open(title, text, size)
-	self.position.x = get_viewport_rect().size.x/2 - size.x/2
+func with_options(options: Array[PnjDialogOption] = []) -> Dialog :
+	for option in options :
+		if option.enable.call() :
+			set_option(option.title, option.action)
+	return self
+
+func open_alert(title: String, text: String, _size: Vector2 = Vector2(300,200)) -> void :
+	self._open(title, text, _size)
+	self.position.x = get_viewport_rect().size.x/2 - _size.x/2
 	
-func _open(title: String, text: String, size: Vector2) -> void :
+func _open(title: String, text: String, _size: Vector2) -> void :
 	self.set_size(size)
-	self.offset_top=-size.y/2
-	self.offset_bottom=size.y/2
-	self.offset_left=-size.x/2
-	self.offset_right=size.x/2
+	self.offset_top=-_size.y/2
+	self.offset_bottom=_size.y/2
+	self.offset_left=-_size.x/2
+	self.offset_right=_size.x/2
 	_dialog_text.clear()
 	_dialog_text.add_text(text)
 	_dialog_title.text = title
@@ -53,13 +59,13 @@ func _on_close() -> void:
 	self.hide()
 
 func _on_option_button_1_pressed() -> void:
-	_callback1.call()
 	self.hide()
+	_callback1.call()
 
 func _on_option_button_2_pressed() -> void:
-	_callback2.call()
 	self.hide()
+	_callback2.call()
 
 func _on_option_button_3_pressed() -> void:
-	_callback3.call()
 	self.hide()
+	_callback3.call()

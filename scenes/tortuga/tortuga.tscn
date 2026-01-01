@@ -34,7 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://cy1emgfc3p51p" path="res://assets/pirate/structures/structure-fence-sides.glb" id="21_lrpya"]
 [ext_resource type="PackedScene" uid="uid://bw666kf55m31r" path="res://assets/pirate/structures/structure-platform-dock-long.glb" id="22_8hael"]
 [ext_resource type="PackedScene" uid="uid://rht7nkabco3w" path="res://assets/pirate/props/chest.glb" id="22_aveh0"]
-[ext_resource type="Script" uid="uid://s2din2pw3tj7" path="res://scripts/tortuga/coffre-barde-drue.gd" id="23_bsjpt"]
+[ext_resource type="Script" uid="uid://s2din2pw3tj7" path="res://scripts/tortuga/barbe-drue/coffre-barde-drue.gd" id="23_bsjpt"]
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://scenes/water/WaterPlane.tscn" id="23_nxrjy"]
 [ext_resource type="PackedScene" uid="uid://bc454sdsvgswp" path="res://scenes/tortuga/tortuga_oasis_arbre_defendu.tscn" id="24_6ef8d"]
 [ext_resource type="PackedScene" uid="uid://c8y6go07dabnn" path="res://scenes/tortuga/tortuga_auberge.tscn" id="24_ew2kh"]

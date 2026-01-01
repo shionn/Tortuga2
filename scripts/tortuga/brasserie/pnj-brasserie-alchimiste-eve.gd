@@ -1,9 +1,12 @@
 extends "res://scripts/pnj.gd"
 
 func on_interact() -> void:
-	var dialog = gui.open_dialog(pnj_name, _TEXT_PRESENTATION)
+	var dialog = gui.open_dialog(pnj_name, _TEXT_PRESENTATION).with_options([
+		Dialogs.default_search_forbid_fruit_montain_option(self),
+		Dialogs.default_search_forbid_fruit_teleport_option(self)
+	])
 	if (player.tags.have(Tags.SEARCH_SOBERING_POTION)) :
-		dialog.set_option("Potion de dégrisement ?", on_search_sobering_potion)
+		dialog.set_option("Je cherche une potion de dégrisement", on_search_sobering_potion)
 
 func on_search_sobering_potion() -> void:
 	if (player.tags.have(Tags.BRASSERIE_HAVE_SOBERING_POTION)) :

@@ -13,4 +13,9 @@ func _on_yes() -> void:
 	bag.load_game()
 	player.tags.load_game()
 	gui.append_to_console("Partie chargée")
-	pass
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("fast_load") : 
+		bag.load_game()
+		player.tags.load_game()
+		gui.append_to_console("Partie chargée")

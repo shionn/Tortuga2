@@ -1,5 +1,7 @@
 extends "res://scripts/interactable.gd"
 
+class_name PNJ
+
 @export var model : Resource
 @export var pnj_name : String
 @export var pnj_role = ""
@@ -13,6 +15,7 @@ extends "res://scripts/interactable.gd"
 @onready var _character := $character as Node3D
 
 var _animation : AnimationPlayer
+
 
 func _ready() -> void:
 	super._ready()
