@@ -20,7 +20,7 @@
 [ext_resource type="Script" uid="uid://b6vmysw3vlje5" path="res://scripts/gui/acceuil.gd" id="16_3deuf"]
 [ext_resource type="Texture2D" uid="uid://pvmbclri70b1" path="res://assets/imgs/whisp.png" id="17_r82fa"]
 [ext_resource type="Texture2D" uid="uid://bmblv1t7mtklt" path="res://assets/gui/fruit-icons-redo/red-apple-h-48.png" id="19_ukjlc"]
-[ext_resource type="Texture2D" uid="uid://cbowb2efgbco7" path="res://assets/imgs/CarteHungConnut.png" id="19_ytu88"]
+[ext_resource type="Texture2D" uid="uid://cqqyqe4qxv2ub" path="res://assets/imgs/CarteHungConnut.jpg" id="19_ytu88"]
 [ext_resource type="Texture2D" uid="uid://ch3n2nqahibv4" path="res://assets/gui/resources-pack-1/Page-h-48.png" id="21_ewk5h"]
 [ext_resource type="Texture2D" uid="uid://cygakm7juveua" path="res://assets/gui/resources-pack-1/Crystal-h-48.png" id="21_looj0"]
 [ext_resource type="Texture2D" uid="uid://bs0icmlv8xa0a" path="res://assets/gui/fruit-icons-redo/watermelon-h-48.png" id="22_rex2l"]
