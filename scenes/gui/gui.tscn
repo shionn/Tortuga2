@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=27 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://scripts/gui/gui.gd" id="1_0fbet"]
 [ext_resource type="Script" uid="uid://ikfx1cjqumpb" path="res://scripts/gui/dialog.gd" id="2_bgohe"]
@@ -20,6 +20,7 @@
 [ext_resource type="Script" uid="uid://b6vmysw3vlje5" path="res://scripts/gui/acceuil.gd" id="16_3deuf"]
 [ext_resource type="Texture2D" uid="uid://pvmbclri70b1" path="res://assets/imgs/whisp.png" id="17_r82fa"]
 [ext_resource type="Texture2D" uid="uid://bmblv1t7mtklt" path="res://assets/gui/fruit-icons-redo/red-apple-h-48.png" id="19_ukjlc"]
+[ext_resource type="Texture2D" uid="uid://cbowb2efgbco7" path="res://assets/imgs/CarteHungConnut.png" id="19_ytu88"]
 [ext_resource type="Texture2D" uid="uid://ch3n2nqahibv4" path="res://assets/gui/resources-pack-1/Page-h-48.png" id="21_ewk5h"]
 [ext_resource type="Texture2D" uid="uid://cygakm7juveua" path="res://assets/gui/resources-pack-1/Crystal-h-48.png" id="21_looj0"]
 [ext_resource type="Texture2D" uid="uid://bs0icmlv8xa0a" path="res://assets/gui/fruit-icons-redo/watermelon-h-48.png" id="22_rex2l"]
@@ -660,7 +661,7 @@ offset_bottom = 48.0
 tooltip_text = "Carte de Hung Connut"
 texture_normal = ExtResource("13_qv6l0")
 script = ExtResource("11_s1h2m")
-description = "Todo ouvrir une carte"
+image = ExtResource("19_ytu88")
 
 [node name="CrystalTeleportationOasis" type="TextureButton" parent="Items"]
 layout_mode = 0
@@ -745,7 +746,7 @@ texture_normal = ExtResource("13_qv6l0")
 script = ExtResource("11_s1h2m")
 description = "C'est le parchemin du trésor de Barbe Drue. Il a été décodé par Eve.
 
-Voici comment trouver Trouver le Trésor de L’Hung Connut :
+Voici comment trouver le Trésor de L’Hung Connut :
 Toi Aventurier qui convoite mon trésor,
 Celui-ci dans une grotte dors,
 Mais pour le trouver et t’en emparer,

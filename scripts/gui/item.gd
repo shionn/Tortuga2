@@ -6,6 +6,7 @@ class_name Item
 @onready var _player = $"/root/World/Player" as Player
 
 @export_multiline var description: String
+@export var image: Texture2D
 
 var _interactable : Interactable
 
@@ -49,5 +50,8 @@ func _on_button_up() -> void:
 	set_default_cursor_shape(Control.CURSOR_POINTING_HAND)
 
 func on_activate() -> void: 
-	_gui.open_dialog(self.tooltip_text, self.description)
+	if image :
+		_gui.open_dialog_and_img(self.tooltip_text,self.description,image)
+	else :
+		_gui.open_dialog(self.tooltip_text, self.description)
 	

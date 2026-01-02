@@ -26,7 +26,10 @@ func on_item_drop(item : Item) -> void:
 		if bag.contain(Bag.PageHungConnutFrag1) and bag.contain(Bag.PageHungConnutFrag2) and bag.contain(Bag.PageHungConnutFrag3) :
 			play_anim_yes()
 			gui.open_dialog(pnj_name, TEXT_FRAGMENT_HUNG_COMPLET)
-			gui.append_to_console("Félicitation, vous avez achevé la première quête. Penser à sauvegarder.")
+			bag.unloot(Bag.PageHungConnutFrag1)
+			bag.unloot(Bag.PageHungConnutFrag2)
+			bag.unloot(Bag.PageHungConnutFrag3)
+			bag.loot(Bag.CarteHungConnut)
 		else :
 			play_anim_no()
 			gui.open_dialog(pnj_name, _TEXT_MISSING_PAGE)
@@ -53,10 +56,11 @@ Il manque des pages pour que je puisse en faire une carte complète.
 
 Il devrait y avoir trois fragments."""
 
-const TEXT_FRAGMENT_HUNG_COMPLET = """Ça va être de la tarte. Reviens dans quelque jours et la carte sera prête.
+const TEXT_FRAGMENT_HUNG_COMPLET = """Ça va être de la tarte. 
 
-Pour avancer plus loin, il nous faut accomplir une quête de peinture.
-Pour prouvez que vous avez fini cette quête reporter le code \"par mon compas et ma lunette\" dans le canal discord des quêtes."""
+Regarde suffit de superposer les fragments et de regarder à travers à la lumière du jour...
+
+Tiens voilà une carte complète."""
 
 const _TEXT_CRISTAL_TP = """Ho bravo tu as réussi à trouvé ce cristal. Les gardes ne sont vraiment pas doués. 
 
