@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://c8y6go07dabnn"]
+[gd_scene load_steps=52 format=3 uid="uid://c8y6go07dabnn"]
 
 [ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="1_hrd0d"]
 [ext_resource type="PackedScene" uid="uid://bn2k1c6mt0j5l" path="res://assets/town/walls/wall-window-shutters.glb" id="2_83rxu"]
@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://bl8gqk34ub2cy" path="res://assets/pirate/props/crate-bottles.glb" id="16_0avcf"]
 [ext_resource type="PackedScene" uid="uid://b5xtrnp1f2eg7" path="res://assets/pirate/props/bottle.glb" id="18_css0i"]
 [ext_resource type="PackedScene" uid="uid://dvn116r1fxtxs" path="res://assets/town/road/road-wood.glb" id="19_css0i"]
+[ext_resource type="Script" uid="uid://vrseuhaxautc" path="res://scripts/fix_color.gd" id="20_qc35t"]
 [ext_resource type="PackedScene" uid="uid://ckl0cxjsbj1sn" path="res://assets/town/roof/roof-corner-round.glb" id="22_hij4y"]
 [ext_resource type="PackedScene" uid="uid://ck66mrk1gxs6f" path="res://assets/town/roof/roof-corner-inner.glb" id="23_kj4nn"]
 [ext_resource type="PackedScene" uid="uid://d0mdhn6dked7d" path="res://assets/town/roof/roof-window.glb" id="24_pqrr8"]
@@ -236,6 +237,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.5
 
 [node name="pot_small3" parent="ground" instance=ExtResource("8_hno7j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1000004, 0, 3.1)
+script = ExtResource("20_qc35t")
 
 [node name="flower_purpleA2" parent="ground/pot_small3" instance=ExtResource("9_231o3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21707611, 0)
