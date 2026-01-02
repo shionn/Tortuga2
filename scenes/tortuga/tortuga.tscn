@@ -1,7 +1,6 @@
-[gd_scene load_steps=71 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=68 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/barbe-drue/bouteille_note_lisible.gd" id="1_c7jrm"]
-[ext_resource type="PackedScene" uid="uid://dvplfstqecj42" path="res://assets/mine/tortuga-60.glb" id="1_hh6n0"]
 [ext_resource type="Script" uid="uid://bkxghrcx478fh" path="res://scripts/tortuga/barbe-drue/bouteille_note_illisible.gd" id="1_jit35"]
 [ext_resource type="PackedScene" uid="uid://b5xtrnp1f2eg7" path="res://assets/pirate/props/bottle.glb" id="1_wohch"]
 [ext_resource type="PackedScene" uid="uid://dn1b4sjm530aw" path="res://assets/pirate/plant/grass.glb" id="2_wohch"]
@@ -11,9 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://biv43nrtuadi8" path="res://assets/pirate/plant/palm-detailed-bend.glb" id="5_iswrd"]
 [ext_resource type="PackedScene" uid="uid://bagjq72im08wg" path="res://assets/pirate/plant/grass-plant.glb" id="6_j21kd"]
 [ext_resource type="Script" uid="uid://b8l6pcos8ev35" path="res://scripts/tortuga/barbe-drue/parchemin-coline-q1.gd" id="6_tny17"]
-[ext_resource type="PackedScene" uid="uid://cbasjmgb4ls33" path="res://assets/pirate/rocks-b.glb" id="7_h2gq6"]
-[ext_resource type="PackedScene" uid="uid://c1sc7qjitvtsi" path="res://assets/pirate/rocks-a.glb" id="8_ggmis"]
-[ext_resource type="PackedScene" uid="uid://chxfr2yagmg24" path="res://assets/pirate/rocks-c.glb" id="9_1lej4"]
 [ext_resource type="Script" uid="uid://de6fro5s3yle8" path="res://scripts/escalator-old.gd" id="10_acrrl"]
 [ext_resource type="PackedScene" uid="uid://ckwih5ror4ch4" path="res://assets/pirate/structures/platform-no-colid.glb" id="11_tny17"]
 [ext_resource type="PackedScene" uid="uid://bs2i6jgk7ixh6" path="res://assets/pirate/structures/structure-platform.glb" id="12_2w2tg"]
@@ -61,6 +57,7 @@
 [ext_resource type="PackedScene" uid="uid://cjxowsxfha55l" path="res://assets/character/graveyard/character-keeper.glb" id="46_mi0el"]
 [ext_resource type="PackedScene" uid="uid://bun08nin6q33j" path="res://scenes/tortuga/tortuga_manoir.tscn" id="48_n6usc"]
 [ext_resource type="Script" uid="uid://vrseuhaxautc" path="res://scripts/fix_color.gd" id="49_e43uk"]
+[ext_resource type="PackedScene" uid="uid://cwsymtk3gb7ai" path="res://scenes/tortuga/tortuga_base_relief.tscn" id="61_e43uk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2w2tg"]
 size = Vector3(0.31, 0.15, 0.15)
@@ -90,9 +87,6 @@ size = Vector3(2.5, 0.3, 2.5)
 size = Vector3(0.3, 0.15, 0.15)
 
 [node name="TortugaNode" type="Node3D"]
-
-[node name="tortuga-60" parent="." instance=ExtResource("1_hh6n0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 168.15813, 0, -145.42403)
 
 [node name="coline" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8750305, 0, 0)
@@ -621,15 +615,6 @@ transform = Transform3D(0.5176382, 0, 1.9318514, 0, 2, 0, -1.9318514, 0, 0.51763
 [node name="palm-detailed-bend7" parent="Plage" instance=ExtResource("5_iswrd")]
 transform = Transform3D(1.7320508, 0, 0.9999999, 0, 2, 0, -0.9999999, 0, 1.7320508, -73, 0.3, 16)
 
-[node name="MontagneAuberge" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, -107)
-
-[node name="rocks-c3" parent="MontagneAuberge" instance=ExtResource("9_1lej4")]
-transform = Transform3D(-7.3106384, 0, 16.448544, 0, 18, 0, -16.448544, 0, -7.3106384, 29.133026, 0.49996376, -4.768402)
-
-[node name="rocks-c4" parent="MontagneAuberge" instance=ExtResource("9_1lej4")]
-transform = Transform3D(11.200185, 0, -4.3076496, 0, 11.999999, 0, 4.3076496, 0, 11.200185, -43.866974, 0.49996376, -5.768402)
-
 [node name="mountain" type="Node3D" parent="."]
 
 [node name="tomb-barbe-drue" type="Node3D" parent="mountain"]
@@ -712,18 +697,6 @@ transform = Transform3D(2.4999998, 0, -4.3301272, 0, 3, 0, 4.3301272, 0, 2.49999
 [node name="oasis-arbre-defendu" parent="mountain" instance=ExtResource("24_6ef8d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 161, 102.5, -266)
 
-[node name="rocks-b2" parent="mountain" instance=ExtResource("7_h2gq6")]
-transform = Transform3D(29.67364, 0, -4.4130487, 0, 29.999998, 0, 4.4130487, 0, 29.67364, 160.48563, 0.50003624, -267.35916)
-
-[node name="rocks-a2" parent="mountain" instance=ExtResource("8_ggmis")]
-transform = Transform3D(-1.0212708, 0, 19.97391, 0, 20, 0, -19.97391, 0, -1.0212708, 18.185165, 0.49999428, -271.75107)
-
-[node name="rocks-a3" parent="mountain" instance=ExtResource("8_ggmis")]
-transform = Transform3D(10.578503, 0, -22.651604, 0, 24.999996, 0, 22.651604, 0, 10.578503, 256.63205, 0.49997902, -276.07355)
-
-[node name="rocks-c2" parent="mountain" instance=ExtResource("9_1lej4")]
-transform = Transform3D(9.768276, 0, -23.012619, 0, 25, 0, 23.012619, 0, 9.768276, 326.4871, 0.4999485, -227.96658)
-
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="mountain"]
 transform = Transform3D(0.76604444, 0, 0.6427876, 0, 1, 0, -0.6427876, 0, 0.76604444, 250.5, 1.2, -309.8)
 collision_mask = 0
@@ -764,9 +737,6 @@ visible = false
 
 [node name="coline-montagne" type="Node3D" parent="."]
 transform = Transform3D(0.99931294, 0, 0.037062302, 0, 1, 0, -0.037062302, 0, 0.99931294, -7.2949123, 0, -23.624184)
-
-[node name="rocks-b2" parent="coline-montagne" instance=ExtResource("7_h2gq6")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.28962326, 1.5000052, 91.77903)
 
 [node name="flag-pirate-high-pennant2" parent="coline-montagne" instance=ExtResource("15_l2qgb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7655982, 18.557026, 91.94513)
@@ -1873,9 +1843,6 @@ transform = Transform3D(4.9620476, 0, 0.6148894, 0, 4.9999995, 0, -0.6148894, 0,
 [node name="patch-grass16" parent="MontagneCapitainerie" instance=ExtResource("3_jit35")]
 transform = Transform3D(4.5680475, 0, 2.0329657, 0, 4.9999995, 0, -2.0329657, 0, 4.5680475, 3.628189, 0, -41.651646)
 
-[node name="rocks-b2" parent="MontagneCapitainerie" instance=ExtResource("7_h2gq6")]
-transform = Transform3D(7.172755, 0, 5.4361362, 0, 9, 0, -5.4361362, 0, 7.172755, 6.483673, 1.2000039, 8.599775)
-
 [node name="flag-pirate-high-pennant2" parent="MontagneCapitainerie" instance=ExtResource("15_l2qgb")]
 transform = Transform3D(-1.3113416e-07, 0, 3, 0, 3, 0, -3, 0, -1.3113416e-07, 4.5, 34.1, 11.3)
 
@@ -2775,24 +2742,10 @@ transform = Transform3D(0.8191521, 0, -0.57357645, 0, 1, 0, 0.57357645, 0, 0.819
 [node name="TortugaArmurerie" parent="." instance=ExtResource("30_5obc8")]
 transform = Transform3D(0.96592575, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.96592575, -22, 0.53268063, 29)
 
-[node name="WaterPlane" parent="." instance=ExtResource("23_nxrjy")]
-transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, -250, 0, 250)
-skeleton = NodePath("../..")
-
-[node name="WaterPlane2" parent="." instance=ExtResource("23_nxrjy")]
-transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 250, 0, 250)
-skeleton = NodePath("../..")
-
-[node name="WaterPlane3" parent="." instance=ExtResource("23_nxrjy")]
-transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 250, 0, -250)
-skeleton = NodePath("../..")
-
-[node name="WaterPlane4" parent="." instance=ExtResource("23_nxrjy")]
-transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, -250, 0, -250)
-skeleton = NodePath("../..")
-
 [node name="TortugaManoir" parent="." instance=ExtResource("48_n6usc")]
 transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 44, 1.5, -31)
+
+[node name="TortugaBaseRelief" parent="." instance=ExtResource("61_e43uk")]
 
 [connection signal="body_entered" from="coline/Area3D" to="coline/parchemin-hung-connut-1" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="coline/Area3D" to="coline/parchemin-hung-connut-2" method="_on_area_3d_body_entered"]

@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwsymtk3gb7ai"]
+
+[ext_resource type="PackedScene" uid="uid://dvplfstqecj42" path="res://assets/mine/tortuga-60.glb" id="1_lp80i"]
+[ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://scenes/water/WaterPlane.tscn" id="2_juhlq"]
+[ext_resource type="PackedScene" uid="uid://chxfr2yagmg24" path="res://assets/pirate/rocks-c.glb" id="3_juhlq"]
+[ext_resource type="PackedScene" uid="uid://cbasjmgb4ls33" path="res://assets/pirate/rocks-b.glb" id="4_an2bb"]
+[ext_resource type="PackedScene" uid="uid://c1sc7qjitvtsi" path="res://assets/pirate/rocks-a.glb" id="5_gvlx3"]
+
+[node name="TortugaBaseRelief" type="Node3D"]
+
+[node name="tortuga-60" parent="." instance=ExtResource("1_lp80i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 168.15813, 0, -145.42403)
+
+[node name="rocks-b2" parent="." instance=ExtResource("4_an2bb")]
+transform = Transform3D(29.67364, 0, -4.4130487, 0, 29.999998, 0, 4.4130487, 0, 29.67364, 160.48563, 0.50003624, -267.35916)
+
+[node name="rocks-a2" parent="." instance=ExtResource("5_gvlx3")]
+transform = Transform3D(-1.0212708, 0, 19.97391, 0, 20, 0, -19.97391, 0, -1.0212708, 18.185165, 0.49999428, -271.75107)
+
+[node name="rocks-a3" parent="." instance=ExtResource("5_gvlx3")]
+transform = Transform3D(10.578503, 0, -22.651604, 0, 24.999996, 0, 22.651604, 0, 10.578503, 256.63205, 0.49997902, -276.07355)
+
+[node name="rocks-c2" parent="." instance=ExtResource("3_juhlq")]
+transform = Transform3D(9.768276, 0, -23.012619, 0, 25, 0, 23.012619, 0, 9.768276, 326.4871, 0.4999485, -227.96658)
+
+[node name="rocks-c3" parent="." instance=ExtResource("3_juhlq")]
+transform = Transform3D(-7.3106384, 0, 16.448544, 0, 18, 0, -16.448544, 0, -7.3106384, 71.133026, 0.49996376, -111.7684)
+
+[node name="rocks-c4" parent="." instance=ExtResource("3_juhlq")]
+transform = Transform3D(11.200185, 0, -4.3076496, 0, 11.999999, 0, 4.3076496, 0, 11.200185, -1.8669739, 0.49996376, -112.7684)
+
+[node name="rocks-b3" parent="." instance=ExtResource("4_an2bb")]
+transform = Transform3D(7.172755, 0, 5.4361362, 0, 9, 0, -5.4361362, 0, 7.172755, -49.88819, 1.7000039, 5.65666)
+
+[node name="rocks-b4" parent="." instance=ExtResource("4_an2bb")]
+transform = Transform3D(4.996565, 0, 0.18531151, 0, 5, 0, -0.18531151, 0, 4.996565, -4.1827946, 1.5000052, 68.10252)
+
+[node name="WaterPlane" parent="." instance=ExtResource("2_juhlq")]
+transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, -250, 0, 250)
+skeleton = NodePath("../..")
+
+[node name="WaterPlane2" parent="." instance=ExtResource("2_juhlq")]
+transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 250, 0, 250)
+skeleton = NodePath("../..")
+
+[node name="WaterPlane3" parent="." instance=ExtResource("2_juhlq")]
+transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 250, 0, -250)
+skeleton = NodePath("../..")
+
+[node name="WaterPlane4" parent="." instance=ExtResource("2_juhlq")]
+transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, -250, 0, -250)
+skeleton = NodePath("../..")
