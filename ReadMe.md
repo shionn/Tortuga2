@@ -28,13 +28,24 @@
 - https://opengameart.org/content/rpg-item-collection-2
 - https://opengameart.org/content/sign-plate-1
 - https://opengameart.org/content/spyglass
-- https://opengameart.org/content/gems ?
 - https://opengameart.org/content/broken-stone-slab ?
+- https://opengameart.org/content/desert-rock ?
+- https://opengameart.org/content/free-low-poly-lava-plants ?
+- https://opengameart.org/content/free-mid-poly-stylized-swamp-remastered ?
+- https://opengameart.org/content/free-mine-assets-pack ?
+- https://opengameart.org/content/gems ?
+- https://opengameart.org/content/handpainted-style-rocks ?
 - https://opengameart.org/content/inventory-items ?
+- https://opengameart.org/content/lowpoly-crystals ?
+- https://opengameart.org/content/lowpoly-crystals-pack ?
+- https://opengameart.org/content/medieval-props-textured ?
+- https://opengameart.org/content/modular-terrain ?
+- https://opengameart.org/content/more-handpainted-rocks
+- https://opengameart.org/content/mossy-stone-rock ?
+- https://opengameart.org/content/polygon-forest ?
 - https://opengameart.org/content/rpg-item-collection-1 ?
 - https://opengameart.org/content/rpg-item-collection-3 ?
-- https://opengameart.org/content/lowpoly-crystals-pack ?
-- https://opengameart.org/content/lowpoly-crystals ?
+- https://opengameart.org/content/simple-3d-crystals-unwrapped-simple-texture ?
 
 ## non importer mais pourrai etre simpa : 
 - paper : https://opengameart.org/content/papers
