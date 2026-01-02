@@ -1,9 +1,10 @@
-[gd_scene load_steps=27 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=28 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://scripts/gui/gui.gd" id="1_0fbet"]
 [ext_resource type="Script" uid="uid://ikfx1cjqumpb" path="res://scripts/gui/dialog.gd" id="2_bgohe"]
 [ext_resource type="Texture2D" uid="uid://dyq75clqrse1h" path="res://assets/gui/ui-adventure/minimap_ring_brown_detail.png" id="2_ioifv"]
 [ext_resource type="Texture2D" uid="uid://ctudwtb3qq5jg" path="res://assets/gui/ui-adventure/minimap_compass_toon_n.png" id="3_q46mf"]
+[ext_resource type="Script" uid="uid://k2bbepgo55y4" path="res://scripts/gui/image.gd" id="3_ytu88"]
 [ext_resource type="Texture2D" uid="uid://6r2enbextcew" path="res://assets/gui/ui-adventure/minimap_compass_toon_s.png" id="4_ytf3d"]
 [ext_resource type="Texture2D" uid="uid://cdqtjkc7ao1xk" path="res://assets/gui/ui-adventure/minimap_compass_toon_e.png" id="5_bk7cs"]
 [ext_resource type="Texture2D" uid="uid://bkfc3jdh67dmb" path="res://assets/gui/ui-adventure/minimap_compass_toon_w.png" id="6_kvi6p"]
@@ -137,9 +138,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -400.0
-offset_top = -200.0
+offset_top = -250.0
 offset_right = 400.0
-offset_bottom = 200.0
+offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
@@ -188,6 +189,72 @@ expand_mode = 3
 stretch_mode = 5
 
 [node name="CloseDialogButton" type="Button" parent="DialogAndImg/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Fermer"
+
+[node name="Image" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("3_ytu88")
+
+[node name="Panel" type="Panel" parent="Image"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -250.0
+offset_right = 400.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Image/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Image/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="Title" type="Label" parent="Image/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_yw5qc")
+text = "Title"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Image/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand_mode = 3
+stretch_mode = 5
+
+[node name="CloseDialogButton" type="Button" parent="Image/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Fermer"
 
@@ -589,6 +656,7 @@ layout_mode = 2
 text = "Fermer"
 
 [node name="Acceuil" type="MarginContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -787,6 +855,7 @@ Mais la taxe sur les gains affairant à la piraterie est passée par la. "
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton3" to="Dialog" method="_on_option_button_3_pressed"]
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/CloseButton" to="Dialog" method="_on_close"]
 [connection signal="pressed" from="DialogAndImg/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_and_img_button_pressed"]
+[connection signal="pressed" from="Image/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="Image" method="_on_close_dialog_button_pressed"]
 [connection signal="pressed" from="Input/Panel/MarginContainer/VBoxContainer/ValidateButton" to="." method="_on_validate_input_button_pressed"]
 [connection signal="pressed" from="InputYesNo/Panel/MarginContainer/VBoxContainer/HBoxContainer/NoButton" to="." method="_on_no_button_pressed"]
 [connection signal="pressed" from="InputYesNo/Panel/MarginContainer/VBoxContainer/HBoxContainer/YesButton" to="." method="_on_yes_button_pressed"]

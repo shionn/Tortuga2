@@ -11,6 +11,8 @@ class_name Gui
 @onready var _dialog_img_img := $DialogAndImg/Panel/MarginContainer/VBoxContainer/HBoxContainer/TextureRect as TextureRect
 @onready var _dialog_img_title := $DialogAndImg/Panel/MarginContainer/VBoxContainer/Title as Label
 
+@onready var _image := $Image as Control
+
 @onready var _input := $Input as Control
 @onready var _input_text := $Input/Panel/MarginContainer/VBoxContainer/LineEdit as LineEdit
 @onready var _input_title := $Input/Panel/MarginContainer/VBoxContainer/Title as Label
@@ -47,6 +49,9 @@ func open_dialog_and_img(title: String, text: String, img: Resource) -> void:
 	_dialog_img_img.texture = img
 	_dialog_img.show()
 
+func open_image(title: String, img: Resource) -> void:
+	_image.open(title, img)
+
 func open_question(title: String, callback: Callable) -> void:
 	_input_title.text = title
 	_input_text.text = ""
@@ -60,6 +65,9 @@ func open_yes_no_question(title: String, question: String, on_no: Callable, on_y
 	_callback_no = on_no
 	_callback_yes = on_yes
 	_input_yn.show()
+
+func _ready() -> void:
+	$Acceuil.show()
 
 func _process(delta: float) -> void:
 	_debug_info.text = "fps: " + str(Engine.get_frames_per_second())

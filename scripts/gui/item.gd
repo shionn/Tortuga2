@@ -51,7 +51,7 @@ func _on_button_up() -> void:
 
 func on_activate() -> void: 
 	if image :
-		_gui.open_dialog_and_img(self.tooltip_text,self.description,image)
+		_gui.open_image(self.tooltip_text,image)
 	else :
 		_gui.open_dialog(self.tooltip_text, self.description)
 	
