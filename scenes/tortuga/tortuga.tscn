@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=71 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/barbe-drue/bouteille_note_lisible.gd" id="1_c7jrm"]
 [ext_resource type="PackedScene" uid="uid://dvplfstqecj42" path="res://assets/mine/tortuga-60.glb" id="1_hh6n0"]
@@ -60,6 +60,7 @@
 [ext_resource type="Script" uid="uid://ct0xwefe3spi0" path="res://scripts/tortuga/tibbeau-rhum-vide.gd" id="45_e43uk"]
 [ext_resource type="PackedScene" uid="uid://cjxowsxfha55l" path="res://assets/character/graveyard/character-keeper.glb" id="46_mi0el"]
 [ext_resource type="PackedScene" uid="uid://bun08nin6q33j" path="res://scenes/tortuga/tortuga_manoir.tscn" id="48_n6usc"]
+[ext_resource type="Script" uid="uid://vrseuhaxautc" path="res://scripts/fix_color.gd" id="49_e43uk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2w2tg"]
 size = Vector3(0.31, 0.15, 0.15)
@@ -2202,6 +2203,7 @@ transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.2588
 
 [node name="crops_bambooStageB2" parent="MontagneCapitainerie" instance=ExtResource("32_67xyg")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 36.371864, 0.100000024, -43.056885)
+script = ExtResource("49_e43uk")
 
 [node name="crops_bambooStageB3" parent="MontagneCapitainerie" instance=ExtResource("32_67xyg")]
 transform = Transform3D(1.4999999, 0, 2.5980763, 0, 3, 0, -2.5980763, 0, 1.4999999, 41.171864, 0.100000024, -39.456886)

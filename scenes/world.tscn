@@ -55,6 +55,9 @@ sky_material = SubResource("ShaderMaterial_qktwf")
 [sub_resource type="Environment" id="Environment_bh8nc"]
 background_mode = 2
 sky = SubResource("Sky_pkg7o")
+ssao_enabled = true
+ssil_enabled = true
+adjustment_enabled = true
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_26xuy")
