@@ -13,7 +13,8 @@ func on_interact() -> void:
 			Dialogs.question_search_forbid_fruit_teleport,
 			func (): gui.open_dialog(pnj_name, _TEXT_PIERRE_TELEPORTEUR)
 		),
-		Dialogs.default_search_forbid_fruit_teleport_option(self)
+		Dialogs.default_search_forbid_fruit_teleport_option(self),
+		Dialogs.default_hung_connut_search_charpentier(self)
 	])
 
 func on_search_montain() -> void:

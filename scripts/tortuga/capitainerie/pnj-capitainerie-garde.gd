@@ -9,7 +9,8 @@ func on_interact() -> void:
 				func () : return player.tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT),
 				Dialogs.question_search_forbid_fruit_teleport,
 				func () : gui.open_dialog(pnj_name, _TEXT_INDICE_CRYSTAL)
-			)
+			),
+			Dialogs.default_hung_connut_search_charpentier(self)
 		])
 	else :
 		gui.open_dialog(pnj_name, _TEXT)

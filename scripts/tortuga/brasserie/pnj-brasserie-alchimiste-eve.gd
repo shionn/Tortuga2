@@ -3,7 +3,8 @@ extends "res://scripts/pnj.gd"
 func on_interact() -> void:
 	var dialog = gui.open_dialog(pnj_name, _TEXT_PRESENTATION).with_options([
 		Dialogs.default_search_forbid_fruit_montain_option(self),
-		Dialogs.default_search_forbid_fruit_teleport_option(self)
+		Dialogs.default_search_forbid_fruit_teleport_option(self),
+		Dialogs.default_hung_connut_search_charpentier(self)
 	])
 	if (player.tags.have(Tags.SEARCH_SOBERING_POTION)) :
 		dialog.set_option("Je cherche une potion de dégrisement", on_search_sobering_potion)
@@ -17,7 +18,6 @@ func on_search_sobering_potion() -> void:
 func on_item_drop(item : Item) -> void:
 	if item.name == Bag.ParcheminBarbeDrue :
 		gui.open_dialog(pnj_name, _TEXT_PARCHEMIN_BARBE_DRUE)
-		gui.append_to_console("Félicitation, vous avez achevé la première quête. Penser à sauvegarder.")
 		player.tags.add(Tags.FORBID_FRUIT_SEARCH)
 	elif item.name == Bag.Melon && not player.tags.have(Tags.BRASSERIE_HAVE_SOBERING_POTION) :
 		gui.open_dialog(pnj_name,_TEXT_GIVE_MELON)

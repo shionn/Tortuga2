@@ -1,7 +1,7 @@
 extends "res://scripts/interactable.gd"
 
 func on_interact() -> void:
-	gui.open_alert("Marbre de Hung Connut", _TEXT)
+	gui.open_dialog("Marbre de Hung Connut", _TEXT)
 	player.tags.add(Tags.HUNG_CONNUT_SEARCH_ESCALTOR)
 
 

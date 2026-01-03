@@ -4,7 +4,8 @@ func on_interact() -> void:
 	gui.open_dialog(pnj_name, _TEXT_DEFAULT).with_options([
 		Dialogs.default_search_forbid_fruit_option(self),
 		Dialogs.default_search_forbid_fruit_montain_option(self),
-		Dialogs.default_search_forbid_fruit_teleport_option(self)
+		Dialogs.default_search_forbid_fruit_teleport_option(self),
+		Dialogs.default_hung_connut_search_charpentier(self)
 	])
 
 
