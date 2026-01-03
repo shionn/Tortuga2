@@ -4,7 +4,7 @@ const SPEED := 5
 @onready var _timer := $Timer as Timer
 
 var start := 0
-var end := 0 
+@export var end := 10.0
 var dir := Vector3.UP
 
 func _physics_process(delta: float) -> void:
