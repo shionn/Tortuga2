@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=75 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="PackedScene" uid="uid://gjk5y26xk1ud" path="res://assets/graveyard/gravestone/gravestone-bevel.glb" id="1_5xhig"]
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/barbe-drue/bouteille_note_lisible.gd" id="1_c7jrm"]
@@ -61,6 +61,7 @@
 [ext_resource type="Script" path="res://scripts/fix_color.gd" id="49_e43uk"]
 [ext_resource type="PackedScene" uid="uid://c7fgeoflk102b" path="res://assets/pirate/plant/platform-planks.glb" id="49_xiick"]
 [ext_resource type="PackedScene" uid="uid://fc1bkvtc3h41" path="res://assets/pirate/flat-grass.glb" id="50_e43uk"]
+[ext_resource type="PackedScene" uid="uid://ch0ypgect218u" path="res://scenes/tortuga/tortuga_mind-wind.tscn" id="51_67xyg"]
 [ext_resource type="PackedScene" uid="uid://cwsymtk3gb7ai" path="res://scenes/tortuga/tortuga_base_relief.tscn" id="61_e43uk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c7jrm"]
@@ -2497,6 +2498,9 @@ transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 3.0999985, 0)
 [node name="mushroom_tanGroup2" parent="Montagne-Nord/MontagneChampi/Pic1" instance=ExtResource("49_a5rdk")]
 transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, -1, 2.5999985, -12)
 
+[node name="TortugaMindWind" parent="Montagne-Nord/MontagneChampi/Pic1" instance=ExtResource("51_67xyg")]
+transform = Transform3D(0.9848076, 0, 0.17364815, 0, 1, 0, -0.17364815, 0, 0.9848076, -4.300003, 0, 17.100006)
+
 [node name="Patchs2" type="Node3D" parent="Montagne-Nord/MontagneChampi"]
 transform = Transform3D(0.8940761, 0, 0.4479152, 0, 1, 0, -0.4479152, 0, 0.8940761, 28.007355, -15.900002, 14.834778)
 
@@ -2625,6 +2629,21 @@ transform = Transform3D(0.52135944, 0, 2.9543517, 0, 2.9999993, 0, -2.9543517, 0
 
 [node name="flat-grass" parent="Montagne-Nord/MontagneChampi/Patchs6" instance=ExtResource("50_e43uk")]
 transform = Transform3D(7.2954726, 0, -2.8723583, 0, 2.9999998, 0, 3.2826948, 0, 6.383539, 17.485687, -1.9073486e-06, 33.700714)
+
+[node name="Escalator2" type="Node3D" parent="Montagne-Nord/MontagneChampi"]
+transform = Transform3D(0.7984254, 0, 0.60209376, 0, 1, 0, -0.60209376, 0, 0.7984254, 33.748596, -36.619434, 32.741287)
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="Montagne-Nord/MontagneChampi/Escalator2"]
+script = ExtResource("32_7h4df")
+end = 9.7
+
+[node name="platform" parent="Montagne-Nord/MontagneChampi/Escalator2/AnimatableBody3D" instance=ExtResource("11_tny17")]
+
+[node name="Timer" type="Timer" parent="Montagne-Nord/MontagneChampi/Escalator2/AnimatableBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Montagne-Nord/MontagneChampi/Escalator2/AnimatableBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10000038, 0)
+shape = SubResource("BoxShape3D_iswrd")
 
 [node name="MontagneCentral" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0.5, -115)
@@ -5445,4 +5464,5 @@ transform = Transform3D(2.7189243, 0, 1.2678561, 0, 5.999997, 0, -1.2678561, 0, 
 [connection signal="body_entered" from="Crique/Crique-SE/Area3D" to="Crique/Crique-SE/parchemin-hung-connut-2" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Crique/Crique-SE/Area3D" to="Crique/Crique-SE/parchemin-hung-connut-3" method="_on_area_3d_body_entered"]
 [connection signal="timeout" from="Crique/Crique-O/Escalator/AnimatableBody3D/Timer" to="Crique/Crique-O/Escalator/AnimatableBody3D" method="_on_timer_timeout"]
+[connection signal="timeout" from="Montagne-Nord/MontagneChampi/Escalator2/AnimatableBody3D/Timer" to="Montagne-Nord/MontagneChampi/Escalator2/AnimatableBody3D" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Plage-S/Area3D" to="Plage-S/gravestone-bevel2" method="_on_area_3d_body_entered"]
