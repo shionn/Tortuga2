@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bwqkgos1h00ap"
-path="res://.godot/imported/mushroom_red.glb-c98beec1043bffe509a7b8f89ef1da04.scn"
+uid="uid://d1w6xs01xa0ea"
+path="res://.godot/imported/mushroom_red.glb-27719c561cf3c66bac87ba07c5f763d6.scn"
 
 [deps]
 
-source_file="res://assets/nature/plant/mushroom/mushroom_red.glb"
-dest_files=["res://.godot/imported/mushroom_red.glb-c98beec1043bffe509a7b8f89ef1da04.scn"]
+source_file="res:///assets/nature/plant/mushroom/mushroom_red.glb"
+dest_files=["res://.godot/imported/mushroom_red.glb-27719c561cf3c66bac87ba07c5f763d6.scn"]
 
 [params]
 

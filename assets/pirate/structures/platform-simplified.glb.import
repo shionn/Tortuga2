@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://nxpg70ic60fw"
-path="res://.godot/imported/mushroom_redGroup.glb-b5a81c08c974fee70aeb5148e9b556ea.scn"
+uid="uid://dp8eyw02kyq0"
+path="res://.godot/imported/platform-simplified.glb-6a1721cc077e5cef43193f497e0305ca.scn"
 
 [deps]
 
-source_file="res:///assets/nature/plant/mushroom/mushroom_redGroup.glb"
-dest_files=["res://.godot/imported/mushroom_redGroup.glb-b5a81c08c974fee70aeb5148e9b556ea.scn"]
+source_file="res://assets/pirate/structures/platform-simplified.glb"
+dest_files=["res://.godot/imported/platform-simplified.glb-6a1721cc077e5cef43193f497e0305ca.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
+import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

@@ -57,6 +57,7 @@ func _ready() -> void:
 	_pivot.add_child(node)
 	_animation = node.get_child(1)
 	_animation.get_animation("idle").loop_mode = Animation.LOOP_LINEAR
+	#teleport(Vector3(229.7, 74, -270.7), 0)
 
 func _physics_process(delta: float) -> void:
 
