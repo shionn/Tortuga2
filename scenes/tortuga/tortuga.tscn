@@ -3100,6 +3100,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 250, 0.5, -307)
 [node name="EscalatorCasser" type="Node3D" parent="Plage-N"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2)
 script = ExtResource("48_7h4df")
+interactable_distance = 6.0
 
 [node name="platform-planks2" parent="Plage-N/EscalatorCasser" instance=ExtResource("49_xiick")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2999878, 1, -1.9000244)
