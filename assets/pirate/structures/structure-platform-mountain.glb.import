@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://crg8korvqui82"
-path="res://.godot/imported/stairs-wide-wood.glb-237c5a25b235ebd9cf301c8ad637fab0.scn"
+uid="uid://cuygsh7peyrad"
+path="res://.godot/imported/structure-platform-mountain.glb-6f0dbf5d8c657f47a94b36c4dd583ac0.scn"
 
 [deps]
 
-source_file="res:///assets/town/stairs/stairs-wide-wood.glb"
-dest_files=["res://.godot/imported/stairs-wide-wood.glb-237c5a25b235ebd9cf301c8ad637fab0.scn"]
+source_file="res://assets/pirate/structures/structure-platform-mountain.glb"
+dest_files=["res://.godot/imported/structure-platform-mountain.glb-6f0dbf5d8c657f47a94b36c4dd583ac0.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
