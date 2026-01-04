@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwsymtk3gb7ai"]
+[gd_scene load_steps=7 format=3 uid="uid://cwsymtk3gb7ai"]
 
 [ext_resource type="PackedScene" uid="uid://dvplfstqecj42" path="res://assets/mine/tortuga-60.glb" id="1_lp80i"]
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://scenes/water/WaterPlane.tscn" id="2_juhlq"]
 [ext_resource type="PackedScene" uid="uid://chxfr2yagmg24" path="res://assets/pirate/rocks-c.glb" id="3_juhlq"]
 [ext_resource type="PackedScene" uid="uid://cbasjmgb4ls33" path="res://assets/pirate/rocks-b.glb" id="4_an2bb"]
 [ext_resource type="PackedScene" uid="uid://c1sc7qjitvtsi" path="res://assets/pirate/rocks-a.glb" id="5_gvlx3"]
+[ext_resource type="PackedScene" uid="uid://dh1wt7xdbw6c3" path="res://assets/pirate/rocks-c-open.glb" id="5_sok4f"]
 
 [node name="TortugaBaseRelief" type="Node3D"]
 
@@ -22,6 +23,10 @@ transform = Transform3D(10.578503, 0, -22.651604, 0, 24.999996, 0, 22.651604, 0,
 
 [node name="rocks-c2" parent="." instance=ExtResource("3_juhlq")]
 transform = Transform3D(9.768276, 0, -23.012619, 0, 25, 0, 23.012619, 0, 9.768276, 326.4871, 0.4999485, -227.96658)
+
+[node name="rocks-c-open" parent="." instance=ExtResource("5_sok4f")]
+transform = Transform3D(9.768276, 0, -23.01262, 0, 25, 0, 23.01262, 0, 9.768276, 326.487, 0.5, -227.967)
+visible = false
 
 [node name="rocks-c3" parent="." instance=ExtResource("3_juhlq")]
 transform = Transform3D(-7.3106384, 0, 16.448544, 0, 18, 0, -16.448544, 0, -7.3106384, 71.133026, 0.49996376, -111.7684)

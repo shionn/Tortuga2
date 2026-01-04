@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://crg8korvqui82"
-path="res://.godot/imported/stairs-wide-wood.glb-237c5a25b235ebd9cf301c8ad637fab0.scn"
+path="res://.godot/imported/stairs-wide-wood.glb-3e9b9fc264fde7e8e657475290247869.scn"
 
 [deps]
 
-source_file="res:///assets/town/stairs/stairs-wide-wood.glb"
-dest_files=["res://.godot/imported/stairs-wide-wood.glb-237c5a25b235ebd9cf301c8ad637fab0.scn"]
+source_file="res://assets/town/stairs/stairs-wide-wood.glb"
+dest_files=["res://.godot/imported/stairs-wide-wood.glb-3e9b9fc264fde7e8e657475290247869.scn"]
 
 [params]
 

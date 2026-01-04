@@ -29,7 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://cy1emgfc3p51p" path="res://assets/pirate/structures/structure-fence-sides.glb" id="21_lrpya"]
 [ext_resource type="PackedScene" uid="uid://bw666kf55m31r" path="res://assets/pirate/structures/structure-platform-dock-long.glb" id="22_8hael"]
 [ext_resource type="PackedScene" uid="uid://rht7nkabco3w" path="res://assets/pirate/props/chest.glb" id="22_aveh0"]
-[ext_resource type="Script" path="res://scripts/tortuga/barbe-drue/coffre-barde-drue.gd" id="23_bsjpt"]
+[ext_resource type="Script" uid="uid://s2din2pw3tj7" path="res://scripts/tortuga/barbe-drue/coffre-barde-drue.gd" id="23_bsjpt"]
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://scenes/water/WaterPlane.tscn" id="23_nxrjy"]
 [ext_resource type="PackedScene" uid="uid://bc454sdsvgswp" path="res://scenes/tortuga/tortuga_oasis_arbre_defendu.tscn" id="24_6ef8d"]
 [ext_resource type="PackedScene" uid="uid://c8y6go07dabnn" path="res://scenes/tortuga/tortuga_auberge.tscn" id="24_ew2kh"]
@@ -59,7 +59,7 @@
 [ext_resource type="Script" uid="uid://b0b3cl6co40n3" path="res://scripts/tortuga/oasis-fog-volume.gd" id="48_rbtjs"]
 [ext_resource type="PackedScene" uid="uid://nxpg70ic60fw" path="res://assets/nature/plant/mushroom/mushroom_redGroup.glb" id="48_xiick"]
 [ext_resource type="PackedScene" uid="uid://c57w2secfo013" path="res://assets/nature/plant/mushroom/mushroom_tanGroup.glb" id="49_a5rdk"]
-[ext_resource type="Script" path="res://scripts/fix_color.gd" id="49_e43uk"]
+[ext_resource type="Script" uid="uid://vrseuhaxautc" path="res://scripts/fix_color.gd" id="49_e43uk"]
 [ext_resource type="PackedScene" uid="uid://c7fgeoflk102b" path="res://assets/pirate/structures/platform-planks.glb" id="49_xiick"]
 [ext_resource type="PackedScene" uid="uid://fc1bkvtc3h41" path="res://assets/pirate/flat-grass.glb" id="50_e43uk"]
 [ext_resource type="PackedScene" uid="uid://ch0ypgect218u" path="res://scenes/tortuga/tortuga_mind-wind.tscn" id="51_67xyg"]
@@ -4640,6 +4640,24 @@ transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, 9.63
 
 [node name="grass13" parent="Montagne-Nord/MontagneChampi/Pic6/Grass" instance=ExtResource("2_wohch")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.442444, 0.7000046, 0.26690674)
+
+[node name="MontagneHungConnut" type="Node3D" parent="Montagne-Nord"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 169, 0, 44)
+
+[node name="Pic1" type="Node3D" parent="Montagne-Nord/MontagneHungConnut"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 58, 0)
+
+[node name="Pic2" type="Node3D" parent="Montagne-Nord/MontagneHungConnut"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 41.63727, -23)
+
+[node name="Pic3" type="Node3D" parent="Montagne-Nord/MontagneHungConnut"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 42.472725, 4)
+
+[node name="Pic4" type="Node3D" parent="Montagne-Nord/MontagneHungConnut"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 34.067123, 19)
+
+[node name="Pic5" type="Node3D" parent="Montagne-Nord/MontagneHungConnut"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 25.258696, -14)
 
 [node name="MontagneCentral" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0.5, -115)

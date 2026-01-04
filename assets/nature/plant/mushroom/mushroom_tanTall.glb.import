@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cxnlxp3kh8r84"
-path="res://.godot/imported/mushroom_tanTall.glb-9e4084faae3d4d047abf82acffe3eb8f.scn"
+path="res://.godot/imported/mushroom_tanTall.glb-efcecb36e6dd6a328f2c0e500a0cfd6c.scn"
 
 [deps]
 
-source_file="res:///assets/nature/plant/mushroom/mushroom_tanTall.glb"
-dest_files=["res://.godot/imported/mushroom_tanTall.glb-9e4084faae3d4d047abf82acffe3eb8f.scn"]
+source_file="res://assets/nature/plant/mushroom/mushroom_tanTall.glb"
+dest_files=["res://.godot/imported/mushroom_tanTall.glb-efcecb36e6dd6a328f2c0e500a0cfd6c.scn"]
 
 [params]
 

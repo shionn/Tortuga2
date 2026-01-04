@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bv1kbqcp304cs"
-path="res://.godot/imported/balcony-wall-fence-simplified.glb-00c64435a20886712d589cd6cca29953.scn"
+path="res://.godot/imported/balcony-wall-fence-simplified.glb-14cdd6544b5bcb5f7cef5e3b310966f1.scn"
 
 [deps]
 
-source_file="res:///assets/town/fence-hedge/balcony-wall-fence-simplified.glb"
-dest_files=["res://.godot/imported/balcony-wall-fence-simplified.glb-00c64435a20886712d589cd6cca29953.scn"]
+source_file="res://assets/town/fence-hedge/balcony-wall-fence-simplified.glb"
+dest_files=["res://.godot/imported/balcony-wall-fence-simplified.glb-14cdd6544b5bcb5f7cef5e3b310966f1.scn"]
 
 [params]
 
