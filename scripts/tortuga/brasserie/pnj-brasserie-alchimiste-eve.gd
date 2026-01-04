@@ -43,7 +43,7 @@ Je suis Eve l'alchimiste de l'île, je sais faire de puissante potion.
 Mais je suis surtout connu pour ma bière et mon rhum."""
 
 const _TEXT_PARCHEMIN_BARBE_DRUE = """Salut Compagnon,
-Hum ce parchemin n’est pas dans langue étrangère, mais il est codé. Je peux vous le décoder bien sûr mais en échange d’un service.
+Hum ce parchemin n’est pas dans une langue étrangère, mais il est codé. Je peux vous le décoder bien sûr mais en échange d’un service.
 
 Une légende raconte qu’il existe un fruit défendu qui pousse sur cette île mais personne ne l’a jamais  trouvé. Il aurait des propriétés curatives importantes et pourrait m’aider à créer des potions plus efficaces. Je n’ai pas plus d’information sur ce fruit.
 
