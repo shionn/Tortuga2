@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=89 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="PackedScene" uid="uid://gjk5y26xk1ud" path="res://assets/graveyard/gravestone/gravestone-bevel.glb" id="1_5xhig"]
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/barbe-drue/bouteille_note_lisible.gd" id="1_c7jrm"]
@@ -56,6 +56,7 @@
 [ext_resource type="PackedScene" uid="uid://cjxowsxfha55l" path="res://assets/character/graveyard/character-keeper.glb" id="46_mi0el"]
 [ext_resource type="Script" uid="uid://byytwdq7gbio6" path="res://scripts/tortuga/hung-connut/escalator_casser.gd" id="48_7h4df"]
 [ext_resource type="PackedScene" uid="uid://bun08nin6q33j" path="res://scenes/tortuga/tortuga_manoir.tscn" id="48_n6usc"]
+[ext_resource type="Script" uid="uid://b0b3cl6co40n3" path="res://scripts/tortuga/oasis-fog-volume.gd" id="48_rbtjs"]
 [ext_resource type="PackedScene" uid="uid://nxpg70ic60fw" path="res://assets/nature/plant/mushroom/mushroom_redGroup.glb" id="48_xiick"]
 [ext_resource type="PackedScene" uid="uid://c57w2secfo013" path="res://assets/nature/plant/mushroom/mushroom_tanGroup.glb" id="49_a5rdk"]
 [ext_resource type="Script" path="res://scripts/fix_color.gd" id="49_e43uk"]
@@ -91,6 +92,22 @@ size = Vector3(2.5, 0.25046387, 2.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1lej4"]
 size = Vector3(0.3, 0.15, 0.15)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_gl853"]
+noise_type = 0
+seed = 1
+frequency = 0.1
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_gl853"]
+noise = SubResource("FastNoiseLite_gl853")
+invert = true
+
+[sub_resource type="FogMaterial" id="FogMaterial_gl853"]
+density = 0.15
+emission = Color(1, 1, 1, 1)
+height_falloff = 0.066540495
+edge_fade = 0.6062886
+density_texture = SubResource("NoiseTexture3D_gl853")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a5rdk"]
 size = Vector3(6.219531, 1, 2.9956787)
@@ -2500,6 +2517,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 158, 0, -266)
 
 [node name="oasis-arbre-defendu" parent="Montagne-Nord" instance=ExtResource("24_6ef8d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 102.5, 0)
+
+[node name="FogVolume" type="FogVolume" parent="Montagne-Nord/oasis-arbre-defendu"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 0)
+size = Vector3(100, 9, 100)
+shape = 2
+material = SubResource("FogMaterial_gl853")
+script = ExtResource("48_rbtjs")
 
 [node name="MontagneChampi" type="Node3D" parent="Montagne-Nord"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 72.9, -18.8)

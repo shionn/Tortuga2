@@ -57,6 +57,9 @@ background_mode = 2
 sky = SubResource("Sky_pkg7o")
 ssao_enabled = true
 ssil_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
+volumetric_fog_length = 400.0
 adjustment_enabled = true
 
 [node name="World" type="Node3D"]
