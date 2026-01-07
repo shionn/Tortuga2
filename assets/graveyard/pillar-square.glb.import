@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cnkkpy7fmxc72"
-path="res://.godot/imported/pillar-square.glb-50537c9f886db85db16ce37daee61ae3.scn"
+path="res://.godot/imported/pillar-square.glb-73084f4195aa958239853a1ade906016.scn"
 
 [deps]
 
-source_file="res://assets/graveyard/pillar-square.glb"
-dest_files=["res://.godot/imported/pillar-square.glb-50537c9f886db85db16ce37daee61ae3.scn"]
+source_file="res:///assets/graveyard/pillar-square.glb"
+dest_files=["res://.godot/imported/pillar-square.glb-73084f4195aa958239853a1ade906016.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

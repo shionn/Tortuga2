@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://byjj6kfw5ebe1"]
+
+[ext_resource type="PackedScene" uid="uid://cuygsh7peyrad" path="res://assets/pirate/structures/structure-platform-mountain.glb" id="1_mbo1m"]
+[ext_resource type="PackedScene" uid="uid://crg8korvqui82" path="res://assets/town/stairs/stairs-wide-wood.glb" id="2_36saa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u36a6"]
+size = Vector3(2, 1, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vbpl8"]
+size = Vector3(2, 0.9550781, 0.925148)
+
+[node name="MountainBridge-1" type="Node3D"]
+
+[node name="structure-platform-mountain3" parent="." instance=ExtResource("1_mbo1m")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 4, 6)
+
+[node name="structure-platform-mountain4" parent="." instance=ExtResource("1_mbo1m")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 4, 8)
+
+[node name="structure-platform-mountain5" parent="." instance=ExtResource("1_mbo1m")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 4, 10)
+
+[node name="stairs-wide-wood5" parent="." instance=ExtResource("2_36saa")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 0, 2.1, 4)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 2)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, -1.4901161e-08, 2.7376876, -2.0537996)
+shape = SubResource("BoxShape3D_u36a6")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.677539, -3.2318833)
+shape = SubResource("BoxShape3D_vbpl8")

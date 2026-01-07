@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=93 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="PackedScene" uid="uid://gjk5y26xk1ud" path="res://assets/graveyard/gravestone/gravestone-bevel.glb" id="1_5xhig"]
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/barbe-drue/bouteille_note_lisible.gd" id="1_c7jrm"]
@@ -74,6 +74,9 @@
 [ext_resource type="PackedScene" uid="uid://cwsymtk3gb7ai" path="res://scenes/tortuga/tortuga_base_relief.tscn" id="61_e43uk"]
 [ext_resource type="PackedScene" uid="uid://oevj3lrjcgbl" path="res://scenes/tortuga/tortuga_mountain_bridge-2.tscn" id="61_gl853"]
 [ext_resource type="PackedScene" uid="uid://cnkkpy7fmxc72" path="res://assets/graveyard/pillar-square.glb" id="63_fndt1"]
+[ext_resource type="PackedScene" uid="uid://djc74tsxiqmx1" path="res://scenes/tortuga/tortuga_mountain_bridge-3.tscn" id="64_puubj"]
+[ext_resource type="PackedScene" uid="uid://dt7kul30n8qm5" path="res://scenes/tortuga/tortuga_mountain_bridge-4.tscn" id="65_7nohc"]
+[ext_resource type="PackedScene" uid="uid://byjj6kfw5ebe1" path="res://scenes/tortuga/tortuga_mountain_bridge-5.tscn" id="66_boury"]
 [ext_resource type="PackedScene" uid="uid://dbncpesyqlrv8" path="res://assets/castle/tree-large-simplified.glb" id="69_lk3d5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c7jrm"]
@@ -5032,6 +5035,18 @@ transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -10.258484,
 
 [node name="grass13" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grass" instance=ExtResource("2_wohch")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.453125, 0.7000046, -15.001648)
+
+[node name="MountainBridge-1" parent="Montagne-Nord/MontagneHungConnut/Pic5" instance=ExtResource("64_puubj")]
+transform = Transform3D(0.9702956, 0, -0.24192187, 0, 1, 0, 0.24192187, 0, 0.9702956, 11.407379, 4.638344, 19.274216)
+
+[node name="MountainBridge-2" parent="Montagne-Nord/MontagneHungConnut/Pic5" instance=ExtResource("65_7nohc")]
+transform = Transform3D(-0.71016085, 0, 0.70403945, 0, 1, 0, -0.70403945, 0, -0.71016085, 28.047913, 13.1, 25.545853)
+
+[node name="MountainBridge-3" parent="Montagne-Nord/MontagneHungConnut/Pic5" instance=ExtResource("66_boury")]
+transform = Transform3D(0.9588197, 0, 0.28401533, 0, 1, 0, -0.28401533, 0, 0.9588197, 31.112274, 13.040155, 0.6390686)
+
+[node name="chest2" parent="Montagne-Nord/MontagneHungConnut/Pic5" instance=ExtResource("22_aveh0")]
+transform = Transform3D(0.32139382, 0, 0.38302222, 0, 0.5, 0, -0.38302222, 0, 0.32139382, 19, 16.341303, 1)
 
 [node name="MontagneCentral" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0.5, -115)
