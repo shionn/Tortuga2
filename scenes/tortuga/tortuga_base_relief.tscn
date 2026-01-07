@@ -21,12 +21,8 @@ transform = Transform3D(-1.0212708, 0, 19.97391, 0, 20, 0, -19.97391, 0, -1.0212
 [node name="rocks-a3" parent="." instance=ExtResource("5_gvlx3")]
 transform = Transform3D(10.578503, 0, -22.651604, 0, 24.999996, 0, 22.651604, 0, 10.578503, 256.63205, 0.49997902, -276.07355)
 
-[node name="rocks-c2" parent="." instance=ExtResource("3_juhlq")]
-transform = Transform3D(9.768276, 0, -23.012619, 0, 25, 0, 23.012619, 0, 9.768276, 326.4871, 0.4999485, -227.96658)
-
 [node name="rocks-c-open" parent="." instance=ExtResource("5_sok4f")]
 transform = Transform3D(9.768276, 0, -23.01262, 0, 25, 0, 23.01262, 0, 9.768276, 326.487, 0.5, -227.967)
-visible = false
 
 [node name="rocks-c3" parent="." instance=ExtResource("3_juhlq")]
 transform = Transform3D(-7.3106384, 0, 16.448544, 0, 18, 0, -16.448544, 0, -7.3106384, 71.133026, 0.49996376, -111.7684)
