@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnuft8qd5wq53"
-path.s3tc="res://.godot/imported/rock-1_rock1.png-f715e324a62ec0d8cd8e4245c52aa43b.s3tc.ctex"
-path.etc2="res://.godot/imported/rock-1_rock1.png-f715e324a62ec0d8cd8e4245c52aa43b.etc2.ctex"
+uid="uid://grn8qciyjmr3"
+path.s3tc="res://.godot/imported/rocks-c-open_colormap.png-9850147dcf6b225dde14d364de4ca998.s3tc.ctex"
+path.etc2="res://.godot/imported/rocks-c-open_colormap.png-9850147dcf6b225dde14d364de4ca998.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "7854feaf5a73dd9ba57adf104965acc1"
+"md5": "f78981fe761412fd1b049be7113965fd"
 }
 
 [deps]
 
-source_file="res://assets/more-handpainted-rocks/rock-1_rock1.png"
-dest_files=["res://.godot/imported/rock-1_rock1.png-f715e324a62ec0d8cd8e4245c52aa43b.s3tc.ctex", "res://.godot/imported/rock-1_rock1.png-f715e324a62ec0d8cd8e4245c52aa43b.etc2.ctex"]
+source_file="res://assets/pirate/rocks-c-open_colormap.png"
+dest_files=["res://.godot/imported/rocks-c-open_colormap.png-9850147dcf6b225dde14d364de4ca998.s3tc.ctex", "res://.godot/imported/rocks-c-open_colormap.png-9850147dcf6b225dde14d364de4ca998.etc2.ctex"]
 
 [params]
 

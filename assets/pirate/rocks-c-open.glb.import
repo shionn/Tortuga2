@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bglphqm7nx2yx"
-path="res://.godot/imported/rock-5.glb-01e7135767cbbd9897a30787fc4bafc2.scn"
+uid="uid://dh1wt7xdbw6c3"
+path="res://.godot/imported/rocks-c-open.glb-fedc49cb414def2c5afc162df70df4db.scn"
 
 [deps]
 
-source_file="res://assets/more-handpainted-rocks/rock-5.glb"
-dest_files=["res://.godot/imported/rock-5.glb-01e7135767cbbd9897a30787fc4bafc2.scn"]
+source_file="res://assets/pirate/rocks-c-open.glb"
+dest_files=["res://.godot/imported/rocks-c-open.glb-fedc49cb414def2c5afc162df70df4db.scn"]
 
 [params]
 
