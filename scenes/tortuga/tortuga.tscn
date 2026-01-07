@@ -2325,6 +2325,15 @@ transform = Transform3D(2.0000002, 0, 1.1920929e-07, 0, 2, 0, -1.1920929e-07, 0,
 [node name="palm-straight2" parent="ForetCentral/Palm" instance=ExtResource("16_pie5s")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 12, 2.6, 15)
 
+[node name="palm-detailed-bend30" parent="ForetCentral/Palm" instance=ExtResource("5_iswrd")]
+transform = Transform3D(1.7320508, 0, -1, 0, 2, 0, 1, 0, 1.7320508, -41, 0.3, -8)
+
+[node name="palm-detailed-bend31" parent="ForetCentral/Palm" instance=ExtResource("5_iswrd")]
+transform = Transform3D(-1.7320507, 0, 1, 0, 2, 0, -1, 0, -1.7320507, 57, 0.3, -5)
+
+[node name="palm-detailed-bend32" parent="ForetCentral/Palm" instance=ExtResource("5_iswrd")]
+transform = Transform3D(1.0000001, 0, 1.7320507, 0, 2, 0, -1.7320507, 0, 1.0000001, 38, 0.3, -30)
+
 [node name="Laby" type="Node3D" parent="ForetCentral"]
 
 [node name="grass-patch64" parent="ForetCentral/Laby" instance=ExtResource("42_e43uk")]
@@ -5684,14 +5693,211 @@ transform = Transform3D(0.7764573, 0, -2.897777, 0, 5.9999995, 0, 2.897777, 0, 0
 [node name="grass-patch11" parent="MontagneCentral/Laby" instance=ExtResource("42_e43uk")]
 transform = Transform3D(0.7764573, 0, -2.897777, 0, 5.9999995, 0, 2.897777, 0, 0.7764573, -50.8, 0, -3.699997)
 
-[node name="palm-detailed-bend26" parent="MontagneCentral" instance=ExtResource("5_iswrd")]
-transform = Transform3D(1.7320508, 0, -1, 0, 2, 0, 1, 0, 1.7320508, 12, -0.19999999, -71)
+[node name="Pic1" type="Node3D" parent="MontagneCentral"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41, 41.4, 0)
 
-[node name="palm-detailed-bend22" parent="MontagneCentral" instance=ExtResource("5_iswrd")]
-transform = Transform3D(-1.7320507, 0, 1, 0, 2, 0, -1, 0, -1.7320507, 110, -0.19999999, -68)
+[node name="Patchs" type="Node3D" parent="MontagneCentral/Pic1"]
 
-[node name="palm-detailed-bend25" parent="MontagneCentral" instance=ExtResource("5_iswrd")]
-transform = Transform3D(1.0000001, 0, 1.7320507, 0, 2, 0, -1.7320507, 0, 1.0000001, 91, -0.19999999, -93)
+[node name="patch-grass2" parent="MontagneCentral/Pic1/Patchs" instance=ExtResource("3_jit35")]
+transform = Transform3D(1.9283621, 0, -2.298132, 0, 3, 0, 2.298132, 0, 1.9283621, 4.1999664, 0, -2.000023)
+
+[node name="patch-grass7" parent="MontagneCentral/Pic1/Patchs" instance=ExtResource("3_jit35")]
+transform = Transform3D(2.997788, 0, 0.11516384, 0, 2.9999993, 0, -0.11516384, 0, 2.997788, 0.10001373, 0, -5.2000275)
+
+[node name="patch-grass10" parent="MontagneCentral/Pic1/Patchs" instance=ExtResource("3_jit35")]
+transform = Transform3D(-0.3760003, 0, 2.9763427, 0, 2.9999995, 0, -2.9763427, 0, -0.3760003, -4.5, 0, -1.7000427)
+
+[node name="patch-grass6" parent="MontagneCentral/Pic1/Patchs" instance=ExtResource("3_jit35")]
+transform = Transform3D(2.6607654, 0, -1.385756, 0, 2.999999, 0, 1.385756, 0, 2.6607654, -0.5, 0, 3.800003)
+
+[node name="Trees" type="Node3D" parent="MontagneCentral/Pic1"]
+transform = Transform3D(0.894076, 0, -0.44791514, 0, 1, 0, 0.44791514, 0, 0.894076, 1.1264954, 0, 0.63729095)
+
+[node name="tree-large-simplified" parent="MontagneCentral/Pic1/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3.9999998, 0, 0, 0, 4, 0, 0, 0, 3.9999998, 4.266819, 0.69999695, 4.4423065)
+
+[node name="tree-large-simplified2" parent="MontagneCentral/Pic1/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.2484703, 0.69999695, 2.220337)
+
+[node name="tree-large-simplified5" parent="MontagneCentral/Pic1/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2.3857193, 0.69999695, 7.171623)
+
+[node name="tree-large-simplified15" parent="MontagneCentral/Pic1/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3.9999998, 0, 0, 0, 4, 0, 0, 0, 3.9999998, 3.8236809, 0.69999695, -5.6083374)
+
+[node name="tree-large-simplified7" parent="MontagneCentral/Pic1/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -8.435028, 0.69999695, -3.8768616)
+
+[node name="tree-large-simplified9" parent="MontagneCentral/Pic1/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.20002747, 0.69999695, -3.2999878)
+
+[node name="tree-large-simplified13" parent="MontagneCentral/Pic1/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -3.5929375, 0.69999695, -6.2044067)
+
+[node name="tree-large-simplified10" parent="MontagneCentral/Pic1/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -7.4624214, 0.69999695, 3.8444824)
+
+[node name="Pic2" type="Node3D" parent="MontagneCentral"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 30.2, -3)
+
+[node name="Patchs" type="Node3D" parent="MontagneCentral/Pic2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0999985, 0, -0.5999985)
+
+[node name="patch-grass2" parent="MontagneCentral/Pic2/Patchs" instance=ExtResource("3_jit35")]
+transform = Transform3D(0.77645713, 0, -2.8977757, 0, 2.9999998, 0, 2.8977757, 0, 0.77645713, 3.9999695, 0, -1.9000244)
+
+[node name="patch-grass7" parent="MontagneCentral/Pic2/Patchs" instance=ExtResource("3_jit35")]
+transform = Transform3D(2.997788, 0, 0.11516384, 0, 2.9999993, 0, -0.11516384, 0, 2.997788, 1.5258789e-05, 0, -5.4000244)
+
+[node name="patch-grass10" parent="MontagneCentral/Pic2/Patchs" instance=ExtResource("3_jit35")]
+transform = Transform3D(-0.6339748, 0, 2.932246, 0, 2.9999995, 0, -2.932246, 0, -0.6339748, -4.799999, 0, -0.60004425)
+
+[node name="patch-grass6" parent="MontagneCentral/Pic2/Patchs" instance=ExtResource("3_jit35")]
+transform = Transform3D(-2.9971685, 0, -0.130283, 0, 2.9999993, 0, 0.130283, 0, -2.9971685, 0.19999695, 0, 3.800003)
+
+[node name="Trees" type="Node3D" parent="MontagneCentral/Pic2"]
+transform = Transform3D(0.894076, 0, -0.44791514, 0, 1, 0, 0.44791514, 0, 0.894076, 1.1264954, 0, 0.63729095)
+
+[node name="tree-large-simplified" parent="MontagneCentral/Pic2/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3.9999998, 0, 0, 0, 4, 0, 0, 0, 3.9999998, 4.266819, 0.69999695, 4.4423065)
+
+[node name="tree-large-simplified2" parent="MontagneCentral/Pic2/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1.9385986, 0.69999695, -3.2373962)
+
+[node name="tree-large-simplified5" parent="MontagneCentral/Pic2/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2.1206512, 0.69999695, 3.0123138)
+
+[node name="tree-large-simplified15" parent="MontagneCentral/Pic2/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3.9999998, 0, 0, 0, 4, 0, 0, 0, 3.9999998, -6.7227325, 0.69999695, 4.3727875)
+
+[node name="tree-large-simplified7" parent="MontagneCentral/Pic2/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -8.435028, 0.69999695, -3.8768616)
+
+[node name="tree-large-simplified9" parent="MontagneCentral/Pic2/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2.611576, 0.69999695, -7.639862)
+
+[node name="tree-large-simplified13" parent="MontagneCentral/Pic2/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -3.5929375, 0.69999695, -6.2044067)
+
+[node name="tree-large-simplified10" parent="MontagneCentral/Pic2/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -5.6760254, 0.69999695, 0.7125778)
+
+[node name="Pic3" type="Node3D" parent="MontagneCentral"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 29.600002, 17)
+
+[node name="Patchs" type="Node3D" parent="MontagneCentral/Pic3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.099998474, 0, -0.7999954)
+
+[node name="patch-grass2" parent="MontagneCentral/Pic3/Patchs" instance=ExtResource("3_jit35")]
+transform = Transform3D(2.9885824, 0, 0.2614674, 0, 2.9999995, 0, -0.2614674, 0, 2.9885824, -2.0000305, 0, -3.500023)
+
+[node name="patch-grass7" parent="MontagneCentral/Pic3/Patchs" instance=ExtResource("3_jit35")]
+transform = Transform3D(2.997788, 0, 0.11516384, 0, 2.9999993, 0, -0.11516384, 0, 2.997788, 1.6000137, 0, -3.800026)
+
+[node name="patch-grass10" parent="MontagneCentral/Pic3/Patchs" instance=ExtResource("3_jit35")]
+transform = Transform3D(-2.201189, 0, 2.0383222, 0, 2.9999993, 0, -2.0383222, 0, -2.201189, -3.7000008, 0, 1.4999542)
+
+[node name="patch-grass6" parent="MontagneCentral/Pic3/Patchs" instance=ExtResource("3_jit35")]
+transform = Transform3D(-1.612384, 0, -2.5298638, 0, 2.9999995, 0, 2.5298638, 0, -1.612384, 2.2000046, 0, 2.600006)
+
+[node name="Trees" type="Node3D" parent="MontagneCentral/Pic3"]
+transform = Transform3D(0.894076, 0, -0.44791514, 0, 1, 0, 0.44791514, 0, 0.894076, 1.1264954, 0, 0.63729095)
+
+[node name="tree-large-simplified" parent="MontagneCentral/Pic3/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3.9999998, 0, 0, 0, 4, 0, 0, 0, 3.9999998, 2.8343658, 0.69999695, 2.6993103)
+
+[node name="tree-large-simplified2" parent="MontagneCentral/Pic3/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 4.3550644, 0.69999695, -1.3162689)
+
+[node name="tree-large-simplified5" parent="MontagneCentral/Pic3/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2.2077827, 0.69999695, 5.963997)
+
+[node name="tree-large-simplified15" parent="MontagneCentral/Pic3/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3.9999998, 0, 0, 0, 4, 0, 0, 0, 3.9999998, -6.7227325, 0.69999695, 4.3727875)
+
+[node name="tree-large-simplified7" parent="MontagneCentral/Pic3/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -8.748219, 0.69999695, -4.055504)
+
+[node name="tree-large-simplified9" parent="MontagneCentral/Pic3/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1.941639, 0.69999695, -6.5213013)
+
+[node name="tree-large-simplified13" parent="MontagneCentral/Pic3/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2.4288788, 0.69999695, -4.550621)
+
+[node name="tree-large-simplified10" parent="MontagneCentral/Pic3/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.48968124, 0.69999695, -0.99089813)
+
+[node name="Pic4" type="Node3D" parent="MontagneCentral"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 24.2, -15)
+
+[node name="Patchs" type="Node3D" parent="MontagneCentral/Pic4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0999985, 0, -0.5999985)
+
+[node name="patch-grass6" parent="MontagneCentral/Pic4/Patchs" instance=ExtResource("3_jit35")]
+transform = Transform3D(2.8609765, 0, -0.9026653, 0, 2.999999, 0, 0.9026653, 0, 2.8609765, -1.199997, 0, 0.6000061)
+
+[node name="Trees" type="Node3D" parent="MontagneCentral/Pic4"]
+transform = Transform3D(0.894076, 0, -0.44791514, 0, 1, 0, 0.44791514, 0, 0.894076, 1.1264954, 0, 0.63729095)
+
+[node name="tree-large-simplified2" parent="MontagneCentral/Pic4/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 3.6844215, 0.69999695, -1.0921478)
+
+[node name="tree-large-simplified15" parent="MontagneCentral/Pic4/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3.9999998, 0, 0, 0, 4, 0, 0, 0, 3.9999998, -4.9363327, 0.69999695, 1.2408905)
+
+[node name="tree-large-simplified13" parent="MontagneCentral/Pic4/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -4.3951416, 0.69999695, -2.6707916)
+
+[node name="tree-large-simplified10" parent="MontagneCentral/Pic4/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.48968124, 0.69999695, -0.99089813)
+
+[node name="Pic5" type="Node3D" parent="MontagneCentral"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 17.800001, 8)
+
+[node name="Patchs" type="Node3D" parent="MontagneCentral/Pic5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0999985, 0, -0.5999985)
+
+[node name="patch-grass2" parent="MontagneCentral/Pic5/Patchs" instance=ExtResource("3_jit35")]
+transform = Transform3D(2.5980752, 0, -1.4999983, 0, 2.999999, 0, 1.4999983, 0, 2.5980752, 2.099968, 0, -2.800026)
+
+[node name="patch-grass7" parent="MontagneCentral/Pic5/Patchs" instance=ExtResource("3_jit35")]
+transform = Transform3D(2.7776103, 0, 1.1335225, 0, 2.999999, 0, -1.1335225, 0, 2.7776103, -3.6999893, 0, -6.0000305)
+
+[node name="patch-grass10" parent="MontagneCentral/Pic5/Patchs" instance=ExtResource("3_jit35")]
+transform = Transform3D(-0.40714544, 0, -2.9722419, 0, 2.9999988, 0, 2.9722419, 0, -0.40714544, 2.9000092, 0, 4.2999573)
+
+[node name="patch-grass6" parent="MontagneCentral/Pic5/Patchs" instance=ExtResource("3_jit35")]
+transform = Transform3D(-2.9971685, 0, -0.130283, 0, 2.9999993, 0, 0.130283, 0, -2.9971685, -4.9000015, 0, 7.7000046)
+
+[node name="patch-grass8" parent="MontagneCentral/Pic5/Patchs" instance=ExtResource("3_jit35")]
+transform = Transform3D(2.8613226, 0, 0.9015683, 0, 2.999999, 0, -0.9015683, 0, 2.8613226, -6.800003, 0, 2.300003)
+
+[node name="Trees" type="Node3D" parent="MontagneCentral/Pic5"]
+transform = Transform3D(0.894076, 0, -0.44791514, 0, 1, 0, 0.44791514, 0, 0.894076, 1.1264954, 0, 0.63729095)
+
+[node name="tree-large-simplified" parent="MontagneCentral/Pic5/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3.9999998, 0, 0, 0, 4, 0, 0, 0, 3.9999998, 6.85894, 0.69999695, 2.2489471)
+
+[node name="tree-large-simplified2" parent="MontagneCentral/Pic5/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 4.0410004, 0.69999695, -2.6129456)
+
+[node name="tree-large-simplified5" parent="MontagneCentral/Pic5/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -4.038616, 0.69999695, 9.453705)
+
+[node name="tree-large-simplified15" parent="MontagneCentral/Pic5/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3.9999998, 0, 0, 0, 4, 0, 0, 0, 3.9999998, -6.240547, 0.69999695, -8.060135)
+
+[node name="tree-large-simplified7" parent="MontagneCentral/Pic5/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -7.310501, 0.69999695, 4.395706)
+
+[node name="tree-large-simplified9" parent="MontagneCentral/Pic5/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1.941639, 0.69999695, -6.5213013)
+
+[node name="tree-large-simplified13" parent="MontagneCentral/Pic5/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2.4288788, 0.69999695, -4.550621)
+
+[node name="tree-large-simplified10" parent="MontagneCentral/Pic5/Trees" instance=ExtResource("69_lk3d5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2.7241669, 0.69999695, 1.0233307)
 
 [node name="Plage-N" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 250, 0.5, -307)
