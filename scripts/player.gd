@@ -58,6 +58,7 @@ func _ready() -> void:
 	_animation = node.get_child(1)
 	_animation.get_animation("idle").loop_mode = Animation.LOOP_LINEAR
 	#teleport(Vector3(229.7, 74, -270.7), 0)
+	teleport(Vector3(300, 26, -240), 72)
 
 func _physics_process(delta: float) -> void:
 

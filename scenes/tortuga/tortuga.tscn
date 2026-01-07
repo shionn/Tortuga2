@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=90 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="PackedScene" uid="uid://gjk5y26xk1ud" path="res://assets/graveyard/gravestone/gravestone-bevel.glb" id="1_5xhig"]
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/barbe-drue/bouteille_note_lisible.gd" id="1_c7jrm"]
@@ -73,6 +73,7 @@
 [ext_resource type="PackedScene" uid="uid://rykj8x0qv7ey" path="res://scenes/tortuga/tortuga_mountain_bridge.tscn" id="60_ff4fn"]
 [ext_resource type="PackedScene" uid="uid://cwsymtk3gb7ai" path="res://scenes/tortuga/tortuga_base_relief.tscn" id="61_e43uk"]
 [ext_resource type="PackedScene" uid="uid://oevj3lrjcgbl" path="res://scenes/tortuga/tortuga_mountain_bridge-2.tscn" id="61_gl853"]
+[ext_resource type="PackedScene" uid="uid://cnkkpy7fmxc72" path="res://assets/graveyard/pillar-square.glb" id="63_fndt1"]
 [ext_resource type="PackedScene" uid="uid://dbncpesyqlrv8" path="res://assets/castle/tree-large-simplified.glb" id="69_lk3d5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c7jrm"]
@@ -4658,6 +4659,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 34.067123, 19)
 
 [node name="Pic5" type="Node3D" parent="Montagne-Nord/MontagneHungConnut"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 25.258696, -14)
+
+[node name="Entrance" type="Node3D" parent="Montagne-Nord/MontagneHungConnut/Pic5"]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 7.899994, 0, 4)
+
+[node name="pillar-square2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Entrance" instance=ExtResource("63_fndt1")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, -1.8999939)
+
+[node name="pillar-square3" parent="Montagne-Nord/MontagneHungConnut/Pic5/Entrance" instance=ExtResource("63_fndt1")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 1.6000061)
+
+[node name="pillar-square4" parent="Montagne-Nord/MontagneHungConnut/Pic5/Entrance" instance=ExtResource("63_fndt1")]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, 3, 0, -3, -1.3113416e-07, 0.1, 3, 1.5)
 
 [node name="MontagneCentral" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0.5, -115)
