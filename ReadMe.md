@@ -25,7 +25,6 @@
 - https://kenney.nl/assets
 - https://opengameart.org/content/fruit-pack-01
 - https://opengameart.org/content/lowpoly-animated-farm-animal-pack
-- https://opengameart.org/content/more-handpainted-rocks (non utilisé pour l'instant)
 - https://opengameart.org/content/rpg-item-collection-2
 - https://opengameart.org/content/sign-plate-1
 - https://opengameart.org/content/spyglass
@@ -47,6 +46,8 @@
 - https://opengameart.org/content/rpg-item-collection-1 ?
 - https://opengameart.org/content/rpg-item-collection-3 ?
 - https://opengameart.org/content/simple-3d-crystals-unwrapped-simple-texture ?
+
+- https://opengameart.org/content/more-handpainted-rocks : non texture trop grosse 
 
 ## non importer mais pourrai etre simpa : 
 - paper : https://opengameart.org/content/papers
