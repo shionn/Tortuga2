@@ -8,7 +8,7 @@ var _speed := 0 as float
 
 func _physics_process(delta: float) -> void:
 	# Je desactive le control du bateau pour l'instant
-	if Input.is_action_just_pressed("control_boat") and false :
+	if Input.is_action_just_pressed("control_boat") and false:
 		if _camera.current :
 			_camera.clear_current()
 		elif _activation.overlaps_body(_player) :
@@ -28,15 +28,15 @@ func _physics_process(delta: float) -> void:
 		velocity = Vector3.ZERO
 
 func _handle_move(delta : float) -> void: 
-	if Input.is_action_pressed("ui_right") :
+	if Input.is_action_pressed("move_righ") :
 		rotate_y(-1*delta)
 		#velocity.rotated(Vector3.UP, -1*delta)
-	if Input.is_action_pressed("ui_left") :
+	if Input.is_action_pressed("move_left") :
 		rotate_y(1*delta)
 		#velocity.rotated(Vector3.UP, 1*delta)
-	if Input.is_action_pressed("ui_up") :
+	if Input.is_action_pressed("move_front") :
 		_speed += 10.0*delta
-	if Input.is_action_pressed("ui_down") :
+	if Input.is_action_pressed("move_back") :
 		_speed -= 10.0*delta
 
 

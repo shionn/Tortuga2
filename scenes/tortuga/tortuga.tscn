@@ -1,4 +1,4 @@
-[gd_scene load_steps=93 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=97 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="PackedScene" uid="uid://gjk5y26xk1ud" path="res://assets/graveyard/gravestone/gravestone-bevel.glb" id="1_5xhig"]
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/barbe-drue/bouteille_note_lisible.gd" id="1_c7jrm"]
@@ -78,6 +78,10 @@
 [ext_resource type="PackedScene" uid="uid://dt7kul30n8qm5" path="res://scenes/tortuga/tortuga_mountain_bridge-4.tscn" id="65_7nohc"]
 [ext_resource type="PackedScene" uid="uid://byjj6kfw5ebe1" path="res://scenes/tortuga/tortuga_mountain_bridge-5.tscn" id="66_boury"]
 [ext_resource type="PackedScene" uid="uid://dbncpesyqlrv8" path="res://assets/castle/tree-large-simplified.glb" id="69_lk3d5"]
+[ext_resource type="PackedScene" uid="uid://da843m2aqgq7r" path="res://assets/mine/tortuga-chaman-60.glb" id="79_0bag0"]
+[ext_resource type="PackedScene" uid="uid://c1sc7qjitvtsi" path="res://assets/pirate/rocks-a.glb" id="80_5x0ot"]
+[ext_resource type="PackedScene" uid="uid://chxfr2yagmg24" path="res://assets/pirate/rocks-c.glb" id="81_4ia42"]
+[ext_resource type="PackedScene" uid="uid://dxkgapjtrucm5" path="res://assets/pirate/boats/ship-wreck.glb" id="82_5x0ot"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c7jrm"]
 size = Vector3(0.2, 0.44476318, 0.2)
@@ -8068,6 +8072,56 @@ transform = Transform3D(-1.2678561, 0, 2.7189245, 0, 5.999997, 0, -2.7189245, 0,
 transform = Transform3D(2.7189243, 0, 1.2678561, 0, 5.999997, 0, -1.2678561, 0, 2.7189243, 17.300514, 1.5, -24.799988)
 
 [node name="TortugaBaseRelief" parent="." instance=ExtResource("61_e43uk")]
+
+[node name="TortugaChamanIsland" parent="." instance=ExtResource("79_0bag0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 302, 1, 86)
+
+[node name="rocks-a4" parent="TortugaChamanIsland" instance=ExtResource("80_5x0ot")]
+transform = Transform3D(3.4999998, 0, 6.062178, 0, 7, 0, -6.062178, 0, 3.4999998, -7.100006, 0, -22.899998)
+
+[node name="rocks-c2" parent="TortugaChamanIsland" instance=ExtResource("81_4ia42")]
+transform = Transform3D(4.596266, 0, 3.8567266, 0, 6, 0, -3.8567266, 0, 4.596266, -7, 0, 26.199997)
+
+[node name="ship-wreck2" parent="TortugaChamanIsland" instance=ExtResource("82_5x0ot")]
+transform = Transform3D(0.90630776, 0.38302222, 0.1786062, -0.42261833, 0.82139385, 0.38302228, 0, -0.42261833, 0.9063079, 15.899994, -1.1, -45.2)
+
+[node name="Grasses" type="Node3D" parent="TortugaChamanIsland"]
+
+[node name="flat-grass" parent="TortugaChamanIsland/Grasses" instance=ExtResource("50_e43uk")]
+transform = Transform3D(7.9999995, 0, -6.9282036, 0, 4, 0, 13.856407, 0, 3.9999998, -0.5, 0, 1)
+
+[node name="patch-grass2" parent="TortugaChamanIsland/Grasses" instance=ExtResource("3_jit35")]
+transform = Transform3D(-2.5711505, 0, -3.0641782, 0, 4, 0, 3.0641782, 0, -2.5711505, 10.299988, 0, 14.300003)
+
+[node name="patch-grass5" parent="TortugaChamanIsland/Grasses" instance=ExtResource("3_jit35")]
+transform = Transform3D(-3.984779, 0, -0.34862328, 0, 4, 0, 0.34862328, 0, -3.984779, -1.7000122, 0, 16.300003)
+
+[node name="patch-grass6" parent="TortugaChamanIsland/Grasses" instance=ExtResource("3_jit35")]
+transform = Transform3D(0.34862363, 0, -3.9847784, 0, 4, 0, 3.9847784, 0, 0.34862363, -8.400024, 0, 6.3000107)
+
+[node name="patch-grass7" parent="TortugaChamanIsland/Grasses" instance=ExtResource("3_jit35")]
+transform = Transform3D(-3.4641013, 0, 1.9999993, 0, 4, 0, -1.9999993, 0, -3.4641013, -15.000061, 0, -5.8999863)
+
+[node name="patch-grass3" parent="TortugaChamanIsland/Grasses" instance=ExtResource("3_jit35")]
+transform = Transform3D(3.064178, 0, -2.5711503, 0, 4, 0, 2.5711503, 0, 3.064178, 9.973206, 0, 2.9778366)
+
+[node name="patch-grass4" parent="TortugaChamanIsland/Grasses" instance=ExtResource("3_jit35")]
+transform = Transform3D(-2, 0, 3.4641018, 0, 4, 0, -3.4641018, 0, -2, 1.5732117, 0, -6.822159)
+
+[node name="structure-platform-dock-long" parent="TortugaChamanIsland" instance=ExtResource("22_8hael")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -17.299988, -1, 11)
+
+[node name="structure-platform-dock-long2" parent="TortugaChamanIsland" instance=ExtResource("22_8hael")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -19.799988, -1, 11)
+
+[node name="structure-platform-dock-long3" parent="TortugaChamanIsland" instance=ExtResource("22_8hael")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -22.299988, -1, 11)
+
+[node name="structure-platform-dock-long4" parent="TortugaChamanIsland" instance=ExtResource("22_8hael")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -24.799988, -1, 11)
+
+[node name="structure-platform-dock-long5" parent="TortugaChamanIsland" instance=ExtResource("22_8hael")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -27.299988, -1, 11)
 
 [connection signal="body_entered" from="Crique/Crique-SE/Area3D" to="Crique/Crique-SE/parchemin-hung-connut-1" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Crique/Crique-SE/Area3D" to="Crique/Crique-SE/parchemin-hung-connut-2" method="_on_area_3d_body_entered"]

@@ -29,6 +29,12 @@
 - https://opengameart.org/content/sign-plate-1
 - https://opengameart.org/content/spyglass
 
+### A faire 
+
+- https://www.kenney.nl/assets/food-kit pour redecorer l'auberge
+
+### potentiel
+
 - https://opengameart.org/content/broken-stone-slab ?
 - https://opengameart.org/content/desert-rock ?
 - https://opengameart.org/content/free-low-poly-lava-plants ?
@@ -46,7 +52,8 @@
 - https://opengameart.org/content/rpg-item-collection-1 ?
 - https://opengameart.org/content/rpg-item-collection-3 ?
 - https://opengameart.org/content/simple-3d-crystals-unwrapped-simple-texture ?
-
+- https://opengameart.org/content/low-poly-witch-hat
+### c'est non :
 - https://opengameart.org/content/more-handpainted-rocks : non texture trop grosse 
 
 ## non importer mais pourrai etre simpa : 

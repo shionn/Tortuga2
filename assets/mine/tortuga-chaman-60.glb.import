@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dxkgapjtrucm5"
-path="res://.godot/imported/ship-wreck.glb-487f715b924e60d927ea158f46104e9a.scn"
+uid="uid://da843m2aqgq7r"
+path="res://.godot/imported/tortuga-chaman-60.glb-33edcb7f6812fd1c2610e93fb70554a5.scn"
 
 [deps]
 
-source_file="res:///assets/pirate/boats/ship-wreck.glb"
-dest_files=["res://.godot/imported/ship-wreck.glb-487f715b924e60d927ea158f46104e9a.scn"]
+source_file="res:///assets/mine/tortuga-chaman-60.glb"
+dest_files=["res://.godot/imported/tortuga-chaman-60.glb-33edcb7f6812fd1c2610e93fb70554a5.scn"]
 
 [params]
 
