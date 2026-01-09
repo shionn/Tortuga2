@@ -45,6 +45,7 @@
 - https://opengameart.org/content/inventory-items ?
 - https://opengameart.org/content/lowpoly-crystals ?
 - https://opengameart.org/content/lowpoly-crystals-pack ?
+- https://opengameart.org/content/low-poly-witch-hat
 - https://opengameart.org/content/medieval-props-textured ?
 - https://opengameart.org/content/modular-terrain ?
 - https://opengameart.org/content/mossy-stone-rock ?
@@ -52,7 +53,8 @@
 - https://opengameart.org/content/rpg-item-collection-1 ?
 - https://opengameart.org/content/rpg-item-collection-3 ?
 - https://opengameart.org/content/simple-3d-crystals-unwrapped-simple-texture ?
-- https://opengameart.org/content/low-poly-witch-hat
+- https://opengameart.org/content/skull-1
+
 ### c'est non :
 - https://opengameart.org/content/more-handpainted-rocks : non texture trop grosse 
 

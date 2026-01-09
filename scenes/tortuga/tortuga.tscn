@@ -1,4 +1,4 @@
-[gd_scene load_steps=97 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=98 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="PackedScene" uid="uid://gjk5y26xk1ud" path="res://assets/graveyard/gravestone/gravestone-bevel.glb" id="1_5xhig"]
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/barbe-drue/bouteille_note_lisible.gd" id="1_c7jrm"]
@@ -82,6 +82,7 @@
 [ext_resource type="PackedScene" uid="uid://c1sc7qjitvtsi" path="res://assets/pirate/rocks-a.glb" id="80_5x0ot"]
 [ext_resource type="PackedScene" uid="uid://chxfr2yagmg24" path="res://assets/pirate/rocks-c.glb" id="81_4ia42"]
 [ext_resource type="PackedScene" uid="uid://dxkgapjtrucm5" path="res://assets/pirate/boats/ship-wreck.glb" id="82_5x0ot"]
+[ext_resource type="PackedScene" uid="uid://cqixno3g5svqo" path="res://scenes/tortuga/tortuga_shaman_house.tscn" id="83_4ia42"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c7jrm"]
 size = Vector3(0.2, 0.44476318, 0.2)
@@ -8107,6 +8108,9 @@ transform = Transform3D(3.064178, 0, -2.5711503, 0, 4, 0, 2.5711503, 0, 3.064178
 
 [node name="patch-grass4" parent="TortugaChamanIsland/Grasses" instance=ExtResource("3_jit35")]
 transform = Transform3D(-2, 0, 3.4641018, 0, 4, 0, -3.4641018, 0, -2, 1.5732117, 0, -6.822159)
+
+[node name="TortugaShamanHouse" parent="TortugaChamanIsland/Grasses" instance=ExtResource("83_4ia42")]
+transform = Transform3D(0.9396926, 0, 0.34202015, 0, 1, 0, -0.34202015, 0, 0.9396926, 2.2999878, 2.1000001, -4.5)
 
 [node name="structure-platform-dock-long" parent="TortugaChamanIsland" instance=ExtResource("22_8hael")]
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -17.299988, -1, 11)

@@ -1,0 +1,128 @@
+[gd_scene load_steps=14 format=3 uid="uid://cqixno3g5svqo"]
+
+[ext_resource type="Script" uid="uid://yva2kk7v53n7" path="res://scripts/pnj.gd" id="1_2eujg"]
+[ext_resource type="PackedScene" uid="uid://bohgyv4ijnvfm" path="res://assets/town/walls/wall-wood-doorway-square.glb" id="1_m25qr"]
+[ext_resource type="PackedScene" uid="uid://crg8korvqui82" path="res://assets/town/stairs/stairs-wide-wood.glb" id="1_mc8li"]
+[ext_resource type="PackedScene" uid="uid://ye5nsphukeql" path="res://assets/pirate/structures/structure-plateform-long.glb" id="2_k0ale"]
+[ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="2_oofwr"]
+[ext_resource type="PackedScene" uid="uid://b64713gko8rd8" path="res://assets/town/walls/wall-wood-corner-edge.glb" id="2_vnl2v"]
+[ext_resource type="PackedScene" uid="uid://86dcdsinmla4" path="res://assets/town/walls/wall-wood-window-round.glb" id="3_8qlg5"]
+[ext_resource type="PackedScene" uid="uid://cuwkv5gqn18pj" path="res://assets/character/base/character-female-a-2.glb" id="3_hh7em"]
+[ext_resource type="PackedScene" uid="uid://ckl0cxjsbj1sn" path="res://assets/town/roof/roof-corner-round.glb" id="6_2eujg"]
+[ext_resource type="PackedScene" uid="uid://dj2jytbjf6lck" path="res://assets/town/roof/roof.glb" id="7_oofwr"]
+[ext_resource type="PackedScene" uid="uid://d3k6pjo57mt0k" path="res://assets/town/roof/roof-point.glb" id="8_hh7em"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mc8li"]
+size = Vector3(2, 1, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k0ale"]
+size = Vector3(2, 0.9550781, 0.925148)
+
+[node name="TortugaShamanHouse" type="Node3D"]
+
+[node name="pnj" parent="." instance=ExtResource("2_oofwr")]
+transform = Transform3D(0.7071067, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.7071067, -1.2, 0.9, -4.1)
+script = ExtResource("1_2eujg")
+model = ExtResource("3_hh7em")
+pnj_name = "Grabouilla"
+pnj_role = "Sorcière"
+
+[node name="Walls" type="Node3D" parent="."]
+
+[node name="wall-wood-doorway-square2" parent="Walls" instance=ExtResource("1_m25qr")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 0, 0.9, -1.5)
+
+[node name="wall-wood-corner-edge2" parent="Walls" instance=ExtResource("2_vnl2v")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -1.8, 0.9, -1.5)
+
+[node name="wall-wood-corner-edge4" parent="Walls" instance=ExtResource("2_vnl2v")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.8000001, 0.9, -1.5)
+
+[node name="wall-wood-corner-edge3" parent="Walls" instance=ExtResource("2_vnl2v")]
+transform = Transform3D(-2, 0, 1.7484555e-07, 0, 2, 0, -1.7484555e-07, 0, -2, -1.8, 0.9, -5.1)
+
+[node name="wall-wood-corner-edge5" parent="Walls" instance=ExtResource("2_vnl2v")]
+transform = Transform3D(2.6226832e-07, 0, 2, 0, 2, 0, -2, 0, 2.6226832e-07, 1.8000001, 0.9, -5.1)
+
+[node name="wall-wood-window-round2" parent="Walls" instance=ExtResource("3_8qlg5")]
+transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, -1.8, 0.9, -3.3)
+
+[node name="wall-wood-window-round4" parent="Walls" instance=ExtResource("3_8qlg5")]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 4.4703484e-08, 0.9, -5.1)
+
+[node name="wall-wood-window-round3" parent="Walls" instance=ExtResource("3_8qlg5")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.8000001, 0.9, -3.3)
+
+[node name="Base" type="Node3D" parent="."]
+
+[node name="structure-plateform-long" parent="Base" instance=ExtResource("2_k0ale")]
+
+[node name="structure-plateform-long2" parent="Base" instance=ExtResource("2_k0ale")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.5, 0, 0)
+
+[node name="structure-plateform-long3" parent="Base" instance=ExtResource("2_k0ale")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.5, 0, 0)
+
+[node name="structure-plateform-long4" parent="Base" instance=ExtResource("2_k0ale")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="structure-plateform-long5" parent="Base" instance=ExtResource("2_k0ale")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.5, 0, -5)
+
+[node name="structure-plateform-long6" parent="Base" instance=ExtResource("2_k0ale")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.5, 0, -5)
+
+[node name="structure-plateform-long7" parent="Base" instance=ExtResource("2_k0ale")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -2.5)
+
+[node name="structure-plateform-long8" parent="Base" instance=ExtResource("2_k0ale")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.5, 0, -2.5)
+
+[node name="structure-plateform-long9" parent="Base" instance=ExtResource("2_k0ale")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, -2.5)
+
+[node name="stairs-wide-wood5" parent="Base" instance=ExtResource("1_mc8li")]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 0, -1.1, 2.25)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Base/stairs-wide-wood5"]
+transform = Transform3D(6.556708e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, 6.556708e-08, -0.9999999, -1.05, 4.371139e-08)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Base/stairs-wide-wood5/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, -1.4901161e-08, 2.7376876, -2.0537996)
+shape = SubResource("BoxShape3D_mc8li")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Base/stairs-wide-wood5/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.677539, -3.2318833)
+shape = SubResource("BoxShape3D_k0ale")
+
+[node name="Roof" type="Node3D" parent="."]
+
+[node name="roof-corner-round2" parent="Roof" instance=ExtResource("6_2eujg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.9, 3, -1.3000002)
+
+[node name="roof-corner-round5" parent="Roof" instance=ExtResource("6_2eujg")]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 2.1, 3, -1.3000002)
+
+[node name="roof-corner-round3" parent="Roof" instance=ExtResource("6_2eujg")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -1.9, 3, -5.3)
+
+[node name="roof-corner-round4" parent="Roof" instance=ExtResource("6_2eujg")]
+transform = Transform3D(-2, 0, 1.7484555e-07, 0, 2, 0, -1.7484555e-07, 0, -2, 2.1, 3, -5.3)
+
+[node name="roof2" parent="Roof" instance=ExtResource("7_oofwr")]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 0.100000024, 3, -1.3000002)
+
+[node name="roof3" parent="Roof" instance=ExtResource("7_oofwr")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.9, 3, -3.3000002)
+
+[node name="roof4" parent="Roof" instance=ExtResource("7_oofwr")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 0.100000024, 3, -5.3)
+
+[node name="roof5" parent="Roof" instance=ExtResource("7_oofwr")]
+transform = Transform3D(-2, 0, 1.7484555e-07, 0, 2, 0, -1.7484555e-07, 0, -2, 2.1, 3, -3.3000002)
+
+[node name="roof-point2" parent="Roof" instance=ExtResource("8_hh7em")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.099999964, 4.2, -3.2999997)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -3)
