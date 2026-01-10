@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ye5nsphukeql"
-path="res://.godot/imported/structure-plateform-long.glb-789e2bd8751ec2d81b13a0a42d3ae124.scn"
+path="res://.godot/imported/structure-plateform-long.glb-c551500f4f9e5ea519efe35b470191f7.scn"
 
 [deps]
 
-source_file="res:///assets/pirate/structures/structure-plateform-long.glb"
-dest_files=["res://.godot/imported/structure-plateform-long.glb-789e2bd8751ec2d81b13a0a42d3ae124.scn"]
+source_file="res://assets/pirate/structures/structure-plateform-long.glb"
+dest_files=["res://.godot/imported/structure-plateform-long.glb-c551500f4f9e5ea519efe35b470191f7.scn"]
 
 [params]
 

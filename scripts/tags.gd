@@ -15,16 +15,22 @@ const HUNG_CONNUT_SEARCH_ESCALTOR = "011"
 const HUNG_CONNUT_SEARCH_CHARPENTIER = "012"
 
 var tags : Array[String] = []
+var _player : Player
+
+func _init(player :Player) -> void:
+	_player = player;
 
 func add(tag:String) -> void : 
 	if not(have(tag)) :
 		self.tags.append(tag)
+	_player._score.compute()
 
 func have(tag:String) -> bool :
 	return tags.has(tag)
 
 func remove(tag:String) -> void :
 	tags.erase(tag)
+	_player._score.compute()
 	
 func save_game() -> void :
 	var file = FileAccess.open("user://tags.save", FileAccess.WRITE)
@@ -36,3 +42,4 @@ func load_game() -> void :
 		tags.clear()
 		for tag in JSON.parse_string(file.get_line()) :
 			tags.append(tag)
+	_player._score.compute()

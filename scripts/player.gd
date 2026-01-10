@@ -12,13 +12,14 @@ enum STATUT { MOVING, IDLE, SIT }
 @onready var _camera_pivot := $CameraPivot as Node3D
 @onready var _pivot := $Pivot as Node3D
 @onready var _character := $Pivot/character as Node3D
+@onready var _score := $/root/World/Gui/Score as Score
 
 var _animation : AnimationPlayer
 var _last_floor_position : Vector3
 var state = STATUT.MOVING
 # start : 39, 1.5, -25
 
-var tags = Tags.new()
+var tags = Tags.new(self)
 
 func sit(at_position : Vector3, look = 0.0) -> void: 
 	state = STATUT.SIT

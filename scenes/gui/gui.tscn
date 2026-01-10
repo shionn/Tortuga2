@@ -1,10 +1,11 @@
-[gd_scene load_steps=28 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=29 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://scripts/gui/gui.gd" id="1_0fbet"]
 [ext_resource type="Script" uid="uid://ikfx1cjqumpb" path="res://scripts/gui/dialog.gd" id="2_bgohe"]
+[ext_resource type="Script" uid="uid://bc3yfthowjjmn" path="res://scripts/gui/score.gd" id="2_eaefa"]
 [ext_resource type="Texture2D" uid="uid://dyq75clqrse1h" path="res://assets/gui/ui-adventure/minimap_ring_brown_detail.png" id="2_ioifv"]
 [ext_resource type="Texture2D" uid="uid://ctudwtb3qq5jg" path="res://assets/gui/ui-adventure/minimap_compass_toon_n.png" id="3_q46mf"]
-[ext_resource type="Script" path="res://scripts/gui/image.gd" id="3_ytu88"]
+[ext_resource type="Script" uid="uid://k2bbepgo55y4" path="res://scripts/gui/image.gd" id="3_ytu88"]
 [ext_resource type="Texture2D" uid="uid://6r2enbextcew" path="res://assets/gui/ui-adventure/minimap_compass_toon_s.png" id="4_ytf3d"]
 [ext_resource type="Texture2D" uid="uid://cdqtjkc7ao1xk" path="res://assets/gui/ui-adventure/minimap_compass_toon_e.png" id="5_bk7cs"]
 [ext_resource type="Texture2D" uid="uid://bkfc3jdh67dmb" path="res://assets/gui/ui-adventure/minimap_compass_toon_w.png" id="6_kvi6p"]
@@ -44,8 +45,20 @@ script = ExtResource("1_0fbet")
 layout_mode = 1
 offset_right = 85.0
 offset_bottom = 49.0
-text = "PlayerPosition
-FPS"
+text = "FPS"
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.5
+offset_right = 55.5
+offset_bottom = 25.0
+grow_horizontal = 2
+text = "Score : 0"
+horizontal_alignment = 1
+script = ExtResource("2_eaefa")
 
 [node name="Dialog" type="Panel" parent="."]
 visible = false

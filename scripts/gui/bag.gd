@@ -17,6 +17,7 @@ const TresorBarbeDrueNet = "TresorBarbeDrueNet"
 @onready var _grid = $Panel/MarginContainer/VBoxContainer/GridContainer as GridContainer
 @onready var _items = $"../Items" as Control
 @onready var _gui = $".." as Gui
+@onready var _score = $"../Score" as Score
 
 var drag : Item = null
 
@@ -31,6 +32,7 @@ func loot(item_name : String) -> void :
 		_items.remove_child(item)
 		_grid.add_child(item)
 		_gui.append_to_console("Vous obtenez <"+item.tooltip_text+">")
+		_score.compute()
 	else :
 		print("loot error")
 		print(item_name)
@@ -41,6 +43,7 @@ func unloot(item_name : String) -> void :
 		_grid.remove_child(item)
 		item.global_position = Vector2(-100,-100)
 		_items.add_child(item)
+		_score.compute()
 
 func contain(item_name : String) -> bool:
 	return _grid.get_node(item_name) != null
@@ -65,3 +68,4 @@ func load_game() -> void :
 			var item = _items.get_node(item_name)
 			_items.remove_child(item)
 			_grid.add_child(item)
+	_score.compute()
