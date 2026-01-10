@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dr8atgydxkkga"]
+[gd_scene load_steps=16 format=3 uid="uid://dr8atgydxkkga"]
 
 [ext_resource type="PackedScene" uid="uid://bpjhrdyngxsjn" path="res://assets/town/fence-hedge/fence.glb" id="1_qyevh"]
 [ext_resource type="PackedScene" uid="uid://cck1c4xn4v2k7" path="res://assets/town/fence-hedge/fence-gate.glb" id="2_ja88i"]
@@ -12,9 +12,13 @@
 [ext_resource type="PackedScene" uid="uid://5hft8xcwmxjo" path="res://assets/nature/plant/crops/crop_melon.glb" id="10_lt4hb"]
 [ext_resource type="Script" uid="uid://vrseuhaxautc" path="res://scripts/fix_color.gd" id="11_ogdc5"]
 [ext_resource type="Script" uid="uid://wff5kowb2n5l" path="res://scripts/tortuga/culture-melon.gd" id="11_u0kcl"]
+[ext_resource type="Script" uid="uid://gl8u8htu7d03" path="res://scripts/tortuga/culture-houblon.gd" id="13_nh65g"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_u0kcl"]
 radius = 0.25131527
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y85b5"]
+size = Vector3(0.5774231, 0.38110352, 0.4867859)
 
 [node name="culture" type="Node3D"]
 
@@ -304,16 +308,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, -0.1, -1)
 [node name="crop_carrot17" parent="." instance=ExtResource("8_ggy3x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, -0.1, -1)
 
-[node name="crops_wheatStageA2" parent="." instance=ExtResource("9_lt4hb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0.1, -3)
-script = ExtResource("11_ogdc5")
-
-[node name="crops_wheatStageA3" parent="." instance=ExtResource("9_lt4hb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1000001, 0.1, -3)
-
-[node name="crops_wheatStageA4" parent="." instance=ExtResource("9_lt4hb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.1, -3)
-
 [node name="crops_dirtRow11" parent="." instance=ExtResource("6_trbxq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.05, -4)
 
@@ -322,15 +316,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.05, -4)
 
 [node name="crops_dirtRowEnd21" parent="." instance=ExtResource("7_g2sn3")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.5000002, 0.05, -4)
-
-[node name="crops_wheatStageA5" parent="." instance=ExtResource("9_lt4hb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0.1, -4)
-
-[node name="crops_wheatStageA6" parent="." instance=ExtResource("9_lt4hb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1000001, 0.1, -4)
-
-[node name="crops_wheatStageA7" parent="." instance=ExtResource("9_lt4hb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.1, -4)
 
 [node name="crops_dirtRow12" parent="." instance=ExtResource("6_trbxq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.05, -5)
@@ -347,6 +332,128 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.05, -5)
 [node name="crops_dirtRowEnd24" parent="." instance=ExtResource("7_g2sn3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.05, -5)
 
+[node name="Houblon" type="Node3D" parent="."]
+
+[node name="crops_wheatStageA2" parent="Houblon" instance=ExtResource("9_lt4hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0.1, -3)
+script = ExtResource("13_nh65g")
+
+[node name="Area3D" type="Area3D" parent="Houblon/crops_wheatStageA2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Houblon/crops_wheatStageA2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1295166, 0)
+shape = SubResource("BoxShape3D_y85b5")
+
+[node name="crops_wheatStageA3" parent="Houblon" instance=ExtResource("9_lt4hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1000001, 0.1, -3)
+script = ExtResource("13_nh65g")
+
+[node name="Area3D" type="Area3D" parent="Houblon/crops_wheatStageA3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Houblon/crops_wheatStageA3/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1295166, 0)
+shape = SubResource("BoxShape3D_y85b5")
+
+[node name="crops_wheatStageA4" parent="Houblon" instance=ExtResource("9_lt4hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.1, -3)
+script = ExtResource("13_nh65g")
+
+[node name="Area3D" type="Area3D" parent="Houblon/crops_wheatStageA4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Houblon/crops_wheatStageA4/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1295166, 0)
+shape = SubResource("BoxShape3D_y85b5")
+
+[node name="crops_wheatStageA5" parent="Houblon" instance=ExtResource("9_lt4hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0.1, -4)
+script = ExtResource("13_nh65g")
+
+[node name="Area3D" type="Area3D" parent="Houblon/crops_wheatStageA5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Houblon/crops_wheatStageA5/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1295166, 0)
+shape = SubResource("BoxShape3D_y85b5")
+
+[node name="crops_wheatStageA6" parent="Houblon" instance=ExtResource("9_lt4hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1000001, 0.1, -4)
+script = ExtResource("13_nh65g")
+
+[node name="Area3D" type="Area3D" parent="Houblon/crops_wheatStageA6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Houblon/crops_wheatStageA6/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1295166, 0)
+shape = SubResource("BoxShape3D_y85b5")
+
+[node name="crops_wheatStageA7" parent="Houblon" instance=ExtResource("9_lt4hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.1, -4)
+script = ExtResource("13_nh65g")
+
+[node name="Area3D" type="Area3D" parent="Houblon/crops_wheatStageA7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Houblon/crops_wheatStageA7/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1295166, 0)
+shape = SubResource("BoxShape3D_y85b5")
+
+[node name="crops_wheatStageA14" parent="Houblon" instance=ExtResource("9_lt4hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0.1, -4)
+script = ExtResource("13_nh65g")
+
+[node name="Area3D" type="Area3D" parent="Houblon/crops_wheatStageA14"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Houblon/crops_wheatStageA14/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1295166, 0)
+shape = SubResource("BoxShape3D_y85b5")
+
+[node name="crops_wheatStageA15" parent="Houblon" instance=ExtResource("9_lt4hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.89999986, 0.1, -4)
+script = ExtResource("13_nh65g")
+
+[node name="Area3D" type="Area3D" parent="Houblon/crops_wheatStageA15"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Houblon/crops_wheatStageA15/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1295166, 0)
+shape = SubResource("BoxShape3D_y85b5")
+
+[node name="crops_wheatStageA16" parent="Houblon" instance=ExtResource("9_lt4hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.1, -4)
+script = ExtResource("13_nh65g")
+
+[node name="Area3D" type="Area3D" parent="Houblon/crops_wheatStageA16"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Houblon/crops_wheatStageA16/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1295166, 0)
+shape = SubResource("BoxShape3D_y85b5")
+
+[node name="crops_wheatStageA17" parent="Houblon" instance=ExtResource("9_lt4hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0.1, -3)
+script = ExtResource("13_nh65g")
+
+[node name="Area3D" type="Area3D" parent="Houblon/crops_wheatStageA17"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Houblon/crops_wheatStageA17/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1295166, 0)
+shape = SubResource("BoxShape3D_y85b5")
+
+[node name="crops_wheatStageA18" parent="Houblon" instance=ExtResource("9_lt4hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.89999986, 0.1, -3)
+script = ExtResource("13_nh65g")
+
+[node name="Area3D" type="Area3D" parent="Houblon/crops_wheatStageA18"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Houblon/crops_wheatStageA18/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1295166, 0)
+shape = SubResource("BoxShape3D_y85b5")
+
+[node name="crops_wheatStageA19" parent="Houblon" instance=ExtResource("9_lt4hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.1, -3)
+script = ExtResource("13_nh65g")
+
+[node name="Area3D" type="Area3D" parent="Houblon/crops_wheatStageA19"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Houblon/crops_wheatStageA19/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1295166, 0)
+shape = SubResource("BoxShape3D_y85b5")
+
 [node name="crops_dirtRowEnd25" parent="." instance=ExtResource("7_g2sn3")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.49999976, 0.05, -5)
 
@@ -359,15 +466,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.05, -4)
 [node name="crops_dirtRowEnd27" parent="." instance=ExtResource("7_g2sn3")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.49999976, 0.05, -4)
 
-[node name="crops_wheatStageA14" parent="." instance=ExtResource("9_lt4hb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0.1, -4)
-
-[node name="crops_wheatStageA15" parent="." instance=ExtResource("9_lt4hb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.89999986, 0.1, -4)
-
-[node name="crops_wheatStageA16" parent="." instance=ExtResource("9_lt4hb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.1, -4)
-
 [node name="crops_dirtRow15" parent="." instance=ExtResource("6_trbxq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.05, -3)
 
@@ -376,12 +474,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.05, -3)
 
 [node name="crops_dirtRowEnd29" parent="." instance=ExtResource("7_g2sn3")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.49999976, 0.05, -3)
-
-[node name="crops_wheatStageA17" parent="." instance=ExtResource("9_lt4hb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0.1, -3)
-
-[node name="crops_wheatStageA18" parent="." instance=ExtResource("9_lt4hb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.89999986, 0.1, -3)
-
-[node name="crops_wheatStageA19" parent="." instance=ExtResource("9_lt4hb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.1, -3)

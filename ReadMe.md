@@ -21,6 +21,7 @@
 - https://opengameart.org/content/fruit-icons-redo
 - https://opengameart.org/content/resouces-pack-1
 - https://opengameart.org/content/32x32-fantasy-portrait-set
+- https://fr.wikipedia.org/wiki/Houblon
 
 ## Model 3d
 - https://kenney.nl/assets
