@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dt8xikej6hhld" path="res://assets/character/base/character-male-a.glb" id="6_8jhy7"]
 [ext_resource type="PackedScene" uid="uid://dvn116r1fxtxs" path="res://assets/town/road/road-wood.glb" id="6_d8tdb"]
 [ext_resource type="PackedScene" uid="uid://bi0rgxdomkpgp" path="res://assets/town/fence-hedge/balcony-wall-fence.glb" id="7_d8tdb"]
-[ext_resource type="Script" uid="uid://dq44k72mkqsce" path="res://scripts/tortuga/dortoir/charpentier-ryland.gd" id="7_frco2"]
+[ext_resource type="Script" uid="uid://dq44k72mkqsce" path="res://scripts/tortuga/dortoir/pnj-charpentier-ryland.gd" id="7_frco2"]
 [ext_resource type="PackedScene" uid="uid://b2qtcc1xvlpgx" path="res://assets/character/base/character-male-e.glb" id="8_cosmj"]
 [ext_resource type="PackedScene" uid="uid://b5vkbbk6ethhq" path="res://assets/nature/props/bed.glb" id="8_g6x1p"]
 [ext_resource type="PackedScene" uid="uid://86dcdsinmla4" path="res://assets/town/walls/wall-wood-window-round.glb" id="9_g6x1p"]

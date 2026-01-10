@@ -5,10 +5,43 @@ func on_interact() -> void:
 		Dialogs.default_search_forbid_fruit_option(self), 
 		Dialogs.default_search_forbid_fruit_montain_option(self),
 		Dialogs.default_search_forbid_fruit_teleport_option(self),
-		Dialogs.default_hung_connut_search_charpentier(self)
+		Dialogs.default_hung_connut_search_charpentier(self),
+		Dialogs.default_hung_connut_search_wood(self), 
+		PnjDialogOption.new(
+			func(): return player.tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON),
+			Dialogs.question_hung_connut_search_houblon,
+			func(): gui.open_dialog(pnj_name, _SEARCH_HOUBLON)
+		)
 	])
+
+func on_item_drop(item : Item) -> void:
+	if item.isGold() :
+		gui.open_dialog(pnj_name, """Qu’est ce que je vous sert ? """).with_options([
+			PnjDialogOption.new(
+				func(): return true, 
+				"""Bière rousse de Eve""",
+				func(): bag.loot(Bag.BiereRousseDeEve)
+			),
+			PnjDialogOption.new(
+				func(): return true, 
+				"""Omelette au champignon""",
+				_on_ask_omelette
+			)
+		])
+	else : 
+		super.on_item_drop(item)
+
+func _on_ask_omelette() -> void :
+	player.tags.add(Tags.KNOW_FERMIER_LOVE_OMELETTE)
+	gui.open_dialog(pnj_name, _TEXT_ON_OMELETTE)
 
 const _TEXT = """Bonjour qu'est ce que je vous sert? 
 Les clients sont négligents, ils oublient souvent des choses sur les tables. 
 
 N'oubliez rien en repartant."""
+
+const _SEARCH_HOUBLON =  """Ici on n’en vend que sous forme liquide. 
+
+La bière rousse de eve est la meilleure, tout le monde en raffole, surtout Rurik."""
+
+const _TEXT_ON_OMELETTE = """Nino le fermier en raffole, mais actuellement on a plus de champignon."""

@@ -16,9 +16,8 @@ func _ready() -> void:
 	connect("button_down", _on_button_down)
 	connect("button_up", _on_button_up)
 
-#func _process(delta: float) -> void:
-#	if name == "Melon" and global_position.x > 0:
-#		print(global_position)
+func isGold() -> bool:
+	return name == Bag.TresorBarbeDrue || Bag.TresorBarbeDrueNet
 
 func on_enter(interactable : Interactable) -> void :
 	self._interactable = interactable

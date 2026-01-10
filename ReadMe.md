@@ -20,6 +20,7 @@
 - https://opengameart.org/content/fantasy-magic-set
 - https://opengameart.org/content/fruit-icons-redo
 - https://opengameart.org/content/resouces-pack-1
+- https://opengameart.org/content/32x32-fantasy-portrait-set
 
 ## Model 3d
 - https://kenney.nl/assets
@@ -54,6 +55,7 @@
 - https://opengameart.org/content/rpg-item-collection-3 ?
 - https://opengameart.org/content/simple-3d-crystals-unwrapped-simple-texture ?
 - https://opengameart.org/content/skull-1
+- https://opengameart.org/content/32x32-fantasy-portrait-set
 
 ### c'est non :
 - https://opengameart.org/content/more-handpainted-rocks : non texture trop grosse 

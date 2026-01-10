@@ -10,10 +10,13 @@ func on_interact() -> void:
 				Dialogs.question_search_forbid_fruit_teleport,
 				func () : gui.open_dialog(pnj_name, _TEXT_INDICE_CRYSTAL)
 			),
-			Dialogs.default_hung_connut_search_charpentier(self)
+			Dialogs.default_hung_connut_search_charpentier(self),
+			Dialogs.default_hung_connut_search_wood(self),
+			Dialogs.default_hung_connut_search_houblon(self)
 		])
 	else :
 		gui.open_dialog(pnj_name, _TEXT)
+		# TODO à retirer ? permttre de faire ce truc des le départ ? 
 		if player.tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT) :
 			player.tags.add(Tags.SEARCH_SOBERING_POTION)
 

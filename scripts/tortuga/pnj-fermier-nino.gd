@@ -7,7 +7,19 @@ func on_interact() -> void:
 		_search_fruit_option, 
 		Dialogs.default_search_forbid_fruit_montain_option(self),
 		Dialogs.default_search_forbid_fruit_teleport_option(self),
-		Dialogs.default_hung_connut_search_charpentier(self)
+		Dialogs.default_hung_connut_search_charpentier(self),
+		Dialogs.default_hung_connut_search_wood(self),
+		PnjDialogOption.new(
+			func(): return player.tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON),
+			Dialogs.question_hung_connut_search_houblon,
+			func(): gui.open_dialog(pnj_name, Dialogs._ANSWER_HUNG_CONNUT_SEARCH_HOUBLON).with_options([
+				PnjDialogOption.new(
+					func(): return player.tags.have(Tags.KNOW_FERMIER_LOVE_OMELETTE),
+					"""J'ai besoin de houblon pour avoir des champignons""",
+					_on_search_houblon_for_champi
+				)
+			])
+		)
 	])
 
 func on_item_drop(item : Item) -> void:
@@ -26,11 +38,16 @@ func _on_search_fruit() -> void:
 	if not player.tags.have(Tags.FORBID_FRUIT_LOOTED) :
 		player.tags.add(Tags.FORBID_FRUIT_SEARCH_MONTAGNE)
 
+func _on_search_houblon_for_champi() -> void:
+	gui.open_dialog(pnj_name, _TEXT_SEARCH_HOUBLON)
+	player.tags.add(Tags.CAN_LOOT_HOUBLON)
+	
+
 const _TEXT = """Bonjour aventurier.ère, je suis le seul jardinier de l’île. Ne marche pas dans mes cultures. Si vous abîmez mes cultures, nous n’aurons plus de houblon pour que Eve puisse en faire de la bonne bière !
 
 Et si il n’y a plus de bière, nous courons vers une mutinerie certaine. 
 
-J’ai de nombreuses autres connaissances en botanique. Mais avoir du bon houblon pour de la bonne bière est une priorité absolue."""
+J’ai de nombreuses autres connaissances en botanique. Mais avoir du bon houblon pour de la bonne bière est une priorité absolue. C'est comme avoir de bon champignon pour une bonne omelette."""
 
 const _TEXT_SEARCH_FRUIT = """Ah oui le fruit défendu. 
 
@@ -39,3 +56,5 @@ Tous les amoureux des plantes la connaissent cette légende. Elle se transmet de
 Mais ce n'est qu'une légende n’est ce pas? Qui pourrait aller dans les monts plus hauts et inaccessibles? Il faudrait pouvoir voler ou avoir un véhicule pour nous y emmener. Peut-être que le cartographe aurait une idée..."""
 
 const _TEXT_FORBID_FRUIT = """Ho tu as réussi à obtenir le fruit défendu. La légende était donc vraie. Que vas-tu en faire ?"""
+
+const _TEXT_SEARCH_HOUBLON = """Haaaa ça change tout. J’adore les omelettes au champignon. Je te laisse prendre un peu de houblon."""

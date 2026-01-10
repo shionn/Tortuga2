@@ -19,7 +19,7 @@ var _last_floor_position : Vector3
 var state = STATUT.MOVING
 # start : 39, 1.5, -25
 
-var tags = Tags.new(self)
+var tags : Tags = Tags.new(self)
 
 func sit(at_position : Vector3, look = 0.0) -> void: 
 	state = STATUT.SIT

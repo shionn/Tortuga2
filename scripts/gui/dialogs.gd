@@ -6,6 +6,8 @@ const question_search_forbid_fruit = "Je cherche le fruit défendu"
 const question_search_forbid_fruit_montagn = "Je veux escalader la montagne"
 const question_search_forbid_fruit_teleport = "Je cherche un crystal de téléportation"
 const question_hung_connut_search_charpentier = "L'escalator au nord est détruit"
+const question_hung_connut_search_wood = "J'ai besoin de bois"
+const question_hung_connut_search_houblon = "J'ai besoin de houblon"
 
 static func default_search_forbid_fruit_option(pnj : PNJ) -> PnjDialogOption :
 	return PnjDialogOption.new(
@@ -34,3 +36,25 @@ static func default_hung_connut_search_charpentier(pnj : PNJ) -> PnjDialogOption
 		question_hung_connut_search_charpentier,
 		func(): pnj.gui.open_dialog(pnj.pnj_name, """Mince alors comment on va faire sans champignon ?""")
 	)
+
+static func default_hung_connut_search_wood(pnj : PNJ) -> PnjDialogOption :
+	return PnjDialogOption.new(
+		func (): return pnj.player.tags.have(Tags.HUNG_CONNUT_SEARCH_WOOD),
+		question_hung_connut_search_wood,
+		func(): pnj.gui.open_dialog(pnj.pnj_name, _ANSWER_HUNG_CONNUT_SEARCH_WOOD)
+	)
+
+static func default_hung_connut_search_houblon(pnj : PNJ) -> PnjDialogOption :
+	return PnjDialogOption.new(
+		func (): return pnj.player.tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON),
+		question_hung_connut_search_houblon,
+		func(): pnj.gui.open_dialog(pnj.pnj_name, _ANSWER_HUNG_CONNUT_SEARCH_HOUBLON)
+	)
+
+const _ANSWER_HUNG_CONNUT_SEARCH_WOOD = """Du bois ? Il y a des palmiers partout. 
+
+Pourquoi tu ne demandes pas à Ryland notre charpentier ?"""
+
+const _ANSWER_HUNG_CONNUT_SEARCH_HOUBLON = """Du houblon ? Ce qu’on utilise pour faire de la bière. 
+
+C’est malin maintenant j’ai envie d’une bière, la bière rousse de Eve est la meilleure."""

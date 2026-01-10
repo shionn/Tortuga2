@@ -4,7 +4,13 @@ func on_interact() -> void:
 	var dialog = gui.open_dialog(pnj_name, _TEXT_PRESENTATION).with_options([
 		Dialogs.default_search_forbid_fruit_montain_option(self),
 		Dialogs.default_search_forbid_fruit_teleport_option(self),
-		Dialogs.default_hung_connut_search_charpentier(self)
+		Dialogs.default_hung_connut_search_charpentier(self),
+		Dialogs.default_hung_connut_search_wood(self),
+		PnjDialogOption.new(
+			func(): return player.tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON),
+			Dialogs.question_hung_connut_search_houblon,
+			func(): gui.open_dialog(pnj_name, _SEARCH_HOUBLON)
+		)
 	])
 	if (player.tags.have(Tags.SEARCH_SOBERING_POTION)) :
 		dialog.set_option("Je cherche une potion de dégrisement", on_search_sobering_potion)
@@ -68,3 +74,7 @@ const _TEXT_GIVE_FRUIT = """Salut Compagnon,
 Oooh vous êtes génial, vous avez trouvé le fruit défendu? Incroyable je suis tellement heureuse voici le parchemin décrypté.
 
 Je viens juste de le finir, c'est un code très ancien."""
+
+const _SEARCH_HOUBLON = """Ben c’est drôle ça. Si tu veux ma bière rousse y en a à l'auberge contre quelque pièces il t’en vendrons. 
+
+C’est grâce au houblon de Nino que je peux faire une si bonne bière."""
