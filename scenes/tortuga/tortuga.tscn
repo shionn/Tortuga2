@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=98 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="PackedScene" uid="uid://gjk5y26xk1ud" path="res://assets/graveyard/gravestone/gravestone-bevel.glb" id="1_5xhig"]
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/barbe-drue/bouteille_note_lisible.gd" id="1_c7jrm"]
@@ -126,9 +126,6 @@ size = Vector3(6.219531, 1, 2.9956787)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e43uk"]
 size = Vector3(0.4, 0.4392578, 0.1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_xiick"]
-size = Vector3(131, 20, 58)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_aveh0"]
 size = Vector3(0.4, 0.5, 0.2)
@@ -6999,14 +6996,6 @@ script = ExtResource("2_7h4df")
 transform = Transform3D(1.0000002, 4.656613e-10, 1.4901161e-08, -6.9849193e-09, 1.0000002, 0, 2.3841858e-07, 0, 1, -0.0001296997, 0.31963825, -0.037132263)
 shape = SubResource("BoxShape3D_e43uk")
 
-[node name="Area3D" type="Area3D" parent="Plage-S"]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Plage-S/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.5, 0, 3)
-shape = SubResource("BoxShape3D_xiick")
-
 [node name="PatchGrass" type="Node3D" parent="Plage-S"]
 
 [node name="patch-grass2" parent="Plage-S/PatchGrass" instance=ExtResource("3_jit35")]
@@ -8507,4 +8496,3 @@ transform = Transform3D(1.8126154, 0, 0.8452365, 0, 2, 0, -0.8452365, 0, 1.81261
 [connection signal="timeout" from="Montagne-Nord/MontagneChampi/Pic2/Escalator/AnimatableBody3D/Timer" to="Montagne-Nord/MontagneChampi/Pic2/Escalator/AnimatableBody3D" method="_on_timer_timeout"]
 [connection signal="timeout" from="Montagne-Nord/MontagneChampi/Pic3/Escalator/AnimatableBody3D/Timer" to="Montagne-Nord/MontagneChampi/Pic3/Escalator/AnimatableBody3D" method="_on_timer_timeout"]
 [connection signal="timeout" from="Plage-N/Escalator/AnimatableBody3D/Timer" to="Plage-N/Escalator/AnimatableBody3D" method="_on_timer_timeout"]
-[connection signal="body_entered" from="Plage-S/Area3D" to="Plage-S/gravestone-bevel2" method="_on_area_3d_body_entered"]

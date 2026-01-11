@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bc454sdsvgswp"]
+[gd_scene load_steps=17 format=3 uid="uid://bc454sdsvgswp"]
 
 [ext_resource type="PackedScene" uid="uid://bbwotylt8kjx" path="res://assets/nature/plant/tree/tree_detailed_dark.glb" id="1_gfysq"]
 [ext_resource type="Script" uid="uid://vrseuhaxautc" path="res://scripts/fix_color.gd" id="2_2bajp"]
@@ -18,9 +18,6 @@
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_dl2hs"]
 radius = 0.2667705
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_gfysq"]
-size = Vector3(52, 18, 51)
 
 [node name="oasis-arbre-defendu" type="Node3D"]
 
@@ -44,7 +41,7 @@ shape = SubResource("SphereShape3D_dl2hs")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 1, 20)
 return_crystal = "CrystalTeleportationOasis"
 
-[node name="WaterBrasserie" parent="." instance=ExtResource("4_c2oem")]
+[node name="Water" parent="." instance=ExtResource("4_c2oem")]
 transform = Transform3D(24, 0, 0, 0, 1, 0, 0, 0, 34, -1.3281403, 0.5, -1.256897)
 skeleton = NodePath("../../..")
 
@@ -360,13 +357,3 @@ transform = Transform3D(1.9318516, 0, 0.5176382, 0, 2, 0, -0.5176382, 0, 1.93185
 
 [node name="grass8" parent="grass" instance=ExtResource("6_23qa5")]
 transform = Transform3D(1.4142134, 0, 1.4142137, 0, 2, 0, -1.4142137, 0, 1.4142134, 19.300003, 1, 2.2000122)
-
-[node name="Area3D" type="Area3D" parent="."]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 4, -0.5)
-shape = SubResource("BoxShape3D_gfysq")
-
-[connection signal="body_entered" from="Area3D" to="apple" method="_on_area_3d_body_entered"]

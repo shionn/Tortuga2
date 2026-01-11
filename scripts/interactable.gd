@@ -13,8 +13,8 @@ func _ready() -> void:
 	_area.connect("mouse_entered", _on_mouse_entered)
 	_area.connect("mouse_exited", _on_mouse_exited)
 	_area.connect("input_event", _on_input_event)
-	if tags :
-		tags.on_tag_change.connect(on_tag_change)
+	if tags : tags.on_tag_change.connect(on_tag_change)
+	if bag : bag.on_item_change.connect(on_item_change)
 
 func on_interact() -> void: 
 	print("on_interact is not overwrite")
@@ -24,6 +24,9 @@ func on_item_drop(item : Item) -> void:
 	gui.open_alert("Oups", "Non ca ne marche pas")
 
 func on_tag_change() -> void:
+	pass
+
+func on_item_change() -> void:
 	pass
 
 func _on_mouse_entered() -> void:

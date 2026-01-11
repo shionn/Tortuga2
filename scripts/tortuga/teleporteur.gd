@@ -6,7 +6,7 @@ extends "res://scripts/interactable.gd"
 @onready var _audio = $AudioStreamPlayer
 
 func on_interact() -> void:
-	if player.tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT) or bag.contain(Bag.CrystalTeleportationOasis):
+	if tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT) or bag.contain(Bag.CrystalTeleportationOasis):
 		gui.open_alert("Téléporteur", desciption)
 	else : 
 		gui.open_alert("Pierre étrange", """Cette pierre étrange est recouverte de glyphe mais je n’y comprends rien.""")
@@ -18,6 +18,6 @@ func on_item_drop(item : Item) -> void:
 	elif item.name == Bag.CrystalTeleportationOasis : 
 		_audio.play()
 		player.teleport(Vector3(172.0,105.0,-253.0), deg_to_rad(-133.0))
-		player.tags.remove(Tags.FORBID_FRUIT_SEARCH_MONTAGNE)
+		tags.remove(Tags.FORBID_FRUIT_SEARCH_MONTAGNE)
 	else :
 		super.on_item_drop(item)
