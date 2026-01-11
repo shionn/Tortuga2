@@ -7,7 +7,7 @@ func on_interact() -> void:
 		Dialogs.default_hung_connut_search_charpentier(self),
 		Dialogs.default_hung_connut_search_wood(self),
 		PnjDialogOption.new(
-			func(): return player.tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON),
+			func(): return tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON),
 			Dialogs.question_hung_connut_search_houblon,
 			func(): gui.open_dialog(pnj_name, _SEARCH_HOUBLON)
 		)
@@ -24,18 +24,18 @@ func on_search_sobering_potion() -> void:
 func on_item_drop(item : Item) -> void:
 	if item.name == Bag.ParcheminBarbeDrue :
 		gui.open_dialog(pnj_name, _TEXT_PARCHEMIN_BARBE_DRUE)
-		player.tags.add(Tags.FORBID_FRUIT_SEARCH)
+		tags.add(Tags.FORBID_FRUIT_SEARCH)
 	elif item.name == Bag.Melon && not player.tags.have(Tags.BRASSERIE_HAVE_SOBERING_POTION) :
 		gui.open_dialog(pnj_name,_TEXT_GIVE_MELON)
 		$"../caisse-popo-degrissement-vide".visible = false
 		$"../caisse-popo-degrisement".visible = true
-		player.tags.add(Tags.BRASSERIE_HAVE_SOBERING_POTION)
+		tags.add(Tags.BRASSERIE_HAVE_SOBERING_POTION)
 		bag.unloot(Bag.Melon)
 	elif item.name == Bag.FruitDefendu :
 		gui.open_dialog(pnj_name, _TEXT_GIVE_FRUIT)
-		player.tags.remove(Tags.FORBID_FRUIT_SEARCH)
-		player.tags.remove(Tags.FORBID_FRUIT_SEARCH_MONTAGNE)
-		player.tags.remove(Tags.FORBID_FRUIT_SEARCH_TELEPORT)
+		tags.remove(Tags.FORBID_FRUIT_SEARCH)
+		tags.remove(Tags.FORBID_FRUIT_SEARCH_MONTAGNE)
+		tags.remove(Tags.FORBID_FRUIT_SEARCH_TELEPORT)
 		bag.unloot(Bag.ParcheminBarbeDrue)
 		bag.unloot(Bag.FruitDefendu)
 		bag.loot(Bag.ParcheminBarbeDrueDecoder)

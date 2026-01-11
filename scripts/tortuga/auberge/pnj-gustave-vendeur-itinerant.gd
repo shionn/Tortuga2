@@ -7,7 +7,7 @@ func on_interact() -> void:
 		Dialogs.default_search_forbid_fruit_teleport_option(self),
 		Dialogs.default_hung_connut_search_charpentier(self),
 		PnjDialogOption.new(
-			func (): return player.tags.have(Tags.HUNG_CONNUT_SEARCH_WOOD),
+			func (): return tags.have(Tags.HUNG_CONNUT_SEARCH_WOOD),
 			Dialogs.question_hung_connut_search_wood,
 			_on_seach_wood
 		)
@@ -15,7 +15,7 @@ func on_interact() -> void:
 
 func _on_seach_wood() -> void:
 	gui.open_dialog(pnj_name, _TEXT_SEARCH_WOOD)
-	player.tags.add(Tags.HUNG_CONNUT_SEARCH_HOUBLON)
+	tags.add(Tags.HUNG_CONNUT_SEARCH_HOUBLON)
 	
 const _TEXT = """Bonjour, je m'appelle Goustaf ya.
 

@@ -8,7 +8,7 @@ func on_interact() -> void:
 		Dialogs.default_hung_connut_search_charpentier(self),
 		Dialogs.default_hung_connut_search_wood(self), 
 		PnjDialogOption.new(
-			func(): return player.tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON),
+			func(): return tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON),
 			Dialogs.question_hung_connut_search_houblon,
 			func(): gui.open_dialog(pnj_name, _SEARCH_HOUBLON)
 		)
@@ -32,7 +32,7 @@ func on_item_drop(item : Item) -> void:
 		super.on_item_drop(item)
 
 func _on_ask_omelette() -> void :
-	player.tags.add(Tags.KNOW_FERMIER_LOVE_OMELETTE)
+	tags.add(Tags.KNOW_FERMIER_LOVE_OMELETTE)
 	gui.open_dialog(pnj_name, _TEXT_ON_OMELETTE)
 
 const _TEXT = """Bonjour aventurier.ère. 

@@ -3,10 +3,14 @@ extends Label
 class_name Score
 
 @onready var _bag = $"../Bag" as Bag
-@onready var _player = $"/root/World/Player" as Player
+@onready var _tags = $"/root/World/Player/Tags" as Tags
 
 var value = 0
 
+func _ready() -> void:
+	_tags.on_tag_change.connect(compute)
+	_bag.on_item_change.connect(compute)
+	
 func compute() -> void :
 	value = 0
 	# quete 1
@@ -31,5 +35,5 @@ func _item(item : String, inc : int) -> void:
 		value += inc
 
 func _tag(tag : String, inc : int) -> void:
-	if _player.tags.have(tag) :
+	if _tags.have(tag) :
 		value += inc

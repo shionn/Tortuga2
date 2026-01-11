@@ -5,6 +5,7 @@ class_name Interactable
 @onready var bag := $"/root/World/Gui/Bag" as Bag
 @onready var _area := $Area3D as Area3D
 @onready var player = $"/root/World/Player" as Player
+@onready var tags = $"/root/World/Player/Tags" as Tags
 
 @export var interactable_distance = 3 as float
 
@@ -12,6 +13,8 @@ func _ready() -> void:
 	_area.connect("mouse_entered", _on_mouse_entered)
 	_area.connect("mouse_exited", _on_mouse_exited)
 	_area.connect("input_event", _on_input_event)
+	if tags :
+		tags.on_tag_change.connect(on_tag_change)
 
 func on_interact() -> void: 
 	print("on_interact is not overwrite")
@@ -19,6 +22,9 @@ func on_interact() -> void:
 func on_item_drop(item : Item) -> void: 
 	player.play_anim_no()
 	gui.open_alert("Oups", "Non ca ne marche pas")
+
+func on_tag_change() -> void:
+	pass
 
 func _on_mouse_entered() -> void:
 	if bag and bag.drag != null:

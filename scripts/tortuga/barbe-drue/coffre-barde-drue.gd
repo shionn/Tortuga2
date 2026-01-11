@@ -10,7 +10,7 @@ Pour le déchiffrer vous trouverez un sage."""
 
 func on_interact() -> void:
 	# 
-	if player.tags.have(Tags.TREASUR_BARBE_DRUE_OPENED) or bag.contain(Bag.TresorBarbeDrue) or  bag.contain(Bag.TresorBarbeDrueNet) : 
+	if tags.have(Tags.TREASUR_BARBE_DRUE_OPENED) or bag.contain(Bag.TresorBarbeDrue) or  bag.contain(Bag.TresorBarbeDrueNet) : 
 		gui.open_alert("Coffre vide", "Le coffre est vide")
 	else :
 		open_question("Entrez le code", on_answer)
@@ -20,6 +20,6 @@ func on_answer(answer: String) -> void:
 		open_dialog_and_img("Félicitation", _TEXT, load("res://assets/imgs/treasures.png"))
 		bag.loot(Bag.TresorBarbeDrue)
 		bag.loot(Bag.ParcheminBarbeDrue)
-		player.tags.add(Tags.TREASUR_BARBE_DRUE_OPENED)
+		tags.add(Tags.TREASUR_BARBE_DRUE_OPENED)
 	else :
 		gui.open_alert("Mauvais code", "Le coffre ne s'ouvre pas.")

@@ -1,4 +1,4 @@
-extends Object
+extends Node
 
 class_name Tags
 
@@ -20,22 +20,20 @@ const KNOW_FERMIER_LOVE_OMELETTE = "016"
 const CAN_LOOT_HOUBLON = "017"
 
 var tags : Array[String] = []
-var _player : Player
 
-func _init(player :Player) -> void:
-	_player = player;
+signal on_tag_change()
 
 func add(tag:String) -> void : 
 	if not(have(tag)) :
 		self.tags.append(tag)
-	_player._score.compute()
+	on_tag_change.emit()
 
 func have(tag:String) -> bool :
 	return tags.has(tag)
 
 func remove(tag:String) -> void :
 	tags.erase(tag)
-	_player._score.compute()
+	on_tag_change.emit()
 	
 func save_game() -> void :
 	var file = FileAccess.open("user://tags.save", FileAccess.WRITE)
@@ -47,4 +45,4 @@ func load_game() -> void :
 		tags.clear()
 		for tag in JSON.parse_string(file.get_line()) :
 			tags.append(tag)
-	_player._score.compute()
+	on_tag_change.emit()

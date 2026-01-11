@@ -7,5 +7,5 @@ func on_interact() -> void:
 	else :
 		bag.loot(Bag.PotionDegrisement)
 
-func _on_area_3d_body_entered(body: Node3D) -> void:
+func on_tag_change() -> void:
 	visible = player.tags.have(Tags.BRASSERIE_HAVE_SOBERING_POTION)
