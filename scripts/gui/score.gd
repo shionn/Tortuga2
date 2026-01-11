@@ -21,6 +21,9 @@ func compute() -> void :
 	_item(Bag.ParcheminBarbeDrueDecoder, 2) # remplace le FruitDefendu
 	_item(Bag.CarteHungConnut, 1)
 	
+	#quete 3
+	_item(Bag.Houblon, 1)
+	
 	self.text = "Score : "+str(value)
 
 func _item(item : String, inc : int) -> void:

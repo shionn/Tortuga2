@@ -5,15 +5,19 @@ const SPEED := 5
 
 var start := 0
 @export var end := 10.0
+@export var enable := true
 var dir := Vector3.UP
 
 func _physics_process(delta: float) -> void:
-	if position.y < start and dir.y < 0: 
+	if enable :
+		if position.y < start and dir.y < 0: 
+			dir = Vector3.ZERO
+			_timer.start(5)
+		if position.y > end and dir.y > 0 : 
+			dir = Vector3.ZERO
+			_timer.start(5)
+	else :
 		dir = Vector3.ZERO
-		_timer.start(5)
-	if position.y > end and dir.y > 0 : 
-		dir = Vector3.ZERO
-		_timer.start(5)
 	global_translate(SPEED*dir*delta)
 	
 

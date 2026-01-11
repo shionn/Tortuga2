@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=99 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="PackedScene" uid="uid://gjk5y26xk1ud" path="res://assets/graveyard/gravestone/gravestone-bevel.glb" id="1_5xhig"]
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/barbe-drue/bouteille_note_lisible.gd" id="1_c7jrm"]
@@ -117,6 +117,9 @@ emission = Color(1, 1, 1, 1)
 height_falloff = 0.066540495
 edge_fade = 0.6062886
 density_texture = SubResource("NoiseTexture3D_gl853")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ia42"]
+size = Vector3(2.6000001, 0.2, 7.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a5rdk"]
 size = Vector3(6.219531, 1, 2.9956787)
@@ -409,7 +412,7 @@ transform = Transform3D(0.97237444, 0, -0.23342782, 0, 1, 0, 0.23342782, 0, 0.97
 transform = Transform3D(0.97237444, 0, -0.23342782, 0, 1, 0, 0.23342782, 0, 0.97237444, 14.548437, 0.5329037, -19.840893)
 
 [node name="grass98" parent="Crique/Crique-E/plants" instance=ExtResource("2_wohch")]
-transform = Transform3D(0.97237444, 0, -0.23342782, 0, 1, 0, 0.23342782, 0, 0.97237444, 22.346785, 0.5329056, -9.414352)
+transform = Transform3D(0.97237444, 0, -0.23342782, 0, 1, 0, 0.23342782, 0, 0.97237444, 27.946783, 0.5329056, -9.014351)
 
 [node name="grass99" parent="Crique/Crique-E/plants" instance=ExtResource("2_wohch")]
 transform = Transform3D(0.97237444, 0, -0.23342782, 0, 1, 0, 0.23342782, 0, 0.97237444, 21.379934, 0.5329056, -12.964409)
@@ -592,7 +595,7 @@ transform = Transform3D(0.95801806, 0, -0.28670815, 0, 1, 0, 0.28670815, 0, 0.95
 transform = Transform3D(0.95801806, 0, -0.28670815, 0, 1, 0, 0.28670815, 0, 0.95801806, 24.446436, 0.5329037, 1.0535545)
 
 [node name="grass32" parent="Crique/Crique-E/plants" instance=ExtResource("2_wohch")]
-transform = Transform3D(0.7692432, 0, 0.63895607, 0, 1, 0, -0.63895607, 0, 0.7692432, 19.609716, 0.5329056, -2.5240517)
+transform = Transform3D(0.7692432, 0, 0.63895607, 0, 1, 0, -0.63895607, 0, 0.7692432, 10.509718, 0.5329056, 1.5759468)
 
 [node name="grass33" parent="Crique/Crique-E/plants" instance=ExtResource("2_wohch")]
 transform = Transform3D(0.7692432, 0, 0.63895607, 0, 1, 0, -0.63895607, 0, 0.7692432, 16.187605, 0.5329056, -3.8756294)
@@ -601,7 +604,7 @@ transform = Transform3D(0.7692432, 0, 0.63895607, 0, 1, 0, -0.63895607, 0, 0.769
 transform = Transform3D(0.7692432, 0, 0.63895607, 0, 1, 0, -0.63895607, 0, 0.7692432, 19.492437, 0.5329056, 0.90400314)
 
 [node name="grass-plant12" parent="Crique/Crique-E/plants" instance=ExtResource("6_j21kd")]
-transform = Transform3D(0.7692432, 0, 0.63895607, 0, 1, 0, -0.63895607, 0, 0.7692432, 18.54045, 0.5329037, -1.0032349)
+transform = Transform3D(0.7692432, 0, 0.63895607, 0, 1, 0, -0.63895607, 0, 0.7692432, 16.94045, 0.5329037, -0.7032356)
 
 [node name="grass35" parent="Crique/Crique-E/plants" instance=ExtResource("2_wohch")]
 transform = Transform3D(0.7692432, 0, 0.63895607, 0, 1, 0, -0.63895607, 0, 0.7692432, 27.254019, 0.5329056, 6.90802)
@@ -646,7 +649,7 @@ transform = Transform3D(0.43978208, 0, 0.8981046, 0, 1, 0, -0.8981046, 0, 0.4397
 transform = Transform3D(-0.92056644, 0, 0.39058614, 0, 1, 0, -0.39058614, 0, -0.92056644, 22.439032, 0.5329056, -7.0066147)
 
 [node name="grass48" parent="Crique/Crique-E/plants" instance=ExtResource("2_wohch")]
-transform = Transform3D(-0.92056644, 0, 0.39058614, 0, 1, 0, -0.39058614, 0, -0.92056644, 22.807226, 0.5329056, -3.3457298)
+transform = Transform3D(-0.92056644, 0, 0.39058614, 0, 1, 0, -0.39058614, 0, -0.92056644, 22.707228, 0.5329056, -1.3457298)
 
 [node name="grass49" parent="Crique/Crique-E/plants" instance=ExtResource("2_wohch")]
 transform = Transform3D(-0.92056644, 0, 0.39058614, 0, 1, 0, -0.39058614, 0, -0.92056644, 25.539175, 0.5329056, -8.4744)
@@ -661,7 +664,7 @@ transform = Transform3D(0.5354284, 0, 0.8445806, 0, 1, 0, -0.8445806, 0, 0.53542
 transform = Transform3D(0.5354284, 0, 0.8445806, 0, 1, 0, -0.8445806, 0, 0.5354284, 12.394552, 0.5329056, -12.971615)
 
 [node name="grass52" parent="Crique/Crique-E/plants" instance=ExtResource("2_wohch")]
-transform = Transform3D(0.5354284, 0, 0.8445806, 0, 1, 0, -0.8445806, 0, 0.5354284, 17.009268, 0.5329056, -9.440155)
+transform = Transform3D(0.5354284, 0, 0.8445806, 0, 1, 0, -0.8445806, 0, 0.5354284, 17.009268, 0.5329056, -9.940155)
 
 [node name="grass-plant18" parent="Crique/Crique-E/plants" instance=ExtResource("6_j21kd")]
 transform = Transform3D(0.5354284, 0, 0.8445806, 0, 1, 0, -0.8445806, 0, 0.5354284, 15.516813, 0.5329037, -10.962128)
@@ -709,7 +712,7 @@ transform = Transform3D(0.28357965, 0, 0.9589487, 0, 1, 0, -0.9589487, 0, 0.2835
 transform = Transform3D(0.28357965, 0, 0.9589487, 0, 1, 0, -0.9589487, 0, 0.28357965, 9.94829, 0.5329056, -9.896374)
 
 [node name="grass64" parent="Crique/Crique-E/plants" instance=ExtResource("2_wohch")]
-transform = Transform3D(0.28357965, 0, 0.9589487, 0, 1, 0, -0.9589487, 0, 0.28357965, 15.353903, 0.5329056, -7.764168)
+transform = Transform3D(0.28357965, 0, 0.9589487, 0, 1, 0, -0.9589487, 0, 0.28357965, 8.753904, 0.5329056, -3.6641693)
 
 [node name="grass-plant22" parent="Crique/Crique-E/plants" instance=ExtResource("6_j21kd")]
 transform = Transform3D(0.28357965, 0, 0.9589487, 0, 1, 0, -0.9589487, 0, 0.28357965, 13.5016, 0.5329037, -8.819073)
@@ -764,9 +767,6 @@ transform = Transform3D(-0.117268726, 0, 3.998281, 0, 4, 0, -3.998281, 0, -0.117
 [node name="patch-grass7" parent="Crique/Crique-E/Patch" instance=ExtResource("3_jit35")]
 transform = Transform3D(-2.9730473, 0, -2.6760032, 0, 4, 0, 2.6760032, 0, -2.9730473, 0.30505562, -0.46709442, -21.704025)
 
-[node name="patch-grass13" parent="Crique/Crique-E/Patch" instance=ExtResource("3_jit35")]
-transform = Transform3D(7.957907, 0, 6.055717, 0, 4, 0, -6.055717, 0, 7.957907, 19.85259, -0.46709442, -12.165527)
-
 [node name="patch-grass8" parent="Crique/Crique-E/Patch" instance=ExtResource("3_jit35")]
 transform = Transform3D(3.9637456, 0, -0.5373293, 0, 4, 0, 0.5373293, 0, 3.9637456, 10.953981, -0.46709442, -27.406013)
 
@@ -781,6 +781,12 @@ transform = Transform3D(-2.0661943, 0, -3.4250321, 0, 4, 0, 3.4250321, 0, -2.066
 
 [node name="patch-grass12" parent="Crique/Crique-E/Patch" instance=ExtResource("3_jit35")]
 transform = Transform3D(2.8838496, 0, -2.7718976, 0, 4, 0, 2.7718976, 0, 2.8838496, 35.536743, -0.46709442, -24.096306)
+
+[node name="flat-grass" parent="Crique/Crique-E/Patch" instance=ExtResource("50_e43uk")]
+transform = Transform3D(14.488886, 0, -3.8822885, 0, 3.9999998, 0, 3.8822885, 0, 14.488886, 17.800001, -0.467, -11.800003)
+
+[node name="flat-grass2" parent="Crique/Crique-E/Patch" instance=ExtResource("50_e43uk")]
+transform = Transform3D(8.191523, 0, 10.324371, 0, 4, 0, -5.735762, 0, 14.7447405, 11.6, -0.467, -5.9000053)
 
 [node name="Crique-SE" type="Node3D" parent="Crique"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8750305, 0, 0)
@@ -6074,6 +6080,41 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -1.693615, 0.69999695, 3.5269
 [node name="Plage-N" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 250, 0.5, -307)
 
+[node name="Escalator" type="Node3D" parent="Plage-N"]
+transform = Transform3D(-0.63559306, 0, 0.77202415, 0, 1, 0, -0.77202415, 0, -0.63559306, 2.072, 0.9, -0.757)
+visible = false
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="Plage-N/Escalator"]
+script = ExtResource("32_7h4df")
+end = 71.4
+enable = false
+
+[node name="Timer" type="Timer" parent="Plage-N/Escalator/AnimatableBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plage-N/Escalator/AnimatableBody3D"]
+transform = Transform3D(1.0000006, 0, 0, 0, 1, 0, 0, 0, 1.0000006, 0, 0.07523346, 0)
+shape = SubResource("BoxShape3D_iswrd")
+
+[node name="platform-simplified" parent="Plage-N/Escalator/AnimatableBody3D" instance=ExtResource("59_8hy2q")]
+
+[node name="structure2" parent="Plage-N/Escalator/AnimatableBody3D" instance=ExtResource("59_ff4fn")]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 0.20000076, 0)
+
+[node name="platform-simplified2" parent="Plage-N/Escalator" instance=ExtResource("59_8hy2q")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 71.4, -5)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Plage-N/Escalator/platform-simplified2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plage-N/Escalator/platform-simplified2/StaticBody3D"]
+transform = Transform3D(-1.0000007, 0, 2.9802322e-07, 0, 1, 0, -2.9802322e-07, 0, -1.0000007, -4.5776367e-05, 0.099998474, 0.049987793)
+shape = SubResource("BoxShape3D_4ia42")
+
+[node name="platform-simplified" parent="Plage-N/Escalator/platform-simplified2" instance=ExtResource("59_8hy2q")]
+transform = Transform3D(-1.0000001, 0, 1.1920929e-07, 0, 1, 0, -1.1920929e-07, 0, -1.0000001, 0, 0, -2.5)
+
+[node name="platform-simplified3" parent="Plage-N/Escalator/platform-simplified2" instance=ExtResource("59_8hy2q")]
+transform = Transform3D(-1.0000001, 0, 1.1920929e-07, 0, 1, 0, -1.1920929e-07, 0, -1.0000001, -1.5258789e-05, 0, 2.5)
+
 [node name="EscalatorCasser" type="Node3D" parent="Plage-N"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2)
 script = ExtResource("48_7h4df")
@@ -6395,7 +6436,7 @@ transform = Transform3D(-0.9063078, 0, -0.4226184, 0, 1, 0, 0.4226184, 0, -0.906
 transform = Transform3D(-0.9063078, 0, -0.4226184, 0, 1, 0, 0.4226184, 0, -0.9063078, 13.6545105, 0.99999976, -17.367218)
 
 [node name="grass-patch11" parent="Plage-N/Grass" instance=ExtResource("18_bsjpt")]
-transform = Transform3D(-0.81915224, 0, 0.57357645, 0, 1, 0, -0.57357645, 0, -0.81915224, 2.9749908, 0.9999999, -2.6869507)
+transform = Transform3D(-0.81915224, 0, 0.57357645, 0, 1, 0, -0.57357645, 0, -0.81915224, -1.2250061, 0.9999999, -5.786957)
 
 [node name="grass-patch12" parent="Plage-N/Grass" instance=ExtResource("18_bsjpt")]
 transform = Transform3D(-0.81915224, 0, 0.57357645, 0, 1, 0, -0.57357645, 0, -0.81915224, -3.0250092, 0.9999999, -24.68695)
@@ -8465,4 +8506,5 @@ transform = Transform3D(1.8126154, 0, 0.8452365, 0, 2, 0, -0.8452365, 0, 1.81261
 [connection signal="timeout" from="Crique/Crique-O/Escalator/AnimatableBody3D/Timer" to="Crique/Crique-O/Escalator/AnimatableBody3D" method="_on_timer_timeout"]
 [connection signal="timeout" from="Montagne-Nord/MontagneChampi/Pic2/Escalator/AnimatableBody3D/Timer" to="Montagne-Nord/MontagneChampi/Pic2/Escalator/AnimatableBody3D" method="_on_timer_timeout"]
 [connection signal="timeout" from="Montagne-Nord/MontagneChampi/Pic3/Escalator/AnimatableBody3D/Timer" to="Montagne-Nord/MontagneChampi/Pic3/Escalator/AnimatableBody3D" method="_on_timer_timeout"]
+[connection signal="timeout" from="Plage-N/Escalator/AnimatableBody3D/Timer" to="Plage-N/Escalator/AnimatableBody3D" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Plage-S/Area3D" to="Plage-S/gravestone-bevel2" method="_on_area_3d_body_entered"]
