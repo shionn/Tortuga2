@@ -1,12 +1,12 @@
 extends "res://scripts/pnj.gd"
 
 func on_interact() -> void:
-	if (player.tags.have(Tags.GUARD_HARBOUR_OFFICE_SOBERING)) :
+	if (tags.have(Tags.GUARD_HARBOUR_OFFICE_SOBERING)) :
 		gui.open_dialog(pnj_name, _TEXT_SOBRE).with_options([
 			Dialogs.default_search_forbid_fruit_option(self),
 			Dialogs.default_search_forbid_fruit_montain_option(self),
 			PnjDialogOption.new(
-				func () : return player.tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT),
+				func () : return tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT),
 				Dialogs.question_search_forbid_fruit_teleport,
 				func () : gui.open_dialog(pnj_name, _TEXT_INDICE_CRYSTAL)
 			),
@@ -17,8 +17,8 @@ func on_interact() -> void:
 	else :
 		gui.open_dialog(pnj_name, _TEXT)
 		# TODO à retirer ? permttre de faire ce truc des le départ ? 
-		if player.tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT) :
-			player.tags.add(Tags.SEARCH_SOBERING_POTION)
+		if tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT) :
+			tags.add(Tags.SEARCH_SOBERING_POTION)
 
 func on_item_drop(item : Item) -> void:
 	if (item.name == Bag.PotionDegrisement and not player.tags.have(Tags.GUARD_HARBOUR_OFFICE_SOBERING)) :
@@ -31,8 +31,8 @@ func on_item_drop(item : Item) -> void:
 	else :
 		super.on_item_drop(item)
 
-func _on_area_3d_body_entered(body: Node3D) -> void:
-	if (player.tags.have(Tags.GUARD_HARBOUR_OFFICE_SOBERING)) :
+func on_tag_change() -> void:
+	if (tags.have(Tags.GUARD_HARBOUR_OFFICE_SOBERING)) :
 		animation_name = "idle"
 		_animation.play("idle")
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=101 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="PackedScene" uid="uid://gjk5y26xk1ud" path="res://assets/graveyard/gravestone/gravestone-bevel.glb" id="1_5xhig"]
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/barbe-drue/bouteille_note_lisible.gd" id="1_c7jrm"]
@@ -78,6 +78,9 @@
 [ext_resource type="PackedScene" uid="uid://dt7kul30n8qm5" path="res://scenes/tortuga/tortuga_mountain_bridge-4.tscn" id="65_7nohc"]
 [ext_resource type="PackedScene" uid="uid://byjj6kfw5ebe1" path="res://scenes/tortuga/tortuga_mountain_bridge-5.tscn" id="66_boury"]
 [ext_resource type="PackedScene" uid="uid://dbncpesyqlrv8" path="res://assets/castle/tree-large-simplified.glb" id="69_lk3d5"]
+[ext_resource type="Script" uid="uid://b1dmjog0pkslg" path="res://scripts/tortuga/kindle.gd" id="72_yna1o"]
+[ext_resource type="PackedScene" uid="uid://hjvlc1djuf55" path="res://assets/farm-animals-quaternius/Horse.glb" id="73_ei0yt"]
+[ext_resource type="PackedScene" uid="uid://dbglnuyw67vwg" path="res://assets/character/base/character-male-c.glb" id="74_waae6"]
 [ext_resource type="PackedScene" uid="uid://da843m2aqgq7r" path="res://assets/mine/tortuga-chaman-60.glb" id="79_0bag0"]
 [ext_resource type="PackedScene" uid="uid://c1sc7qjitvtsi" path="res://assets/pirate/rocks-a.glb" id="80_5x0ot"]
 [ext_resource type="PackedScene" uid="uid://chxfr2yagmg24" path="res://assets/pirate/rocks-c.glb" id="81_4ia42"]
@@ -92,9 +95,6 @@ size = Vector3(0.31, 0.15, 0.15)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_7h4df"]
 radius = 0.70410156
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_7h4df"]
-size = Vector3(70, 10, 131)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iswrd"]
 size = Vector3(2.5, 0.25046387, 2.5)
@@ -126,6 +126,10 @@ size = Vector3(6.219531, 1, 2.9956787)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e43uk"]
 size = Vector3(0.4, 0.4392578, 0.1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rwguv"]
+radius = 0.25
+height = 0.9
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_aveh0"]
 size = Vector3(0.4, 0.5, 0.2)
@@ -1069,14 +1073,6 @@ transform = Transform3D(0.14469099, 0, 3.9973822, 0, 4, 0, -3.9973822, 0, 0.1446
 
 [node name="patch-grass11" parent="Crique/Crique-SE/Patch" instance=ExtResource("3_jit35")]
 transform = Transform3D(-1.1509132, 0, -3.8308487, 0, 4, 0, 3.8308487, 0, -1.1509132, 97.95438, 0.5000036, 47.30134)
-
-[node name="Area3D" type="Area3D" parent="Crique/Crique-SE"]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Crique/Crique-SE/Area3D"]
-transform = Transform3D(0.86602545, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, 0.86602545, 74.18207, 0, 23.265945)
-shape = SubResource("BoxShape3D_7h4df")
 
 [node name="Crique-SO" type="Node3D" parent="Crique"]
 transform = Transform3D(0.99931294, 0, 0.037062302, 0, 1, 0, -0.037062302, 0, 0.99931294, -7.2949123, 0, -23.624184)
@@ -7721,6 +7717,59 @@ transform = Transform3D(-2.9885845, 0, 0.2614665, 0, 5.999996, 0, -0.2614665, 0,
 [node name="Plage-O" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -266)
 
+[node name="Kindle2" type="CharacterBody3D" parent="Plage-O"]
+visible = false
+
+[node name="name" type="Label3D" parent="Plage-O/Kindle2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
+text = "PnjName"
+
+[node name="role" type="Label3D" parent="Plage-O/Kindle2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+modulate = Color(1, 1, 0, 1)
+text = "<Role>"
+font_size = 26
+
+[node name="character" parent="Plage-O/Kindle2" instance=ExtResource("74_waae6")]
+
+[node name="Area3D" type="Area3D" parent="Plage-O/Kindle2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plage-O/Kindle2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38750002, 0)
+shape = SubResource("CapsuleShape3D_rwguv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plage-O/Kindle2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38750002, 0)
+shape = SubResource("CapsuleShape3D_rwguv")
+
+[node name="Kindle" type="Node3D" parent="Plage-O"]
+transform = Transform3D(-0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.49999997, -33.5, 1.5, -27.199982)
+visible = false
+script = ExtResource("72_yna1o")
+model = ExtResource("73_ei0yt")
+pnj_name = "Kindle"
+pnj_role = "Bourrique"
+animation_name = "Idle"
+model_scale = 0.2
+
+[node name="name" type="Label3D" parent="Plage-O/Kindle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
+text = "PnjName"
+
+[node name="role" type="Label3D" parent="Plage-O/Kindle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+modulate = Color(1, 1, 0, 1)
+text = "<Role>"
+font_size = 26
+
+[node name="character" parent="Plage-O/Kindle" instance=ExtResource("74_waae6")]
+
+[node name="Area3D" type="Area3D" parent="Plage-O/Kindle"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plage-O/Kindle/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38750002, 0)
+shape = SubResource("CapsuleShape3D_rwguv")
+
 [node name="tomb-barbe-drue" type="Node3D" parent="Plage-O"]
 transform = Transform3D(0.80426157, 0, 0.5942755, 0, 1, 0, -0.5942755, 0, 0.80426157, -1.1999989, 0.5, 39.799988)
 
@@ -8489,9 +8538,6 @@ transform = Transform3D(1.4142137, 0, 1.4142134, 0, 2, 0, -1.4142134, 0, 1.41421
 [node name="palm-bend4" parent="TortugaChamanIsland/Palm" instance=ExtResource("4_c7jrm")]
 transform = Transform3D(1.8126154, 0, 0.8452365, 0, 2, 0, -0.8452365, 0, 1.8126154, -9.899994, 0.8000001, 12.999992)
 
-[connection signal="body_entered" from="Crique/Crique-SE/Area3D" to="Crique/Crique-SE/parchemin-hung-connut-1" method="_on_area_3d_body_entered"]
-[connection signal="body_entered" from="Crique/Crique-SE/Area3D" to="Crique/Crique-SE/parchemin-hung-connut-2" method="_on_area_3d_body_entered"]
-[connection signal="body_entered" from="Crique/Crique-SE/Area3D" to="Crique/Crique-SE/parchemin-hung-connut-3" method="_on_area_3d_body_entered"]
 [connection signal="timeout" from="Crique/Crique-O/Escalator/AnimatableBody3D/Timer" to="Crique/Crique-O/Escalator/AnimatableBody3D" method="_on_timer_timeout"]
 [connection signal="timeout" from="Montagne-Nord/MontagneChampi/Pic2/Escalator/AnimatableBody3D/Timer" to="Montagne-Nord/MontagneChampi/Pic2/Escalator/AnimatableBody3D" method="_on_timer_timeout"]
 [connection signal="timeout" from="Montagne-Nord/MontagneChampi/Pic3/Escalator/AnimatableBody3D/Timer" to="Montagne-Nord/MontagneChampi/Pic3/Escalator/AnimatableBody3D" method="_on_timer_timeout"]

@@ -22,7 +22,7 @@ func on_interact() -> void:
 		Dialogs.default_hung_connut_search_houblon(self)
 	])
 
-var quest_3_enable = true
+var quest_3_enable = false
 
 func _on_hung_connut_search_charpentier() -> void:
 	if quest_3_enable :
@@ -49,7 +49,7 @@ const _TEXT_HUNG_CONNUT_SEARCH_CHARPENTIER = """Quoi ? L’escalator du nord est
 Je vais le réparer mais il me faut du temps. Reviens dans quelque temps ca sera fait. 
 
 Pour avancer plus loin, il nous faut accomplir une quête de peinture.
-Pour prouvez que vous avez fini cette quête reporter le code \"Par Bois et Clou\" dans le canal discord des quêtes."""
+Pour prouvez que vous avez fini cette quête reporter le code \"Par Bois et Clou\" en message privé dans discord à Rurick alias Shionn."""
 
 const _TEXT_HUNG_CONNUT_SEARCH_CHARPENTIER_2 = """Quoi ? L’escalator du nord est détruit ? C'est une catastrophe ! nous ne pouvons atteindre le sommet de la montagne ! On y trouve les meilleurs champignons.
 

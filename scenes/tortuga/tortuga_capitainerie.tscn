@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://d2d7oty4ebqab"]
+[gd_scene load_steps=43 format=3 uid="uid://d2d7oty4ebqab"]
 
 [ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="1_37eor"]
 [ext_resource type="PackedScene" uid="uid://h386a44aelmc" path="res://assets/town/walls/wall-arch-top.glb" id="1_kxu0y"]
@@ -47,9 +47,6 @@ height = 1.45
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7uxyy"]
 size = Vector3(1.4150696, 0.13238525, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_rckht"]
-size = Vector3(14, 10, 17)
 
 [node name="TortugaCapitainerie" type="Node3D"]
 
@@ -618,14 +615,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2, 2.1, -1)
 
 [node name="stall-bench6" parent="." instance=ExtResource("21_kugcr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2, 2.1, 1)
-
-[node name="Area3D" type="Area3D" parent="."]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 3.5, 0)
-shape = SubResource("BoxShape3D_rckht")
-
-[connection signal="body_entered" from="Area3D" to="crystal-blue" method="_on_area_3d_body_entered"]
-[connection signal="body_entered" from="Area3D" to="pnj-garde" method="_on_area_3d_body_entered"]

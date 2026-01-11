@@ -16,7 +16,6 @@ class_name PNJ
 
 var _animation : AnimationPlayer
 
-
 func _ready() -> void:
 	super._ready()
 	remove_child(_character)
@@ -31,10 +30,9 @@ func _ready() -> void:
 		_role_3d.text = "<"+pnj_role+">"
 	
 	_animation = _character.get_child(1)
-	# il faut bien laisser idle ici !!! mais faut adapter pour les animaux
-	_animation.get_animation("idle").loop_mode = Animation.LOOP_LINEAR
-	if animation_loop :
-		_animation.get_animation(animation_name).loop_mode = Animation.LOOP_LINEAR
+	var idle = _animation.get_animation("idle")
+	if (idle) : idle.loop_mode = Animation.LOOP_LINEAR
+	if animation_loop : _animation.get_animation(animation_name).loop_mode = Animation.LOOP_LINEAR
 	_animation.play(animation_name)
 
 func _process(delta: float) -> void:
