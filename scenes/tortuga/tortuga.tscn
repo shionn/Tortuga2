@@ -82,7 +82,7 @@
 [ext_resource type="PackedScene" uid="uid://c1sc7qjitvtsi" path="res://assets/pirate/rocks-a.glb" id="80_5x0ot"]
 [ext_resource type="PackedScene" uid="uid://chxfr2yagmg24" path="res://assets/pirate/rocks-c.glb" id="81_4ia42"]
 [ext_resource type="PackedScene" uid="uid://dxkgapjtrucm5" path="res://assets/pirate/boats/ship-wreck.glb" id="82_5x0ot"]
-[ext_resource type="PackedScene" uid="uid://cqixno3g5svqo" path="res://scenes/tortuga/tortuga_shaman_house.tscn" id="83_4ia42"]
+[ext_resource type="PackedScene" path="res://scenes/tortuga/tortuga_shaman_house.tscn" id="83_4ia42"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c7jrm"]
 size = Vector3(0.2, 0.44476318, 0.2)
@@ -2550,6 +2550,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 72.9, -18.8)
 
 [node name="TortugaMindWind" parent="Montagne-Nord/MontagneChampi/Pic1" instance=ExtResource("51_67xyg")]
 transform = Transform3D(0.9848076, 0, 0.17364815, 0, 1, 0, -0.17364815, 0, 0.9848076, -4.300003, 0, 17.100006)
+visible = false
 
 [node name="Patchs" type="Node3D" parent="Montagne-Nord/MontagneChampi/Pic1"]
 
@@ -3894,6 +3895,7 @@ transform = Transform3D(0.8940761, 0, 0.4479152, 0, 1, 0, -0.4479152, 0, 0.89407
 
 [node name="Escalator" type="Node3D" parent="Montagne-Nord/MontagneChampi/Pic2"]
 transform = Transform3D(0.7385142, 0, 0.6742377, 0, 1, 0, -0.6742377, 0, 0.7385142, -5.482147, 0.70000076, -12.235008)
+visible = false
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="Montagne-Nord/MontagneChampi/Pic2/Escalator"]
 script = ExtResource("32_7h4df")
@@ -4125,6 +4127,7 @@ transform = Transform3D(13, 0, 0, 0, 3, 0, -4.7683716e-07, 0, 10, -0.8000183, 0,
 
 [node name="Escalator" type="Node3D" parent="Montagne-Nord/MontagneChampi/Pic3"]
 transform = Transform3D(0.99619466, 0, 0.08715573, 0, 1, 0, -0.08715573, 0, 0.99619466, -3.3094177, 0.70000076, -6.1447906)
+visible = false
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="Montagne-Nord/MontagneChampi/Pic3/Escalator"]
 script = ExtResource("32_7h4df")
@@ -4274,6 +4277,7 @@ transform = Transform3D(0.6210109, 0, 0.78380185, 0, 1, 0, -0.78380185, 0, 0.621
 
 [node name="MountainBridge" parent="Montagne-Nord/MontagneChampi/Pic4" instance=ExtResource("60_ff4fn")]
 transform = Transform3D(0.6819984, 0, -0.7313537, 0, 1, 0, 0.7313537, 0, 0.6819984, -10.586304, 3.1999989, 16.750824)
+visible = false
 
 [node name="Patches" type="Node3D" parent="Montagne-Nord/MontagneChampi/Pic4"]
 
@@ -4575,6 +4579,7 @@ transform = Transform3D(7.295472, 0, -2.8723583, 0, 2.9999998, 0, 3.282695, 0, 6
 
 [node name="MountainBridge-2" parent="Montagne-Nord/MontagneChampi/Pic6" instance=ExtResource("61_gl853")]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -23.509308, 3.8999977, 2.323822)
+visible = false
 
 [node name="Trees" type="Node3D" parent="Montagne-Nord/MontagneChampi/Pic6"]
 transform = Transform3D(0.894076, 0, -0.4479151, 0, 1, 0, 0.4479151, 0, 0.894076, 0, 0, 0)
@@ -8087,45 +8092,210 @@ transform = Transform3D(4.596266, 0, 3.8567266, 0, 6, 0, -3.8567266, 0, 4.596266
 transform = Transform3D(0.90630776, 0.38302222, 0.1786062, -0.42261833, 0.82139385, 0.38302228, 0, -0.42261833, 0.9063079, 15.899994, -1.1, -45.2)
 
 [node name="Grasses" type="Node3D" parent="TortugaChamanIsland"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="flat-grass" parent="TortugaChamanIsland/Grasses" instance=ExtResource("50_e43uk")]
+[node name="grass-patch2" parent="TortugaChamanIsland/Grasses" instance=ExtResource("18_bsjpt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2999878, 0, 3.5999985)
+
+[node name="grass-plant2" parent="TortugaChamanIsland/Grasses" instance=ExtResource("6_j21kd")]
+
+[node name="grass2" parent="TortugaChamanIsland/Grasses" instance=ExtResource("2_wohch")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1)
+
+[node name="grass3" parent="TortugaChamanIsland/Grasses" instance=ExtResource("2_wohch")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7999878, 0, 1.4000015)
+
+[node name="grass-patch3" parent="TortugaChamanIsland/Grasses" instance=ExtResource("18_bsjpt")]
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, -14.71405, 0, -2.2694244)
+
+[node name="grass-plant3" parent="TortugaChamanIsland/Grasses" instance=ExtResource("6_j21kd")]
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, -10.382629, 0, -0.013633728)
+
+[node name="grass-plant9" parent="TortugaChamanIsland/Grasses" instance=ExtResource("6_j21kd")]
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, -17.38263, 0, -8.013634)
+
+[node name="grass4" parent="TortugaChamanIsland/Grasses" instance=ExtResource("2_wohch")]
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, -10.193146, 0, -3.170227)
+
+[node name="grass20" parent="TortugaChamanIsland/Grasses" instance=ExtResource("2_wohch")]
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, -20.193146, 0, -7.170227)
+
+[node name="grass19" parent="TortugaChamanIsland/Grasses" instance=ExtResource("2_wohch")]
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, -19.193146, 0, -3.170227)
+
+[node name="grass5" parent="TortugaChamanIsland/Grasses" instance=ExtResource("2_wohch")]
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, -11.010223, 0, 3.0532913)
+
+[node name="grass-patch4" parent="TortugaChamanIsland/Grasses" instance=ExtResource("18_bsjpt")]
+transform = Transform3D(0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071067, -7.8512573, 0, 12.253204)
+
+[node name="grass-plant4" parent="TortugaChamanIsland/Grasses" instance=ExtResource("6_j21kd")]
+transform = Transform3D(0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071067, -8.063385, 0, 7.3741913)
+
+[node name="grass6" parent="TortugaChamanIsland/Grasses" instance=ExtResource("2_wohch")]
+transform = Transform3D(0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071067, -10.891815, 0, 8.788391)
+
+[node name="grass7" parent="TortugaChamanIsland/Grasses" instance=ExtResource("2_wohch")]
+transform = Transform3D(0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071067, -5.093567, 0, 6.384239)
+
+[node name="grass-patch5" parent="TortugaChamanIsland/Grasses" instance=ExtResource("18_bsjpt")]
+transform = Transform3D(0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071067, 7.848755, 0, 17.953201)
+
+[node name="grass-plant5" parent="TortugaChamanIsland/Grasses" instance=ExtResource("6_j21kd")]
+transform = Transform3D(0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071067, 7.636627, 0, 13.074188)
+
+[node name="grass8" parent="TortugaChamanIsland/Grasses" instance=ExtResource("2_wohch")]
+transform = Transform3D(0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071067, 4.808197, 0, 14.488388)
+
+[node name="grass21" parent="TortugaChamanIsland/Grasses" instance=ExtResource("2_wohch")]
+transform = Transform3D(0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071067, -0.8918152, 0, 15.488388)
+
+[node name="grass18" parent="TortugaChamanIsland/Grasses" instance=ExtResource("2_wohch")]
+transform = Transform3D(0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071067, 2.808197, 0, 19.488388)
+
+[node name="grass9" parent="TortugaChamanIsland/Grasses" instance=ExtResource("2_wohch")]
+transform = Transform3D(0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071067, 10.606445, 0, 12.084236)
+
+[node name="grass17" parent="TortugaChamanIsland/Grasses" instance=ExtResource("2_wohch")]
+transform = Transform3D(0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071067, 15.8064575, 0, 15.284233)
+
+[node name="grass-patch6" parent="TortugaChamanIsland/Grasses" instance=ExtResource("18_bsjpt")]
+transform = Transform3D(-0.50000006, 0, 0.86602527, 0, 1, 0, -0.86602527, 0, -0.50000006, 13.089111, 0, 1.6000824)
+
+[node name="grass-plant6" parent="TortugaChamanIsland/Grasses" instance=ExtResource("6_j21kd")]
+transform = Transform3D(-0.50000006, 0, 0.86602527, 0, 1, 0, -0.86602527, 0, -0.50000006, 8.321442, 0, 0.5421982)
+
+[node name="grass10" parent="TortugaChamanIsland/Grasses" instance=ExtResource("2_wohch")]
+transform = Transform3D(-0.50000006, 0, 0.86602527, 0, 1, 0, -0.86602527, 0, -0.50000006, 8.955444, 0, 3.6402893)
+
+[node name="grass11" parent="TortugaChamanIsland/Grasses" instance=ExtResource("2_wohch")]
+transform = Transform3D(-0.50000006, 0, 0.86602527, 0, 1, 0, -0.86602527, 0, -0.50000006, 8.133881, 0, -2.5826416)
+
+[node name="grass-patch7" parent="TortugaChamanIsland/Grasses" instance=ExtResource("18_bsjpt")]
+transform = Transform3D(0.99619466, 0, -0.08715555, 0, 1, 0, 0.08715555, 0, 0.99619466, 9.782593, 0, 8.778725)
+
+[node name="grass-patch9" parent="TortugaChamanIsland/Grasses" instance=ExtResource("18_bsjpt")]
+transform = Transform3D(0.99619466, 0, -0.08715555, 0, 1, 0, 0.08715555, 0, 0.99619466, 12.782593, 0, 16.778725)
+
+[node name="grass-plant7" parent="TortugaChamanIsland/Grasses" instance=ExtResource("6_j21kd")]
+transform = Transform3D(0.99619466, 0, -0.08715555, 0, 1, 0, 0.08715555, 0, 0.99619466, 13.383789, 0, 5.480049)
+
+[node name="grass12" parent="TortugaChamanIsland/Grasses" instance=ExtResource("2_wohch")]
+transform = Transform3D(0.99619466, 0, -0.08715555, 0, 1, 0, 0.08715555, 0, 0.99619466, 10.48233, 0, 4.222412)
+
+[node name="grass16" parent="TortugaChamanIsland/Grasses" instance=ExtResource("2_wohch")]
+transform = Transform3D(0.99619466, 0, -0.08715555, 0, 1, 0, 0.08715555, 0, 0.99619466, 14.48233, 0, 12.222412)
+
+[node name="grass13" parent="TortugaChamanIsland/Grasses" instance=ExtResource("2_wohch")]
+transform = Transform3D(0.99619466, 0, -0.08715555, 0, 1, 0, 0.08715555, 0, 0.99619466, 16.051086, 0, 7.118744)
+
+[node name="grass-patch8" parent="TortugaChamanIsland/Grasses" instance=ExtResource("18_bsjpt")]
+transform = Transform3D(0.99619466, 0, -0.08715555, 0, 1, 0, 0.08715555, 0, 0.99619466, 0.48260498, 0, 10.578728)
+
+[node name="grass-plant8" parent="TortugaChamanIsland/Grasses" instance=ExtResource("6_j21kd")]
+transform = Transform3D(0.99619466, 0, -0.08715555, 0, 1, 0, 0.08715555, 0, 0.99619466, 4.0838013, 0, 7.280052)
+
+[node name="grass14" parent="TortugaChamanIsland/Grasses" instance=ExtResource("2_wohch")]
+transform = Transform3D(0.99619466, 0, -0.08715555, 0, 1, 0, 0.08715555, 0, 0.99619466, 1.1823425, 0, 6.022415)
+
+[node name="grass15" parent="TortugaChamanIsland/Grasses" instance=ExtResource("2_wohch")]
+transform = Transform3D(0.99619466, 0, -0.08715555, 0, 1, 0, 0.08715555, 0, 0.99619466, 6.7510986, 0, 8.918747)
+
+[node name="Patches" type="Node3D" parent="TortugaChamanIsland"]
+
+[node name="flat-grass" parent="TortugaChamanIsland/Patches" instance=ExtResource("50_e43uk")]
 transform = Transform3D(7.9999995, 0, -6.9282036, 0, 4, 0, 13.856407, 0, 3.9999998, -0.5, 0, 1)
 
-[node name="patch-grass2" parent="TortugaChamanIsland/Grasses" instance=ExtResource("3_jit35")]
+[node name="patch-grass2" parent="TortugaChamanIsland/Patches" instance=ExtResource("3_jit35")]
 transform = Transform3D(-2.5711505, 0, -3.0641782, 0, 4, 0, 3.0641782, 0, -2.5711505, 10.299988, 0, 14.300003)
 
-[node name="patch-grass5" parent="TortugaChamanIsland/Grasses" instance=ExtResource("3_jit35")]
+[node name="patch-grass5" parent="TortugaChamanIsland/Patches" instance=ExtResource("3_jit35")]
 transform = Transform3D(-3.984779, 0, -0.34862328, 0, 4, 0, 0.34862328, 0, -3.984779, -1.7000122, 0, 16.300003)
 
-[node name="patch-grass6" parent="TortugaChamanIsland/Grasses" instance=ExtResource("3_jit35")]
+[node name="patch-grass6" parent="TortugaChamanIsland/Patches" instance=ExtResource("3_jit35")]
 transform = Transform3D(0.34862363, 0, -3.9847784, 0, 4, 0, 3.9847784, 0, 0.34862363, -8.400024, 0, 6.3000107)
 
-[node name="patch-grass7" parent="TortugaChamanIsland/Grasses" instance=ExtResource("3_jit35")]
+[node name="patch-grass7" parent="TortugaChamanIsland/Patches" instance=ExtResource("3_jit35")]
 transform = Transform3D(-3.4641013, 0, 1.9999993, 0, 4, 0, -1.9999993, 0, -3.4641013, -15.000061, 0, -5.8999863)
 
-[node name="patch-grass3" parent="TortugaChamanIsland/Grasses" instance=ExtResource("3_jit35")]
+[node name="patch-grass3" parent="TortugaChamanIsland/Patches" instance=ExtResource("3_jit35")]
 transform = Transform3D(3.064178, 0, -2.5711503, 0, 4, 0, 2.5711503, 0, 3.064178, 9.973206, 0, 2.9778366)
 
-[node name="patch-grass4" parent="TortugaChamanIsland/Grasses" instance=ExtResource("3_jit35")]
+[node name="patch-grass4" parent="TortugaChamanIsland/Patches" instance=ExtResource("3_jit35")]
 transform = Transform3D(-2, 0, 3.4641018, 0, 4, 0, -3.4641018, 0, -2, 1.5732117, 0, -6.822159)
 
-[node name="TortugaShamanHouse" parent="TortugaChamanIsland/Grasses" instance=ExtResource("83_4ia42")]
+[node name="TortugaShamanHouse" parent="TortugaChamanIsland/Patches" instance=ExtResource("83_4ia42")]
 transform = Transform3D(0.9396926, 0, 0.34202015, 0, 1, 0, -0.34202015, 0, 0.9396926, 2.2999878, 2.1000001, -4.5)
 
-[node name="structure-platform-dock-long" parent="TortugaChamanIsland" instance=ExtResource("22_8hael")]
+[node name="Dock" type="Node3D" parent="TortugaChamanIsland"]
+
+[node name="structure-platform-dock-long" parent="TortugaChamanIsland/Dock" instance=ExtResource("22_8hael")]
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -17.299988, -1, 11)
 
-[node name="structure-platform-dock-long2" parent="TortugaChamanIsland" instance=ExtResource("22_8hael")]
+[node name="structure-platform-dock-long2" parent="TortugaChamanIsland/Dock" instance=ExtResource("22_8hael")]
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -19.799988, -1, 11)
 
-[node name="structure-platform-dock-long3" parent="TortugaChamanIsland" instance=ExtResource("22_8hael")]
+[node name="structure-platform-dock-long3" parent="TortugaChamanIsland/Dock" instance=ExtResource("22_8hael")]
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -22.299988, -1, 11)
 
-[node name="structure-platform-dock-long4" parent="TortugaChamanIsland" instance=ExtResource("22_8hael")]
+[node name="structure-platform-dock-long4" parent="TortugaChamanIsland/Dock" instance=ExtResource("22_8hael")]
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -24.799988, -1, 11)
 
-[node name="structure-platform-dock-long5" parent="TortugaChamanIsland" instance=ExtResource("22_8hael")]
+[node name="structure-platform-dock-long5" parent="TortugaChamanIsland/Dock" instance=ExtResource("22_8hael")]
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -27.299988, -1, 11)
+
+[node name="Palm" type="Node3D" parent="TortugaChamanIsland"]
+
+[node name="palm-detailed-bend2" parent="TortugaChamanIsland/Palm" instance=ExtResource("5_iswrd")]
+transform = Transform3D(-1.0000001, 0, -1.7320508, 0, 2, 0, 1.7320508, 0, -1.0000001, 10.5, 0.8000001, -3.4000015)
+
+[node name="palm-detailed-bend5" parent="TortugaChamanIsland/Palm" instance=ExtResource("5_iswrd")]
+transform = Transform3D(-1.7320509, 0, -0.99999994, 0, 2, 0, 0.99999994, 0, -1.7320509, 16, 0.8000001, 9.900002)
+
+[node name="palm-detailed-bend6" parent="TortugaChamanIsland/Palm" instance=ExtResource("5_iswrd")]
+transform = Transform3D(-1.1471529, 0, 1.6383041, 0, 2, 0, -1.6383041, 0, -1.1471529, 7.5999756, -0.29999995, 32.700005)
+
+[node name="palm-detailed-bend7" parent="TortugaChamanIsland/Palm" instance=ExtResource("5_iswrd")]
+transform = Transform3D(0.34729624, 0, -1.9696156, 0, 2, 0, 1.9696156, 0, 0.34729624, 9.799988, -0.29999995, -42.999992)
+
+[node name="palm-detailed-bend8" parent="TortugaChamanIsland/Palm" instance=ExtResource("5_iswrd")]
+transform = Transform3D(1.6383041, 0, -1.147153, 0, 2, 0, 1.147153, 0, 1.6383041, -14.700012, -0.29999995, -33.299995)
+
+[node name="palm-detailed-bend3" parent="TortugaChamanIsland/Palm" instance=ExtResource("5_iswrd")]
+transform = Transform3D(-0.77645713, 0, 2.8977776, 0, 3, 0, -2.8977776, 0, -0.77645713, -4.5, 0.8000001, -3.4000015)
+
+[node name="palm-detailed-bend4" parent="TortugaChamanIsland/Palm" instance=ExtResource("5_iswrd")]
+transform = Transform3D(1.8126155, 0, 0.8452364, 0, 2, 0, -0.8452364, 0, 1.8126155, -21, 0.8000001, -8.900002)
+
+[node name="palm-bend2" parent="TortugaChamanIsland/Palm" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(-1.4142135, 0, 1.4142135, 0, 2, 0, -1.4142135, 0, -1.4142135, 11.200012, 0.8000001, 18.199997)
+
+[node name="palm-bend3" parent="TortugaChamanIsland/Palm" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(-1.7320507, 0, 0.99999994, 0, 2, 0, -0.99999994, 0, -1.7320507, -4, 0.8000001, 10.199989)
+
+[node name="palm-bend6" parent="TortugaChamanIsland/Palm" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(-1.8793852, 0, -0.6840403, 0, 2, 0, 0.6840403, 0, -1.8793852, 3.5, 0.8000001, 15.799995)
+
+[node name="palm-bend7" parent="TortugaChamanIsland/Palm" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(-1.6383041, 0, 1.1471529, 0, 2, 0, -1.1471529, 0, -1.6383041, 5.600006, 0.8000001, 1.699997)
+
+[node name="palm-bend8" parent="TortugaChamanIsland/Palm" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(-1.6383041, 0, 1.1471529, 0, 2, 0, -1.1471529, 0, -1.6383041, 9.5000305, -0.19999993, -32.400005)
+
+[node name="palm-bend11" parent="TortugaChamanIsland/Palm" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(-0.51763815, 0, -1.9318516, 0, 2, 0, 1.9318516, 0, -0.51763815, -1.8999634, -0.19999993, -40.200005)
+
+[node name="palm-bend9" parent="TortugaChamanIsland/Palm" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(0.6840403, 0, 1.8793852, 0, 2, 0, -1.8793852, 0, 0.6840403, -0.6999817, -0.19999993, 39.799995)
+
+[node name="palm-bend10" parent="TortugaChamanIsland/Palm" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(1.9923894, 0, -0.17431146, 0, 2, 0, 0.17431146, 0, 1.9923894, -22.399994, -0.19999993, -19.800003)
+
+[node name="palm-bend5" parent="TortugaChamanIsland/Palm" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(1.4142137, 0, 1.4142134, 0, 2, 0, -1.4142134, 0, 1.4142137, -13.699982, 0.8000001, 1.7999954)
+
+[node name="palm-bend4" parent="TortugaChamanIsland/Palm" instance=ExtResource("4_c7jrm")]
+transform = Transform3D(1.8126154, 0, 0.8452365, 0, 2, 0, -0.8452365, 0, 1.8126154, -9.899994, 0.8000001, 12.999992)
 
 [connection signal="body_entered" from="Crique/Crique-SE/Area3D" to="Crique/Crique-SE/parchemin-hung-connut-1" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Crique/Crique-SE/Area3D" to="Crique/Crique-SE/parchemin-hung-connut-2" method="_on_area_3d_body_entered"]
