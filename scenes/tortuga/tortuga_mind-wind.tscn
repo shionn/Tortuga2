@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cgwwol2ja1lfe" path="res://assets/town/props/overhang.glb" id="2_6bqao"]
 [ext_resource type="PackedScene" uid="uid://bi815v5v0sl8q" path="res://assets/town/planks/planks.glb" id="2_bt1wm"]
 [ext_resource type="PackedScene" uid="uid://bv1kbqcp304cs" path="res://assets/town/fence-hedge/balcony-wall-fence-simplified.glb" id="3_ogdx2"]
-[ext_resource type="PackedScene" uid="uid://ds80fb45k0hm4" path="res://assets/town/fence-hedge/balcony-wall-simplified.glb" id="4_mkly4"]
+[ext_resource type="PackedScene" uid="uid://ddsthq2ii0qb3" path="res://assets/town/fence-hedge/balcony-wall-simplified.glb" id="4_mkly4"]
 [ext_resource type="PackedScene" uid="uid://d0mdhn6dked7d" path="res://assets/town/roof/roof-window.glb" id="5_vn6vr"]
 [ext_resource type="PackedScene" uid="uid://bmx33gnpvrr0r" path="res://assets/town/windmill.glb" id="6_fr4h8"]
 [ext_resource type="PackedScene" uid="uid://ckl0cxjsbj1sn" path="res://assets/town/roof/roof-corner-round.glb" id="7_aby6m"]
