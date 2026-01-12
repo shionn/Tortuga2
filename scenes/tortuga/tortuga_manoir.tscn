@@ -59,6 +59,7 @@ script = ExtResource("5_ujpvh")
 model = ExtResource("6_3oy5l")
 pnj_name = "Whisp"
 pnj_role = "Capitaine"
+animation_name = "sit"
 
 [node name="Laugh" type="AudioStreamPlayer" parent="pnj-whisp"]
 stream = ExtResource("7_vy2c6")

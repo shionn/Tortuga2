@@ -8,7 +8,7 @@ class_name Item
 @export_multiline var description: String
 @export var image: Texture2D
 
-var _interactable : Interactable
+var _interactable : Node3D
 
 func _ready() -> void:
 	set_default_cursor_shape(Control.CURSOR_POINTING_HAND)
@@ -19,11 +19,11 @@ func _ready() -> void:
 func isGold() -> bool:
 	return name == Bag.TresorBarbeDrue || Bag.TresorBarbeDrueNet
 
-func on_enter(interactable : Interactable) -> void :
+func on_enter(interactable : Node3D) -> void :
 	self._interactable = interactable
 	set_default_cursor_shape(Control.CURSOR_CAN_DROP)
 
-func on_exit(interactable : Interactable) -> void :
+func on_exit(interactable : Node3D) -> void :
 	if self._interactable == interactable :
 		self._interactable = null
 		set_default_cursor_shape(Control.CURSOR_DRAG)
