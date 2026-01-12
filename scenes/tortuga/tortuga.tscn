@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=103 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="PackedScene" uid="uid://gjk5y26xk1ud" path="res://assets/graveyard/gravestone/gravestone-bevel.glb" id="1_5xhig"]
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/barbe-drue/bouteille_note_lisible.gd" id="1_c7jrm"]
@@ -78,6 +78,7 @@
 [ext_resource type="PackedScene" uid="uid://dt7kul30n8qm5" path="res://scenes/tortuga/tortuga_mountain_bridge-4.tscn" id="65_7nohc"]
 [ext_resource type="PackedScene" uid="uid://byjj6kfw5ebe1" path="res://scenes/tortuga/tortuga_mountain_bridge-5.tscn" id="66_boury"]
 [ext_resource type="PackedScene" uid="uid://dbncpesyqlrv8" path="res://assets/castle/tree-large-simplified.glb" id="69_lk3d5"]
+[ext_resource type="Script" uid="uid://bcbqah35ja3ow" path="res://scripts/tortuga/kindle-body.gd" id="72_ei0yt"]
 [ext_resource type="Script" uid="uid://b1dmjog0pkslg" path="res://scripts/tortuga/kindle.gd" id="72_yna1o"]
 [ext_resource type="PackedScene" uid="uid://hjvlc1djuf55" path="res://assets/farm-animals-quaternius/Horse.glb" id="73_ei0yt"]
 [ext_resource type="PackedScene" uid="uid://dbglnuyw67vwg" path="res://assets/character/base/character-male-c.glb" id="74_waae6"]
@@ -127,9 +128,10 @@ size = Vector3(6.219531, 1, 2.9956787)
 [sub_resource type="BoxShape3D" id="BoxShape3D_e43uk"]
 size = Vector3(0.4, 0.4392578, 0.1)
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rwguv"]
-radius = 0.25
-height = 0.9
+[sub_resource type="SphereShape3D" id="SphereShape3D_yna1o"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ei0yt"]
+radius = 0.2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_aveh0"]
 size = Vector3(0.4, 0.5, 0.2)
@@ -7717,34 +7719,16 @@ transform = Transform3D(-2.9885845, 0, 0.2614665, 0, 5.999996, 0, -0.2614665, 0,
 [node name="Plage-O" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -266)
 
-[node name="Kindle2" type="CharacterBody3D" parent="Plage-O"]
+[node name="Kindle" type="CharacterBody3D" parent="Plage-O"]
+transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, -35, 1.5, -26)
 visible = false
+script = ExtResource("72_ei0yt")
 
-[node name="name" type="Label3D" parent="Plage-O/Kindle2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
-text = "PnjName"
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plage-O/Kindle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48750007, 0)
+shape = SubResource("SphereShape3D_yna1o")
 
-[node name="role" type="Label3D" parent="Plage-O/Kindle2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
-modulate = Color(1, 1, 0, 1)
-text = "<Role>"
-font_size = 26
-
-[node name="character" parent="Plage-O/Kindle2" instance=ExtResource("74_waae6")]
-
-[node name="Area3D" type="Area3D" parent="Plage-O/Kindle2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Plage-O/Kindle2/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38750002, 0)
-shape = SubResource("CapsuleShape3D_rwguv")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Plage-O/Kindle2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38750002, 0)
-shape = SubResource("CapsuleShape3D_rwguv")
-
-[node name="Kindle" type="Node3D" parent="Plage-O"]
-transform = Transform3D(-0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.49999997, -33.5, 1.5, -27.199982)
-visible = false
+[node name="KindlePnj" type="Node3D" parent="Plage-O/Kindle"]
 script = ExtResource("72_yna1o")
 model = ExtResource("73_ei0yt")
 pnj_name = "Kindle"
@@ -7752,23 +7736,27 @@ pnj_role = "Bourrique"
 animation_name = "Idle"
 model_scale = 0.2
 
-[node name="name" type="Label3D" parent="Plage-O/Kindle"]
+[node name="name" type="Label3D" parent="Plage-O/Kindle/KindlePnj"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
 text = "PnjName"
 
-[node name="role" type="Label3D" parent="Plage-O/Kindle"]
+[node name="role" type="Label3D" parent="Plage-O/Kindle/KindlePnj"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
 modulate = Color(1, 1, 0, 1)
 text = "<Role>"
 font_size = 26
 
-[node name="character" parent="Plage-O/Kindle" instance=ExtResource("74_waae6")]
+[node name="character" parent="Plage-O/Kindle/KindlePnj" instance=ExtResource("74_waae6")]
 
-[node name="Area3D" type="Area3D" parent="Plage-O/Kindle"]
+[node name="Area3D" type="Area3D" parent="Plage-O/Kindle/KindlePnj"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Plage-O/Kindle/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38750002, 0)
-shape = SubResource("CapsuleShape3D_rwguv")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plage-O/Kindle/KindlePnj/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48750007, 0)
+shape = SubResource("SphereShape3D_yna1o")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Plage-O/Kindle/KindlePnj/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0.8000183)
+shape = SubResource("SphereShape3D_ei0yt")
 
 [node name="tomb-barbe-drue" type="Node3D" parent="Plage-O"]
 transform = Transform3D(0.80426157, 0, 0.5942755, 0, 1, 0, -0.5942755, 0, 0.80426157, -1.1999989, 0.5, 39.799988)
