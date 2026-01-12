@@ -69,7 +69,7 @@ func open_yes_no_question(title: String, question: String, on_no: Callable, on_y
 func _ready() -> void:
 	$Acceuil.show()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	_debug_info.text = "fps: " + str(Engine.get_frames_per_second())
 	_compass_arrow.rotation = -_player_camera.rotation.y
 	if Input.is_action_just_pressed("debug") :

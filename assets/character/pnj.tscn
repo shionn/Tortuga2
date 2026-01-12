@@ -10,7 +10,7 @@ height = 0.95
 radius = 0.25
 height = 0.9
 
-[node name="AnimatableBody3D" type="AnimatableBody3D"]
+[node name="Pnj" type="CharacterBody3D"]
 
 [node name="name" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)

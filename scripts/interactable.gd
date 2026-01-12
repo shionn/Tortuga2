@@ -19,7 +19,7 @@ func _ready() -> void:
 func on_interact() -> void: 
 	print("on_interact is not overwrite")
 
-func on_item_drop(item : Item) -> void: 
+func on_item_drop(_item : Item) -> void: 
 	player.play_anim_no()
 	gui.open_alert("Oups", "Non ca ne marche pas")
 
@@ -41,7 +41,7 @@ func _on_mouse_exited() -> void:
 	else :
 		Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 
-func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+func _on_input_event(_camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	if event is InputEventMouseButton and Input.is_action_just_pressed("interact"): 
 		if player :
 			if player.global_position.distance_to(self.global_position) < interactable_distance :

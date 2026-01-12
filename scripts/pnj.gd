@@ -1,5 +1,4 @@
-#extends "res://scripts/interactable.gd"
-extends AnimatableBody3D
+extends CharacterBody3D
 
 class_name PNJ
 
@@ -13,9 +12,9 @@ class_name PNJ
 
 @onready var gui := $"/root/World/Gui" as Gui
 @onready var bag := $"/root/World/Gui/Bag" as Bag
-@onready var _area := $Area3D as Area3D
 @onready var player = $"/root/World/Player" as Player
 @onready var tags = $"/root/World/Player/Tags" as Tags
+@onready var _area := $Area3D as Area3D
 @onready var _name_3d := $name as Label3D
 @onready var _role_3d := $role as Label3D
 @onready var _player_camera := $"/root/World/Player/CameraPivot/SpringArm3D/Camera3D" as Camera3D
@@ -51,7 +50,7 @@ func _ready() -> void:
 func on_interact() -> void: 
 	print("on_interact is not overwrite")
 
-func on_item_drop(item : Item) -> void:
+func on_item_drop(_item : Item) -> void:
 	play_anim_no()
 	gui.open_alert(pnj_name, "Je n'ai que faire de ça.")
 
@@ -69,15 +68,11 @@ func play_anim_yes() -> void :
 	_animation.play("emote-yes")
 	_animation.queue(animation_name)
 
-
-func open_dialog_and_img(title: String, text: String, img: Resource) -> void:
-	gui.open_dialog_and_img(title, text, img)
-
 func open_question(title: String, callback: Callable) -> void:
 	gui.open_question(title,callback)
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	_name_3d.look_at(_player_camera.global_position, Vector3.UP, true)
 	_name_3d.rotation.x=0
 	_name_3d.rotation.z=0
@@ -95,7 +90,7 @@ func _on_mouse_exited() -> void:
 	else :
 		Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 
-func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and Input.is_action_just_pressed("interact"): 
 		if player :
 			if player.global_position.distance_to(self.global_position) < interactable_distance :

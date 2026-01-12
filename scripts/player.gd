@@ -12,7 +12,6 @@ enum STATUT { MOVING, IDLE, SIT }
 @onready var _camera_pivot := $CameraPivot as Node3D
 @onready var _pivot := $Pivot as Node3D
 @onready var _character := $Pivot/character as Node3D
-@onready var _score := $/root/World/Gui/Score as Score
 @onready var tags := $Tags as Tags
 
 var _animation : AnimationPlayer
