@@ -45,7 +45,7 @@ func on_item_drop(item : Item) -> void:
 
 const _TEXT_PRESENTATION = """Bonjour,
 
-Je suis Eve l'alchimiste de l'île, je sais faire de puissante potion.
+Je suis Eve l'alchimiste de l'île, je sais faire de puissantes potions.
 Mais je suis surtout connu pour ma bière et mon rhum."""
 
 const _TEXT_PARCHEMIN_BARBE_DRUE = """Salut Compagnon,

@@ -1,6 +1,6 @@
 extends "res://scripts/pnj.gd"
 
-const _TEXT = """Je peu sauvegarder votre partie si vous le souhaitez.
+const _TEXT = """Je peux sauvegarder votre partie si vous le souhaitez.
 Voulez-vous sauvegarder votre partie ?"""
 
 func on_interact() -> void:

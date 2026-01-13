@@ -16,7 +16,7 @@ func on_interact() -> void:
 
 func on_item_drop(item : Item) -> void:
 	if item.isGold() :
-		gui.open_dialog(pnj_name, """Qu’est ce que je vous sert ? """).with_options([
+		gui.open_dialog(pnj_name, """Qu’est ce que je vous sers ? """).with_options([
 			PnjDialogOption.new(
 				func(): return true, 
 				"""Bière rousse de Eve""",
