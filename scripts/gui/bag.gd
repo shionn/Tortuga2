@@ -2,6 +2,7 @@ extends Control
 class_name Bag
 
 const BiereRousseDeEve = "BiereRousseDeEve"
+const BoisDeQualite = "BoisDeQualite"
 const CarteHungConnut = "CarteHungConnut"
 const CrystalTeleportationOasis = "CrystalTeleportationOasis"
 const FruitDefendu = "FruitDefendu"

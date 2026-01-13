@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=32 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://scripts/gui/gui.gd" id="1_0fbet"]
 [ext_resource type="Script" uid="uid://ikfx1cjqumpb" path="res://scripts/gui/dialog.gd" id="2_bgohe"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://bmblv1t7mtklt" path="res://assets/gui/fruit-icons-redo/red-apple-h-48.png" id="19_ukjlc"]
 [ext_resource type="Texture2D" uid="uid://cqqyqe4qxv2ub" path="res://assets/imgs/CarteHungConnut.jpg" id="19_ytu88"]
 [ext_resource type="Texture2D" uid="uid://buaarg6df2ipt" path="res://assets/gui/mug-h-48.png" id="20_5r1ih"]
+[ext_resource type="Texture2D" uid="uid://2me8kuwdoy2b" path="res://assets/gui/resources-pack-1/Wood-h-48.png" id="21_6vqqt"]
 [ext_resource type="Texture2D" uid="uid://ch3n2nqahibv4" path="res://assets/gui/resources-pack-1/Page-h-48.png" id="21_ewk5h"]
 [ext_resource type="Texture2D" uid="uid://cygakm7juveua" path="res://assets/gui/resources-pack-1/Crystal-h-48.png" id="21_looj0"]
 [ext_resource type="Texture2D" uid="uid://bs0icmlv8xa0a" path="res://assets/gui/fruit-icons-redo/watermelon-h-48.png" id="22_rex2l"]
@@ -745,6 +746,16 @@ tooltip_text = "Bière rousse de eve"
 texture_normal = ExtResource("20_5r1ih")
 script = ExtResource("11_s1h2m")
 description = "C'est une bière rousse de eve. La meilleure qui soit. "
+
+[node name="BoisDeQualite" type="TextureButton" parent="Items"]
+layout_mode = 0
+offset_right = 59.0
+offset_bottom = 48.0
+tooltip_text = "Bois de qualité"
+texture_normal = ExtResource("20_5r1ih")
+script = ExtResource("11_s1h2m")
+description = "Bois de qualité, idéal pour des constructions solides."
+image = ExtResource("21_6vqqt")
 
 [node name="CarteHungConnut" type="TextureButton" parent="Items"]
 layout_mode = 0
