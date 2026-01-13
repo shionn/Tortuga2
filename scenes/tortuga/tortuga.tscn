@@ -85,7 +85,7 @@
 [ext_resource type="PackedScene" uid="uid://c1sc7qjitvtsi" path="res://assets/pirate/rocks-a.glb" id="80_5x0ot"]
 [ext_resource type="PackedScene" uid="uid://chxfr2yagmg24" path="res://assets/pirate/rocks-c.glb" id="81_4ia42"]
 [ext_resource type="PackedScene" uid="uid://dxkgapjtrucm5" path="res://assets/pirate/boats/ship-wreck.glb" id="82_5x0ot"]
-[ext_resource type="PackedScene" path="res://scenes/tortuga/tortuga_shaman_house.tscn" id="83_4ia42"]
+[ext_resource type="PackedScene" uid="uid://cqixno3g5svqo" path="res://scenes/tortuga/tortuga_shaman_house.tscn" id="83_4ia42"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c7jrm"]
 size = Vector3(0.2, 0.44476318, 0.2)

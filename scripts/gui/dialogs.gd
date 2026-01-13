@@ -11,21 +11,21 @@ const question_hung_connut_search_houblon = "J'ai besoin de houblon"
 
 static func default_search_forbid_fruit_option(pnj : PNJ) -> PnjDialogOption :
 	return PnjDialogOption.new(
-		func(): return pnj.tags.have(Tags.FORBID_FRUIT_SEARCH),
+		func(): return pnj.tags.have(Tags.FORBID_FRUIT_SEARCH) and not pnj.bag.contain(Bag.FruitDefendu),
 		question_search_forbid_fruit,
 		func(): pnj.gui.open_dialog(pnj.pnj_name, """Je n'en ai jamais entendu parler.""")
 	)
 
 static func default_search_forbid_fruit_montain_option(pnj : PNJ) -> PnjDialogOption : 
 	return PnjDialogOption.new(
-		func(): return pnj.tags.have(Tags.FORBID_FRUIT_SEARCH_MONTAGNE),
+		func(): return pnj.tags.have(Tags.FORBID_FRUIT_SEARCH_MONTAGNE) and not pnj.bag.contain(Bag.FruitDefendu),
 		question_search_forbid_fruit_montagn,
 		func(): pnj.gui.open_dialog(pnj.pnj_name,"""Je ne sais pas comment faire.""")
 	)
 
 static func default_search_forbid_fruit_teleport_option(pnj : PNJ) -> PnjDialogOption :
 	return PnjDialogOption.new(
-		func(): return pnj.tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT),
+		func(): return pnj.tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT) and not pnj.bag.contain(Bag.FruitDefendu),
 		question_search_forbid_fruit_teleport,
 		func(): pnj.gui.open_dialog(pnj.pnj_name, """Mais de quoi tu parles ?""")
 	)
@@ -39,14 +39,14 @@ static func default_hung_connut_search_charpentier(pnj : PNJ) -> PnjDialogOption
 
 static func default_hung_connut_search_wood(pnj : PNJ) -> PnjDialogOption :
 	return PnjDialogOption.new(
-		func (): return pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_WOOD),
+		func (): return pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_WOOD) and not pnj.bag.contain(Bag.BoisDeQualite),
 		question_hung_connut_search_wood,
 		func(): pnj.gui.open_dialog(pnj.pnj_name, _ANSWER_HUNG_CONNUT_SEARCH_WOOD)
 	)
 
 static func default_hung_connut_search_houblon(pnj : PNJ) -> PnjDialogOption :
 	return PnjDialogOption.new(
-		func (): return pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON),
+		func (): return pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON) and not pnj.bag.contain(Bag.Houblon),
 		question_hung_connut_search_houblon,
 		func(): pnj.gui.open_dialog(pnj.pnj_name, _ANSWER_HUNG_CONNUT_SEARCH_HOUBLON)
 	)

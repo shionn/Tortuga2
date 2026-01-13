@@ -4,7 +4,22 @@ var follow = false
 var walk = false
 
 func on_interact() -> void:
-	follow = !follow
+	gui.open_alert(pnj_name, "Hii")
+
+func on_item_drop(item : Item) -> void:
+	if item.name == Bag.Houblon :
+		follow = true
+		gui.open_alert(pnj_name, "Hiiiii")
+	else :
+		gui.open_alert(pnj_name, "Hii")
+		player.play_anim_no()
+
+func on_tag_change() -> void:
+	visible = tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON) or tags.have(Tags.KINDLE_RETURN_GUSTAF)
+	if (tags.have(Tags.KINDLE_RETURN_GUSTAF)):
+		follow = false
+		global_position = Vector3(32.6,1.44,-49.2)
+		rotation.y = deg_to_rad(-168)
 
 func _physics_process(_delta: float) -> void:
 	velocity.x = 0
