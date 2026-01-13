@@ -42,6 +42,7 @@ func _on_search_houblon() -> void:
 	play_anim_no()
 
 func _on_search_houblon_for_champi() -> void:
+	play_anim_yes()
 	gui.open_dialog(pnj_name, _TEXT_SEARCH_HOUBLON)
 	player.tags.add(Tags.CAN_LOOT_HOUBLON)
 	
@@ -60,7 +61,8 @@ Mais ce n'est qu'une légende n’est ce pas? Qui pourrait aller dans les monts 
 
 const _TEXT_FORBID_FRUIT = """Ho tu as réussi à obtenir le fruit défendu. La légende était donc vraie. Que vas-tu en faire ?"""
 
-const _TEXT_SEARCH_HOUBLON = """Haaaa ça change tout. J’adore les omelettes au champignon. Je te laisse prendre un peu de houblon."""
+const _TEXT_SEARCH_HOUBLON = """Haaaa ça change tout. 
+J’adore les omelettes au champignon, je ne peux pas m’en passer, c'est comme une drogue. Je te laisse prendre un peu de houblon."""
 
 const _ANSWER_HUNG_CONNUT_SEARCH_HOUBLON = """Du houblon ? C'est hors de question, ce précieux houblon est l'ingrédient indispensable dont Eve a besoin pour faire la bière. 
 

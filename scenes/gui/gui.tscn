@@ -752,10 +752,9 @@ layout_mode = 0
 offset_right = 59.0
 offset_bottom = 48.0
 tooltip_text = "Bois de qualité"
-texture_normal = ExtResource("20_5r1ih")
+texture_normal = ExtResource("21_6vqqt")
 script = ExtResource("11_s1h2m")
 description = "Bois de qualité, idéal pour des constructions solides."
-image = ExtResource("21_6vqqt")
 
 [node name="CarteHungConnut" type="TextureButton" parent="Items"]
 layout_mode = 0

@@ -22,7 +22,7 @@ func on_interact() -> void:
 		Dialogs.default_hung_connut_search_houblon(self)
 	])
 
-var quest_3_enable = false
+var quest_3_enable = true
 
 func _on_hung_connut_search_charpentier() -> void:
 	if quest_3_enable :

@@ -27,7 +27,7 @@ func on_search_montain() -> void:
 func on_item_drop(item : Item) -> void:
 	if item.name == Bag.PageHungConnutFrag1 or item.name == Bag.PageHungConnutFrag2 or item.name == Bag.PageHungConnutFrag3 :
 		if bag.contain(Bag.PageHungConnutFrag1) and bag.contain(Bag.PageHungConnutFrag2) and bag.contain(Bag.PageHungConnutFrag3) :
-			play_anim_yes()
+			play_anim_interact()
 			gui.open_dialog(pnj_name, TEXT_FRAGMENT_HUNG_COMPLET)
 			bag.unloot(Bag.PageHungConnutFrag1)
 			bag.unloot(Bag.PageHungConnutFrag2)

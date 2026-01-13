@@ -24,7 +24,7 @@ func on_item_drop(item : Item) -> void:
 			),
 			PnjDialogOption.new(
 				func(): return true, 
-				"""Omelette au champignon""",
+				"""Omelette aux champignons""",
 				_on_ask_omelette
 			)
 		])
@@ -43,4 +43,6 @@ const _SEARCH_HOUBLON =  """Ici on n’en vend que sous forme liquide.
 
 La bière rousse de eve est la meilleure, tout le monde en raffole, surtout Rurik."""
 
-const _TEXT_ON_OMELETTE = """Nino le fermier en raffole, mais actuellement on a plus de champignon."""
+const _TEXT_ON_OMELETTE = """Les omelettes aux champignons sont une de nos spécialités, malheureusement nous manquons de champignons en ce moment. 
+
+D’ailleurs Nino, le fermier, en raffole, je ne sais pas comment il va le prendre quand il l'apprendra."""

@@ -68,6 +68,11 @@ func play_anim_yes() -> void :
 	_animation.play("emote-yes")
 	_animation.queue(animation_name)
 
+func play_anim_interact() -> void :
+	_animation.play("interact-right")
+	_animation.queue(animation_name)
+
+
 func open_question(title: String, callback: Callable) -> void:
 	gui.open_question(title,callback)
 
