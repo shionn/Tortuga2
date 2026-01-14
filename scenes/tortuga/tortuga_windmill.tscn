@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://ch0ypgect218u"]
 
-[ext_resource type="Script" uid="uid://cpcrwvnwjgc5p" path="res://scripts/tortuga/tortuga_mind_wild.gd" id="1_fr4h8"]
+[ext_resource type="Script" uid="uid://cpcrwvnwjgc5p" path="res://scripts/tortuga/montagne-champi/tortuga_mind_wild.gd" id="1_fr4h8"]
 [ext_resource type="PackedScene" uid="uid://cgwwol2ja1lfe" path="res://assets/town/props/overhang.glb" id="2_6bqao"]
 [ext_resource type="PackedScene" uid="uid://bi815v5v0sl8q" path="res://assets/town/planks/planks.glb" id="2_bt1wm"]
 [ext_resource type="PackedScene" uid="uid://bv1kbqcp304cs" path="res://assets/town/fence-hedge/balcony-wall-fence-simplified.glb" id="3_ogdx2"]
