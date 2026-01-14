@@ -11,7 +11,8 @@ func on_interact() -> void:
 			func(): return tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON),
 			Dialogs.question_hung_connut_search_houblon,
 			func(): gui.open_dialog(pnj_name, _SEARCH_HOUBLON)
-		)
+		),
+		Dialogs.default_search_wind(self)
 	])
 
 func on_item_drop(item : Item) -> void:

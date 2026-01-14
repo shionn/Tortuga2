@@ -19,7 +19,8 @@ func on_interact() -> void:
 			Dialogs.question_hung_connut_search_wood,
 			func (): gui.open_dialog(pnj_name,_TEXT_SEARCH_WOOD)
 		),
-		Dialogs.default_hung_connut_search_houblon(self)
+		Dialogs.default_hung_connut_search_houblon(self),
+		Dialogs.default_search_wind(self)
 	])
 
 func on_item_drop(_item : Item) -> void:

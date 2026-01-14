@@ -21,6 +21,11 @@ func on_interact() -> void:
 			func (): return kindle.follow && global_position.distance_to(kindle.global_position) < 10,
 			"""Tiens c'est pas Kindle ?""",
 			_on_return_kindle
+		),
+		PnjDialogOption.new(
+			func(): return tags.have(Tags.SEARCH_WIND) and not tags.have(Tags.WIND_BLOWING),
+			Dialogs.question_missing_wind,
+			func(): gui.open_dialog(pnj_name, _TEXT_SEARCH_WIND)
 		)
 	])
 	
@@ -69,3 +74,9 @@ const _TEXT_RETURN_KINDLE = """Merci ! Mille merci de m’avoir rapporté mon ki
 Est-ce que je peux faire quelque chose pour toi ?"""
 
 const _TEST_SHOW_HOUBLON = """Mon Kindle adore le houblon, il suivrait n’importe qui du moment que cette personne lui en montre."""
+
+const _TEXT_SEARCH_WIND = """Du vent ? mais je n’en ai pas à vendre. J’ai cette espèce de truc ou on pompe dessus et ça souffle pour attiser le feu. 
+
+Tu vois ce dont je parle ? Tu le veux ? je te le fait 5 pièces d’or ? Mais parce que t’es sympas, 4 ! Je vois que t'hésite, aller 3 pièces d’or ! 
+
+Non ?"""

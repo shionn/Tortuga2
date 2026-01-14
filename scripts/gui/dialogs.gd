@@ -8,6 +8,7 @@ const question_search_forbid_fruit_teleport = "Je cherche un crystal de télépo
 const question_hung_connut_search_charpentier = "L'escalator au nord est détruit"
 const question_hung_connut_search_wood = "J'ai besoin de bois"
 const question_hung_connut_search_houblon = "J'ai besoin de houblon"
+const question_missing_wind = "Il n’y a plus de vent"
 
 static func default_search_forbid_fruit_option(pnj : PNJ) -> PnjDialogOption :
 	return PnjDialogOption.new(
@@ -51,6 +52,13 @@ static func default_hung_connut_search_houblon(pnj : PNJ) -> PnjDialogOption :
 		func(): pnj.gui.open_dialog(pnj.pnj_name, _ANSWER_HUNG_CONNUT_SEARCH_HOUBLON)
 	)
 
+static func default_search_wind(pnj : PNJ) -> PnjDialogOption :
+	return PnjDialogOption.new(
+		func (): return pnj.tags.have(Tags.SEARCH_WIND) and not pnj.tags.have(Tags.WIND_BLOWING),
+		question_missing_wind,
+		func(): pnj.gui.open_dialog(pnj.pnj_name, _ANWSER_NO_WIND)
+	)
+
 const _ANSWER_HUNG_CONNUT_SEARCH_WOOD = """Du bois ? Il y a des palmiers partout. 
 
 Pourquoi tu ne demandes pas à Ryland notre charpentier ?"""
@@ -58,3 +66,7 @@ Pourquoi tu ne demandes pas à Ryland notre charpentier ?"""
 const _ANSWER_HUNG_CONNUT_SEARCH_HOUBLON = """Du houblon ? Ce qu’on utilise pour faire de la bière. 
 
 C’est malin maintenant j’ai envie d’une bière, la bière rousse de Eve est la meilleure."""
+
+const _ANWSER_NO_WIND = """Oui, cela fait plusieurs jours que ça dure. 
+
+Ce n’est pas la première fois que ca arrive. Je ne sais pas comment mais le capitaine a réussi à faire revenir les vents la dernière fois que cela s'était produit."""

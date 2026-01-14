@@ -12,7 +12,8 @@ func on_interact() -> void:
 			),
 			Dialogs.default_hung_connut_search_charpentier(self),
 			Dialogs.default_hung_connut_search_wood(self),
-			Dialogs.default_hung_connut_search_houblon(self)
+			Dialogs.default_hung_connut_search_houblon(self),
+			Dialogs.default_search_wind(self)
 		])
 	else :
 		gui.open_dialog(pnj_name, _TEXT)

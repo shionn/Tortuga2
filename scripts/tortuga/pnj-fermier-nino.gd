@@ -17,7 +17,8 @@ func on_interact() -> void:
 			func(): return player.tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON),
 			Dialogs.question_hung_connut_search_houblon,
 			_on_search_houblon
-		)
+		),
+		Dialogs.default_search_wind(self)
 	])
 
 func on_item_drop(item : Item) -> void:
