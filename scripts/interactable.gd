@@ -28,7 +28,7 @@ func on_tag_change() -> void:
 
 func on_item_change() -> void:
 	pass
-
+	
 func _on_mouse_entered() -> void:
 	if bag and bag.drag != null:
 		bag.drag.on_enter(self)
@@ -41,7 +41,7 @@ func _on_mouse_exited() -> void:
 	else :
 		Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 
-func _on_input_event(_camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and Input.is_action_just_pressed("interact"): 
 		if player :
 			if player.global_position.distance_to(self.global_position) < interactable_distance :

@@ -20,6 +20,7 @@ const KNOW_FERMIER_LOVE_OMELETTE = "016"
 const CAN_LOOT_HOUBLON = "017"
 const KINDLE_RETURN_GUSTAF = "018"
 const WIND_BLOWING = "019"
+const SEARCH_WIND = "020"
 
 var tags : Array[String] = []
 
