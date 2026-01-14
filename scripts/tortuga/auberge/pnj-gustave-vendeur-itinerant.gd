@@ -62,8 +62,11 @@ const _TEXT_AFTER_KINDLE_RETURN = """Merci de m’avoir rapporté kindle.
 
 Est-ce que je peux te vendre pour t’aider ?"""
 
-const _TEXT_SEARCH_WOOD = """Et moi j’ai besoin de kindle, si tu me retrouves kindle je te donnerai le meilleurs bois possible.
-Kindle est têtu il ne te suivra que si tu as de l’avoine avec toi."""
+const _TEXT_SEARCH_WOOD = """Ah yo les amis ! Mais bien sûr que je peux vous trouver du bois! Qu’est ce que vous croyez, Gutsaf il peut tout avoir ya. Mais Gustaf demande quelque chose en échange aussi ya. 
+
+Mon poney, Kindle, ce satané buté d’animal a disparu, ya, il est surement allé gambader sur l'île pour manger de l’avoine. C’est pas bon pour lui, ça lui file des gaz et il en met partout. 
+
+J’ai pas encore réussi à le retrouver, si tu m’aides alors ça me laissera le temps de te trouver du bois et tu me rendras service ya! Alors tu acceptes ?"""
 
 const _TEXT_SEARCH_WOOD_AFTER_KINDLE = """Pour te remercier de m’avoir rapporté kindle, je veux bien te donner une montagne de bois de qualitée. 
 
