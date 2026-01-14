@@ -22,6 +22,20 @@ func on_interact() -> void:
 		Dialogs.default_hung_connut_search_houblon(self)
 	])
 
+func on_item_drop(_item : Item) -> void:
+	if _item.name == Bag.BoisDeQualite:
+		gui.open_dialog(pnj_name, _TEXT_SHOW_WOOD)
+		tags.remove(Tags.HUNG_CONNUT_SEARCH_ESCALTOR)
+		tags.remove(Tags.HUNG_CONNUT_SEARCH_CHARPENTIER)
+		tags.remove(Tags.HUNG_CONNUT_SEARCH_WOOD)
+		tags.remove(Tags.HUNG_CONNUT_SEARCH_HOUBLON)
+		tags.remove(Tags.CAN_LOOT_HOUBLON)
+		tags.add(Tags.ESCALATOR_CHAMPI_REPAIR)
+		bag.unloot(Bag.BoisDeQualite)
+	else : 
+		super.on_item_drop(_item)
+		
+
 var quest_3_enable = true
 
 func _on_hung_connut_search_charpentier() -> void:
@@ -60,3 +74,8 @@ Il faut aller chercher le bois en dehors de l’île. Ramène m’en !"""
 const _TEXT_SEARCH_WOOD = """Je t’ai dit que le bois de qualité pousse en montagne, mais l’escalator est cassé donc on ne peut pas aller chercher du bois. 
 
 Il faut aller chercher le bois en dehors de l’île. Ramène m’en et je pourrai réparer l’escalator."""
+
+const _TEXT_SHOW_WOOD = """Où as-tu trouvé ce bois ? 
+Peu importe, ce qui compte c’est qu’on ai du bois de qualité, je vais pouvoir reconstruire l’escalator. 
+
+Rejoins moi au pied de l’escalator et je commence les travaux."""

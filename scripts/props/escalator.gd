@@ -1,5 +1,7 @@
 extends AnimatableBody3D
 
+class_name Escalator
+
 const SPEED := 5
 @onready var _timer := $Timer as Timer
 

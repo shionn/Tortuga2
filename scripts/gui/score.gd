@@ -28,7 +28,7 @@ func compute() -> void :
 	#quete 3 : 
 	_item(Bag.Houblon, 1)
 	_tag(Tags.KINDLE_RETURN_GUSTAF, 2) # remplace le houblon
-	_item(Bag.BoisDeQualite, 1) # a voir si on le garde
+	_tag(Tags.ESCALATOR_CHAMPI_REPAIR, 1) # a voir si on le garde
 	
 	self.text = "Score : "+str(value)
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=104 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="PackedScene" uid="uid://gjk5y26xk1ud" path="res://assets/graveyard/gravestone/gravestone-bevel.glb" id="1_5xhig"]
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/barbe-drue/bouteille_note_lisible.gd" id="1_c7jrm"]
@@ -69,12 +69,14 @@
 [ext_resource type="PackedScene" uid="uid://5jui4ecpui4k" path="res://assets/nature/plant/mushroom/mushroom_tan.glb" id="54_y4tuj"]
 [ext_resource type="PackedScene" uid="uid://gnq1dkwtxpbj" path="res://assets/nature/path/path_stoneCircle.glb" id="57_lk3d5"]
 [ext_resource type="PackedScene" uid="uid://dp8eyw02kyq0" path="res://assets/pirate/structures/platform-simplified.glb" id="59_8hy2q"]
+[ext_resource type="Script" uid="uid://cpgprdsu2q2w8" path="res://scripts/tortuga/escalator-champi.gd" id="59_ei0yt"]
 [ext_resource type="PackedScene" uid="uid://6hh7qg45inn7" path="res://assets/pirate/structures/structure.glb" id="59_ff4fn"]
 [ext_resource type="PackedScene" uid="uid://rykj8x0qv7ey" path="res://scenes/tortuga/tortuga_mountain_bridge.tscn" id="60_ff4fn"]
 [ext_resource type="PackedScene" uid="uid://cwsymtk3gb7ai" path="res://scenes/tortuga/tortuga_base_relief.tscn" id="61_e43uk"]
 [ext_resource type="PackedScene" uid="uid://oevj3lrjcgbl" path="res://scenes/tortuga/tortuga_mountain_bridge-2.tscn" id="61_gl853"]
 [ext_resource type="PackedScene" uid="uid://cnkkpy7fmxc72" path="res://assets/graveyard/pillar-square.glb" id="63_fndt1"]
 [ext_resource type="PackedScene" uid="uid://djc74tsxiqmx1" path="res://scenes/tortuga/tortuga_mountain_bridge-3.tscn" id="64_puubj"]
+[ext_resource type="Script" uid="uid://cpcrwvnwjgc5p" path="res://scripts/tortuga/tortuga_mind_wild.gd" id="64_waae6"]
 [ext_resource type="PackedScene" uid="uid://dt7kul30n8qm5" path="res://scenes/tortuga/tortuga_mountain_bridge-4.tscn" id="65_7nohc"]
 [ext_resource type="PackedScene" uid="uid://byjj6kfw5ebe1" path="res://scenes/tortuga/tortuga_mountain_bridge-5.tscn" id="66_boury"]
 [ext_resource type="PackedScene" uid="uid://dbncpesyqlrv8" path="res://assets/castle/tree-large-simplified.glb" id="69_lk3d5"]
@@ -3896,10 +3898,12 @@ transform = Transform3D(0.8940761, 0, 0.4479152, 0, 1, 0, -0.4479152, 0, 0.89407
 [node name="Escalator" type="Node3D" parent="Montagne-Nord/MontagneChampi/Pic2"]
 transform = Transform3D(0.7385142, 0, 0.6742377, 0, 1, 0, -0.6742377, 0, 0.7385142, -5.482147, 0.70000076, -12.235008)
 visible = false
+script = ExtResource("59_ei0yt")
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="Montagne-Nord/MontagneChampi/Pic2/Escalator"]
 script = ExtResource("32_7h4df")
 end = 15.0
+enable = false
 
 [node name="Timer" type="Timer" parent="Montagne-Nord/MontagneChampi/Pic2/Escalator/AnimatableBody3D"]
 
@@ -4128,10 +4132,12 @@ transform = Transform3D(13, 0, 0, 0, 3, 0, -4.7683716e-07, 0, 10, -0.8000183, 0,
 [node name="Escalator" type="Node3D" parent="Montagne-Nord/MontagneChampi/Pic3"]
 transform = Transform3D(0.99619466, 0, 0.08715573, 0, 1, 0, -0.08715573, 0, 0.99619466, -3.3094177, 0.70000076, -6.1447906)
 visible = false
+script = ExtResource("59_ei0yt")
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="Montagne-Nord/MontagneChampi/Pic3/Escalator"]
 script = ExtResource("32_7h4df")
 end = 20.5
+enable = false
 
 [node name="Timer" type="Timer" parent="Montagne-Nord/MontagneChampi/Pic3/Escalator/AnimatableBody3D"]
 
@@ -4278,6 +4284,7 @@ transform = Transform3D(0.6210109, 0, 0.78380185, 0, 1, 0, -0.78380185, 0, 0.621
 [node name="MountainBridge" parent="Montagne-Nord/MontagneChampi/Pic4" instance=ExtResource("60_ff4fn")]
 transform = Transform3D(0.6819984, 0, -0.7313537, 0, 1, 0, 0.7313537, 0, 0.6819984, -10.586304, 3.1999989, 16.750824)
 visible = false
+script = ExtResource("59_ei0yt")
 
 [node name="Patches" type="Node3D" parent="Montagne-Nord/MontagneChampi/Pic4"]
 
@@ -4560,6 +4567,11 @@ transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, 11.2
 [node name="Pic6" type="Node3D" parent="Montagne-Nord/MontagneChampi"]
 transform = Transform3D(-0.91782403, 0, 0.39698762, 0, 1, 0, -0.39698762, 0, -0.91782403, -6.6095886, -44.73057, 22.944702)
 
+[node name="MountainBridge-2" parent="Montagne-Nord/MontagneChampi/Pic6" instance=ExtResource("61_gl853")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -23.509308, 3.8999977, 2.323822)
+visible = false
+script = ExtResource("64_waae6")
+
 [node name="Patchs" type="Node3D" parent="Montagne-Nord/MontagneChampi/Pic6"]
 
 [node name="patch-grass1" parent="Montagne-Nord/MontagneChampi/Pic6/Patchs" instance=ExtResource("3_jit35")]
@@ -4576,10 +4588,6 @@ transform = Transform3D(0.52135944, 0, 2.9543517, 0, 2.9999993, 0, -2.9543517, 0
 
 [node name="flat-grass" parent="Montagne-Nord/MontagneChampi/Pic6/Patchs" instance=ExtResource("50_e43uk")]
 transform = Transform3D(7.295472, 0, -2.8723583, 0, 2.9999998, 0, 3.282695, 0, 6.383539, 0.3168106, -1.9073486e-06, 4.0826416)
-
-[node name="MountainBridge-2" parent="Montagne-Nord/MontagneChampi/Pic6" instance=ExtResource("61_gl853")]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -23.509308, 3.8999977, 2.323822)
-visible = false
 
 [node name="Trees" type="Node3D" parent="Montagne-Nord/MontagneChampi/Pic6"]
 transform = Transform3D(0.894076, 0, -0.4479151, 0, 1, 0, 0.4479151, 0, 0.894076, 0, 0, 0)
@@ -6077,6 +6085,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 250, 0.5, -307)
 [node name="Escalator" type="Node3D" parent="Plage-N"]
 transform = Transform3D(-0.63559306, 0, 0.77202415, 0, 1, 0, -0.77202415, 0, -0.63559306, 2.072, 0.9, -0.757)
 visible = false
+script = ExtResource("59_ei0yt")
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="Plage-N/Escalator"]
 script = ExtResource("32_7h4df")
