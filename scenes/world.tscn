@@ -1,10 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://dx8mf6okqe5rg"]
+[gd_scene load_steps=15 format=3 uid="uid://dx8mf6okqe5rg"]
 
 [ext_resource type="Script" uid="uid://bla8jb6w1cmfh" path="res://scripts/world.gd" id="1_26xuy"]
 [ext_resource type="PackedScene" uid="uid://dac1cbndt3704" path="res://scenes/bateau.tscn" id="1_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://bx7xynpbusro6" path="res://scenes/player.tscn" id="4_pkg7o"]
 [ext_resource type="AudioStream" uid="uid://chpd6qmn4vyta" path="res://assets/music/pirate1uf.ogg" id="5_gbfbk"]
 [ext_resource type="PackedScene" uid="uid://byfhqtkkcefl2" path="res://scenes/tortuga/tortuga.tscn" id="5_wse8f"]
+[ext_resource type="PackedScene" uid="uid://3fy2empx3bvr" path="res://assets/pirate/boats/boat-row-small.glb" id="9_7r4gi"]
+[ext_resource type="Script" uid="uid://dpw7jmqxveucn" path="res://scripts/barque.gd" id="10_w7kh3"]
 [ext_resource type="Script" uid="uid://36k2ttv8736a" path="res://addons/vaporwavesky/vaporwave_sky_material.gd" id="27_o3ebs"]
 [ext_resource type="Shader" uid="uid://bdgkouhd5s065" path="res://addons/vaporwavesky/vaporwave.gdshader" id="28_k83mh"]
 [ext_resource type="PackedScene" uid="uid://balodqhfj5pj3" path="res://scenes/gui/gui.tscn" id="28_o3ebs"]
@@ -62,6 +64,9 @@ volumetric_fog_density = 0.0
 volumetric_fog_length = 400.0
 adjustment_enabled = true
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_w7kh3"]
+size = Vector3(1.5, 0.8, 2.4)
+
 [node name="World" type="Node3D"]
 script = ExtResource("1_26xuy")
 
@@ -91,5 +96,15 @@ parameters/looping = true
 environment = SubResource("Environment_bh8nc")
 
 [node name="Gui" parent="." instance=ExtResource("28_o3ebs")]
+
+[node name="boat-row-small2" parent="." instance=ExtResource("9_7r4gi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1, 0, 14.7)
+script = ExtResource("10_w7kh3")
+
+[node name="Area3D" type="Area3D" parent="boat-row-small2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="boat-row-small2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30000004, 0)
+shape = SubResource("BoxShape3D_w7kh3")
 
 [connection signal="ready" from="." to="." method="_on_ready"]

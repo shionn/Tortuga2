@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=35 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://scripts/gui/gui.gd" id="1_0fbet"]
 [ext_resource type="Script" uid="uid://ikfx1cjqumpb" path="res://scripts/gui/dialog.gd" id="2_bgohe"]
@@ -33,6 +33,42 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yw5qc"]
 bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
+
+[sub_resource type="Animation" id="Animation_xyc4b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6vqqt"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v3xc1"]
+_data = {
+&"RESET": SubResource("Animation_xyc4b"),
+&"fade_in": SubResource("Animation_6vqqt")
+}
 
 [node name="Gui" type="Control"]
 layout_mode = 3
@@ -892,6 +928,22 @@ texture_normal = ExtResource("12_22my7")
 script = ExtResource("11_s1h2m")
 description = "C'est le trésor de Barbe Drue. 
 Mais la taxe sur les gains affairant à la piraterie est passée par la. "
+
+[node name="Transition" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Transition"]
+libraries = {
+&"": SubResource("AnimationLibrary_v3xc1")
+}
 
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton1" to="Dialog" method="_on_option_button_1_pressed"]
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton2" to="Dialog" method="_on_option_button_2_pressed"]

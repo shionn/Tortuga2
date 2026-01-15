@@ -36,3 +36,5 @@ Il doit bien y avoir une érudite au village pour te le traduire."""
 const TEXT_FRAGMENT_HUNG_CONNUT = """Ca ressemble à une carte mais c’est incomplet. 
 
 Zakari le cartographe devrait pouvoir t’aider."""
+
+#const TEXT_

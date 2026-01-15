@@ -78,8 +78,6 @@ Est-ce que je peux faire quelque chose pour toi ?"""
 
 const _TEST_SHOW_HOUBLON = """Mon Kindle adore le houblon, il suivrait n’importe qui du moment que cette personne lui en montre."""
 
-const _TEXT_SEARCH_WIND = """Du vent ? mais je n’en ai pas à vendre. J’ai cette espèce de truc ou on pompe dessus et ça souffle pour attiser le feu. 
+const _TEXT_SEARCH_WIND = """Du vent ? Mais y a plus de vent, tu vois bien! Moi j’ai qu’un talisman qui fait pfffff quand j'éternue mais ça fait pas assez de vent ya. 
 
-Tu vois ce dont je parle ? Tu le veux ? je te le fait 5 pièces d’or ? Mais parce que t’es sympas, 4 ! Je vois que t'hésite, aller 3 pièces d’or ! 
-
-Non ?"""
+Sinon j’ai un soufflet, pas celui que tu manges, il est à la banane suila, celui avec lequel tu pompes pour avoir de l’air ya.Tu vois ceque c’est? Tiens regarde pfff pfff, ça marche tu peux même souffler sur les braises avec! J’te le fait 5 pièces d’or ? Mais parce que t’as retrouvé Kindle, Allez comme t'hésite, 3 pièces d’or mais j’peux pas descendre plus bas sinon j’ai mal au dos hahahahahahaha ! J’rigole bien sûr mais 3 Pièces  d’or c’est un bon prix! Il dit quoi? Il prend ?"""
