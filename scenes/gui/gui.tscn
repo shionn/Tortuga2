@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=37 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://scripts/gui/gui.gd" id="1_0fbet"]
 [ext_resource type="Script" uid="uid://ikfx1cjqumpb" path="res://scripts/gui/dialog.gd" id="2_bgohe"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://bs0icmlv8xa0a" path="res://assets/gui/fruit-icons-redo/watermelon-h-48.png" id="22_rex2l"]
 [ext_resource type="Texture2D" uid="uid://jl461oxmkpxk" path="res://assets/gui/fanatisy-magic-set/potion-2-48.png" id="23_e5h10"]
 [ext_resource type="Texture2D" uid="uid://dps01w2kfg2xr" path="res://assets/gui/houblon.png" id="25_74x0q"]
+[ext_resource type="Script" uid="uid://ctarrtmkkg1ji" path="res://scripts/gui/transition.gd" id="31_xyc4b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yw5qc"]
 bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
@@ -64,10 +65,26 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_v3xc1"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_v3xc1"]
 _data = {
 &"RESET": SubResource("Animation_xyc4b"),
-&"fade_in": SubResource("Animation_6vqqt")
+&"fade_in": SubResource("Animation_6vqqt"),
+&"fade_out": SubResource("Animation_v3xc1")
 }
 
 [node name="Gui" type="Control"]
@@ -939,6 +956,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+script = ExtResource("31_xyc4b")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Transition"]
 libraries = {
@@ -960,3 +978,4 @@ libraries = {
 [connection signal="pressed" from="Bag/Panel/MarginContainer/VBoxContainer/CloseButton" to="Bag" method="_on_close_button_pressed"]
 [connection signal="pressed" from="Help/Panel/MarginContainer/VBoxContainer/Button" to="Help" method="_on_help_button_pressed"]
 [connection signal="pressed" from="Acceuil/Panel/MarginContainer/VBoxContainer/Button" to="Acceuil" method="_on_button_pressed"]
+[connection signal="animation_finished" from="Transition/AnimationPlayer" to="Transition" method="_on_animation_finished"]

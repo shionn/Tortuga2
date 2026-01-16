@@ -98,7 +98,7 @@ environment = SubResource("Environment_bh8nc")
 [node name="Gui" parent="." instance=ExtResource("28_o3ebs")]
 
 [node name="boat-row-small2" parent="." instance=ExtResource("9_7r4gi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1, 0, 14.7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2, 0, 14.7)
 script = ExtResource("10_w7kh3")
 
 [node name="Area3D" type="Area3D" parent="boat-row-small2"]

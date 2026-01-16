@@ -26,6 +26,8 @@ class_name Gui
 @onready var _player_camera := $"../Player/CameraPivot" as Node3D
 @onready var _compass_arrow := $Compass/Arrow as TextureRect
 
+@onready var _transition := $Transition
+
 var _callback : Callable
 var _callback_no : Callable
 var _callback_yes : Callable
@@ -65,6 +67,9 @@ func open_yes_no_question(title: String, question: String, on_no: Callable, on_y
 	_callback_no = on_no
 	_callback_yes = on_yes
 	_input_yn.show()
+
+func doTransition(onMiddle : Callable) -> void:
+	_transition.doIt(onMiddle)
 
 func _ready() -> void:
 	$Acceuil.show()
