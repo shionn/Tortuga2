@@ -13,11 +13,17 @@ func on_interact() -> void:
 
 func on_item_drop(item : Item) -> void:
 	if not return_crystal.is_empty() && item.name == return_crystal :
-		_audio.play()
-		player.teleport(Vector3(75.0,3.0,-185.0), deg_to_rad(1.0))
+		gui.doTransition(_teleport_to_tortuga)
 	elif item.name == Bag.CrystalTeleportationOasis : 
-		_audio.play()
-		player.teleport(Vector3(172.0,105.0,-253.0), deg_to_rad(-133.0))
-		tags.remove(Tags.FORBID_FRUIT_SEARCH_MONTAGNE)
+		gui.doTransition(_teleport_to_oasis)
 	else :
 		super.on_item_drop(item)
+
+func _teleport_to_tortuga() -> void: 
+	_audio.play()
+	player.teleport(Vector3(75.0,3.0,-185.0), deg_to_rad(1.0))
+
+func _teleport_to_oasis() -> void: 
+	_audio.play()
+	player.teleport(Vector3(172.0,105.0,-253.0), deg_to_rad(-133.0))
+	tags.remove(Tags.FORBID_FRUIT_SEARCH_MONTAGNE)

@@ -19,7 +19,7 @@ func on_item_drop(item : Item) -> void:
 	if item.isGold() :
 		gui.open_dialog(pnj_name, """Qu’est ce que je vous sers ? """).with_options([
 			PnjDialogOption.new(
-				func(): return true, 
+				func(): return not bag.contain(Bag.BiereRousseDeEve), 
 				"""Bière rousse de Eve""",
 				func(): bag.loot(Bag.BiereRousseDeEve)
 			),

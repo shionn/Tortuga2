@@ -1,7 +1,9 @@
-[gd_scene load_steps=35 format=3 uid="uid://bun08nin6q33j"]
+[gd_scene load_steps=37 format=3 uid="uid://bun08nin6q33j"]
 
 [ext_resource type="PackedScene" uid="uid://dsqb6308w0ec1" path="res://assets/town/road/road.glb" id="1_55bef"]
 [ext_resource type="PackedScene" uid="uid://ctoomevb22cit" path="res://scenes/props/sign.tscn" id="1_h8d57"]
+[ext_resource type="PackedScene" uid="uid://b5xtrnp1f2eg7" path="res://assets/pirate/props/bottle.glb" id="1_odlxa"]
+[ext_resource type="Script" uid="uid://tx4xje4jv82o" path="res://scripts/tortuga/manoir/flasque-du-capitaine.gd" id="2_2p05u"]
 [ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="2_3oy5l"]
 [ext_resource type="PackedScene" uid="uid://snopmjtfskcu" path="res://assets/town/walls/wall-doorway-round.glb" id="2_e4gn3"]
 [ext_resource type="PackedScene" uid="uid://bn2k1c6mt0j5l" path="res://assets/town/walls/wall-window-shutters.glb" id="3_a1a07"]
@@ -31,13 +33,25 @@
 [ext_resource type="PackedScene" uid="uid://bvssfm8gng07x" path="res://assets/town/chimney-top.glb" id="21_ujpvh"]
 [ext_resource type="PackedScene" uid="uid://bkylul71s3oe7" path="res://assets/town/props/stall-bench.glb" id="22_jtkrg"]
 [ext_resource type="Script" uid="uid://f07fb775kj21" path="res://scripts/tortuga/manoir/pnj-manoir-majordhomme.gd" id="22_x1bvn"]
-[ext_resource type="PackedScene" uid="uid://d0g1hgqjf8714" path="res://assets/graveyard/candle.glb" id="27_5mpnp"]
 [ext_resource type="PackedScene" uid="uid://bcgxjpoukucvk" path="res://assets/graveyard/candle-multiple.glb" id="28_3oy5l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2p05u"]
+size = Vector3(0.4, 0.90000004, 0.4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kd4xx"]
 size = Vector3(1.4150696, 0.13238525, 1)
 
 [node name="TortugaManoir" type="Node3D"]
+
+[node name="FlasqueDuCapitaine" parent="." instance=ExtResource("1_odlxa")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -1.9922959, 2.376142, -1.4115613)
+script = ExtResource("2_2p05u")
+
+[node name="Area3D" type="Area3D" parent="FlasqueDuCapitaine"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FlasqueDuCapitaine/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7683716e-07, 0.4499998, 0)
+shape = SubResource("BoxShape3D_2p05u")
 
 [node name="Sign" parent="." instance=ExtResource("1_h8d57")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 3.3)
@@ -249,9 +263,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 2, -1)
 
 [node name="candle-multiple2" parent="stair" instance=ExtResource("28_3oy5l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8000001, 2.3711119, -0.66223073)
-
-[node name="candle2" parent="stair" instance=ExtResource("27_5mpnp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 2.3000002, -1.4)
 
 [node name="roof" type="Node3D" parent="."]
 

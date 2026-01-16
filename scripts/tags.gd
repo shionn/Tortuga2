@@ -20,7 +20,10 @@ const KNOW_FERMIER_LOVE_OMELETTE = "016"
 const CAN_LOOT_HOUBLON = "017"
 const KINDLE_RETURN_GUSTAF = "018"
 const WIND_BLOWING = "019"
-const SEARCH_WIND = "020"
+const SEARCH_WIND = "020" # a vider 
+const SEARCH_BARQUE = "021" # a vider
+const SEARCH_PASS = "022" # a vider
+const SEARCH_CAPTAIN_BOTTLE = "023" # a vider
 
 var tags : Array[String] = []
 

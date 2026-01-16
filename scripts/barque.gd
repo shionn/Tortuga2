@@ -3,17 +3,20 @@ extends Interactable
 var pos = _TORTUGA
 
 func on_interact() -> void:
-	gui.open_dialog("Voyager","""Aller ou ?""").with_options([
-		PnjDialogOption.new(
-			func() : return pos != _TORTUGA,
-			"""Retourner sur tortuga""",
-			func() : gui.doTransition(_goTortuga)
-		), PnjDialogOption.new(
-			func() : return pos != _SHAMAN_ISLAND ,
-			"""Sur l'île de la shaman""",
-			func() : gui.doTransition(_goShamanIsland)
-		),
-	])
+	if bag.contain(Bag.PasseBarqueTanpon) :
+		gui.open_dialog("Voyager","""Aller ou ?""").with_options([
+			PnjDialogOption.new(
+				func() : return pos != _TORTUGA,
+				"""Retourner sur tortuga""",
+				func() : gui.doTransition(_goTortuga)
+			), PnjDialogOption.new(
+				func() : return pos != _SHAMAN_ISLAND ,
+				"""Sur l'île de la shaman""",
+				func() : gui.doTransition(_goShamanIsland)
+			),
+		])
+	else :
+		gui.open_alert("Voyager", """Sans une autorisation de la capitainerie je ne pourrai pas quitter le port.""")
 
 func _goTortuga() -> void :
 	player.teleport(Vector3(-7.2,1,12.6), deg_to_rad(0))

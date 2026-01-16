@@ -5,7 +5,18 @@ func _ready() -> void:
 	_animation.play("sit")
 
 func on_interact() -> void:
-	gui.open_dialog(pnj_name,TEXT_INTRO)
+	gui.open_dialog(pnj_name,TEXT_INTRO).with_options([
+		PnjDialogOption.new(
+			func (): return tags.have(Tags.SEARCH_WIND) and not tags.have(Tags.WIND_BLOWING),
+			Dialogs.question_missing_wind,
+			_on_search_win
+		), 
+		PnjDialogOption.new(
+			func (): return tags.have(Tags.SEARCH_PASS) and not bag.contain(Bag.PasseBarque) and not bag.contain(Bag.PasseBarqueTanpon),
+			"""J’ai besoin d’un pass""",
+			_on_search_pass
+		)
+	])
 	$Laugh.play()
 
 func on_item_drop(item : Item) -> void:
@@ -15,9 +26,25 @@ func on_item_drop(item : Item) -> void:
 		gui.open_dialog(pnj_name,TEXT_PARCHEMIN_BARBE_DRUE)
 	elif item.name == Bag.PageHungConnutFrag1 or item.name == Bag.PageHungConnutFrag2 or item.name == Bag.PageHungConnutFrag3 :
 		gui.open_dialog(pnj_name, TEXT_FRAGMENT_HUNG_CONNUT)
+	elif item.name == Bag.BouteilleCapitain:
+		gui.open_dialog(pnj_name, TEXT_ON_BOTTLE)
+		bag.unloot(Bag.BouteilleCapitain)
+		bag.loot(Bag.PasseBarque)
+		tags.remove(Tags.SEARCH_CAPTAIN_BOTTLE)
+		tags.remove(Tags.SEARCH_PASS)
 	else :
 		super.on_item_drop(item)
 
+func _on_search_win() -> void :
+	if not bag.contain(Bag.PasseBarque) and not bag.contain(Bag.PasseBarqueTanpon) :
+		tags.add(Tags.SEARCH_BARQUE)
+	gui.open_dialog(pnj_name, TEXT_WIND_MISSING)
+
+func _on_search_pass() -> void:
+	gui.open_dialog(pnj_name, TEXT_SEARCH_PASS)
+	tags.add(Tags.SEARCH_CAPTAIN_BOTTLE)
+
+	
 
 const TEXT_INTRO = """Salut. Tortuga est méconnaissable ce matin. 
 
@@ -37,4 +64,20 @@ const TEXT_FRAGMENT_HUNG_CONNUT = """Ca ressemble à une carte mais c’est inco
 
 Zakari le cartographe devrait pouvoir t’aider."""
 
-#const TEXT_
+const TEXT_WIND_MISSING = """Le vent ? Pourquoi du vent ? Après il va faire froid et j’aime bien quand il fait chaud moi. Mais si vous y tenez juste une petite brise pas plus. Enfin, à peine plus pour votre machin là mais moi je ne peux rien faire.
+
+Je ne suis pas Chamane pardi. Par contre la Chamane Sexy, Elle, elle peut vous aider !
+
+Oui je sais où elle est, évidemment, Ahhh, Je la connais bien... Euh ne me demandez pas pourquoi ! Elle vit recluse dans une petite cabane au milieu de la petite île au Sud-Est de Tortuga. Mais vous allez devoir y aller en bateau."""
+
+const TEXT_SEARCH_PASS = """Hein ? Quoi ? Je ne dormais pas je méditais, c’est important de méditer ! Vous voulez quoi déjà ? Une barque ? Un pass ? 
+
+Ah mais oui il va vous falloir un pass sinon Rurik ne vous laissera jamais monter à bord ! J’avais oublié, oui j’en ai un, euh où est il ? 
+
+Bon hum, je l’ai encore égaré, la dernière fois que je l’ai vu il était dans ma poche. Et ma poche était sur moi. Et j’étais ici... Ici, ah j’ai perdu ma flasque de Whisky. 
+
+Par le Kraken, je commence à me dessécher ! Allez houste je dois chercher ma flasque sans elle je sais plus où j'en suis et j’ai soif ! Allez houste et ne revenez pas sans ma flasque !"""
+
+const TEXT_ON_BOTTLE = """Ici ? Ah mais oui la voilà! ma flasque enfin retrouvée ! Bon vous avez de la chance en fouillant dans mes frasques j’ai retrouvé le Pass ! Mais pour qu’il soit valide, faut le faire tamponner par Rurik. 
+
+Voilà allez houste, j’ai besoin de repos… eeuuuuh non de calme je veux dire, de calme pour réfléchir voilà !"""

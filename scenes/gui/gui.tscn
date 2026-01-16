@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=38 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://scripts/gui/gui.gd" id="1_0fbet"]
 [ext_resource type="Script" uid="uid://ikfx1cjqumpb" path="res://scripts/gui/dialog.gd" id="2_bgohe"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://2me8kuwdoy2b" path="res://assets/gui/resources-pack-1/Wood-h-48.png" id="21_6vqqt"]
 [ext_resource type="Texture2D" uid="uid://ch3n2nqahibv4" path="res://assets/gui/resources-pack-1/Page-h-48.png" id="21_ewk5h"]
 [ext_resource type="Texture2D" uid="uid://cygakm7juveua" path="res://assets/gui/resources-pack-1/Crystal-h-48.png" id="21_looj0"]
+[ext_resource type="Texture2D" uid="uid://c38f028grcwxa" path="res://assets/gui/fanatisy-magic-set/potion-1-48.png" id="21_v3xc1"]
 [ext_resource type="Texture2D" uid="uid://bs0icmlv8xa0a" path="res://assets/gui/fruit-icons-redo/watermelon-h-48.png" id="22_rex2l"]
 [ext_resource type="Texture2D" uid="uid://jl461oxmkpxk" path="res://assets/gui/fanatisy-magic-set/potion-2-48.png" id="23_e5h10"]
 [ext_resource type="Texture2D" uid="uid://dps01w2kfg2xr" path="res://assets/gui/houblon.png" id="25_74x0q"]
@@ -800,6 +801,15 @@ texture_normal = ExtResource("20_5r1ih")
 script = ExtResource("11_s1h2m")
 description = "C'est une bière rousse de eve. La meilleure qui soit. "
 
+[node name="BouteilleCapitain" type="TextureButton" parent="Items"]
+layout_mode = 0
+offset_right = 59.0
+offset_bottom = 48.0
+tooltip_text = "Bouteille de whisky"
+texture_normal = ExtResource("21_v3xc1")
+script = ExtResource("11_s1h2m")
+description = "C'est la bouteille de whisky du capitaine."
+
 [node name="BoisDeQualite" type="TextureButton" parent="Items"]
 layout_mode = 0
 offset_right = 59.0
@@ -917,6 +927,25 @@ Mais pour le trouver et t’en emparer,
 Tu devras m’épater,
 Et sur l'Île, au Sud Est de la Baie de la Tortue,
 Sur la plage les pages ont été perdues."
+
+[node name="PasseBarque" type="TextureButton" parent="Items"]
+layout_mode = 0
+offset_right = 58.0
+offset_bottom = 48.0
+tooltip_text = "Passe à Barque"
+texture_normal = ExtResource("21_ewk5h")
+script = ExtResource("11_s1h2m")
+description = "C'est un pass pour utiliser une barque. 
+Mais il manque le tampon de Rurik"
+
+[node name="PasseBarqueTanpon" type="TextureButton" parent="Items"]
+layout_mode = 0
+offset_right = 58.0
+offset_bottom = 48.0
+tooltip_text = "Pass à Barque"
+texture_normal = ExtResource("21_ewk5h")
+script = ExtResource("11_s1h2m")
+description = "C'est un pass valide pour utiliser une barque. "
 
 [node name="PotionDegrisement" type="TextureButton" parent="Items"]
 layout_mode = 0
