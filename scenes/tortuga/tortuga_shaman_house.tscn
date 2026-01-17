@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bucvch03dkebd"]
+[gd_scene load_steps=22 format=3 uid="uid://bucvch03dkebd"]
 
 [ext_resource type="PackedScene" uid="uid://bohgyv4ijnvfm" path="res://assets/town/walls/wall-wood-doorway-square.glb" id="1_m25qr"]
 [ext_resource type="PackedScene" uid="uid://crg8korvqui82" path="res://assets/town/stairs/stairs-wide-wood.glb" id="1_mc8li"]
@@ -11,8 +11,14 @@
 [ext_resource type="PackedScene" uid="uid://cgwwol2ja1lfe" path="res://assets/town/props/overhang.glb" id="4_hh7em"]
 [ext_resource type="PackedScene" uid="uid://dx4s7axo4o001" path="res://assets/town/props/stall.glb" id="5_7nicn"]
 [ext_resource type="PackedScene" uid="uid://ckl0cxjsbj1sn" path="res://assets/town/roof/roof-corner-round.glb" id="6_2eujg"]
+[ext_resource type="PackedScene" uid="uid://dhs7effoi2e31" path="res://assets/low-poly-rpg-item-2/dagger.glb" id="7_38ndb"]
 [ext_resource type="PackedScene" uid="uid://dj2jytbjf6lck" path="res://assets/town/roof/roof.glb" id="7_oofwr"]
 [ext_resource type="PackedScene" uid="uid://d3k6pjo57mt0k" path="res://assets/town/roof/roof-point.glb" id="8_hh7em"]
+[ext_resource type="PackedScene" uid="uid://b022gg8vm5kl5" path="res://assets/food-kit/bottle-oil.glb" id="15_7eygj"]
+[ext_resource type="ArrayMesh" uid="uid://dsddkb0r8erch" path="res://assets/props/skull/skull_monster.obj" id="15_sc7cw"]
+[ext_resource type="PackedScene" uid="uid://84tw8rny2cjc" path="res://assets/food-kit/coconut-half.glb" id="16_sc7cw"]
+[ext_resource type="PackedScene" uid="uid://chtcitcx6elqn" path="res://assets/food-kit/cooking-spoon.glb" id="17_ihacf"]
+[ext_resource type="PackedScene" uid="uid://deboxf6kag0sg" path="res://assets/food-kit/corn.glb" id="18_amt0w"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mc8li"]
 size = Vector3(2, 1, 3)
@@ -39,9 +45,12 @@ transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, -1
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.8, -0.6, -3.2999997)
 
 [node name="stall2" parent="." instance=ExtResource("5_7nicn")]
-transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, -0.5, 1, -3.3)
+transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, -0.5, 0.9, -3.3)
 
 [node name="Walls" type="Node3D" parent="."]
+
+[node name="dagger" parent="Walls" instance=ExtResource("7_38ndb")]
+transform = Transform3D(0.51961523, 0, -0.29999998, 0, 0.5999999, 0, 0.29999998, 0, 0.51961523, -1.6951987, 1.9, -0.97393084)
 
 [node name="wall-wood-doorway-square2" parent="Walls" instance=ExtResource("1_m25qr")]
 transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 0, 0.9, -1.5)
@@ -140,3 +149,23 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.099999964, 4.2, -3.2999997)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Roof"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -3)
+
+[node name="SkullMonster" type="MeshInstance3D" parent="Roof"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 5.9604645e-08, 4.3, -2)
+mesh = ExtResource("15_sc7cw")
+skeleton = NodePath("../../Walls/wall-wood-doorway-square2")
+
+[node name="bottle-oil2" parent="." instance=ExtResource("15_7eygj")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.8, 1.4, -5.5)
+
+[node name="bottle-oil3" parent="." instance=ExtResource("15_7eygj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3, 1.4, -2.5)
+
+[node name="coconut-half2" parent="." instance=ExtResource("16_sc7cw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.740992, 1.25, -3.1841626)
+
+[node name="cooking-spoon2" parent="coconut-half2" instance=ExtResource("17_ihacf")]
+transform = Transform3D(-0.2598076, 0.14999999, -2.27131e-08, 0.14999999, 0.2598076, 1.3113415e-08, 2.622683e-08, 0, -0.29999998, -0.049472272, 0.100000024, 0)
+
+[node name="corn2" parent="." instance=ExtResource("18_amt0w")]
+transform = Transform3D(0.90630776, -0.42261827, 0, 0.42261827, 0.90630776, 0, 0, 0, 1, -2.5, 1.4, -2.6999998)

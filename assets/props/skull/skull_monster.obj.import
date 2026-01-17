@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dsddkb0r8erch"
+path="res://.godot/imported/skull_monster.obj-9b5aa40b67cdb5e4505380db52deefed.mesh"
+
+[deps]
+
+files=["res://.godot/imported/skull_monster.obj-9b5aa40b67cdb5e4505380db52deefed.mesh"]
+
+source_file="res://assets/props/skull/skull_monster.obj"
+dest_files=["res://.godot/imported/skull_monster.obj-9b5aa40b67cdb5e4505380db52deefed.mesh", "res://.godot/imported/skull_monster.obj-9b5aa40b67cdb5e4505380db52deefed.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

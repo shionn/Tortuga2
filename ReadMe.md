@@ -32,6 +32,7 @@
 - https://opengameart.org/content/sign-plate-1
 - https://opengameart.org/content/spyglass
 - https://sketchfab.com/3d-models/birds-nest-from-poly-by-google-a04a9be3fe7841448bc6ea7a8b742a47
+- https://opengameart.org/content/skull-1
 
 ### potentiel
 
