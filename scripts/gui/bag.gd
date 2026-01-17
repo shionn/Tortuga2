@@ -8,6 +8,7 @@ const CarteHungConnut = "CarteHungConnut"
 const CrystalTeleportationOasis = "CrystalTeleportationOasis"
 const FruitDefendu = "FruitDefendu"
 const Houblon = "Houblon"
+const ListInvocationVent = "ListInvocationVent"
 const Melon = "Melon"
 const PageHungConnutFrag1 = "PageHungConnutFrag1"
 const PageHungConnutFrag2 = "PageHungConnutFrag2"
@@ -41,8 +42,7 @@ func loot(item_name : String) -> void :
 		_gui.append_to_console("Vous obtenez <"+item.tooltip_text+">")
 		on_item_change.emit()
 	else :
-		print("loot error")
-		print(item_name)
+		print("loot error " + item_name)
 
 func unloot(item_name : String) -> void :
 	var item = _grid.get_node(item_name)

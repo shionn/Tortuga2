@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bucvch03dkebd"]
+[gd_scene load_steps=16 format=3 uid="uid://bucvch03dkebd"]
 
 [ext_resource type="PackedScene" uid="uid://bohgyv4ijnvfm" path="res://assets/town/walls/wall-wood-doorway-square.glb" id="1_m25qr"]
 [ext_resource type="PackedScene" uid="uid://crg8korvqui82" path="res://assets/town/stairs/stairs-wide-wood.glb" id="1_mc8li"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://b64713gko8rd8" path="res://assets/town/walls/wall-wood-corner-edge.glb" id="2_vnl2v"]
 [ext_resource type="PackedScene" uid="uid://86dcdsinmla4" path="res://assets/town/walls/wall-wood-window-round.glb" id="3_8qlg5"]
 [ext_resource type="PackedScene" uid="uid://cuwkv5gqn18pj" path="res://assets/character/base/character-female-a-2.glb" id="3_hh7em"]
+[ext_resource type="PackedScene" uid="uid://cgwwol2ja1lfe" path="res://assets/town/props/overhang.glb" id="4_hh7em"]
+[ext_resource type="PackedScene" uid="uid://dx4s7axo4o001" path="res://assets/town/props/stall.glb" id="5_7nicn"]
 [ext_resource type="PackedScene" uid="uid://ckl0cxjsbj1sn" path="res://assets/town/roof/roof-corner-round.glb" id="6_2eujg"]
 [ext_resource type="PackedScene" uid="uid://dj2jytbjf6lck" path="res://assets/town/roof/roof.glb" id="7_oofwr"]
 [ext_resource type="PackedScene" uid="uid://d3k6pjo57mt0k" path="res://assets/town/roof/roof-point.glb" id="8_hh7em"]
@@ -26,6 +28,18 @@ script = ExtResource("2_8qlg5")
 model = ExtResource("3_hh7em")
 pnj_name = "Grabouilla"
 pnj_role = "Chaman Sexy"
+
+[node name="overhang2" parent="." instance=ExtResource("4_hh7em")]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 0, -0.6, -5.1)
+
+[node name="overhang4" parent="." instance=ExtResource("4_hh7em")]
+transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, -1.8, -0.6, -3.3)
+
+[node name="overhang3" parent="." instance=ExtResource("4_hh7em")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.8, -0.6, -3.2999997)
+
+[node name="stall2" parent="." instance=ExtResource("5_7nicn")]
+transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, -0.5, 1, -3.3)
 
 [node name="Walls" type="Node3D" parent="."]
 

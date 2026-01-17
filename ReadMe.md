@@ -33,10 +33,6 @@
 - https://opengameart.org/content/spyglass
 - https://sketchfab.com/3d-models/birds-nest-from-poly-by-google-a04a9be3fe7841448bc6ea7a8b742a47
 
-### A faire 
-
-- https://www.kenney.nl/assets/food-kit pour redecorer l'auberge
-
 ### potentiel
 
 - https://opengameart.org/content/broken-stone-slab ?

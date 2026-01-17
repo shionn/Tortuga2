@@ -28,9 +28,7 @@ radius = 0.2667705
 [node name="oasis-arbre-defendu" type="Node3D"]
 
 [node name="nest" parent="." instance=ExtResource("1_c2oem")]
-process_mode = 4
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -19, 1.5, -4)
-visible = false
 script = ExtResource("2_fm2hx")
 interactable_distance = 5.0
 
@@ -41,7 +39,6 @@ transform = Transform3D(0.57357645, 0, 0.81915206, 0, 1, 0, -0.81915206, 0, 0.57
 shape = SubResource("BoxShape3D_c2oem")
 
 [node name="nest-without-feather" parent="." instance=ExtResource("3_23qa5")]
-process_mode = 4
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -19, 1.5, -4)
 visible = false
 
