@@ -16,6 +16,7 @@ const ParcheminBarbeDrue = "ParcheminBarbeDrue"
 const ParcheminBarbeDrueDecoder = "ParcheminBarbeDrueDecoder"
 const PasseBarque = "PasseBarque"
 const PasseBarqueTanpon = "PasseBarqueTanpon"
+const Plume = "Plume"
 const PotionDegrisement = "PotionDegrisement"
 const TresorBarbeDrue = "TresorBarbeDrue"
 const TresorBarbeDrueNet = "TresorBarbeDrueNet"
@@ -39,7 +40,6 @@ func loot(item_name : String) -> void :
 		_grid.add_child(item)
 		_gui.append_to_console("Vous obtenez <"+item.tooltip_text+">")
 		on_item_change.emit()
-		#_score.compute()
 	else :
 		print("loot error")
 		print(item_name)
@@ -51,7 +51,6 @@ func unloot(item_name : String) -> void :
 		item.global_position = Vector2(-100,-100)
 		_items.add_child(item)
 		on_item_change.emit()
-#		_score.compute()
 
 func contain(item_name : String) -> bool:
 	return _grid.get_node(item_name) != null
@@ -71,6 +70,7 @@ func save_game() -> void :
 
 func load_game() -> void : 
 	if FileAccess.file_exists("user://bag.save") :
+		for item in _grid.get_children() : unloot(item.name)
 		var file = FileAccess.open("user://bag.save", FileAccess.READ)
 		for item_name in JSON.parse_string(file.get_line()) :
 			var item = _items.get_node(item_name)

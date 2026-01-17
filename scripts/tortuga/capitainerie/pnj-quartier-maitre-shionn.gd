@@ -47,8 +47,8 @@ const _TEXT_SHOW_PASS = """Moui, c’est bien t’as un pass.
 
 Quoi tu voudrais que je le tamponne ? 
 
-Touss touss j’ai soif oh qu'est ce que j’ai soif. """
+[Touss touss] J’ai soif, oh qu'est ce que j’ai soif, si j’avais eu une bonne bière rousse!."""
 
 const _TEXT_BEER_AND_PASS = """Merci, ça va mieux. 
 
-Au fait, je t’ai tamponné ton pass, tu peux utiliser la barque. """
+Au fait, je t’ai tamponné ton pass, tu peux utiliser la barque."""

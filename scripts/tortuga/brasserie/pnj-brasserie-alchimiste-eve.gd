@@ -77,4 +77,4 @@ Je viens juste de le finir, c'est un code très ancien."""
 
 const _SEARCH_HOUBLON = """Ben c’est drôle ça. Si tu veux ma bière rousse y en a à l'auberge contre quelque pièces il t’en vendrons. 
 
-C’est grâce au houblon de Nino que je peux faire une si bonne bière."""
+C’est grâce au houblon de Nino que je peux faire une si bonne bière. """
