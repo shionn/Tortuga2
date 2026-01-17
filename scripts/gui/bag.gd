@@ -21,6 +21,7 @@ const Plume = "Plume"
 const PotionDegrisement = "PotionDegrisement"
 const TresorBarbeDrue = "TresorBarbeDrue"
 const TresorBarbeDrueNet = "TresorBarbeDrueNet"
+const SelDeMontagne = "SelDeMontagne"
 
 @onready var _grid = $Panel/MarginContainer/VBoxContainer/GridContainer as GridContainer
 @onready var _items = $"../Items" as Control

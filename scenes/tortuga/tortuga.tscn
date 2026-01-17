@@ -1,4 +1,4 @@
-[gd_scene load_steps=106 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=109 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="PackedScene" uid="uid://gjk5y26xk1ud" path="res://assets/graveyard/gravestone/gravestone-bevel.glb" id="1_5xhig"]
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/barbe-drue/bouteille_note_lisible.gd" id="1_c7jrm"]
@@ -80,8 +80,10 @@
 [ext_resource type="PackedScene" uid="uid://dt7kul30n8qm5" path="res://scenes/tortuga/tortuga_mountain_bridge-4.tscn" id="65_7nohc"]
 [ext_resource type="PackedScene" uid="uid://byjj6kfw5ebe1" path="res://scenes/tortuga/tortuga_mountain_bridge-5.tscn" id="66_boury"]
 [ext_resource type="PackedScene" uid="uid://dbncpesyqlrv8" path="res://assets/castle/tree-large-simplified.glb" id="69_lk3d5"]
+[ext_resource type="PackedScene" uid="uid://ccus06wiowf5l" path="res://assets/nature/stone/stone_largeA.glb" id="70_5xe8w"]
 [ext_resource type="Script" uid="uid://bb5eawq7jr0a7" path="res://scripts/tortuga/montagne-champi/pnj-charpentier-ryland.gd" id="70_mgx4c"]
 [ext_resource type="PackedScene" uid="uid://b2qtcc1xvlpgx" path="res://assets/character/base/character-male-e.glb" id="71_5xe8w"]
+[ext_resource type="Script" uid="uid://0e55yd0bunhc" path="res://scripts/tortuga/mountain-salt.gd" id="71_nt70y"]
 [ext_resource type="Script" uid="uid://bcbqah35ja3ow" path="res://scripts/tortuga/pnj-kindle.gd" id="72_ei0yt"]
 [ext_resource type="PackedScene" uid="uid://hjvlc1djuf55" path="res://assets/farm-animals-quaternius/Horse.glb" id="73_ei0yt"]
 [ext_resource type="PackedScene" uid="uid://dbglnuyw67vwg" path="res://assets/character/base/character-male-c.glb" id="74_waae6"]
@@ -89,7 +91,7 @@
 [ext_resource type="PackedScene" uid="uid://c1sc7qjitvtsi" path="res://assets/pirate/rocks-a.glb" id="80_5x0ot"]
 [ext_resource type="PackedScene" uid="uid://chxfr2yagmg24" path="res://assets/pirate/rocks-c.glb" id="81_4ia42"]
 [ext_resource type="PackedScene" uid="uid://dxkgapjtrucm5" path="res://assets/pirate/boats/ship-wreck.glb" id="82_5x0ot"]
-[ext_resource type="PackedScene" path="res://scenes/tortuga/tortuga_shaman_house.tscn" id="83_4ia42"]
+[ext_resource type="PackedScene" uid="uid://bucvch03dkebd" path="res://scenes/tortuga/tortuga_shaman_house.tscn" id="83_4ia42"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c7jrm"]
 size = Vector3(0.2, 0.44476318, 0.2)
@@ -121,6 +123,9 @@ emission = Color(1, 1, 1, 1)
 height_falloff = 0.066540495
 edge_fade = 0.6062886
 density_texture = SubResource("NoiseTexture3D_gl853")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nt70y"]
+size = Vector3(0.8, 0.4, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4ia42"]
 size = Vector3(2.6000001, 0.2, 7.5)
@@ -5080,6 +5085,158 @@ transform = Transform3D(0.32139382, 0, 0.38302222, 0, 0.5, 0, -0.38302222, 0, 0.
 [node name="MontagneCentral" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0.5, -115)
 
+[node name="Salts" type="Node3D" parent="MontagneCentral"]
+
+[node name="montain-salt" parent="MontagneCentral/Salts" instance=ExtResource("70_5xe8w")]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 54.199997, 1.1999999, -9.699997)
+script = ExtResource("71_nt70y")
+
+[node name="Area3D" type="Area3D" parent="MontagneCentral/Salts/montain-salt"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MontagneCentral/Salts/montain-salt/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10006714, -3.0517578e-05)
+shape = SubResource("BoxShape3D_nt70y")
+
+[node name="montain-salt2" parent="MontagneCentral/Salts" instance=ExtResource("70_5xe8w")]
+transform = Transform3D(0.17364822, 0.6963642, -0.6963642, 0, 0.70710677, 0.70710677, 0.9848077, -0.12278783, 0.12278783, 49.699997, 1.1999999, -14.5)
+script = ExtResource("71_nt70y")
+
+[node name="Area3D" type="Area3D" parent="MontagneCentral/Salts/montain-salt2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MontagneCentral/Salts/montain-salt2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10006714, -3.0517578e-05)
+shape = SubResource("BoxShape3D_nt70y")
+
+[node name="montain-salt3" parent="MontagneCentral/Salts" instance=ExtResource("70_5xe8w")]
+transform = Transform3D(-0.6818035, 0.7266092, 0.08475107, 0.34028816, 0.21246278, 0.916004, 0.6475705, 0.65337473, -0.39211428, 54.799995, 1.1999999, -18.5)
+script = ExtResource("71_nt70y")
+
+[node name="Area3D" type="Area3D" parent="MontagneCentral/Salts/montain-salt3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MontagneCentral/Salts/montain-salt3/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10006714, -3.0517578e-05)
+shape = SubResource("BoxShape3D_nt70y")
+
+[node name="montain-salt4" parent="MontagneCentral/Salts" instance=ExtResource("70_5xe8w")]
+transform = Transform3D(0.2666739, -0.95594937, 0.12266059, 0.34028816, 0.21246278, 0.916004, -0.90171444, -0.2025345, 0.38195655, 59.09999, 1.1999999, -15.100006)
+script = ExtResource("71_nt70y")
+
+[node name="Area3D" type="Area3D" parent="MontagneCentral/Salts/montain-salt4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MontagneCentral/Salts/montain-salt4/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10006714, -3.0517578e-05)
+shape = SubResource("BoxShape3D_nt70y")
+
+[node name="montain-salt5" parent="MontagneCentral/Salts" instance=ExtResource("70_5xe8w")]
+transform = Transform3D(0.9659258, -0.12940952, -0.22414389, 0.258819, 0.48296288, 0.8365163, 0, -0.86602545, 0.49999997, 25.499996, 1.1999999, -18.999985)
+script = ExtResource("71_nt70y")
+
+[node name="Area3D" type="Area3D" parent="MontagneCentral/Salts/montain-salt5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MontagneCentral/Salts/montain-salt5/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10006714, -3.0517578e-05)
+shape = SubResource("BoxShape3D_nt70y")
+
+[node name="montain-salt6" parent="MontagneCentral/Salts" instance=ExtResource("70_5xe8w")]
+transform = Transform3D(0.4438351, 0.8915387, -0.09038296, -0.11736249, 0.1578251, 0.980468, 0.8883896, -0.4245587, 0.17468145, 9.999996, 1.3, -17.899979)
+script = ExtResource("71_nt70y")
+
+[node name="Area3D" type="Area3D" parent="MontagneCentral/Salts/montain-salt6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MontagneCentral/Salts/montain-salt6/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10006714, -3.0517578e-05)
+shape = SubResource("BoxShape3D_nt70y")
+
+[node name="montain-salt7" parent="MontagneCentral/Salts" instance=ExtResource("70_5xe8w")]
+transform = Transform3D(-0.88784593, 0.20342508, 0.41273183, 0.44575658, 0.1577244, 0.88114935, 0.11414991, 0.9663028, -0.23071307, 7.0999947, 1.3, -15.799973)
+script = ExtResource("71_nt70y")
+
+[node name="Area3D" type="Area3D" parent="MontagneCentral/Salts/montain-salt7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MontagneCentral/Salts/montain-salt7/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10006714, -3.0517578e-05)
+shape = SubResource("BoxShape3D_nt70y")
+
+[node name="montain-salt8" parent="MontagneCentral/Salts" instance=ExtResource("70_5xe8w")]
+transform = Transform3D(0.4832525, -0.87099, -0.08856249, 0.4457567, 0.15772438, 0.8811495, -0.7535037, -0.46529493, 0.4644704, -6.800005, 1.3, -4.5999756)
+script = ExtResource("71_nt70y")
+
+[node name="Area3D" type="Area3D" parent="MontagneCentral/Salts/montain-salt8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MontagneCentral/Salts/montain-salt8/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10006714, -3.0517578e-05)
+shape = SubResource("BoxShape3D_nt70y")
+
+[node name="montain-salt9" parent="MontagneCentral/Salts" instance=ExtResource("70_5xe8w")]
+transform = Transform3D(0.77759314, -0.30558816, -0.5495133, 0.41273808, -0.41122803, 0.8127356, -0.47433764, -0.85878253, -0.19364037, -32.000008, 1.3, 14.600029)
+script = ExtResource("71_nt70y")
+
+[node name="Area3D" type="Area3D" parent="MontagneCentral/Salts/montain-salt9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MontagneCentral/Salts/montain-salt9/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10006714, -3.0517578e-05)
+shape = SubResource("BoxShape3D_nt70y")
+
+[node name="montain-salt10" parent="MontagneCentral/Salts" instance=ExtResource("70_5xe8w")]
+transform = Transform3D(0.97877437, 0.13946047, -0.15017252, 0.18938133, -0.33540857, 0.92284125, 0.078330494, -0.93169284, -0.35470054, -27.600006, 1.2999998, 14.600021)
+script = ExtResource("71_nt70y")
+
+[node name="Area3D" type="Area3D" parent="MontagneCentral/Salts/montain-salt10"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MontagneCentral/Salts/montain-salt10/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10006714, -3.0517578e-05)
+shape = SubResource("BoxShape3D_nt70y")
+
+[node name="montain-salt11" parent="MontagneCentral/Salts" instance=ExtResource("70_5xe8w")]
+transform = Transform3D(-0.60649806, 0.59591043, 0.5263562, 0.16287261, -0.55485576, 0.815848, 0.77822435, 0.58053905, 0.23946153, -45.900005, 1.2999998, -4.29998)
+script = ExtResource("71_nt70y")
+
+[node name="Area3D" type="Area3D" parent="MontagneCentral/Salts/montain-salt11"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MontagneCentral/Salts/montain-salt11/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10006714, -3.0517578e-05)
+shape = SubResource("BoxShape3D_nt70y")
+
+[node name="montain-salt12" parent="MontagneCentral/Salts" instance=ExtResource("70_5xe8w")]
+transform = Transform3D(-0.9791466, 0.010869175, 0.20286512, 0.16287264, -0.55485576, 0.815848, 0.12142882, 0.8318753, 0.5415149, -27.000006, 0.39999992, -11.099983)
+script = ExtResource("71_nt70y")
+
+[node name="Area3D" type="Area3D" parent="MontagneCentral/Salts/montain-salt12"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MontagneCentral/Salts/montain-salt12/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10006714, -3.0517578e-05)
+shape = SubResource("BoxShape3D_nt70y")
+
+[node name="montain-salt13" parent="MontagneCentral/Salts" instance=ExtResource("70_5xe8w")]
+transform = Transform3D(-0.80779696, -0.43881536, 0.39358017, 0.18659678, 0.44299722, 0.8768895, -0.55914754, 0.78178895, -0.27597067, 48.799995, 0.2999999, 25.600014)
+script = ExtResource("71_nt70y")
+
+[node name="Area3D" type="Area3D" parent="MontagneCentral/Salts/montain-salt13"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MontagneCentral/Salts/montain-salt13/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10006714, -3.0517578e-05)
+shape = SubResource("BoxShape3D_nt70y")
+
+[node name="montain-salt14" parent="MontagneCentral/Salts" instance=ExtResource("70_5xe8w")]
+transform = Transform3D(-0.17582169, -0.86309767, 0.47344398, 0.18659684, 0.44299725, 0.87688965, -0.96657586, 0.24251902, 0.08316247, 22.3, 1.2000002, 12.100014)
+script = ExtResource("71_nt70y")
+
+[node name="Area3D" type="Area3D" parent="MontagneCentral/Salts/montain-salt14"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MontagneCentral/Salts/montain-salt14/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10006714, -3.0517578e-05)
+shape = SubResource("BoxShape3D_nt70y")
+
+[node name="montain-salt15" parent="MontagneCentral/Salts" instance=ExtResource("70_5xe8w")]
+transform = Transform3D(0.21812554, 0.9483444, -0.23035607, 0.13473272, 0.20451643, 0.9695468, 0.966576, -0.24251916, -0.083162434, 15.299999, 1.7000003, 16.100014)
+script = ExtResource("71_nt70y")
+
+[node name="Area3D" type="Area3D" parent="MontagneCentral/Salts/montain-salt15"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MontagneCentral/Salts/montain-salt15/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10006714, -3.0517578e-05)
+shape = SubResource("BoxShape3D_nt70y")
+
 [node name="Palms" type="Node3D" parent="MontagneCentral"]
 
 [node name="palm-bend2" parent="MontagneCentral/Palms" instance=ExtResource("4_c7jrm")]
@@ -5705,7 +5862,7 @@ transform = Transform3D(0.7764573, 0, -2.897777, 0, 5.9999995, 0, 2.897777, 0, 0
 transform = Transform3D(0.7764573, 0, -2.897777, 0, 5.9999995, 0, 2.897777, 0, 0.7764573, -33.8, 0, 18.300003)
 
 [node name="grass-patch9" parent="MontagneCentral/Laby" instance=ExtResource("42_e43uk")]
-transform = Transform3D(0.7764573, 0, -2.897777, 0, 5.9999995, 0, 2.897777, 0, 0.7764573, -29.8, 0, 20.300003)
+transform = Transform3D(0.7764573, 0, -2.897777, 0, 5.9999995, 0, 2.897777, 0, 0.7764573, -25.699999, 0, 23.800003)
 
 [node name="grass-patch10" parent="MontagneCentral/Laby" instance=ExtResource("42_e43uk")]
 transform = Transform3D(0.7764573, 0, -2.897777, 0, 5.9999995, 0, 2.897777, 0, 0.7764573, -43.8, 0, 20.300003)
