@@ -180,6 +180,18 @@ size_flags_horizontal = 3
 tooltip_text = "Option"
 text = "Option"
 
+[node name="OptionButton4" type="Button" parent="Dialog/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Option"
+text = "Option"
+
+[node name="OptionButton5" type="Button" parent="Dialog/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Option"
+text = "Option"
+
 [node name="CloseButton" type="Button" parent="Dialog/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -862,7 +874,7 @@ layout_mode = 0
 offset_right = 58.0
 offset_bottom = 48.0
 tooltip_text = "Ingrédient rituel du vent."
-texture_normal = ExtResource("21_ewk5h")
+texture_normal = ExtResource("29_dfsdp")
 script = ExtResource("11_s1h2m")
 description = "Pour faire revenir le vent j'ai besoin de :
 [ul]
@@ -872,7 +884,6 @@ Du sel minéral
 Un mojito frais
 [/ul]
 "
-image = ExtResource("29_dfsdp")
 
 [node name="Melon" type="TextureButton" parent="Items"]
 layout_mode = 0
@@ -1023,6 +1034,8 @@ libraries = {
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton1" to="Dialog" method="_on_option_button_1_pressed"]
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton2" to="Dialog" method="_on_option_button_2_pressed"]
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton3" to="Dialog" method="_on_option_button_3_pressed"]
+[connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton4" to="Dialog" method="_on_option_button_4_pressed"]
+[connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton5" to="Dialog" method="_on_option_button_5_pressed"]
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/CloseButton" to="Dialog" method="_on_close"]
 [connection signal="pressed" from="DialogAndImg/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_and_img_button_pressed"]
 [connection signal="pressed" from="Image/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="Image" method="_on_close_dialog_button_pressed"]
