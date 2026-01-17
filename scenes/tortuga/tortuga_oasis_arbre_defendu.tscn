@@ -1,9 +1,12 @@
-[gd_scene load_steps=17 format=3 uid="uid://bc454sdsvgswp"]
+[gd_scene load_steps=21 format=3 uid="uid://bc454sdsvgswp"]
 
+[ext_resource type="PackedScene" uid="uid://d2s2nsi6mo8um" path="res://assets/props/nest.glb" id="1_c2oem"]
 [ext_resource type="PackedScene" uid="uid://bbwotylt8kjx" path="res://assets/nature/plant/tree/tree_detailed_dark.glb" id="1_gfysq"]
 [ext_resource type="Script" uid="uid://vrseuhaxautc" path="res://scripts/fix_color.gd" id="2_2bajp"]
+[ext_resource type="Script" uid="uid://dv82dud3pqgqu" path="res://scripts/tortuga/montagne-oasis/oasis-nest.gd" id="2_fm2hx"]
 [ext_resource type="PackedScene" uid="uid://bcgy2mim171r0" path="res://assets/fruit-pack-1/apple.glb" id="2_klrne"]
 [ext_resource type="Script" uid="uid://ellbqcwcqt7a" path="res://scripts/tortuga/montagne-oasis/arbre-fruit-defendu.gd" id="3_2bajp"]
+[ext_resource type="PackedScene" uid="uid://bsqg4g631kmsn" path="res://assets/props/nest-without-feather.glb" id="3_23qa5"]
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://scenes/water/WaterPlane.tscn" id="4_c2oem"]
 [ext_resource type="PackedScene" uid="uid://c4g8d08ibg0qg" path="res://scenes/props/teleporteur.tscn" id="4_klrne"]
 [ext_resource type="PackedScene" uid="uid://bagjq72im08wg" path="res://assets/pirate/plant/grass-plant.glb" id="5_fm2hx"]
@@ -16,10 +19,28 @@
 [ext_resource type="PackedScene" uid="uid://crylsg6rmjh6j" path="res://assets/pirate/structures/structure-platform-small.glb" id="12_0nkl1"]
 [ext_resource type="PackedScene" uid="uid://cj2nivoroln0s" path="res://assets/nature/plant/crops/crops_bambooStageB.glb" id="13_nampf"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_c2oem"]
+size = Vector3(0.90000004, 0.2, 0.3)
+
 [sub_resource type="SphereShape3D" id="SphereShape3D_dl2hs"]
 radius = 0.2667705
 
 [node name="oasis-arbre-defendu" type="Node3D"]
+
+[node name="nest" parent="." instance=ExtResource("1_c2oem")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -19, 1.5, -4)
+script = ExtResource("2_fm2hx")
+interactable_distance = 5.0
+
+[node name="Area3D" type="Area3D" parent="nest"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="nest/Area3D"]
+transform = Transform3D(0.57357645, 0, 0.81915206, 0, 1, 0, -0.81915206, 0, 0.57357645, -0.8303623, 5.9604645e-08, -0.2622788)
+shape = SubResource("BoxShape3D_c2oem")
+
+[node name="nest-without-feather" parent="." instance=ExtResource("3_23qa5")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -19, 1.5, -4)
+visible = false
 
 [node name="arbre-defendu" parent="." instance=ExtResource("1_gfysq")]
 transform = Transform3D(6.928203, 0, -4, 0, 8, 0, 4, 0, 6.928203, -1.300003, 1.300003, 0.4000244)
@@ -296,7 +317,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -17.699997, 1, 4.200012)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -21.699997, 1, 4.200012)
 
 [node name="grass20" parent="grass" instance=ExtResource("6_23qa5")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -19.699997, 1, -2.7999878)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -18.699997, 1, 0.2000122)
 
 [node name="grass21" parent="grass" instance=ExtResource("6_23qa5")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -21.699997, 1, -7.799988)

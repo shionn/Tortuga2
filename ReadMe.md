@@ -22,6 +22,7 @@
 - https://opengameart.org/content/resouces-pack-1
 - https://opengameart.org/content/32x32-fantasy-portrait-set
 - https://fr.wikipedia.org/wiki/Houblon
+- https://opengameart.org/content/duck-duckling-feather-vector-sprites
 
 ## Model 3d
 - https://kenney.nl/assets
@@ -30,6 +31,7 @@
 - https://opengameart.org/content/rpg-item-collection-2
 - https://opengameart.org/content/sign-plate-1
 - https://opengameart.org/content/spyglass
+- https://sketchfab.com/3d-models/birds-nest-from-poly-by-google-a04a9be3fe7841448bc6ea7a8b742a47
 
 ### A faire 
 

@@ -1,13 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://cqixno3g5svqo"]
+[gd_scene load_steps=14 format=3 uid="uid://bucvch03dkebd"]
 
-[ext_resource type="Script" uid="uid://yva2kk7v53n7" path="res://scripts/pnj.gd" id="1_2eujg"]
 [ext_resource type="PackedScene" uid="uid://bohgyv4ijnvfm" path="res://assets/town/walls/wall-wood-doorway-square.glb" id="1_m25qr"]
 [ext_resource type="PackedScene" uid="uid://crg8korvqui82" path="res://assets/town/stairs/stairs-wide-wood.glb" id="1_mc8li"]
+[ext_resource type="Script" uid="uid://b8kb2tqmqigh6" path="res://scripts/tortuga/pnj-shaman.gd" id="2_8qlg5"]
 [ext_resource type="PackedScene" uid="uid://ye5nsphukeql" path="res://assets/pirate/structures/structure-plateform-long.glb" id="2_k0ale"]
 [ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="2_oofwr"]
 [ext_resource type="PackedScene" uid="uid://b64713gko8rd8" path="res://assets/town/walls/wall-wood-corner-edge.glb" id="2_vnl2v"]
+[ext_resource type="PackedScene" uid="uid://detus3625n2wt" path="res://assets/character/base/character-female-a.glb" id="3_2eujg"]
 [ext_resource type="PackedScene" uid="uid://86dcdsinmla4" path="res://assets/town/walls/wall-wood-window-round.glb" id="3_8qlg5"]
-[ext_resource type="PackedScene" uid="uid://cuwkv5gqn18pj" path="res://assets/character/base/character-female-a-2.glb" id="3_hh7em"]
 [ext_resource type="PackedScene" uid="uid://ckl0cxjsbj1sn" path="res://assets/town/roof/roof-corner-round.glb" id="6_2eujg"]
 [ext_resource type="PackedScene" uid="uid://dj2jytbjf6lck" path="res://assets/town/roof/roof.glb" id="7_oofwr"]
 [ext_resource type="PackedScene" uid="uid://d3k6pjo57mt0k" path="res://assets/town/roof/roof-point.glb" id="8_hh7em"]
@@ -20,12 +20,12 @@ size = Vector3(2, 0.9550781, 0.925148)
 
 [node name="TortugaShamanHouse" type="Node3D"]
 
-[node name="pnj" parent="." instance=ExtResource("2_oofwr")]
+[node name="pnj-shaman" parent="." instance=ExtResource("2_oofwr")]
 transform = Transform3D(0.7071067, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.7071067, -1.2, 0.9, -4.1)
-script = ExtResource("1_2eujg")
-model = ExtResource("3_hh7em")
+script = ExtResource("2_8qlg5")
+model = ExtResource("3_2eujg")
 pnj_name = "Grabouilla"
-pnj_role = "Sorcière"
+pnj_role = "Chaman Sexy"
 
 [node name="Walls" type="Node3D" parent="."]
 
