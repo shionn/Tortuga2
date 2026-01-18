@@ -69,4 +69,4 @@ C’est malin maintenant j’ai envie d’une bière, la bière rousse de Eve es
 
 const _ANWSER_NO_WIND = """Oui, cela fait plusieurs jours que ça dure. 
 
-Ce n’est pas la première fois que ca arrive. Je ne sais pas comment mais le capitaine a réussi à faire revenir les vents la dernière fois que cela s'était produit."""
+Ce n’est pas la première fois que ca arrive. Je ne sais pas comment mais le Capitaine a réussi à faire revenir les vents la dernière fois que cela s'était produit. """

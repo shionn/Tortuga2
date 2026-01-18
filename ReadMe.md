@@ -24,6 +24,7 @@
 - https://fr.wikipedia.org/wiki/Houblon
 - https://opengameart.org/content/duck-duckling-feather-vector-sprites
 - https://opengameart.org/content/free-2d-survival-tools
+- https://freepngimg.com/png/29950-mojito-image
 
 ## Model 3d
 - https://kenney.nl/assets

@@ -24,6 +24,7 @@ const SEARCH_WIND = "020" # a vider
 const SEARCH_BARQUE = "021" # a vider
 const SEARCH_PASS = "022" # a vider
 const SEARCH_CAPTAIN_BOTTLE = "023" # a vider
+const ALLOW_PICKAXE = "024"
 
 var tags : Array[String] = []
 

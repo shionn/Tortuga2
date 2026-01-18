@@ -17,9 +17,13 @@ func on_interact() -> void:
 		PnjDialogOption.new(
 			func() : return bag.contain(Bag.ListInvocationVent) and not bag.contain(Bag.Pioche),
 			"Est-ce que tu as une pioche ?",
-			func() : gui.open_dialog(pnj_name, _TEXT_PICKAXE)
+			_on_pickaxe_search
 		)
 	])
+
+func _on_pickaxe_search() -> void:
+	gui.open_dialog(pnj_name, _TEXT_PICKAXE)
+	tags.add(Tags.ALLOW_PICKAXE)
 
 const _TEXT = """Bonjour. 
 
