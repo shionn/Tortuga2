@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bqwr1sdl4wvhs"]
+[gd_scene load_steps=27 format=3 uid="uid://bqwr1sdl4wvhs"]
 
 [ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="1_egqyo"]
 [ext_resource type="PackedScene" uid="uid://diuwrvkauw1fs" path="res://assets/town/walls/wall.glb" id="1_ndcds"]
@@ -12,14 +12,20 @@
 [ext_resource type="PackedScene" uid="uid://bv1khuvcbts65" path="res://assets/pirate/props/cannon-ball.glb" id="7_mckex"]
 [ext_resource type="PackedScene" uid="uid://dx4s7axo4o001" path="res://assets/town/props/stall.glb" id="8_bwvbw"]
 [ext_resource type="PackedScene" uid="uid://b5xtrnp1f2eg7" path="res://assets/pirate/props/bottle.glb" id="8_h4toq"]
+[ext_resource type="PackedScene" uid="uid://cad1yc7p0hvwn" path="res://assets/low-poly-rpg-item/axe.glb" id="9_6ujrv"]
 [ext_resource type="PackedScene" uid="uid://cgwwol2ja1lfe" path="res://assets/town/props/overhang.glb" id="9_h4toq"]
 [ext_resource type="PackedScene" uid="uid://dru71m0k1pta1" path="res://assets/pirate/props/crate.glb" id="9_ruvfp"]
+[ext_resource type="PackedScene" uid="uid://dscn3a3phc6we" path="res://assets/low-poly-rpg-item/shield-2.glb" id="10_wbxmk"]
 [ext_resource type="PackedScene" uid="uid://rht7nkabco3w" path="res://assets/pirate/props/chest.glb" id="11_ruvfp"]
+[ext_resource type="PackedScene" uid="uid://dek5a2pkeockq" path="res://assets/mini-arena/weapon-rack.glb" id="11_yy2qo"]
+[ext_resource type="PackedScene" uid="uid://tc02ew4wcfgf" path="res://assets/mini-arena/weapon-spear.glb" id="12_4cps0"]
 [ext_resource type="PackedScene" uid="uid://xefmsuf3vde" path="res://assets/pirate/props/cannon-mobile.glb" id="12_vms7r"]
+[ext_resource type="PackedScene" uid="uid://bqugxuti2w2if" path="res://assets/mini-arena/weapon-sword.glb" id="13_cxml0"]
 [ext_resource type="PackedScene" uid="uid://btjlauonpyjwv" path="res://assets/town/walls/wall-corner-detail.glb" id="14_ruvfp"]
 [ext_resource type="PackedScene" uid="uid://nd5w3nfqpn7x" path="res://assets/town/roof/roof-corner.glb" id="15_gyije"]
 [ext_resource type="PackedScene" uid="uid://c3kfygcrdkb66" path="res://assets/town/roof/roof-flat.glb" id="15_mqv4l"]
 [ext_resource type="PackedScene" uid="uid://dj2jytbjf6lck" path="res://assets/town/roof/roof.glb" id="16_mqv4l"]
+[ext_resource type="PackedScene" uid="uid://bn0cmw516u1op" path="res://assets/crafting-items/pickaxe.glb" id="23_ihdmi"]
 
 [node name="TortugaArmurerie" type="Node3D"]
 
@@ -29,6 +35,101 @@ script = ExtResource("2_44ywi")
 model = ExtResource("3_76b1l")
 pnj_name = "Orco"
 pnj_role = "Armurier"
+
+[node name="pickaxe" parent="." instance=ExtResource("23_ihdmi")]
+transform = Transform3D(-6.5567076e-09, 0, -0.14999999, 0.051303018, 0.14095388, -2.242526e-09, 0.14095388, -0.051303018, -6.1612897e-09, 1.3, 0.20835161, -2.8999999)
+
+[node name="props" type="Node3D" parent="."]
+
+[node name="cannon-ball5" parent="props" instance=ExtResource("7_mckex")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.6, 0.20000002, 2.6)
+
+[node name="cannon-ball7" parent="props" instance=ExtResource("7_mckex")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.6, 0.20000002, 2.3)
+
+[node name="cannon-ball8" parent="props" instance=ExtResource("7_mckex")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.5, 0.47604632, 2.3999999)
+
+[node name="cannon-ball6" parent="props" instance=ExtResource("7_mckex")]
+transform = Transform3D(0.49998266, 0.00086101826, 0.004074387, -0.0008671743, 0.4999987, 0.00075213134, -0.004073081, -0.00075917086, 0.49998283, 1.336591, 0.20000002, 2.438254)
+
+[node name="bottle2" parent="props" instance=ExtResource("8_h4toq")]
+transform = Transform3D(0.3, -1.8826541e-11, -2.7939678e-10, 1.8826541e-11, 0.3, 3.4924598e-11, 2.7939678e-10, -3.4924598e-11, 0.3, -0.09999998, 0.36685854, -0.20000035)
+
+[node name="bottle3" parent="props" instance=ExtResource("8_h4toq")]
+transform = Transform3D(0.3, -1.8826541e-11, -2.7939678e-10, 1.8826541e-11, 0.3, 3.4924598e-11, 2.7939678e-10, -3.4924598e-11, 0.3, -0.09954457, 0.36685854, -0.31560794)
+
+[node name="crate2" parent="props" instance=ExtResource("9_ruvfp")]
+transform = Transform3D(-2.1855694e-08, 6.884685e-18, 0.5, -6.9388956e-18, 0.5, -6.8846854e-18, -0.5, -6.9388956e-18, -2.1855694e-08, 0.1, 8.940697e-08, 2.5999997)
+
+[node name="crate3" parent="props" instance=ExtResource("9_ruvfp")]
+transform = Transform3D(-1.7484556e-08, 5.5077474e-18, 0.4, -5.551115e-18, 0.4, -5.5077478e-18, -0.4, -5.551115e-18, -1.7484556e-08, 1.5, 1.5000001, 2.755482)
+
+[node name="crate9" parent="props" instance=ExtResource("9_ruvfp")]
+transform = Transform3D(-1.7484556e-08, 5.5077474e-18, 0.4, -5.551115e-18, 0.4, -5.5077478e-18, -0.4, -5.551115e-18, -1.7484556e-08, 1.6, 1.5000001, -2.644518)
+
+[node name="crate10" parent="props" instance=ExtResource("9_ruvfp")]
+transform = Transform3D(-1.7484556e-08, 5.5077474e-18, 0.4, -5.551115e-18, 0.4, -5.5077478e-18, -0.4, -5.551115e-18, -1.7484556e-08, 1, 1.5000001, -2.644518)
+
+[node name="crate11" parent="props" instance=ExtResource("9_ruvfp")]
+transform = Transform3D(-1.7484556e-08, 5.5077474e-18, 0.4, -5.551115e-18, 0.4, -5.5077478e-18, -0.4, -5.551115e-18, -1.7484556e-08, 0.39999995, 1.5000001, -2.644518)
+
+[node name="crate4" parent="props" instance=ExtResource("9_ruvfp")]
+transform = Transform3D(-1.7484556e-08, 5.5077474e-18, 0.4, -5.551115e-18, 0.4, -5.5077478e-18, -0.4, -5.551115e-18, -1.7484556e-08, 0.9, 1.5000001, 2.755482)
+
+[node name="crate5" parent="props" instance=ExtResource("9_ruvfp")]
+transform = Transform3D(-1.7484556e-08, 5.5077474e-18, 0.4, -5.551115e-18, 0.4, -5.5077478e-18, -0.4, -5.551115e-18, -1.7484556e-08, 0.29999995, 1.5000001, 2.755482)
+
+[node name="crate6" parent="props" instance=ExtResource("9_ruvfp")]
+transform = Transform3D(-1.7484556e-08, 5.5077474e-18, 0.4, -5.551115e-18, 0.4, -5.5077478e-18, -0.4, -5.551115e-18, -1.7484556e-08, -1.5000001, 1.5000001, 2.755482)
+
+[node name="crate12" parent="props" instance=ExtResource("9_ruvfp")]
+transform = Transform3D(-0.4, -5.5511148e-18, -3.4969112e-08, -5.5511156e-18, 0.4, -5.5077474e-18, 3.4969112e-08, -5.507746e-18, -0.4, -1.8000002, 1.5000001, 0.65548193)
+
+[node name="crate7" parent="props" instance=ExtResource("9_ruvfp")]
+transform = Transform3D(-1.7484556e-08, 5.5077474e-18, 0.4, -5.551115e-18, 0.4, -5.5077478e-18, -0.4, -5.551115e-18, -1.7484556e-08, -0.9000001, 1.5000001, 2.755482)
+
+[node name="crate8" parent="props" instance=ExtResource("9_ruvfp")]
+transform = Transform3D(-1.7484556e-08, 5.5077474e-18, 0.4, -5.551115e-18, 0.4, -5.5077478e-18, -0.4, -5.551115e-18, -1.7484556e-08, -0.30000007, 1.5000001, 2.755482)
+
+[node name="bottle4" parent="props" instance=ExtResource("8_h4toq")]
+transform = Transform3D(0.3, -1.8826541e-11, -2.7939678e-10, 1.8826541e-11, 0.3, 3.4924598e-11, 2.7939678e-10, -3.4924598e-11, 0.3, -0.09954457, 0.36685854, -0.42907712)
+
+[node name="cannon-ball9" parent="props" instance=ExtResource("7_mckex")]
+transform = Transform3D(0.49998266, 0.00086101826, 0.004074387, -0.0008671743, 0.4999987, 0.00075213134, -0.004073081, -0.00075917086, 0.49998283, -0.763409, 0.20000002, 2.6382542)
+
+[node name="chest2" parent="props" instance=ExtResource("11_ruvfp")]
+transform = Transform3D(0.5, 0, -3.1786513e-08, 0, 0.5, 0, 3.1786513e-08, 0, 0.5, 0.5, 0, -2.7)
+
+[node name="chest3" parent="props" instance=ExtResource("11_ruvfp")]
+transform = Transform3D(0.3, 0, -1.9071908e-08, 0, 0.3, 0, 1.9071908e-08, 0, 0.3, -1.7, 1.5, -2.7)
+
+[node name="chest6" parent="props" instance=ExtResource("11_ruvfp")]
+transform = Transform3D(5.958486e-09, 0, 0.29999998, 0, 0.29999998, 0, -0.29999998, 0, 5.958486e-09, -1.8000001, 1.5, -0.70000017)
+
+[node name="chest4" parent="props" instance=ExtResource("11_ruvfp")]
+transform = Transform3D(0.3, 0, -1.9071908e-08, 0, 0.3, 0, 1.9071908e-08, 0, 0.3, -1.3000001, 1.5, -2.7)
+
+[node name="chest5" parent="props" instance=ExtResource("11_ruvfp")]
+transform = Transform3D(0.3, 0, -1.9071908e-08, 0, 0.3, 0, 1.9071908e-08, 0, 0.3, -0.9000001, 1.5, -2.7)
+
+[node name="cannon-mobile2" parent="props" instance=ExtResource("12_vms7r")]
+transform = Transform3D(-0.35355338, 0, 0.35355338, 0, 0.5, 0, -0.35355338, 0, -0.35355338, -1.4, 0, 2.3000002)
+
+[node name="axe" parent="props" instance=ExtResource("9_6ujrv")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 2.2, 0.9999999, 1)
+
+[node name="shield-2" parent="props" instance=ExtResource("10_wbxmk")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 2.2, 1, -1)
+
+[node name="weapon-rack2" parent="props" instance=ExtResource("11_yy2qo")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.9, 0, 0)
+
+[node name="weapon-spear2" parent="props" instance=ExtResource("12_4cps0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 0, -0.1)
+
+[node name="weapon-sword2" parent="props/weapon-spear2" instance=ExtResource("13_cxml0")]
+transform = Transform3D(6.7055225e-08, 0, -1, 0, 1, 0, 1, 0, 6.7055225e-08, -1.1920929e-07, 0.5, 0.2)
 
 [node name="ground" type="Node3D" parent="."]
 
@@ -65,63 +166,6 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -3, 0, 0)
 [node name="road2" parent="ground" instance=ExtResource("6_cjaaf")]
 transform = Transform3D(6, 0, 0, 0, -10, -1.0569706e-06, 0, 1.509958e-06, -7, 0.7, 0, 0)
 
-[node name="cannon-ball5" parent="ground" instance=ExtResource("7_mckex")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.6, 0.20000002, 2.6)
-
-[node name="cannon-ball7" parent="ground" instance=ExtResource("7_mckex")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.6, 0.20000002, 2.3)
-
-[node name="cannon-ball8" parent="ground" instance=ExtResource("7_mckex")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.5, 0.47604632, 2.3999999)
-
-[node name="cannon-ball6" parent="ground" instance=ExtResource("7_mckex")]
-transform = Transform3D(0.49998266, 0.00086101826, 0.004074387, -0.0008671743, 0.4999987, 0.00075213134, -0.004073081, -0.00075917086, 0.49998283, 1.336591, 0.20000002, 2.438254)
-
-[node name="bottle2" parent="ground" instance=ExtResource("8_h4toq")]
-transform = Transform3D(0.3, -1.8826541e-11, -2.7939678e-10, 1.8826541e-11, 0.3, 3.4924598e-11, 2.7939678e-10, -3.4924598e-11, 0.3, -0.09999998, 0.36685854, -0.20000035)
-
-[node name="bottle3" parent="ground" instance=ExtResource("8_h4toq")]
-transform = Transform3D(0.3, -1.8826541e-11, -2.7939678e-10, 1.8826541e-11, 0.3, 3.4924598e-11, 2.7939678e-10, -3.4924598e-11, 0.3, -0.09954457, 0.36685854, -0.31560794)
-
-[node name="crate2" parent="ground" instance=ExtResource("9_ruvfp")]
-transform = Transform3D(-2.1855694e-08, 6.884685e-18, 0.5, -6.9388956e-18, 0.5, -6.8846854e-18, -0.5, -6.9388956e-18, -2.1855694e-08, 0.1, 8.940697e-08, 2.5999997)
-
-[node name="crate3" parent="ground" instance=ExtResource("9_ruvfp")]
-transform = Transform3D(-1.7484556e-08, 5.5077474e-18, 0.4, -5.551115e-18, 0.4, -5.5077478e-18, -0.4, -5.551115e-18, -1.7484556e-08, 1.5, 1.5000001, 2.755482)
-
-[node name="crate9" parent="ground" instance=ExtResource("9_ruvfp")]
-transform = Transform3D(-1.7484556e-08, 5.5077474e-18, 0.4, -5.551115e-18, 0.4, -5.5077478e-18, -0.4, -5.551115e-18, -1.7484556e-08, 1.6, 1.5000001, -2.644518)
-
-[node name="crate10" parent="ground" instance=ExtResource("9_ruvfp")]
-transform = Transform3D(-1.7484556e-08, 5.5077474e-18, 0.4, -5.551115e-18, 0.4, -5.5077478e-18, -0.4, -5.551115e-18, -1.7484556e-08, 1, 1.5000001, -2.644518)
-
-[node name="crate11" parent="ground" instance=ExtResource("9_ruvfp")]
-transform = Transform3D(-1.7484556e-08, 5.5077474e-18, 0.4, -5.551115e-18, 0.4, -5.5077478e-18, -0.4, -5.551115e-18, -1.7484556e-08, 0.39999995, 1.5000001, -2.644518)
-
-[node name="crate4" parent="ground" instance=ExtResource("9_ruvfp")]
-transform = Transform3D(-1.7484556e-08, 5.5077474e-18, 0.4, -5.551115e-18, 0.4, -5.5077478e-18, -0.4, -5.551115e-18, -1.7484556e-08, 0.9, 1.5000001, 2.755482)
-
-[node name="crate5" parent="ground" instance=ExtResource("9_ruvfp")]
-transform = Transform3D(-1.7484556e-08, 5.5077474e-18, 0.4, -5.551115e-18, 0.4, -5.5077478e-18, -0.4, -5.551115e-18, -1.7484556e-08, 0.29999995, 1.5000001, 2.755482)
-
-[node name="crate6" parent="ground" instance=ExtResource("9_ruvfp")]
-transform = Transform3D(-1.7484556e-08, 5.5077474e-18, 0.4, -5.551115e-18, 0.4, -5.5077478e-18, -0.4, -5.551115e-18, -1.7484556e-08, -1.5000001, 1.5000001, 2.755482)
-
-[node name="crate12" parent="ground" instance=ExtResource("9_ruvfp")]
-transform = Transform3D(-0.4, -5.5511148e-18, -3.4969112e-08, -5.5511156e-18, 0.4, -5.5077474e-18, 3.4969112e-08, -5.507746e-18, -0.4, -1.8000002, 1.5000001, 0.65548193)
-
-[node name="crate7" parent="ground" instance=ExtResource("9_ruvfp")]
-transform = Transform3D(-1.7484556e-08, 5.5077474e-18, 0.4, -5.551115e-18, 0.4, -5.5077478e-18, -0.4, -5.551115e-18, -1.7484556e-08, -0.9000001, 1.5000001, 2.755482)
-
-[node name="crate8" parent="ground" instance=ExtResource("9_ruvfp")]
-transform = Transform3D(-1.7484556e-08, 5.5077474e-18, 0.4, -5.551115e-18, 0.4, -5.5077478e-18, -0.4, -5.551115e-18, -1.7484556e-08, -0.30000007, 1.5000001, 2.755482)
-
-[node name="bottle4" parent="ground" instance=ExtResource("8_h4toq")]
-transform = Transform3D(0.3, -1.8826541e-11, -2.7939678e-10, 1.8826541e-11, 0.3, 3.4924598e-11, 2.7939678e-10, -3.4924598e-11, 0.3, -0.09954457, 0.36685854, -0.42907712)
-
-[node name="cannon-ball9" parent="ground" instance=ExtResource("7_mckex")]
-transform = Transform3D(0.49998266, 0.00086101826, 0.004074387, -0.0008671743, 0.4999987, 0.00075213134, -0.004073081, -0.00075917086, 0.49998283, -0.763409, 0.20000002, 2.6382542)
-
 [node name="stall2" parent="ground" instance=ExtResource("8_bwvbw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29999995, 0, -1.5)
 
@@ -145,24 +189,6 @@ transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, -1, 
 
 [node name="overhang4" parent="ground" instance=ExtResource("9_h4toq")]
 transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 1, -0.5, -2.1)
-
-[node name="chest2" parent="ground" instance=ExtResource("11_ruvfp")]
-transform = Transform3D(0.5, 0, -3.1786513e-08, 0, 0.5, 0, 3.1786513e-08, 0, 0.5, 0.5, 0, -2.7)
-
-[node name="chest3" parent="ground" instance=ExtResource("11_ruvfp")]
-transform = Transform3D(0.3, 0, -1.9071908e-08, 0, 0.3, 0, 1.9071908e-08, 0, 0.3, -1.7, 1.5, -2.7)
-
-[node name="chest6" parent="ground" instance=ExtResource("11_ruvfp")]
-transform = Transform3D(5.958486e-09, 0, 0.29999998, 0, 0.29999998, 0, -0.29999998, 0, 5.958486e-09, -1.8000001, 1.5, -0.70000017)
-
-[node name="chest4" parent="ground" instance=ExtResource("11_ruvfp")]
-transform = Transform3D(0.3, 0, -1.9071908e-08, 0, 0.3, 0, 1.9071908e-08, 0, 0.3, -1.3000001, 1.5, -2.7)
-
-[node name="chest5" parent="ground" instance=ExtResource("11_ruvfp")]
-transform = Transform3D(0.3, 0, -1.9071908e-08, 0, 0.3, 0, 1.9071908e-08, 0, 0.3, -0.9000001, 1.5, -2.7)
-
-[node name="cannon-mobile2" parent="ground" instance=ExtResource("12_vms7r")]
-transform = Transform3D(-0.35355338, 0, 0.35355338, 0, 0.5, 0, -0.35355338, 0, -0.35355338, -1.4, 0, 2.3000002)
 
 [node name="wall-corner-detail2" parent="ground" instance=ExtResource("14_ruvfp")]
 transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 1, 0, 4)

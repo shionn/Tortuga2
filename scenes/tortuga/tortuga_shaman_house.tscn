@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bucvch03dkebd"]
+[gd_scene load_steps=34 format=3 uid="uid://bucvch03dkebd"]
 
 [ext_resource type="PackedScene" uid="uid://bohgyv4ijnvfm" path="res://assets/town/walls/wall-wood-doorway-square.glb" id="1_m25qr"]
 [ext_resource type="PackedScene" uid="uid://crg8korvqui82" path="res://assets/town/stairs/stairs-wide-wood.glb" id="1_mc8li"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cgwwol2ja1lfe" path="res://assets/town/props/overhang.glb" id="4_hh7em"]
 [ext_resource type="PackedScene" uid="uid://dx4s7axo4o001" path="res://assets/town/props/stall.glb" id="5_7nicn"]
 [ext_resource type="PackedScene" uid="uid://ckl0cxjsbj1sn" path="res://assets/town/roof/roof-corner-round.glb" id="6_2eujg"]
-[ext_resource type="PackedScene" uid="uid://dhs7effoi2e31" path="res://assets/low-poly-rpg-item-2/dagger.glb" id="7_38ndb"]
+[ext_resource type="PackedScene" uid="uid://dhs7effoi2e31" path="res://assets/low-poly-rpg-item/dagger.glb" id="7_38ndb"]
 [ext_resource type="PackedScene" uid="uid://dj2jytbjf6lck" path="res://assets/town/roof/roof.glb" id="7_oofwr"]
 [ext_resource type="PackedScene" uid="uid://d3k6pjo57mt0k" path="res://assets/town/roof/roof-point.glb" id="8_hh7em"]
 [ext_resource type="PackedScene" uid="uid://b022gg8vm5kl5" path="res://assets/food-kit/bottle-oil.glb" id="15_7eygj"]
@@ -25,6 +25,12 @@
 [ext_resource type="PackedScene" uid="uid://b5xtrnp1f2eg7" path="res://assets/pirate/props/bottle.glb" id="23_x883r"]
 [ext_resource type="PackedScene" uid="uid://bl8gqk34ub2cy" path="res://assets/pirate/props/crate-bottles.glb" id="24_0j4tr"]
 [ext_resource type="PackedScene" uid="uid://rht7nkabco3w" path="res://assets/pirate/props/chest.glb" id="25_dqt61"]
+[ext_resource type="PackedScene" uid="uid://bvcfjfv25el3k" path="res://assets/crafting-items/book-open.glb" id="25_newob"]
+[ext_resource type="PackedScene" uid="uid://b8nj6obtmrowr" path="res://assets/low-poly-rpg-item/staff-1.glb" id="27_ijj14"]
+[ext_resource type="PackedScene" uid="uid://cw21k0u1nimhs" path="res://assets/low-poly-rpg-item/potion-1.glb" id="28_qdvfn"]
+[ext_resource type="PackedScene" uid="uid://cfhclq2h350w" path="res://assets/low-poly-rpg-item/potion-2.glb" id="29_jso3j"]
+[ext_resource type="PackedScene" uid="uid://30suqvs48qol" path="res://assets/low-poly-rpg-item/potion-3.glb" id="30_gtvkw"]
+[ext_resource type="PackedScene" uid="uid://o8duhp3s24ig" path="res://assets/crafting-items/bottle-1.glb" id="31_xpdfv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mc8li"]
 size = Vector3(2, 1, 3)
@@ -51,9 +57,6 @@ transform = Transform3D(-2, 1.7484555e-07, 0, -1.7484555e-07, -2, 0, 0, 0, 2, -1
 transform = Transform3D(2, -1.7484555e-07, -1.7484555e-07, -1.7484555e-07, -2, 0, -1.7484555e-07, 1.5285484e-14, -2, 1.8, 3.3, -3.3)
 
 [node name="Walls" type="Node3D" parent="."]
-
-[node name="dagger" parent="Walls" instance=ExtResource("7_38ndb")]
-transform = Transform3D(0.51961523, 0, -0.29999998, 0, 0.5999999, 0, 0.29999998, 0, 0.51961523, -1.6951987, 1.9, -0.97393084)
 
 [node name="wall-wood-doorway-square2" parent="Walls" instance=ExtResource("1_m25qr")]
 transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 0, 0.9, -1.5)
@@ -212,3 +215,24 @@ transform = Transform3D(0.4698463, 0, 0.17101002, 0, 0.5, 0, -0.17101002, 0, 0.4
 
 [node name="chest2" parent="Props" instance=ExtResource("25_dqt61")]
 transform = Transform3D(-0.3863703, 0, -0.10352766, 0, 0.4, 0, 0.10352766, 0, -0.3863703, 1.3, 0.9, -1)
+
+[node name="book-open" parent="Props" instance=ExtResource("25_newob")]
+transform = Transform3D(0.17320508, 0, 0.1, 0, 0.2, 0, -0.1, 0, 0.17320508, -0.35999078, 1.2559342, -3.5649683)
+
+[node name="dagger" parent="Props" instance=ExtResource("7_38ndb")]
+transform = Transform3D(0.5638155, 0, 0.20521213, 0, 0.59999985, 0, -0.20521213, 0, 0.5638155, 1.5595012, 1.8, -0.8951149)
+
+[node name="staff-1" parent="Props" instance=ExtResource("27_ijj14")]
+transform = Transform3D(0.3505183, 0, 0.60591817, 0, 0.6999999, 0, -0.60591817, 0, 0.3505183, -1.5, 2.1, -0.885249)
+
+[node name="potion-1" parent="Props" instance=ExtResource("28_qdvfn")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.3999999, 1.5, -3.1999998)
+
+[node name="potion-2" parent="Props" instance=ExtResource("29_jso3j")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.1, 1.5465492, -5.7)
+
+[node name="potion-3" parent="Props" instance=ExtResource("30_gtvkw")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 2.4, 1.5199658, -3.2)
+
+[node name="bottle-1" parent="Props" instance=ExtResource("31_xpdfv")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.4, 1.265, -3.1)

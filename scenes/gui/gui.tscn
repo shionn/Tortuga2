@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=42 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://scripts/gui/gui.gd" id="1_0fbet"]
 [ext_resource type="Script" uid="uid://ikfx1cjqumpb" path="res://scripts/gui/dialog.gd" id="2_bgohe"]
@@ -34,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://caskn8urwgnuf" path="res://assets/gui/resources-pack-1/Paper-h-48.png" id="29_dfsdp"]
 [ext_resource type="Texture2D" uid="uid://bflwiwnggjwxk" path="res://assets/imgs/ducklingfeather3-h-48.png" id="30_de8cu"]
 [ext_resource type="Script" uid="uid://ctarrtmkkg1ji" path="res://scripts/gui/transition.gd" id="31_xyc4b"]
+[ext_resource type="Texture2D" uid="uid://k6j5sim1krjy" path="res://assets/gui/survival-tools/pickaxe.png" id="32_feoca"]
 [ext_resource type="Texture2D" uid="uid://c6a0uy7r31qp5" path="res://assets/gui/resources-pack-1/Minerals-h-48.png" id="34_rjb4a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yw5qc"]
@@ -986,6 +987,15 @@ tooltip_text = "Plume"
 texture_normal = ExtResource("30_de8cu")
 script = ExtResource("11_s1h2m")
 description = "Plume d'un oiseau géant vivant dans les montagnes de tortuga."
+
+[node name="Pioche" type="TextureButton" parent="Items"]
+layout_mode = 0
+offset_right = 58.0
+offset_bottom = 48.0
+tooltip_text = "Pioche"
+texture_normal = ExtResource("32_feoca")
+script = ExtResource("11_s1h2m")
+description = "Une pioche pour miner."
 
 [node name="PotionDegrisement" type="TextureButton" parent="Items"]
 layout_mode = 0

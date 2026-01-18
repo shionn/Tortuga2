@@ -23,24 +23,27 @@
 - https://opengameart.org/content/32x32-fantasy-portrait-set
 - https://fr.wikipedia.org/wiki/Houblon
 - https://opengameart.org/content/duck-duckling-feather-vector-sprites
+- https://opengameart.org/content/free-2d-survival-tools
 
 ## Model 3d
 - https://kenney.nl/assets
+- https://opengameart.org/content/crafting-items
 - https://opengameart.org/content/fruit-pack-01
 - https://opengameart.org/content/lowpoly-animated-farm-animal-pack
+- https://opengameart.org/content/rpg-item-collection-1
 - https://opengameart.org/content/rpg-item-collection-2
 - https://opengameart.org/content/sign-plate-1
+- https://opengameart.org/content/skull-1
 - https://opengameart.org/content/spyglass
 - https://sketchfab.com/3d-models/birds-nest-from-poly-by-google-a04a9be3fe7841448bc6ea7a8b742a47
-- https://opengameart.org/content/skull-1
 
-### potentiel
+### potentiel ?
 
 - https://opengameart.org/content/broken-stone-slab ?
+- https://opengameart.org/content/cethiels-weapons-3d ?
 - https://opengameart.org/content/desert-rock ?
 - https://opengameart.org/content/free-low-poly-lava-plants ?
 - https://opengameart.org/content/free-mid-poly-stylized-swamp-remastered ?
-- https://opengameart.org/content/free-mine-assets-pack ?
 - https://opengameart.org/content/gems ?
 - https://opengameart.org/content/handpainted-style-rocks ?
 - https://opengameart.org/content/inventory-items ?
@@ -51,10 +54,8 @@
 - https://opengameart.org/content/modular-terrain ?
 - https://opengameart.org/content/mossy-stone-rock ?
 - https://opengameart.org/content/polygon-forest ?
-- https://opengameart.org/content/rpg-item-collection-1 ?
 - https://opengameart.org/content/rpg-item-collection-3 ?
-- https://opengameart.org/content/simple-3d-crystals-unwrapped-simple-texture ?
-- https://opengameart.org/content/skull-1
+- https://opengameart.org/content/simple-3d-crystals-unwrapped-simple-texture
 - https://opengameart.org/content/32x32-fantasy-portrait-set
 
 ### c'est non :

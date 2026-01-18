@@ -8,7 +8,17 @@ func on_interact() -> void:
 		Dialogs.default_hung_connut_search_charpentier(self),
 		Dialogs.default_hung_connut_search_wood(self),
 		Dialogs.default_hung_connut_search_houblon(self),
-		Dialogs.default_search_wind(self)
+		Dialogs.default_search_wind(self),
+		PnjDialogOption.new(
+			func() : return true,
+			"Je voudrais une hache",
+			func() : gui.open_dialog(pnj_name, "Ne touche pas à MES haches.")
+		),
+		PnjDialogOption.new(
+			func() : return bag.contain(Bag.ListInvocationVent) and not bag.contain(Bag.Pioche),
+			"Est-ce que tu as une pioche ?",
+			func() : gui.open_dialog(pnj_name, _TEXT_PICKAXE)
+		)
 	])
 
 const _TEXT = """Bonjour. 
@@ -16,3 +26,7 @@ const _TEXT = """Bonjour.
 Mon nom est imprononçable pour vous les humains. Vos semblables m'appellent Orco, je suis l'armurier du village. 
 
 Actuellement l'armurerie est fermée, nous ouvrons quand les tambours de guerre résonnent."""
+
+const _TEXT_PICKAXE = """Une pioche ? C’est pas une arme, enfin certain s’en servent comme une arme mais ca vaut pas une hache. 
+
+Ouai j’en ai une qui traine prend la si tu veux."""

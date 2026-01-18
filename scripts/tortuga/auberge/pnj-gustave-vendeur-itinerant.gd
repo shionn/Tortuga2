@@ -58,9 +58,9 @@ Je peux te trouver n'importe quoi qu'on ne trouve pas naturellement sur l'île.
 
 T'aurais pas vu Kindle ? Comment ça ? Tu connais pas Kindle ? Kindle ben c'est mon cheval pardi !"""
 
-const _TEXT_AFTER_KINDLE_RETURN = """Merci de m’avoir rapporté kindle. 
+const _TEXT_AFTER_KINDLE_RETURN = """Merci hein ! Yaaa, Milles merci de m’avoir rapporté mon Kindle ! Vilain Kindle, t’as pas intérêt à en mettre partout cette fois ci et si tu continues je vais devoir t’attacher à un arbre.
 
-Est-ce que je peux te vendre pour t’aider ?"""
+Est-ce que je peux faire quelque chose pour toi pour te remercier ? """
 
 const _TEXT_SEARCH_WOOD = """Ah yo les amis ! Mais bien sûr que je peux vous trouver du bois! Qu’est ce que vous croyez, Gutsaf il peut tout avoir ya. Mais Gustaf demande quelque chose en échange aussi ya. 
 
@@ -68,15 +68,17 @@ Mon poney, Kindle, ce satané buté d’animal a disparu, ya, il est surement al
 
 J’ai pas encore réussi à le retrouver, si tu m’aides alors ça me laissera le temps de te trouver du bois et tu me rendras service ya! Alors tu acceptes ?"""
 
-const _TEXT_SEARCH_WOOD_AFTER_KINDLE = """Pour te remercier de m’avoir rapporté kindle, je veux bien te donner une montagne de bois de qualitée. 
+const _TEXT_SEARCH_WOOD_AFTER_KINDLE = """Pour te remercier de m’avoir rapporté mon Kindle, je veux bien te donner une montagne de bois de qualité ya, parce que Gustaf il a que de la qualité tu vois. 
 
-Mais après ça je considère avoir payé ma dette. """
+Et comme ça on sera quitte ya, c’est important de  payer ses dettes !"""
 
 const _TEXT_RETURN_KINDLE = """Merci ! Mille merci de m’avoir rapporté mon kindle ! 
 
 Est-ce que je peux faire quelque chose pour toi ?"""
 
-const _TEST_SHOW_HOUBLON = """Mon Kindle adore le houblon, il suivrait n’importe qui du moment que cette personne lui en montre."""
+const _TEST_SHOW_HOUBLON = """Mon Kindle adore le houblon ya, il est malade comme un sac à puces avec, mais il suivrait n’importe qui du moment que tu lui présente du Houblon.
+
+Il est accro ya, c’est une plaie."""
 
 const _TEXT_SEARCH_WIND = """Du vent ? Mais y a plus de vent, tu vois bien! Moi j’ai qu’un talisman qui fait pfffff quand j'éternue mais ça fait pas assez de vent ya. 
 

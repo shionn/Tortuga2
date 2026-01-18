@@ -24,6 +24,7 @@ func on_search_sobering_potion() -> void:
 func on_item_drop(item : Item) -> void:
 	if item.name == Bag.ParcheminBarbeDrue :
 		gui.open_dialog(pnj_name, _TEXT_PARCHEMIN_BARBE_DRUE)
+		tags.add(Tags.TREASUR_BARBE_DRUE_OPENED)
 		tags.add(Tags.FORBID_FRUIT_SEARCH)
 	elif item.name == Bag.Melon && not player.tags.have(Tags.BRASSERIE_HAVE_SOBERING_POTION) :
 		gui.open_dialog(pnj_name,_TEXT_GIVE_MELON)

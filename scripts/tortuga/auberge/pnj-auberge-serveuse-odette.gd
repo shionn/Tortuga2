@@ -41,10 +41,10 @@ Les clients sont négligents, ils oublient souvent des choses sur les tables.
 
 N'oubliez rien en repartant."""
 
-const _SEARCH_HOUBLON =  """Ici on n’en vend que sous forme liquide. 
+const _SEARCH_HOUBLON =  """Ici on en vend que sous forme liquide. 
 
-La bière rousse de eve est la meilleure, tout le monde en raffole, surtout Rurik."""
+La bière rousse de Eve est la meilleure, tout le monde en raffole, surtout Rurik. """
 
 const _TEXT_ON_OMELETTE = """Les omelettes aux champignons sont une de nos spécialités, malheureusement nous manquons de champignons en ce moment. 
 
-D’ailleurs Nino, le fermier, en raffole, je ne sais pas comment il va le prendre quand il l'apprendra."""
+D’ailleurs Nino, le fermier, en raffole, je ne sais pas comment il va le prendre quand il le saura le pauvre."""
