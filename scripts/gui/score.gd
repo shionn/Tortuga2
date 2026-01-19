@@ -30,6 +30,7 @@ func compute() -> void :
 	_tag(Tags.KINDLE_RETURN_GUSTAF, 2) # remplace le houblon
 	_tag(Tags.ESCALATOR_CHAMPI_REPAIR, 1) # a voir si on le garde
 	_item(Bag.PasseBarqueTanpon, 1)
+	# on peu perdre 1 pt min et 2 pts max en profanant la tombe de barbe drue
 	
 	self.text = "Score : "+str(value)
 
