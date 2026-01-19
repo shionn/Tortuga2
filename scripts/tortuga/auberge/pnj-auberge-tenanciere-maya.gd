@@ -154,16 +154,16 @@ func _on_ask_cocktail_soft() -> void:
 			func(): _add_ingredient("Pomme",_on_ask_cocktail_soft)
 		), PnjDialogOption.new(
 			func(): return true,
-			"Jus de Framboise",
-			func(): _add_ingredient("Framboise",_on_ask_cocktail_soft)
-		), PnjDialogOption.new(
-			func(): return true,
-			"Jur d'Orange",
-			func(): _add_ingredient("Orange",_on_ask_cocktail_soft)
+			"Jus de Canneberge",
+			func(): _add_ingredient("Canneberge",_on_ask_cocktail_soft)
 		), PnjDialogOption.new(
 			func(): return true,
 			"Eau Gazeuse",
 			func(): _add_ingredient("Gazeuse",_on_ask_cocktail_soft)
+		), PnjDialogOption.new(
+			func(): return true,
+			"Sirop de Sucre",
+			func(): _add_ingredient("Sirop",_on_ask_cocktail_soft)
 		), PnjDialogOption.new(
 			func(): return true,
 			"Assez de Soft",
@@ -197,21 +197,36 @@ func _on_ask_cocktail_glacon() -> void:
 
 func _on_ask_cocktail_no_glacon() -> void : 
 	if _ingredient == "RhumCitronMentheGazeuseSucre" :
-		play_anim_yes()
-		gui.open_dialog(pnj_name, "Un mojito sans Glaçon!")
-		_cocktail.item = "MojitoSansGlace"
-		_cocktail.visible = true
+		_serv_cocktail("Un mojito sans glaçon!", Bag.MojitoSansGlace) 
+	elif  _ingredient == "RhumCitronSirop" : 
+		_serv_cocktail("Un Daïquiri!", "") 
+	elif _ingredient == "VodkaCointreauCannebergeCitron" : 
+		_serv_cocktail("Un Cosmopolitan!", "") 
+	elif _ingredient == "GinCitronGazeuse" : 
+		_serv_cocktail("Un Gin Tonic sans glaçon!", "") 
 	else :
+		_serv_cocktail("Un truc innommable sans glaçon!", "") 
 		play_anim_no()
 
 func _on_ask_cocktail_yes_glacon() -> void : 
 	if _ingredient == "RhumCitronMentheGazeuseSucre" :
-		play_anim_yes()
-		gui.open_dialog(pnj_name, "Un mojito!")
-		_cocktail.item = "Mojito"
-		_cocktail.visible = true
+		_serv_cocktail("Un mojito!", Bag.Mojito) 
+	elif  _ingredient == "RhumCitronSirop" : 
+		_serv_cocktail("Un Daïquiri avec glaçon!", "") 
+	elif _ingredient == "VodkaCointreauCannebergeCitron" : 
+		_serv_cocktail("Un Cosmopolitan avec glaçon!", "") 
+	elif _ingredient == "GinCitronGazeuse" : 
+		_serv_cocktail("Un Gin Tonic!", "") 
 	else :
+		_serv_cocktail("Un truc innommable avec glaçon!", "") 
 		play_anim_no()
+		
+func _serv_cocktail(name: String, item: String) -> void :
+		play_anim_yes()
+		gui.open_dialog(pnj_name, name)
+		_cocktail.item = item
+		_cocktail.visible = true
+	
 
 const _TEXT = """Bonjour aventurier.ère. 
 	

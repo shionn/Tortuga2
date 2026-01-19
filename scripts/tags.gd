@@ -25,6 +25,7 @@ const SEARCH_BARQUE = "021" # a vider
 const SEARCH_PASS = "022" # a vider
 const SEARCH_CAPTAIN_BOTTLE = "023" # a vider
 const ALLOW_PICKAXE = "024"
+const TOMB_BARBE_DRUE_OPENED = "025"
 
 var tags : Array[String] = []
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=109 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=111 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="PackedScene" uid="uid://gjk5y26xk1ud" path="res://assets/graveyard/gravestone/gravestone-bevel.glb" id="1_5xhig"]
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/barbe-drue/bouteille_note_lisible.gd" id="1_c7jrm"]
@@ -90,6 +90,8 @@
 [ext_resource type="PackedScene" uid="uid://da843m2aqgq7r" path="res://assets/mine/tortuga-chaman-60.glb" id="79_0bag0"]
 [ext_resource type="PackedScene" uid="uid://c1sc7qjitvtsi" path="res://assets/pirate/rocks-a.glb" id="80_5x0ot"]
 [ext_resource type="PackedScene" uid="uid://chxfr2yagmg24" path="res://assets/pirate/rocks-c.glb" id="81_4ia42"]
+[ext_resource type="Script" uid="uid://c20ohkwl3gnay" path="res://scripts/tortuga/barbe-drue/pnj-barbe-drue.gd" id="81_uupv5"]
+[ext_resource type="PackedScene" uid="uid://bhtw43qbhppgo" path="res://assets/character/graveyard/character-ghost.glb" id="82_1pfyx"]
 [ext_resource type="PackedScene" uid="uid://dxkgapjtrucm5" path="res://assets/pirate/boats/ship-wreck.glb" id="82_5x0ot"]
 [ext_resource type="PackedScene" uid="uid://bucvch03dkebd" path="res://scenes/tortuga/tortuga_shaman_house.tscn" id="83_4ia42"]
 
@@ -7931,6 +7933,13 @@ shape = SubResource("SphereShape3D_ei0yt")
 
 [node name="tomb-barbe-drue" type="Node3D" parent="Plage-O"]
 transform = Transform3D(0.80426157, 0, 0.5942755, 0, 1, 0, -0.5942755, 0, 0.80426157, -1.1999989, 0.5, 39.799988)
+
+[node name="BarbeDrue" parent="Plage-O/tomb-barbe-drue" instance=ExtResource("44_gnvru")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -0.56973267, 0, 1.4441223)
+visible = false
+script = ExtResource("81_uupv5")
+model = ExtResource("82_1pfyx")
+pnj_name = "Barbe Drue"
 
 [node name="gravestone-cross2" parent="Plage-O/tomb-barbe-drue" instance=ExtResource("17_l2qgb")]
 transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -0.36013794, 0, -0.017425537)

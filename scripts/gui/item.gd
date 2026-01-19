@@ -17,7 +17,7 @@ func _ready() -> void:
 	connect("button_up", _on_button_up)
 
 func isGold() -> bool:
-	return name == Bag.TresorBarbeDrue || Bag.TresorBarbeDrueNet
+	return name == Bag.TresorBarbeDrue || name == Bag.TresorBarbeDrueNet || name == Bag.TresorBarbeDrueMaudit
 
 func on_enter(interactable : Node3D) -> void :
 	self._interactable = interactable
