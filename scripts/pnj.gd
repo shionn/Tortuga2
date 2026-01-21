@@ -9,6 +9,7 @@ class_name PNJ
 @export var animation_loop = true
 @export var model_scale = 1.0
 @export var interactable_distance = 3 as float
+@export var text_y_offset = 0 as float
 
 @onready var gui := $"/root/World/Gui" as Gui
 @onready var bag := $"/root/World/Gui/Bag" as Bag
@@ -19,6 +20,9 @@ class_name PNJ
 @onready var _role_3d := $role as Label3D
 @onready var _player_camera := $"/root/World/Player/CameraPivot/SpringArm3D/Camera3D" as Camera3D
 @onready var _character := $character as Node3D
+
+@onready var _right_arm = $"right-arm"
+@onready var _head = $head
 
 var _animation : AnimationPlayer
 
@@ -35,11 +39,22 @@ func _ready() -> void:
 	if model_scale != 1 : _character.scale = Vector3(model_scale,model_scale,model_scale)
 	add_child(_character)
 	
+	if _right_arm:
+		remove_child(_right_arm)
+		_character.get_node("character-skeleton/root/torso/arm-right").add_child(_right_arm)
+	if _head:
+		remove_child(_head)
+		_character.get_node("character-skeleton/root/torso/head").add_child(_head)
+	
 	_name_3d.text = pnj_name
 	if pnj_role.is_empty() :
 		_role_3d.text = ""
 	else :
 		_role_3d.text = "<"+pnj_role+">"
+		
+	if text_y_offset != 0:
+		_name_3d.translate(Vector3(0,text_y_offset,0))
+		_role_3d.translate(Vector3(0,text_y_offset,0))
 	
 	_animation = _character.get_child(1)
 	var idle = _animation.get_animation("idle")

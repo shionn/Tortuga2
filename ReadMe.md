@@ -38,6 +38,9 @@
 - https://opengameart.org/content/spyglass
 - https://sketchfab.com/3d-models/birds-nest-from-poly-by-google-a04a9be3fe7841448bc6ea7a8b742a47
 
+- "Pirate Asset Pack" (https://skfb.ly/oC6Iz) by FSkala is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+- "pirate hat" (https://skfb.ly/6WXSM) by neutralize (say thanks) is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
 ### potentiel ?
 
 - https://opengameart.org/content/broken-stone-slab ?
@@ -58,6 +61,10 @@
 - https://opengameart.org/content/rpg-item-collection-3 ?
 - https://opengameart.org/content/simple-3d-crystals-unwrapped-simple-texture
 - https://opengameart.org/content/32x32-fantasy-portrait-set
+- https://opengameart.org/content/low-poly-pirate-pack
+
+- https://sketchfab.com/3d-models/polygon-pirate-items-4b7c3022a9b84ad7babc72e21890c5ea
+- https://sketchfab.com/3d-models/pirate-hoard-70f6dc8cdbc24d3ca3cc4f1842a2d407
 
 ### c'est non :
 - https://opengameart.org/content/more-handpainted-rocks : non texture trop grosse 

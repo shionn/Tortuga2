@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://c8y6go07dabnn"]
+[gd_scene load_steps=59 format=3 uid="uid://c8y6go07dabnn"]
 
 [ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="1_hrd0d"]
 [ext_resource type="PackedScene" uid="uid://bn2k1c6mt0j5l" path="res://assets/town/walls/wall-window-shutters.glb" id="2_83rxu"]
@@ -20,11 +20,15 @@
 [ext_resource type="PackedScene" uid="uid://dbk72njpbd4xb" path="res://assets/town/walls/wall-detail-cross.glb" id="8_yxo8k"]
 [ext_resource type="PackedScene" uid="uid://dieherj10wt50" path="res://assets/nature/plant/flower/flower_purpleA.glb" id="9_231o3"]
 [ext_resource type="PackedScene" uid="uid://bkylul71s3oe7" path="res://assets/town/props/stall-bench.glb" id="9_yxo8k"]
+[ext_resource type="Script" uid="uid://brms7hkbq7quj" path="res://scripts/tortuga/boneskull.gd" id="10_1kr38"]
 [ext_resource type="PackedScene" uid="uid://cyajpvnucy6kj" path="res://assets/town/stairs/stairs-wood.glb" id="10_dqx5n"]
 [ext_resource type="PackedScene" uid="uid://dlgo6cpnx2blx" path="res://assets/food-kit/soda-glass.glb" id="10_u3s5o"]
+[ext_resource type="PackedScene" uid="uid://baslvpyulsodd" path="res://assets/character/graveyard/character-skeleton.glb" id="11_3lbvq"]
 [ext_resource type="PackedScene" uid="uid://dsqb6308w0ec1" path="res://assets/town/road/road.glb" id="11_dqx5n"]
 [ext_resource type="Script" uid="uid://gol3tdsmusx2" path="res://scripts/tortuga/auberge/cocktail.gd" id="11_pflt5"]
 [ext_resource type="PackedScene" uid="uid://snopmjtfskcu" path="res://assets/town/walls/wall-doorway-round.glb" id="12_vsl2h"]
+[ext_resource type="PackedScene" uid="uid://wsxyy7oeifnl" path="res://assets/sketchfab/pirate-asset-pack/hook.glb" id="12_w1ok7"]
+[ext_resource type="PackedScene" uid="uid://ce020gq54lbgk" path="res://assets/sketchfab/pirate_hat.glb" id="13_lmn3h"]
 [ext_resource type="PackedScene" uid="uid://cgwwol2ja1lfe" path="res://assets/town/props/overhang.glb" id="15_4iy6t"]
 [ext_resource type="PackedScene" uid="uid://rht7nkabco3w" path="res://assets/pirate/props/chest.glb" id="15_7ouha"]
 [ext_resource type="PackedScene" uid="uid://fxju6y015d38" path="res://assets/low-poly-rpg-item/scroll-2.glb" id="15_ilbcv"]
@@ -95,6 +99,20 @@ transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8
 script = ExtResource("30_hrd0d")
 model = ExtResource("7_hrd0d")
 pnj_name = "Bertan"
+
+[node name="pnj-boneskull" parent="." instance=ExtResource("1_hrd0d")]
+transform = Transform3D(-0.98480767, 0, 0.17364824, 0, 1, 0, -0.17364824, 0, -0.98480767, 2.0000002, 0, 1.7)
+script = ExtResource("10_1kr38")
+model = ExtResource("11_3lbvq")
+pnj_name = "BoneSkull"
+pnj_role = "Pirate Paladin Repenti"
+text_y_offset = 0.2
+
+[node name="right-arm" parent="pnj-boneskull" instance=ExtResource("12_w1ok7")]
+transform = Transform3D(4.808253e-09, -0.11, 1.6609539e-08, -0.11, -4.808253e-09, 2.9116758e-23, 7.260259e-16, -1.6609539e-08, -0.11, -0.19, 0, 0)
+
+[node name="head" parent="pnj-boneskull" instance=ExtResource("13_lmn3h")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0.2, 0)
 
 [node name="cocktail" parent="." instance=ExtResource("10_u3s5o")]
 transform = Transform3D(0.35355338, 0, -0.35355338, 0, 0.5, 0, 0.35355338, 0, 0.35355338, 1.4598294, 0.38548836, -2.9)
