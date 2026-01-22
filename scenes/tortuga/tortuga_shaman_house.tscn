@@ -14,8 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://dhs7effoi2e31" path="res://assets/low-poly-rpg-item/dagger.glb" id="7_38ndb"]
 [ext_resource type="PackedScene" uid="uid://dj2jytbjf6lck" path="res://assets/town/roof/roof.glb" id="7_oofwr"]
 [ext_resource type="PackedScene" uid="uid://d3k6pjo57mt0k" path="res://assets/town/roof/roof-point.glb" id="8_hh7em"]
+[ext_resource type="PackedScene" uid="uid://b1yjus11tsbv2" path="res://assets/sketchfab/lowpoly_cartoon_skull.glb" id="13_newob"]
 [ext_resource type="PackedScene" uid="uid://b022gg8vm5kl5" path="res://assets/food-kit/bottle-oil.glb" id="15_7eygj"]
-[ext_resource type="ArrayMesh" uid="uid://dsddkb0r8erch" path="res://assets/props/skull/skull_monster.obj" id="15_sc7cw"]
 [ext_resource type="PackedScene" uid="uid://84tw8rny2cjc" path="res://assets/food-kit/coconut-half.glb" id="16_sc7cw"]
 [ext_resource type="PackedScene" uid="uid://chtcitcx6elqn" path="res://assets/food-kit/cooking-spoon.glb" id="17_ihacf"]
 [ext_resource type="PackedScene" uid="uid://deboxf6kag0sg" path="res://assets/food-kit/corn.glb" id="18_amt0w"]
@@ -156,10 +156,8 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.099999964, 4.2, -3.2999997)
 [node name="OmniLight3D" type="OmniLight3D" parent="Roof"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -3)
 
-[node name="SkullMonster" type="MeshInstance3D" parent="Roof"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 5.9604645e-08, 4.3, -2)
-mesh = ExtResource("15_sc7cw")
-skeleton = NodePath("../../Walls/wall-wood-doorway-square2")
+[node name="Skull" parent="Roof" instance=ExtResource("13_newob")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.2, -1)
 
 [node name="Props" type="Node3D" parent="."]
 
@@ -180,11 +178,6 @@ transform = Transform3D(0.90630776, -0.42261827, 0, 0.42261827, 0.90630776, 0, 0
 
 [node name="cooking-spoon2" parent="Props" instance=ExtResource("17_ihacf")]
 transform = Transform3D(-0.2598076, 0.14999999, -2.27131e-08, 0.14999999, 0.2598076, 1.3113415e-08, 2.622683e-08, 0, -0.29999998, -0.7904643, 1.35, -3.1841626)
-
-[node name="SkullMonster" type="MeshInstance3D" parent="Props"]
-transform = Transform3D(-0.049999997, 0.022414384, -0.083651625, 1.131334e-09, 0.096592575, 0.025881901, 0.08660253, 0.012940952, -0.048296295, 2.4999998, 1.5, -2.7)
-mesh = ExtResource("15_sc7cw")
-skeleton = NodePath("../..")
 
 [node name="bottle-ketchup2" parent="Props" instance=ExtResource("20_fs54w")]
 transform = Transform3D(1, 1.4901161e-08, 0, 2.9802322e-08, 0.9999999, -2.2351742e-08, -5.9604645e-08, 2.2351742e-08, 1, 2.5000002, 1.4000001, -3.6999998)
@@ -236,3 +229,6 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 2.4, 1.5199658, -3.2
 
 [node name="bottle-1" parent="Props" instance=ExtResource("31_xpdfv")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.4, 1.265, -3.1)
+
+[node name="skull" parent="Props" instance=ExtResource("13_newob")]
+transform = Transform3D(-0.042261824, 0, -0.09063078, 0, 0.1, 0, 0.09063077, 0, -0.042261824, 2.2999997, 1.4913393, -2.7)

@@ -34,7 +34,6 @@
 - https://opengameart.org/content/rpg-item-collection-1
 - https://opengameart.org/content/rpg-item-collection-2
 - https://opengameart.org/content/sign-plate-1
-- https://opengameart.org/content/skull-1
 - https://opengameart.org/content/spyglass
 - https://sketchfab.com/3d-models/birds-nest-from-poly-by-google-a04a9be3fe7841448bc6ea7a8b742a47
 - "Lowpoly Cartoon Skull - Zelda Wind Waker" (https://skfb.ly/o7P6w) by Citron Legacy is licensed under Creative Commons Attribution-ShareAlike (http://creativecommons.org/licenses/by-sa/4.0/).

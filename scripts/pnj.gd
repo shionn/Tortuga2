@@ -38,13 +38,13 @@ func _ready() -> void:
 	_character = model.instantiate()
 	if model_scale != 1 : _character.scale = Vector3(model_scale,model_scale,model_scale)
 	add_child(_character)
-	
+	 
 	if _right_arm:
 		remove_child(_right_arm)
-		_character.get_node("character-skeleton/root/torso/arm-right").add_child(_right_arm)
+		_character.get_child(0).get_node("root/torso/arm-right").add_child(_right_arm)
 	if _head:
 		remove_child(_head)
-		_character.get_node("character-skeleton/root/torso/head").add_child(_head)
+		_character.get_child(0).get_node("root/torso/head").add_child(_head)
 	
 	_name_3d.text = pnj_name
 	if pnj_role.is_empty() :

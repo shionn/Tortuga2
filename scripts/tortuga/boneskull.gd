@@ -8,7 +8,7 @@ func on_interact() -> void:
 			func(): return bag.contain(Bag.ListInvocationVent),
 			"Comment t'as perdu ta main ?",
 			_open_story_lost_hand
-		)])
+		)]) 
 	)])
 	
 func _open_story_lost_hand() -> void : 
