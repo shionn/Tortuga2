@@ -11,8 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://dctyc7h2rad0r" path="res://assets/nature/plant/crops/crops_wheatStageA.glb" id="9_lt4hb"]
 [ext_resource type="PackedScene" uid="uid://5hft8xcwmxjo" path="res://assets/nature/plant/crops/crop_melon.glb" id="10_lt4hb"]
 [ext_resource type="Script" uid="uid://vrseuhaxautc" path="res://scripts/fix_color.gd" id="11_ogdc5"]
-[ext_resource type="Script" uid="uid://wff5kowb2n5l" path="res://scripts/tortuga/culture-melon.gd" id="11_u0kcl"]
-[ext_resource type="Script" uid="uid://gl8u8htu7d03" path="res://scripts/tortuga/culture-houblon.gd" id="13_nh65g"]
+[ext_resource type="Script" uid="uid://wff5kowb2n5l" path="res://scripts/tortuga/crique/culture-melon.gd" id="11_u0kcl"]
+[ext_resource type="Script" uid="uid://gl8u8htu7d03" path="res://scripts/tortuga/crique/culture-houblon.gd" id="13_nh65g"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_u0kcl"]
 radius = 0.25131527

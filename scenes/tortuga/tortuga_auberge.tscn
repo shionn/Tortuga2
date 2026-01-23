@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://dbk72njpbd4xb" path="res://assets/town/walls/wall-detail-cross.glb" id="8_yxo8k"]
 [ext_resource type="PackedScene" uid="uid://dieherj10wt50" path="res://assets/nature/plant/flower/flower_purpleA.glb" id="9_231o3"]
 [ext_resource type="PackedScene" uid="uid://bkylul71s3oe7" path="res://assets/town/props/stall-bench.glb" id="9_yxo8k"]
-[ext_resource type="Script" uid="uid://brms7hkbq7quj" path="res://scripts/tortuga/boneskull.gd" id="10_1kr38"]
+[ext_resource type="Script" uid="uid://brms7hkbq7quj" path="res://scripts/tortuga/auberge/boneskull.gd" id="10_1kr38"]
 [ext_resource type="PackedScene" uid="uid://cyajpvnucy6kj" path="res://assets/town/stairs/stairs-wood.glb" id="10_dqx5n"]
 [ext_resource type="PackedScene" uid="uid://dlgo6cpnx2blx" path="res://assets/food-kit/soda-glass.glb" id="10_u3s5o"]
 [ext_resource type="PackedScene" uid="uid://baslvpyulsodd" path="res://assets/character/graveyard/character-skeleton.glb" id="11_3lbvq"]

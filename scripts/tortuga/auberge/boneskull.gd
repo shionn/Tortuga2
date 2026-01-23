@@ -10,6 +10,12 @@ func on_interact() -> void:
 			_open_story_lost_hand
 		)]) 
 	)])
+
+func on_item_drop(_item : Item) -> void:
+	if _item.name == Bag.ListInvocationVent: 
+		gui.open_dialog(pnj_name, _TEXT_4)
+	else : 
+		super.on_item_drop(_item)
 	
 func _open_story_lost_hand() -> void : 
 	gui.open_dialog(pnj_name, _TEXT_3)
@@ -21,3 +27,4 @@ const _TEXT_2 = "une premiere histoire qui raconte ta rencontre avec wisp et que
 const _TEXT_3 = "Un histoire assez precise qui explique comment tu as perdu ta main. 
 Il faudrait que lors d'une aventure vous vous êtes echoué sur une ile, a cause d'une intemperie, a cause d'une attaque de monstra marrin comme un kraken, comme tu veux. 
 Tu t'es retrouver avec le bras coincer dans l'epave du bateau. Whisp est partit chercher du secours, mais comme d'hab il a oublier (le whisp du jeu oublie tous) Et t'as été obliger de te couper toi même la main pour survive."
+const _TEXT_4 = "Tu veux que je te donne un de mes ossement ? ca va pas la tête."

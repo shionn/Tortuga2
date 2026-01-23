@@ -37,7 +37,6 @@
 - https://opengameart.org/content/spyglass
 - https://sketchfab.com/3d-models/birds-nest-from-poly-by-google-a04a9be3fe7841448bc6ea7a8b742a47
 - "Lowpoly Cartoon Skull - Zelda Wind Waker" (https://skfb.ly/o7P6w) by Citron Legacy is licensed under Creative Commons Attribution-ShareAlike (http://creativecommons.org/licenses/by-sa/4.0/).
-
 - "Pirate Asset Pack" (https://skfb.ly/oC6Iz) by FSkala is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 - "pirate hat" (https://skfb.ly/6WXSM) by neutralize (say thanks) is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 

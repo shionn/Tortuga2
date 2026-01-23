@@ -32,6 +32,8 @@ func on_item_drop(item : Item) -> void:
 		bag.loot(Bag.PasseBarque)
 		tags.remove(Tags.SEARCH_CAPTAIN_BOTTLE)
 		tags.remove(Tags.SEARCH_PASS)
+	elif item.name == Bag.ListInvocationVent:
+		gui.open_dialog(pnj_name, _TEXT_ASK_BONE)
 	else :
 		super.on_item_drop(item)
 
@@ -81,3 +83,7 @@ Par le Kraken, je commence à me dessécher ! Allez houste je dois chercher ma f
 const TEXT_ON_BOTTLE = """Ici ? Ah mais oui la voilà! ma flasque enfin retrouvée ! Bon vous avez de la chance en fouillant dans mes frasques j’ai retrouvé le Pass ! Mais pour qu’il soit valide, faut le faire tamponner par Rurik. 
 
 Voilà allez houste, j’ai besoin de repos… eeuuuuh non de calme je veux dire, de calme pour réfléchir voilà !"""
+
+const _TEXT_ASK_BONE = """Quoi tu veux que je te donne un de mes os ? Mais ça ne va pas ! J’en ai besoin. Tu veux pas demander à quelqu’un d’autre ? Y a d'autres pirates qui ont subi la même malédiction que moi. 
+
+La plupart des pirates meurent en mer, aussi y a très peu de cadavres sur l'île. Et puis faudrait être fou pour profaner une tombe."""

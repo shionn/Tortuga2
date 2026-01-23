@@ -25,9 +25,9 @@ func _open_tomb() -> void :
 	tags.add(Tags.TOMB_BARBE_DRUE_OPENED)
 	gui.open_dialog("Barbe Drue", _TEXT_PROFANATION)
 	
-const _TEXT_PROFANATION = """Pour avoir profané ma tombe pris un de mes ossements, ta punition sera la perte de mon trésor. 
+const _TEXT_PROFANATION = """Maudit sois tu Pirate ! Tu oses profaner ma tombe et prendre un de mes ossements ? En guise de punition je reprends mon trésor ! 
 
-Profite bien de mon ossement et des quelques piécettes que je te laisse."""
+Profites bien de mon ossement et des quelques piécettes que je te laisse."""
 
 const _TEXT_PREVENT_PROFANATION = """Je pourrai profané la tombe et prendre un ossement pour le rituel. Mais une tombe est sacrée. 
 

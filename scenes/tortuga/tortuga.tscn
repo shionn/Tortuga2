@@ -1,8 +1,8 @@
-[gd_scene load_steps=111 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=114 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="PackedScene" uid="uid://gjk5y26xk1ud" path="res://assets/graveyard/gravestone/gravestone-bevel.glb" id="1_5xhig"]
-[ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/barbe-drue/bouteille_note_lisible.gd" id="1_c7jrm"]
-[ext_resource type="Script" uid="uid://bkxghrcx478fh" path="res://scripts/tortuga/barbe-drue/bouteille_note_illisible.gd" id="1_jit35"]
+[ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/crique/bouteille_note_lisible.gd" id="1_c7jrm"]
+[ext_resource type="Script" uid="uid://bkxghrcx478fh" path="res://scripts/tortuga/crique/bouteille_note_illisible.gd" id="1_jit35"]
 [ext_resource type="PackedScene" uid="uid://b5xtrnp1f2eg7" path="res://assets/pirate/props/bottle.glb" id="1_wohch"]
 [ext_resource type="Script" uid="uid://wy3vixpfla76" path="res://scripts/tortuga/hung-connut/stone-hung-connut.gd" id="2_7h4df"]
 [ext_resource type="PackedScene" uid="uid://dn1b4sjm530aw" path="res://assets/pirate/plant/grass.glb" id="2_wohch"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://nuvlejq8qd0s" path="res://assets/pirate/plant/palm-bend.glb" id="4_c7jrm"]
 [ext_resource type="PackedScene" uid="uid://biv43nrtuadi8" path="res://assets/pirate/plant/palm-detailed-bend.glb" id="5_iswrd"]
 [ext_resource type="PackedScene" uid="uid://bagjq72im08wg" path="res://assets/pirate/plant/grass-plant.glb" id="6_j21kd"]
-[ext_resource type="Script" uid="uid://b8l6pcos8ev35" path="res://scripts/tortuga/barbe-drue/parchemin-coline-q1.gd" id="6_tny17"]
+[ext_resource type="Script" uid="uid://b8l6pcos8ev35" path="res://scripts/tortuga/crique/parchemin-coline-q1.gd" id="6_tny17"]
 [ext_resource type="PackedScene" uid="uid://ckwih5ror4ch4" path="res://assets/pirate/structures/platform-no-colid.glb" id="11_tny17"]
 [ext_resource type="PackedScene" uid="uid://vw74rm8d4xum" path="res://assets/town/planks/planks-simple.glb" id="14_8eg22"]
 [ext_resource type="PackedScene" uid="uid://dmaafib4va3vr" path="res://assets/pirate/flag/flag-pirate-high-pennant.glb" id="15_l2qgb"]
@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://cw6drohyqv0hi" path="res://assets/graveyard/gravestone/gravestone-cross.glb" id="17_l2qgb"]
 [ext_resource type="PackedScene" uid="uid://cddoflww4nmld" path="res://assets/graveyard/wall/brick-wall.glb" id="18_8eg22"]
 [ext_resource type="PackedScene" uid="uid://m5x8alnnip8v" path="res://assets/pirate/plant/grass-patch.glb" id="18_bsjpt"]
-[ext_resource type="Script" uid="uid://c645dmkubin6h" path="res://scripts/tortuga/barbe-drue/tomb-barde-drue.gd" id="18_pie5s"]
+[ext_resource type="Script" uid="uid://c645dmkubin6h" path="res://scripts/tortuga/plage-o/tomb-barde-drue.gd" id="18_pie5s"]
 [ext_resource type="PackedScene" uid="uid://dqjvdao1ganeg" path="res://assets/nature/path/path_stone.glb" id="19_duvqq"]
 [ext_resource type="PackedScene" uid="uid://cxya32nmglnq4" path="res://scenes/tortuga/tortuga_wall.tscn" id="19_n6usc"]
 [ext_resource type="PackedScene" uid="uid://d2d7oty4ebqab" path="res://scenes/tortuga/tortuga_capitainerie.tscn" id="20_eu0va"]
@@ -29,7 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://cy1emgfc3p51p" path="res://assets/pirate/structures/structure-fence-sides.glb" id="21_lrpya"]
 [ext_resource type="PackedScene" uid="uid://bw666kf55m31r" path="res://assets/pirate/structures/structure-platform-dock-long.glb" id="22_8hael"]
 [ext_resource type="PackedScene" uid="uid://rht7nkabco3w" path="res://assets/pirate/props/chest.glb" id="22_aveh0"]
-[ext_resource type="Script" uid="uid://s2din2pw3tj7" path="res://scripts/tortuga/barbe-drue/coffre-barde-drue.gd" id="23_bsjpt"]
+[ext_resource type="Script" uid="uid://s2din2pw3tj7" path="res://scripts/tortuga/plage-o/coffre-barde-drue.gd" id="23_bsjpt"]
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://scenes/water/WaterPlane.tscn" id="23_nxrjy"]
 [ext_resource type="PackedScene" uid="uid://bc454sdsvgswp" path="res://scenes/tortuga/tortuga_oasis_arbre_defendu.tscn" id="24_6ef8d"]
 [ext_resource type="PackedScene" uid="uid://c8y6go07dabnn" path="res://scenes/tortuga/tortuga_auberge.tscn" id="24_ew2kh"]
@@ -39,7 +39,7 @@
 [ext_resource type="PackedScene" uid="uid://dpjhqteufdpw7" path="res://assets/props/oga_scroll.glb" id="27_ggmis"]
 [ext_resource type="PackedScene" uid="uid://blifncbh7xys7" path="res://scenes/tortuga/tortuga_reserve_d_or.tscn" id="27_veopy"]
 [ext_resource type="PackedScene" uid="uid://ukreens1wy4a" path="res://scenes/tortuga/tortuga_wall_coffre.tscn" id="28_b2pjt"]
-[ext_resource type="Script" uid="uid://co84wje5bypgt" path="res://scripts/tortuga/barbe-drue/parchemin-montagne-capitainerie.gd" id="28_ggmis"]
+[ext_resource type="Script" uid="uid://co84wje5bypgt" path="res://scripts/tortuga/crique/parchemin-montagne-capitainerie.gd" id="28_ggmis"]
 [ext_resource type="PackedScene" uid="uid://bagm6lyjb83lg" path="res://scenes/tortuga/tortuga_brasserie.tscn" id="29_w1jow"]
 [ext_resource type="PackedScene" uid="uid://bqwr1sdl4wvhs" path="res://scenes/tortuga/tortuga_armurerie.tscn" id="30_5obc8"]
 [ext_resource type="PackedScene" uid="uid://bl8gqk34ub2cy" path="res://assets/pirate/props/crate-bottles.glb" id="31_acrrl"]
@@ -52,7 +52,7 @@
 [ext_resource type="PackedScene" uid="uid://dr8atgydxkkga" path="res://scenes/tortuga/tortuga_champ_culture.tscn" id="43_3anhr"]
 [ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="44_gnvru"]
 [ext_resource type="Script" uid="uid://jpax05wqdl26" path="res://scripts/tortuga/pnj-fermier-nino.gd" id="45_3lmt7"]
-[ext_resource type="Script" uid="uid://ct0xwefe3spi0" path="res://scripts/tortuga/tonneau-rhum-vide.gd" id="45_e43uk"]
+[ext_resource type="Script" uid="uid://ct0xwefe3spi0" path="res://scripts/tortuga/crique/tonneau-rhum-vide.gd" id="45_e43uk"]
 [ext_resource type="PackedScene" uid="uid://cjxowsxfha55l" path="res://assets/character/graveyard/character-keeper.glb" id="46_mi0el"]
 [ext_resource type="Script" uid="uid://byytwdq7gbio6" path="res://scripts/tortuga/montagne-champi/escalator_casser.gd" id="48_7h4df"]
 [ext_resource type="PackedScene" uid="uid://bun08nin6q33j" path="res://scenes/tortuga/tortuga_manoir.tscn" id="48_n6usc"]
@@ -84,16 +84,18 @@
 [ext_resource type="Script" uid="uid://bb5eawq7jr0a7" path="res://scripts/tortuga/montagne-champi/pnj-charpentier-ryland.gd" id="70_mgx4c"]
 [ext_resource type="PackedScene" uid="uid://b2qtcc1xvlpgx" path="res://assets/character/base/character-male-e.glb" id="71_5xe8w"]
 [ext_resource type="Script" uid="uid://0e55yd0bunhc" path="res://scripts/tortuga/mountain-salt.gd" id="71_nt70y"]
-[ext_resource type="Script" uid="uid://bcbqah35ja3ow" path="res://scripts/tortuga/pnj-kindle.gd" id="72_ei0yt"]
+[ext_resource type="Script" uid="uid://bcbqah35ja3ow" path="res://scripts/tortuga/plage-o/pnj-kindle.gd" id="72_ei0yt"]
 [ext_resource type="PackedScene" uid="uid://hjvlc1djuf55" path="res://assets/farm-animals-quaternius/Horse.glb" id="73_ei0yt"]
 [ext_resource type="PackedScene" uid="uid://dbglnuyw67vwg" path="res://assets/character/base/character-male-c.glb" id="74_waae6"]
 [ext_resource type="PackedScene" uid="uid://da843m2aqgq7r" path="res://assets/mine/tortuga-chaman-60.glb" id="79_0bag0"]
 [ext_resource type="PackedScene" uid="uid://c1sc7qjitvtsi" path="res://assets/pirate/rocks-a.glb" id="80_5x0ot"]
 [ext_resource type="PackedScene" uid="uid://chxfr2yagmg24" path="res://assets/pirate/rocks-c.glb" id="81_4ia42"]
-[ext_resource type="Script" uid="uid://c20ohkwl3gnay" path="res://scripts/tortuga/barbe-drue/pnj-barbe-drue.gd" id="81_uupv5"]
+[ext_resource type="Script" uid="uid://c20ohkwl3gnay" path="res://scripts/tortuga/plage-o/pnj-barbe-drue.gd" id="81_uupv5"]
 [ext_resource type="PackedScene" uid="uid://bhtw43qbhppgo" path="res://assets/character/graveyard/character-ghost.glb" id="82_1pfyx"]
 [ext_resource type="PackedScene" uid="uid://dxkgapjtrucm5" path="res://assets/pirate/boats/ship-wreck.glb" id="82_5x0ot"]
 [ext_resource type="PackedScene" uid="uid://bucvch03dkebd" path="res://scenes/tortuga/tortuga_shaman_house.tscn" id="83_4ia42"]
+[ext_resource type="PackedScene" uid="uid://bl2708nqrp3qg" path="res://assets/character/graveyard/character-skeleton-right-arm.glb" id="90_ifuss"]
+[ext_resource type="Script" uid="uid://dpmq6l4p3uks7" path="res://scripts/tortuga/plage-o/bone-skull-arm.gd" id="91_3q3tr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c7jrm"]
 size = Vector3(0.2, 0.44476318, 0.2)
@@ -137,6 +139,9 @@ size = Vector3(6.219531, 1, 2.9956787)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e43uk"]
 size = Vector3(0.4, 0.4392578, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e5nqo"]
+size = Vector3(0.22192383, 0.17198181, 0.10864258)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_yna1o"]
 
@@ -7895,6 +7900,19 @@ transform = Transform3D(-2.9885845, 0, 0.2614665, 0, 5.999996, 0, -0.2614665, 0,
 
 [node name="Plage-O" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -266)
+
+[node name="ship-wreck2" parent="Plage-O" instance=ExtResource("82_5x0ot")]
+transform = Transform3D(0.9331913, -0.18549375, 0.3078087, 0.12347065, 0.9698465, 0.21012652, -0.33750427, -0.15808287, 0.92795503, -1, -0.70000005, -88.599976)
+
+[node name="character-skeleton-right-arm" parent="Plage-O/ship-wreck2" instance=ExtResource("90_ifuss")]
+transform = Transform3D(0.9564941, -0.0564777, 0.28624013, 0.067058936, 0.99737716, -0.027291477, -0.28394672, 0.04529859, 0.95777005, 1.0315399, 0.16352463, 1.7166138)
+script = ExtResource("91_3q3tr")
+
+[node name="Area3D" type="Area3D" parent="Plage-O/ship-wreck2/character-skeleton-right-arm"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plage-O/ship-wreck2/character-skeleton-right-arm/Area3D"]
+transform = Transform3D(1, 4.0233135e-07, -2.9802322e-07, 7.450581e-09, 0.99999505, 1.4901161e-08, -2.9802322e-08, 6.92904e-07, 0.9999999, -0.28103638, 0.3734913, 0.010620117)
+shape = SubResource("BoxShape3D_e5nqo")
 
 [node name="Kindle" type="CharacterBody3D" parent="Plage-O"]
 transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, -35, 1.5, -26)
