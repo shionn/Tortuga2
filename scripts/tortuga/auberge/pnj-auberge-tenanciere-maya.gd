@@ -86,62 +86,23 @@ func _on_ask_cocktail_liqueur() -> void:
 	gui.open_dialog(pnj_name,"Ajouter une Liqueur ?").with_options([
 		PnjDialogOption.new(
 			func(): return true,
-			"De Café",
+			"Crême de Café",
 			func(): _add_ingredient("Café",_on_ask_cocktail_liqueur)
 		), PnjDialogOption.new(
 			func(): return true,
-			"De Cassis",
-			func(): _add_ingredient("Cassis",_on_ask_cocktail_liqueur)
+			"Crême de Franboise",
+			func(): _add_ingredient("Franboise",_on_ask_cocktail_liqueur)
 		), PnjDialogOption.new(
 			func(): return true,
-			"Du Cointreau",
+			"Cointreau",
 			func(): _add_ingredient("Cointreau",_on_ask_cocktail_liqueur)
 		), PnjDialogOption.new(
 			func(): return true,
+			"Crême de Whisky",
+			func(): _add_ingredient("Whisky",_on_ask_cocktail_liqueur)
+		), PnjDialogOption.new(
+			func(): return true,
 			"Assez de liqueur",
-			_on_ask_cocktail_fruit
-		)
-	])
-
-
-func _on_ask_cocktail_fruit() -> void:
-	gui.open_dialog(pnj_name,"Ajouter un fruit ?").with_options([
-		PnjDialogOption.new(
-			func(): return true,
-			"Du Citron",
-			func(): _add_ingredient("Citron",_on_ask_cocktail_fruit)
-		), PnjDialogOption.new(
-			func(): return true,
-			"Une Cerise",
-			func(): _add_ingredient("Cerise",_on_ask_cocktail_fruit)
-		), PnjDialogOption.new(
-			func(): return true,
-			"Une rondelle Orange",
-			func(): _add_ingredient("Orange",_on_ask_cocktail_fruit)
-		), PnjDialogOption.new(
-			func(): return true,
-			"Du Melon",
-			func(): _add_ingredient("Melon",_on_ask_cocktail_fruit)
-		), PnjDialogOption.new(
-			func(): return true,
-			"Assez de Fruit",
-			_on_ask_cocktail_plante
-		)
-	])
-
-func _on_ask_cocktail_plante() -> void:
-	gui.open_dialog(pnj_name,"Ajouter une plante ?").with_options([
-		PnjDialogOption.new(
-			func(): return true,
-			"De la Menthe",
-			func(): _add_ingredient("Menthe",_on_ask_cocktail_plante)
-		), PnjDialogOption.new(
-			func(): return true,
-			"De la Tomate",
-			func(): _add_ingredient("Tomate",_on_ask_cocktail_plante)
-		), PnjDialogOption.new(
-			func(): return true,
-			"Assez de plante",
 			_on_ask_cocktail_soft
 		)
 	])
@@ -150,16 +111,16 @@ func _on_ask_cocktail_soft() -> void:
 	gui.open_dialog(pnj_name,"Ajouter un Soft ?").with_options([
 		PnjDialogOption.new(
 			func(): return true,
-			"Jus de Pomme",
-			func(): _add_ingredient("Pomme",_on_ask_cocktail_soft)
+			"Jus d'Ananas",
+			func(): _add_ingredient("Ananas",_on_ask_cocktail_soft)
 		), PnjDialogOption.new(
 			func(): return true,
-			"Jus de Canneberge",
-			func(): _add_ingredient("Canneberge",_on_ask_cocktail_soft)
+			"Jus d'Orange",
+			func(): _add_ingredient("Orange",_on_ask_cocktail_soft)
 		), PnjDialogOption.new(
 			func(): return true,
-			"Eau Gazeuse",
-			func(): _add_ingredient("Gazeuse",_on_ask_cocktail_soft)
+			"Eau de Seltz",
+			func(): _add_ingredient("Seltz",_on_ask_cocktail_soft)
 		), PnjDialogOption.new(
 			func(): return true,
 			"Sirop de Sucre",
@@ -170,33 +131,39 @@ func _on_ask_cocktail_soft() -> void:
 			_on_ask_cocktail_other
 		)
 	])
+# Ananas Orange Sletz Sirop
 
 func _on_ask_cocktail_other() -> void:
-	gui.open_dialog(pnj_name,"Autre Chose ?").with_options([
+	gui.open_dialog(pnj_name,"Autre chose ?").with_options([
 		PnjDialogOption.new(
 			func(): return true,
-			"Du Sucre",
-			func(): _add_ingredient("Sucre",_on_ask_cocktail_other)
+			"Du Citron",
+			func(): _add_ingredient("Citron",_on_ask_cocktail_other)
 		), PnjDialogOption.new(
 			func(): return true,
-			"Du Sel",
-			func(): _add_ingredient("Sel",_on_ask_cocktail_other)
+			"De la Menthe",
+			func(): _add_ingredient("Menthe",_on_ask_cocktail_other)
 		), PnjDialogOption.new(
 			func(): return true,
-			"Du Poivre",
-			func(): _add_ingredient("Poivre",_on_ask_cocktail_other)
+			"Une rondelle Orange",
+			func(): _add_ingredient("Orange",_on_ask_cocktail_other)
 		), PnjDialogOption.new(
 			func(): return true,
 			"C'est assez",
 			_on_ask_cocktail_glacon
 		)
 	])
-	
+
 func _on_ask_cocktail_glacon() -> void:
 	gui.open_yes_no_question(pnj_name, "Avec des Glacon ?", _on_ask_cocktail_no_glacon, _on_ask_cocktail_yes_glacon)
 
+# Rhum Gin Vodka Téquila
+# Café Franboise Cointreau Whisky
+# Ananas Orange Seltz Sirop
+# Citron Menthe Orange
+
 func _on_ask_cocktail_no_glacon() -> void : 
-	if _ingredient == "RhumCitronMentheGazeuseSucre" :
+	if _isCocktail(["Rhum", "Seltz", "Sirop", "Citron", "Menthe"]) :
 		_serv_cocktail("Un mojito sans glaçon!", Bag.MojitoSansGlace) 
 	elif  _ingredient == "RhumCitronSirop" : 
 		_serv_cocktail("Un Daïquiri!", "") 
@@ -209,7 +176,7 @@ func _on_ask_cocktail_no_glacon() -> void :
 		play_anim_no()
 
 func _on_ask_cocktail_yes_glacon() -> void : 
-	if _ingredient == "RhumCitronMentheGazeuseSucre" :
+	if _isCocktail(["Rhum", "Seltz", "Sirop", "Citron", "Menthe"]) :
 		_serv_cocktail("Un mojito!", Bag.Mojito) 
 	elif  _ingredient == "RhumCitronSirop" : 
 		_serv_cocktail("Un Daïquiri avec glaçon!", "") 
@@ -220,7 +187,17 @@ func _on_ask_cocktail_yes_glacon() -> void :
 	else :
 		_serv_cocktail("Un truc innommable avec glaçon!", "") 
 		play_anim_no()
-		
+
+func _isCocktail(expected : Array[String]) -> bool:
+	var found = true
+	var reste = _ingredient
+	for e in expected:
+		found = found && reste.contains(e)
+		if (found) :
+			reste = reste.replace(e,"")
+	return found and reste == ""
+
+
 func _serv_cocktail(name: String, item: String) -> void :
 		play_anim_yes()
 		gui.open_dialog(pnj_name, name)

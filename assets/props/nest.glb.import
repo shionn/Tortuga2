@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d2s2nsi6mo8um"
-path="res://.godot/imported/nest.glb-6d4f0ffc38e7f77426c7c69300feb1ac.scn"
+path="res://.godot/imported/nest.glb-8d3acdf503945ad56ee2da90dbcbcbcd.scn"
 
 [deps]
 
-source_file="res:///assets/props/nest.glb"
-dest_files=["res://.godot/imported/nest.glb-6d4f0ffc38e7f77426c7c69300feb1ac.scn"]
+source_file="res://assets/props/nest.glb"
+dest_files=["res://.godot/imported/nest.glb-8d3acdf503945ad56ee2da90dbcbcbcd.scn"]
 
 [params]
 
