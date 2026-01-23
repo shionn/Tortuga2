@@ -66,7 +66,7 @@ const _TEXT_SEARCH_WOOD = """Ah yo les amis ! Mais bien sûr que je peux vous tr
 
 Mon poney, Kindle, ce satané buté d’animal a disparu, ya, il est surement allé gambader sur l'île pour manger de l’avoine. C’est pas bon pour lui, ça lui file des gaz et il en met partout. 
 
-J’ai pas encore réussi à le retrouver, si tu m’aides alors ça me laissera le temps de te trouver du bois et tu me rendras service ya! Alors tu acceptes ?"""
+J’ai pas encore réussi à le retrouver, si tu m’aides alors ça me laissera le temps de te trouver du bois et tu me rendras service ya ! Alors tu acceptes ?"""
 
 const _TEXT_SEARCH_WOOD_AFTER_KINDLE = """Pour te remercier de m’avoir rapporté mon Kindle, je veux bien te donner une montagne de bois de qualité ya, parce que Gustaf il a que de la qualité tu vois. 
 
@@ -82,4 +82,4 @@ Il est accro ya, c’est une plaie."""
 
 const _TEXT_SEARCH_WIND = """Du vent ? Mais y a plus de vent, tu vois bien! Moi j’ai qu’un talisman qui fait pfffff quand j'éternue mais ça fait pas assez de vent ya. 
 
-Sinon j’ai un soufflet, pas celui que tu manges, il est à la banane suila, celui avec lequel tu pompes pour avoir de l’air ya.Tu vois ceque c’est? Tiens regarde pfff pfff, ça marche tu peux même souffler sur les braises avec! J’te le fait 5 pièces d’or ? Mais parce que t’as retrouvé Kindle, Allez comme t'hésite, 3 pièces d’or mais j’peux pas descendre plus bas sinon j’ai mal au dos hahahahahahaha ! J’rigole bien sûr mais 3 Pièces  d’or c’est un bon prix! Il dit quoi? Il prend ?"""
+Sinon j’ai un soufflet, pas celui que tu manges, il est à la banane suila, celui avec lequel tu pompes pour avoir de l’air ya. Tu vois ceque c’est ? Tiens regarde pfff pfff, ça marche tu peux même souffler sur les braises avec ! J’te le fait 5 pièces d’or ? Mais parce que t’as retrouvé Kindle, Allez comme t'hésite, 3 pièces d’or mais j’peux pas descendre plus bas sinon j’ai mal au dos hahahahahahaha ! J’rigole bien sûr mais 3 Pièces d’or c’est un bon prix! Il dit quoi ? Il prend ?"""

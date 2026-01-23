@@ -32,7 +32,13 @@ func on_interact() -> void:
 func _on_search_wind() :
 	gui.open_dialog(pnj_name, _TEXT_SEARCH_WIND)
 	bag.loot(Bag.ListInvocationVent)
-	
+
+func on_item_drop(_item : Item) -> void:
+	if _item.name == Bag.MojitoSansGlace:
+		gui.open_dialog(pnj_name, "C'est quoi ca ? il est chaud ton mojito !")
+	else : 
+		super.on_item_drop(_item)
+		
 
 const _TEXT = """Ben alors mon petit on vient voir Grabouilla, on cherche du réconfort on veut un calinou ? 
 
