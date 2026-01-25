@@ -780,7 +780,7 @@ theme_override_constants/separation = 4
 [node name="Title" type="Label" parent="Acceuil/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_yw5qc")
-text = "Aide : Commande et Indice"
+text = "L'aventure Commence"
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Acceuil/Panel/MarginContainer/VBoxContainer"]

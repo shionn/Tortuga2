@@ -101,7 +101,7 @@ model = ExtResource("7_hrd0d")
 pnj_name = "Bertan"
 
 [node name="pnj-boneskull" parent="." instance=ExtResource("1_hrd0d")]
-transform = Transform3D(-0.98480767, 0, 0.17364824, 0, 1, 0, -0.17364824, 0, -0.98480767, 2.0000002, 0, 1.7)
+transform = Transform3D(-0.98480767, 0, 0.17364824, 0, 1, 0, -0.17364824, 0, -0.98480767, 2.0000002, -2, 1.7)
 script = ExtResource("10_1kr38")
 model = ExtResource("11_3lbvq")
 pnj_name = "BoneSkull"

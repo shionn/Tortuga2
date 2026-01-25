@@ -14,7 +14,10 @@ Vous l'avez peut être remarqué mais notre île et celles qui nous entourent se
 Et bien sûr tout cela sans aucune explication, il doit bien y avoir une raison mais il nous faudra mener l'[color=yellow]enquête[/color]. 
 
 Vous l'aurez compris je soupçonne une force supérieure qui joue avec Tortuga et avec nous ! C'est pourquoi nous devons explorer encore et découvrir les trésors que, et j'en suis convaincu, cette puissance met à votre disposition pour qu'ils soient découverts. Qui sait quels trésors merveilleux nous pouvons découvrir mais plus encore qui sait qui est derrière tout ça ! 
-Et foi de Pirate Maudit, nous allons le découvrir !"""
+
+Et foi de Pirate Maudit, nous allons le découvrir !
+
+[color=yellow]L’aventure commence, tu es une jeune recrue, va donc te présenter auprès de Whisp.[/color]"""
 
 
 func _on_button_pressed() -> void:

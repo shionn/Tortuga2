@@ -37,7 +37,7 @@ func on_item_drop(_item : Item) -> void:
 		super.on_item_drop(_item)
 		
 
-var quest_3_enable = true
+var quest_3_enable = false
 
 func _on_hung_connut_search_charpentier() -> void:
 	if quest_3_enable :
