@@ -17,7 +17,7 @@ Vous l'aurez compris je soupçonne une force supérieure qui joue avec Tortuga e
 
 Et foi de Pirate Maudit, nous allons le découvrir !
 
-[color=yellow]L’aventure commence, tu es une jeune recrue, va donc te présenter auprès de Whisp.[/color]"""
+[color=yellow]L’aventure commence, tu es une jeune recrue, va donc te présenter auprès du capitaine Whisp.[/color]"""
 
 
 func _on_button_pressed() -> void:
