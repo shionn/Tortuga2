@@ -115,23 +115,22 @@ func _on_ask_cocktail_soft() -> void:
 			func(): _add_ingredient("Ananas",_on_ask_cocktail_soft)
 		), PnjDialogOption.new(
 			func(): return true,
-			"Jus d'Orange",
-			func(): _add_ingredient("Orange",_on_ask_cocktail_soft)
+			"Jus de Coco",
+			func(): _add_ingredient("Coco",_on_ask_cocktail_soft)
+		), PnjDialogOption.new(
+			func(): return true,
+			"Jus de Canneberg",
+			func(): _add_ingredient("Canneberg",_on_ask_cocktail_soft)
 		), PnjDialogOption.new(
 			func(): return true,
 			"Eau de Seltz",
 			func(): _add_ingredient("Seltz",_on_ask_cocktail_soft)
 		), PnjDialogOption.new(
 			func(): return true,
-			"Sirop de Sucre",
-			func(): _add_ingredient("Sirop",_on_ask_cocktail_soft)
-		), PnjDialogOption.new(
-			func(): return true,
 			"Assez de Soft",
 			_on_ask_cocktail_other
 		)
 	])
-# Ananas Orange Sletz Sirop
 
 func _on_ask_cocktail_other() -> void:
 	gui.open_dialog(pnj_name,"Autre chose ?").with_options([
@@ -149,6 +148,10 @@ func _on_ask_cocktail_other() -> void:
 			func(): _add_ingredient("Orange",_on_ask_cocktail_other)
 		), PnjDialogOption.new(
 			func(): return true,
+			"Sirop de Sucre",
+			func(): _add_ingredient("Sirop",_on_ask_cocktail_other)
+		), PnjDialogOption.new(
+			func(): return true,
 			"C'est assez",
 			_on_ask_cocktail_glacon
 		)
@@ -157,20 +160,30 @@ func _on_ask_cocktail_other() -> void:
 func _on_ask_cocktail_glacon() -> void:
 	gui.open_yes_no_question(pnj_name, "Avec des Glacon ?", _on_ask_cocktail_no_glacon, _on_ask_cocktail_yes_glacon)
 
-# Rhum Gin Vodka Téquila
-# Café Franboise Cointreau Whisky
-# Ananas Orange Seltz Sirop
-# Citron Menthe Orange
+# Rhum+ Gin+ Vodka+ Téquila+
+# Café+ Franboise Cointreau+ Whisky+
+# Ananas+ Coco+ Seltz+ Canneberg+
+# Citron+ Menthe+ Orange Sirop+
 
 func _on_ask_cocktail_no_glacon() -> void : 
 	if _isCocktail(["Rhum", "Seltz", "Sirop", "Citron", "Menthe"]) :
 		_serv_cocktail("Un mojito sans glaçon!", Bag.MojitoSansGlace) 
-	elif  _ingredient == "RhumCitronSirop" : 
-		_serv_cocktail("Un Daïquiri!", "") 
-	elif _ingredient == "VodkaCointreauCannebergeCitron" : 
+	elif  _isCocktail(["Rhum", "Coco", "Ananas"]) : 
+		_serv_cocktail("Une Pinacolada sans Glaçon!", "") 
+	elif  _isCocktail(["Vodka", "Cointreau", "Canneberg", "Citron"]) : 
 		_serv_cocktail("Un Cosmopolitan!", "") 
-	elif _ingredient == "GinCitronGazeuse" : 
+	elif  _isCocktail(["Gin", "Seltz", "Citron"]) : 
 		_serv_cocktail("Un Gin Tonic sans glaçon!", "") 
+	elif  _isCocktail(["Cointreau", "Whisky", "Café"]) : 
+		_serv_cocktail("Un B52!", "") 
+	elif  _isCocktail(["Rhum", "Citron", "Sirop"]) : 
+		_serv_cocktail("Un Daïquiri!", "") 
+	elif  _isCocktail(["Téquila", "Cointreau", "Citron"]) : 
+		_serv_cocktail("Une Margarita sans glaçon!", "") 
+	elif  _isCocktail(["Téquila", "Ananas", "Citron"]) : 
+		_serv_cocktail("Un Matador!", "") 
+	elif  _isCocktail(["Gin", "Citron", "Sirop", "Menthe"]) : 
+		_serv_cocktail("Un Southside!", "") 
 	else :
 		_serv_cocktail("Un truc innommable sans glaçon!", "") 
 		play_anim_no()
@@ -178,12 +191,22 @@ func _on_ask_cocktail_no_glacon() -> void :
 func _on_ask_cocktail_yes_glacon() -> void : 
 	if _isCocktail(["Rhum", "Seltz", "Sirop", "Citron", "Menthe"]) :
 		_serv_cocktail("Un mojito!", Bag.Mojito) 
-	elif  _ingredient == "RhumCitronSirop" : 
-		_serv_cocktail("Un Daïquiri avec glaçon!", "") 
-	elif _ingredient == "VodkaCointreauCannebergeCitron" : 
+	elif  _isCocktail(["Rhum", "JusCoco", "JusAnanas"]) : 
+		_serv_cocktail("Une Pinacolada!", "") 
+	elif  _isCocktail(["Vodka", "Cointreau", "Canneberg", "Citron"]) : 
 		_serv_cocktail("Un Cosmopolitan avec glaçon!", "") 
-	elif _ingredient == "GinCitronGazeuse" : 
+	elif  _isCocktail(["Gin", "Seltz", "Citron"]) : 
 		_serv_cocktail("Un Gin Tonic!", "") 
+	elif  _isCocktail(["Cointreau", "Whisky", "Café"]) : 
+		_serv_cocktail("Un B52 sans Flamme!", "") 
+	elif  _isCocktail(["Rhum", "Citron", "Sirop"]) : 
+		_serv_cocktail("Un Daïquiri avec glaçon!", "") 
+	elif  _isCocktail(["Téquila", "Cointreau", "Citron"]) : 
+		_serv_cocktail("Une Margarita!", "") 
+	elif  _isCocktail(["Téquila", "Ananas", "Citron"]) : 
+		_serv_cocktail("Un Matador avec glaçon!", "") 
+	elif  _isCocktail(["Gin", "Citron", "Sirop", "Menthe"]) : 
+		_serv_cocktail("Un Southside avec glaçon!", "") 
 	else :
 		_serv_cocktail("Un truc innommable avec glaçon!", "") 
 		play_anim_no()
