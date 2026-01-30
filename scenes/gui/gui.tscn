@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=48 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://scripts/gui/gui.gd" id="1_0fbet"]
 [ext_resource type="Script" uid="uid://ikfx1cjqumpb" path="res://scripts/gui/dialog.gd" id="2_bgohe"]
@@ -25,19 +25,22 @@
 [ext_resource type="Texture2D" uid="uid://cqqyqe4qxv2ub" path="res://assets/imgs/CarteHungConnut.jpg" id="19_ytu88"]
 [ext_resource type="Texture2D" uid="uid://buaarg6df2ipt" path="res://assets/gui/mug-h-48.png" id="20_5r1ih"]
 [ext_resource type="Texture2D" uid="uid://2me8kuwdoy2b" path="res://assets/gui/resources-pack-1/Wood-h-48.png" id="21_6vqqt"]
-[ext_resource type="Texture2D" uid="uid://ch3n2nqahibv4" path="res://assets/gui/resources-pack-1/Page-h-48.png" id="21_ewk5h"]
 [ext_resource type="Texture2D" uid="uid://cygakm7juveua" path="res://assets/gui/resources-pack-1/Crystal-h-48.png" id="21_looj0"]
 [ext_resource type="Texture2D" uid="uid://c38f028grcwxa" path="res://assets/gui/fanatisy-magic-set/potion-1-48.png" id="21_v3xc1"]
 [ext_resource type="Texture2D" uid="uid://bs0icmlv8xa0a" path="res://assets/gui/fruit-icons-redo/watermelon-h-48.png" id="22_rex2l"]
 [ext_resource type="Texture2D" uid="uid://jl461oxmkpxk" path="res://assets/gui/fanatisy-magic-set/potion-2-48.png" id="23_e5h10"]
+[ext_resource type="Texture2D" uid="uid://b5l25ya0cp386" path="res://assets/gui/papers/paper-07.png" id="23_iuo3o"]
 [ext_resource type="Texture2D" uid="uid://dps01w2kfg2xr" path="res://assets/gui/houblon.png" id="25_74x0q"]
 [ext_resource type="Texture2D" uid="uid://caskn8urwgnuf" path="res://assets/gui/resources-pack-1/Paper-h-48.png" id="29_dfsdp"]
 [ext_resource type="Texture2D" uid="uid://bflwiwnggjwxk" path="res://assets/imgs/ducklingfeather3-h-48.png" id="30_de8cu"]
 [ext_resource type="Texture2D" uid="uid://bb4sr8kv8gd2q" path="res://assets/gui/mojito.png" id="30_enpea"]
 [ext_resource type="Texture2D" uid="uid://numhy15ec71f" path="res://assets/gui/resources-pack-1/Skull-h-48.png" id="31_k8u3r"]
 [ext_resource type="Script" uid="uid://ctarrtmkkg1ji" path="res://scripts/gui/transition.gd" id="31_xyc4b"]
+[ext_resource type="Texture2D" uid="uid://chhyfuye64pc" path="res://assets/gui/papers/paper-02.png" id="32_0wiho"]
 [ext_resource type="Texture2D" uid="uid://k6j5sim1krjy" path="res://assets/gui/survival-tools/pickaxe.png" id="32_feoca"]
 [ext_resource type="Texture2D" uid="uid://c6a0uy7r31qp5" path="res://assets/gui/resources-pack-1/Minerals-h-48.png" id="34_rjb4a"]
+[ext_resource type="Texture2D" uid="uid://batw2o6rh07k" path="res://assets/gui/papers/paper-12.png" id="34_uyd5p"]
+[ext_resource type="Texture2D" uid="uid://dkof32a3vx2r" path="res://assets/gui/papers/paper-10.png" id="35_x3l1j"]
 [ext_resource type="Texture2D" uid="uid://8l7yl3g0syqo" path="res://assets/gui/resources-pack-1/Coin-h-48.png" id="37_u23jf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yw5qc"]
@@ -843,7 +846,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 48.0
 tooltip_text = "Carte de Hung Connut"
-texture_normal = ExtResource("13_qv6l0")
+texture_normal = ExtResource("23_iuo3o")
 script = ExtResource("11_s1h2m")
 image = ExtResource("19_ytu88")
 
@@ -878,7 +881,7 @@ description = "Du houblon. Eve s'en sert pour faire la meilleure bière de l'îl
 layout_mode = 0
 offset_right = 58.0
 offset_bottom = 48.0
-tooltip_text = "Ingrédient rituel du vent."
+tooltip_text = "Ingrédient rituel du vent"
 texture_normal = ExtResource("29_dfsdp")
 script = ExtResource("11_s1h2m")
 description = "Pour faire revenir le vent j'ai besoin de :
@@ -931,7 +934,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 48.0
 tooltip_text = "Page de Hung Connut"
-texture_normal = ExtResource("21_ewk5h")
+texture_normal = ExtResource("32_0wiho")
 script = ExtResource("11_s1h2m")
 description = "C'est une des pages de Hung Connut.
 
@@ -943,7 +946,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 48.0
 tooltip_text = "Page de Hung Connut"
-texture_normal = ExtResource("21_ewk5h")
+texture_normal = ExtResource("32_0wiho")
 script = ExtResource("11_s1h2m")
 description = "C'est une des pages de Hung Connut.
 
@@ -955,7 +958,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 48.0
 tooltip_text = "Page de Hung Connut"
-texture_normal = ExtResource("21_ewk5h")
+texture_normal = ExtResource("32_0wiho")
 script = ExtResource("11_s1h2m")
 description = "C'est une des pages de Hung Connut.
 
@@ -995,7 +998,7 @@ layout_mode = 0
 offset_right = 58.0
 offset_bottom = 48.0
 tooltip_text = "Passe Navigation"
-texture_normal = ExtResource("21_ewk5h")
+texture_normal = ExtResource("34_uyd5p")
 script = ExtResource("11_s1h2m")
 description = "C'est un pass pour utiliser une barque. 
 Mais il manque le tampon de Rurik"
@@ -1005,7 +1008,7 @@ layout_mode = 0
 offset_right = 58.0
 offset_bottom = 48.0
 tooltip_text = "Pass Navigation"
-texture_normal = ExtResource("21_ewk5h")
+texture_normal = ExtResource("35_x3l1j")
 script = ExtResource("11_s1h2m")
 description = "C'est un pass valide pour utiliser une barque. "
 

@@ -26,6 +26,7 @@
 - https://opengameart.org/content/duck-duckling-feather-vector-sprites
 - https://opengameart.org/content/free-2d-survival-tools
 - https://freepngimg.com/png/29950-mojito-image
+- https://opengameart.org/content/papers
 
 ## Model 3d
 - https://kenney.nl/assets
@@ -71,4 +72,4 @@
 - https://opengameart.org/content/more-handpainted-rocks : non texture trop grosse 
 
 ## non importer mais pourrai etre simpa : 
-- paper : https://opengameart.org/content/papers
+- paper : 

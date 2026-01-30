@@ -64,7 +64,7 @@ Est-ce que je peux faire quelque chose pour toi pour te remercier ? """
 
 const _TEXT_SEARCH_WOOD = """Ah yo les amis ! Mais bien sûr que je peux vous trouver du bois! Qu’est ce que vous croyez, Gutsaf il peut tout avoir ya. Mais Gustaf demande quelque chose en échange aussi ya. 
 
-Mon poney, Kindle, ce satané buté d’animal a disparu, ya, il est surement allé gambader sur l'île pour manger de l’avoine. C’est pas bon pour lui, ça lui file des gaz et il en met partout. 
+Mon poney, Kindle, ce satané buté d’animal a disparu, ya, il est surement allé gambader sur l'île pour manger du houblon. C’est pas bon pour lui, ça lui file des gaz et il en met partout. 
 
 J’ai pas encore réussi à le retrouver, si tu m’aides alors ça me laissera le temps de te trouver du bois et tu me rendras service ya ! Alors tu acceptes ?"""
 
