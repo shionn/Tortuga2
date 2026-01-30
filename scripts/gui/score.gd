@@ -17,7 +17,7 @@ func compute() -> void :
 	_item(Bag.TresorBarbeDrue, 1)
 	_item(Bag.TresorBarbeDrueNet, 2) # remplace le TresorBarbeDrue
 	
-	# quete 2 : min 5, max 7
+	# quete 2 : min 5, max 8
 	_tag(Tags.BRASSERIE_HAVE_SOBERING_POTION, 1)
 	_tag(Tags.GUARD_HARBOUR_OFFICE_SOBERING, 1)
 	_item(Bag.CrystalTeleportationOasis, 1)
