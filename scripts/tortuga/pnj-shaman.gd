@@ -34,8 +34,25 @@ func _on_search_wind() :
 	bag.loot(Bag.ListInvocationVent)
 
 func on_item_drop(_item : Item) -> void:
-	if _item.name == Bag.MojitoSansGlace:
+	if _item.name == Bag.ListInvocationVent:
+		gui.open_dialog(pnj_name, "C’est ma propre liste que veux tu que j’en fasse? Rapporte moi donc plutôt les ingrédients.")
+	elif _item.name == Bag.Plume or _item.name == Bag.Ossement or _item.name == Bag.SelDeMontagne :
+		gui.open_dialog(pnj_name, "Cool tu as trouver certain ingrédient, mais je veux d'abord mon mojito.")
+	elif _item.name == Bag.Mojito :
+		bag.unloot(Bag.Mojito)
+		if bag.contain(Bag.Plume) and  bag.contain(Bag.Ossement) and  bag.contain(Bag.SelDeMontagne) :
+			tags.remove(Tags.SEARCH_WIND)
+			tags.add(Tags.WIND_BLOWING)
+			bag.unloot(Bag.Plume)
+			bag.unloot(Bag.ListInvocationVent)
+			bag.unloot(Bag.Ossement)
+			bag.unloot(Bag.SelDeMontagne)
+			gui.open_dialog(pnj_name, _TEXT_MOJITO_ALL)
+		else :
+			gui.open_dialog(pnj_name, _TEXT_MOJITO_MISSING)
+	elif _item.name == Bag.MojitoSansGlace:
 		gui.open_dialog(pnj_name, "C'est quoi ca ? il est chaud ton mojito !")
+		bag.unloot(Bag.MojitoSansGlace)
 	else : 
 		super.on_item_drop(_item)
 		
@@ -62,3 +79,15 @@ const _TEXT_OSSEMENT = """Oui un ossement de pirate, une phalange serait parfait
 const _TEXT_SEL = """Oui du sel, mais pas du sel de mer, j’ai besoin d’un sel minéral provenant de la pierre."""
 
 const _TEXT_MOJITO = """Oui et très frais s’il te plaît, il ne faut pas que les glaçons fondent."""
+
+const _TEXT_MOJITO_MISSING = """Merci pour le mojito, j’avais soif.
+[gloup gloups]
+Ha mais je vois qu’il te manque encore des ingrédients pour l’invocation. Reviens me voir avec tous les ingrédients. 
+[gloop gloups]
+Et un autre Mojito !"""
+
+const _TEXT_MOJITO_ALL = """Merci pour le mojito, j’avais soif.
+[gloup gloups]
+Je récupère aussi tout ce qu’il faut pour l’invocation. 
+[gloup gloups]
+J’ai besoin d’être seul pour l’invocation, à ton retour sur l'île le vent soufflera de nouveau."""

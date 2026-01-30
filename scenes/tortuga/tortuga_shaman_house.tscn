@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bucvch03dkebd"]
+[gd_scene load_steps=35 format=3 uid="uid://bucvch03dkebd"]
 
 [ext_resource type="PackedScene" uid="uid://bohgyv4ijnvfm" path="res://assets/town/walls/wall-wood-doorway-square.glb" id="1_m25qr"]
 [ext_resource type="PackedScene" uid="uid://crg8korvqui82" path="res://assets/town/stairs/stairs-wide-wood.glb" id="1_mc8li"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://86dcdsinmla4" path="res://assets/town/walls/wall-wood-window-round.glb" id="3_8qlg5"]
 [ext_resource type="PackedScene" uid="uid://cuwkv5gqn18pj" path="res://assets/character/base/character-female-a-2.glb" id="3_hh7em"]
 [ext_resource type="PackedScene" uid="uid://cgwwol2ja1lfe" path="res://assets/town/props/overhang.glb" id="4_hh7em"]
+[ext_resource type="AudioStream" uid="uid://diiihlkjyq3k" path="res://assets/sound/202-more-sound-effects/drink/drink_06.ogg" id="4_ijj14"]
 [ext_resource type="PackedScene" uid="uid://dx4s7axo4o001" path="res://assets/town/props/stall.glb" id="5_7nicn"]
 [ext_resource type="PackedScene" uid="uid://ckl0cxjsbj1sn" path="res://assets/town/roof/roof-corner-round.glb" id="6_2eujg"]
 [ext_resource type="PackedScene" uid="uid://dhs7effoi2e31" path="res://assets/low-poly-rpg-item/dagger.glb" id="7_38ndb"]
@@ -46,6 +47,9 @@ script = ExtResource("2_8qlg5")
 model = ExtResource("3_hh7em")
 pnj_name = "Grabouilla"
 pnj_role = "Chaman Sexy"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="pnj-shaman"]
+stream = ExtResource("4_ijj14")
 
 [node name="overhang2" parent="." instance=ExtResource("4_hh7em")]
 transform = Transform3D(8.742278e-08, 1.7484555e-07, -2, 7.642742e-15, -2, -1.7484555e-07, -2, 0, -8.742278e-08, 0, 3.3, -5.1)
