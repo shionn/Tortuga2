@@ -57,6 +57,10 @@ sky_material = SubResource("ShaderMaterial_qktwf")
 [sub_resource type="Environment" id="Environment_bh8nc"]
 background_mode = 2
 sky = SubResource("Sky_pkg7o")
+ambient_light_source = 2
+ambient_light_color = Color(0.33333334, 0.33333334, 0.33333334, 1)
+ambient_light_sky_contribution = 0.0
+reflected_light_source = 1
 ssao_enabled = true
 ssil_enabled = true
 volumetric_fog_enabled = true
