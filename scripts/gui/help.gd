@@ -3,6 +3,10 @@ extends MarginContainer
 @onready var _text = $Panel/MarginContainer/VBoxContainer/RichTextLabel as RichTextLabel
 @onready var _bag = $"../Bag" as Bag
 
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("help"):
+		_on_help_button_pressed()
+
 func _on_help_button_pressed() -> void:
 	if visible : hide()
 	else : 
@@ -36,10 +40,12 @@ Sauter avec la touche espace
 Interagir avec le clic gauche
 Orienter la caméra avec le clic droit
 Ouvrir et Fermer le Sac avec I
+Aide : F1
+Bloquer : F4 (téléporte au point de départ)
+Debug : F12 (Pour remonter un bug)
 [/ul]
 
 [color=yellow]Pour sauvegarder ou reprendre votre aventure, aller voir Dupont et Dupond dans le dortoire.[/color]
-
 """
 const _BAG_EMPTY_HELP = """Aide de jeu : [color=yellow]Va donc voir whisp, il t'indiquera sûrement ou commencer ta quête.[/color]"""
 
