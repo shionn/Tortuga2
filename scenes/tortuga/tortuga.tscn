@@ -4585,7 +4585,7 @@ transform = Transform3D(-0.91782403, 0, 0.39698762, 0, 1, 0, -0.39698762, 0, -0.
 [node name="MountainBridge-2" parent="Montagne-Nord/MontagneChampi/Pic6" instance=ExtResource("61_gl853")]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -23.509308, 3.8999977, 2.323822)
 visible = false
-script = ExtResource("64_waae6")
+script = ExtResource("59_ei0yt")
 
 [node name="Patchs" type="Node3D" parent="Montagne-Nord/MontagneChampi/Pic6"]
 

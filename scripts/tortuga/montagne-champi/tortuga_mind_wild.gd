@@ -1,6 +1,6 @@
 extends Node3D
 
-@onready var _windmill = $windmill as Node3D
+@onready var _windmill = $"windmill" as Node3D
 @onready var _tags = $"/root/World/Player/Tags" as Tags
 
 var _rotating = false

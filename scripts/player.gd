@@ -58,7 +58,7 @@ func _ready() -> void:
 	_animation.get_animation("idle").loop_mode = Animation.LOOP_LINEAR
 	#teleport(Vector3(172.0,105.0,-253.0), 0) # oasis
 	#teleport(Vector3(229.7, 74, -270.7), 0) # montagne champi
-	#teleport(Vector3(300, 26, -240), 72)
+	#teleport(Vector3(300, 26, -240), 72) # hung connu
 	#teleport(Vector3(257, 2, -316), -49) # escalator
 	
 func _physics_process(delta: float) -> void:
