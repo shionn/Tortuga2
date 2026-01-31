@@ -11,7 +11,7 @@ func on_tag_change() -> void:
 	visible = _tags.have(Tags.ESCALATOR_CHAMPI_REPAIR)
 	if _escalator :
 		_escalator.enable = _tags.have(Tags.WIND_BLOWING)
-		_escalator.dir = Vector3.ZERO
+		_escalator.dir = Vector3.UP
 	if visible :
 		process_mode = Node.PROCESS_MODE_INHERIT
 	else :
