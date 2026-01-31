@@ -2567,6 +2567,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 72.9, -18.8)
 [node name="TortugaWindMill" parent="Montagne-Nord/MontagneChampi/Pic1" instance=ExtResource("51_67xyg")]
 transform = Transform3D(0.9848076, 0, 0.17364815, 0, 1, 0, -0.17364815, 0, 0.9848076, -4.300003, 0, 17.100006)
 visible = false
+script = ExtResource("64_waae6")
 
 [node name="Patchs" type="Node3D" parent="Montagne-Nord/MontagneChampi/Pic1"]
 

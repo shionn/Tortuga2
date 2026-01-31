@@ -1,6 +1,5 @@
-[gd_scene load_steps=10 format=3 uid="uid://ch0ypgect218u"]
+[gd_scene load_steps=9 format=3 uid="uid://ch0ypgect218u"]
 
-[ext_resource type="Script" uid="uid://cpcrwvnwjgc5p" path="res://scripts/tortuga/montagne-champi/tortuga_mind_wild.gd" id="1_fr4h8"]
 [ext_resource type="PackedScene" uid="uid://cgwwol2ja1lfe" path="res://assets/town/props/overhang.glb" id="2_6bqao"]
 [ext_resource type="PackedScene" uid="uid://bi815v5v0sl8q" path="res://assets/town/planks/planks.glb" id="2_bt1wm"]
 [ext_resource type="PackedScene" uid="uid://bv1kbqcp304cs" path="res://assets/town/fence-hedge/balcony-wall-fence-simplified.glb" id="3_ogdx2"]
@@ -12,7 +11,6 @@
 
 [node name="TortugaMindWind" type="Node3D"]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
-script = ExtResource("1_fr4h8")
 
 [node name="windmill" parent="." instance=ExtResource("6_fr4h8")]
 transform = Transform3D(-1.7484555e-07, 0, -4, 0, 4, 0, 4, 0, -1.7484555e-07, 1.1920925e-07, 4.5, 3.1999977)
