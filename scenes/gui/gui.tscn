@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=50 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://scripts/gui/gui.gd" id="1_0fbet"]
 [ext_resource type="Script" uid="uid://ikfx1cjqumpb" path="res://scripts/gui/dialog.gd" id="2_bgohe"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://jl461oxmkpxk" path="res://assets/gui/fanatisy-magic-set/potion-2-48.png" id="23_e5h10"]
 [ext_resource type="Texture2D" uid="uid://b5l25ya0cp386" path="res://assets/gui/papers/paper-07.png" id="23_iuo3o"]
 [ext_resource type="Texture2D" uid="uid://dps01w2kfg2xr" path="res://assets/gui/houblon.png" id="25_74x0q"]
+[ext_resource type="Texture2D" uid="uid://iy0ji7uipbh2" path="res://assets/gui/rpg-mushroom-icons/7.png" id="25_g11ko"]
 [ext_resource type="Texture2D" uid="uid://caskn8urwgnuf" path="res://assets/gui/resources-pack-1/Paper-h-48.png" id="29_dfsdp"]
 [ext_resource type="Texture2D" uid="uid://bflwiwnggjwxk" path="res://assets/imgs/ducklingfeather3-h-48.png" id="30_de8cu"]
 [ext_resource type="Texture2D" uid="uid://bb4sr8kv8gd2q" path="res://assets/gui/mojito.png" id="30_enpea"]
@@ -850,6 +851,15 @@ tooltip_text = "Carte de Hung Connut"
 texture_normal = ExtResource("23_iuo3o")
 script = ExtResource("11_s1h2m")
 image = ExtResource("19_ytu88")
+
+[node name="Champignon" type="TextureButton" parent="Items"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 48.0
+tooltip_text = "Champignon"
+texture_normal = ExtResource("25_g11ko")
+script = ExtResource("11_s1h2m")
+description = "C'est un champignon provenant des montagnes de Tortuga."
 
 [node name="CrystalTeleportationOasis" type="TextureButton" parent="Items"]
 layout_mode = 0

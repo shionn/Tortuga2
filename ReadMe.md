@@ -27,6 +27,7 @@
 - https://opengameart.org/content/free-2d-survival-tools
 - https://freepngimg.com/png/29950-mojito-image
 - https://opengameart.org/content/papers
+- https://opengameart.org/content/rpg-mushroom-icons
 
 ## Model 3d
 - https://kenney.nl/assets
