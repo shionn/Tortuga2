@@ -1149,6 +1149,13 @@ offset_right = 200.0
 offset_bottom = 128.0
 text = "Teleport HungConnut"
 
+[node name="TeleportTwinIsland" type="Button" parent="Cheat/Panel"]
+layout_mode = 0
+offset_top = 224.0
+offset_right = 200.0
+offset_bottom = 256.0
+text = "Teleport TwinIsland"
+
 [node name="QuickLoad" type="Button" parent="Cheat/Panel"]
 layout_mode = 0
 offset_right = 200.0
@@ -1184,5 +1191,6 @@ text = "Sauvegarder"
 [connection signal="pressed" from="Cheat/Panel/TeleportChaman" to="Cheat" method="_on_teleport_chaman_pressed"]
 [connection signal="pressed" from="Cheat/Panel/TeleportEscalator" to="Cheat" method="_on_teleport_escalator_pressed"]
 [connection signal="pressed" from="Cheat/Panel/TeleportHungConnut" to="Cheat" method="_on_teleport_hung_connut_pressed"]
+[connection signal="pressed" from="Cheat/Panel/TeleportTwinIsland" to="Cheat" method="_on_teleport_twin_island_pressed"]
 [connection signal="pressed" from="Cheat/Panel/QuickLoad" to="Cheat" method="_on_quick_load_pressed"]
 [connection signal="pressed" from="Cheat/Panel/QuickSave" to="Cheat" method="_on_quick_save_pressed"]

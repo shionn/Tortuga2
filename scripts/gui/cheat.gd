@@ -36,3 +36,7 @@ func _on_teleport_chaman_pressed() -> void:
 func _on_teleport_escalator_pressed() -> void:
 	player.teleport(Vector3(257, 2, -316), -49) # escalator
 	visible = false
+
+func _on_teleport_twin_island_pressed() -> void:
+	player.teleport(Vector3(250, 2, -1720), 0) # escalator
+	visible = false

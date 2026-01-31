@@ -68,12 +68,3 @@ shape = SubResource("BoxShape3D_psase")
 
 [node name="structure-platform-dock-long" parent="." instance=ExtResource("3_bcpju")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7937115, 0)
-
-[node name="structure-platform-dock-long2" parent="." instance=ExtResource("3_bcpju")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.7937117, 0)
-
-[node name="structure-platform-dock-long3" parent="." instance=ExtResource("3_bcpju")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -12.793712, 0)
-
-[node name="structure-platform-dock-long4" parent="." instance=ExtResource("3_bcpju")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -18.793713, 0)
