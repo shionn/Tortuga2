@@ -53,17 +53,17 @@ transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, 2,
 [node name="roof-corner-round5" parent="Roof" instance=ExtResource("5_jftyg")]
 transform = Transform3D(2.6226832e-07, 0, -2, 0, 2, 0, 2, 0, 2.6226832e-07, -2, 2, -2)
 
-[node name="roof-point2" parent="." instance=ExtResource("6_qxbru")]
+[node name="roof-point2" parent="Roof" instance=ExtResource("6_qxbru")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3, 0)
 
-[node name="roof2" parent="." instance=ExtResource("7_i1wf6")]
+[node name="roof2" parent="Roof" instance=ExtResource("7_i1wf6")]
 transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 0, 2, -2)
 
-[node name="roof3" parent="." instance=ExtResource("7_i1wf6")]
+[node name="roof3" parent="Roof" instance=ExtResource("7_i1wf6")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2, 2, 0)
 
-[node name="roof4" parent="." instance=ExtResource("7_i1wf6")]
+[node name="roof4" parent="Roof" instance=ExtResource("7_i1wf6")]
 transform = Transform3D(2.6226832e-07, 0, 2, 0, 2, 0, -2, 0, 2.6226832e-07, 0, 2, 2)
 
-[node name="roof5" parent="." instance=ExtResource("7_i1wf6")]
+[node name="roof5" parent="Roof" instance=ExtResource("7_i1wf6")]
 transform = Transform3D(-2, 0, 1.7484555e-07, 0, 2, 0, -1.7484555e-07, 0, -2, 2, 2, 0)
