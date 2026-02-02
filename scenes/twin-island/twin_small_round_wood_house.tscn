@@ -1,0 +1,69 @@
+[gd_scene load_steps=8 format=3 uid="uid://cg8cslgj6gv4u"]
+
+[ext_resource type="PackedScene" uid="uid://dvn116r1fxtxs" path="res://assets/town/road/road-wood.glb" id="1_i0erb"]
+[ext_resource type="PackedScene" uid="uid://ytsdil2082qg" path="res://assets/town/walls/wall-wood-corner-diagonal.glb" id="2_ydwvf"]
+[ext_resource type="PackedScene" uid="uid://gixsyjseb3bu" path="res://assets/town/walls/wall-wood-window-shutters.glb" id="3_wssai"]
+[ext_resource type="PackedScene" uid="uid://dqtrbt7o4adew" path="res://assets/town/walls/wall-wood-doorway-round.glb" id="4_jftyg"]
+[ext_resource type="PackedScene" uid="uid://ckl0cxjsbj1sn" path="res://assets/town/roof/roof-corner-round.glb" id="5_jftyg"]
+[ext_resource type="PackedScene" uid="uid://d3k6pjo57mt0k" path="res://assets/town/roof/roof-point.glb" id="6_qxbru"]
+[ext_resource type="PackedScene" uid="uid://dj2jytbjf6lck" path="res://assets/town/roof/roof.glb" id="7_i1wf6"]
+
+[node name="twin-small-round-wood-house" type="Node3D"]
+
+[node name="Ground" type="Node3D" parent="."]
+
+[node name="road-wood" parent="Ground" instance=ExtResource("1_i0erb")]
+transform = Transform3D(-6, 5.2453663e-07, 0, -5.2453663e-07, -6, 0, 0, 0, 6, 0, 0, 0)
+
+[node name="wall-wood-corner-diagonal2" parent="Ground" instance=ExtResource("2_ydwvf")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -2, 0, 2)
+
+[node name="wall-wood-corner-diagonal3" parent="Ground" instance=ExtResource("2_ydwvf")]
+transform = Transform3D(-2, 0, 1.7484555e-07, 0, 2, 0, -1.7484555e-07, 0, -2, -2, 0, -2)
+
+[node name="wall-wood-window-shutters2" parent="Ground" instance=ExtResource("3_wssai")]
+transform = Transform3D(-2, 0, 1.7484555e-07, 0, 2, 0, -1.7484555e-07, 0, -2, -2, 0, 0)
+
+[node name="wall-wood-window-shutters4" parent="Ground" instance=ExtResource("3_wssai")]
+transform = Transform3D(2.6226832e-07, 0, 2, 0, 2, 0, -2, 0, 2.6226832e-07, 0, 0, -2)
+
+[node name="wall-wood-corner-diagonal4" parent="Ground" instance=ExtResource("2_ydwvf")]
+transform = Transform3D(2.6226832e-07, 0, 2, 0, 2, 0, -2, 0, 2.6226832e-07, 2.0000002, 0, -2)
+
+[node name="wall-wood-corner-diagonal5" parent="Ground" instance=ExtResource("2_ydwvf")]
+transform = Transform3D(2, 0, -3.496911e-07, 0, 2, 0, 3.496911e-07, 0, 2, 1.9999999, 0, 2)
+
+[node name="wall-wood-window-shutters3" parent="Ground" instance=ExtResource("3_wssai")]
+transform = Transform3D(2, 0, -3.496911e-07, 0, 2, 0, 3.496911e-07, 0, 2, 2, 0, 0)
+
+[node name="wall-wood-doorway-round2" parent="Ground" instance=ExtResource("4_jftyg")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 0, 0, 2)
+
+[node name="Roof" type="Node3D" parent="."]
+
+[node name="roof-corner-round2" parent="Roof" instance=ExtResource("5_jftyg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2, 2, 2)
+
+[node name="roof-corner-round3" parent="Roof" instance=ExtResource("5_jftyg")]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 2, 2, 2)
+
+[node name="roof-corner-round4" parent="Roof" instance=ExtResource("5_jftyg")]
+transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, 2, 2, -2)
+
+[node name="roof-corner-round5" parent="Roof" instance=ExtResource("5_jftyg")]
+transform = Transform3D(2.6226832e-07, 0, -2, 0, 2, 0, 2, 0, 2.6226832e-07, -2, 2, -2)
+
+[node name="roof-point2" parent="." instance=ExtResource("6_qxbru")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3, 0)
+
+[node name="roof2" parent="." instance=ExtResource("7_i1wf6")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 0, 2, -2)
+
+[node name="roof3" parent="." instance=ExtResource("7_i1wf6")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2, 2, 0)
+
+[node name="roof4" parent="." instance=ExtResource("7_i1wf6")]
+transform = Transform3D(2.6226832e-07, 0, 2, 0, 2, 0, -2, 0, 2.6226832e-07, 0, 2, 2)
+
+[node name="roof5" parent="." instance=ExtResource("7_i1wf6")]
+transform = Transform3D(-2, 0, 1.7484555e-07, 0, 2, 0, -1.7484555e-07, 0, -2, 2, 2, 0)

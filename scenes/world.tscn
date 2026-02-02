@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://scenes/water/WaterPlane.tscn" id="4_q5onr"]
 [ext_resource type="AudioStream" uid="uid://chpd6qmn4vyta" path="res://assets/music/pirate1uf.ogg" id="5_gbfbk"]
 [ext_resource type="PackedScene" uid="uid://byfhqtkkcefl2" path="res://scenes/tortuga/tortuga.tscn" id="5_wse8f"]
-[ext_resource type="PackedScene" uid="uid://bklj07teww5qu" path="res://twin_island.tscn" id="6_e3hyu"]
+[ext_resource type="PackedScene" uid="uid://bklj07teww5qu" path="res://scenes/twin-island/twin_island.tscn" id="6_e3hyu"]
 [ext_resource type="PackedScene" uid="uid://3fy2empx3bvr" path="res://assets/pirate/boats/boat-row-small.glb" id="9_7r4gi"]
 [ext_resource type="Script" uid="uid://dpw7jmqxveucn" path="res://scripts/barque.gd" id="10_w7kh3"]
 [ext_resource type="Script" uid="uid://36k2ttv8736a" path="res://addons/vaporwavesky/vaporwave_sky_material.gd" id="27_o3ebs"]
