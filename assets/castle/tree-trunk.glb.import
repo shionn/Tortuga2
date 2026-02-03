@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dredq2oktkwv5"
-path="res://.godot/imported/tree-trunk.glb-fcc630c76daefa4d164a499632742d15.scn"
+path="res://.godot/imported/tree-trunk.glb-2909ef0d6a68bf2efae0301400a6e32a.scn"
 
 [deps]
 
-source_file="res://assets/castle/tree-trunk.glb"
-dest_files=["res://.godot/imported/tree-trunk.glb-fcc630c76daefa4d164a499632742d15.scn"]
+source_file="res:///assets/castle/tree-trunk.glb"
+dest_files=["res://.godot/imported/tree-trunk.glb-2909ef0d6a68bf2efae0301400a6e32a.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
