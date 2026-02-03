@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d1gmtkr315dft"
-path="res://.godot/imported/twin-island-80.glb-5ba9f43f3968c936fe7f69abadeab911.scn"
+path="res://.godot/imported/twin-island-80.glb-e6d3ad329613f59d2754b3f27630ea2e.scn"
 
 [deps]
 
-source_file="res:///assets/mine/twin-island-80.glb"
-dest_files=["res://.godot/imported/twin-island-80.glb-5ba9f43f3968c936fe7f69abadeab911.scn"]
+source_file="res://assets/mine/twin-island-80.glb"
+dest_files=["res://.godot/imported/twin-island-80.glb-e6d3ad329613f59d2754b3f27630ea2e.scn"]
 
 [params]
 

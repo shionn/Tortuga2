@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bklj07teww5qu"]
+[gd_scene load_steps=12 format=3 uid="uid://bklj07teww5qu"]
 
 [ext_resource type="PackedScene" uid="uid://d1gmtkr315dft" path="res://assets/mine/twin-island-80.glb" id="2_fueny"]
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://scenes/water/WaterPlane.tscn" id="2_i67y0"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://fc1bkvtc3h41" path="res://assets/pirate/flat-grass.glb" id="8_6m50f"]
 [ext_resource type="PackedScene" uid="uid://cg8cslgj6gv4u" path="res://scenes/twin-island/twin_small_round_wood_house.tscn" id="9_pe2l3"]
 [ext_resource type="PackedScene" uid="uid://wn3wekt75te8" path="res://scenes/twin-island/twin_auberge.tscn" id="10_vymvp"]
+[ext_resource type="PackedScene" uid="uid://bb68d3ryhkrjf" path="res://scenes/twin-island/twin_house_red.tscn" id="11_dfefn"]
 
 [node name="Twin-Island" type="Node3D"]
 
@@ -23,7 +24,7 @@ skeleton = NodePath("../..")
 transform = Transform3D(0.3355667, 0, -0.9420165, 0, 1, 0, 0.9420165, 0, 0.3355667, -79.527374, -1.1483608, -17.894665)
 
 [node name="twin-small-round-wood-house" parent="." instance=ExtResource("9_pe2l3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 1.52, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5, 1.52, -0.099999905)
 
 [node name="Mountain-N" type="Node3D" parent="."]
 
@@ -167,3 +168,6 @@ transform = Transform3D(-2.1130884, 0, 4.5315356, 0, 3.9999986, 0, -4.5315356, 0
 
 [node name="twin-auberge" parent="." instance=ExtResource("10_vymvp")]
 transform = Transform3D(0.99959624, 0, 0.028410126, 0, 1, 0, -0.028410126, 0, 0.99959624, 4.9, 1.52, 21.9)
+
+[node name="twin-house-red" parent="." instance=ExtResource("11_dfefn")]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 30.7, 1.52, 20)
