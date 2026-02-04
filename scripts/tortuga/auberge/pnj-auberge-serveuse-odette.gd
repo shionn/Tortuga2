@@ -31,7 +31,7 @@ func on_item_drop(item : Item) -> void:
 			PnjDialogOption.new(
 				func(): return true,
 				"Je voudrais un cocktail",
-				func(): gui.open_alert(pnj_name, """C'est Maya la spécialiste en C'est Maya la spécialiste en cocktail""")
+				func(): gui.open_alert(pnj_name, """C'est Maya la spécialiste en cocktail""")
 			)
 		])
 	else : 

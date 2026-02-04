@@ -27,7 +27,7 @@ func _open_tomb() -> void :
 	
 const _TEXT_PROFANATION = """Maudit sois tu Pirate ! Tu oses profaner ma tombe et prendre un de mes ossements ? En guise de punition je reprends mon trésor ! 
 
-Profites bien de mon ossement et des quelques piécettes que je te laisse."""
+Profites bien de cet ossement et des quelques piécettes que je te laisse."""
 
 const _TEXT_PREVENT_PROFANATION = """Je pourrai profané la tombe et prendre un ossement pour le rituel. Mais une tombe est sacrée. 
 

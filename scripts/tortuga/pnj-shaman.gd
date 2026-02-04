@@ -35,9 +35,9 @@ func _on_search_wind() :
 
 func on_item_drop(_item : Item) -> void:
 	if _item.name == Bag.ListInvocationVent:
-		gui.open_dialog(pnj_name, "C’est ma propre liste que veux tu que j’en fasse? Rapporte moi donc plutôt les ingrédients.")
+		gui.open_dialog(pnj_name, "C’est ma propre liste que veux tu que j’en fasse ? Rapporte moi donc plutôt les ingrédients.")
 	elif _item.name == Bag.Plume or _item.name == Bag.Ossement or _item.name == Bag.SelDeMontagne :
-		gui.open_dialog(pnj_name, "Cool tu as trouver certain ingrédient, mais je veux d'abord mon mojito.")
+		gui.open_dialog(pnj_name, "Bravo, tu as trouvé certains ingrédients, mais je veux d'abords mon Mojito.")
 	elif _item.name == Bag.Mojito :
 		bag.unloot(Bag.Mojito)
 		if bag.contain(Bag.Plume) and  bag.contain(Bag.Ossement) and  bag.contain(Bag.SelDeMontagne) :
@@ -51,7 +51,7 @@ func on_item_drop(_item : Item) -> void:
 		else :
 			gui.open_dialog(pnj_name, _TEXT_MOJITO_MISSING)
 	elif _item.name == Bag.MojitoSansGlace:
-		gui.open_dialog(pnj_name, "C'est quoi ca ? il est chaud ton mojito !")
+		gui.open_dialog(pnj_name, "C'est quoi ca ? il est chaud ton Mojito !")
 		bag.unloot(Bag.MojitoSansGlace)
 	else : 
 		super.on_item_drop(_item)
@@ -80,7 +80,7 @@ const _TEXT_SEL = """Oui du sel, mais pas du sel de mer, j’ai besoin d’un se
 
 const _TEXT_MOJITO = """Oui et très frais s’il te plaît, il ne faut pas que les glaçons fondent."""
 
-const _TEXT_MOJITO_MISSING = """Merci pour le mojito, j’avais soif.
+const _TEXT_MOJITO_MISSING = """Merci pour le Mojito, j’avais soif.
 [gloup gloups]
 Ha mais je vois qu’il te manque encore des ingrédients pour l’invocation. Reviens me voir avec tous les ingrédients. 
 [gloop gloups]
