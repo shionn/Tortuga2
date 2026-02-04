@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bun08nin6q33j"]
+[gd_scene load_steps=47 format=3 uid="uid://bun08nin6q33j"]
 
 [ext_resource type="PackedScene" uid="uid://dsqb6308w0ec1" path="res://assets/town/road/road.glb" id="1_55bef"]
 [ext_resource type="PackedScene" uid="uid://ctoomevb22cit" path="res://scenes/props/sign.tscn" id="1_h8d57"]
@@ -34,10 +34,21 @@
 [ext_resource type="PackedScene" uid="uid://bvssfm8gng07x" path="res://assets/town/chimney-top.glb" id="21_ujpvh"]
 [ext_resource type="PackedScene" uid="uid://bkylul71s3oe7" path="res://assets/town/props/stall-bench.glb" id="22_jtkrg"]
 [ext_resource type="Script" uid="uid://f07fb775kj21" path="res://scripts/tortuga/manoir/pnj-manoir-majordhomme.gd" id="22_x1bvn"]
+[ext_resource type="PackedScene" uid="uid://b1yjus11tsbv2" path="res://assets/sketchfab/lowpoly_cartoon_skull.glb" id="24_mkxnw"]
 [ext_resource type="PackedScene" uid="uid://bcgxjpoukucvk" path="res://assets/graveyard/candle-multiple.glb" id="28_3oy5l"]
+[ext_resource type="PackedScene" uid="uid://cgwwol2ja1lfe" path="res://assets/town/props/overhang.glb" id="35_wfp5d"]
+[ext_resource type="PackedScene" uid="uid://dnox6xxvbcg01" path="res://assets/low-poly-rpg-item/crystal-red.glb" id="36_i1die"]
+[ext_resource type="PackedScene" uid="uid://d15wirfbris0g" path="res://assets/low-poly-rpg-item/key.glb" id="37_6qsu5"]
+[ext_resource type="PackedScene" uid="uid://0foinnfonhtl" path="res://assets/low-poly-rpg-item/monney.glb" id="38_lk5bb"]
+[ext_resource type="PackedScene" uid="uid://cfhclq2h350w" path="res://assets/low-poly-rpg-item/potion-2.glb" id="39_63hau"]
+[ext_resource type="PackedScene" uid="uid://u8dro2tv5eng" path="res://assets/crafting-items/book.glb" id="40_hnmma"]
+[ext_resource type="Script" uid="uid://lo10o3uykfwl" path="res://scripts/interactable.gd" id="41_wfp5d"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2p05u"]
 size = Vector3(0.4, 0.90000004, 0.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mkxnw"]
+size = Vector3(1.2, 1.2, 0.4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kd4xx"]
 size = Vector3(1.4150696, 0.13238525, 1)
@@ -45,7 +56,7 @@ size = Vector3(1.4150696, 0.13238525, 1)
 [node name="TortugaManoir" type="Node3D"]
 
 [node name="FlasqueDuCapitaine" parent="." instance=ExtResource("1_odlxa")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -1.9922959, 2.376142, -1.4115613)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -3.6922958, 2.8958473, -2.2115612)
 script = ExtResource("2_2p05u")
 
 [node name="Area3D" type="Area3D" parent="FlasqueDuCapitaine"]
@@ -54,9 +65,46 @@ script = ExtResource("2_2p05u")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7683716e-07, 0.4499998, 0)
 shape = SubResource("BoxShape3D_2p05u")
 
+[node name="book1" parent="." instance=ExtResource("40_hnmma")]
+transform = Transform3D(-0.29999998, 0, -2.6226832e-08, 0, 0.29999998, 0, 2.6226832e-08, 0, -0.29999998, -3.5918398, 2.9342198, -1.7)
+script = ExtResource("41_wfp5d")
+title = "Livre"
+description = "Tales of Whisperia saison 1"
+
+[node name="Area3D" type="Area3D" parent="book1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="book1/Area3D"]
+transform = Transform3D(1, 0, -1.4210855e-14, 0, 1, 0, 1.4210855e-14, 0, 1, 0.49999714, 0.50000095, 9.536743e-07)
+shape = SubResource("BoxShape3D_mkxnw")
+
+[node name="book2" parent="." instance=ExtResource("40_hnmma")]
+transform = Transform3D(-0.29999998, 0, -2.6226832e-08, 0, 0.29999998, 0, 2.6226832e-08, 0, -0.29999998, -3.5918398, 2.9342198, -1.8232751)
+script = ExtResource("41_wfp5d")
+title = "Livre"
+description = "Tales of Whisperia saison 2"
+
+[node name="Area3D" type="Area3D" parent="book2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="book2/Area3D"]
+transform = Transform3D(1, 0, -1.4210855e-14, 0, 1, 0, 1.4210855e-14, 0, 1, 0.49999714, 0.50000095, 9.536743e-07)
+shape = SubResource("BoxShape3D_mkxnw")
+
+[node name="book3" parent="." instance=ExtResource("40_hnmma")]
+transform = Transform3D(-0.29999998, 0, -2.6226832e-08, 0, 0.29999998, 0, 2.6226832e-08, 0, -0.29999998, -3.5918398, 2.9342198, -1.9432433)
+script = ExtResource("41_wfp5d")
+title = "Livre"
+description = "Tales of Whisperia saison 3"
+
+[node name="Area3D" type="Area3D" parent="book3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="book3/Area3D"]
+transform = Transform3D(1, 0, -1.4210855e-14, 0, 1, 0, 1.4210855e-14, 0, 1, 0.49999714, 0.50000095, 9.536743e-07)
+shape = SubResource("BoxShape3D_mkxnw")
+
 [node name="Sign" parent="." instance=ExtResource("1_h8d57")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 3.3)
-text = "Manoir de Whisp"
+title = "Panneau"
+description = "Manoir de Whisp"
 
 [node name="road2" parent="." instance=ExtResource("1_55bef")]
 transform = Transform3D(-10, -1.2079664e-06, 0, 1.509958e-06, -8, 0, 0, 0, 8, -0.1, 0, 0)
@@ -165,6 +213,12 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.5
 
 [node name="stair" type="Node3D" parent="."]
 
+[node name="Sketchfab_Scene" parent="stair" instance=ExtResource("24_mkxnw")]
+transform = Transform3D(-0.10606601, 0, 0.10606601, 0.01703836, 0.14805198, 0.01703836, -0.104688555, 0.02409588, -0.104688555, -3.5870342, 3.042932, 0.3441456)
+
+[node name="chest2" parent="stair" instance=ExtResource("8_psboo")]
+transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-08, -3.7, 2.9, -1.3531175)
+
 [node name="road-wood" parent="stair" instance=ExtResource("11_8lvi7")]
 transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 3, 1.99, 2)
 
@@ -247,7 +301,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 2
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 3, -2.5)
 
 [node name="chimney-top2" parent="stair" instance=ExtResource("21_ujpvh")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 4.1000004, -3.1999998)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 4.1000004, -2.4999998)
 
 [node name="dagger" parent="stair" instance=ExtResource("12_mp67j")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2, 3, 0.9000001)
@@ -267,6 +321,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 2, -1)
 
 [node name="candle-multiple2" parent="stair" instance=ExtResource("28_3oy5l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8000001, 2.3711119, -0.66223073)
+
+[node name="overhang2" parent="stair" instance=ExtResource("35_wfp5d")]
+transform = Transform3D(-2, -1.7484557e-07, -1.7484555e-07, 1.7484555e-07, -2, 1.7484555e-07, -1.7484557e-07, 1.7484554e-07, 2, -3.1, 4.8, -0.1)
+
+[node name="overhang3" parent="stair" instance=ExtResource("35_wfp5d")]
+transform = Transform3D(-2, -1.7484557e-07, -1.7484555e-07, 1.7484555e-07, -2, 1.7484555e-07, -1.7484557e-07, 1.7484554e-07, 2, -3.1, 4.8, -1.9)
+
+[node name="crystal-red" parent="stair" instance=ExtResource("36_i1die")]
+transform = Transform3D(0.17080131, 0.045766056, 0.24234766, 0.07764568, -0.28977773, -9.500937e-09, 0.23408984, 0.06272417, -0.17682657, -3.7993007, 3.0471997, -0.8299675)
+
+[node name="key" parent="stair" instance=ExtResource("37_6qsu5")]
+transform = Transform3D(0.19933833, -0.22419685, 9.53432e-09, 1.3063514e-08, -1.1429102e-09, -0.29999995, 0.22419679, 0.19933835, 9.003242e-09, -3.5891533, 2.9127166, -2.5)
+
+[node name="monney" parent="stair" instance=ExtResource("38_lk5bb")]
+transform = Transform3D(0.21213202, 0, 0.21213202, 0, 0.29999998, 0, -0.21213202, 0, 0.21213202, -3.7622807, 3, -0.49097514)
+
+[node name="potion-2" parent="stair" instance=ExtResource("39_63hau")]
+transform = Transform3D(0.18622263, 0, 0.07294611, 0, 0.2, 0, -0.07294611, 0, 0.18622263, -3.6478393, 2.9973016, -0.10167221)
 
 [node name="roof" type="Node3D" parent="."]
 

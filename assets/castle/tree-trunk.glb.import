@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dredq2oktkwv5"
-path="res://.godot/imported/tree-trunk.glb-2909ef0d6a68bf2efae0301400a6e32a.scn"
+path="res://.godot/imported/tree-trunk.glb-fcc630c76daefa4d164a499632742d15.scn"
 
 [deps]
 
-source_file="res:///assets/castle/tree-trunk.glb"
-dest_files=["res://.godot/imported/tree-trunk.glb-2909ef0d6a68bf2efae0301400a6e32a.scn"]
+source_file="res://assets/castle/tree-trunk.glb"
+dest_files=["res://.godot/imported/tree-trunk.glb-fcc630c76daefa4d164a499632742d15.scn"]
 
 [params]
 

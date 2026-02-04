@@ -8,6 +8,8 @@ class_name Interactable
 @onready var tags = $"/root/World/Player/Tags" as Tags
 
 @export var interactable_distance = 3 as float
+@export var title = "" as String
+@export_multiline var description = "" as String
 
 func _ready() -> void:
 	_area.connect("mouse_entered", _on_mouse_entered)
@@ -17,7 +19,10 @@ func _ready() -> void:
 	if bag : bag.on_item_change.connect(on_item_change)
 
 func on_interact() -> void: 
-	print("on_interact is not overwrite")
+	if description and title :
+		gui.open_alert(title, description)
+	else :
+		print("on_interact is not overwrite")
 
 func on_item_drop(_item : Item) -> void: 
 	player.play_anim_no()
