@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=126 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="PackedScene" uid="uid://gjk5y26xk1ud" path="res://assets/graveyard/gravestone/gravestone-bevel.glb" id="1_5xhig"]
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/crique/bouteille_note_lisible.gd" id="1_c7jrm"]
@@ -79,14 +79,23 @@
 [ext_resource type="PackedScene" uid="uid://djc74tsxiqmx1" path="res://scenes/tortuga/tortuga_mountain_bridge-3.tscn" id="64_puubj"]
 [ext_resource type="Script" uid="uid://cpcrwvnwjgc5p" path="res://scripts/tortuga/montagne-champi/tortuga_mind_wild.gd" id="64_waae6"]
 [ext_resource type="PackedScene" uid="uid://dt7kul30n8qm5" path="res://scenes/tortuga/tortuga_mountain_bridge-4.tscn" id="65_7nohc"]
+[ext_resource type="PackedScene" uid="uid://wbhw75nksawp" path="res://assets/low-poly-rpg-item/crystal-green.glb" id="66_afi26"]
 [ext_resource type="PackedScene" uid="uid://byjj6kfw5ebe1" path="res://scenes/tortuga/tortuga_mountain_bridge-5.tscn" id="66_boury"]
+[ext_resource type="PackedScene" uid="uid://cey7n6kj43a6y" path="res://assets/low-poly-rpg-item/crystal-blue.glb" id="67_yyvjg"]
+[ext_resource type="PackedScene" uid="uid://dnox6xxvbcg01" path="res://assets/low-poly-rpg-item/crystal-red.glb" id="68_tgi8i"]
+[ext_resource type="PackedScene" uid="uid://exhnwon78a8v" path="res://assets/mini-dungeon/coin.glb" id="69_c4fr1"]
 [ext_resource type="PackedScene" uid="uid://dbncpesyqlrv8" path="res://assets/castle/tree-large-simplified.glb" id="69_lk3d5"]
 [ext_resource type="PackedScene" uid="uid://ccus06wiowf5l" path="res://assets/nature/stone/stone_largeA.glb" id="70_5xe8w"]
+[ext_resource type="Script" uid="uid://lo10o3uykfwl" path="res://scripts/interactable.gd" id="70_es7mt"]
 [ext_resource type="Script" uid="uid://bb5eawq7jr0a7" path="res://scripts/tortuga/montagne-champi/pnj-charpentier-ryland.gd" id="70_mgx4c"]
 [ext_resource type="PackedScene" uid="uid://b2qtcc1xvlpgx" path="res://assets/character/base/character-male-e.glb" id="71_5xe8w"]
+[ext_resource type="PackedScene" uid="uid://bvcfjfv25el3k" path="res://assets/crafting-items/book-open.glb" id="71_es7mt"]
 [ext_resource type="Script" uid="uid://0e55yd0bunhc" path="res://scripts/tortuga/mountain-salt.gd" id="71_nt70y"]
 [ext_resource type="Script" uid="uid://bcbqah35ja3ow" path="res://scripts/tortuga/plage-o/pnj-kindle.gd" id="72_ei0yt"]
+[ext_resource type="PackedScene" uid="uid://u8dro2tv5eng" path="res://assets/crafting-items/book.glb" id="72_whw8m"]
+[ext_resource type="PackedScene" uid="uid://ctr6nmvo4yde1" path="res://assets/graveyard/altar-stone.glb" id="73_b0xvp"]
 [ext_resource type="PackedScene" uid="uid://hjvlc1djuf55" path="res://assets/farm-animals-quaternius/Horse.glb" id="73_ei0yt"]
+[ext_resource type="PackedScene" uid="uid://dx4s7axo4o001" path="res://assets/town/props/stall.glb" id="74_mt0j5"]
 [ext_resource type="PackedScene" uid="uid://dbglnuyw67vwg" path="res://assets/character/base/character-male-c.glb" id="74_waae6"]
 [ext_resource type="PackedScene" uid="uid://da843m2aqgq7r" path="res://assets/mine/tortuga-chaman-60.glb" id="79_0bag0"]
 [ext_resource type="PackedScene" uid="uid://c1sc7qjitvtsi" path="res://assets/pirate/rocks-a.glb" id="80_5x0ot"]
@@ -131,6 +140,9 @@ density_texture = SubResource("NoiseTexture3D_gl853")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ifuss"]
 size = Vector3(0.3, 0.3, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_es7mt"]
+size = Vector3(1.2, 1.3000001, 1.2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nt70y"]
 size = Vector3(0.8, 0.4, 1)
@@ -5215,6 +5227,125 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.20002747, 0.69999695, -3.29
 [node name="Pic5" type="Node3D" parent="Montagne-Nord/MontagneHungConnut"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 25.258696, -14)
 
+[node name="Grotte" type="Node3D" parent="Montagne-Nord/MontagneHungConnut/Pic5"]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 18.299988, 0, 11.900009)
+
+[node name="altar-stone2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("73_b0xvp")]
+transform = Transform3D(0, 0, 1.5, 0, 1.5, 0, -1.5, 0, 0, -8.909607, 16.300001, -8.343872)
+
+[node name="chest2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/altar-stone2" instance=ExtResource("22_aveh0")]
+transform = Transform3D(0.4, 0, 0, 0, 0.40000004, 0, 0, 0, 0.4, 0, 0.43333435, 0)
+
+[node name="oga_scroll" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/altar-stone2" instance=ExtResource("27_ggmis")]
+transform = Transform3D(0.94205165, 0, -0.33546796, 0, 1, 0, 0.33546796, 0, 0.94205165, 0.3088379, 0.09559822, 0.27957153)
+
+[node name="crystal-green" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("66_afi26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6213837, 0, -0.033477783)
+
+[node name="crystal-blue" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("67_yyvjg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.500061, 0, 3.5020447)
+
+[node name="barrel2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("32_tny17")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -12.445114, 0, -4.101227)
+script = ExtResource("70_es7mt")
+title = "Tonneau"
+description = "Ces tonnaux contiennent de l'alcool. Du rhum à l'odeur. "
+
+[node name="Area3D" type="Area3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/barrel2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/barrel2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00015258789, 0.5944977, 0.00012207031)
+shape = SubResource("BoxShape3D_es7mt")
+
+[node name="barrel3" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("32_tny17")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -12.515823, 0, -3.0405579)
+script = ExtResource("70_es7mt")
+title = "Tonneau"
+description = "Ces tonnaux contiennent de l'alcool. Du rhum à l'odeur. "
+
+[node name="Area3D" type="Area3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/barrel3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/barrel3/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00015258789, 0.5944977, 0.00012207031)
+shape = SubResource("BoxShape3D_es7mt")
+
+[node name="barrel4" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("32_tny17")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -11.667282, 0, -3.6062317)
+script = ExtResource("70_es7mt")
+title = "Tonneau"
+description = "Ces tonnaux contiennent de l'alcool. Du rhum à l'odeur. "
+
+[node name="Area3D" type="Area3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/barrel4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/barrel4/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00015258789, 0.5944977, 0.00012207031)
+shape = SubResource("BoxShape3D_es7mt")
+
+[node name="barrel5" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("32_tny17")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -11.101608, 0, -4.4547424)
+script = ExtResource("70_es7mt")
+title = "Tonneau"
+description = "Ces tonnaux contiennent de l'alcool. Du rhum à l'odeur. "
+
+[node name="Area3D" type="Area3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/barrel5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/barrel5/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00015258789, 0.5944977, 0.00012207031)
+shape = SubResource("BoxShape3D_es7mt")
+
+[node name="barrel6" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("32_tny17")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -10.323807, 0, -4.808258)
+script = ExtResource("70_es7mt")
+title = "Tonneau"
+description = "Ces tonnaux contiennent de l'alcool. Du rhum à l'odeur. "
+
+[node name="Area3D" type="Area3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/barrel6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/barrel6/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00015258789, 0.5944977, 0.00012207031)
+shape = SubResource("BoxShape3D_es7mt")
+
+[node name="barrel7" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("32_tny17")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -11.38443, 16.35, -5.5859985)
+script = ExtResource("70_es7mt")
+title = "Tonneau"
+description = "Ces tonnaux contiennent de l'alcool. Du rhum à l'odeur. "
+
+[node name="Area3D" type="Area3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/barrel7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/barrel7/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00015258789, 0.5944977, 0.00012207031)
+shape = SubResource("BoxShape3D_es7mt")
+
+[node name="barrel8" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("32_tny17")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -3.2527008, 16.35, -7.3537903)
+script = ExtResource("70_es7mt")
+title = "Tonneau"
+description = "Ces tonnaux contiennent de l'alcool. Du rhum à l'odeur. "
+
+[node name="Area3D" type="Area3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/barrel8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/barrel8/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00015258789, 0.5944977, 0.00012207031)
+shape = SubResource("BoxShape3D_es7mt")
+
+[node name="crystal-red" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("68_tgi8i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2071686, 0, -0.033477783)
+
+[node name="coin2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("69_c4fr1")]
+
+[node name="oga_scroll" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("27_ggmis")]
+
+[node name="book-open" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("71_es7mt")]
+
+[node name="book" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("72_whw8m")]
+
+[node name="chest2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("22_aveh0")]
+transform = Transform3D(0.38302225, 0, -0.3213938, 0, 0.5, 0, 0.3213938, 0, 0.38302225, 9.82869, 0, -7.424591)
+
+[node name="stall2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("74_mt0j5")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, 2.5449524, 16.35, -9.192047)
+
 [node name="Entrance" type="Node3D" parent="Montagne-Nord/MontagneHungConnut/Pic5"]
 transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 7.1999817, 0, 4.800003)
 
@@ -5372,9 +5503,6 @@ transform = Transform3D(-0.71016085, 0, 0.70403945, 0, 1, 0, -0.70403945, 0, -0.
 
 [node name="MountainBridge-3" parent="Montagne-Nord/MontagneHungConnut/Pic5" instance=ExtResource("66_boury")]
 transform = Transform3D(0.9588197, 0, 0.28401533, 0, 1, 0, -0.28401533, 0, 0.9588197, 31.112274, 13.040155, 0.6390686)
-
-[node name="chest2" parent="Montagne-Nord/MontagneHungConnut/Pic5" instance=ExtResource("22_aveh0")]
-transform = Transform3D(0.32139382, 0, 0.38302222, 0, 0.5, 0, -0.38302222, 0, 0.32139382, 19, 16.341303, 1)
 
 [node name="MontagneCentral" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0.5, -115)
