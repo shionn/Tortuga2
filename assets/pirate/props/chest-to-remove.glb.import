@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://rht7nkabco3w"
-path="res://.godot/imported/chest.glb-c35e33f94bf432f87c5640f949e63570.scn"
+path="res://.godot/imported/chest-to-remove.glb-d0eee3b8b68fc23ba6c2ce91587c9f99.scn"
 
 [deps]
 
-source_file="res://assets/pirate/props/chest.glb"
-dest_files=["res://.godot/imported/chest.glb-c35e33f94bf432f87c5640f949e63570.scn"]
+source_file="res://assets/pirate/props/chest-to-remove.glb"
+dest_files=["res://.godot/imported/chest-to-remove.glb-d0eee3b8b68fc23ba6c2ce91587c9f99.scn"]
 
 [params]
 
@@ -37,6 +37,12 @@ import_script/path="res://addons/physics_collision_import_generator/import_scrip
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:AnimationPlayer": {
+"optimizer/enabled": false
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1

@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://6v1bhowsnc7u" path="res://assets/town/walls/wall-detail-horizontal.glb" id="4_68v6p"]
 [ext_resource type="PackedScene" uid="uid://bx0r6vahjplt0" path="res://assets/town/walls/wall-detail-diagonal.glb" id="5_j36l5"]
 [ext_resource type="PackedScene" uid="uid://dbk72njpbd4xb" path="res://assets/town/walls/wall-detail-cross.glb" id="6_a5a8v"]
-[ext_resource type="PackedScene" uid="uid://rht7nkabco3w" path="res://assets/pirate/props/chest.glb" id="7_j36l5"]
+[ext_resource type="PackedScene" uid="uid://rht7nkabco3w" path="res://assets/pirate/props/chest-to-remove.glb" id="7_j36l5"]
 [ext_resource type="PackedScene" uid="uid://bxfxur5p8lqge" path="res://assets/castle/flag-banner-long.glb" id="7_r46nr"]
 [ext_resource type="PackedScene" uid="uid://tcq66ekm1qts" path="res://assets/town/roof/roof-high-corner.glb" id="9_a5a8v"]
 [ext_resource type="PackedScene" uid="uid://d24y2qoa6ycia" path="res://assets/town/roof/roof-high.glb" id="10_1ut30"]

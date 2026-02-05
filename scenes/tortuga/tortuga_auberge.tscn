@@ -30,7 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://wsxyy7oeifnl" path="res://assets/sketchfab/pirate-asset-pack/hook.glb" id="12_w1ok7"]
 [ext_resource type="PackedScene" uid="uid://ce020gq54lbgk" path="res://assets/sketchfab/pirate_hat.glb" id="13_lmn3h"]
 [ext_resource type="PackedScene" uid="uid://cgwwol2ja1lfe" path="res://assets/town/props/overhang.glb" id="15_4iy6t"]
-[ext_resource type="PackedScene" uid="uid://rht7nkabco3w" path="res://assets/pirate/props/chest.glb" id="15_7ouha"]
+[ext_resource type="PackedScene" uid="uid://rht7nkabco3w" path="res://assets/pirate/props/chest-to-remove.glb" id="15_7ouha"]
 [ext_resource type="PackedScene" uid="uid://fxju6y015d38" path="res://assets/low-poly-rpg-item/scroll-2.glb" id="15_ilbcv"]
 [ext_resource type="Script" uid="uid://b6m4fy6hh0b85" path="res://scripts/tortuga/auberge/auberge-menu.gd" id="15_pcc0y"]
 [ext_resource type="PackedScene" uid="uid://bl8gqk34ub2cy" path="res://assets/pirate/props/crate-bottles.glb" id="16_0avcf"]

@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://cgwwol2ja1lfe" path="res://assets/town/props/overhang.glb" id="9_h4toq"]
 [ext_resource type="PackedScene" uid="uid://dru71m0k1pta1" path="res://assets/pirate/props/crate.glb" id="9_ruvfp"]
 [ext_resource type="PackedScene" uid="uid://dscn3a3phc6we" path="res://assets/low-poly-rpg-item/shield-2.glb" id="10_wbxmk"]
-[ext_resource type="PackedScene" uid="uid://rht7nkabco3w" path="res://assets/pirate/props/chest.glb" id="11_ruvfp"]
+[ext_resource type="PackedScene" uid="uid://rht7nkabco3w" path="res://assets/pirate/props/chest-to-remove.glb" id="11_ruvfp"]
 [ext_resource type="PackedScene" uid="uid://dek5a2pkeockq" path="res://assets/mini-arena/weapon-rack.glb" id="11_yy2qo"]
 [ext_resource type="PackedScene" uid="uid://tc02ew4wcfgf" path="res://assets/mini-arena/weapon-spear.glb" id="12_4cps0"]
 [ext_resource type="PackedScene" uid="uid://xefmsuf3vde" path="res://assets/pirate/props/cannon-mobile.glb" id="12_vms7r"]

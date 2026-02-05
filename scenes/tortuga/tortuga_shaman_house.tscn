@@ -25,7 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://bmr3cs3lgqj45" path="res://assets/food-kit/soda-bottle.glb" id="22_7vd7w"]
 [ext_resource type="PackedScene" uid="uid://b5xtrnp1f2eg7" path="res://assets/pirate/props/bottle.glb" id="23_x883r"]
 [ext_resource type="PackedScene" uid="uid://bl8gqk34ub2cy" path="res://assets/pirate/props/crate-bottles.glb" id="24_0j4tr"]
-[ext_resource type="PackedScene" uid="uid://rht7nkabco3w" path="res://assets/pirate/props/chest.glb" id="25_dqt61"]
+[ext_resource type="PackedScene" uid="uid://rht7nkabco3w" path="res://assets/pirate/props/chest-to-remove.glb" id="25_dqt61"]
 [ext_resource type="PackedScene" uid="uid://bvcfjfv25el3k" path="res://assets/crafting-items/book-open.glb" id="25_newob"]
 [ext_resource type="PackedScene" uid="uid://b8nj6obtmrowr" path="res://assets/low-poly-rpg-item/staff-1.glb" id="27_ijj14"]
 [ext_resource type="PackedScene" uid="uid://cw21k0u1nimhs" path="res://assets/low-poly-rpg-item/potion-1.glb" id="28_qdvfn"]

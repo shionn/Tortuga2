@@ -1,4 +1,4 @@
-extends "res://scripts/interactable.gd"
+extends "res://scripts/props/chest.gd"
 
 const _TEXT =  """Vous avez résolue l'énigme de Barbe Drue
 
@@ -9,7 +9,6 @@ Peut être qu'au village,
 Pour le déchiffrer vous trouverez un sage."""
 
 func on_interact() -> void:
-	# 
 	if tags.have(Tags.TREASUR_BARBE_DRUE_OPENED) or bag.contain(Bag.TresorBarbeDrue) or  bag.contain(Bag.TresorBarbeDrueNet) : 
 		gui.open_alert("Coffre vide", "Le coffre est vide")
 	else :
@@ -23,3 +22,7 @@ func on_answer(answer: String) -> void:
 		tags.add(Tags.TREASUR_BARBE_DRUE_OPENED)
 	else :
 		gui.open_alert("Mauvais code", "Le coffre ne s'ouvre pas.")
+
+func on_tag_change() -> void:
+	if tags.have(Tags.TREASUR_BARBE_DRUE_OPENED) : open()
+	else : close()

@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://6v1bhowsnc7u" path="res://assets/town/walls/wall-detail-horizontal.glb" id="7_8dpel"]
 [ext_resource type="PackedScene" uid="uid://f25oaswt3cuq" path="res://assets/pirate/props/barrel.glb" id="7_bcdce"]
 [ext_resource type="AudioStream" uid="uid://bseh7kgl7fh7j" path="res://assets/sound/evil laugh.ogg" id="7_vy2c6"]
-[ext_resource type="PackedScene" uid="uid://rht7nkabco3w" path="res://assets/pirate/props/chest.glb" id="8_psboo"]
+[ext_resource type="PackedScene" uid="uid://rht7nkabco3w" path="res://assets/pirate/props/chest-to-remove.glb" id="8_psboo"]
 [ext_resource type="PackedScene" uid="uid://bl8gqk34ub2cy" path="res://assets/pirate/props/crate-bottles.glb" id="9_mp67j"]
 [ext_resource type="PackedScene" uid="uid://dvn116r1fxtxs" path="res://assets/town/road/road-wood.glb" id="11_8lvi7"]
 [ext_resource type="PackedScene" uid="uid://ce020gq54lbgk" path="res://assets/sketchfab/pirate_hat.glb" id="11_dyj5b"]
