@@ -27,6 +27,8 @@ const PotionDegrisement = "PotionDegrisement"
 const TresorBarbeDrue = "TresorBarbeDrue"
 const TresorBarbeDrueNet = "TresorBarbeDrueNet"
 const TresorBarbeDrueMaudit = "TresorBarbeDrueMaudit"
+const TresorHungConnut = "TresorHungConnut"
+const TresorHungConnutNet = "TresorHungConnutNet"
 const SelDeMontagne = "SelDeMontagne"
 
 @onready var _grid = $Panel/MarginContainer/VBoxContainer/GridContainer as GridContainer
@@ -37,7 +39,7 @@ var drag : Item = null
 
 signal on_item_change()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if drag != null :
 		drag.global_position = get_viewport().get_mouse_position() + Vector2(5,5)
 

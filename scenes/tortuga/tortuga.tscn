@@ -1,4 +1,4 @@
-[gd_scene load_steps=128 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=129 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="PackedScene" uid="uid://gjk5y26xk1ud" path="res://assets/graveyard/gravestone/gravestone-bevel.glb" id="1_5xhig"]
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/crique/bouteille_note_lisible.gd" id="1_c7jrm"]
@@ -146,6 +146,9 @@ size = Vector3(0.3, 0.3, 0.3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_es7mt"]
 size = Vector3(1.2, 1.3000001, 1.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0yxjw"]
+size = Vector3(2, 0.4, 1.3000001)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nt70y"]
 size = Vector3(0.8, 0.4, 1)
@@ -5376,6 +5379,12 @@ transform = Transform3D(0.06887998, 0, -0.24032383, 0, 0.25, 0, 0.24032383, 0, 0
 script = ExtResource("70_es7mt")
 title = "Livre illisible"
 description = "Ce livre est très abîmé, j’arrive à lire W****e** *** Om*re G*****ss****."
+
+[node name="Area3D" type="Area3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Bureau/book-open2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Bureau/book-open2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00012207031, 0.19999695, -0.05029297)
+shape = SubResource("BoxShape3D_0yxjw")
 
 [node name="book2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Bureau" instance=ExtResource("72_whw8m")]
 transform = Transform3D(-0.15743522, 0.1942013, 1.0927847e-08, 6.8817108e-09, -8.4888105e-09, 0.25, 0.1942013, 0.15743522, 1.827092e-15, 0.012102321, 0.05337143, -0.8344261)

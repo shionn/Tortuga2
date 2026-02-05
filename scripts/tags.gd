@@ -20,13 +20,13 @@ const KNOW_FERMIER_LOVE_OMELETTE = "016"
 const CAN_LOOT_HOUBLON = "017"
 const KINDLE_RETURN_GUSTAF = "018"
 const WIND_BLOWING = "019"
-const SEARCH_WIND = "020" # a vider 
-const SEARCH_BARQUE = "021" # a vider
-const SEARCH_PASS = "022" # a vider
-const SEARCH_CAPTAIN_BOTTLE = "023" # a vider
+const SEARCH_WIND = "020"
+const SEARCH_BARQUE = "021"
+const SEARCH_PASS = "022" 
+const SEARCH_CAPTAIN_BOTTLE = "023" 
 const ALLOW_PICKAXE = "024"
 const TOMB_BARBE_DRUE_OPENED = "025"
-const KNOW_BONE_SKULL_STORY = "026" # a vider
+const KNOW_BONE_SKULL_STORY = "026" 
 
 var tags : Array[String] = []
 
