@@ -1,4 +1,4 @@
-[gd_scene load_steps=126 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=128 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="PackedScene" uid="uid://gjk5y26xk1ud" path="res://assets/graveyard/gravestone/gravestone-bevel.glb" id="1_5xhig"]
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/crique/bouteille_note_lisible.gd" id="1_c7jrm"]
@@ -82,7 +82,9 @@
 [ext_resource type="PackedScene" uid="uid://wbhw75nksawp" path="res://assets/low-poly-rpg-item/crystal-green.glb" id="66_afi26"]
 [ext_resource type="PackedScene" uid="uid://byjj6kfw5ebe1" path="res://scenes/tortuga/tortuga_mountain_bridge-5.tscn" id="66_boury"]
 [ext_resource type="PackedScene" uid="uid://cey7n6kj43a6y" path="res://assets/low-poly-rpg-item/crystal-blue.glb" id="67_yyvjg"]
+[ext_resource type="Script" uid="uid://c3xl7gsrfchhp" path="res://scripts/tortuga/hung-connut/chest-hung-connut.gd" id="68_b0xvp"]
 [ext_resource type="PackedScene" uid="uid://dnox6xxvbcg01" path="res://assets/low-poly-rpg-item/crystal-red.glb" id="68_tgi8i"]
+[ext_resource type="PackedScene" uid="uid://cucl5efy6vt2g" path="res://scenes/props/chest.tscn" id="68_whw8m"]
 [ext_resource type="PackedScene" uid="uid://exhnwon78a8v" path="res://assets/mini-dungeon/coin.glb" id="69_c4fr1"]
 [ext_resource type="PackedScene" uid="uid://dbncpesyqlrv8" path="res://assets/castle/tree-large-simplified.glb" id="69_lk3d5"]
 [ext_resource type="PackedScene" uid="uid://ccus06wiowf5l" path="res://assets/nature/stone/stone_largeA.glb" id="70_5xe8w"]
@@ -5233,11 +5235,12 @@ transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70
 [node name="altar-stone2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("73_b0xvp")]
 transform = Transform3D(0, 0, 1.5, 0, 1.5, 0, -1.5, 0, 0, -8.909607, 16.300001, -8.343872)
 
-[node name="chest2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/altar-stone2" instance=ExtResource("22_aveh0")]
-transform = Transform3D(0.4, 0, 0, 0, 0.40000004, 0, 0, 0, 0.4, 0, 0.43333435, 0)
-
 [node name="oga_scroll" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/altar-stone2" instance=ExtResource("27_ggmis")]
 transform = Transform3D(0.94205165, 0, -0.33546796, 0, 1, 0, 0.33546796, 0, 0.94205165, 0.3088379, 0.09559822, 0.27957153)
+
+[node name="Chest" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/altar-stone2" instance=ExtResource("68_whw8m")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.43, 0)
+script = ExtResource("68_b0xvp")
 
 [node name="crystal-green" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("66_afi26")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6213837, 0, -0.033477783)
@@ -5343,7 +5346,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2071686, 0, -0.033477783)
 [node name="chest2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("22_aveh0")]
 transform = Transform3D(0.38302225, 0, -0.3213938, 0, 0.5, 0, 0.3213938, 0, 0.38302225, 9.82869, 0, -7.424591)
 
-[node name="stall2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("74_mt0j5")]
+[node name="Deco" type="Node3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte"]
+
+[node name="stall2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Deco" instance=ExtResource("74_mt0j5")]
 transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, 2.5449524, 16.35, -9.192047)
 
 [node name="Entrance" type="Node3D" parent="Montagne-Nord/MontagneHungConnut/Pic5"]
