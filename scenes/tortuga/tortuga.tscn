@@ -5239,12 +5239,6 @@ transform = Transform3D(0.94205165, 0, -0.33546796, 0, 1, 0, 0.33546796, 0, 0.94
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.43, 0)
 script = ExtResource("68_b0xvp")
 
-[node name="crystal-green" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("66_afi26")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6213837, 0, -0.033477783)
-
-[node name="crystal-blue" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("67_yyvjg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.500061, 0, 3.5020447)
-
 [node name="Barrels" type="Node3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte"]
 
 [node name="barrel2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Barrels" instance=ExtResource("32_tny17")]
@@ -5331,19 +5325,40 @@ description = "Ces tonnaux contiennent de l'alcool. Du rhum à l'odeur. "
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00015258789, 0.5944977, 0.00012207031)
 shape = SubResource("BoxShape3D_es7mt")
 
-[node name="crystal-red" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("68_tgi8i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2071686, 0, -0.033477783)
+[node name="Crystals" type="Node3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte"]
 
-[node name="coin2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("69_c4fr1")]
+[node name="crystal-green" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Crystals" instance=ExtResource("66_afi26")]
+transform = Transform3D(-2.2657692, -1.0565457, -4.3301272, -2.1130915, 4.531539, 0, 3.9244277, 1.8299909, -2.5, 8.755356, 5, 1.9665222)
 
-[node name="oga_scroll" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("27_ggmis")]
+[node name="crystal-blue" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Crystals" instance=ExtResource("67_yyvjg")]
+transform = Transform3D(4.5857882, 1.4099762, -3.6031275, -1.86656, 5.700434, -0.14492133, 3.3891754, 1.231672, 4.7954645, 12.82103, 12.59627, -5.9632263)
 
-[node name="book-open" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("71_es7mt")]
+[node name="crystal-red" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Crystals" instance=ExtResource("68_tgi8i")]
+transform = Transform3D(-5.656854, 0, -5.656854, 0, 8, 0, 5.656854, 0, -5.656854, -2.1928406, 9.4, -8.133484)
 
-[node name="book" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("72_whw8m")]
+[node name="Chests" type="Node3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte"]
+transform = Transform3D(0.81915236, 0, -0.57357657, 0, 1, 0, 0.57357657, 0, 0.81915236, 11.701641, 0, -6.0920434)
 
-[node name="Chest" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte" instance=ExtResource("68_whw8m")]
-transform = Transform3D(0.86602545, 0, -0.5, 0, 1, 0, 0.5, 0, 0.86602545, 9.121674, 0, -6.7175293)
+[node name="Chest" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Chests" instance=ExtResource("68_whw8m")]
+transform = Transform3D(0.9999999, 0, 4.4703484e-08, 0, 1, 0, -4.4703484e-08, 0, 0.9999999, 0.29999998, 0, -1.3411046e-08)
+_open = true
+title = "Coffre"
+description = "Ce coffre est vite."
+
+[node name="Chest2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Chests" instance=ExtResource("68_whw8m")]
+transform = Transform3D(0.9999999, 0, 4.4703484e-08, 0, 1, 0, -4.4703484e-08, 0, 0.9999999, -1.0999999, 0, 4.9173835e-08)
+_open = true
+title = "Coffre"
+description = "Ce coffre est vite."
+
+[node name="Chest3" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Chests" instance=ExtResource("68_whw8m")]
+transform = Transform3D(0.9659257, 0, -0.25881898, 0, 1, 0, 0.25881898, 0, 0.9659257, -2.3999999, 0, 1.07288365e-07)
+_open = true
+title = "Coffre"
+description = "Ce coffre est vite."
+
+[node name="Chest4" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Chests" instance=ExtResource("68_whw8m")]
+transform = Transform3D(0.70710677, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, 0.70710677, 2.0121317, 0, 0.21213193)
 _open = true
 title = "Coffre"
 description = "Ce coffre est vite."
@@ -5353,17 +5368,23 @@ transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8
 
 [node name="stall2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Bureau" instance=ExtResource("74_mt0j5")]
 
-[node name="candle-multiple2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Bureau/stall2" instance=ExtResource("77_0yxjw")]
-transform = Transform3D(-1.0000002, 0, -2.0861626e-07, 0, 1, 0, 2.0861626e-07, 0, -1.0000002, -0.18077087, 0.3674736, -0.35427856)
-
 [node name="Stool" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Bureau" instance=ExtResource("80_b0xvp")]
 transform = Transform3D(-2.9802322e-08, 0, 1.0000005, 0, 1.0000001, 0, -1.0000005, 0, -2.9802322e-08, 0.52371216, -0.008693695, 0.010864258)
 
 [node name="book-open2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Bureau" instance=ExtResource("71_es7mt")]
-transform = Transform3D(-0.07764573, 0, -0.2897778, 0, 0.3, 0, 0.2897778, 0, -0.07764573, 0.07035828, 0.39130402, 0.12307739)
+transform = Transform3D(0.06887998, 0, -0.24032383, 0, 0.25, 0, 0.24032383, 0, 0.06887998, -0.025771253, 0.35564423, 0.15062939)
+script = ExtResource("70_es7mt")
+title = "Livre illisible"
+description = "Ce livre est très abîmé, j’arrive à lire W****e** *** Om*re G*****ss****."
 
 [node name="book2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Bureau" instance=ExtResource("72_whw8m")]
-transform = Transform3D(-3.7252903e-08, 0.30000016, 1.3113418e-08, 0, -1.3113418e-08, 0.30000004, 0.30000016, 3.7252903e-08, 4.440892e-16, 0.19316101, 0.060028076, -0.9482422)
+transform = Transform3D(-0.15743522, 0.1942013, 1.0927847e-08, 6.8817108e-09, -8.4888105e-09, 0.25, 0.1942013, 0.15743522, 1.827092e-15, 0.012102321, 0.05337143, -0.8344261)
+
+[node name="coin2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Bureau" instance=ExtResource("69_c4fr1")]
+transform = Transform3D(0.114715286, -0.16383041, -8.742278e-09, 5.014365e-09, -7.1612547e-09, 0.2, -0.16383041, -0.114715286, 3.1302838e-16, 0.120000035, 0.37999994, -0.34000003)
+
+[node name="candle-multiple2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Bureau" instance=ExtResource("77_0yxjw")]
+transform = Transform3D(-1.0000004, 0, -2.3841858e-07, 0, 1, 0, 2.3841858e-07, 0, -1.0000004, -0.18077087, 0.3674736, -0.35427856)
 
 [node name="Bridges" type="Node3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte"]
 
