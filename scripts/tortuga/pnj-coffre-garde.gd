@@ -21,6 +21,10 @@ func on_item_drop(item : Item) -> void:
 		gui.open_dialog(pnj_name, _TEXT_TRESOR_BARBE_DRUE)
 		bag.unloot(Bag.TresorBarbeDrue)
 		bag.loot(Bag.TresorBarbeDrueNet)
+	elif item.name == Bag.TresorHungConnut :
+		gui.open_dialog(pnj_name, _TEXT_TRESOR_BARBE_DRUE)
+		bag.unloot(Bag.TresorHungConnut)
+		bag.loot(Bag.TresorHungConnutNet)
 	else :
 		super.on_item_drop(item)
 

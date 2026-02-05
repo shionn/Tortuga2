@@ -58,8 +58,8 @@ func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3,
 		else :
 			on_interact()
 
-func open_dialog_and_img(title: String, text: String, img: Resource) -> void:
-	gui.open_dialog_and_img(title, text, img)
+func open_dialog_and_img(_title: String, text: String, img: Resource) -> void:
+	gui.open_dialog_and_img(_title, text, img)
 
-func open_question(title: String, callback: Callable) -> void:
-	gui.open_question(title,callback)
+func open_question(_title: String, callback: Callable) -> void:
+	gui.open_question(_title,callback)

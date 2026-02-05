@@ -25,12 +25,14 @@ func compute() -> void :
 	_item(Bag.ParcheminBarbeDrueDecoder, 2) # remplace le FruitDefendu
 	_item(Bag.CarteHungConnut, 1)
 	
-	#quete 3 : 
+	#quete 3 : min 9, max 14
 	_item(Bag.Houblon, 1)
 	_tag(Tags.KINDLE_RETURN_GUSTAF, 2) # remplace le houblon
 	_tag(Tags.ESCALATOR_CHAMPI_REPAIR, 1) # a voir si on le garde
 	_item(Bag.PasseBarqueTanpon, 1)
-	# on peu perdre 1 pt min et 2 pts max en profanant la tombe de barbe drue
+	_item(Bag.TresorHungConnut, 1)
+	_item(Bag.TresorHungConnutNet, 2)
+	# on peu perdre 1 pt en profanant la tombe de barbe drue
 	
 	self.text = "Score : "+str(value)
 

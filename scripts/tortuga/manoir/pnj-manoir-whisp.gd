@@ -20,9 +20,11 @@ func on_interact() -> void:
 	$Laugh.play()
 
 func on_item_drop(item : Item) -> void:
-	if item.name == 'TresorBarbeDrue' :
+	if item.name == Bag.TresorBarbeDrue :
 		gui.open_dialog(pnj_name,TEXT_TRESOR_BARBE_DRUE)
-	elif item.name == 'ParcheminBarbeDrue' :
+	elif item.name == Bag.TresorHungConnut :
+		gui.open_dialog(pnj_name,TEXT_TRESOR_HUNG_CONNU)
+	elif item.name == Bag.ParcheminBarbeDrue :
 		gui.open_dialog(pnj_name,TEXT_PARCHEMIN_BARBE_DRUE)
 	elif item.name == Bag.PageHungConnutFrag1 or item.name == Bag.PageHungConnutFrag2 or item.name == Bag.PageHungConnutFrag3 :
 		gui.open_dialog(pnj_name, TEXT_FRAGMENT_HUNG_CONNUT)
@@ -58,6 +60,11 @@ const TEXT_TRESOR_BARBE_DRUE = """Ho je vois que tu as retrouvé le trésor de B
 N'oublie pas que tous gains de pirate est soumis à une taxe de 25%. 
 Il te faut déposer cette part de tes gains au coffre."""
 
+const TEXT_TRESOR_HUNG_CONNU = """Ho je vois que tu as retrouvé le trésor de Hung Connu. 
+
+N'oublie pas que tous gains de pirate est soumis à une taxe de 25%. 
+Il te faut déposer cette part de tes gains au coffre."""
+
 const TEXT_PARCHEMIN_BARBE_DRUE = """Quel étrange parchemin, je n'y comprend rien. 
 
 Il doit bien y avoir une érudite au village pour te le traduire."""
@@ -76,7 +83,7 @@ const TEXT_SEARCH_PASS = """Hein ? Quoi ? Je ne dormais pas je méditais, c’es
 
 Ah mais oui il va vous falloir un pass sinon Rurik ne vous laissera jamais monter à bord ! J’avais oublié, oui j’en ai un, euh où est il ? 
 
-Bon hum, je l’ai encore égaré, la dernière fois que je l’ai vu il était dans ma poche. Et ma poche était sur moi. Et j’étais ici... Ici, ah j’ai perdu ma flasque de Whisky. 
+Bon hum, je l’ai encore égaré, la dernière fois que je l’ai vu il était dans ma poche. Et ma poche était sur moi. Et j’étais ici... Ici, ah j’ai perdu ma flasque de Rhum. 
 
 Par le Kraken, je commence à me dessécher ! Allez houste je dois chercher ma flasque sans elle je sais plus où j'en suis et j’ai soif !"""
 
