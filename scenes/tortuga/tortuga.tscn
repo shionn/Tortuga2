@@ -271,7 +271,7 @@ transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.2588
 transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -36, 1.8, -27)
 
 [node name="TortugaManoir" parent="Crique" instance=ExtResource("48_n6usc")]
-transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 44, 1.5, -31)
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 44, 1.45, -31)
 
 [node name="TortugaWall" parent="Crique" instance=ExtResource("19_n6usc")]
 transform = Transform3D(2.5526812, 0, 1.5760138, 0, 3.0000005, 0, -1.5760138, 0, 2.5526812, 33.66643, -3.3612933, 61.311058)

@@ -2,6 +2,8 @@ extends "res://scripts/pnj.gd"
 
 
 func on_interact() -> void:
-	gui.open_dialog(pnj_name, """Salut Pirate. 
+	gui.open_dialog_next(_TEXT, self)
+
+const _TEXT = """Salut Pirate. 
 	
-Le Capitaine Whisp est en haut, il t'attend. Il a une mission pour toi.""")
+Le Capitaine Whisp est en haut, il t'attend. Il a une mission pour toi."""

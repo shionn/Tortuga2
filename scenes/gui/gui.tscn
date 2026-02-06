@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=52 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://scripts/gui/gui.gd" id="1_0fbet"]
 [ext_resource type="Script" uid="uid://ikfx1cjqumpb" path="res://scripts/gui/dialog.gd" id="2_bgohe"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dyq75clqrse1h" path="res://assets/gui/ui-adventure/minimap_ring_brown_detail.png" id="2_ioifv"]
 [ext_resource type="Texture2D" uid="uid://ctudwtb3qq5jg" path="res://assets/gui/ui-adventure/minimap_compass_toon_n.png" id="3_q46mf"]
 [ext_resource type="Script" uid="uid://k2bbepgo55y4" path="res://scripts/gui/image.gd" id="3_ytu88"]
+[ext_resource type="Script" uid="uid://dl188qunxuiwr" path="res://scripts/gui/dialog_next.gd" id="4_sq8wm"]
 [ext_resource type="Texture2D" uid="uid://6r2enbextcew" path="res://assets/gui/ui-adventure/minimap_compass_toon_s.png" id="4_ytf3d"]
 [ext_resource type="Texture2D" uid="uid://cdqtjkc7ao1xk" path="res://assets/gui/ui-adventure/minimap_compass_toon_e.png" id="5_bk7cs"]
 [ext_resource type="Texture2D" uid="uid://bkfc3jdh67dmb" path="res://assets/gui/ui-adventure/minimap_compass_toon_w.png" id="6_kvi6p"]
@@ -209,7 +210,7 @@ size_flags_horizontal = 3
 tooltip_text = "Fermer"
 text = "Fermer"
 
-[node name="PanelNext" type="Panel" parent="."]
+[node name="DialogNext" type="Panel" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = 7
@@ -217,14 +218,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -350.0
-offset_top = -200.0
-offset_right = 350.0
-offset_bottom = -100.0
+offset_left = -400.0
+offset_top = -250.0
+offset_right = 400.0
+offset_bottom = -90.0
 grow_horizontal = 2
 grow_vertical = 0
+script = ExtResource("4_sq8wm")
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelNext"]
+[node name="MarginContainer" type="MarginContainer" parent="DialogNext"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -236,8 +238,46 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelNext/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="DialogNext/MarginContainer"]
 layout_mode = 2
+
+[node name="PlayerSubViewportContainer" type="SubViewportContainer" parent="DialogNext/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="DialogNext/MarginContainer/HBoxContainer/PlayerSubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(150, 150)
+render_target_update_mode = 0
+
+[node name="Camera" type="Camera3D" parent="DialogNext/MarginContainer/HBoxContainer/PlayerSubViewportContainer/SubViewport"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogNext/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogNext/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DialogNext/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="DialogNext/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Fermer"
+text = "Fermer"
+
+[node name="PnjSubViewportContainer" type="SubViewportContainer" parent="DialogNext/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="DialogNext/MarginContainer/HBoxContainer/PnjSubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(150, 150)
+render_target_update_mode = 0
+
+[node name="Camera" type="Camera3D" parent="DialogNext/MarginContainer/HBoxContainer/PnjSubViewportContainer/SubViewport"]
 
 [node name="DialogAndImg" type="Control" parent="."]
 visible = false
@@ -1228,6 +1268,7 @@ text = "Sauvegarder"
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton4" to="Dialog" method="_on_option_button_4_pressed"]
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton5" to="Dialog" method="_on_option_button_5_pressed"]
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/CloseButton" to="Dialog" method="_on_close"]
+[connection signal="pressed" from="DialogNext/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/CloseButton" to="DialogNext" method="_on_close_button_pressed"]
 [connection signal="pressed" from="DialogAndImg/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_and_img_button_pressed"]
 [connection signal="pressed" from="Image/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="Image" method="_on_close_dialog_button_pressed"]
 [connection signal="pressed" from="Input/Panel/MarginContainer/VBoxContainer/ValidateButton" to="Input" method="_on_validate_button_pressed"]

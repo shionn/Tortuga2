@@ -5,6 +5,7 @@ class_name Gui
 @onready var _debug_info := $DebugInfo as Label
 
 @onready var _dialog := $Dialog as Dialog
+@onready var _dialog_next := $DialogNext as DialogNext
 
 @onready var _dialog_img := $DialogAndImg as Control
 @onready var _dialog_img_text := $DialogAndImg/Panel/MarginContainer/VBoxContainer/HBoxContainer/RichTextLabel as RichTextLabel
@@ -35,6 +36,10 @@ func append_to_console(text: String) -> void:
 func open_dialog(title: String, text: String, _size: Vector2 = Vector2(400,400)) -> Dialog: 
 	_dialog.open_dialog(title, text, _size)
 	return _dialog
+
+func open_dialog_next(text: String, pnj:PNJ = null)-> DialogNext:
+	_dialog_next.open(text, pnj)
+	return _dialog_next
 
 func open_alert(title: String, text: String, _size: Vector2 = Vector2(300,200)) -> Dialog: 
 	_dialog.open_alert(title, text, _size)
@@ -89,3 +94,6 @@ func _on_yes_button_pressed() -> void:
 	_input_yn.hide()
 	_player.play_anim_yes()
 	_callback_yes.call()
+
+func is_open() -> bool :
+	return _dialog.visible || _dialog_next.visible || _dialog_img.visible || _image.visible || _input_yn.visible || _transition.visible

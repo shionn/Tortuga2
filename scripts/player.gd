@@ -13,6 +13,7 @@ enum STATUT { MOVING, IDLE, SIT }
 @onready var _pivot := $Pivot as Node3D
 @onready var _character := $Pivot/character as Node3D
 @onready var tags := $Tags as Tags
+@onready var _gui := $/root/World/Gui as Gui
 
 var _animation : AnimationPlayer
 var _last_floor_position : Vector3
@@ -85,6 +86,8 @@ func _physics_process(delta: float) -> void:
 
 func _handle_move() -> void: 
 	var input_dir := Input.get_vector("move_left", "move_righ", "move_front", "move_back")
+	if _gui.is_open():
+		input_dir = Vector2.ZERO
 	var cam_basis := _camera.get_global_transform().basis
 	var direction := cam_basis * Vector3(input_dir.x, 0, input_dir.y)
 	direction.y = 0
