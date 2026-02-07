@@ -16,29 +16,13 @@ func on_interact() -> void:
 
 func on_item_drop(item : Item) -> void:
 	if item.isGold() :
-		gui.open_dialog(pnj_name, """Qu’est ce que je vous sers ? """).with_options([
-			PnjDialogOption.new(
-				func(): return not bag.contain(Bag.BiereRousseDeEve), 
-				"""Bière rousse de Eve""",
-				func(): bag.loot(Bag.BiereRousseDeEve)
-			),
-			PnjDialogOption.new(
-				func(): return true, 
-				"""Omelette aux champignons""",
-				_on_ask_omelette
-			),
-			PnjDialogOption.new(
-				func(): return true,
-				"Je voudrais un cocktail",
-				func(): gui.open_alert(pnj_name, """C'est Maya la spécialiste en cocktail""")
-			)
-		])
+		gui.open_dialog_next(Dialog.pnjSay(self, """Qu’est ce que je vous sers ? """)
+			.option_action("""Bière rousse de Eve""", func(): bag.loot(Bag.BiereRousseDeEve), func(): return not bag.contain(Bag.BiereRousseDeEve))
+			.option_dialog("""Omelette aux champignons""", Dialog.pnjSay(self, _TEXT_ON_OMELETTE).on_close(func(): tags.add(Tags.KNOW_FERMIER_LOVE_OMELETTE)))
+			.option_dialog("Un cocktail", Dialog.pnjSay(self, """C'est Maya la spécialiste en cocktail"""))
+		)
 	else : 
 		super.on_item_drop(item)
-
-func _on_ask_omelette() -> void :
-	tags.add(Tags.KNOW_FERMIER_LOVE_OMELETTE)
-	gui.open_dialog(pnj_name, _TEXT_ON_OMELETTE)
 
 const _TEXT = """Bonjour qu'est ce que je vous sert? 
 Les clients sont négligents, ils oublient souvent des choses sur les tables. 

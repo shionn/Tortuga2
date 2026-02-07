@@ -39,6 +39,10 @@ func on_close(_action: Callable) -> Dialog :
 	on_close_action = _action
 	return self
 
+func no_close() -> Dialog :
+	close = false
+	return self
+
 ## Les dialog par defaut
 
 func option_search_forbid_fruit() -> Dialog :
