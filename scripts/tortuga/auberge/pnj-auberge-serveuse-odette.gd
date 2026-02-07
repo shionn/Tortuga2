@@ -1,19 +1,18 @@
 extends "res://scripts/pnj.gd"
 
 func on_interact() -> void:
-	gui.open_dialog(pnj_name, _TEXT).with_options([
-		Dialogs.default_search_forbid_fruit_option(self), 
-		Dialogs.default_search_forbid_fruit_montain_option(self),
-		Dialogs.default_search_forbid_fruit_teleport_option(self),
-		Dialogs.default_hung_connut_search_charpentier(self),
-		Dialogs.default_hung_connut_search_wood(self), 
-		PnjDialogOption.new(
-			func(): return tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON),
-			Dialogs.question_hung_connut_search_houblon,
-			func(): gui.open_dialog(pnj_name, _SEARCH_HOUBLON)
-		),
-		Dialogs.default_search_wind(self)
-	])
+	gui.open_dialog_next(Dialog.pnjSay(self, _TEXT)
+		.option_search_forbid_fruit()
+		.option_search_forbid_fruit_montain()
+		.option_search_forbid_fruit_montain_teleport()
+		.option_hung_connut_search_charpentier()
+		.option_hung_connut_search_wood()
+		.option_dialog(Dialog.SEARCH_HOUBLON[0], 
+			Dialog.playerSay(player, Dialog.SEARCH_HOUBLON[1])
+				.next(Dialog.pnjSay(self, _SEARCH_HOUBLON)),
+			func (): return tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON) and not bag.contain(Bag.Houblon))
+		.option_search_wind()
+	)
 
 func on_item_drop(item : Item) -> void:
 	if item.isGold() :

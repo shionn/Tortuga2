@@ -5,18 +5,17 @@ func _ready() -> void:
 	_animation.play("sit")
 
 func on_interact() -> void:
-	gui.open_dialog(pnj_name,TEXT_INTRO).with_options([
-		PnjDialogOption.new(
-			func (): return tags.have(Tags.SEARCH_WIND) and not tags.have(Tags.WIND_BLOWING),
-			Dialogs.question_missing_wind,
-			_on_search_win
-		), 
-		PnjDialogOption.new(
-			func (): return tags.have(Tags.SEARCH_PASS) and not bag.contain(Bag.PasseBarque) and not bag.contain(Bag.PasseBarqueTanpon),
-			"""J’ai besoin d’un pass""",
-			_on_search_pass
-		)
-	])
+	gui.open_dialog_next(Dialog.pnjSay(self, TEXT_INTRO)
+		.option_dialog(Dialog.NO_WIND[0], 
+			Dialog.playerSay(player, Dialog.NO_WIND[1])
+				.next(Dialog.pnjSay(self, TEXT_WIND_MISSING)
+					.on_close(func(): if not bag.contain(Bag.PasseBarque) and not bag.contain(Bag.PasseBarqueTanpon) : tags.add(Tags.SEARCH_BARQUE))), 
+			func (): return tags.have(Tags.SEARCH_WIND) and not tags.have(Tags.WIND_BLOWING))
+		.option_dialog("J’ai besoin d’un pass", 
+			Dialog.playerSay(player, "J’ai besoin d’un pass pour prendre la barque pour aller voir la Chamane.")
+				.next(Dialog.pnjSay(self, TEXT_SEARCH_PASS).on_close(func(): tags.add(Tags.SEARCH_CAPTAIN_BOTTLE))),
+			func (): return tags.have(Tags.SEARCH_PASS) and not bag.contain(Bag.PasseBarque) and not bag.contain(Bag.PasseBarqueTanpon))
+	)
 	$Laugh.play()
 
 func on_item_drop(item : Item) -> void:
@@ -38,17 +37,6 @@ func on_item_drop(item : Item) -> void:
 		gui.open_dialog(pnj_name, _TEXT_ASK_BONE)
 	else :
 		super.on_item_drop(item)
-
-func _on_search_win() -> void :
-	if not bag.contain(Bag.PasseBarque) and not bag.contain(Bag.PasseBarqueTanpon) :
-		tags.add(Tags.SEARCH_BARQUE)
-	gui.open_dialog(pnj_name, TEXT_WIND_MISSING)
-
-func _on_search_pass() -> void:
-	gui.open_dialog(pnj_name, TEXT_SEARCH_PASS)
-	tags.add(Tags.SEARCH_CAPTAIN_BOTTLE)
-
-	
 
 const TEXT_INTRO = """Salut. Tortuga est méconnaissable ce matin. 
 

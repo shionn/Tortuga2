@@ -8,7 +8,6 @@ class_name Interactable
 @onready var tags = $"/root/World/Player/Tags" as Tags
 
 @export var interactable_distance = 3 as float
-@export var title = "" as String
 @export_multiline var description = "" as String
 
 func _ready() -> void:
@@ -19,8 +18,8 @@ func _ready() -> void:
 	if bag : bag.on_item_change.connect(on_item_change)
 
 func on_interact() -> void: 
-	if description and title :
-		gui.open_alert(title, description)
+	if description :
+		gui.open_dialog_next(Dialog.playerSay(player, description))
 	else :
 		print("on_interact is not overwrite")
 

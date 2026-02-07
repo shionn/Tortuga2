@@ -4,7 +4,7 @@ class_name Gui
 @onready var _player := $"../Player" as Player
 @onready var _debug_info := $DebugInfo as Label
 
-@onready var _dialog := $Dialog as Dialog_
+@onready var _dialog := $Dialog as Dialog_Old
 @onready var _dialog_next := $DialogNext as DialogNext
 
 @onready var _dialog_img := $DialogAndImg as Control
@@ -33,7 +33,7 @@ func append_to_console(text: String) -> void:
 	_console.append_text(text)
 	_console.newline()
 
-func open_dialog(title: String, text: String, _size: Vector2 = Vector2(400,400)) -> Dialog_: 
+func open_dialog(title: String, text: String, _size: Vector2 = Vector2(400,400)) -> Dialog_Old: 
 	_dialog.open_dialog(title, text, _size)
 	return _dialog
 
@@ -45,7 +45,7 @@ func open_dialog_next(dialog : Dialog)-> DialogNext:
 	_dialog_next.open(dialog)
 	return _dialog_next
 
-func open_alert(title: String, text: String, _size: Vector2 = Vector2(300,200)) -> Dialog_: 
+func open_alert(title: String, text: String, _size: Vector2 = Vector2(300,200)) -> Dialog_Old: 
 	_dialog.open_alert(title, text, _size)
 	return _dialog
 

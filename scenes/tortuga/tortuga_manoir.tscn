@@ -68,7 +68,6 @@ shape = SubResource("BoxShape3D_2p05u")
 [node name="book1" parent="." instance=ExtResource("40_hnmma")]
 transform = Transform3D(-0.29999998, 0, -2.6226832e-08, 0, 0.29999998, 0, 2.6226832e-08, 0, -0.29999998, -3.5918398, 2.9342198, -1.7)
 script = ExtResource("41_wfp5d")
-title = "Livre"
 description = "Tales of Whisperia saison 1"
 
 [node name="Area3D" type="Area3D" parent="book1"]
@@ -80,7 +79,6 @@ shape = SubResource("BoxShape3D_mkxnw")
 [node name="book2" parent="." instance=ExtResource("40_hnmma")]
 transform = Transform3D(-0.29999998, 0, -2.6226832e-08, 0, 0.29999998, 0, 2.6226832e-08, 0, -0.29999998, -3.5918398, 2.9342198, -1.8232751)
 script = ExtResource("41_wfp5d")
-title = "Livre"
 description = "Tales of Whisperia saison 2"
 
 [node name="Area3D" type="Area3D" parent="book2"]
@@ -92,7 +90,6 @@ shape = SubResource("BoxShape3D_mkxnw")
 [node name="book3" parent="." instance=ExtResource("40_hnmma")]
 transform = Transform3D(-0.29999998, 0, -2.6226832e-08, 0, 0.29999998, 0, 2.6226832e-08, 0, -0.29999998, -3.5918398, 2.9342198, -1.9432433)
 script = ExtResource("41_wfp5d")
-title = "Livre"
 description = "Tales of Whisperia saison 3"
 
 [node name="Area3D" type="Area3D" parent="book3"]
@@ -103,8 +100,7 @@ shape = SubResource("BoxShape3D_mkxnw")
 
 [node name="Sign" parent="." instance=ExtResource("1_h8d57")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 3.3)
-title = "Panneau"
-description = "Manoir de Whisp"
+description = "Sur le panneau il est écrit : Manoir de Whisp"
 
 [node name="road2" parent="." instance=ExtResource("1_55bef")]
 transform = Transform3D(-10, -1.2079664e-06, 0, 1.509958e-06, -8, 0, 0, 0, 8, -0.1, 0, 0)

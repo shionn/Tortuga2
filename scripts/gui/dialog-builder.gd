@@ -77,18 +77,23 @@ func option_hung_connut_search_wood() -> Dialog :
 	)
 
 func option_hung_connut_search_houblon() -> Dialog : 
-	return option_dialog("Du houblon ?", 
-		playerSay(pnj.player, "J'ai besoin de houblon. Sais-tu ou en trouver ?").next(
-			pnjSay(pnj, _ANSWER_HUNG_CONNUT_SEARCH_HOUBLON)),
-		func (): return pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON) and not pnj.bag.contain(Bag.Houblon)
-	)
+	return _option_default(func (): return pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON) and not pnj.bag.contain(Bag.Houblon), SEARCH_HOUBLON)
 
 func option_search_wind() -> Dialog :
-	return option_dialog("Absence du vent ?", 
-		playerSay(pnj.player,  "Il n’y a plus de vent.").next(
-			pnjSay(pnj, _ANWSER_NO_WIND)),
-		func (): return pnj.tags.have(Tags.SEARCH_WIND) and not pnj.tags.have(Tags.WIND_BLOWING)
+	return _option_default(func (): return pnj.tags.have(Tags.SEARCH_WIND) and not pnj.tags.have(Tags.WIND_BLOWING), NO_WIND)
+
+func _option_default(condition : Callable, data: Array[String]) -> Dialog:
+	return option_dialog(data[0], 
+		playerSay(pnj.player,  data[1]).next(pnjSay(pnj, data[2])),
+		condition
 	)
+
+const SEARCH_HOUBLON : Array[String] = ["Du houblon ?", "J'ai besoin de houblon. Sais-tu ou en trouver ?", """Du houblon ? Ce qu’on utilise pour faire de la bière. 
+C’est malin maintenant j’ai envie d’une bière, la bière rousse de Eve est la meilleure."""]
+
+const NO_WIND : Array[String] = ["Absence du vent ?", "Il n’y a plus de vent.", """Oui, cela fait plusieurs jours que ça dure. 
+Ce n’est pas la première fois que ca arrive. Je ne sais pas comment mais le Capitaine a réussi à faire revenir les vents la dernière fois que cela s'était produit."""]
+
 
 const _ANSWER_HUNG_CONNUT_SEARCH_WOOD = """Du bois ? Il y a des palmiers partout. 
 
@@ -97,7 +102,3 @@ Pourquoi tu ne demandes pas à Ryland notre charpentier ?"""
 const _ANSWER_HUNG_CONNUT_SEARCH_HOUBLON = """Du houblon ? Ce qu’on utilise pour faire de la bière. 
 
 C’est malin maintenant j’ai envie d’une bière, la bière rousse de Eve est la meilleure."""
-
-const _ANWSER_NO_WIND = """Oui, cela fait plusieurs jours que ça dure. 
-
-Ce n’est pas la première fois que ca arrive. Je ne sais pas comment mais le Capitaine a réussi à faire revenir les vents la dernière fois que cela s'était produit. """
