@@ -66,8 +66,8 @@ func on_interact() -> void:
 	print("on_interact is not overwrite")
 
 func on_item_drop(_item : Item) -> void:
+	gui.open_dialog_next(Dialog.pnjSay(self,  "Je n'ai que faire de ça."))
 	play_anim_no()
-	gui.open_alert(pnj_name, "Je n'ai que faire de ça.")
 
 func on_tag_change() -> void:
 	pass

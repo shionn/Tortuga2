@@ -21,6 +21,7 @@ func on_answer(answer: String) -> void:
 		bag.loot(Bag.ParcheminBarbeDrue)
 		tags.add(Tags.TREASUR_BARBE_DRUE_OPENED)
 	else :
+		player.play_anim_no()
 		gui.open_alert("Mauvais code", "Le coffre ne s'ouvre pas.")
 
 func on_tag_change() -> void:

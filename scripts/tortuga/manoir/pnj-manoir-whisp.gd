@@ -20,13 +20,13 @@ func on_interact() -> void:
 
 func on_item_drop(item : Item) -> void:
 	if item.name == Bag.TresorBarbeDrue :
-		gui.open_dialog(pnj_name,TEXT_TRESOR_BARBE_DRUE)
+		gui.open_dialog_next(Dialog.pnjSay(self, TEXT_TRESOR_BARBE_DRUE))
 	elif item.name == Bag.TresorHungConnut :
-		gui.open_dialog(pnj_name,TEXT_TRESOR_HUNG_CONNU)
+		gui.open_dialog_next(Dialog.pnjSay(self, TEXT_TRESOR_HUNG_CONNU))
 	elif item.name == Bag.ParcheminBarbeDrue :
-		gui.open_dialog(pnj_name,TEXT_PARCHEMIN_BARBE_DRUE)
+		gui.open_dialog_next(Dialog.pnjSay(self, TEXT_PARCHEMIN_BARBE_DRUE))
 	elif item.name == Bag.PageHungConnutFrag1 or item.name == Bag.PageHungConnutFrag2 or item.name == Bag.PageHungConnutFrag3 :
-		gui.open_dialog(pnj_name, TEXT_FRAGMENT_HUNG_CONNUT)
+		gui.open_dialog_next(Dialog.pnjSay(self, TEXT_FRAGMENT_HUNG_CONNUT))
 	elif item.name == Bag.BouteilleCapitain:
 		gui.open_dialog(pnj_name, TEXT_ON_BOTTLE)
 		bag.unloot(Bag.BouteilleCapitain)

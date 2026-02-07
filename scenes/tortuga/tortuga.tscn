@@ -51,7 +51,6 @@
 [ext_resource type="PackedScene" uid="uid://dr8atgydxkkga" path="res://scenes/tortuga/tortuga_champ_culture.tscn" id="43_3anhr"]
 [ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="44_gnvru"]
 [ext_resource type="Script" uid="uid://jpax05wqdl26" path="res://scripts/tortuga/pnj-fermier-nino.gd" id="45_3lmt7"]
-[ext_resource type="Script" uid="uid://ct0xwefe3spi0" path="res://scripts/tortuga/crique/tonneau-rhum-vide.gd" id="45_e43uk"]
 [ext_resource type="PackedScene" uid="uid://cjxowsxfha55l" path="res://assets/character/graveyard/character-keeper.glb" id="46_mi0el"]
 [ext_resource type="Script" uid="uid://byytwdq7gbio6" path="res://scripts/tortuga/montagne-champi/escalator_casser.gd" id="48_7h4df"]
 [ext_resource type="PackedScene" uid="uid://bun08nin6q33j" path="res://scenes/tortuga/tortuga_manoir.tscn" id="48_n6usc"]
@@ -115,6 +114,15 @@ size = Vector3(0.2, 0.44476318, 0.2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2w2tg"]
 size = Vector3(0.31, 0.15, 0.15)
+
+[sub_resource type="GDScript" id="GDScript_b0xvp"]
+script/source = "extends \"res://scripts/interactable.gd\"
+
+
+const _TEXT= \"\"\"Il s'agit d'un tonneau de rhum. 
+
+Il est vide!\"\"\"
+"
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_7h4df"]
 radius = 0.70410156
@@ -883,7 +891,7 @@ shape = SubResource("BoxShape3D_2w2tg")
 
 [node name="tonneau-vide" parent="Crique/Crique-SE" instance=ExtResource("32_tny17")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.871864, 1.4000001, 18.643116)
-script = ExtResource("45_e43uk")
+script = SubResource("GDScript_b0xvp")
 
 [node name="Area3D" type="Area3D" parent="Crique/Crique-SE/tonneau-vide"]
 
@@ -1261,7 +1269,10 @@ shape = SubResource("BoxShape3D_1lej4")
 
 [node name="tonneau-vide" parent="Crique/Crique-O" instance=ExtResource("32_tny17")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.971865, 1.2, -58.056885)
-script = ExtResource("45_e43uk")
+script = ExtResource("70_es7mt")
+description = "Il s'agit d'un tonneau de rhum. 
+
+Il est vide!"
 
 [node name="Area3D" type="Area3D" parent="Crique/Crique-O/tonneau-vide"]
 
@@ -5247,7 +5258,6 @@ script = ExtResource("68_b0xvp")
 [node name="barrel2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Barrels" instance=ExtResource("32_tny17")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -12.445129, 0, -4.101227)
 script = ExtResource("70_es7mt")
-title = "Tonneau"
 description = "Ces tonnaux contiennent de l'alcool. Du rhum à l'odeur. "
 
 [node name="Area3D" type="Area3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Barrels/barrel2"]
@@ -5259,7 +5269,6 @@ shape = SubResource("BoxShape3D_es7mt")
 [node name="barrel3" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Barrels" instance=ExtResource("32_tny17")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -12.515808, 0, -3.0405579)
 script = ExtResource("70_es7mt")
-title = "Tonneau"
 description = "Ces tonnaux contiennent de l'alcool. Du rhum à l'odeur. "
 
 [node name="Area3D" type="Area3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Barrels/barrel3"]
@@ -5271,7 +5280,6 @@ shape = SubResource("BoxShape3D_es7mt")
 [node name="barrel4" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Barrels" instance=ExtResource("32_tny17")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -11.667282, 0, -3.6062317)
 script = ExtResource("70_es7mt")
-title = "Tonneau"
 description = "Ces tonnaux contiennent de l'alcool. Du rhum à l'odeur. "
 
 [node name="Area3D" type="Area3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Barrels/barrel4"]
@@ -5283,7 +5291,6 @@ shape = SubResource("BoxShape3D_es7mt")
 [node name="barrel5" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Barrels" instance=ExtResource("32_tny17")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -11.101624, 0, -4.4547424)
 script = ExtResource("70_es7mt")
-title = "Tonneau"
 description = "Ces tonnaux contiennent de l'alcool. Du rhum à l'odeur. "
 
 [node name="Area3D" type="Area3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Barrels/barrel5"]
@@ -5295,7 +5302,6 @@ shape = SubResource("BoxShape3D_es7mt")
 [node name="barrel6" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Barrels" instance=ExtResource("32_tny17")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -10.323822, 0, -4.808258)
 script = ExtResource("70_es7mt")
-title = "Tonneau"
 description = "Ces tonnaux contiennent de l'alcool. Du rhum à l'odeur. "
 
 [node name="Area3D" type="Area3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Barrels/barrel6"]
@@ -5307,7 +5313,6 @@ shape = SubResource("BoxShape3D_es7mt")
 [node name="barrel7" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Barrels" instance=ExtResource("32_tny17")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -11.38443, 16.35, -5.5859985)
 script = ExtResource("70_es7mt")
-title = "Tonneau"
 description = "Ces tonnaux contiennent de l'alcool. Du rhum à l'odeur. "
 
 [node name="Area3D" type="Area3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Barrels/barrel7"]
@@ -5319,7 +5324,6 @@ shape = SubResource("BoxShape3D_es7mt")
 [node name="barrel8" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Barrels" instance=ExtResource("32_tny17")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -3.252716, 16.35, -7.3537903)
 script = ExtResource("70_es7mt")
-title = "Tonneau"
 description = "Ces tonnaux contiennent de l'alcool. Du rhum à l'odeur. "
 
 [node name="Area3D" type="Area3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Barrels/barrel8"]
@@ -5345,25 +5349,21 @@ transform = Transform3D(0.81915236, 0, -0.57357657, 0, 1, 0, 0.57357657, 0, 0.81
 [node name="Chest" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Chests" instance=ExtResource("68_whw8m")]
 transform = Transform3D(0.9999999, 0, 4.4703484e-08, 0, 1, 0, -4.4703484e-08, 0, 0.9999999, 0.29999998, 0, -1.3411046e-08)
 _open = true
-title = "Coffre"
 description = "Ce coffre est vite."
 
 [node name="Chest2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Chests" instance=ExtResource("68_whw8m")]
 transform = Transform3D(0.9999999, 0, 4.4703484e-08, 0, 1, 0, -4.4703484e-08, 0, 0.9999999, -1.0999999, 0, 4.9173835e-08)
 _open = true
-title = "Coffre"
 description = "Ce coffre est vite."
 
 [node name="Chest3" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Chests" instance=ExtResource("68_whw8m")]
 transform = Transform3D(0.9659257, 0, -0.25881898, 0, 1, 0, 0.25881898, 0, 0.9659257, -2.3999999, 0, 1.07288365e-07)
 _open = true
-title = "Coffre"
 description = "Ce coffre est vite."
 
 [node name="Chest4" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Chests" instance=ExtResource("68_whw8m")]
 transform = Transform3D(0.70710677, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, 0.70710677, 2.0121317, 0, 0.21213193)
 _open = true
-title = "Coffre"
 description = "Ce coffre est vite."
 
 [node name="Bureau" type="Node3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte"]
@@ -5377,7 +5377,6 @@ transform = Transform3D(-2.9802322e-08, 0, 1.0000005, 0, 1.0000001, 0, -1.000000
 [node name="book-open2" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/Bureau" instance=ExtResource("71_es7mt")]
 transform = Transform3D(0.06887998, 0, -0.24032383, 0, 0.25, 0, 0.24032383, 0, 0.06887998, -0.025771253, 0.35564423, 0.15062939)
 script = ExtResource("70_es7mt")
-title = "Livre illisible"
 description = "Ce livre est très abîmé, j’arrive à lire : 
 
 W****e** *** Om*re G*****ss****."

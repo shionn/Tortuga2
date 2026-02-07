@@ -1,28 +1,27 @@
 extends "res://scripts/pnj.gd"
 
 func on_interact() -> void:
-	gui.open_dialog(pnj_name, _TEXT_DEFAULT).with_options([
-		Dialogs.default_search_forbid_fruit_option(self),
-		Dialogs.default_search_forbid_fruit_montain_option(self),
-		PnjDialogOption.new(
-			func(): return tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT),
-			Dialogs.question_search_forbid_fruit_teleport,
-			func(): gui.open_dialog(pnj_name, _TEST_SEARCH_CRYSTAL_TELEPORT)
-		),
-		Dialogs.default_hung_connut_search_charpentier(self),
-		Dialogs.default_hung_connut_search_wood(self),
-		Dialogs.default_hung_connut_search_houblon(self),
-		Dialogs.default_search_wind(self)
-	])
-
+	gui.open_dialog_next(Dialog.pnjSay(self, _TEXT_DEFAULT)
+		.option_search_forbid_fruit()
+		.option_search_forbid_fruit_montain()
+		.option_dialog(
+			Dialog.SEARCH_TELEPRT_CRUSTAL[0],
+			Dialog.playerSay(player, Dialog.SEARCH_TELEPRT_CRUSTAL[1])
+				.next(Dialog.pnjSay(self, _TEST_SEARCH_CRYSTAL_TELEPORT)),
+			func(): return tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT) and not bag.contain(Bag.CrystalTeleportationOasis))
+		.option_hung_connut_search_charpentier()
+		.option_hung_connut_search_wood()
+		.option_hung_connut_search_houblon()
+		.option_search_wind()
+	)
 
 func on_item_drop(item : Item) -> void:
 	if item.name == Bag.TresorBarbeDrue :
-		gui.open_dialog(pnj_name, _TEXT_TRESOR_BARBE_DRUE)
+		gui.open_dialog_next(Dialog.pnjSay(self,_TEXT_TRESOR_BARBE_DRUE))
 		bag.unloot(Bag.TresorBarbeDrue)
 		bag.loot(Bag.TresorBarbeDrueNet)
 	elif item.name == Bag.TresorHungConnut :
-		gui.open_dialog(pnj_name, _TEXT_TRESOR_BARBE_DRUE)
+		gui.open_dialog_next(Dialog.pnjSay(self,_TEXT_TRESOR_BARBE_DRUE))
 		bag.unloot(Bag.TresorHungConnut)
 		bag.loot(Bag.TresorHungConnutNet)
 	else :

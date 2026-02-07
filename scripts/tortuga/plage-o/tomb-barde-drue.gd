@@ -15,7 +15,10 @@ func on_interact() -> void:
 			)
 		])
 	else :
-		gui.open_dialog("Ci-gît BarbeDrue",_TEXT)
+		gui.open_dialog_next(Dialog.playerSay(player, _TEXT_1)
+			.next(Dialog.playerSay(player,_TEXT_2)
+				.next(Dialog.playerSay(player,_TEXT_3))))
+		#gui.open_dialog("Ci-gît BarbeDrue",_TEXT)
 		
 func _open_tomb() -> void :
 	bag.unloot(Bag.TresorBarbeDrue)
@@ -33,14 +36,17 @@ const _TEXT_PREVENT_PROFANATION = """Je pourrai profané la tombe et prendre un 
 
 Que faire ?"""
 
-const _TEXT =  """Toi qui convoite mon trésor,
-Derrière le rocher
-Tu devra chercher
-Mais attention pour l'obtenir
-Toute ton attention tu devra fournir
-Le clé tu devras trouver
-En revenant sur tes pas
-Les morceaux ensemble recollés
-La clé tu obtiendras
+const _TEXT_1 = """Sur la tombe il est écrit : 
+	[i]Ci-gît BarbeDrue.
+	Toi qui convoite mon trésor,
+	Derrière le rocher
+	Tu devra chercher[/i]"""
 
-1"""
+const _TEXT_2 ="""[i]	Mais attention pour l'obtenir
+	Toute ton attention tu devra fournir
+	Le clé tu devras trouver
+	En revenant sur tes pas[/i]"""
+
+const _TEXT_3 =  """[i]	Les morceaux ensemble recollés
+	La clé tu obtiendras
+	1[/i]"""

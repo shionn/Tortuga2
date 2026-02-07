@@ -55,12 +55,10 @@ func option_search_forbid_fruit_montain() -> Dialog :
 		func(): return pnj.tags.have(Tags.FORBID_FRUIT_SEARCH_MONTAGNE) and not pnj.bag.contain(Bag.FruitDefendu)
 	)
 
+const SEARCH_TELEPRT_CRUSTAL : Array[String] = ["Crystal de téléportation ?", "Je cherche un crystal de téléportation.", """Mais de quoi tu parles ?"""]
+
 func option_search_forbid_fruit_montain_teleport() -> Dialog : 
-	return option_dialog("Crystal de téléportation ?", 
-		playerSay(pnj.player, "Je cherche un crystal de téléportation.").next(
-			pnjSay(pnj, """Mais de quoi tu parles ?""")),
-		func(): return pnj.tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT) and not pnj.bag.contain(Bag.FruitDefendu)
-	)
+	return _option_default(func(): return pnj.tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT) and not pnj.bag.contain(Bag.CrystalTeleportationOasis), SEARCH_TELEPRT_CRUSTAL)
 
 func option_hung_connut_search_charpentier() -> Dialog : 
 	return option_dialog("L'escalator détruit ?", 

@@ -25,7 +25,7 @@ func on_interact() -> void:
 
 func on_item_drop(_item : Item) -> void: 
 	player.play_anim_no()
-	gui.open_alert("Oups", "Non ca ne marche pas")
+	gui.open_dialog_next(Dialog.playerSay(player, "Non ça ne marche pas !"))
 
 func on_tag_change() -> void:
 	pass
