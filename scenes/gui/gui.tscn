@@ -230,9 +230,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -500.0
+offset_left = -550.0
 offset_top = -220.0
-offset_right = 500.0
+offset_right = 550.0
 offset_bottom = -38.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -301,6 +301,36 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+
+[node name="OptionButton1" type="Button" parent="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Option"
+text = "Option"
+
+[node name="OptionButton2" type="Button" parent="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Option"
+text = "Option"
+
+[node name="OptionButton3" type="Button" parent="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Option"
+text = "Option"
+
+[node name="OptionButton4" type="Button" parent="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Option"
+text = "Option"
+
+[node name="OptionButton5" type="Button" parent="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Option"
+text = "Option"
 
 [node name="CloseButton" type="Button" parent="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -810,6 +840,7 @@ layout_mode = 2
 text = "Fermer"
 
 [node name="Console" type="MarginContainer" parent="."]
+z_index = 1
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -817,6 +848,7 @@ anchor_bottom = 1.0
 offset_top = -100.0
 offset_right = 400.0
 grow_vertical = 0
+mouse_behavior_recursive = 1
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
@@ -1327,6 +1359,11 @@ text = "Sauvegarder"
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton4" to="Dialog" method="_on_option_button_4_pressed"]
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton5" to="Dialog" method="_on_option_button_5_pressed"]
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/CloseButton" to="Dialog" method="_on_close"]
+[connection signal="pressed" from="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/OptionButton1" to="DialogNext" method="_on_option_button_1_pressed"]
+[connection signal="pressed" from="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/OptionButton2" to="DialogNext" method="_on_option_button_2_pressed"]
+[connection signal="pressed" from="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/OptionButton3" to="DialogNext" method="_on_option_button_3_pressed"]
+[connection signal="pressed" from="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/OptionButton4" to="DialogNext" method="_on_option_button_4_pressed"]
+[connection signal="pressed" from="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/OptionButton5" to="DialogNext" method="_on_option_button_5_pressed"]
 [connection signal="pressed" from="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/CloseButton" to="DialogNext" method="_on_close_button_pressed"]
 [connection signal="pressed" from="DialogAndImg/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_and_img_button_pressed"]
 [connection signal="pressed" from="Image/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="Image" method="_on_close_dialog_button_pressed"]

@@ -1,7 +1,7 @@
 extends "res://scripts/pnj.gd"
 
 func on_interact() -> void:
-	gui.open_dialog(pnj_name, _TEXT).with_options([
+	gui.open_dialog_next(_TEXT, self).with_options([
 		Dialogs.default_search_forbid_fruit_option(self),
 		Dialogs.default_search_forbid_fruit_montain_option(self),
 		Dialogs.default_search_forbid_fruit_teleport_option(self),
@@ -12,7 +12,7 @@ func on_interact() -> void:
 		PnjDialogOption.new(
 			func() : return true,
 			"Je voudrais une hache",
-			func() : gui.open_dialog(pnj_name, "Ne touche pas à MES haches.")
+			func() : gui.open_dialog_next("Ne touche pas à MES haches.", self)
 		),
 		PnjDialogOption.new(
 			func() : return bag.contain(Bag.ListInvocationVent) and not bag.contain(Bag.Pioche),
@@ -26,7 +26,6 @@ func _on_pickaxe_search() -> void:
 	tags.add(Tags.ALLOW_PICKAXE)
 
 const _TEXT = """Bonjour. 
-
 Mon nom est imprononçable pour vous les humains. Vos semblables m'appellent Orco, je suis l'armurier du village. 
 
 Actuellement l'armurerie est fermée, nous ouvrons quand les tambours de guerre résonnent."""

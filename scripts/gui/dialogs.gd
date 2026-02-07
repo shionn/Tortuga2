@@ -14,49 +14,49 @@ static func default_search_forbid_fruit_option(pnj : PNJ) -> PnjDialogOption :
 	return PnjDialogOption.new(
 		func(): return pnj.tags.have(Tags.FORBID_FRUIT_SEARCH) and not pnj.bag.contain(Bag.FruitDefendu),
 		question_search_forbid_fruit,
-		func(): pnj.gui.open_dialog(pnj.pnj_name, """Je n'en ai jamais entendu parler.""")
+		func(): pnj.gui.open_dialog_next("""Je n'en ai jamais entendu parler.""", pnj)
 	)
 
 static func default_search_forbid_fruit_montain_option(pnj : PNJ) -> PnjDialogOption : 
 	return PnjDialogOption.new(
 		func(): return pnj.tags.have(Tags.FORBID_FRUIT_SEARCH_MONTAGNE) and not pnj.bag.contain(Bag.FruitDefendu),
 		question_search_forbid_fruit_montagn,
-		func(): pnj.gui.open_dialog(pnj.pnj_name,"""Je ne sais pas comment faire.""")
+		func(): pnj.gui.open_dialog_next("""Je ne sais pas comment faire.""", pnj)
 	)
 
 static func default_search_forbid_fruit_teleport_option(pnj : PNJ) -> PnjDialogOption :
 	return PnjDialogOption.new(
 		func(): return pnj.tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT) and not pnj.bag.contain(Bag.FruitDefendu),
 		question_search_forbid_fruit_teleport,
-		func(): pnj.gui.open_dialog(pnj.pnj_name, """Mais de quoi tu parles ?""")
+		func(): pnj.gui.open_dialog_next( """Mais de quoi tu parles ?""", pnj)
 	)
 
 static func default_hung_connut_search_charpentier(pnj : PNJ) -> PnjDialogOption :
 	return PnjDialogOption.new(
 		func (): return pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_ESCALTOR) and pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_CHARPENTIER),
 		question_hung_connut_search_charpentier,
-		func(): pnj.gui.open_dialog(pnj.pnj_name, """Mince alors comment on va faire sans champignon ?""")
+		func(): pnj.gui.open_dialog_next("""Mince alors comment on va faire sans champignon ?""", pnj)
 	)
 
 static func default_hung_connut_search_wood(pnj : PNJ) -> PnjDialogOption :
 	return PnjDialogOption.new(
 		func (): return pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_WOOD) and not pnj.bag.contain(Bag.BoisDeQualite),
 		question_hung_connut_search_wood,
-		func(): pnj.gui.open_dialog(pnj.pnj_name, _ANSWER_HUNG_CONNUT_SEARCH_WOOD)
+		func(): pnj.gui.open_dialog_next(_ANSWER_HUNG_CONNUT_SEARCH_WOOD, pnj)
 	)
 
 static func default_hung_connut_search_houblon(pnj : PNJ) -> PnjDialogOption :
 	return PnjDialogOption.new(
 		func (): return pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON) and not pnj.bag.contain(Bag.Houblon),
 		question_hung_connut_search_houblon,
-		func(): pnj.gui.open_dialog(pnj.pnj_name, _ANSWER_HUNG_CONNUT_SEARCH_HOUBLON)
+		func(): pnj.gui.open_dialog_next(_ANSWER_HUNG_CONNUT_SEARCH_HOUBLON, pnj)
 	)
 
 static func default_search_wind(pnj : PNJ) -> PnjDialogOption :
 	return PnjDialogOption.new(
 		func (): return pnj.tags.have(Tags.SEARCH_WIND) and not pnj.tags.have(Tags.WIND_BLOWING),
 		question_missing_wind,
-		func(): pnj.gui.open_dialog(pnj.pnj_name, _ANWSER_NO_WIND)
+		func(): pnj.gui.open_dialog_next(_ANWSER_NO_WIND, pnj)
 	)
 
 const _ANSWER_HUNG_CONNUT_SEARCH_WOOD = """Du bois ? Il y a des palmiers partout. 
