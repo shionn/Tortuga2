@@ -1,12 +1,12 @@
-extends Panel
+extends GridContainer
 class_name  DialogNext
 
 @onready var _player = $"/root/World/Player/Pivot" as Node3D
-@onready var _player_camera = $MarginContainer/HBoxContainer/PlayerSubViewportContainer/SubViewport/Camera as Camera3D
-@onready var _player_view = $MarginContainer/HBoxContainer/PlayerSubViewportContainer as SubViewportContainer
-@onready var _pnj_camera = $MarginContainer/HBoxContainer/PnjSubViewportContainer/SubViewport/Camera as Camera3D
-@onready var _pnj_view = $MarginContainer/HBoxContainer/PnjSubViewportContainer as SubViewportContainer
-@onready var _text = $MarginContainer/HBoxContainer/VBoxContainer/RichTextLabel as RichTextLabel
+@onready var _player_camera = $PanelContainer/HBoxContainer/PlayerSubViewportContainer/SubViewport/Camera as Camera3D
+@onready var _player_view = $PanelContainer/HBoxContainer/PlayerSubViewportContainer as SubViewportContainer
+@onready var _pnj_camera = $PanelContainer/HBoxContainer/PnjSubViewportContainer/SubViewport/Camera as Camera3D
+@onready var _pnj_view = $PanelContainer/HBoxContainer/PnjSubViewportContainer as SubViewportContainer
+@onready var _text = $PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/RichTextLabel as RichTextLabel
 
 var _pnj : PNJ
 

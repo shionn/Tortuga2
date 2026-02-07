@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=61 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://scripts/gui/gui.gd" id="1_0fbet"]
 [ext_resource type="Script" uid="uid://ikfx1cjqumpb" path="res://scripts/gui/dialog.gd" id="2_bgohe"]
@@ -8,17 +8,25 @@
 [ext_resource type="Script" uid="uid://k2bbepgo55y4" path="res://scripts/gui/image.gd" id="3_ytu88"]
 [ext_resource type="Script" uid="uid://dl188qunxuiwr" path="res://scripts/gui/dialog_next.gd" id="4_sq8wm"]
 [ext_resource type="Texture2D" uid="uid://6r2enbextcew" path="res://assets/gui/ui-adventure/minimap_compass_toon_s.png" id="4_ytf3d"]
+[ext_resource type="Texture2D" uid="uid://djl40kiksyrfa" path="res://assets/gui/ui-adventure/panel_brown_NW.png" id="5_8rxp0"]
 [ext_resource type="Texture2D" uid="uid://cdqtjkc7ao1xk" path="res://assets/gui/ui-adventure/minimap_compass_toon_e.png" id="5_bk7cs"]
+[ext_resource type="Texture2D" uid="uid://dw046xykpe12d" path="res://assets/gui/ui-adventure/panel_brown_N.png" id="6_bbm65"]
 [ext_resource type="Texture2D" uid="uid://bkfc3jdh67dmb" path="res://assets/gui/ui-adventure/minimap_compass_toon_w.png" id="6_kvi6p"]
+[ext_resource type="Texture2D" uid="uid://cpvu8gqcxxlvc" path="res://assets/gui/ui-adventure/panel_brown_NE.png" id="7_5llql"]
 [ext_resource type="Texture2D" uid="uid://cs7ory4pceeli" path="res://assets/gui/ui-adventure/minimap_arrow_a.png" id="7_bk7cs"]
 [ext_resource type="Script" uid="uid://djo8cqueirt8b" path="res://scripts/gui/menu.gd" id="8_4q42c"]
 [ext_resource type="Texture2D" uid="uid://g5kgt7lnwfw0" path="res://assets/gui/fanatisy-magic-set/bag-h-48.png" id="8_kvi6p"]
+[ext_resource type="Texture2D" uid="uid://h0fvpnvfhm5o" path="res://assets/gui/ui-adventure/panel_brown_W.png" id="8_lnk63"]
+[ext_resource type="Texture2D" uid="uid://cjnyd65crcee1" path="res://assets/gui/ui-adventure/panel_brown_E.png" id="9_dwcmb"]
 [ext_resource type="Script" uid="uid://dbsmc7uqhq2bx" path="res://scripts/gui/bag.gd" id="9_xqkfk"]
 [ext_resource type="Texture2D" uid="uid://iaqinuj6nrko" path="res://assets/gui/cursor-pack/mark_question-48.png" id="10_dfalf"]
+[ext_resource type="Texture2D" uid="uid://c410qwblm66ua" path="res://assets/gui/ui-adventure/panel_brown_SW.png" id="10_tn6xl"]
 [ext_resource type="Script" uid="uid://d1lak2chwfvp0" path="res://scenes/gui/input.gd" id="11_8vo8u"]
+[ext_resource type="Texture2D" uid="uid://t38742kcoj33" path="res://assets/gui/ui-adventure/panel_brown_S.png" id="11_la4rn"]
 [ext_resource type="Script" uid="uid://ci8ygrslxb0ka" path="res://scripts/gui/item.gd" id="11_s1h2m"]
 [ext_resource type="Texture2D" uid="uid://b3ajqne8qjbec" path="res://assets/gui/cursor-pack/door_exit-h-48.png" id="11_uglio"]
 [ext_resource type="Texture2D" uid="uid://bdwj56k1xgcnx" path="res://assets/imgs/treasures-h-48.png" id="12_22my7"]
+[ext_resource type="Texture2D" uid="uid://wgwoaioqcavk" path="res://assets/gui/ui-adventure/panel_brown_SE.png" id="12_u833a"]
 [ext_resource type="Texture2D" uid="uid://pgvj03mb7u4r" path="res://assets/gui/fanatisy-magic-set/parchment-h-48.png" id="13_qv6l0"]
 [ext_resource type="Script" uid="uid://cxj5rc85fvvek" path="res://scripts/gui/help.gd" id="15_j4srl"]
 [ext_resource type="Script" uid="uid://b6vmysw3vlje5" path="res://scripts/gui/acceuil.gd" id="16_3deuf"]
@@ -49,6 +57,9 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yw5qc"]
 bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rxp0"]
+bg_color = Color(1, 0.94509804, 0.8235294, 1)
 
 [sub_resource type="Animation" id="Animation_xyc4b"]
 length = 0.001
@@ -210,74 +221,121 @@ size_flags_horizontal = 3
 tooltip_text = "Fermer"
 text = "Fermer"
 
-[node name="DialogNext" type="Panel" parent="."]
-visible = false
+[node name="DialogNext" type="GridContainer" parent="."]
+z_index = 10
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -400.0
-offset_top = -250.0
-offset_right = 400.0
-offset_bottom = -90.0
+offset_left = -500.0
+offset_top = -220.0
+offset_right = 500.0
+offset_bottom = -38.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
 script = ExtResource("4_sq8wm")
 
-[node name="MarginContainer" type="MarginContainer" parent="DialogNext"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="HBoxContainer" type="HBoxContainer" parent="DialogNext/MarginContainer"]
+[node name="NW" type="TextureRect" parent="DialogNext"]
 layout_mode = 2
+texture = ExtResource("5_8rxp0")
 
-[node name="PlayerSubViewportContainer" type="SubViewportContainer" parent="DialogNext/MarginContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="SubViewport" type="SubViewport" parent="DialogNext/MarginContainer/HBoxContainer/PlayerSubViewportContainer"]
-handle_input_locally = false
-size = Vector2i(150, 150)
-render_target_update_mode = 0
-
-[node name="Camera" type="Camera3D" parent="DialogNext/MarginContainer/HBoxContainer/PlayerSubViewportContainer/SubViewport"]
-
-[node name="VBoxContainer" type="VBoxContainer" parent="DialogNext/MarginContainer/HBoxContainer"]
+[node name="N" type="TextureRect" parent="DialogNext"]
 layout_mode = 2
 size_flags_horizontal = 3
+texture = ExtResource("6_bbm65")
+stretch_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="DialogNext/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="NE" type="TextureRect" parent="DialogNext"]
+layout_mode = 2
+texture = ExtResource("7_5llql")
+
+[node name="W" type="TextureRect" parent="DialogNext"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("8_lnk63")
+stretch_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="DialogNext"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8rxp0")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DialogNext/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="PlayerSubViewportContainer" type="SubViewportContainer" parent="DialogNext/PanelContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="DialogNext/PanelContainer/HBoxContainer/PlayerSubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(150, 150)
+render_target_update_mode = 4
+
+[node name="Camera" type="Camera3D" parent="DialogNext/PanelContainer/HBoxContainer/PlayerSubViewportContainer/SubViewport"]
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogNext/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogNext/PanelContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="DialogNext/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="CloseButton" type="Button" parent="DialogNext/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="CloseButton" type="Button" parent="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Fermer"
 text = "Fermer"
 
-[node name="PnjSubViewportContainer" type="SubViewportContainer" parent="DialogNext/MarginContainer/HBoxContainer"]
+[node name="PnjSubViewportContainer" type="SubViewportContainer" parent="DialogNext/PanelContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="SubViewport" type="SubViewport" parent="DialogNext/MarginContainer/HBoxContainer/PnjSubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="DialogNext/PanelContainer/HBoxContainer/PnjSubViewportContainer"]
 handle_input_locally = false
 size = Vector2i(150, 150)
-render_target_update_mode = 0
+render_target_update_mode = 4
 
-[node name="Camera" type="Camera3D" parent="DialogNext/MarginContainer/HBoxContainer/PnjSubViewportContainer/SubViewport"]
+[node name="Camera" type="Camera3D" parent="DialogNext/PanelContainer/HBoxContainer/PnjSubViewportContainer/SubViewport"]
+
+[node name="E" type="TextureRect" parent="DialogNext"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("9_dwcmb")
+stretch_mode = 1
+
+[node name="SW" type="TextureRect" parent="DialogNext"]
+layout_mode = 2
+texture = ExtResource("10_tn6xl")
+
+[node name="S" type="TextureRect" parent="DialogNext"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("11_la4rn")
+stretch_mode = 1
+
+[node name="SE" type="TextureRect" parent="DialogNext"]
+layout_mode = 2
+texture = ExtResource("12_u833a")
 
 [node name="DialogAndImg" type="Control" parent="."]
 visible = false
@@ -1268,7 +1326,7 @@ text = "Sauvegarder"
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton4" to="Dialog" method="_on_option_button_4_pressed"]
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/OptionButton5" to="Dialog" method="_on_option_button_5_pressed"]
 [connection signal="pressed" from="Dialog/MarginContainer/VBoxContainer/CloseButton" to="Dialog" method="_on_close"]
-[connection signal="pressed" from="DialogNext/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/CloseButton" to="DialogNext" method="_on_close_button_pressed"]
+[connection signal="pressed" from="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/CloseButton" to="DialogNext" method="_on_close_button_pressed"]
 [connection signal="pressed" from="DialogAndImg/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_and_img_button_pressed"]
 [connection signal="pressed" from="Image/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="Image" method="_on_close_dialog_button_pressed"]
 [connection signal="pressed" from="Input/Panel/MarginContainer/VBoxContainer/ValidateButton" to="Input" method="_on_validate_button_pressed"]
