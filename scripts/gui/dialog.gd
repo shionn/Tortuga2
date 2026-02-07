@@ -1,6 +1,6 @@
 extends Panel
 
-class_name Dialog
+class_name Dialog_
 
 @onready var _dialog_text := $MarginContainer/VBoxContainer/RichTextLabel as RichTextLabel
 @onready var _dialog_title := $MarginContainer/VBoxContainer/Title as Label
@@ -20,7 +20,7 @@ func open_dialog(title: String, text: String, _size: Vector2 = Vector2(400,400))
 	self._open(title, text, _size)
 	self.position.x = 10
 
-func with_options(options: Array[PnjDialogOption] = []) -> Dialog :
+func with_options(options: Array[PnjDialogOption] = []) -> Dialog_ :
 	for option in options :
 		if option.enable.call() :
 			set_option(option.title, option.action)

@@ -2,7 +2,7 @@ extends "res://scripts/pnj.gd"
 
 
 func on_interact() -> void:
-	gui.open_dialog_next(_TEXT, self)
+	gui.open_dialog_next(Dialog.pnjSay(self,_TEXT))
 
 const _TEXT = """Salut Pirate. 
 	

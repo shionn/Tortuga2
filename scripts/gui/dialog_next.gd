@@ -12,7 +12,7 @@ class_name  DialogNext
 @onready var _option_button3 := $PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/OptionButton3 as Button
 @onready var _option_button4 := $PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/OptionButton4 as Button
 @onready var _option_button5 := $PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/OptionButton5 as Button
-
+@onready var _close_butonn := $PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/CloseButton as Button
 
 var _pnj : PNJ
 var _callback1 : Callable
@@ -29,17 +29,34 @@ func _process(_delta: float) -> void:
 		_pnj_camera.position = _pnj.global_position + _pnj.global_transform.basis*Vector3(.2,0,.4) + Vector3(0,.6,0)
 		_pnj_camera.look_at(_pnj.global_position + Vector3(0,.5,0), Vector3.UP, false)
 
-func open(text:String, pnj:PNJ = null) -> void :
-	_pnj = pnj
+#func open(text:String, pnj:PNJ = null) -> void :
+#	_pnj = pnj
+#	_player_view.visible = _pnj == null
+#	_pnj_view.visible = _pnj != null
+#	_text.clear()
+#	_text.append_text(text)
+#	_option_button1.hide()
+#	_option_button2.hide()
+#	_option_button3.hide()
+#	_option_button4.hide()
+#	_option_button5.hide()
+#	show()
+
+func open(dialog : Dialog) -> void :
+	_pnj = dialog.pnj
 	_player_view.visible = _pnj == null
 	_pnj_view.visible = _pnj != null
 	_text.clear()
-	_text.append_text(text)
+	_text.append_text(dialog.text)
 	_option_button1.hide()
 	_option_button2.hide()
 	_option_button3.hide()
 	_option_button4.hide()
 	_option_button5.hide()
+	for d : DialogOption in dialog.options:
+		if d.condition.call():
+			_set_option(d.title, d.action)
+	_close_butonn.visible = dialog.close
 	show()
 
 func with_options(options: Array[PnjDialogOption] = []) -> DialogNext :
