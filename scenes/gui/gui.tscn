@@ -222,6 +222,7 @@ tooltip_text = "Fermer"
 text = "Fermer"
 
 [node name="DialogNext" type="GridContainer" parent="."]
+visible = false
 z_index = 10
 layout_mode = 1
 anchors_preset = 7
@@ -275,7 +276,7 @@ layout_mode = 2
 [node name="SubViewport" type="SubViewport" parent="DialogNext/PanelContainer/HBoxContainer/PlayerSubViewportContainer"]
 handle_input_locally = false
 size = Vector2i(150, 150)
-render_target_update_mode = 4
+render_target_update_mode = 0
 
 [node name="Camera" type="Camera3D" parent="DialogNext/PanelContainer/HBoxContainer/PlayerSubViewportContainer/SubViewport"]
 
@@ -313,7 +314,7 @@ layout_mode = 2
 [node name="SubViewport" type="SubViewport" parent="DialogNext/PanelContainer/HBoxContainer/PnjSubViewportContainer"]
 handle_input_locally = false
 size = Vector2i(150, 150)
-render_target_update_mode = 4
+render_target_update_mode = 0
 
 [node name="Camera" type="Camera3D" parent="DialogNext/PanelContainer/HBoxContainer/PnjSubViewportContainer/SubViewport"]
 
