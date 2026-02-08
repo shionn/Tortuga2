@@ -35,7 +35,9 @@ func on_item_drop(item : Item) -> void:
 		gui.open_dialog_next(Dialog.pnjSay(self, _TEXT_GIVE_MELON)
 			.on_close(func(): tags.add(Tags.BRASSERIE_HAVE_SOBERING_POTION)))
 	elif item.name == Bag.FruitDefendu :
-		gui.open_dialog_next(Dialog.pnjSay(self, _TEXT_GIVE_FRUIT).on_close(_on_give_fruit))
+		gui.open_dialog_next(Dialog.playerSay(player, _TEXT_PLAYER_SHOW_FRUIT)
+			.next(Dialog.pnjSay(self, _TEXT_GIVE_FRUIT).on_close(_on_give_fruit))
+		)
 	else :
 		super.on_item_drop(item)
 
@@ -46,6 +48,7 @@ func _on_give_fruit() -> void :
 	bag.unloot(Bag.ParcheminBarbeDrue)
 	bag.unloot(Bag.FruitDefendu)
 	bag.loot(Bag.ParcheminBarbeDrueDecoder)
+	play_anim_interact()
 
 
 const _TEXT_PRESENTATION = """Bonjour,
@@ -75,8 +78,11 @@ Bien sûr, sans melon la potion fonctionne très bien. Mais son goût est horrib
 
 Si tu en veux, sert toi dans la caisse à côté de toi."""
 
-const _TEXT_GIVE_FRUIT = """Salut Compagnon,
-Oooh vous êtes génial, vous avez trouvé le fruit défendu ? Incroyable je suis tellement heureuse voici le parchemin décrypté.
+const _TEXT_PLAYER_SHOW_FRUIT = """Bonjour Eve, 
+
+Je vous rapporte le fruit défendu."""
+
+const _TEXT_GIVE_FRUIT = """Oooh vous êtes génial, vous avez trouvé le fruit défendu ? Incroyable je suis tellement heureuse voici le parchemin décrypté.
 
 Je viens juste de le finir, c'est un code très ancien."""
 

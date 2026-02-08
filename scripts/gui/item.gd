@@ -52,5 +52,14 @@ func on_activate() -> void:
 	if image :
 		_gui.open_image(self.tooltip_text,image)
 	else :
-		_gui.open_dialog_next(Dialog.playerSay(_player, self.description))
+		var texts = self.description.split("<split>\n")
+		texts.reverse()
+		var diag = null
+		for t in texts :
+			var next = Dialog.playerSay(_player, t)
+			if diag : 
+				diag = next.next(diag)
+			else :
+				diag = next
+		_gui.open_dialog_next(diag)
 	

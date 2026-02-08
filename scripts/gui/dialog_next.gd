@@ -29,6 +29,9 @@ func _process(_delta: float) -> void:
 		if _dialog and _dialog.pnj :
 			_pnj_camera.position = _dialog.pnj.global_position + _dialog.pnj.global_transform.basis*Vector3(.2,0,.4) + Vector3(0,.6,0)
 			_pnj_camera.look_at(_dialog.pnj.global_position + Vector3(0,.5,0), Vector3.UP, false)
+			if _dialog.pnj.name == "Kindle":
+				_pnj_camera.position = _dialog.pnj.global_position + _dialog.pnj.global_transform.basis*Vector3(.1,0,1.2) + Vector3(0,1.2,0)
+				_pnj_camera.look_at(_dialog.pnj.global_position + Vector3(0,1,0), Vector3.UP, false)
 
 func open(dialog : Dialog) -> void :
 	_dialog = dialog
@@ -46,7 +49,7 @@ func open(dialog : Dialog) -> void :
 			_set_option(opt)
 	_close_butonn.visible = dialog.close
 	show()
-	if dialog.on_open_action : dialog.on_close_action.call()
+	if dialog.on_open_action : dialog.on_open_action.call()
 
 func _set_option(opt:DialogOption) -> void:
 	if not _option_button1.visible:

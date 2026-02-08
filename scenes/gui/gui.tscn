@@ -994,10 +994,11 @@ description = "C'est une bière rousse de eve. La meilleure qui soit. "
 layout_mode = 0
 offset_right = 59.0
 offset_bottom = 48.0
-tooltip_text = "Bouteille de whisky"
+tooltip_text = "Bouteille de Rhum
+"
 texture_normal = ExtResource("21_v3xc1")
 script = ExtResource("11_s1h2m")
-description = "C'est la bouteille de whisky du capitaine."
+description = "C'est la bouteille de Rhum du capitaine."
 
 [node name="BoisDeQualite" type="TextureButton" parent="Items"]
 layout_mode = 0
@@ -1160,14 +1161,14 @@ tooltip_text = "Parchemin de Barbe Drue"
 texture_normal = ExtResource("13_qv6l0")
 script = ExtResource("11_s1h2m")
 description = "C'est le parchemin du trésor de Barbe Drue. Il a été décodé par Eve.
-
-Voici comment trouver le Trésor de L’Hung Connut :
-Toi Aventurier qui convoite mon trésor,
-Celui-ci dans une grotte dors,
-Mais pour le trouver et t’en emparer,
-Tu devras m’épater,
-Et sur l'Île, au Sud Est de la Baie de la Tortue,
-Sur la plage les pages ont été perdues."
+[i]	Voici comment trouver le Trésor de L’Hung Connut :
+	Toi Aventurier qui convoite mon trésor,
+	Celui-ci dans une grotte dors,[/i]
+<split>
+[i]	Mais pour le trouver et t’en emparer,
+	Tu devras m’épater,s
+	Et sur l'Île, au Sud Est de la Baie de la Tortue,
+	Sur la plage les pages ont été perdues.[/i]"
 
 [node name="PasseBarque" type="TextureButton" parent="Items"]
 layout_mode = 0
@@ -1347,6 +1348,13 @@ offset_right = 200.0
 offset_bottom = 288.0
 text = "Teleport Pierre TP"
 
+[node name="TeleportKindle" type="Button" parent="Cheat/Panel"]
+layout_mode = 0
+offset_top = 288.0
+offset_right = 200.0
+offset_bottom = 320.0
+text = "Teleport Kindle"
+
 [node name="QuickLoad" type="Button" parent="Cheat/Panel"]
 layout_mode = 0
 offset_right = 200.0
@@ -1390,5 +1398,6 @@ text = "Sauvegarder"
 [connection signal="pressed" from="Cheat/Panel/TeleportHungConnut" to="Cheat" method="_on_teleport_hung_connut_pressed"]
 [connection signal="pressed" from="Cheat/Panel/TeleportTwinIsland" to="Cheat" method="_on_teleport_twin_island_pressed"]
 [connection signal="pressed" from="Cheat/Panel/TeleportTeleportStone" to="Cheat" method="_on_teleport_teleport_stone_pressed"]
+[connection signal="pressed" from="Cheat/Panel/TeleportKindle" to="Cheat" method="_on_teleport_kindle_pressed"]
 [connection signal="pressed" from="Cheat/Panel/QuickLoad" to="Cheat" method="_on_quick_load_pressed"]
 [connection signal="pressed" from="Cheat/Panel/QuickSave" to="Cheat" method="_on_quick_save_pressed"]

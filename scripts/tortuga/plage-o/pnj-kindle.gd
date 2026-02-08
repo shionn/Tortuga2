@@ -4,14 +4,14 @@ var follow = false
 var walk = false
 
 func on_interact() -> void:
-	gui.open_alert(pnj_name, "Hii")
+	gui.open_dialog_next(Dialog.pnjSay(self,  "Hii"))
 
 func on_item_drop(item : Item) -> void:
 	if item.name == Bag.Houblon :
 		follow = true
-		gui.open_alert(pnj_name, "Hiiiii")
+		gui.open_dialog_next(Dialog.pnjSay(self,  "Hiiiii"))
 	else :
-		gui.open_alert(pnj_name, "Hii")
+		gui.open_dialog_next(Dialog.pnjSay(self,  "Hii"))
 		player.play_anim_no()
 
 func on_tag_change() -> void:

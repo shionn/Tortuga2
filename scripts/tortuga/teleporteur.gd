@@ -7,9 +7,9 @@ extends "res://scripts/interactable.gd"
 
 func on_interact() -> void:
 	if tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT) or bag.contain(Bag.CrystalTeleportationOasis):
-		gui.open_alert("Téléporteur", desciption)
+		gui.open_dialog_next(Dialog.playerSay(player, desciption))
 	else : 
-		gui.open_alert("Pierre étrange", """Cette pierre étrange est recouverte de glyphe mais je n’y comprends rien.""")
+		gui.open_dialog_next(Dialog.playerSay(player,  """Cette pierre étrange est recouverte de glyphe mais je n’y comprends rien."""))
 
 func on_item_drop(item : Item) -> void:
 	if not return_crystal.is_empty() && item.name == return_crystal :

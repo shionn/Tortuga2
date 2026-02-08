@@ -44,3 +44,7 @@ func _on_teleport_twin_island_pressed() -> void:
 func _on_teleport_teleport_stone_pressed() -> void:
 	player.teleport(Vector3(75, 3, -186), deg_to_rad(8)) 
 	visible = false
+
+func _on_teleport_kindle_pressed() -> void:
+	player.teleport(Vector3(-19, 1.6, -293), deg_to_rad(57)) 
+	visible = false

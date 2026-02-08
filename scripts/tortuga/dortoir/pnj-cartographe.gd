@@ -29,7 +29,7 @@ func on_item_drop(item : Item) -> void:
 			)
 		else :
 			gui.open_dialog_next(Dialog.playerSay(player, _TEXT_SHOW_PAGES)
-				.next(Dialog.pnjSay(self,_TEXT_MISSING_PAGE).on_open(func():play_anim_no()))
+				.next(Dialog.pnjSay(self,_TEXT_MISSING_PAGE).on_open(play_anim_no))
 			)
 	elif item.name == Bag.CrystalTeleportationOasis :
 		gui.open_dialog_next(Dialog.playerSay(player, "J’ai trouvé cela, c’est le cristal de téléportation ?")

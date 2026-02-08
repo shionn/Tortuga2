@@ -8,12 +8,15 @@ func on_interact() -> void:
 	gui.open_dialog_next(Dialog.pnjSay(self, TEXT_INTRO)
 		.option_dialog(Dialog.NO_WIND[0], 
 			Dialog.playerSay(player, Dialog.NO_WIND[1])
-				.next(Dialog.pnjSay(self, TEXT_WIND_MISSING)
-					.on_close(func(): if not bag.contain(Bag.PasseBarque) and not bag.contain(Bag.PasseBarqueTanpon) : tags.add(Tags.SEARCH_BARQUE))), 
+				.next(Dialog.pnjSay(self, TEXT_WIND_MISSING_1)
+					.next(Dialog.pnjSay(self, TEXT_WIND_MISSING_2)
+						.on_close(func(): if not bag.contain(Bag.PasseBarque) and not bag.contain(Bag.PasseBarqueTanpon) : tags.add(Tags.SEARCH_BARQUE)))), 
 			func (): return tags.have(Tags.SEARCH_WIND) and not tags.have(Tags.WIND_BLOWING))
 		.option_dialog("J’ai besoin d’un pass", 
 			Dialog.playerSay(player, "J’ai besoin d’un pass pour prendre la barque pour aller voir la Chamane.")
-				.next(Dialog.pnjSay(self, TEXT_SEARCH_PASS).on_close(func(): tags.add(Tags.SEARCH_CAPTAIN_BOTTLE))),
+				.next(Dialog.pnjSay(self, TEXT_SEARCH_PASS_1)
+					.next(Dialog.pnjSay(self, TEXT_SEARCH_PASS_2)
+						.on_close(func(): tags.add(Tags.SEARCH_CAPTAIN_BOTTLE)))),
 			func (): return tags.have(Tags.SEARCH_PASS) and not bag.contain(Bag.PasseBarque) and not bag.contain(Bag.PasseBarqueTanpon))
 	)
 	$Laugh.play()
@@ -61,17 +64,17 @@ const TEXT_FRAGMENT_HUNG_CONNUT = """Ca ressemble à une carte mais c’est inco
 
 Zakari le cartographe devrait pouvoir t’aider."""
 
-const TEXT_WIND_MISSING = """Le vent ? Pourquoi du vent ? Après il va faire froid et j’aime bien quand il fait chaud moi. Mais si vous y tenez juste une petite brise pas plus. Enfin, à peine plus pour votre machin là mais moi je ne peux rien faire.
+const TEXT_WIND_MISSING_1 = """Le vent ? Pourquoi du vent ? Après il va faire froid et j’aime bien quand il fait chaud moi. Mais si vous y tenez juste une petite brise pas plus. Enfin, à peine plus pour votre machin là mais moi je ne peux rien faire.
 
-Je ne suis pas Chamane pardi. Par contre la Chamane Sexy, Elle, elle peut vous aider !
+Je ne suis pas Chamane pardi. Par contre la Chamane Sexy, Elle, elle peut vous aider !"""
 
-Oui je sais où elle est, évidemment, Ahhh, Je la connais bien... Euh ne me demandez pas pourquoi ! Elle vit recluse dans une petite cabane au milieu de la petite île au Sud-Est de Tortuga. Mais vous allez devoir y aller en bateau."""
+const TEXT_WIND_MISSING_2 = """Oui je sais où elle est, évidemment, Ahhh, Je la connais bien... Euh ne me demandez pas pourquoi ! Elle vit recluse dans une petite cabane au milieu de la petite île au Sud-Est de Tortuga. Mais vous allez devoir y aller en bateau."""
 
-const TEXT_SEARCH_PASS = """Hein ? Quoi ? Je ne dormais pas je méditais, c’est important de méditer ! Vous voulez quoi déjà ? Une barque ? Un pass ? 
+const TEXT_SEARCH_PASS_1 = """Hein ? Quoi ? Je ne dormais pas je méditais, c’est important de méditer ! Vous voulez quoi déjà ? Une barque ? Un pass ? 
 
-Ah mais oui il va vous falloir un pass sinon Rurik ne vous laissera jamais monter à bord ! J’avais oublié, oui j’en ai un, euh où est il ? 
+Ah mais oui il va vous falloir un pass sinon Rurik ne vous laissera jamais monter à bord ! J’avais oublié, oui j’en ai un, euh où est il ?"""
 
-Bon hum, je l’ai encore égaré, la dernière fois que je l’ai vu il était dans ma poche. Et ma poche était sur moi. Et j’étais ici... Ici, ah j’ai perdu ma flasque de Rhum. 
+const TEXT_SEARCH_PASS_2 = """Bon hum, je l’ai encore égaré, la dernière fois que je l’ai vu il était dans ma poche. Et ma poche était sur moi. Et j’étais ici... Ici, ah j’ai perdu ma flasque de Rhum. 
 
 Par le Kraken, je commence à me dessécher ! Allez houste je dois chercher ma flasque sans elle je sais plus où j'en suis et j’ai soif !"""
 
