@@ -46,6 +46,7 @@ func open(dialog : Dialog) -> void :
 			_set_option(opt)
 	_close_butonn.visible = dialog.close
 	show()
+	if dialog.on_open_action : dialog.on_close_action.call()
 
 func _set_option(opt:DialogOption) -> void:
 	if not _option_button1.visible:

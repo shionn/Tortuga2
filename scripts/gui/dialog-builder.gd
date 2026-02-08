@@ -6,6 +6,7 @@ var options: Array[DialogOption] = []
 var pnj: PNJ
 var _gui: Gui
 var close: bool = true
+var on_open_action: Callable
 var on_close_action: Callable
 
 static func pnjSay(_pnj: PNJ, _text: String) -> Dialog :
@@ -35,6 +36,10 @@ func next(another : Dialog) -> Dialog :
 	close = false
 	return option_action("Suite...", func(): _gui.open_dialog_next(another))
 
+func on_open(_action: Callable) -> Dialog :
+	on_open_action = _action
+	return self
+
 func on_close(_action: Callable) -> Dialog :
 	on_close_action = _action
 	return self
@@ -45,12 +50,10 @@ func no_close() -> Dialog :
 
 ## Les dialog par defaut
 
+const SERCH_FORBID_FRUIT : Array[String] = ["Fruit défendu ?", "Je cherche le fruit défendu. Est-ce que tu en as déjà entendu parler ?", """Je n'en ai jamais entendu parler."""]
+
 func option_search_forbid_fruit() -> Dialog :
-	return option_dialog("Fruit défendu ?", 
-		playerSay(pnj.player,  "Je cherche le fruit défendu. Est-ce que tu en as déjà entendu parler ?").next(
-			pnjSay(pnj, """Je n'en ai jamais entendu parler.""")),
-		func(): return pnj.tags.have(Tags.FORBID_FRUIT_SEARCH) and not pnj.bag.contain(Bag.FruitDefendu)
-	)
+	return _option_default(func(): return pnj.tags.have(Tags.FORBID_FRUIT_SEARCH) and not pnj.tags.have(Tags.FORBID_FRUIT_LOOTED), SERCH_FORBID_FRUIT)
 
 func option_search_forbid_fruit_montain() -> Dialog : 
 	return option_dialog("Escalader la montagne ?", 
@@ -78,6 +81,9 @@ func option_hung_connut_search_wood() -> Dialog :
 		func (): return pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_WOOD) and not pnj.bag.contain(Bag.BoisDeQualite)
 	)
 
+const SEARCH_HOUBLON : Array[String] = ["Du houblon ?", "J'ai besoin de houblon. Sais-tu ou en trouver ?", """Du houblon ? Ce qu’on utilise pour faire de la bière. 
+C’est malin maintenant j’ai envie d’une bière, la bière rousse de Eve est la meilleure."""]
+
 func option_hung_connut_search_houblon() -> Dialog : 
 	return _option_default(func (): return pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON) and not pnj.bag.contain(Bag.Houblon), SEARCH_HOUBLON)
 
@@ -90,8 +96,6 @@ func _option_default(condition : Callable, data: Array[String]) -> Dialog:
 		condition
 	)
 
-const SEARCH_HOUBLON : Array[String] = ["Du houblon ?", "J'ai besoin de houblon. Sais-tu ou en trouver ?", """Du houblon ? Ce qu’on utilise pour faire de la bière. 
-C’est malin maintenant j’ai envie d’une bière, la bière rousse de Eve est la meilleure."""]
 
 const NO_WIND : Array[String] = ["Absence du vent ?", "Il n’y a plus de vent.", """Oui, cela fait plusieurs jours que ça dure. 
 Ce n’est pas la première fois que ca arrive. Je ne sais pas comment mais le Capitaine a réussi à faire revenir les vents la dernière fois que cela s'était produit."""]

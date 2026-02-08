@@ -18,7 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://g5kgt7lnwfw0" path="res://assets/gui/fanatisy-magic-set/bag-h-48.png" id="8_kvi6p"]
 [ext_resource type="Texture2D" uid="uid://h0fvpnvfhm5o" path="res://assets/gui/ui-adventure/panel_brown_W.png" id="8_lnk63"]
 [ext_resource type="Texture2D" uid="uid://cjnyd65crcee1" path="res://assets/gui/ui-adventure/panel_brown_E.png" id="9_dwcmb"]
-[ext_resource type="Script" uid="uid://dbsmc7uqhq2bx" path="res://scripts/gui/bag.gd" id="9_xqkfk"]
 [ext_resource type="Texture2D" uid="uid://iaqinuj6nrko" path="res://assets/gui/cursor-pack/mark_question-48.png" id="10_dfalf"]
 [ext_resource type="Texture2D" uid="uid://c410qwblm66ua" path="res://assets/gui/ui-adventure/panel_brown_SW.png" id="10_tn6xl"]
 [ext_resource type="Script" uid="uid://d1lak2chwfvp0" path="res://scenes/gui/input.gd" id="11_8vo8u"]
@@ -40,6 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://bs0icmlv8xa0a" path="res://assets/gui/fruit-icons-redo/watermelon-h-48.png" id="22_rex2l"]
 [ext_resource type="Texture2D" uid="uid://jl461oxmkpxk" path="res://assets/gui/fanatisy-magic-set/potion-2-48.png" id="23_e5h10"]
 [ext_resource type="Texture2D" uid="uid://b5l25ya0cp386" path="res://assets/gui/papers/paper-07.png" id="23_iuo3o"]
+[ext_resource type="Script" uid="uid://dbsmc7uqhq2bx" path="res://scripts/gui/bag.gd" id="25_8rxp0"]
 [ext_resource type="Texture2D" uid="uid://dps01w2kfg2xr" path="res://assets/gui/houblon.png" id="25_74x0q"]
 [ext_resource type="Texture2D" uid="uid://iy0ji7uipbh2" path="res://assets/gui/rpg-mushroom-icons/7.png" id="25_g11ko"]
 [ext_resource type="Texture2D" uid="uid://caskn8urwgnuf" path="res://assets/gui/resources-pack-1/Paper-h-48.png" id="29_dfsdp"]
@@ -792,7 +792,7 @@ offset_left = -10.0
 offset_right = -10.0
 grow_horizontal = 0
 grow_vertical = 2
-script = ExtResource("9_xqkfk")
+script = ExtResource("25_8rxp0")
 
 [node name="Panel" type="Panel" parent="Bag"]
 layout_mode = 1

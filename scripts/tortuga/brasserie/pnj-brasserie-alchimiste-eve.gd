@@ -31,22 +31,22 @@ func on_item_drop(item : Item) -> void:
 					.on_close(func() : tags.add(Tags.FORBID_FRUIT_SEARCH))))
 		)
 	elif item.name == Bag.Melon && not player.tags.have(Tags.BRASSERIE_HAVE_SOBERING_POTION) :
-		gui.open_dialog(pnj_name,_TEXT_GIVE_MELON)
-		#$"../caisse-popo-degrissement-vide".visible = false
-		#$"../caisse-popo-degrisement".visible = true
-		tags.add(Tags.BRASSERIE_HAVE_SOBERING_POTION)
 		bag.unloot(Bag.Melon)
+		gui.open_dialog_next(Dialog.pnjSay(self, _TEXT_GIVE_MELON)
+			.on_close(func(): tags.add(Tags.BRASSERIE_HAVE_SOBERING_POTION)))
 	elif item.name == Bag.FruitDefendu :
-		gui.open_dialog(pnj_name, _TEXT_GIVE_FRUIT)
-		tags.remove(Tags.FORBID_FRUIT_SEARCH)
-		tags.remove(Tags.FORBID_FRUIT_SEARCH_MONTAGNE)
-		tags.remove(Tags.FORBID_FRUIT_SEARCH_TELEPORT)
-		bag.unloot(Bag.ParcheminBarbeDrue)
-		bag.unloot(Bag.FruitDefendu)
-		bag.loot(Bag.ParcheminBarbeDrueDecoder)
-		pass
+		gui.open_dialog_next(Dialog.pnjSay(self, _TEXT_GIVE_FRUIT).on_close(_on_give_fruit))
 	else :
 		super.on_item_drop(item)
+
+func _on_give_fruit() -> void :
+	tags.remove(Tags.FORBID_FRUIT_SEARCH)
+	tags.remove(Tags.FORBID_FRUIT_SEARCH_MONTAGNE)
+	tags.remove(Tags.FORBID_FRUIT_SEARCH_TELEPORT)
+	bag.unloot(Bag.ParcheminBarbeDrue)
+	bag.unloot(Bag.FruitDefendu)
+	bag.loot(Bag.ParcheminBarbeDrueDecoder)
+
 
 const _TEXT_PRESENTATION = """Bonjour,
 
