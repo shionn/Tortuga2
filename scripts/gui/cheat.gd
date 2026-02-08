@@ -30,7 +30,7 @@ func _on_teleport_oasis_pressed() -> void:
 	visible = false
 
 func _on_teleport_chaman_pressed() -> void:
-	player.teleport(Vector3(304.0,2.1,91), 0) # oasis
+	player.teleport(Vector3(304.0,2.1,91), deg_to_rad(-178)) # oasis
 	visible = false
 
 func _on_teleport_escalator_pressed() -> void:
