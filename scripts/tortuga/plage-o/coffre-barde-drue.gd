@@ -12,7 +12,7 @@ func on_interact() -> void:
 	if tags.have(Tags.TREASUR_BARBE_DRUE_OPENED) or bag.contain(Bag.TresorBarbeDrue) or  bag.contain(Bag.TresorBarbeDrueNet) : 
 		gui.open_alert("Coffre vide", "Le coffre est vide")
 	else :
-		open_question("Entrez le code", on_answer)
+		gui.open_question("Entrez le code", on_answer)
 
 func on_answer(answer: String) -> void:
 	if answer == "14738":

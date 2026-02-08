@@ -46,6 +46,7 @@ func _on_button_up() -> void:
 			_player.play_anim_no()
 			_gui.append_to_console("Trop loin")
 	_bag.drag = null
+	_interactable = null
 	set_default_cursor_shape(Control.CURSOR_POINTING_HAND)
 
 func on_activate() -> void: 

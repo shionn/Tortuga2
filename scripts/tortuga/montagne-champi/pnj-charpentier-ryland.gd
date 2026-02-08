@@ -2,9 +2,9 @@ extends "res://scripts/pnj.gd"
 
 func on_interact() -> void:
 	if tags.have(Tags.WIND_BLOWING) :
-		gui.open_dialog(pnj_name, _TEXT_ESCALATOR_OK)
+		gui.open_dialog_next(Dialog.pnjSay(self,_TEXT_ESCALATOR_OK))
 	else :
-		gui.open_dialog(pnj_name, _TEXT_ESCALATOR_KO)
+		gui.open_dialog_next(Dialog.pnjSay(self,_TEXT_ESCALATOR_KO))
 		tags.add(Tags.SEARCH_WIND)
 
 

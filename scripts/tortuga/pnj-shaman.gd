@@ -1,57 +1,50 @@
 extends "res://scripts/pnj.gd"
 
 func on_interact() -> void:
-	gui.open_dialog(pnj_name, _TEXT).with_options([
-		PnjDialogOption.new(
-			func() : return tags.have(Tags.SEARCH_WIND),
-			"""Y a plus de vent""",
-			_on_search_wind
-		),
-		PnjDialogOption.new(
-			func() : return bag.contain(Bag.ListInvocationVent),
-			"""Une plume ?""",
-			func() : gui.open_dialog(pnj_name, _TEXT_PLUME)
-		),
-		PnjDialogOption.new(
-			func() : return bag.contain(Bag.ListInvocationVent),
-			"""Un ossement ?""",
-			func() : gui.open_dialog(pnj_name, _TEXT_OSSEMENT)
-		),
-		PnjDialogOption.new(
-			func() : return bag.contain(Bag.ListInvocationVent),
-			"""Du sel ?""",
-			func() : gui.open_dialog(pnj_name, _TEXT_SEL)
-		),
-		PnjDialogOption.new(
-			func() : return bag.contain(Bag.ListInvocationVent),
-			"""Un mojito ?""",
-			func() : gui.open_dialog(pnj_name, _TEXT_MOJITO)
+	gui.open_dialog_next(Dialog.pnjSay(self, _TEXT)
+		.option_dialog(Dialog.NO_WIND[0], 
+			Dialog.playerSay(player, Dialog.NO_WIND[1])
+				.next(Dialog.pnjSay(self, _TEXT_SEARCH_WIND_1).next(Dialog.pnjSay(self, _TEXT_SEARCH_WIND_2).next(Dialog.pnjSay(self, _TEXT_SEARCH_WIND_3)
+					.on_close(func(): bag.loot(Bag.ListInvocationVent))))),
+			Dialog.NO_WIND_CONDITION(self)
 		)
-	])
+		.option_dialog("Une plume ?", 
+			Dialog.playerSay(player,"Il te faut une plume ?").next(Dialog.pnjSay(self, _TEXT_PLUME)),
+			func() : return bag.contain(Bag.ListInvocationVent))
+		.option_dialog("Un ossement ?", 
+			Dialog.playerSay(player,"Il te faut un os ?").next(Dialog.pnjSay(self, _TEXT_OSSEMENT)),
+			func() : return bag.contain(Bag.ListInvocationVent))
+		.option_dialog("Du sel ?", 
+			Dialog.playerSay(player,"Il te faut du sel ?").next(Dialog.pnjSay(self, _TEXT_SEL)),
+			func() : return bag.contain(Bag.ListInvocationVent))
+		.option_dialog("Du mojito ?", 
+			Dialog.playerSay(player,"Il te faut un mojito ?").next(Dialog.pnjSay(self, _TEXT_MOJITO)),
+			func() : return bag.contain(Bag.ListInvocationVent))
+	)
 
 func _on_search_wind() :
-	gui.open_dialog(pnj_name, _TEXT_SEARCH_WIND)
+	gui.open_dialog(pnj_name, _TEXT_SEARCH_WIND_1)
 	bag.loot(Bag.ListInvocationVent)
 
 func on_item_drop(_item : Item) -> void:
 	if _item.name == Bag.ListInvocationVent:
-		gui.open_dialog(pnj_name, "C’est ma propre liste que veux tu que j’en fasse ? Rapporte moi donc plutôt les ingrédients.")
+		gui.open_dialog_next(Dialog.pnjSay(self, "C’est ma propre liste que veux tu que j’en fasse ? Rapporte moi donc plutôt les ingrédients."))
 	elif _item.name == Bag.Plume or _item.name == Bag.Ossement or _item.name == Bag.SelDeMontagne :
-		gui.open_dialog(pnj_name, "Bravo, tu as trouvé certains ingrédients, mais je veux d'abords mon Mojito.")
+		gui.open_dialog_next(Dialog.pnjSay(self, "Bravo, tu as trouvé certains ingrédients, mais je veux d'abords mon Mojito."))
 	elif _item.name == Bag.Mojito :
 		bag.unloot(Bag.Mojito)
 		if bag.contain(Bag.Plume) and  bag.contain(Bag.Ossement) and  bag.contain(Bag.SelDeMontagne) :
+			gui.open_dialog_next(Dialog.pnjSay(self, _TEXT_MOJITO_ALL))
 			tags.remove(Tags.SEARCH_WIND)
 			tags.add(Tags.WIND_BLOWING)
 			bag.unloot(Bag.Plume)
 			bag.unloot(Bag.ListInvocationVent)
 			bag.unloot(Bag.Ossement)
 			bag.unloot(Bag.SelDeMontagne)
-			gui.open_dialog(pnj_name, _TEXT_MOJITO_ALL)
 		else :
-			gui.open_dialog(pnj_name, _TEXT_MOJITO_MISSING)
+			gui.open_dialog_next(Dialog.pnjSay(self, _TEXT_MOJITO_MISSING))
 	elif _item.name == Bag.MojitoSansGlace:
-		gui.open_dialog(pnj_name, "C'est quoi ca ? il est chaud ton Mojito !")
+		gui.open_dialog_next(Dialog.pnjSay(self, "C'est quoi ca ? il est chaud ton Mojito !"))
 		bag.unloot(Bag.MojitoSansGlace)
 	else : 
 		super.on_item_drop(_item)
@@ -61,16 +54,17 @@ const _TEXT = """Ben alors mon petit on vient voir Grabouilla, on cherche du ré
 
 Ou alors tu as besoin de moi pour mes puissants pouvoirs ?"""
 
-const _TEXT_SEARCH_WIND = """Hannnn, y a plus de vent ? Et tu voudrais qu’il se lève à nouveau ? Ben c’est facile mon petit. Mais Grabouilla vit recluse sur sa petite île, y a pas tout ce dont j’ai besoin ici.
+const _TEXT_SEARCH_WIND_1 = """Hannnn, y a plus de vent ? Et tu voudrais qu’il se lève à nouveau ? Ben c’est facile mon petit. Mais Grabouilla vit recluse sur sa petite île, y a pas tout ce dont j’ai besoin ici."""
 
-Il me faut : 
+const _TEXT_SEARCH_WIND_2 = """Il me faut : 
 [ul]
 Une Plume d’oiseau Géant
 Un ossements, si possible un ossement de pirate
 Du sel minéral.
 Un mojito frais.
-[/ul]
-Quoi ça fait trop ? Tiens voilà une liste."""
+[/ul]"""
+
+const _TEXT_SEARCH_WIND_3 = """Quoi ça fait trop ? Tiens voilà une liste."""
 
 const _TEXT_PLUME = """Oui il me faut une plume, mais pas de n’importe quel oiseau, en plus d’un oiseau géant. Si possible une plume de la poule Dodouce. Cet oiseau très rare aime faire son nid en très haute altitude."""
 

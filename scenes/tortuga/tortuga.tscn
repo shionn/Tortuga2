@@ -1,4 +1,4 @@
-[gd_scene load_steps=129 format=3 uid="uid://byfhqtkkcefl2"]
+[gd_scene load_steps=131 format=3 uid="uid://byfhqtkkcefl2"]
 
 [ext_resource type="PackedScene" uid="uid://gjk5y26xk1ud" path="res://assets/graveyard/gravestone/gravestone-bevel.glb" id="1_5xhig"]
 [ext_resource type="Script" uid="uid://bxc5rpm6q3cwm" path="res://scripts/tortuga/crique/bouteille_note_lisible.gd" id="1_c7jrm"]
@@ -79,6 +79,7 @@
 [ext_resource type="PackedScene" uid="uid://dt7kul30n8qm5" path="res://scenes/tortuga/tortuga_mountain_bridge-4.tscn" id="65_7nohc"]
 [ext_resource type="PackedScene" uid="uid://wbhw75nksawp" path="res://assets/low-poly-rpg-item/crystal-green.glb" id="66_afi26"]
 [ext_resource type="PackedScene" uid="uid://byjj6kfw5ebe1" path="res://scenes/tortuga/tortuga_mountain_bridge-5.tscn" id="66_boury"]
+[ext_resource type="Script" uid="uid://cjqid32ggs4cw" path="res://scripts/tortuga/hung-connut/scroll_hung_connut.gd" id="67_0yxjw"]
 [ext_resource type="PackedScene" uid="uid://cey7n6kj43a6y" path="res://assets/low-poly-rpg-item/crystal-blue.glb" id="67_yyvjg"]
 [ext_resource type="Script" uid="uid://c3xl7gsrfchhp" path="res://scripts/tortuga/hung-connut/chest-hung-connut.gd" id="68_b0xvp"]
 [ext_resource type="PackedScene" uid="uid://dnox6xxvbcg01" path="res://assets/low-poly-rpg-item/crystal-red.glb" id="68_tgi8i"]
@@ -151,6 +152,9 @@ density_texture = SubResource("NoiseTexture3D_gl853")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ifuss"]
 size = Vector3(0.3, 0.3, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b0xvp"]
+size = Vector3(0.3, 0.1, 0.1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_es7mt"]
 size = Vector3(1.2, 1.3000001, 1.2)
@@ -5248,6 +5252,13 @@ transform = Transform3D(0, 0, 1.5, 0, 1.5, 0, -1.5, 0, 0, -8.909607, 16.300001, 
 
 [node name="oga_scroll" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/altar-stone2" instance=ExtResource("27_ggmis")]
 transform = Transform3D(0.94205165, 0, -0.33546796, 0, 1, 0, 0.33546796, 0, 0.94205165, 0.3088379, 0.09559822, 0.27957153)
+script = ExtResource("67_0yxjw")
+
+[node name="Area3D" type="Area3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/altar-stone2/oga_scroll"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/altar-stone2/oga_scroll/Area3D"]
+transform = Transform3D(1.000001, 0, 1.3411045e-06, 0, 1, 0, -1.3411045e-06, 0, 1.000001, 0, 0.05, 0)
+shape = SubResource("BoxShape3D_b0xvp")
 
 [node name="Chest" parent="Montagne-Nord/MontagneHungConnut/Pic5/Grotte/altar-stone2" instance=ExtResource("68_whw8m")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.43, 0)

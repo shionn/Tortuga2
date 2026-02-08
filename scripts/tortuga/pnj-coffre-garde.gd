@@ -8,7 +8,7 @@ func on_interact() -> void:
 			Dialog.SEARCH_TELEPORT_CRYSTAL[0],
 			Dialog.playerSay(player, Dialog.SEARCH_TELEPORT_CRYSTAL[1])
 				.next(Dialog.pnjSay(self, _TEST_SEARCH_CRYSTAL_TELEPORT)),
-			func(): return Dialog.SEARCH_TELEPORT_CRYSTAL_CONDITION.call(self)
+			Dialog.SEARCH_TELEPORT_CRYSTAL_CONDITION(self)
 		)
 		.option_hung_connut_search_charpentier()
 		.option_hung_connut_search_wood()

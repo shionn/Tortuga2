@@ -55,7 +55,7 @@ func open_dialog_and_img(title: String, text: String, img: Resource) -> void:
 func open_image(title: String, img: Resource) -> void:
 	_image.open(title, img)
 
-func open_question(title: String, callback: Callable, _size: Vector2 = Vector2(300,100)) -> void:
+func open_question(title: String, callback: Callable, _size: Vector2 = Vector2(300,110)) -> void:
 	_input.open(title, callback, _size)
 
 func open_yes_no_question(title: String, question: String, on_no: Callable, on_yes: Callable) -> void:

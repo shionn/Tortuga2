@@ -14,9 +14,9 @@ func on_tag_change() -> void:
 
 func on_interact() -> void:
 	if tags.have(Tags.HUNG_CONNUT_SEARCH_ESCALTOR):
-		gui.open_alert("Escalator détruit", _TEXT_SEARCH)
+		gui.open_dialog_next(Dialog.playerSay(player, _TEXT_SEARCH))
 	else : 
-		gui.open_alert("Escalator détruit", _TEXT)
+		gui.open_dialog_next(Dialog.playerSay(player, _TEXT))
 	tags.add(Tags.HUNG_CONNUT_SEARCH_CHARPENTIER)
 
 const _TEXT_SEARCH = """Ho non l’escalator est détruit.

@@ -83,9 +83,10 @@ func option_hung_connut_search_houblon() -> Dialog :
 
 const NO_WIND : Array[String] = ["Absence du vent ?", "Il n’y a plus de vent.", """Oui, cela fait plusieurs jours que ça dure. 
 Ce n’est pas la première fois que ca arrive. Je ne sais pas comment mais le Capitaine a réussi à faire revenir les vents la dernière fois que cela s'était produit."""]
+static func NO_WIND_CONDITION(_pnj:PNJ) : return func(): return _pnj.tags.have(Tags.SEARCH_WIND) and not _pnj.tags.have(Tags.WIND_BLOWING)
 
 func option_search_wind() -> Dialog :
-	return _option_default(func (): return pnj.tags.have(Tags.SEARCH_WIND) and not pnj.tags.have(Tags.WIND_BLOWING), NO_WIND)
+	return _option_default(NO_WIND_CONDITION(pnj), NO_WIND)
 
 func _option_default(condition : Callable, data: Array[String]) -> Dialog:
 	return option_dialog(data[0], 

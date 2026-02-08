@@ -27,6 +27,8 @@ func on_item_drop(item : Item) -> void:
 	elif item.name == Bag.TresorHungConnut :
 		gui.open_dialog_next(Dialog.pnjSay(self, TEXT_TRESOR_HUNG_CONNU))
 	elif item.name == Bag.ParcheminBarbeDrue :
+		gui.open_dialog_next(Dialog.pnjSay(self, TEXT_SHOW_PARCH_HUNG_CONNUT))
+	elif item.name == Bag.ParcheminHungConnut :
 		gui.open_dialog_next(Dialog.pnjSay(self, TEXT_PARCHEMIN_BARBE_DRUE))
 	elif item.name == Bag.PageHungConnutFrag1 or item.name == Bag.PageHungConnutFrag2 or item.name == Bag.PageHungConnutFrag3 :
 		gui.open_dialog_next(Dialog.pnjSay(self, TEXT_FRAGMENT_HUNG_CONNUT))
@@ -84,4 +86,6 @@ Voilà allez houste, j’ai besoin de repos… eeuuuuh non de calme je veux dire
 
 const _TEXT_ASK_BONE = """Quoi tu veux que je te donne un de mes os ? Non c’est impossible, j’en ai trop besoin, après je serais éparpillé et j’auraiiiiii... Hmmm, plus de mal à me rappeler des choses voilà!! Tu veux pas demander à quelqu’un d’autre ? Y a d'autres pirates qui ont subi la même malédiction que moi. Pas aussi sexy, je vous l’acccorde, mais il peuvent servir à quelque chose pour une fois!  
 
-La plupart des pirates meurent en mer aussi y a très peu de cadavres sur l'île à moins que la mer ne les charrie. Allez fouiller les plages Houste ou alors il faudrait profaner une tombe, mais seul un fou ferai ça! Ça pue là dedans!"""
+La plupart des pirates meurent en mer aussi y a très peu de cadavres sur l'île à moins que la mer ne les charrie. Allez fouiller les plages Houste ou alors il faudrait profaner une tombe, mais seul un fou ferait ça! Ça pue là dedans!"""
+
+const TEXT_SHOW_PARCH_HUNG_CONNUT = """Apparemment il te faudrait explorer les îles voisines pour aller plus loin. Va voir Rurik si tu veux quitter l'île."""

@@ -22,7 +22,7 @@ func _on_quick_save_pressed() -> void:
 	visible = false
 
 func _on_teleport_hung_connut_pressed() -> void:
-	player.teleport(Vector3(300, 26, -240), 72) # hung connu
+	player.teleport(Vector3(305, 26, -236), deg_to_rad(60)) # hung connu
 	visible = false
 
 func _on_teleport_oasis_pressed() -> void:
@@ -34,7 +34,7 @@ func _on_teleport_chaman_pressed() -> void:
 	visible = false
 
 func _on_teleport_escalator_pressed() -> void:
-	player.teleport(Vector3(257, 2, -316), -49) # escalator
+	player.teleport(Vector3(257, 2, -316), deg_to_rad(-49))
 	visible = false
 
 func _on_teleport_twin_island_pressed() -> void:

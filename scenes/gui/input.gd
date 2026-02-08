@@ -6,7 +6,7 @@ extends Control
 
 var _callback: Callable
 
-func open(question: String, callback: Callable, _size: Vector2 = Vector2(300,100)) -> void : 
+func open(question: String, callback: Callable, _size: Vector2 = Vector2(300,110)) -> void : 
 	_panel.set_size(size)
 	_panel.offset_top=-_size.y/2
 	_panel.offset_bottom=_size.y/2
