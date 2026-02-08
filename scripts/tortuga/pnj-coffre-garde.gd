@@ -5,10 +5,11 @@ func on_interact() -> void:
 		.option_search_forbid_fruit()
 		.option_search_forbid_fruit_montain()
 		.option_dialog(
-			Dialog.SEARCH_TELEPRT_CRUSTAL[0],
-			Dialog.playerSay(player, Dialog.SEARCH_TELEPRT_CRUSTAL[1])
+			Dialog.SEARCH_TELEPORT_CRYSTAL[0],
+			Dialog.playerSay(player, Dialog.SEARCH_TELEPORT_CRYSTAL[1])
 				.next(Dialog.pnjSay(self, _TEST_SEARCH_CRYSTAL_TELEPORT)),
-			func(): return tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT) and not bag.contain(Bag.CrystalTeleportationOasis))
+			func(): return Dialog.SEARCH_TELEPORT_CRYSTAL_CONDITION.call(self)
+		)
 		.option_hung_connut_search_charpentier()
 		.option_hung_connut_search_wood()
 		.option_hung_connut_search_houblon()

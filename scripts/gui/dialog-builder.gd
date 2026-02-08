@@ -50,22 +50,18 @@ func no_close() -> Dialog :
 
 ## Les dialog par defaut
 
-const SERCH_FORBID_FRUIT : Array[String] = ["Fruit défendu ?", "Je cherche le fruit défendu. Est-ce que tu en as déjà entendu parler ?", """Je n'en ai jamais entendu parler."""]
+const SEARCH_FORBID_FRUIT : Array[String] = ["Fruit défendu ?", "Je cherche le fruit défendu. Est-ce que tu en as déjà entendu parler ?", """Je n'en ai jamais entendu parler."""]
+static func SEARCH_FORBID_FRUIT_CONDITION(_pnj: PNJ) : return func(): return _pnj.tags.have(Tags.FORBID_FRUIT_SEARCH) and not _pnj.tags.have(Tags.FORBID_FRUIT_LOOTED)
 
-func option_search_forbid_fruit() -> Dialog :
-	return _option_default(func(): return pnj.tags.have(Tags.FORBID_FRUIT_SEARCH) and not pnj.tags.have(Tags.FORBID_FRUIT_LOOTED), SERCH_FORBID_FRUIT)
+const SEARCH_FORBID_FRUIT_MOUNTAIN : Array[String] = ["Escalader la montagne ?", "Je veux escalader la plus grande montagne de l'île. Sais tu comment faire ?", """Je ne sais pas comment faire."""]
+static func SEARCH_FORBID_FRUIT_MOUNTAIN_CONDITION(_pnj) : return func(): return _pnj.tags.have(Tags.FORBID_FRUIT_SEARCH_MONTAGNE) and not _pnj.bag.contain(Bag.CrystalTeleportationOasis)
 
-func option_search_forbid_fruit_montain() -> Dialog : 
-	return option_dialog("Escalader la montagne ?", 
-		playerSay(pnj.player, "Je veux escalader la plus grande montagne de l'île. Sais tu comment faire ?").next(
-			pnjSay(pnj, """Je ne sais pas comment faire.""")),
-		func(): return pnj.tags.have(Tags.FORBID_FRUIT_SEARCH_MONTAGNE) and not pnj.bag.contain(Bag.FruitDefendu)
-	)
+const SEARCH_TELEPORT_CRYSTAL : Array[String] = ["Crystal de téléportation ?", "Je cherche un crystal de téléportation.", """Mais de quoi tu parles ?"""]
+static func SEARCH_TELEPORT_CRYSTAL_CONDITION(_pnj) : return func() : return _pnj.tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT) and not _pnj.bag.contain(Bag.CrystalTeleportationOasis)
 
-const SEARCH_TELEPRT_CRUSTAL : Array[String] = ["Crystal de téléportation ?", "Je cherche un crystal de téléportation.", """Mais de quoi tu parles ?"""]
-
-func option_search_forbid_fruit_montain_teleport() -> Dialog : 
-	return _option_default(func(): return pnj.tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT) and not pnj.bag.contain(Bag.CrystalTeleportationOasis), SEARCH_TELEPRT_CRUSTAL)
+func option_search_forbid_fruit()                  -> Dialog : return _option_default(SEARCH_FORBID_FRUIT_CONDITION(pnj),          SEARCH_FORBID_FRUIT)
+func option_search_forbid_fruit_montain()          -> Dialog : return _option_default(SEARCH_FORBID_FRUIT_MOUNTAIN_CONDITION(pnj), SEARCH_FORBID_FRUIT_MOUNTAIN)
+func option_search_forbid_fruit_montain_teleport() -> Dialog : return _option_default(SEARCH_TELEPORT_CRYSTAL_CONDITION(pnj),      SEARCH_TELEPORT_CRYSTAL)
 
 func option_hung_connut_search_charpentier() -> Dialog : 
 	return option_dialog("L'escalator détruit ?", 
@@ -87,6 +83,9 @@ C’est malin maintenant j’ai envie d’une bière, la bière rousse de Eve es
 func option_hung_connut_search_houblon() -> Dialog : 
 	return _option_default(func (): return pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON) and not pnj.bag.contain(Bag.Houblon), SEARCH_HOUBLON)
 
+const NO_WIND : Array[String] = ["Absence du vent ?", "Il n’y a plus de vent.", """Oui, cela fait plusieurs jours que ça dure. 
+Ce n’est pas la première fois que ca arrive. Je ne sais pas comment mais le Capitaine a réussi à faire revenir les vents la dernière fois que cela s'était produit."""]
+
 func option_search_wind() -> Dialog :
 	return _option_default(func (): return pnj.tags.have(Tags.SEARCH_WIND) and not pnj.tags.have(Tags.WIND_BLOWING), NO_WIND)
 
@@ -96,9 +95,6 @@ func _option_default(condition : Callable, data: Array[String]) -> Dialog:
 		condition
 	)
 
-
-const NO_WIND : Array[String] = ["Absence du vent ?", "Il n’y a plus de vent.", """Oui, cela fait plusieurs jours que ça dure. 
-Ce n’est pas la première fois que ca arrive. Je ne sais pas comment mais le Capitaine a réussi à faire revenir les vents la dernière fois que cela s'était produit."""]
 
 
 const _ANSWER_HUNG_CONNUT_SEARCH_WOOD = """Du bois ? Il y a des palmiers partout. 

@@ -2,12 +2,12 @@ extends "res://scripts/pnj.gd"
 
 func on_interact() -> void:
 	gui.open_dialog_next(Dialog.pnjSay(self, _TEXT)
-		.option_dialog(Dialog.SERCH_FORBID_FRUIT[0], 
-			Dialog.playerSay(player,Dialog.SERCH_FORBID_FRUIT[1])
+		.option_dialog(Dialog.SEARCH_FORBID_FRUIT[0], 
+			Dialog.playerSay(player,Dialog.SEARCH_FORBID_FRUIT[1])
 				.next(Dialog.pnjSay(self,_TEXT_SEARCH_FRUIT)
 					.next(Dialog.pnjSay(self,_TEXT_SEARCH_FRUIT_2)
 						.on_close(func(): tags.add(Tags.FORBID_FRUIT_SEARCH_MONTAGNE)))),
-			func(): return tags.have(Tags.FORBID_FRUIT_SEARCH) and not player.tags.have(Tags.FORBID_FRUIT_LOOTED)
+			Dialog.SEARCH_FORBID_FRUIT_CONDITION(self)
 		)
 		.option_search_forbid_fruit_montain()
 		.option_search_forbid_fruit_montain_teleport()
@@ -32,14 +32,9 @@ func on_interact() -> void:
 
 func on_item_drop(item : Item) -> void:
 	if item.name == Bag.FruitDefendu :
-		gui.open_dialog(pnj_name, _TEXT_FORBID_FRUIT)
+		gui.open_dialog_next(Dialog.pnjSay(self,_TEXT_FORBID_FRUIT))
 	else :
 		super.on_item_drop(item)
-	
-func _on_search_houblon_for_champi() -> void:
-	play_anim_yes()
-	gui.open_dialog(pnj_name, _TEXT_SEARCH_HOUBLON)
-	player.tags.add(Tags.CAN_LOOT_HOUBLON)
 	
 
 const _TEXT = """Bonjour aventurier.ère, je suis le seul jardinier de l’île. Ne marche pas dans mes cultures. Si vous abîmez mes cultures, nous n’aurons plus de houblon pour que Eve puisse en faire de la bonne bière !

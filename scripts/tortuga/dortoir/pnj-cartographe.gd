@@ -1,6 +1,21 @@
 extends "res://scripts/pnj.gd"
 
 func on_interact() -> void:
+	gui.open_dialog_next(Dialog.pnjSay(self, _TEXT)
+		.option_search_forbid_fruit()
+		.option_dialog(Dialog.SEARCH_FORBID_FRUIT_MOUNTAIN[0],
+			Dialog.playerSay(player, Dialog.SEARCH_FORBID_FRUIT_MOUNTAIN[1])
+				.next(Dialog.pnjSay(self, _TEXT_TELEPORTEUR)
+					.on_close(func(): if not bag.contain(Bag.CrystalTeleportationOasis) : player.tags.add(Tags.FORBID_FRUIT_SEARCH_TELEPORT))),
+			Dialog.SEARCH_FORBID_FRUIT_MOUNTAIN_CONDITION(self)
+		)
+		.option_dialog(Dialog.SEARCH_TELEPORT_CRYSTAL[0],
+			Dialog.playerSay(player, Dialog.SEARCH_TELEPORT_CRYSTAL[1])
+				.next(Dialog.pnjSay(self, _TEXT_PIERRE_TELEPORTEUR)),
+			Dialog.SEARCH_TELEPORT_CRYSTAL_CONDITION(self)
+		)
+	)
+	
 	gui.open_dialog(pnj_name, _TEXT).with_options([
 		Dialogs.default_search_forbid_fruit_option(self),
 		PnjDialogOption.new(
@@ -48,7 +63,6 @@ const _TEXT = """Bonjour aventurier.ère, je suis le cartographe officiel du cap
 Pas un seul endroit de cette île ne m'est inconnu. Les cartes n’ont aucun secret pour moi."""
 
 const _TEXT_TELEPORTEUR = """Tu veux atteindre le sommet de la plus haute montagne de l’île ? Aucun alpinisme ne le pourrait. Quand j’ai exploré l'île pour en faire une carte complète, j’ai trouvé une pierre étrange dans la forêt au nord.
-
 En déchiffrant les glyphes gravés dessus, j’ai compris qu’il s’agissait d’un téléporteur qui semble mener au sommet de la montagne. Mais celui-ci a besoin d'un cristal pour être activé, il serait au fond de la baie, les gardes de la capitainerie l'ont fouillé de fond en comble pour moi mais ils n'ont rien trouvé."""
 
 const _TEXT_PIERRE_TELEPORTEUR = """Moi aussi j'aimerai bien le trouver. 
