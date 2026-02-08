@@ -6,54 +6,55 @@ func on_interact() -> void:
 	var text = _TEXT
 	if tags.have(Tags.KINDLE_RETURN_GUSTAF) :
 		text = _TEXT_AFTER_KINDLE_RETURN
-	gui.open_dialog(pnj_name, text).with_options([
-		Dialogs.default_search_forbid_fruit_option(self), 
-		Dialogs.default_search_forbid_fruit_montain_option(self),
-		Dialogs.default_search_forbid_fruit_teleport_option(self),
-		Dialogs.default_hung_connut_search_charpentier(self),
-		# TODO a partir de la quete 3 ajouter une opotion de dialog "kindle" ? qui debloquerai la recherche de Kindle sans rechercher le le bois
-		PnjDialogOption.new(
-			func (): return tags.have(Tags.HUNG_CONNUT_SEARCH_WOOD) and not bag.contain(Bag.BoisDeQualite),
-			Dialogs.question_hung_connut_search_wood,
-			_on_seach_wood
-		),
-		PnjDialogOption.new(
-			func (): return kindle.follow && global_position.distance_to(kindle.global_position) < 10,
-			"""Tiens c'est pas Kindle ?""",
-			_on_return_kindle
-		),
-		PnjDialogOption.new(
-			func(): return tags.have(Tags.SEARCH_WIND) and not tags.have(Tags.WIND_BLOWING),
-			Dialogs.question_missing_wind,
-			func(): gui.open_dialog(pnj_name, _TEXT_SEARCH_WIND)
+	gui.open_dialog_next(Dialog.pnjSay(self, text)
+		.option_search_forbid_fruit()
+		.option_search_forbid_fruit_montain()
+		.option_search_forbid_fruit_montain_teleport()
+		.option_hung_connut_search_charpentier()
+		.option_action(Dialog.SEARCH_WOOD[0],
+			_on_seach_wood,
+			Dialog.SEARCH_WOOD_CONDITION(self)
 		)
-	])
+		.option_dialog("Kindle ?", 
+			Dialog.playerSay(player, "Je crois que je te ramenne ton Kindle.")
+				.next(Dialog.pnjSay(self,_TEXT_RETURN_KINDLE)
+					.on_close(_on_return_kindle)),
+			func (): return kindle.follow && global_position.distance_to(kindle.global_position) < 10
+		)
+	)
 	
 func on_item_drop(_item : Item) -> void:
 	if _item.name == Bag.Houblon :
-		gui.open_dialog(pnj_name, _TEST_SHOW_HOUBLON)
+		gui.open_dialog_next(Dialog.pnjSay(self, _TEST_SHOW_HOUBLON))
 	else :
 		super.on_item_drop(_item)
 
 func _on_seach_wood() -> void:
 	if tags.have(Tags.KINDLE_RETURN_GUSTAF) :
-		gui.open_dialog(pnj_name, _TEXT_SEARCH_WOOD_AFTER_KINDLE)
-		bag.loot(Bag.BoisDeQualite)
-		tags.remove(Tags.HUNG_CONNUT_SEARCH_WOOD)
-		play_anim_interact()
+		gui.open_dialog_next(Dialog.playerSay(player, Dialog.SEARCH_WOOD[1])
+			.next(Dialog.pnjSay(self, _TEXT_SEARCH_WOOD_AFTER_KINDLE)
+				.on_close(_on_wood_receive)
+			)
+		)
 	else :
-		gui.open_dialog(pnj_name, _TEXT_SEARCH_WOOD)
-		tags.add(Tags.HUNG_CONNUT_SEARCH_HOUBLON)
+		gui.open_dialog_next(Dialog.playerSay(player, Dialog.SEARCH_WOOD[1])
+			.next(Dialog.pnjSay(self,_TEXT_SEARCH_WOOD)
+				.on_close(func(): tags.add(Tags.HUNG_CONNUT_SEARCH_HOUBLON))
+			)
+		)
 
 func _on_return_kindle() -> void: 
-	gui.open_dialog(pnj_name, _TEXT_RETURN_KINDLE)
 	tags.add(Tags.KINDLE_RETURN_GUSTAF)
 	tags.remove(Tags.HUNG_CONNUT_SEARCH_HOUBLON)
 	bag.unloot(Bag.Houblon)
 
+func _on_wood_receive() -> void:
+	bag.loot(Bag.BoisDeQualite)
+	tags.remove(Tags.HUNG_CONNUT_SEARCH_WOOD)
+	play_anim_interact()
+	
 	
 const _TEXT = """Bonjour, je m'appelle Goustaf ya.
-
 Je peux te trouver n'importe quoi qu'on ne trouve pas naturellement sur l'île.
 
 T'aurais pas vu Kindle ? Comment ça ? Tu connais pas Kindle ? Kindle ben c'est mon cheval pardi !"""

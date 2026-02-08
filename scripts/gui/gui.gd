@@ -37,10 +37,6 @@ func open_dialog(title: String, text: String, _size: Vector2 = Vector2(400,400))
 	_dialog.open_dialog(title, text, _size)
 	return _dialog
 
-#func open_dialog_next(text: String, pnj:PNJ = null)-> DialogNext:
-#	_dialog_next.open(text, pnj)
-#	return _dialog_next
-
 func open_dialog_next(dialog : Dialog)-> DialogNext: 
 	_dialog_next.open(dialog)
 	return _dialog_next

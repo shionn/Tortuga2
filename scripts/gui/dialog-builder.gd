@@ -70,12 +70,10 @@ func option_hung_connut_search_charpentier() -> Dialog :
 		func (): return pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_ESCALTOR) and pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_CHARPENTIER)
 	)
 
-func option_hung_connut_search_wood() -> Dialog : 
-	return option_dialog("Du bois ?", 
-		playerSay(pnj.player, "J'ai besoin de bois. Sais-tu ou en trouver ?").next(
-			pnjSay(pnj, _ANSWER_HUNG_CONNUT_SEARCH_WOOD)),
-		func (): return pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_WOOD) and not pnj.bag.contain(Bag.BoisDeQualite)
-	)
+const SEARCH_WOOD : Array[String] = ["Du bois ?", "J'ai besoin de bois. Sais-tu ou en trouver ?", _ANSWER_HUNG_CONNUT_SEARCH_WOOD]
+static func SEARCH_WOOD_CONDITION(_pnj:PNJ) : return func(): return _pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_WOOD) and not _pnj.bag.contain(Bag.BoisDeQualite)
+
+func option_hung_connut_search_wood() -> Dialog : return _option_default(SEARCH_WOOD_CONDITION(pnj), SEARCH_WOOD)
 
 const SEARCH_HOUBLON : Array[String] = ["Du houblon ?", "J'ai besoin de houblon. Sais-tu ou en trouver ?", """Du houblon ? Ce qu’on utilise pour faire de la bière. 
 C’est malin maintenant j’ai envie d’une bière, la bière rousse de Eve est la meilleure."""]
