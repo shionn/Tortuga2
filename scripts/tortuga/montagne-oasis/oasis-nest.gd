@@ -4,11 +4,23 @@ extends "res://scripts/interactable.gd"
 
 func on_interact() -> void:
 	if bag.contain(Bag.ListInvocationVent):
-		bag.loot(Bag.Plume)
+		gui.open_dialog_next(Dialog.playerSay(player, _TEXT_2)
+			.option_action("Oui", func():bag.loot(Bag.Plume))
+			.option_action("Non", func(): pass)
+			.no_close()
+		)
 	else :
+		gui.open_dialog_next(Dialog.playerSay(player, _TEXT_1))
 		player.play_anim_no()
-		gui.open_alert("non", "Au vu de la taille du nid, je ne m’amuserai pas à y toucher sans une bonne raison.")
 
 func on_item_change() -> void:	
 	visible = not bag.contain(Bag.Plume)
 	_next_without_feather.visible = not visible
+
+const _TEXT_1 = """C'est une très jolie plume.
+
+Au vu de la taille du nid, je ne m’amuserai pas à y toucher sans une bonne raison."""
+
+const _TEXT_2 = """C'est une très jolie plume.
+
+J’ai besoin d’une plume d’oiseau, est-ce que je me risque à la prendre ?"""

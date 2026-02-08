@@ -38,5 +38,9 @@ func _on_teleport_escalator_pressed() -> void:
 	visible = false
 
 func _on_teleport_twin_island_pressed() -> void:
-	player.teleport(Vector3(250, 2, -1720), 0) # escalator
+	player.teleport(Vector3(250, 2, -1720), 0) 
+	visible = false
+
+func _on_teleport_teleport_stone_pressed() -> void:
+	player.teleport(Vector3(75, 3, -186), deg_to_rad(8)) 
 	visible = false

@@ -6,7 +6,8 @@ func on_interact() -> void:
 		.option_dialog(Dialog.SEARCH_FORBID_FRUIT_MOUNTAIN[0],
 			Dialog.playerSay(player, Dialog.SEARCH_FORBID_FRUIT_MOUNTAIN[1])
 				.next(Dialog.pnjSay(self, _TEXT_TELEPORTEUR)
-					.on_close(func(): if not bag.contain(Bag.CrystalTeleportationOasis) : player.tags.add(Tags.FORBID_FRUIT_SEARCH_TELEPORT))),
+					.on_close(func(): if not bag.contain(Bag.CrystalTeleportationOasis) : 
+						player.tags.add(Tags.FORBID_FRUIT_SEARCH_TELEPORT))),
 			Dialog.SEARCH_FORBID_FRUIT_MOUNTAIN_CONDITION(self)
 		)
 		.option_dialog(Dialog.SEARCH_TELEPORT_CRYSTAL[0],
@@ -14,49 +15,35 @@ func on_interact() -> void:
 				.next(Dialog.pnjSay(self, _TEXT_PIERRE_TELEPORTEUR)),
 			Dialog.SEARCH_TELEPORT_CRYSTAL_CONDITION(self)
 		)
+		.option_hung_connut_search_charpentier()
+		.option_hung_connut_search_wood()
+		.option_hung_connut_search_houblon()
+		.option_search_wind()
 	)
-	
-	gui.open_dialog(pnj_name, _TEXT).with_options([
-		Dialogs.default_search_forbid_fruit_option(self),
-		PnjDialogOption.new(
-			func (): return player.tags.have(Tags.FORBID_FRUIT_SEARCH_MONTAGNE),
-			Dialogs.question_search_forbid_fruit_montagn,
-			on_search_montain
-		),
-		PnjDialogOption.new(
-			func (): return player.tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT),
-			Dialogs.question_search_forbid_fruit_teleport,
-			func (): gui.open_dialog(pnj_name, _TEXT_PIERRE_TELEPORTEUR)
-		),
-		Dialogs.default_search_forbid_fruit_teleport_option(self),
-		Dialogs.default_hung_connut_search_charpentier(self),
-		Dialogs.default_hung_connut_search_wood(self),
-		Dialogs.default_hung_connut_search_houblon(self),
-		Dialogs.default_search_wind(self)
-	])
-
-func on_search_montain() -> void:
-	gui.open_dialog(pnj_name, _TEXT_TELEPORTEUR)
-	if not bag.contain(Bag.CrystalTeleportationOasis) :
-		player.tags.add(Tags.FORBID_FRUIT_SEARCH_TELEPORT)
 
 func on_item_drop(item : Item) -> void:
 	if item.name == Bag.PageHungConnutFrag1 or item.name == Bag.PageHungConnutFrag2 or item.name == Bag.PageHungConnutFrag3 :
 		if bag.contain(Bag.PageHungConnutFrag1) and bag.contain(Bag.PageHungConnutFrag2) and bag.contain(Bag.PageHungConnutFrag3) :
-			play_anim_interact()
-			gui.open_dialog(pnj_name, TEXT_FRAGMENT_HUNG_COMPLET)
-			bag.unloot(Bag.PageHungConnutFrag1)
-			bag.unloot(Bag.PageHungConnutFrag2)
-			bag.unloot(Bag.PageHungConnutFrag3)
-			bag.loot(Bag.CarteHungConnut)
+			gui.open_dialog_next(Dialog.playerSay(player, _TEXT_SHOW_PAGES)
+				.next(Dialog.pnjSay(self, TEXT_FRAGMENT_HUNG_COMPLET).on_close(_on_complete_map))
+			)
 		else :
-			play_anim_no()
-			gui.open_dialog(pnj_name, _TEXT_MISSING_PAGE)
+			gui.open_dialog_next(Dialog.playerSay(player, _TEXT_SHOW_PAGES)
+				.next(Dialog.pnjSay(self,_TEXT_MISSING_PAGE).on_open(func():play_anim_no()))
+			)
 	elif item.name == Bag.CrystalTeleportationOasis :
-		gui.open_dialog(pnj_name, _TEXT_CRISTAL_TP)
+		gui.open_dialog_next(Dialog.playerSay(player, "J’ai trouvé cela, c’est le cristal de téléportation ?")
+			.next(Dialog.pnjSay(self,_TEXT_CRISTAL_TP))
+		)
 	else :
 		super.on_item_drop(item)
 
+func _on_complete_map() -> void :
+	play_anim_interact()
+	bag.unloot(Bag.PageHungConnutFrag1)
+	bag.unloot(Bag.PageHungConnutFrag2)
+	bag.unloot(Bag.PageHungConnutFrag3)
+	bag.loot(Bag.CarteHungConnut)
 
 const _TEXT = """Bonjour aventurier.ère, je suis le cartographe officiel du capitaine Whisp.
 
@@ -69,6 +56,8 @@ const _TEXT_PIERRE_TELEPORTEUR = """Moi aussi j'aimerai bien le trouver.
 
 Comme ça je pourrai enfin activer le téléporteur et accéder au sommet de la montagne."""
 
+const _TEXT_SHOW_PAGES =  """J'ai trouvé ces fragments de carte, est-ce que tu peux reconstituer la carte complète ?"""
+
 const _TEXT_MISSING_PAGE = """Que veux tu que je fasse de cela?
 Il manque des pages pour que je puisse en faire une carte complète.
 
@@ -80,6 +69,6 @@ Regarde suffit de superposer les fragments et de regarder à travers à la lumi�
 
 Tiens voilà une carte complète."""
 
-const _TEXT_CRISTAL_TP = """Ho bravo tu as réussi à trouvé ce cristal. Les gardes ne sont vraiment pas doués. 
+const _TEXT_CRISTAL_TP = """Ho bravo tu as réussi à trouvé ce cristal. C’est bien celui qu’on cherchait. Les gardes ne sont vraiment pas doués. 
 
 Qu’attend tu pour aller l’essayer sur la pierre dans la forêt au nord ?"""
