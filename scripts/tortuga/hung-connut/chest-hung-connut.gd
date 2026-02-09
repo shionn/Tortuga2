@@ -14,7 +14,7 @@ func _on_answer(answer:String) -> void:
 		tags.add(Tags.HUNG_CONNUT_TEASUR_OPENED)
 		bag.loot(Bag.TresorHungConnut)
 	else :
-		gui.open_alert("Mauvais code", "Le coffre ne s'ouvre pas.")
+		gui.open_dialog_next(Dialog.playerSay(player, "Le coffre ne s'ouvre pas."))
 		
 func on_tag_change() -> void:
 	if tags.have(Tags.HUNG_CONNUT_TEASUR_OPENED) : open()

@@ -17,18 +17,6 @@ func on_interact() -> void:
 				.next(Dialog.pnjSay(self, _TEXT_PICKAXE).on_close(func():tags.add(Tags.ALLOW_PICKAXE))),
 			func() : return bag.contain(Bag.ListInvocationVent) and not bag.contain(Bag.Pioche))
 	)
-	#gui.open_dialog(name,_TEXT).with_options([
-		#PnjDialogOption.new(
-			#func() : return true,
-			#"Je voudrais une hache",
-			#func() : gui.open_dialog(name, "Ne touche pas à MES haches.")
-		#),
-		#PnjDialogOption.new(
-			#func() : return bag.contain(Bag.ListInvocationVent) and not bag.contain(Bag.Pioche),
-			#"Est-ce que tu as une pioche ?",
-			#_on_pickaxe_search
-		#)
-	#])
 
 const _TEXT = """Bonjour. 
 Mon nom est imprononçable pour vous les humains. Vos semblables m'appellent Orco, je suis l'armurier du village. 

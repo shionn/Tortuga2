@@ -9,4 +9,4 @@ func on_interact() -> void:
 		self.visible = false
 		bag.loot(Bag.Melon)
 	else :
-		gui.open_alert("Melon", "Ces melons semblent délicieux")
+		gui.open_dialog_next(Dialog.playerSay(player, "Ces melons semblent délicieux"))

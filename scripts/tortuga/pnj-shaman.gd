@@ -22,10 +22,6 @@ func on_interact() -> void:
 			func() : return bag.contain(Bag.ListInvocationVent))
 	)
 
-func _on_search_wind() :
-	gui.open_dialog(pnj_name, _TEXT_SEARCH_WIND_1)
-	bag.loot(Bag.ListInvocationVent)
-
 func on_item_drop(_item : Item) -> void:
 	if _item.name == Bag.ListInvocationVent:
 		gui.open_dialog_next(Dialog.pnjSay(self, "C’est ma propre liste que veux tu que j’en fasse ? Rapporte moi donc plutôt les ingrédients."))

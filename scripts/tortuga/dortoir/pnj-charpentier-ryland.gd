@@ -44,14 +44,9 @@ func _unlootWood() -> void:
 #var quest_3_enable = true
 
 func _on_hung_connut_search_charpentier() -> void:
-#	if quest_3_enable :
-#		gui.open_dialog(pnj_name, _TEXT_HUNG_CONNUT_SEARCH_CHARPENTIER_2)
-		player.tags.add(Tags.HUNG_CONNUT_SEARCH_WOOD)
-		player.tags.remove(Tags.HUNG_CONNUT_SEARCH_CHARPENTIER)
-		player.tags.remove(Tags.HUNG_CONNUT_SEARCH_ESCALTOR)
-#	else :
-#		gui.open_dialog(pnj_name, _TEXT_HUNG_CONNUT_SEARCH_CHARPENTIER)
-	#gui.append_to_console("Félicitation, vous avez achevé la quête. Penser à sauvegarder.")
+	player.tags.add(Tags.HUNG_CONNUT_SEARCH_WOOD)
+	player.tags.remove(Tags.HUNG_CONNUT_SEARCH_CHARPENTIER)
+	player.tags.remove(Tags.HUNG_CONNUT_SEARCH_ESCALTOR)
 
 
 const _TEXT = """Bonjour, je m’appelle Ryland. 
