@@ -5,9 +5,7 @@ extends "res://scripts/interactable.gd"
 func on_interact() -> void:
 	if bag.contain(Bag.ListInvocationVent):
 		gui.open_dialog_next(Dialog.playerSay(player, _TEXT_2)
-			.option_action("Oui", func():bag.loot(Bag.Plume))
-			.option_action("Non", func(): pass)
-			.no_close()
+			.on_yes_no(func(): player.play_anim_no(), func():bag.loot(Bag.Plume))
 		)
 	else :
 		gui.open_dialog_next(Dialog.playerSay(player, _TEXT_1))

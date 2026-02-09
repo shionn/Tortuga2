@@ -44,6 +44,9 @@ func on_close(_action: Callable) -> Dialog :
 	on_close_action = _action
 	return self
 
+func on_yes_no(on_no: Callable, on_yes: Callable) -> Dialog:
+	return option_action("Non", on_no).option_action("Oui", on_yes).no_close()
+
 func no_close() -> Dialog :
 	close = false
 	return self

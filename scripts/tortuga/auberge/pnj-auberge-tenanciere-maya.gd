@@ -82,9 +82,7 @@ func _on_ask_cocktail_other() -> void:
 
 func _on_ask_cocktail_glacon() -> void:
 	gui.open_dialog_next(Dialog.pnjSay(self, "Est-ce que je met des glaçon ?")
-		.option_action("Non", _on_ask_cocktail_no_glacon)
-		.option_action("Oui", _on_ask_cocktail_yes_glacon)
-		.no_close()
+		.on_yes_no(_on_ask_cocktail_no_glacon, _on_ask_cocktail_yes_glacon)
 	)
 
 # Rhum+ Gin+ Vodka+ Téquila+
@@ -93,6 +91,7 @@ func _on_ask_cocktail_glacon() -> void:
 # Citron+ Menthe+ Orange Sirop+
 
 func _on_ask_cocktail_no_glacon() -> void : 
+	player.play_anim_no()
 	if _isCocktail(["Rhum", "Seltz", "Sirop", "Citron", "Menthe"]) :
 		_serv_cocktail("un mojito sans glaçon!", Bag.MojitoSansGlace) 
 	elif  _isCocktail(["Rhum", "Coco", "Ananas"]) : 
@@ -116,6 +115,7 @@ func _on_ask_cocktail_no_glacon() -> void :
 		play_anim_no()
 
 func _on_ask_cocktail_yes_glacon() -> void : 
+	player.play_anim_yes()
 	if _isCocktail(["Rhum", "Seltz", "Sirop", "Citron", "Menthe"]) :
 		_serv_cocktail("un mojito!", Bag.Mojito) 
 	elif  _isCocktail(["Rhum", "JusCoco", "JusAnanas"]) : 
