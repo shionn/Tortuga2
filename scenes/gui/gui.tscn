@@ -751,14 +751,103 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_yw5qc")
 text = "Sac"
 horizontal_alignment = 1
 
-[node name="GridContainer" type="GridContainer" parent="Bag/Panel/MarginContainer/VBoxContainer"]
+[node name="Container" type="HFlowContainer" parent="Bag/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-columns = 4
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
 
 [node name="CloseButton" type="Button" parent="Bag/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Fermer"
+
+[node name="BagNext" type="GridContainer" parent="."]
+visible = false
+z_index = 10
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -200.0
+offset_right = -20.0
+offset_bottom = 200.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="NW" type="TextureRect" parent="BagNext"]
+layout_mode = 2
+texture = ExtResource("5_8rxp0")
+
+[node name="N" type="TextureRect" parent="BagNext"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("6_bbm65")
+stretch_mode = 1
+
+[node name="NE" type="TextureRect" parent="BagNext"]
+layout_mode = 2
+texture = ExtResource("7_5llql")
+
+[node name="W" type="TextureRect" parent="BagNext"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("8_lnk63")
+stretch_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="BagNext"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8rxp0")
+
+[node name="MarginContainer" type="MarginContainer" parent="BagNext/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BagNext/PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BagNext/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+
+[node name="CloseButton" type="Button" parent="BagNext/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Fermer"
+text = "Fermer"
+
+[node name="E" type="TextureRect" parent="BagNext"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("9_dwcmb")
+stretch_mode = 1
+
+[node name="SW" type="TextureRect" parent="BagNext"]
+layout_mode = 2
+texture = ExtResource("10_tn6xl")
+
+[node name="S" type="TextureRect" parent="BagNext"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("11_la4rn")
+stretch_mode = 1
+
+[node name="SE" type="TextureRect" parent="BagNext"]
+layout_mode = 2
+texture = ExtResource("12_u833a")
 
 [node name="Console" type="MarginContainer" parent="."]
 z_index = 1
@@ -1374,6 +1463,7 @@ text = "Sauvegarder"
 [connection signal="pressed" from="Menu/MarginContainer/HBoxContainer/HelpButton" to="Help" method="_on_help_button_pressed"]
 [connection signal="pressed" from="Menu/MarginContainer/HBoxContainer/ExitButton" to="Menu" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="Bag/Panel/MarginContainer/VBoxContainer/CloseButton" to="Bag" method="_on_close_button_pressed"]
+[connection signal="pressed" from="BagNext/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="BagNext" method="_on_close_button_pressed"]
 [connection signal="pressed" from="Help/Panel/MarginContainer/VBoxContainer/Button" to="Help" method="_on_help_button_pressed"]
 [connection signal="pressed" from="Acceuil/Panel/MarginContainer/VBoxContainer/Button" to="Acceuil" method="_on_button_pressed"]
 [connection signal="animation_finished" from="Transition/AnimationPlayer" to="Transition" method="_on_animation_finished"]

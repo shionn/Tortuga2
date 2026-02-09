@@ -32,7 +32,7 @@ const TresorHungConnut = "TresorHungConnut"
 const TresorHungConnutNet = "TresorHungConnutNet"
 const SelDeMontagne = "SelDeMontagne"
 
-@onready var _grid = $Panel/MarginContainer/VBoxContainer/GridContainer as GridContainer
+@onready var _grid = $Panel/MarginContainer/VBoxContainer/Container as Container
 @onready var _items = $"../Items" as Control
 @onready var _gui = $".." as Gui
 
@@ -87,4 +87,3 @@ func load_game() -> void :
 			_items.remove_child(item)
 			_grid.add_child(item)
 	on_item_change.emit()
-#	_score.compute()
