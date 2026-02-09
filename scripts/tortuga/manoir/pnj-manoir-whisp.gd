@@ -18,6 +18,11 @@ func on_interact() -> void:
 					.next(Dialog.pnjSay(self, TEXT_SEARCH_PASS_2)
 						.on_close(func(): tags.add(Tags.SEARCH_CAPTAIN_BOTTLE)))),
 			func (): return tags.have(Tags.SEARCH_PASS) and not bag.contain(Bag.PasseBarque) and not bag.contain(Bag.PasseBarqueTanpon))
+		.option_dialog("Un os ?", 
+			Dialog.playerSay(player,"Tu peux me donner un de tes os ?")
+				.next(Dialog.pnjSay(self,_TEXT_ASK_BONE)),
+			func(): return bag.contain(Bag.ListInvocationVent) and not bag.contain(Bag.Ossement)
+		)
 	)
 	$Laugh.play()
 
@@ -33,15 +38,21 @@ func on_item_drop(item : Item) -> void:
 	elif item.name == Bag.PageHungConnutFrag1 or item.name == Bag.PageHungConnutFrag2 or item.name == Bag.PageHungConnutFrag3 :
 		gui.open_dialog_next(Dialog.pnjSay(self, TEXT_FRAGMENT_HUNG_CONNUT))
 	elif item.name == Bag.BouteilleCapitain:
-		gui.open_dialog(pnj_name, TEXT_ON_BOTTLE)
-		bag.unloot(Bag.BouteilleCapitain)
-		bag.loot(Bag.PasseBarque)
-		tags.remove(Tags.SEARCH_CAPTAIN_BOTTLE)
-		tags.remove(Tags.SEARCH_PASS)
+		gui.open_dialog_next(
+			Dialog.playerSay(player, PLAYER_SHOW_BOTTEL)
+				.next(Dialog.pnjSay(self, TEXT_ON_BOTTLE)
+					.on_close(_unlootBttle)
+		))
 	elif item.name == Bag.ListInvocationVent:
-		gui.open_dialog(pnj_name, _TEXT_ASK_BONE)
+		gui.open_dialog_next(Dialog.pnjSay(self,_TEXT_ASK_BONE))
 	else :
 		super.on_item_drop(item)
+
+func _unlootBttle() -> void:
+	bag.unloot(Bag.BouteilleCapitain)
+	bag.loot(Bag.PasseBarque)
+	tags.remove(Tags.SEARCH_CAPTAIN_BOTTLE)
+	tags.remove(Tags.SEARCH_PASS)
 
 const TEXT_INTRO = """Salut. Tortuga est méconnaissable ce matin. 
 
@@ -80,12 +91,14 @@ const TEXT_SEARCH_PASS_2 = """Bon hum, je l’ai encore égaré, la dernière fo
 
 Par le Kraken, je commence à me dessécher ! Allez houste je dois chercher ma flasque sans elle je sais plus où j'en suis et j’ai soif !"""
 
+const PLAYER_SHOW_BOTTEL = """La voici Capitaine, elle était sur l’étagère!"""
+
 const TEXT_ON_BOTTLE = """Ici ? Ah mais oui la voilà! ma flasque enfin retrouvée ! Bon vous avez de la chance en fouillant dans mes frasques j’ai retrouvé le Pass ! Mais pour qu’il soit valide, faut le faire tamponner par Rurik. 
 
 Voilà allez houste, j’ai besoin de repos… eeuuuuh non de calme je veux dire, de calme pour réfléchir voilà !"""
 
-const _TEXT_ASK_BONE = """Quoi tu veux que je te donne un de mes os ? Non c’est impossible, j’en ai trop besoin, après je serais éparpillé et j’auraiiiiii... Hmmm, plus de mal à me rappeler des choses voilà!! Tu veux pas demander à quelqu’un d’autre ? Y a d'autres pirates qui ont subi la même malédiction que moi. Pas aussi sexy, je vous l’acccorde, mais il peuvent servir à quelque chose pour une fois!  
+const _TEXT_ASK_BONE = """Quoi tu veux que je te donne un de mes os ? Non c’est impossible, j’en ai trop besoin, après je serais éparpillé et j’auraiiiiii... Hmmm, plus de mal à me rappeler des choses voilà ! Tu veux pas demander à quelqu’un d’autre ? Y a d'autres pirates qui ont subi la même malédiction que moi. Pas aussi sexy, je vous l’acccorde, mais il peuvent servir à quelque chose pour une fois !  
 
-La plupart des pirates meurent en mer aussi y a très peu de cadavres sur l'île à moins que la mer ne les charrie. Allez fouiller les plages Houste ou alors il faudrait profaner une tombe, mais seul un fou ferait ça! Ça pue là dedans!"""
+La plupart des pirates meurent en mer aussi y a très peu de cadavres sur l'île à moins que la mer ne les charrie. Allez fouiller les plages Houste ou alors il faudrait profaner une tombe, mais seul un fou ferait ça ! Ça pue là dedans !"""
 
 const TEXT_SHOW_PARCH_HUNG_CONNUT = """Apparemment il te faudrait explorer les îles voisines pour aller plus loin. Va voir Rurik si tu veux quitter l'île."""

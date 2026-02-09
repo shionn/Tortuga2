@@ -15,7 +15,7 @@ func on_interact() -> void:
 		.option_dialog("Un os ?", 
 			Dialog.playerSay(player,"Tu peux me donner un de tes os ?")
 				.next(Dialog.pnjSay(self, _TEXT_4).on_open(play_anim_no)),
-			func(): return bag.contain(Bag.ListInvocationVent)
+			func(): return bag.contain(Bag.ListInvocationVent) and not bag.contain(Bag.Ossement)
 		)
 	)
 

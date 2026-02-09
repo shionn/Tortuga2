@@ -7,10 +7,23 @@ func on_interact() -> void:
 		gui.open_dialog_next(Dialog.playerSay(player, """Aller ou ?""")
 			.option_action("Retourner sur tortuga", func() : gui.doTransition(_goTortuga), func() : return pos != _TORTUGA)
 			.option_action("Île de la shaman", func() : gui.doTransition(_goShamanIsland), func() : return pos != _SHAMAN_ISLAND)
-			.option_dialog("Twin Isle", Dialog.playerSay(player, "Je ne peux pas aller aussi loin avec une simple barque.").on_open(func(): player.play_anim_no()))
-			.option_dialog("Port Moustik", Dialog.playerSay(player, "Je ne peux pas aller aussi loin avec une simple barque.").on_open(func(): player.play_anim_no()))
-			.option_dialog("Port Bourik", Dialog.playerSay(player, "Je ne peux pas aller aussi loin avec une simple barque.").on_open(func(): player.play_anim_no()))
-			.option_dialog("Port Loustik", Dialog.playerSay(player, "Je ne peux pas aller aussi loin avec une simple barque.").on_open(func(): player.play_anim_no()))
+			.option_dialog("Twin Isle", 
+				Dialog.playerSay(player, "Je ne peux pas aller aussi loin avec une simple barque.")
+					.on_open(func(): player.play_anim_no()),
+				func(): return bag.contain(Bag.ParcheminHungConnut)
+			)
+			.option_dialog("Port Moustik", 
+				Dialog.playerSay(player, "Je ne peux pas aller aussi loin avec une simple barque.")
+					.on_open(func(): player.play_anim_no()),
+				func(): return bag.contain(Bag.ParcheminHungConnut))
+			.option_dialog("Port Bourik", 
+				Dialog.playerSay(player, "Je ne peux pas aller aussi loin avec une simple barque.")
+					.on_open(func(): player.play_anim_no()),
+				func(): return bag.contain(Bag.ParcheminHungConnut))
+			.option_dialog("Port Loustik", 
+				Dialog.playerSay(player, "Je ne peux pas aller aussi loin avec une simple barque.")
+					.on_open(func(): player.play_anim_no()),
+				func(): return bag.contain(Bag.ParcheminHungConnut))
 		)
 	else :
 		gui.open_dialog_next(Dialog.playerSay(player, """Sans une autorisation de la capitainerie je ne pourrai pas quitter le port."""))

@@ -59,34 +59,29 @@ static func SEARCH_FORBID_FRUIT_MOUNTAIN_CONDITION(_pnj) : return func(): return
 const SEARCH_TELEPORT_CRYSTAL : Array[String] = ["Crystal de téléportation ?", "Je cherche un crystal de téléportation.", """Mais de quoi tu parles ?"""]
 static func SEARCH_TELEPORT_CRYSTAL_CONDITION(_pnj) : return func() : return _pnj.tags.have(Tags.FORBID_FRUIT_SEARCH_TELEPORT) and not _pnj.bag.contain(Bag.CrystalTeleportationOasis)
 
-func option_search_forbid_fruit()                  -> Dialog : return _option_default(SEARCH_FORBID_FRUIT_CONDITION(pnj),          SEARCH_FORBID_FRUIT)
-func option_search_forbid_fruit_montain()          -> Dialog : return _option_default(SEARCH_FORBID_FRUIT_MOUNTAIN_CONDITION(pnj), SEARCH_FORBID_FRUIT_MOUNTAIN)
-func option_search_forbid_fruit_montain_teleport() -> Dialog : return _option_default(SEARCH_TELEPORT_CRYSTAL_CONDITION(pnj),      SEARCH_TELEPORT_CRYSTAL)
-
-func option_hung_connut_search_charpentier() -> Dialog : 
-	return option_dialog("L'escalator détruit ?", 
-		playerSay(pnj.player, "L'escalator au nord est détruit. Sais-tu comment faire pour le réparer ?").next(
-			pnjSay(pnj, """Quoi l'escalator est détruit ? C'est une catastrophe ! Comment on va faire sans champignon ?""")),
-		func (): return pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_ESCALTOR) and pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_CHARPENTIER)
-	)
+const SEARCH_CHARPENTIER : Array[String] = ["L'escalator détruit ?","L'escalator au nord est détruit. Sais-tu comment faire pour le réparer ?", "Quoi l'escalator est détruit ? C'est une catastrophe ! Comment on va faire sans champignon ?"]
+static func SEARCH_CHARPENTIER_CONDITION(_pnj) : return func() : return _pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_ESCALTOR) and _pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_CHARPENTIER)
 
 const SEARCH_WOOD : Array[String] = ["Du bois ?", "J'ai besoin de bois. Sais-tu ou en trouver ?", _ANSWER_HUNG_CONNUT_SEARCH_WOOD]
 static func SEARCH_WOOD_CONDITION(_pnj:PNJ) : return func(): return _pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_WOOD) and not _pnj.bag.contain(Bag.BoisDeQualite)
 
-func option_hung_connut_search_wood() -> Dialog : return _option_default(SEARCH_WOOD_CONDITION(pnj), SEARCH_WOOD)
-
 const SEARCH_HOUBLON : Array[String] = ["Du houblon ?", "J'ai besoin de houblon. Sais-tu ou en trouver ?", """Du houblon ? Ce qu’on utilise pour faire de la bière. 
 C’est malin maintenant j’ai envie d’une bière, la bière rousse de Eve est la meilleure."""]
-
-func option_hung_connut_search_houblon() -> Dialog : 
-	return _option_default(func (): return pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON) and not pnj.bag.contain(Bag.Houblon), SEARCH_HOUBLON)
+static func SEARCH_HOUBLON_CONDITION(_pnj:PNJ) : return func(): return _pnj.tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON) and not _pnj.bag.contain(Bag.Houblon)
 
 const NO_WIND : Array[String] = ["Absence du vent ?", "Il n’y a plus de vent.", """Oui, cela fait plusieurs jours que ça dure. 
 Ce n’est pas la première fois que ca arrive. Je ne sais pas comment mais le Capitaine a réussi à faire revenir les vents la dernière fois que cela s'était produit."""]
 static func NO_WIND_CONDITION(_pnj:PNJ) : return func(): return _pnj.tags.have(Tags.SEARCH_WIND) and not _pnj.tags.have(Tags.WIND_BLOWING)
 
-func option_search_wind() -> Dialog :
-	return _option_default(NO_WIND_CONDITION(pnj), NO_WIND)
+func option_search_forbid_fruit()                  -> Dialog : return _option_default(SEARCH_FORBID_FRUIT_CONDITION(pnj),          SEARCH_FORBID_FRUIT)
+func option_search_forbid_fruit_montain()          -> Dialog : return _option_default(SEARCH_FORBID_FRUIT_MOUNTAIN_CONDITION(pnj), SEARCH_FORBID_FRUIT_MOUNTAIN)
+func option_search_forbid_fruit_montain_teleport() -> Dialog : return _option_default(SEARCH_TELEPORT_CRYSTAL_CONDITION(pnj),      SEARCH_TELEPORT_CRYSTAL)
+func option_hung_connut_search_charpentier()       -> Dialog : return _option_default(SEARCH_CHARPENTIER_CONDITION(pnj),           SEARCH_CHARPENTIER)
+func option_hung_connut_search_wood()              -> Dialog : return _option_default(SEARCH_WOOD_CONDITION(pnj),                  SEARCH_WOOD)
+func option_hung_connut_search_houblon()           -> Dialog : return _option_default(SEARCH_HOUBLON_CONDITION(pnj),               SEARCH_HOUBLON)
+func option_search_wind()                          -> Dialog : return _option_default(NO_WIND_CONDITION(pnj),                      NO_WIND)
+
+
 
 func _option_default(condition : Callable, data: Array[String]) -> Dialog:
 	return option_dialog(data[0], 
