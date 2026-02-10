@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dhm53cxuts0cm"
+uid="uid://du3womfy5wjli"
 path="res://.godot/imported/wall-wood-curved.glb-f9918ab67b82b3c5e1da329c0bc64204.scn"
 
 [deps]
@@ -33,10 +33,17 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
+import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:wall-wood-curved": {
+"generate/physics": true,
+"physics/shape_type": 2
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bnsfxobuyd5i6" path="res://assets/castle/towers/tower-square-mid.glb" id="2_4w0tg"]
 [ext_resource type="PackedScene" uid="uid://c4pbi2b43rmcd" path="res://assets/castle/towers/tower-square-arch.glb" id="3_t131g"]
 [ext_resource type="PackedScene" uid="uid://bo5167ya7ewx8" path="res://assets/castle/walls/wall.glb" id="5_2403x"]
-[ext_resource type="PackedScene" uid="uid://dhfs7wnthh4sx" path="res://assets/castle/walls/wall-narrow-stairs.glb" id="6_wn7ao"]
+[ext_resource type="PackedScene" uid="uid://cocswjp1pfi21" path="res://assets/castle/walls/wall-narrow-stairs.glb" id="6_wn7ao"]
 [ext_resource type="PackedScene" uid="uid://xefmsuf3vde" path="res://assets/pirate/props/cannon-mobile.glb" id="7_d3x21"]
 
 [node name="TortugaWall" type="Node3D"]

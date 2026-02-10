@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cgwwol2ja1lfe" path="res://assets/town/props/overhang.glb" id="2_6bqao"]
 [ext_resource type="PackedScene" uid="uid://bi815v5v0sl8q" path="res://assets/town/planks/planks.glb" id="2_bt1wm"]
-[ext_resource type="PackedScene" uid="uid://bv1kbqcp304cs" path="res://assets/town/fence-hedge/balcony-wall-fence-simplified.glb" id="3_ogdx2"]
+[ext_resource type="PackedScene" uid="uid://bp11et20q83xn" path="res://assets/town/fence-hedge/balcony-wall-fence-simplified.glb" id="3_ogdx2"]
 [ext_resource type="PackedScene" uid="uid://ddsthq2ii0qb3" path="res://assets/town/fence-hedge/balcony-wall-simplified.glb" id="4_mkly4"]
 [ext_resource type="PackedScene" uid="uid://d0mdhn6dked7d" path="res://assets/town/roof/roof-window.glb" id="5_vn6vr"]
 [ext_resource type="PackedScene" uid="uid://bmx33gnpvrr0r" path="res://assets/town/windmill.glb" id="6_fr4h8"]
@@ -22,7 +22,7 @@ transform = Transform3D(1.9999999, 0, 0, 0, 2, 0, 0, 0, 1.9999999, -1, 0, -1)
 transform = Transform3D(1.9999998, 0, 0, 0, 2, 0, 0, 0, 1.9999998, 1, 0, 1)
 
 [node name="planks3" parent="." instance=ExtResource("2_bt1wm")]
-transform = Transform3D(-8.742276e-08, 0, 1.9999996, 0, 2, 0, -1.9999996, 0, -8.742276e-08, 1, 0, -1)
+transform = Transform3D(-8.7422755e-08, 0, 1.9999995, 0, 2, 0, -1.9999995, 0, -8.7422755e-08, 0.99999994, 0, -0.99999994)
 
 [node name="planks4" parent="." instance=ExtResource("2_bt1wm")]
 transform = Transform3D(-8.7422755e-08, 0, 1.9999995, 0, 2, 0, -1.9999995, 0, -8.7422755e-08, -1, 0, 1)

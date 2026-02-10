@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://ukreens1wy4a"]
 
-[ext_resource type="PackedScene" uid="uid://dhfs7wnthh4sx" path="res://assets/castle/walls/wall-narrow-stairs.glb" id="1_caj3p"]
+[ext_resource type="PackedScene" uid="uid://cocswjp1pfi21" path="res://assets/castle/walls/wall-narrow-stairs.glb" id="1_caj3p"]
 [ext_resource type="PackedScene" uid="uid://bo5167ya7ewx8" path="res://assets/castle/walls/wall.glb" id="2_x2at4"]
 [ext_resource type="PackedScene" uid="uid://c4pbi2b43rmcd" path="res://assets/castle/towers/tower-square-arch.glb" id="3_0av5a"]
 [ext_resource type="PackedScene" uid="uid://bb82mf151s51" path="res://assets/castle/towers/tower-square.glb" id="4_0kvnx"]
