@@ -35,9 +35,9 @@ On a sillonné les mers ensemble, affronté des tempêtes et des monstres... Mai
 Certaines blessures te rappellent quand il est temps de rester à quai." 
 
 const _TEXT_2_1 = "Ah... Whisp. Je l’ai rencontré dans une taverne qui sentait le rhum et la poudre. Il parlait trop, rêvait grand, et oubliait déjà où il avait posé son sabre. Mais il avait ce feu dans les yeux, alors je l’ai suivi.
-On a vécu des aventures que peu de pirates peuvent raconter sans trembler. Des trésors maudits, des mers déchaînées, des créatures qui n’auraient jamais dû exister.
-Et puis un jour, lors d’une de ces aventures... j’ai perdu ma main."
-const _TEXT_2_2 = "Whisp, lui, voyait encore l’aventure. Moi, je voyais mes os fendus, mes blessures mal refermées, et ce vide là où ma main se trouvait autrefois.
+On a vécu des aventures que peu de pirates peuvent raconter sans trembler. Des trésors maudits, des mers déchaînées, des créatures qui n’auraient jamais dû exister."
+
+const _TEXT_2_2 = "J'ai tellement parcouru la mer que je pourrai guider un navire dans ces îles. Et puis un jour, lors d’une de ces aventures... j’ai perdu ma main. Whisp, lui, voyait encore l’aventure. Moi, je voyais mes os fendus, mes blessures mal refermées, et ce vide là où ma main se trouvait autrefois.
 Alors j’ai compris : [i]partir avec lui, c’était signer pour une mort certaine[/i]. Même pour un squelette, y a des limites. Depuis ce jour, je ne l’accompagne plus."
 
 const _TEXT_3_1 = "Très bien... Mais écoute bien.

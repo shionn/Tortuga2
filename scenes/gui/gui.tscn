@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=62 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://scripts/gui/gui.gd" id="1_0fbet"]
 [ext_resource type="Script" uid="uid://bc3yfthowjjmn" path="res://scripts/gui/score.gd" id="2_eaefa"]
@@ -52,6 +52,7 @@
 [ext_resource type="Texture2D" uid="uid://batw2o6rh07k" path="res://assets/gui/papers/paper-12.png" id="34_uyd5p"]
 [ext_resource type="Texture2D" uid="uid://dkof32a3vx2r" path="res://assets/gui/papers/paper-10.png" id="35_x3l1j"]
 [ext_resource type="Texture2D" uid="uid://8l7yl3g0syqo" path="res://assets/gui/resources-pack-1/Coin-h-48.png" id="37_u23jf"]
+[ext_resource type="Texture2D" uid="uid://pee0tx7jw7my" path="res://assets/gui/skullhand.png" id="41_8rxp0"]
 [ext_resource type="Script" uid="uid://1gaom75emvkt" path="res://scripts/gui/cheat.gd" id="43_x3l1j"]
 [ext_resource type="Texture2D" uid="uid://cgedwc15v581d" path="res://assets/gui/papers/paper-09.png" id="45_bbm65"]
 
@@ -1073,6 +1074,17 @@ script = ExtResource("11_s1h2m")
 description = "C'est un mojito."
 
 [node name="Ossement" type="TextureButton" parent="Items"]
+layout_mode = 0
+offset_left = -462.0
+offset_top = 88.0
+offset_right = -414.0
+offset_bottom = 136.0
+tooltip_text = "Ossement"
+texture_normal = ExtResource("41_8rxp0")
+script = ExtResource("11_s1h2m")
+description = "Un ossement de pirate"
+
+[node name="OssementBarbeDrue" type="TextureButton" parent="Items"]
 layout_mode = 0
 offset_left = -462.0
 offset_top = 88.0

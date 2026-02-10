@@ -17,7 +17,7 @@ func on_interact() -> void:
 func _open_tomb() -> void :
 	bag.unloot(Bag.TresorBarbeDrue)
 	bag.unloot(Bag.TresorBarbeDrueNet)
-	bag.loot(Bag.Ossement)
+	bag.loot(Bag.OssementBarbeDrue)
 	bag.loot(Bag.TresorBarbeDrueMaudit)
 	tags.add(Tags.TOMB_BARBE_DRUE_OPENED)
 	gui.open_dialog_next(Dialog.pnjSay(_barbe_drue, _TEXT_PROFANATION))

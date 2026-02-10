@@ -25,17 +25,18 @@ func on_interact() -> void:
 func on_item_drop(_item : Item) -> void:
 	if _item.name == Bag.ListInvocationVent:
 		gui.open_dialog_next(Dialog.pnjSay(self, "C’est ma propre liste que veux tu que j’en fasse ? Rapporte moi donc plutôt les ingrédients."))
-	elif _item.name == Bag.Plume or _item.name == Bag.Ossement or _item.name == Bag.SelDeMontagne :
+	elif _item.name == Bag.Plume or _item.name == Bag.Ossement or _item.name == Bag.OssementBarbeDrue or _item.name == Bag.SelDeMontagne :
 		gui.open_dialog_next(Dialog.pnjSay(self, "Bravo, tu as trouvé certains ingrédients, mais je veux d'abords mon Mojito."))
 	elif _item.name == Bag.Mojito :
 		bag.unloot(Bag.Mojito)
-		if bag.contain(Bag.Plume) and  bag.contain(Bag.Ossement) and  bag.contain(Bag.SelDeMontagne) :
+		if bag.contain(Bag.Plume) and  (bag.contain(Bag.Ossement) or bag.contain(Bag.OssementBarbeDrue)) and  bag.contain(Bag.SelDeMontagne) :
 			gui.open_dialog_next(Dialog.pnjSay(self, _TEXT_MOJITO_ALL))
 			tags.remove(Tags.SEARCH_WIND)
 			tags.add(Tags.WIND_BLOWING)
 			bag.unloot(Bag.Plume)
 			bag.unloot(Bag.ListInvocationVent)
 			bag.unloot(Bag.Ossement)
+			bag.unloot(Bag.OssementBarbeDrue)
 			bag.unloot(Bag.SelDeMontagne)
 		else :
 			gui.open_dialog_next(Dialog.pnjSay(self, _TEXT_MOJITO_MISSING))

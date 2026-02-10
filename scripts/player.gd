@@ -64,7 +64,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 
 	if not is_on_floor():
-		if position.y < _last_floor_position.y - 5 :
+		if position.y < _last_floor_position.y - 10 :
 			velocity = Vector3.ZERO
 			_gui.doTransition(func(): position = _last_floor_position)
 		else :

@@ -32,9 +32,9 @@ func on_item_drop(item : Item) -> void:
 	elif item.name == Bag.TresorHungConnut :
 		gui.open_dialog_next(Dialog.pnjSay(self, TEXT_TRESOR_HUNG_CONNU))
 	elif item.name == Bag.ParcheminBarbeDrue :
-		gui.open_dialog_next(Dialog.pnjSay(self, TEXT_SHOW_PARCH_HUNG_CONNUT))
-	elif item.name == Bag.ParcheminHungConnut :
 		gui.open_dialog_next(Dialog.pnjSay(self, TEXT_PARCHEMIN_BARBE_DRUE))
+	elif item.name == Bag.ParcheminHungConnut :
+		gui.open_dialog_next(Dialog.pnjSay(self, TEXT_SHOW_PARCH_HUNG_CONNUT))
 	elif item.name == Bag.PageHungConnutFrag1 or item.name == Bag.PageHungConnutFrag2 or item.name == Bag.PageHungConnutFrag3 :
 		gui.open_dialog_next(Dialog.pnjSay(self, TEXT_FRAGMENT_HUNG_CONNUT))
 	elif item.name == Bag.BouteilleCapitain:

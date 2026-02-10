@@ -28,6 +28,7 @@
 - https://freepngimg.com/png/29950-mojito-image
 - https://opengameart.org/content/papers
 - https://opengameart.org/content/rpg-mushroom-icons
+- https://www.vecteezy.com/vector-art/4622286-skull-hand-sticker
 
 ## Model 3d
 - https://kenney.nl/assets
