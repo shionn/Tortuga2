@@ -701,68 +701,7 @@ layout_mode = 2
 tooltip_text = "Quitter"
 texture_normal = ExtResource("11_uglio")
 
-[node name="Bag" type="Control" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -10.0
-offset_right = -10.0
-grow_horizontal = 0
-grow_vertical = 2
-script = ExtResource("25_8rxp0")
-
-[node name="Panel" type="Panel" parent="Bag"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -220.0
-offset_top = -200.0
-offset_bottom = 200.0
-grow_horizontal = 0
-grow_vertical = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="Bag/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Bag/Panel/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 5
-alignment = 1
-
-[node name="Title" type="Label" parent="Bag/Panel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_yw5qc")
-text = "Sac"
-horizontal_alignment = 1
-
-[node name="Container" type="HFlowContainer" parent="Bag/Panel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/h_separation = 0
-theme_override_constants/v_separation = 0
-
-[node name="CloseButton" type="Button" parent="Bag/Panel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Fermer"
-
-[node name="BagNext" type="GridContainer" parent="."]
-visible = false
+[node name="Bag" type="GridContainer" parent="."]
 z_index = 10
 layout_mode = 1
 anchors_preset = 6
@@ -772,39 +711,40 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -240.0
 offset_top = -200.0
-offset_right = -20.0
+offset_right = -12.0
 offset_bottom = 200.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 3
+script = ExtResource("25_8rxp0")
 
-[node name="NW" type="TextureRect" parent="BagNext"]
+[node name="NW" type="TextureRect" parent="Bag"]
 layout_mode = 2
 texture = ExtResource("5_8rxp0")
 
-[node name="N" type="TextureRect" parent="BagNext"]
+[node name="N" type="TextureRect" parent="Bag"]
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("6_bbm65")
 stretch_mode = 1
 
-[node name="NE" type="TextureRect" parent="BagNext"]
+[node name="NE" type="TextureRect" parent="Bag"]
 layout_mode = 2
 texture = ExtResource("7_5llql")
 
-[node name="W" type="TextureRect" parent="BagNext"]
+[node name="W" type="TextureRect" parent="Bag"]
 layout_mode = 2
 size_flags_vertical = 3
 texture = ExtResource("8_lnk63")
 stretch_mode = 1
 
-[node name="PanelContainer" type="PanelContainer" parent="BagNext"]
+[node name="PanelContainer" type="PanelContainer" parent="Bag"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8rxp0")
 
-[node name="MarginContainer" type="MarginContainer" parent="BagNext/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Bag/PanelContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 2
@@ -812,40 +752,40 @@ theme_override_constants/margin_top = 2
 theme_override_constants/margin_right = 2
 theme_override_constants/margin_bottom = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="BagNext/PanelContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Bag/PanelContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="BagNext/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Container" type="HFlowContainer" parent="Bag/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
 
-[node name="CloseButton" type="Button" parent="BagNext/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="CloseButton" type="Button" parent="Bag/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Fermer"
 text = "Fermer"
 
-[node name="E" type="TextureRect" parent="BagNext"]
+[node name="E" type="TextureRect" parent="Bag"]
 layout_mode = 2
 size_flags_vertical = 3
 texture = ExtResource("9_dwcmb")
 stretch_mode = 1
 
-[node name="SW" type="TextureRect" parent="BagNext"]
+[node name="SW" type="TextureRect" parent="Bag"]
 layout_mode = 2
 texture = ExtResource("10_tn6xl")
 
-[node name="S" type="TextureRect" parent="BagNext"]
+[node name="S" type="TextureRect" parent="Bag"]
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("11_la4rn")
 stretch_mode = 1
 
-[node name="SE" type="TextureRect" parent="BagNext"]
+[node name="SE" type="TextureRect" parent="Bag"]
 layout_mode = 2
 texture = ExtResource("12_u833a")
 
@@ -993,10 +933,10 @@ offset_right = -100.0
 
 [node name="BiereRousseDeEve" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -121.0
-offset_top = 99.0
-offset_right = -62.0
-offset_bottom = 147.0
+offset_left = -208.0
+offset_top = 80.0
+offset_right = -160.0
+offset_bottom = 128.0
 tooltip_text = "Bière rousse de eve"
 texture_normal = ExtResource("20_5r1ih")
 script = ExtResource("11_s1h2m")
@@ -1004,9 +944,9 @@ description = "C'est une bière rousse de eve. La meilleure qui soit. "
 
 [node name="BouteilleCapitain" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -124.0
+offset_left = -223.0
 offset_top = 89.0
-offset_right = -65.0
+offset_right = -175.0
 offset_bottom = 137.0
 tooltip_text = "Bouteille de Rhum
 "
@@ -1016,10 +956,10 @@ description = "C'est la bouteille de Rhum du capitaine."
 
 [node name="BoisDeQualite" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -229.0
-offset_top = 218.0
-offset_right = -170.0
-offset_bottom = 266.0
+offset_left = -236.0
+offset_top = 179.0
+offset_right = -188.0
+offset_bottom = 227.0
 tooltip_text = "Bois de qualité"
 texture_normal = ExtResource("21_6vqqt")
 script = ExtResource("11_s1h2m")
@@ -1038,10 +978,10 @@ image = ExtResource("19_ytu88")
 
 [node name="Champignon" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -338.0
-offset_top = 171.0
-offset_right = -290.0
-offset_bottom = 219.0
+offset_left = -8.0
+offset_top = 71.0
+offset_right = 40.0
+offset_bottom = 119.0
 tooltip_text = "Champignon"
 texture_normal = ExtResource("25_g11ko")
 script = ExtResource("11_s1h2m")
@@ -1062,7 +1002,7 @@ description = "Ce crystal permet d'activer le téléporteur dans la forêt. "
 layout_mode = 0
 offset_left = -21.0
 offset_top = 78.0
-offset_right = 34.0
+offset_right = 27.0
 offset_bottom = 126.0
 tooltip_text = "Fruit défendu"
 texture_normal = ExtResource("19_ukjlc")
@@ -1071,10 +1011,10 @@ description = "Ce fruit pousse sur un arbre inaccessible. Il nous est défendu. 
 
 [node name="Houblon" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -221.0
-offset_top = 154.0
-offset_right = -162.0
-offset_bottom = 202.0
+offset_left = -27.0
+offset_top = 70.0
+offset_right = 21.0
+offset_bottom = 118.0
 tooltip_text = "Houblon"
 texture_normal = ExtResource("25_74x0q")
 script = ExtResource("11_s1h2m")
@@ -1082,10 +1022,10 @@ description = "Du houblon. Eve s'en sert pour faire la meilleure bière de l'îl
 
 [node name="ListInvocationVent" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -333.0
-offset_top = 92.0
-offset_right = -272.0
-offset_bottom = 140.0
+offset_left = -435.0
+offset_top = 98.0
+offset_right = -387.0
+offset_bottom = 146.0
 tooltip_text = "Ingrédient rituel du vent"
 texture_normal = ExtResource("29_dfsdp")
 script = ExtResource("11_s1h2m")
@@ -1100,10 +1040,10 @@ Un mojito frais
 
 [node name="Melon" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -237.0
-offset_top = 89.0
-offset_right = -178.0
-offset_bottom = 137.0
+offset_left = 1.0
+offset_top = 71.0
+offset_right = 49.0
+offset_bottom = 119.0
 tooltip_text = "Melon"
 texture_normal = ExtResource("22_rex2l")
 script = ExtResource("11_s1h2m")
@@ -1111,9 +1051,9 @@ description = "Ce melon semble délicieux."
 
 [node name="Mojito" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -141.0
+offset_left = -232.0
 offset_top = 83.0
-offset_right = -82.0
+offset_right = -184.0
 offset_bottom = 131.0
 tooltip_text = "Mojito"
 texture_normal = ExtResource("30_enpea")
@@ -1122,10 +1062,10 @@ description = "C'est un mojito."
 
 [node name="MojitoSansGlace" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -93.0
-offset_top = 87.0
-offset_right = -34.0
-offset_bottom = 135.0
+offset_left = -210.0
+offset_top = 68.0
+offset_right = -162.0
+offset_bottom = 116.0
 tooltip_text = "Mojito sans Glaçon"
 texture_normal = ExtResource("30_enpea")
 script = ExtResource("11_s1h2m")
@@ -1133,10 +1073,10 @@ description = "C'est un mojito."
 
 [node name="Ossement" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -329.0
-offset_top = 104.0
-offset_right = -270.0
-offset_bottom = 152.0
+offset_left = -462.0
+offset_top = 88.0
+offset_right = -414.0
+offset_bottom = 136.0
 tooltip_text = "Ossement"
 texture_normal = ExtResource("31_k8u3r")
 script = ExtResource("11_s1h2m")
@@ -1186,10 +1126,10 @@ Il faut que je les rassemble toutes pour comprendre de quoi il en retourne.
 
 [node name="ParcheminBarbeDrue" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = 12.0
-offset_top = 179.0
-offset_right = 60.0
-offset_bottom = 227.0
+offset_left = -61.0
+offset_top = 11.0
+offset_right = -13.0
+offset_bottom = 59.0
 tooltip_text = "Parchemin de Barbe Drue"
 texture_normal = ExtResource("13_qv6l0")
 script = ExtResource("11_s1h2m")
@@ -1199,10 +1139,10 @@ Je ne comprends rien à ce qui est écrit dessus."
 
 [node name="ParcheminBarbeDrueDecoder" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -1.0
-offset_top = 176.0
-offset_right = 47.0
-offset_bottom = 224.0
+offset_left = -98.0
+offset_top = 21.0
+offset_right = -50.0
+offset_bottom = 69.0
 tooltip_text = "Parchemin de Barbe Drue"
 texture_normal = ExtResource("13_qv6l0")
 script = ExtResource("11_s1h2m")
@@ -1218,10 +1158,10 @@ description = "C'est le parchemin du trésor de Barbe Drue. Il a été décodé 
 
 [node name="ParcheminHungConnut" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -42.0
-offset_top = 169.0
-offset_right = 6.0
-offset_bottom = 217.0
+offset_left = -83.0
+offset_top = 14.0
+offset_right = -35.0
+offset_bottom = 62.0
 tooltip_text = "Parchemin de HungConnu"
 texture_normal = ExtResource("45_bbm65")
 script = ExtResource("11_s1h2m")
@@ -1230,10 +1170,10 @@ signé Hung Connut."
 
 [node name="PasseBarque" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 141.0
-offset_right = 59.0
-offset_bottom = 189.0
+offset_left = -99.0
+offset_top = 12.0
+offset_right = -51.0
+offset_bottom = 60.0
 tooltip_text = "Passe Navigation"
 texture_normal = ExtResource("34_uyd5p")
 script = ExtResource("11_s1h2m")
@@ -1242,10 +1182,10 @@ Mais il manque le tampon de Rurik"
 
 [node name="PasseBarqueTanpon" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -47.0
-offset_top = 142.0
-offset_right = 11.0
-offset_bottom = 190.0
+offset_left = -113.0
+offset_top = 16.0
+offset_right = -65.0
+offset_bottom = 64.0
 tooltip_text = "Pass Navigation"
 texture_normal = ExtResource("35_x3l1j")
 script = ExtResource("11_s1h2m")
@@ -1253,10 +1193,10 @@ description = "C'est un pass valide pour utiliser une barque. "
 
 [node name="Plume" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -326.0
-offset_top = 97.0
-offset_right = -268.0
-offset_bottom = 145.0
+offset_left = -471.0
+offset_top = 96.0
+offset_right = -423.0
+offset_bottom = 144.0
 tooltip_text = "Plume"
 texture_normal = ExtResource("30_de8cu")
 script = ExtResource("11_s1h2m")
@@ -1266,7 +1206,7 @@ description = "Plume d'un oiseau géant vivant dans les montagnes de tortuga."
 layout_mode = 0
 offset_left = -155.0
 offset_top = 148.0
-offset_right = -97.0
+offset_right = -107.0
 offset_bottom = 196.0
 tooltip_text = "Pioche"
 texture_normal = ExtResource("32_feoca")
@@ -1275,10 +1215,10 @@ description = "Une pioche pour miner."
 
 [node name="PotionDegrisement" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -119.0
-offset_top = 89.0
-offset_right = -71.0
-offset_bottom = 137.0
+offset_left = -250.0
+offset_top = 84.0
+offset_right = -202.0
+offset_bottom = 132.0
 tooltip_text = "Potion de dégrissement"
 texture_normal = ExtResource("23_e5h10")
 script = ExtResource("11_s1h2m")
@@ -1286,10 +1226,10 @@ description = "Cette potion supprime la gueule de bois."
 
 [node name="TresorBarbeDrue" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -131.0
-offset_top = 22.0
-offset_right = -76.0
-offset_bottom = 70.0
+offset_left = -114.0
+offset_top = 338.0
+offset_right = -66.0
+offset_bottom = 386.0
 tooltip_text = "Trésor de Barbe Drue"
 texture_normal = ExtResource("12_22my7")
 script = ExtResource("11_s1h2m")
@@ -1297,10 +1237,10 @@ description = "C'est le trésor de Barbe Drue"
 
 [node name="TresorBarbeDrueNet" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -139.0
-offset_top = 26.0
-offset_right = -84.0
-offset_bottom = 74.0
+offset_left = -174.0
+offset_top = 309.0
+offset_right = -126.0
+offset_bottom = 357.0
 tooltip_text = "Trésor de Barbe Drue"
 texture_normal = ExtResource("12_22my7")
 script = ExtResource("11_s1h2m")
@@ -1309,10 +1249,10 @@ Mais la taxe sur les gains affairant à la piraterie est passée par la. "
 
 [node name="TresorBarbeDrueMaudit" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -155.0
-offset_top = 10.0
-offset_right = -100.0
-offset_bottom = 58.0
+offset_left = -210.0
+offset_top = 344.0
+offset_right = -162.0
+offset_bottom = 392.0
 tooltip_text = "Pièce de Barbe Drue"
 texture_normal = ExtResource("37_u23jf")
 script = ExtResource("11_s1h2m")
@@ -1320,10 +1260,10 @@ description = "C'est tout ce qui me reste du trésor de Barbe Drue. "
 
 [node name="TresorHungConnut" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -123.0
-offset_top = 7.0
-offset_right = -68.0
-offset_bottom = 55.0
+offset_left = -143.0
+offset_top = 306.0
+offset_right = -95.0
+offset_bottom = 354.0
 tooltip_text = "Trésor de Hung Connut"
 texture_normal = ExtResource("12_22my7")
 script = ExtResource("11_s1h2m")
@@ -1331,10 +1271,10 @@ description = "C'est le trésor de Hung Connut."
 
 [node name="TresorHungConnutNet" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -136.0
-offset_top = 18.0
-offset_right = -81.0
-offset_bottom = 66.0
+offset_left = -151.0
+offset_top = 345.0
+offset_right = -103.0
+offset_bottom = 393.0
 tooltip_text = "Trésor de Hung Connut"
 texture_normal = ExtResource("12_22my7")
 script = ExtResource("11_s1h2m")
@@ -1343,10 +1283,10 @@ Mais la taxe sur les gains affairant à la piraterie est passée par la. "
 
 [node name="SelDeMontagne" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -337.0
-offset_top = 108.0
-offset_right = -280.0
-offset_bottom = 156.0
+offset_left = -443.0
+offset_top = 110.0
+offset_right = -395.0
+offset_bottom = 158.0
 tooltip_text = "Sel de montagne"
 texture_normal = ExtResource("34_rjb4a")
 script = ExtResource("11_s1h2m")
@@ -1462,8 +1402,7 @@ text = "Sauvegarder"
 [connection signal="pressed" from="Menu/MarginContainer/HBoxContainer/BagButton" to="Menu" method="_on_bag_button_pressed"]
 [connection signal="pressed" from="Menu/MarginContainer/HBoxContainer/HelpButton" to="Help" method="_on_help_button_pressed"]
 [connection signal="pressed" from="Menu/MarginContainer/HBoxContainer/ExitButton" to="Menu" method="_on_exit_button_pressed"]
-[connection signal="pressed" from="Bag/Panel/MarginContainer/VBoxContainer/CloseButton" to="Bag" method="_on_close_button_pressed"]
-[connection signal="pressed" from="BagNext/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="BagNext" method="_on_close_button_pressed"]
+[connection signal="pressed" from="Bag/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="Bag" method="_on_close_button_pressed"]
 [connection signal="pressed" from="Help/Panel/MarginContainer/VBoxContainer/Button" to="Help" method="_on_help_button_pressed"]
 [connection signal="pressed" from="Acceuil/Panel/MarginContainer/VBoxContainer/Button" to="Acceuil" method="_on_button_pressed"]
 [connection signal="animation_finished" from="Transition/AnimationPlayer" to="Transition" method="_on_animation_finished"]

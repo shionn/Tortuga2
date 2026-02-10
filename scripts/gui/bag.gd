@@ -32,7 +32,7 @@ const TresorHungConnut = "TresorHungConnut"
 const TresorHungConnutNet = "TresorHungConnutNet"
 const SelDeMontagne = "SelDeMontagne"
 
-@onready var _grid = $Panel/MarginContainer/VBoxContainer/Container as Container
+@onready var _grid = $PanelContainer/MarginContainer/VBoxContainer/Container as Container
 @onready var _items = $"../Items" as Control
 @onready var _gui = $".." as Gui
 
