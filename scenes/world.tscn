@@ -106,16 +106,64 @@ skeleton = NodePath("../..")
 transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 750, 0, -1750)
 skeleton = NodePath("../..")
 
+[node name="WaterPlane11" parent="sea" instance=ExtResource("4_q5onr")]
+transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 250, 0, -1750)
+skeleton = NodePath("../..")
+
+[node name="WaterPlane12" parent="sea" instance=ExtResource("4_q5onr")]
+transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 1750, 0, -1750)
+skeleton = NodePath("../..")
+
+[node name="WaterPlane13" parent="sea" instance=ExtResource("4_q5onr")]
+transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 1250, 0, -1750)
+skeleton = NodePath("../..")
+
 [node name="WaterPlane8" parent="sea" instance=ExtResource("4_q5onr")]
 transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 750, 0, -250)
+visible = false
 skeleton = NodePath("../..")
 
 [node name="WaterPlane10" parent="sea" instance=ExtResource("4_q5onr")]
 transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 750, 0, 250)
+visible = false
 skeleton = NodePath("../..")
 
 [node name="WaterPlane9" parent="sea" instance=ExtResource("4_q5onr")]
 transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 750, 0, -750)
+visible = false
+skeleton = NodePath("../..")
+
+[node name="WaterPlane14" parent="sea" instance=ExtResource("4_q5onr")]
+transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 1250, 0, -750)
+visible = false
+skeleton = NodePath("../..")
+
+[node name="WaterPlane15" parent="sea" instance=ExtResource("4_q5onr")]
+transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 1750, 0, -750)
+visible = false
+skeleton = NodePath("../..")
+
+[node name="WaterPlane17" parent="sea" instance=ExtResource("4_q5onr")]
+transform = Transform3D(1500, 0, 0, 0, 1, 0, 0, 0, 1500, 1250, 0, -250)
+skeleton = NodePath("../..")
+
+[node name="WaterPlane18" parent="sea" instance=ExtResource("4_q5onr")]
+transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 1750, 0, -250)
+visible = false
+skeleton = NodePath("../..")
+
+[node name="WaterPlane19" parent="sea" instance=ExtResource("4_q5onr")]
+transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 1250, 0, 250)
+visible = false
+skeleton = NodePath("../..")
+
+[node name="WaterPlane20" parent="sea" instance=ExtResource("4_q5onr")]
+transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 1750, 0, 250)
+visible = false
+skeleton = NodePath("../..")
+
+[node name="WaterPlane16" parent="sea" instance=ExtResource("4_q5onr")]
+transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 1750, 0, -1250)
 skeleton = NodePath("../..")
 
 [node name="WaterPlane5" parent="sea" instance=ExtResource("4_q5onr")]
@@ -135,7 +183,7 @@ autoplay = true
 parameters/looping = true
 
 [node name="Twin-Island" parent="." instance=ExtResource("6_e3hyu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 250, 0, -1750)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1250, 0, -1250)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_bh8nc")

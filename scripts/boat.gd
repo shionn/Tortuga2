@@ -35,9 +35,9 @@ func _handle_move(delta : float) -> void:
 		rotate_y(1*delta)
 		#velocity.rotated(Vector3.UP, 1*delta)
 	if Input.is_action_pressed("move_front") :
-		_speed += 10.0*delta
+		_speed += 50.0*delta
 	if Input.is_action_pressed("move_back") :
-		_speed -= 10.0*delta
+		_speed -= 50.0*delta
 
 
 	#if abs(_speed) > 0.001 : 
