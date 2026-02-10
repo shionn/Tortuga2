@@ -19,6 +19,16 @@ func on_interact() -> void:
 		)
 	)
 
+func on_item_drop(_item : Item) -> void:
+	if _item.name == Bag.Ossement: 
+		gui.open_dialog_next(Dialog.playerSay(player, _PLAYER_SHOW_HAND)
+			.next(Dialog.pnjSay(self, _TEXT_5)
+				.on_open(play_anim_no)
+				.next(Dialog.pnjSay(self, _TEXT_6)))
+		)
+	else : 
+		super.on_item_drop(_item)
+
 const _TEXT_1 = "Moi c’est Boneskull. Autrefois, j’étais pirate au service de Whisp. 
 On a sillonné les mers ensemble, affronté des tempêtes et des monstres... Mais ça, c’était avant. Aujourd’hui, je ne navigue plus avec lui. J’ai rangé ma vie d’aventure. 
 
@@ -50,3 +60,14 @@ Quand Whisp est enfin revenu, il était soulagé. Moi, j’avais survécu... Mai
 
 const _TEXT_4 = "Hors de question. J’ai déjà perdu assez de morceaux comme ça. 
 Si je commence à en distribuer, je vais finir en tas décoratif."
+
+const _PLAYER_SHOW_HAND = "Salut. 
+
+Je pense que j'ai retrouvé ta main, C'est bien la tienne ? tu souhaites la récupérer ?"
+
+const _TEXT_5 = "Oui... c’est bien la mienne. Je la reconnaîtrais entre mille. 
+
+Mais non. Je n’en veux pas..."
+
+const _TEXT_6 = "Tu vois cette main elle appartient à un autre Boneskull. À un pirate qui croyait encore que l’aventure valait tous les sacrifices... Le jour où je l’ai perdue, j’ai aussi tourné la page. J’ai fait une croix dessus... et sur ce que j’étais... sur qui j’étais... 
+La reprendre ne m’apporterait rien, à part des souvenirs que je préfère laisser au fond de la mer. Garde-la, ou rends-la aux flots. Moi, j’ai déjà avancé."

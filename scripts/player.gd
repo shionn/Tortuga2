@@ -30,7 +30,6 @@ func teleport(at_position : Vector3, look = 0.0) -> void:
 	position = at_position
 	_pivot.rotation.y = look
 	_camera_pivot.rotation.y = look + PI
-	
 
 func play_anim_interact() -> void:
 	_animation.play("interact-right")
@@ -65,7 +64,11 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		if position.y < _last_floor_position.y - 5 :
+			velocity = Vector3.ZERO
+			_gui.doTransition(func(): position = _last_floor_position)
+		else :
+			velocity += get_gravity() * delta
 	elif position.y > -.5 :
 		_last_floor_position = position
 	
