@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://chxfr2yagmg24" path="res://assets/pirate/rocks-c.glb" id="4_2tvrj"]
 [ext_resource type="PackedScene" uid="uid://c1sc7qjitvtsi" path="res://assets/pirate/rocks-a.glb" id="5_fjqxh"]
 [ext_resource type="PackedScene" uid="uid://cbasjmgb4ls33" path="res://assets/pirate/rocks-b.glb" id="6_4e1nb"]
-[ext_resource type="PackedScene" uid="uid://0orcol7h3owh" path="res://assets/pirate/patch-grass.glb" id="7_wbovk"]
-[ext_resource type="PackedScene" uid="uid://fc1bkvtc3h41" path="res://assets/pirate/flat-grass.glb" id="8_6m50f"]
+[ext_resource type="PackedScene" uid="uid://n05ena6gswui" path="res://assets/pirate/patch-grass.glb" id="7_wbovk"]
+[ext_resource type="PackedScene" uid="uid://cd4y7jmjyi3iv" path="res://assets/pirate/flat-grass.glb" id="8_6m50f"]
 [ext_resource type="PackedScene" uid="uid://cg8cslgj6gv4u" path="res://scenes/twin-island/twin_small_round_wood_house.tscn" id="9_pe2l3"]
 [ext_resource type="PackedScene" uid="uid://dbncpesyqlrv8" path="res://assets/castle/tree-large-simplified.glb" id="10_fm226"]
 [ext_resource type="PackedScene" uid="uid://wn3wekt75te8" path="res://scenes/twin-island/twin_auberge.tscn" id="10_vymvp"]
@@ -44,6 +44,24 @@ transform = Transform3D(-12.950531, 0, 1.1330264, 0, 13, 0, -1.1330264, 0, -12.9
 
 [node name="rocks-b2" parent="Mountain-S" instance=ExtResource("6_4e1nb")]
 transform = Transform3D(-0.87155867, 0, -9.9619465, 0, 10, 0, 9.9619465, 0, -0.87155867, 55.399998, 0.4, 13.000001)
+
+[node name="Montain-1" type="Node3D" parent="Mountain-S"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8, 0, -15.2)
+
+[node name="Pic-1" type="Node3D" parent="Mountain-S/Montain-1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 38.07, 0)
+
+[node name="patch-grass2" parent="Mountain-S/Montain-1/Pic-1" instance=ExtResource("7_wbovk")]
+transform = Transform3D(-2.4620192, 0, -0.4341207, 0, 2.5, 0, 0.4341207, 0, -2.4620192, -0.6999998, 0, 3.6000004)
+
+[node name="patch-grass3" parent="Mountain-S/Montain-1/Pic-1" instance=ExtResource("7_wbovk")]
+transform = Transform3D(-1.25, 0, -2.1650634, 0, 2.5, 0, 2.1650634, 0, -1.25, -4.2, 0, -1.999999)
+
+[node name="patch-grass4" parent="Mountain-S/Montain-1/Pic-1" instance=ExtResource("7_wbovk")]
+transform = Transform3D(1.2499999, 0, 2.1650631, 0, 2.4999998, 0, -2.1650631, 0, 1.2499999, 5.1000004, 0, 0.100001335)
+
+[node name="patch-grass5" parent="Mountain-S/Montain-1/Pic-1" instance=ExtResource("7_wbovk")]
+transform = Transform3D(2.4904864, 0, 0.21788931, 0, 2.4999998, 0, -0.21788931, 0, 2.4904864, 1.5, 0, -5.7999983)
 
 [node name="Patches" type="Node3D" parent="."]
 
