@@ -49,7 +49,7 @@ func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3,
 	if event is InputEventMouseButton and Input.is_action_just_pressed("interact"): 
 		if player :
 			if player.global_position.distance_to(self.global_position) < interactable_distance :
-				player.play_anim_interact()
+				#player.play_anim_interact()
 				on_interact()
 			else :
 				player.play_anim_no()

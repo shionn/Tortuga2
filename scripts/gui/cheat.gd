@@ -6,7 +6,7 @@ extends MarginContainer
 @onready var tags = $"/root/World/Player/Tags" as Tags
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("debug_panel") && false:
+	if Input.is_action_just_pressed("debug_panel"):
 		visible = not visible
 
 func _on_quick_load_pressed() -> void:
