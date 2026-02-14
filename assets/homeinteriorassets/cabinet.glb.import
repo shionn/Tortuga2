@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dhmb74ebxam80"
-path="res://.godot/imported/road-wood.glb-be7a90159a36e401b8c1b47d2d17922f.scn"
+uid="uid://duc60dfk4asy6"
+path="res://.godot/imported/cabinet.glb-4818a9d806bb9d96ec3f5bed6b8f3a65.scn"
 
 [deps]
 
-source_file="res://assets/town/road/road-wood.glb"
-dest_files=["res://.godot/imported/road-wood.glb-be7a90159a36e401b8c1b47d2d17922f.scn"]
+source_file="res://assets/homeinteriorassets/cabinet.glb"
+dest_files=["res://.godot/imported/cabinet.glb-4818a9d806bb9d96ec3f5bed6b8f3a65.scn"]
 
 [params]
 
@@ -39,7 +39,7 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:road": {
+"PATH:Cube_023": {
 "generate/physics": true,
 "physics/shape_type": 2
 }

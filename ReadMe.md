@@ -32,6 +32,7 @@
 
 ## Model 3d
 - https://kenney.nl/assets
+- https://opengameart.org/content/3d-interior-home-assets
 - https://opengameart.org/content/crafting-items
 - https://opengameart.org/content/fruit-pack-01
 - https://opengameart.org/content/lowpoly-animated-farm-animal-pack

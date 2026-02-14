@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dhmb74ebxam80"
-path="res://.godot/imported/road-wood.glb-be7a90159a36e401b8c1b47d2d17922f.scn"
+uid="uid://bw1vf06v03axm"
+path="res://.godot/imported/bookcase.glb-f34a489dbaf5772c9e8abed5b61ad48a.scn"
 
 [deps]
 
-source_file="res://assets/town/road/road-wood.glb"
-dest_files=["res://.godot/imported/road-wood.glb-be7a90159a36e401b8c1b47d2d17922f.scn"]
+source_file="res://assets/homeinteriorassets/bookcase.glb"
+dest_files=["res://.godot/imported/bookcase.glb-f34a489dbaf5772c9e8abed5b61ad48a.scn"]
 
 [params]
 
@@ -37,13 +37,6 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"nodes": {
-"PATH:road": {
-"generate/physics": true,
-"physics/shape_type": 2
-}
-}
-}
+_subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dhmb74ebxam80"
-path="res://.godot/imported/road-wood.glb-be7a90159a36e401b8c1b47d2d17922f.scn"
+uid="uid://dq5st2w0rhjni"
+path="res://.godot/imported/bed.glb-58164472b56331d6c5098c031b03ee21.scn"
 
 [deps]
 
-source_file="res://assets/town/road/road-wood.glb"
-dest_files=["res://.godot/imported/road-wood.glb-be7a90159a36e401b8c1b47d2d17922f.scn"]
+source_file="res://assets/homeinteriorassets/bed.glb"
+dest_files=["res://.godot/imported/bed.glb-58164472b56331d6c5098c031b03ee21.scn"]
 
 [params]
 
@@ -39,7 +39,7 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:road": {
+"PATH:Plane_005": {
 "generate/physics": true,
 "physics/shape_type": 2
 }
