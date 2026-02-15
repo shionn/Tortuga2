@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bklj07teww5qu"]
+[gd_scene load_steps=23 format=3 uid="uid://bklj07teww5qu"]
 
 [ext_resource type="PackedScene" uid="uid://d1gmtkr315dft" path="res://assets/mine/twin-island-80.glb" id="2_fueny"]
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://scenes/water/WaterPlane.tscn" id="2_i67y0"]
@@ -19,6 +19,9 @@
 [ext_resource type="PackedScene" uid="uid://bagjq72im08wg" path="res://assets/pirate/plant/grass-plant.glb" id="14_ja4ei"]
 [ext_resource type="PackedScene" uid="uid://dn1b4sjm530aw" path="res://assets/pirate/plant/grass.glb" id="15_0e3yf"]
 [ext_resource type="PackedScene" uid="uid://c7jolf7uv12dr" path="res://assets/pirate/plant/palm-detailed-bend.glb" id="15_l4tt5"]
+[ext_resource type="PackedScene" uid="uid://c2yiyl0xgkqrv" path="res://assets/pirate/boats/ship-wreck.glb" id="20_l4tt5"]
+[ext_resource type="PackedScene" uid="uid://o5kn2mqp4v6q" path="res://assets/pirate/structures/platform-planks.glb" id="21_0e3yf"]
+[ext_resource type="PackedScene" uid="uid://bp3xi5gi2bfo8" path="res://assets/pirate/patch-sand.glb" id="21_ja4ei"]
 
 [node name="Twin-Island" type="Node3D"]
 
@@ -3573,3 +3576,272 @@ transform = Transform3D(-2.1130884, 0, 4.5315356, 0, 3.9999986, 0, -4.5315356, 0
 
 [node name="patch-grass29" parent="Forest/Patches" instance=ExtResource("7_wbovk")]
 transform = Transform3D(-2.1130884, 0, 4.5315356, 0, 3.9999986, 0, -4.5315356, 0, -2.1130884, 32.83825, 0.5, -36.9448)
+
+[node name="IleNord" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110, 0.5, -70)
+
+[node name="ship-wreck2" parent="IleNord" instance=ExtResource("20_l4tt5")]
+transform = Transform3D(0.46562535, -0.21484227, 0.8585079, -0.43301272, 0.79072386, 0.43273053, -0.7718115, -0.57323515, 0.2751517, -41.399994, -0.7, 1)
+
+[node name="ship-wreck4" parent="IleNord" instance=ExtResource("20_l4tt5")]
+transform = Transform3D(0.774519, -0.15849365, 0.61237246, -0.22414386, 0.8365163, 0.5, -0.5915063, -0.5245191, 0.61237246, -21.399994, -1.1, -33)
+
+[node name="ship-wreck3" parent="IleNord" instance=ExtResource("20_l4tt5")]
+transform = Transform3D(-0.8660254, 0.49999994, -7.4505806e-08, 0.48296297, 0.83651614, 0.258819, 0.12940961, 0.2241438, -0.96592563, -15.999992, -1.2795553, 34.94471)
+
+[node name="platform-planks2" parent="IleNord" instance=ExtResource("21_0e3yf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1000061, 0.70000005, 28.2)
+
+[node name="platform-planks3" parent="IleNord" instance=ExtResource("21_0e3yf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0000076, 0.70000005, 28.100002)
+
+[node name="platform-planks4" parent="IleNord" instance=ExtResource("21_0e3yf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9000092, 0.70000005, 28.000004)
+
+[node name="PatchesSand" type="Node3D" parent="IleNord"]
+
+[node name="PathGrass" type="Node3D" parent="IleNord/PatchesSand"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.70000005, 0)
+
+[node name="Palm" type="Node3D" parent="IleNord/PatchesSand/PathGrass"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="palm-detailed-bend9" parent="IleNord/PatchesSand/PathGrass/Palm" instance=ExtResource("15_l4tt5")]
+transform = Transform3D(1.7320508, 0, 1, 0, 2, 0, -1, 0, 1.7320508, 3, 0, 14)
+
+[node name="palm-detailed-bend11" parent="IleNord/PatchesSand/PathGrass/Palm" instance=ExtResource("15_l4tt5")]
+transform = Transform3D(-0.517638, 0, 1.9318516, 0, 2, 0, -1.9318516, 0, -0.517638, 29.599998, 0, 7.700001)
+
+[node name="palm-detailed-bend13" parent="IleNord/PatchesSand/PathGrass/Palm" instance=ExtResource("15_l4tt5")]
+transform = Transform3D(-0.517638, 0, 1.9318516, 0, 2, 0, -1.9318516, 0, -0.517638, 0.7999954, 0, -2.300003)
+
+[node name="palm-detailed-bend12" parent="IleNord/PatchesSand/PathGrass/Palm" instance=ExtResource("15_l4tt5")]
+transform = Transform3D(-2.3841858e-07, 0, -2.0000002, 0, 2, 0, 2.0000002, 0, -2.3841858e-07, 29.5, 0, -14.900002)
+
+[node name="palm-detailed-bend10" parent="IleNord/PatchesSand/PathGrass/Palm" instance=ExtResource("15_l4tt5")]
+transform = Transform3D(1.147153, 0, -1.638304, 0, 2, 0, 1.638304, 0, 1.147153, -5.0999985, 0, -9.5)
+
+[node name="palm-bend10" parent="IleNord/PatchesSand/PathGrass/Palm" instance=ExtResource("14_bb6it")]
+transform = Transform3D(1.8126155, 0, -0.84523654, 0, 2, 0, 0.84523654, 0, 1.8126155, -6.0999985, 0, 7.8999977)
+
+[node name="palm-bend11" parent="IleNord/PatchesSand/PathGrass/Palm" instance=ExtResource("14_bb6it")]
+transform = Transform3D(-0.5176381, 0, -1.9318517, 0, 2, 0, 1.9318517, 0, -0.5176381, 7.9000015, 0, -9.800003)
+
+[node name="palm-bend14" parent="IleNord/PatchesSand/PathGrass/Palm" instance=ExtResource("14_bb6it")]
+transform = Transform3D(1.7320507, 0, 1, 0, 2, 0, -1, 0, 1.7320507, 20.400002, 0, -7.4000015)
+
+[node name="palm-bend12" parent="IleNord/PatchesSand/PathGrass/Palm" instance=ExtResource("14_bb6it")]
+transform = Transform3D(-1.4142134, 0, 1.4142135, 0, 2, 0, -1.4142135, 0, -1.4142134, 14.300003, 0, 12.399994)
+
+[node name="palm-bend15" parent="IleNord/PatchesSand/PathGrass/Palm" instance=ExtResource("14_bb6it")]
+transform = Transform3D(-1.4142134, 0, 1.4142135, 0, 2, 0, -1.4142135, 0, -1.4142134, 11.700005, 0, 4.199997)
+
+[node name="palm-bend13" parent="IleNord/PatchesSand/PathGrass/Palm" instance=ExtResource("14_bb6it")]
+transform = Transform3D(-1.9923892, 0, -0.17431128, 0, 2, 0, 0.17431128, 0, -1.9923892, 28.5, 0, -3.4000092)
+
+[node name="Grass" type="Node3D" parent="IleNord/PatchesSand/PathGrass"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+
+[node name="grass-patch2" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("13_l4tt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 8)
+
+[node name="grass-patch3" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("13_l4tt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 2)
+
+[node name="grass-patch4" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("13_l4tt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 4)
+
+[node name="grass-patch5" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("13_l4tt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 3)
+
+[node name="grass-patch6" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("13_l4tt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 10)
+
+[node name="grass-patch7" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("13_l4tt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -7)
+
+[node name="grass-patch8" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("13_l4tt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -10)
+
+[node name="grass-patch9" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("13_l4tt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, -3)
+
+[node name="grass-patch10" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("13_l4tt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, -13)
+
+[node name="grass-patch11" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("13_l4tt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -11)
+
+[node name="grass-patch12" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("13_l4tt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 6)
+
+[node name="grass-plant2" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("14_ja4ei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+
+[node name="grass-plant3" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("14_ja4ei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 13)
+
+[node name="grass-plant4" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("14_ja4ei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 8)
+
+[node name="grass-plant5" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("14_ja4ei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 1)
+
+[node name="grass-plant6" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("14_ja4ei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, 7)
+
+[node name="grass-plant7" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("14_ja4ei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, -4)
+
+[node name="grass-plant8" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("14_ja4ei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -10)
+
+[node name="grass-plant9" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("14_ja4ei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -3)
+
+[node name="grass-plant10" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("14_ja4ei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -8)
+
+[node name="grass-plant11" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("14_ja4ei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -15)
+
+[node name="grass-plant12" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("14_ja4ei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 0, -9)
+
+[node name="grass2" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("15_0e3yf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 1)
+
+[node name="grass3" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("15_0e3yf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="grass4" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("15_0e3yf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 4)
+
+[node name="grass5" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("15_0e3yf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
+
+[node name="grass6" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("15_0e3yf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -3)
+
+[node name="grass7" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("15_0e3yf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -11)
+
+[node name="grass8" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("15_0e3yf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -12)
+
+[node name="grass9" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("15_0e3yf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, -8)
+
+[node name="grass10" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("15_0e3yf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, -4)
+
+[node name="grass11" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("15_0e3yf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, -12)
+
+[node name="grass12" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("15_0e3yf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 0)
+
+[node name="grass13" parent="IleNord/PatchesSand/PathGrass/Grass" instance=ExtResource("15_0e3yf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 0)
+
+[node name="patch-grass2" parent="IleNord/PatchesSand/PathGrass" instance=ExtResource("7_wbovk")]
+transform = Transform3D(3.625231, 0, 1.6904731, 0, 3, 0, -1.6904731, 0, 3.625231, 28.5, 0, -11.199997)
+
+[node name="patch-grass3" parent="IleNord/PatchesSand/PathGrass" instance=ExtResource("7_wbovk")]
+transform = Transform3D(1.6904731, 0, -3.625231, 0, 2.9999995, 0, 3.625231, 0, 1.6904731, 27.199997, 0, 2.8000107)
+
+[node name="patch-grass4" parent="IleNord/PatchesSand/PathGrass" instance=ExtResource("7_wbovk")]
+transform = Transform3D(3.9999993, 0, 2.3841858e-07, 0, 2.9999993, 0, -2.3841858e-07, 0, 3.9999993, 18.999992, 0, 8.700008)
+
+[node name="patch-grass5" parent="IleNord/PatchesSand/PathGrass" instance=ExtResource("7_wbovk")]
+transform = Transform3D(-3.984778, 0, 0.34862223, 0, 2.999999, 0, -0.34862223, 0, -3.984778, 14.199989, 0, -8.999992)
+
+[node name="patch-grass6" parent="IleNord/PatchesSand/PathGrass" instance=ExtResource("7_wbovk")]
+transform = Transform3D(3.9847777, 0, 0.34862402, 0, 2.999999, 0, -0.34862402, 0, 3.9847777, -1.7000122, 0, -9.899994)
+
+[node name="patch-grass7" parent="IleNord/PatchesSand/PathGrass" instance=ExtResource("7_wbovk")]
+transform = Transform3D(-3.999999, 0, -1.0728836e-06, 0, 2.999999, 0, 1.0728836e-06, 0, -3.999999, 5.29998, 0, 11.10001)
+
+[node name="patch-grass8" parent="IleNord/PatchesSand/PathGrass" instance=ExtResource("7_wbovk")]
+transform = Transform3D(-1.0352768, 0, 3.863702, 0, 2.999999, 0, -3.863702, 0, -1.0352768, -4.400017, 0, 2.9000015)
+
+[node name="flat-grass" parent="IleNord/PatchesSand/PathGrass" instance=ExtResource("8_6m50f")]
+transform = Transform3D(14, 0, 0, 0, 3, 0, 0, 0, 8, 11.299995, 0, -1.5)
+
+[node name="Palm" type="Node3D" parent="IleNord/PatchesSand"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5999999, 0)
+
+[node name="palm-bend4" parent="IleNord/PatchesSand/Palm" instance=ExtResource("14_bb6it")]
+transform = Transform3D(1.6383041, 0, -1.1471529, 0, 2, 0, 1.1471529, 0, 1.6383041, -15.099998, 0, -22.800003)
+
+[node name="palm-bend5" parent="IleNord/PatchesSand/Palm" instance=ExtResource("14_bb6it")]
+transform = Transform3D(0.34729636, 0, -1.9696156, 0, 2, 0, 1.9696156, 0, 0.34729636, 2.300003, 0, -26.300003)
+
+[node name="palm-bend3" parent="IleNord/PatchesSand/Palm" instance=ExtResource("14_bb6it")]
+transform = Transform3D(1.2855753, 0, 1.5320889, 0, 2, 0, -1.5320889, 0, 1.2855753, -23.699997, 0, 24)
+
+[node name="palm-bend7" parent="IleNord/PatchesSand/Palm" instance=ExtResource("14_bb6it")]
+transform = Transform3D(-0.6840404, 0, 1.8793852, 0, 2, 0, -1.8793852, 0, -0.6840404, 25.800003, 0, 26.3)
+
+[node name="palm-bend8" parent="IleNord/PatchesSand/Palm" instance=ExtResource("14_bb6it")]
+transform = Transform3D(-1.9318517, 0, 0.51763797, 0, 2, 0, -0.51763797, 0, -1.9318517, 44.200005, 0, 9.499996)
+
+[node name="palm-bend9" parent="IleNord/PatchesSand/Palm" instance=ExtResource("14_bb6it")]
+transform = Transform3D(-1.9318517, 0, 0.51763797, 0, 2, 0, -0.51763797, 0, -1.9318517, 48.000004, 0, -23.40001)
+
+[node name="palm-bend6" parent="IleNord/PatchesSand/Palm" instance=ExtResource("14_bb6it")]
+transform = Transform3D(0.34729642, 0, 1.9696155, 0, 2, 0, -1.9696155, 0, 0.34729642, 6.2000046, 0, 28.8)
+
+[node name="palm-detailed-bend2" parent="IleNord/PatchesSand/Palm" instance=ExtResource("15_l4tt5")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -30.300003, 0, 15.799999)
+
+[node name="palm-bend2" parent="IleNord/PatchesSand/Palm" instance=ExtResource("14_bb6it")]
+transform = Transform3D(1.8126155, 0, -0.84523654, 0, 2, 0, 0.84523654, 0, 1.8126155, -28.5, 0, 4.199997)
+
+[node name="palm-detailed-bend8" parent="IleNord/PatchesSand/Palm" instance=ExtResource("15_l4tt5")]
+transform = Transform3D(-0.5176381, 0, -1.9318516, 0, 2, 0, 1.9318516, 0, -0.5176381, -19.300003, 0, 11.5)
+
+[node name="palm-detailed-bend4" parent="IleNord/PatchesSand/Palm" instance=ExtResource("15_l4tt5")]
+transform = Transform3D(1.2855753, 0, -1.5320889, 0, 2, 0, 1.5320889, 0, 1.2855753, -21.899994, 0, -10.600006)
+
+[node name="palm-detailed-bend5" parent="IleNord/PatchesSand/Palm" instance=ExtResource("15_l4tt5")]
+transform = Transform3D(1.2855753, 0, -1.5320889, 0, 2, 0, 1.5320889, 0, 1.2855753, -8.599991, 0, -33)
+
+[node name="palm-detailed-bend3" parent="IleNord/PatchesSand/Palm" instance=ExtResource("15_l4tt5")]
+transform = Transform3D(1.1471529, 0, 1.6383041, 0, 2, 0, -1.6383041, 0, 1.1471529, -10.200005, 0, 23.900002)
+
+[node name="palm-detailed-bend6" parent="IleNord/PatchesSand/Palm" instance=ExtResource("15_l4tt5")]
+transform = Transform3D(-1.4142134, 0, 1.4142137, 0, 2, 0, -1.4142137, 0, -1.4142134, 42.6, 0, 23.2)
+
+[node name="palm-detailed-bend7" parent="IleNord/PatchesSand/Palm" instance=ExtResource("15_l4tt5")]
+transform = Transform3D(-1.4142134, 0, 1.4142137, 0, 2, 0, -1.4142137, 0, -1.4142134, 42.999992, 0, -6.9000015)
+
+[node name="patch-sand2" parent="IleNord/PatchesSand" instance=ExtResource("21_ja4ei")]
+transform = Transform3D(4, 0, 0, 0, 3, 0, 0, 0, 4, -18.800003, 0, 16.5)
+
+[node name="patch-sand3" parent="IleNord/PatchesSand" instance=ExtResource("21_ja4ei")]
+transform = Transform3D(2.828427, 0, 2.828427, 0, 3, 0, -2.828427, 0, 2.828427, -20.100006, 0, 0.099998474)
+
+[node name="patch-sand4" parent="IleNord/PatchesSand" instance=ExtResource("21_ja4ei")]
+transform = Transform3D(2.2943058, 0, 3.2766082, 0, 3, 0, -3.2766082, 0, 2.2943058, -7.900009, 0, -20.299995)
+
+[node name="patch-sand5" parent="IleNord/PatchesSand" instance=ExtResource("21_ja4ei")]
+transform = Transform3D(-3.7587705, 0, 1.3680806, 0, 3, 0, -1.3680806, 0, -3.7587705, 14.399994, 0, -19.199997)
+
+[node name="patch-sand6" parent="IleNord/PatchesSand" instance=ExtResource("21_ja4ei")]
+transform = Transform3D(-3.4641018, 0, -2, 0, 3, 0, 2, 0, -3.4641018, 38.59999, 0, -18.899994)
+
+[node name="patch-sand7" parent="IleNord/PatchesSand" instance=ExtResource("21_ja4ei")]
+transform = Transform3D(3.5762787e-07, 0, 4, 0, 2.9999998, 0, -4, 0, 3.5762787e-07, 37.999992, 0, 3.5000076)
+
+[node name="patch-sand8" parent="IleNord/PatchesSand" instance=ExtResource("21_ja4ei")]
+transform = Transform3D(-3.8637033, 0, 1.0352764, 0, 2.9999995, 0, -1.0352764, 0, -3.8637033, 32.999985, 0, 19.800007)
+
+[node name="patch-sand9" parent="IleNord/PatchesSand" instance=ExtResource("21_ja4ei")]
+transform = Transform3D(3.7587705, 0, 1.3680805, 0, 2.9999993, 0, -1.3680805, 0, 3.7587705, 14.79998, 0, 23.000004)
+
+[node name="patch-sand10" parent="IleNord/PatchesSand" instance=ExtResource("21_ja4ei")]
+transform = Transform3D(-3.276608, 0, 2.2943056, 0, 2.999999, 0, -2.2943056, 0, -3.276608, -1.1000137, 0, 21.100006)
+
+[node name="patch-sand11" parent="IleNord/PatchesSand" instance=ExtResource("21_ja4ei")]
+transform = Transform3D(-3.276608, 0, 2.2943056, 0, 2.999999, 0, -2.2943056, 0, -3.276608, -1.1000137, 0, 21.100006)
