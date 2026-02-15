@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bklj07teww5qu"]
+[gd_scene load_steps=24 format=3 uid="uid://bklj07teww5qu"]
 
 [ext_resource type="PackedScene" uid="uid://d1gmtkr315dft" path="res://assets/mine/twin-island-80.glb" id="2_fueny"]
 [ext_resource type="PackedScene" uid="uid://cmvqtrxe3klxe" path="res://scenes/water/WaterPlane.tscn" id="2_i67y0"]
@@ -9,11 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://n05ena6gswui" path="res://assets/pirate/patch-grass.glb" id="7_wbovk"]
 [ext_resource type="PackedScene" uid="uid://cd4y7jmjyi3iv" path="res://assets/pirate/flat-grass.glb" id="8_6m50f"]
 [ext_resource type="PackedScene" uid="uid://cg8cslgj6gv4u" path="res://scenes/twin-island/twin_small_round_wood_house.tscn" id="9_pe2l3"]
-[ext_resource type="PackedScene" uid="uid://dbncpesyqlrv8" path="res://assets/castle/tree-large-simplified.glb" id="10_fm226"]
+[ext_resource type="PackedScene" uid="uid://yvfuotovgmwf" path="res://assets/castle/tree-large-simplified.glb" id="10_fm226"]
 [ext_resource type="PackedScene" uid="uid://wn3wekt75te8" path="res://scenes/twin-island/twin_auberge.tscn" id="10_vymvp"]
 [ext_resource type="PackedScene" uid="uid://bb68d3ryhkrjf" path="res://scenes/twin-island/twin_house_red.tscn" id="11_dfefn"]
 [ext_resource type="PackedScene" uid="uid://dredq2oktkwv5" path="res://assets/castle/tree-trunk.glb" id="11_xkxc6"]
-[ext_resource type="PackedScene" uid="uid://bgq0gom3jcd8q" path="res://assets/castle/tree-log.glb" id="12_bb6it"]
+[ext_resource type="PackedScene" uid="uid://b5dadoewilgww" path="res://assets/castle/tree-log.glb" id="12_bb6it"]
 [ext_resource type="PackedScene" uid="uid://m5x8alnnip8v" path="res://assets/pirate/plant/grass-patch.glb" id="13_l4tt5"]
 [ext_resource type="PackedScene" uid="uid://daqr6vbted8ij" path="res://assets/pirate/plant/palm-bend.glb" id="14_bb6it"]
 [ext_resource type="PackedScene" uid="uid://bagjq72im08wg" path="res://assets/pirate/plant/grass-plant.glb" id="14_ja4ei"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://c2yiyl0xgkqrv" path="res://assets/pirate/boats/ship-wreck.glb" id="20_l4tt5"]
 [ext_resource type="PackedScene" uid="uid://o5kn2mqp4v6q" path="res://assets/pirate/structures/platform-planks.glb" id="21_0e3yf"]
 [ext_resource type="PackedScene" uid="uid://bp3xi5gi2bfo8" path="res://assets/pirate/patch-sand.glb" id="21_ja4ei"]
+[ext_resource type="PackedScene" uid="uid://qxmpaut8p11d" path="res://scenes/twin-island/twin_port.tscn" id="23_x3u0v"]
 
 [node name="Twin-Island" type="Node3D"]
 
@@ -3845,3 +3846,6 @@ transform = Transform3D(-3.276608, 0, 2.2943056, 0, 2.999999, 0, -2.2943056, 0, 
 
 [node name="patch-sand11" parent="IleNord/PatchesSand" instance=ExtResource("21_ja4ei")]
 transform = Transform3D(-3.276608, 0, 2.2943056, 0, 2.999999, 0, -2.2943056, 0, -3.276608, -1.1000137, 0, 21.100006)
+
+[node name="Node3D" parent="." instance=ExtResource("23_x3u0v")]
+transform = Transform3D(-0.6427877, 0, -0.7660445, 0, 1, 0, 0.7660445, 0, -0.6427877, 45.399998, -0.6000001, 60.699997)

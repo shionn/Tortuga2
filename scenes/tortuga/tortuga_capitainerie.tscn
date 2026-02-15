@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c5o4y67ic3vrp" path="res://assets/character/base/character-male-b.glb" id="3_0xb0s"]
 [ext_resource type="PackedScene" uid="uid://bw666kf55m31r" path="res://assets/pirate/structures/structure-platform-dock-long.glb" id="3_g6mws"]
 [ext_resource type="PackedScene" uid="uid://brinvk6rny52a" path="res://assets/town/walls/wall-arch.glb" id="4_7masi"]
-[ext_resource type="PackedScene" uid="uid://dvn116r1fxtxs" path="res://assets/town/road/road-wood.glb" id="4_7uxyy"]
+[ext_resource type="PackedScene" uid="uid://dhmb74ebxam80" path="res://assets/town/road/road-wood.glb" id="4_7uxyy"]
 [ext_resource type="Script" uid="uid://bgr31sneitoih" path="res://scripts/tortuga/capitainerie/pnj-capitainerie-garde.gd" id="4_yhvfd"]
 [ext_resource type="PackedScene" uid="uid://diuwrvkauw1fs" path="res://assets/town/walls/wall.glb" id="5_7uxyy"]
 [ext_resource type="PackedScene" uid="uid://bpjhrdyngxsjn" path="res://assets/town/fence-hedge/fence.glb" id="5_gfsu3"]
@@ -26,7 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://c31gwhnlljam8" path="res://assets/town/walls/wall-wood-detail-cross.glb" id="9_o6ujy"]
 [ext_resource type="PackedScene" uid="uid://dw63io15l5ks4" path="res://assets/nature/grass/grass.glb" id="10_0bq2k"]
 [ext_resource type="PackedScene" uid="uid://eflbjn4io8m2" path="res://assets/town/stairs/stairs-wide-wood-handrail.glb" id="10_o6ujy"]
-[ext_resource type="PackedScene" uid="uid://f25oaswt3cuq" path="res://assets/pirate/props/barrel.glb" id="11_gbaxo"]
+[ext_resource type="PackedScene" uid="uid://8jy5p5qxka08" path="res://assets/pirate/props/barrel.glb" id="11_gbaxo"]
 [ext_resource type="PackedScene" uid="uid://b5xtrnp1f2eg7" path="res://assets/pirate/props/bottle.glb" id="12_bdrwx"]
 [ext_resource type="PackedScene" uid="uid://ee36rqpiuhht" path="res://assets/town/walls/wall-wood-detail-horizontal.glb" id="12_im17d"]
 [ext_resource type="PackedScene" uid="uid://rht7nkabco3w" path="res://assets/pirate/props/chest-to-remove.glb" id="13_7p6oj"]
@@ -38,8 +38,8 @@
 [ext_resource type="PackedScene" uid="uid://c3kfygcrdkb66" path="res://assets/town/roof/roof-flat.glb" id="17_16yrr"]
 [ext_resource type="PackedScene" uid="uid://g11svthqgtcs" path="res://assets/town/banner-green.glb" id="17_ttdk3"]
 [ext_resource type="PackedScene" uid="uid://cgwwol2ja1lfe" path="res://assets/town/props/overhang.glb" id="18_s634d"]
-[ext_resource type="PackedScene" uid="uid://dx4s7axo4o001" path="res://assets/town/props/stall.glb" id="19_y4ccv"]
-[ext_resource type="PackedScene" uid="uid://bkylul71s3oe7" path="res://assets/town/props/stall-bench.glb" id="21_kugcr"]
+[ext_resource type="PackedScene" uid="uid://cs3boqt0gh4up" path="res://assets/town/props/stall.glb" id="19_y4ccv"]
+[ext_resource type="PackedScene" uid="uid://trqh3ys3a2lu" path="res://assets/town/props/stall-bench.glb" id="21_kugcr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v60b6"]
 radius = 0.4
