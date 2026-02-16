@@ -109,43 +109,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1, -2, -1)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1, -2, -5)
 
 [node name="road2" parent="Base" instance=ExtResource("2_g6mws")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -0.007826611, 2, 6.0133905)
-
-[node name="road3" parent="Base" instance=ExtResource("2_g6mws")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -0.007826611, 2, 2.0133908)
-
-[node name="road4" parent="Base" instance=ExtResource("2_g6mws")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -0.007826611, 2, -1.9866092)
-
-[node name="road10" parent="Base" instance=ExtResource("2_g6mws")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -0.007826611, 2, -1.9866092)
-
-[node name="road5" parent="Base" instance=ExtResource("2_g6mws")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -0.007826611, 2, -5.9866095)
-
-[node name="road6" parent="Base" instance=ExtResource("2_g6mws")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -4.007827, 2, 6.0133905)
-
-[node name="road7" parent="Base" instance=ExtResource("2_g6mws")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -4.007827, 2, 2.0133908)
-
-[node name="road8" parent="Base" instance=ExtResource("2_g6mws")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -4.007827, 2, -1.9866092)
-
-[node name="road9" parent="Base" instance=ExtResource("2_g6mws")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -4.007827, 2, -5.9866095)
-
-[node name="road11" parent="Base" instance=ExtResource("2_g6mws")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -8.007827, 2, 6.0133905)
-
-[node name="road12" parent="Base" instance=ExtResource("2_g6mws")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -8.007827, 2, 2.0133908)
-
-[node name="road13" parent="Base" instance=ExtResource("2_g6mws")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -8.007827, 2, -1.9866092)
-
-[node name="road14" parent="Base" instance=ExtResource("2_g6mws")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -8.007827, 2, -5.9866095)
+transform = Transform3D(12, 0, 0, 0, 4, 0, 0, 0, 16, -4.007827, 2, 0.013390541)
 
 [node name="wall-arch-top13" parent="Base" instance=ExtResource("1_kxu0y")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1, 0, 7)
