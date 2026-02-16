@@ -1,5 +1,7 @@
 extends "res://scripts/pnj.gd"
 
+const quest4_enable = false
+
 func on_interact() -> void:
 	gui.open_dialog_next(Dialog.pnjSay(self,_TEXT)
 		.option_search_forbid_fruit()
@@ -17,7 +19,14 @@ func on_interact() -> void:
 		.option_dialog("Le Bateau",
 			Dialog.playerSay(player, "J’ai besoin de prendre le bateau pour explorer les îles alentour.")
 				.next(Dialog.pnjSay(self,_TEXT_BATEAU)),
-			func(): return bag.contain(Bag.ParcheminHungConnut)
+			func(): return bag.contain(Bag.ParcheminHungConnut) and not quest4_enable
+		)
+		.option_dialog("Le Bateau",
+			Dialog.playerSay(player, "J’ai besoin de prendre le bateau pour explorer les îles alentour.")
+				.next(Dialog.pnjSay(self,_TEXT_BATEAU_1)
+					.next(Dialog.pnjSay(self, _TEXT_BATEAU_2)
+						.on_close(_start_search_equip))),
+			func(): return bag.contain(Bag.ParcheminHungConnut) and quest4_enable
 		)
 	)
 
@@ -36,6 +45,9 @@ func on_item_drop(item : Item) -> void:
 		bag.unloot(Bag.BiereRousseDeEve)
 	else : 
 		super.on_item_drop(item)
+
+func _start_search_equip() -> void :
+	pass
 
 const _TEXT = """Bonjour, 
 
@@ -57,3 +69,15 @@ Au fait, je t’ai tamponné ton pass, tu peux utiliser la barque."""
 const _TEXT_BATEAU = """Tu ne peux pas prendre le bateau seul. Il te faut un équipage, il va te falloir du temps pour le rassembler.
 
 Félicitation vous avez accomplis la quête de hung connut. Pour prouver que vous avez fini cette quête reporter le code [color=red]Par ma Voile[/color] en message privé dans discord à Rurick alias Shionn."""
+
+const _TEXT_BATEAU_1 = """Tu ne peux pas prendre le bateau seul. Il te faut un équipage. Malheureusement aucun équipage n'est disponible actuellement. 
+
+Il faut que tu recrutes toi-même ton équipage."""
+
+const _TEXT_BATEAU_2 = """Il te faut : 
+[ul]
+- Un cartographe, quelqu'un de suffisamment compétent pour lire et faire des cartes.
+- Un navigateur, avec de la bouteille, qui connaît bien ces eaux et ces pièges.
+- Un éclaireur, pour explorer les îles avant toi et savoir où tu mets les pieds.
+- Un chef d'équipage, pour tenir tout ce monde et qu'il ne fasse pas de connerie. 
+[/ul]"""
