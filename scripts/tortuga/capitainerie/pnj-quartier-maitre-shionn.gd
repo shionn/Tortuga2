@@ -1,6 +1,6 @@
 extends "res://scripts/pnj.gd"
 
-const quest4_enable = true
+const quest4_enable = false
 
 func on_interact() -> void:
 	gui.open_dialog_next(Dialog.pnjSay(self,_TEXT)
