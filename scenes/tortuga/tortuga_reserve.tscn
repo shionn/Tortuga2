@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bevin6vaaorie" path="res://assets/town/walls/wall-wood-doorway-square.glb" id="2_2nuu8"]
 [ext_resource type="PackedScene" uid="uid://dx1tc31e5b53p" path="res://assets/town/walls/wall-wood-corner-edge.glb" id="3_gka7l"]
 [ext_resource type="PackedScene" uid="uid://jaxfuj2q0ejy" path="res://assets/town/walls/wall-wood-window-round.glb" id="4_y5lmp"]
-[ext_resource type="PackedScene" uid="uid://f25oaswt3cuq" path="res://assets/pirate/props/barrel.glb" id="5_1bg1c"]
+[ext_resource type="PackedScene" uid="uid://8jy5p5qxka08" path="res://assets/pirate/props/barrel.glb" id="5_1bg1c"]
 [ext_resource type="PackedScene" uid="uid://bl8gqk34ub2cy" path="res://assets/pirate/props/crate-bottles.glb" id="6_btfhv"]
 [ext_resource type="PackedScene" uid="uid://rht7nkabco3w" path="res://assets/pirate/props/chest-to-remove.glb" id="7_r2p6a"]
 [ext_resource type="PackedScene" uid="uid://b5xtrnp1f2eg7" path="res://assets/pirate/props/bottle.glb" id="8_tbbpj"]
