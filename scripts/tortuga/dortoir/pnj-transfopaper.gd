@@ -6,7 +6,19 @@ func _ready() -> void:
 	_sleep()
 
 func on_interact() -> void:
-	_awake()
+	if tags.have(Tags.FOUND_CARTOGRAPH) : 
+		gui.open_dialog_next(Dialog.pnjSay(self, _TEXT_AFTER_RECRUTEMENT))
+	elif tags.have(Tags.TRANSFOPAPER_SOBERING) :
+		gui.open_dialog_next(Dialog.pnjSay(self, _TEXT_SOBRE)
+			.option_dialog(Dialog.SEARCH_CARTOGRAPH[0], Dialog.playerSay(player, Dialog.SEARCH_CARTOGRAPH[1]))
+		)
+	else :
+		gui.open_dialog_next(Dialog.pnjSay(self, _TEXT_IVRE)
+			.on_close(func() : tags.add(Tags.SEARCH_SOBERING_POTION)))
+
+func on_item_drop(_item : Item) -> void:
+	pass
+
 
 func _sleep() -> void:
 	self.rotation.y = 0
@@ -27,3 +39,15 @@ func _awake() -> void:
 	var idle = _animation.get_animation("idle")
 	idle.loop_mode = Animation.LOOP_LINEAR
 	_animation.play("idle")
+
+const _TEXT_IVRE = """ZZZzzz
+Laisse-moi tranquille, j'ai trop bu hier soir...
+ZZZzzz"""
+
+const _TEXT_SOBRE = """Merci, ca va mieux.
+
+Bong sang de salerpilopette, tu n'aurais pas vu un carnet dans le coin ?"""
+
+const _TEXT_AFTER_RECRUTEMENT = """J’ai hâte de quitter l'île pour montrer mes talents dans d'autres auberges. 
+
+Quand est-ce qu’on lève l'ancre ?"""

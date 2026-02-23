@@ -34,7 +34,7 @@
 [ext_resource type="Script" uid="uid://b6m4fy6hh0b85" path="res://scripts/tortuga/auberge/auberge-menu.gd" id="15_pcc0y"]
 [ext_resource type="PackedScene" uid="uid://bl8gqk34ub2cy" path="res://assets/pirate/props/crate-bottles.glb" id="16_0avcf"]
 [ext_resource type="PackedScene" uid="uid://b5xtrnp1f2eg7" path="res://assets/pirate/props/bottle.glb" id="18_css0i"]
-[ext_resource type="PackedScene" uid="uid://dvn116r1fxtxs" path="res://assets/town/road/road-wood.glb" id="19_css0i"]
+[ext_resource type="PackedScene" uid="uid://dhmb74ebxam80" path="res://assets/town/road/road-wood.glb" id="19_css0i"]
 [ext_resource type="Script" uid="uid://vrseuhaxautc" path="res://scripts/fix_color.gd" id="20_qc35t"]
 [ext_resource type="PackedScene" uid="uid://ckl0cxjsbj1sn" path="res://assets/town/roof/roof-corner-round.glb" id="22_hij4y"]
 [ext_resource type="PackedScene" uid="uid://ck66mrk1gxs6f" path="res://assets/town/roof/roof-corner-inner.glb" id="23_kj4nn"]

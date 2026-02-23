@@ -76,6 +76,10 @@ const NO_WIND : Array[String] = ["Absence du vent ?", "Il n’y a plus de vent."
 Ce n’est pas la première fois que ca arrive. Je ne sais pas comment mais le Capitaine a réussi à faire revenir les vents la dernière fois que cela s'était produit."""]
 static func NO_WIND_CONDITION(_pnj:PNJ) : return func(): return _pnj.tags.have(Tags.SEARCH_WIND) and not _pnj.tags.have(Tags.WIND_BLOWING)
 
+const SEARCH_CARTOGRAPH: Array[String] = ["Cartographe ?", "Pour explorer les îles alentour, je cherche un cartographe. Est-ce que cela t'intéresse ?",
+"Un cartographe ? ", "Le seul cartographe que je connaisse c’est Zakari. Tu le trouveras probablement dans le dortoir. Collé à sa lunette."]
+static func SEARCH_CARTOGRAPH_CONDITION(_pnj:PNJ) : return func(): return _pnj.tags.have(Tags.SEARCH_CARTOGRAPH) and not _pnj.tags.have(Tags.FOUND_CARTOGRAPH)
+
 func option_search_forbid_fruit()                  -> Dialog : return _option_default(SEARCH_FORBID_FRUIT_CONDITION(pnj),          SEARCH_FORBID_FRUIT)
 func option_search_forbid_fruit_montain()          -> Dialog : return _option_default(SEARCH_FORBID_FRUIT_MOUNTAIN_CONDITION(pnj), SEARCH_FORBID_FRUIT_MOUNTAIN)
 func option_search_forbid_fruit_montain_teleport() -> Dialog : return _option_default(SEARCH_TELEPORT_CRYSTAL_CONDITION(pnj),      SEARCH_TELEPORT_CRYSTAL)
@@ -83,6 +87,7 @@ func option_hung_connut_search_charpentier()       -> Dialog : return _option_de
 func option_hung_connut_search_wood()              -> Dialog : return _option_default(SEARCH_WOOD_CONDITION(pnj),                  SEARCH_WOOD)
 func option_hung_connut_search_houblon()           -> Dialog : return _option_default(SEARCH_HOUBLON_CONDITION(pnj),               SEARCH_HOUBLON)
 func option_search_wind()                          -> Dialog : return _option_default(NO_WIND_CONDITION(pnj),                      NO_WIND)
+func option_search_cartograph()                    -> Dialog : return _option_default(SEARCH_CARTOGRAPH_CONDITION(pnj),            SEARCH_CARTOGRAPH)
 
 
 

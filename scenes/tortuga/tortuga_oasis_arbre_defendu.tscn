@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://c4nbtbsyny7lm" path="res://assets/nature/plant/tree/tree_default_dark.glb" id="8_fy4j8"]
 [ext_resource type="PackedScene" uid="uid://bb747ld75ixfs" path="res://assets/nature/plant/tree/tree_default_fall.glb" id="9_l402p"]
 [ext_resource type="PackedScene" uid="uid://n05ena6gswui" path="res://assets/pirate/patch-grass.glb" id="10_51rgh"]
-[ext_resource type="PackedScene" uid="uid://bvyn2cpekf7ag" path="res://assets/pirate/patch-sand.glb" id="11_q33gx"]
+[ext_resource type="PackedScene" uid="uid://bp3xi5gi2bfo8" path="res://assets/pirate/patch-sand.glb" id="11_q33gx"]
 [ext_resource type="PackedScene" uid="uid://crylsg6rmjh6j" path="res://assets/pirate/structures/structure-platform-small.glb" id="12_0nkl1"]
 [ext_resource type="PackedScene" uid="uid://cj2nivoroln0s" path="res://assets/nature/plant/crops/crops_bambooStageB.glb" id="13_nampf"]
 

@@ -5,7 +5,7 @@ func _ready() -> void:
 	FixColor.fix(self)
 
 func on_interact() -> void:
-	if player.tags.have(Tags.FORBID_FRUIT_SEARCH) && !bag.contain(Bag.Melon):
+	if player.tags.have(Tags.SEARCH_SOBERING_POTION) && !bag.contain(Bag.Melon):
 		self.visible = false
 		bag.loot(Bag.Melon)
 	else :
