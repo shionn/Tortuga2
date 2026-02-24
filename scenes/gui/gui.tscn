@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=63 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://scripts/gui/gui.gd" id="1_0fbet"]
 [ext_resource type="Script" uid="uid://bc3yfthowjjmn" path="res://scripts/gui/score.gd" id="2_eaefa"]
@@ -55,6 +55,7 @@
 [ext_resource type="Texture2D" uid="uid://pee0tx7jw7my" path="res://assets/gui/skullhand.png" id="41_8rxp0"]
 [ext_resource type="Script" uid="uid://1gaom75emvkt" path="res://scripts/gui/cheat.gd" id="43_x3l1j"]
 [ext_resource type="Texture2D" uid="uid://cgedwc15v581d" path="res://assets/gui/papers/paper-09.png" id="45_bbm65"]
+[ext_resource type="Texture2D" uid="uid://b33pb01m44r50" path="res://assets/gui/fanatisy-magic-set/book-h-48.png" id="48_5llql"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rxp0"]
 bg_color = Color(1, 0.94509804, 0.8235294, 1)
@@ -1040,6 +1041,17 @@ Un mojito frais
 [/ul]
 "
 
+[node name="LivreTransfo" type="TextureButton" parent="Items"]
+layout_mode = 0
+offset_left = -371.0
+offset_top = 352.0
+offset_right = -323.0
+offset_bottom = 400.0
+tooltip_text = "Livre Kerim Loralis"
+texture_normal = ExtResource("48_5llql")
+script = ExtResource("11_s1h2m")
+description = "C'est probablement le livre de Kerim Loralis."
+
 [node name="Melon" type="TextureButton" parent="Items"]
 layout_mode = 0
 offset_left = 1.0
@@ -1178,8 +1190,8 @@ offset_bottom = 62.0
 tooltip_text = "Parchemin de HungConnu"
 texture_normal = ExtResource("45_bbm65")
 script = ExtResource("11_s1h2m")
-description = "Je suis sur l’île depuis un moment, les tremblements de Terre sont récurrents. Je dois cacher mon Or. Un matin, depuis la Montagne je les ai vue au loins elles sont apparue pendant la Nuit, elles n’y étaient pas hier, quelqu’un semble jouer avec mes nerfs. Mais ils n’auront pas mon Or, je vais le chaché sur toutes ces iles. Je cacherais les instructions sur ma flasque de Rhum ! 
-signé Hung Connut."
+description = "Sur le parchemin il est écrit :
+[i]Je suis sur l’île depuis un moment, les tremblements de Terre sont récurrents. Je dois cacher mon Or. Un matin, depuis la Montagne je les ai vue au loins elles sont apparue pendant la Nuit, elles n’y étaient pas hier, quelqu’un semble jouer avec mes nerfs. Mais ils n’auront pas mon Or, je vais le chaché sur toutes ces iles. Je cacherais les instructions sur mes flasques de Rhum !				signé Hung Connut.[/i]"
 
 [node name="PasseBarque" type="TextureButton" parent="Items"]
 layout_mode = 0

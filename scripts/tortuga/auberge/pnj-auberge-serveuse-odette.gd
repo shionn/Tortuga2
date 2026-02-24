@@ -12,6 +12,7 @@ func on_interact() -> void:
 				.next(Dialog.pnjSay(self, _SEARCH_HOUBLON)),
 			func (): return tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON) and not bag.contain(Bag.Houblon))
 		.option_search_wind()
+		.option_search_cartograph()
 	)
 
 func on_item_drop(item : Item) -> void:

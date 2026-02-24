@@ -9,6 +9,7 @@ func on_interact() -> void:
 		.option_hung_connut_search_wood()
 		.option_hung_connut_search_houblon()
 		.option_search_wind()
+		.option_search_cartograph()
 	)
 
 const _TEXT = """Qu'est ce que tu me veux ? 

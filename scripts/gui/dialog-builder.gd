@@ -76,8 +76,10 @@ const NO_WIND : Array[String] = ["Absence du vent ?", "Il n’y a plus de vent."
 Ce n’est pas la première fois que ca arrive. Je ne sais pas comment mais le Capitaine a réussi à faire revenir les vents la dernière fois que cela s'était produit."""]
 static func NO_WIND_CONDITION(_pnj:PNJ) : return func(): return _pnj.tags.have(Tags.SEARCH_WIND) and not _pnj.tags.have(Tags.WIND_BLOWING)
 
-const SEARCH_CARTOGRAPH: Array[String] = ["Cartographe ?", "Pour explorer les îles alentour, je cherche un cartographe. Est-ce que cela t'intéresse ?",
-"Un cartographe ? ", "Le seul cartographe que je connaisse c’est Zakari. Tu le trouveras probablement dans le dortoir. Collé à sa lunette."]
+const SEARCH_CARTOGRAPH: Array[String] = ["Cartographe ?", "Nous devons explorer les îles alentour, il nous faut un cartographe. 
+Est-ce que cela t'intéresse de nous rejoindre ?",
+"Désolé mais je n’y connais rien en cartographie en revanche, il y a un bon cartographe sur Tortuga, c’est Zakari. 
+Tu le trouveras probablement dans le dortoir. Collé à sa lunette."]
 static func SEARCH_CARTOGRAPH_CONDITION(_pnj:PNJ) : return func(): return _pnj.tags.have(Tags.SEARCH_CARTOGRAPH) and not _pnj.tags.have(Tags.FOUND_CARTOGRAPH)
 
 func option_search_forbid_fruit()                  -> Dialog : return _option_default(SEARCH_FORBID_FRUIT_CONDITION(pnj),          SEARCH_FORBID_FRUIT)

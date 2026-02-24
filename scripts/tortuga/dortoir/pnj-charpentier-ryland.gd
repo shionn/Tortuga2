@@ -23,6 +23,7 @@ func on_interact() -> void:
 		)
 		.option_hung_connut_search_houblon()
 		.option_search_wind()
+		.option_search_cartograph()
 	)
 
 func on_item_drop(_item : Item) -> void:

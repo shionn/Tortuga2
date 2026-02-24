@@ -16,6 +16,7 @@ func on_interact() -> void:
 			Dialog.playerSay(player, "Est-ce que tu as une pioche ?")
 				.next(Dialog.pnjSay(self, _TEXT_PICKAXE).on_close(func():tags.add(Tags.ALLOW_PICKAXE))),
 			func() : return bag.contain(Bag.ListInvocationVent) and not bag.contain(Bag.Pioche))
+		.option_search_cartograph()
 	)
 
 const _TEXT = """Bonjour. 

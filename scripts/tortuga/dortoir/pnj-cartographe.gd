@@ -19,6 +19,10 @@ func on_interact() -> void:
 		.option_hung_connut_search_wood()
 		.option_hung_connut_search_houblon()
 		.option_search_wind()
+		.option_dialog(Dialog.SEARCH_CARTOGRAPH[0], 
+			Dialog.playerSay(player, Dialog.SEARCH_CARTOGRAPH[1])
+				.next(Dialog.pnjSay(self, _TEXT_SEARCH_CARTOGRAPH)),
+			Dialog.SEARCH_CARTOGRAPH_CONDITION(self))
 	)
 
 func on_item_drop(item : Item) -> void:
@@ -72,3 +76,6 @@ Tiens voilà une carte complète."""
 const _TEXT_CRISTAL_TP = """Ho bravo tu as réussi à trouvé ce cristal. C’est bien celui qu’on cherchait. Les gardes ne sont vraiment pas doués. 
 
 Qu’attend tu pour aller l’essayer sur la pierre dans la forêt au nord ?"""
+
+const _TEXT_SEARCH_CARTOGRAPH = """Désolé je ne suis pas intéressé. Whisp à besoin de moi, sinon il va se perdre. 
+En plus j’ai encore du travail sur Tortuga, certains endroits sont encore mal cartographiés."""

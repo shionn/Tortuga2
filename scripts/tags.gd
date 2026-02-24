@@ -39,6 +39,7 @@ const FOUND_NAVIGATEUR = "035"
 const FOUND_ECLAIREUR = "036"
 const FOUND_QUARTIER_MAITRE = "037"
 const TRANSFOPAPER_SOBERING = "038"
+const SEARCH_BOOK_TRANSFOPAPER = "039"
 
 
 var tags : Array[String] = []

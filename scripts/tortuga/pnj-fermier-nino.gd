@@ -27,6 +27,7 @@ func on_interact() -> void:
 			func(): return player.tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON) and not bag.contain(Bag.Houblon)
 		)
 		.option_search_wind()
+		.option_search_cartograph()
 	)
 
 

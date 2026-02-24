@@ -21,6 +21,7 @@ func on_interact() -> void:
 				.next(Dialog.pnjSay(self, _TEXT_SOBERING_ALREADY_DONE)),
 			func(): return tags.have(Tags.SEARCH_SOBERING_POTION) and tags.have(Tags.BRASSERIE_HAVE_SOBERING_POTION)
 		)
+		.option_search_cartograph()
 	)
 
 func on_item_drop(item : Item) -> void:
