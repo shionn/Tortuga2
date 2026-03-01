@@ -14,6 +14,12 @@ func on_interact() -> void:
 		gui.open_dialog_next(Dialog.pnjSay(self, _TEXT_IVRE)
 			.on_close(func() : tags.add(Tags.SEARCH_SOBERING_POTION)))
 
+func on_tag_change() -> void:
+	if tags.have(Tags.TRANSFOPAPER_SOBERING) :
+		_awake()
+	else :
+		_sleep()
+
 func on_item_drop(_item : Item) -> void:
 	if _item.name == Bag.PotionDegrisement and not tags.have(Tags.TRANSFOPAPER_SOBERING):
 		tags.add(Tags.TRANSFOPAPER_SOBERING)
@@ -23,7 +29,7 @@ func on_item_drop(_item : Item) -> void:
 		gui.open_dialog_next(Dialog.pnjSay(self, _TEXT_RETURN_BOOK_1)
 			.next(Dialog.playerSay(player, _TEXT_RETURN_BOOK_2)
 				.next(Dialog.pnjSay(self, _TEXT_RETURN_BOOK_3)
-					.next(Dialog.playerSay(player, Dialog.SEARCH_CARTOGRAPH[0])
+					.next(Dialog.playerSay(player, Dialog.SEARCH_CARTOGRAPH[1])
 						.next(Dialog.pnjSay(self, _TEXT_RETURN_BOOK_5)
 							.on_close(_endBookReturn))))))
 	else :
@@ -35,12 +41,16 @@ func _dialog_sobre() -> void:
 			.next(Dialog.pnjSay(self, _TEXT_SEARCH_CARTOGRAPH)
 				.next(Dialog.playerSay(player, _TEXT_ASK_ABOUT_BOOK)
 					.next(Dialog.pnjSay(self, _TEXT_ASK_ABOUT_BOOK_ANSWER).on_close(
-						func() : tags.add(Tags.SEARCH_BOOK_TRANSFOPAPER)))))))
+						func() : tags.add(Tags.SEARCH_BOOK_TRANSFOPAPER))))),
+			Dialog.SEARCH_CARTOGRAPH_CONDITION(self)
+		))
 
 func _endBookReturn() -> void:
 	bag.unloot(Bag.LivreTransfo)
 	tags.remove(Tags.SEARCH_CARTOGRAPH)
 	tags.remove(Tags.SEARCH_BOOK_TRANSFOPAPER)
+	tags.remove(Tags.KNOW_MAYA_BOOK_TRANSFOPAPER)
+	tags.remove(Tags.KNOW_MAYA_THROW_BOOK_TRANSFOPAPER)
 	tags.add(Tags.FOUND_CARTOGRAPH)
 
 func _sleep() -> void:
@@ -69,7 +79,7 @@ ZZZzzz"""
 
 const _TEXT_SOBRE = """Merci, ca va mieux.
 
-Bong sang de salerpilopette, tu n'aurais pas vu un carnet dans le coin ?"""
+Bon sang de salerpilopette, tu n'aurais pas vu un carnet dans le coin ?"""
 
 const _TEXT_SEARCH_CARTOGRAPH = """Un cartographe ? N’importe qui est capable de lire une carte ou de faire une carte c’est un jeu d’enfant. 
 
@@ -85,7 +95,7 @@ const _TEXT_RETURN_BOOK_1 = """Merci d'avoir retrouvé mon carnet, mais c’est 
 const _TEXT_RETURN_BOOK_2 = """J’ai retrouvé le carnet dans une flaque de vomi. """
 const _TEXT_RETURN_BOOK_3 = """Ha ben super alors, enfin au moins je l’ai maintenant. Merci.
 
-Comment je peu te remercier ?"""
+Comment puis-je te remercier ?"""
 const _TEXT_RETURN_BOOK_5 = """Vu que je suis interdit à l’auberge, et comme grâce à toi j’ai retrouvé mon livre, je n’ai plus aucun intérêt à rester sur l'île.
 
 Je t’accompagne avec plaisir."""

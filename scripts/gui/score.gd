@@ -34,6 +34,10 @@ func compute() -> void :
 	_item(Bag.TresorHungConnutNet, 2)
 	# on peu perdre 1 pt en profanant la tombe de barbe drue
 	
+	#quete4
+	_tag(Tags.TRANSFOPAPER_SOBERING, 1)
+	
+	
 	self.text = "Score : "+str(value)
 
 func _item(item : String, inc : int) -> void:

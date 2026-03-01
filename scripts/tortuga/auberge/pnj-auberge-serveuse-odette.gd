@@ -13,6 +13,10 @@ func on_interact() -> void:
 			func (): return tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON) and not bag.contain(Bag.Houblon))
 		.option_search_wind()
 		.option_search_cartograph()
+		.option_dialog(Dialog.SEARCH_BOOK[0], 
+			Dialog.playerSay(player, Dialog.SEARCH_BOOK[1])
+				.next(Dialog.pnjSay(self, _TEXT_BOOK)),
+			Dialog.SEARCH_BOOK_CONDITION(self))
 	)
 
 func on_item_drop(item : Item) -> void:
@@ -37,3 +41,7 @@ La bière rousse de Eve est la meilleure, tout le monde en raffole, surtout Ruri
 const _TEXT_ON_OMELETTE = """Les omelettes aux champignons sont une de nos spécialités, malheureusement nous manquons de champignons en ce moment. 
 
 D’ailleurs Nino, le fermier, en raffole, je ne sais pas comment il va le prendre quand il le saura le pauvre."""
+
+const _TEXT_BOOK = """Je n'étais pas de service hier soir. 
+
+Ce matin au début de mon service, Maya était encore furieuse. Apparemment il se serait passé quelque chose hier soir mais elle ne veut pas en parler. """

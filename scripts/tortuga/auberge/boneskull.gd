@@ -17,6 +17,10 @@ func on_interact() -> void:
 				.next(Dialog.pnjSay(self, _TEXT_4).on_open(play_anim_no)),
 			func(): return bag.contain(Bag.ListInvocationVent) and not bag.contain(Bag.Ossement)
 		)
+		.option_dialog(Dialog.SEARCH_BOOK[0],
+			Dialog.playerSay(player, Dialog.SEARCH_BOOK[1])
+				.next(Dialog.pnjSay(self,_TEXT_BOOK)),
+			Dialog.SEARCH_BOOK_CONDITION(self))
 	)
 
 func on_item_drop(_item : Item) -> void:
@@ -71,3 +75,7 @@ Mais non. Je n’en veux pas..."
 
 const _TEXT_6 = "Tu vois cette main elle appartient à un autre Boneskull. À un pirate qui croyait encore que l’aventure valait tous les sacrifices... Le jour où je l’ai perdue, j’ai aussi tourné la page. J’ai fait une croix dessus... et sur ce que j’étais... sur qui j’étais... 
 La reprendre ne m’apporterait rien, à part des souvenirs que je préfère laisser au fond de la mer. Garde-la, ou rends-la aux flots. Moi, j’ai déjà avancé."
+
+const _TEXT_BOOK = "Un livre ? ça ne me dit rien. Mais j'étais bien là hier soir. 
+[rougi] 
+Mais j’ai trop honte je n’en dirai pas plus. Et en plus, Maya m’a fait promettre de ne rien dire."

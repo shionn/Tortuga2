@@ -82,6 +82,10 @@ Est-ce que cela t'intéresse de nous rejoindre ?",
 Tu le trouveras probablement dans le dortoir. Collé à sa lunette."]
 static func SEARCH_CARTOGRAPH_CONDITION(_pnj:PNJ) : return func(): return _pnj.tags.have(Tags.SEARCH_CARTOGRAPH) and not _pnj.tags.have(Tags.FOUND_CARTOGRAPH)
 
+const  SEARCH_BOOK: Array[String] = ["Livre ?", "Je cherche un livre rouge. Il appartient à Kerim Loralis. 
+Il m'a dis qu'il etais la hier soir."]
+static func SEARCH_BOOK_CONDITION(_pnj:PNJ) : return func(): return _pnj.tags.have(Tags.SEARCH_BOOK_TRANSFOPAPER) and not _pnj.bag.contain(Bag.LivreTransfo)
+
 func option_search_forbid_fruit()                  -> Dialog : return _option_default(SEARCH_FORBID_FRUIT_CONDITION(pnj),          SEARCH_FORBID_FRUIT)
 func option_search_forbid_fruit_montain()          -> Dialog : return _option_default(SEARCH_FORBID_FRUIT_MOUNTAIN_CONDITION(pnj), SEARCH_FORBID_FRUIT_MOUNTAIN)
 func option_search_forbid_fruit_montain_teleport() -> Dialog : return _option_default(SEARCH_TELEPORT_CRYSTAL_CONDITION(pnj),      SEARCH_TELEPORT_CRYSTAL)

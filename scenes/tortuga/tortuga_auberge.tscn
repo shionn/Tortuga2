@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://c8y6go07dabnn"]
+[gd_scene load_steps=65 format=3 uid="uid://c8y6go07dabnn"]
 
 [ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="1_hrd0d"]
 [ext_resource type="PackedScene" uid="uid://b5i24eo4nrue3" path="res://assets/town/walls/wall-window-shutters.glb" id="2_83rxu"]
@@ -55,6 +55,8 @@
 [ext_resource type="PackedScene" uid="uid://stlgunkahh47" path="res://assets/crafting-items/bottle-3.glb" id="40_w8jr4"]
 [ext_resource type="PackedScene" uid="uid://ctoomevb22cit" path="res://scenes/props/sign.tscn" id="43_skwom"]
 [ext_resource type="PackedScene" uid="uid://brv33ya43adf8" path="res://scenes/props/stool.tscn" id="44_o63fr"]
+[ext_resource type="PackedScene" uid="uid://nmvtvksn4a00" path="res://assets/homeinteriorassets/book-red.glb" id="56_upqv7"]
+[ext_resource type="Script" uid="uid://jacsllxwpjli" path="res://scripts/tortuga/auberge/book-transfo.gd" id="57_i3bae"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pflt5"]
 size = Vector3(0.25507814, 0.48498535, 0.2275116)
@@ -73,6 +75,9 @@ size = Vector3(0.14355469, 0.1, 0.5018921)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hxi6v"]
 size = Vector3(0.13014454, 0.14038867, 0.05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i3bae"]
+size = Vector3(0.22, 0.08, 0.33)
 
 [node name="TortugaAuberge" type="Node3D"]
 
@@ -829,3 +834,14 @@ transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, 2,
 
 [node name="chimney-top2" parent="roof" instance=ExtResource("28_07vwk")]
 transform = Transform3D(-1.2, 0, 1.8119498e-07, 0, 1.2, 0, -1.8119498e-07, 0, -1.2, -3.5, 0.7000003, -2.0000002)
+
+[node name="book-red" parent="." instance=ExtResource("56_upqv7")]
+transform = Transform3D(0.17364816, 0, 0.9848077, -0.1581139, 0.9870272, 0.027879745, -0.97203207, -0.16055307, 0.17139547, -3.890815, 0.28422844, 3.7944484)
+visible = false
+script = ExtResource("57_i3bae")
+
+[node name="Area3D" type="Area3D" parent="book-red"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="book-red/Area3D"]
+transform = Transform3D(1, 5.9604645e-08, -2.682209e-07, -4.917383e-07, 1, 5.5879354e-09, -4.917383e-07, -1.8626451e-09, 1, 0.016734123, 0.036997616, -0.0029535294)
+shape = SubResource("BoxShape3D_i3bae")

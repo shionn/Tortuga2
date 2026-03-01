@@ -15,6 +15,15 @@ func on_interact() -> void:
 			func (): return tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON) and not bag.contain(Bag.Houblon))
 		.option_search_wind()
 		.option_search_cartograph()
+		.option_dialog(Dialog.SEARCH_BOOK[0], 
+			Dialog.playerSay(player, Dialog.SEARCH_BOOK[1])
+				.next(Dialog.pnjSay(self, _TEXT_BOOK_1)
+					.option_dialog("Frapper Kerim avec le Livre", 
+						Dialog.playerSay(player, _TEXT_BOOK_2)
+							.next(Dialog.pnjSay(self, _TEXT_BOOK_3)
+								.on_close(func(): tags.add(Tags.KNOW_MAYA_THROW_BOOK_TRANSFOPAPER))),
+						func(): return tags.have(Tags.KNOW_MAYA_BOOK_TRANSFOPAPER))),
+			Dialog.SEARCH_BOOK_CONDITION(self))
 	)
 
 func on_item_drop(item : Item) -> void:
@@ -167,3 +176,14 @@ La bière rousse de Eve est la meilleure, tout le monde en raffole, surtout Ruri
 const _TEXT_ON_OMELETTE = """Les omelettes aux champignons sont une de nos spécialités, malheureusement nous manquons de champignons en ce moment. 
 
 D’ailleurs Nino, le fermier, en raffole, je ne sais pas comment il va le prendre quand il le saura le pauvre. """
+
+const _TEXT_BOOK_1 = """Hier soir ? Kerim ? Un livre ? 
+[Rougie]
+Oui Kerim est venu hier soir, mais il n'a plus le droit de revenir ici. 
+Mais je ne me souviens pas d’un livre."""
+
+const _TEXT_BOOK_2 = "Il paraît que tu l'as mis dehors hier soir en le frappant avec son livre. Est-ce que tu t’en souviens ? "
+
+const _TEXT_BOOK_3 = """Haa, oui ça me revient. Hier soir Kerim m'a foutu la honte de ma vie. Je lui ai ordonné de ne plus jamais revenir.
+[Rougie]
+J'étais furieuse j’ai pris le premier truc que j’ai trouvé, c’était peut être bien son livre, et je lui ai tapé dessus avec jusqu’à ce qu’il parte. Quand il était enfin dehors, je lui ai jeté le livre dessus."""

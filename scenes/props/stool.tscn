@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://brv33ya43adf8"]
 
-[ext_resource type="PackedScene" uid="uid://hmn0yn1hggw5" path="res://assets/town/props/stall-stool.glb" id="1_rw0pl"]
+[ext_resource type="PackedScene" uid="uid://cig66vbuajp1h" path="res://assets/town/props/stall-stool.glb" id="1_rw0pl"]
 [ext_resource type="Script" uid="uid://13ah461yh33r" path="res://scripts/props/stool.gd" id="1_u7xta"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u7xta"]
