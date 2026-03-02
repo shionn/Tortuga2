@@ -8,12 +8,18 @@ var _gui: Gui
 var close: bool = true
 var on_open_action: Callable
 var on_close_action: Callable
+var left = false
 
 static func pnjSay(_pnj: PNJ, _text: String) -> Dialog :
 	var d = Dialog.new()
 	d.pnj = _pnj
 	d._gui = _pnj.gui
 	d.text = _text
+	return d
+
+static func pnjSayLeft(_pnj: PNJ, _text: String) -> Dialog :
+	var d = pnjSay(_pnj, _text)
+	d.left = true
 	return d
 
 static func playerSay(_player: Player,_text: String) -> Dialog:

@@ -22,9 +22,7 @@ func on_tag_change() -> void:
 
 func on_item_drop(_item : Item) -> void:
 	if _item.name == Bag.PotionDegrisement and not tags.have(Tags.TRANSFOPAPER_SOBERING):
-		tags.add(Tags.TRANSFOPAPER_SOBERING)
-		bag.unloot(Bag.PotionDegrisement)
-		_dialog_sobre()
+		gui.doTransition(_sobering)
 	elif _item.name == Bag.LivreTransfo :
 		gui.open_dialog_next(Dialog.pnjSay(self, _TEXT_RETURN_BOOK_1)
 			.next(Dialog.playerSay(player, _TEXT_RETURN_BOOK_2)
@@ -34,6 +32,11 @@ func on_item_drop(_item : Item) -> void:
 							.on_close(_endBookReturn))))))
 	else :
 		super.on_item_drop(_item)
+
+func _sobering() -> void : 
+	tags.add(Tags.TRANSFOPAPER_SOBERING)
+	bag.unloot(Bag.PotionDegrisement)
+	_dialog_sobre()
 
 func _dialog_sobre() -> void:
 	gui.open_dialog_next(Dialog.pnjSay(self, _TEXT_SOBRE)
