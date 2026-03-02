@@ -23,14 +23,17 @@ func on_interact() -> void:
 
 func on_item_drop(item : Item) -> void:
 	if (item.name == Bag.PotionDegrisement and not player.tags.have(Tags.GUARD_HARBOUR_OFFICE_SOBERING)) :
-		bag.unloot(Bag.PotionDegrisement)
-		player.tags.add(Tags.GUARD_HARBOUR_OFFICE_SOBERING)
-		player.tags.remove(Tags.SEARCH_SOBERING_POTION)
-		animation_name = "idle"
-		play_anim_yes()
-		on_interact()
+		gui.doTransition(_sobering)
 	else :
 		super.on_item_drop(item)
+
+func _sobering() -> void:
+	bag.unloot(Bag.PotionDegrisement)
+	player.tags.add(Tags.GUARD_HARBOUR_OFFICE_SOBERING)
+	player.tags.remove(Tags.SEARCH_SOBERING_POTION)
+	animation_name = "idle"
+	play_anim_yes()
+	on_interact()
 
 func on_tag_change() -> void:
 	if (tags.have(Tags.GUARD_HARBOUR_OFFICE_SOBERING)) :
