@@ -29,14 +29,18 @@ func _process(_delta: float) -> void:
 		if _dialog and _dialog.pnj :
 			_pnj_camera.position = _dialog.pnj.global_position + _dialog.pnj.global_transform.basis*Vector3(.2,0,.4) + Vector3(0,.6,0)
 			_pnj_camera.look_at(_dialog.pnj.global_position + Vector3(0,.5,0), Vector3.UP, false)
+			if _dialog.left : 
+				_player_camera.position = _dialog.pnj.global_position + _dialog.pnj.global_transform.basis*Vector3(-.2,0,.4) + Vector3(0,.6,0)
+				_player_camera.look_at(_dialog.pnj.global_position + Vector3(0,.5,0), Vector3.UP, false)
+				
 			if _dialog.pnj.name == "Kindle":
 				_pnj_camera.position = _dialog.pnj.global_position + _dialog.pnj.global_transform.basis*Vector3(.1,0,1.2) + Vector3(0,1.2,0)
 				_pnj_camera.look_at(_dialog.pnj.global_position + Vector3(0,1,0), Vector3.UP, false)
 
 func open(dialog : Dialog) -> void :
 	_dialog = dialog
-	_player_view.visible = _dialog.pnj == null
-	_pnj_view.visible = _dialog.pnj != null
+	_player_view.visible = _dialog.pnj == null or dialog.left
+	_pnj_view.visible = _dialog.pnj != null and !dialog.left
 	_text.clear()
 	_text.append_text(dialog.text)
 	_option_button1.hide()

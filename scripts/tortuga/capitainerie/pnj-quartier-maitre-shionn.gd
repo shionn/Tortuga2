@@ -48,7 +48,7 @@ func on_item_drop(item : Item) -> void:
 
 func _start_search_equip() -> void :
 	if not tags.have(Tags.FOUND_CARTOGRAPH) : tags.add(Tags.SEARCH_CARTOGRAPH)
-	if not tags.have(Tags.FOUND_ECLAIREUR) : tags.add(Tags.SEARCH_ECLAIREUR)
+	if not tags.have(Tags.FOUND_WARRIOR) : tags.add(Tags.SEARCH_WARRIOR)
 	if not tags.have(Tags.FOUND_NAVIGATEUR) : tags.add(Tags.SEARCH_NAVIGATEUR)
 	if not tags.have(Tags.FOUND_QUARTIER_MAITRE) : tags.add(Tags.SEARCH_QUARTIER_MAITRE)
 
@@ -81,6 +81,6 @@ const _TEXT_BATEAU_2 = """Il te faut :
 [ul]
 Un [color=red]cartographe[/color], quelqu'un de suffisamment compétent pour lire et faire des cartes.
 Un [color=red]navigateur[/color], avec de la bouteille, qui connaît bien ces eaux et ces pièges.
-Un [color=red]éclaireur[/color], pour explorer les îles avant toi et savoir où tu mets les pieds.
+Un [color=red]combattant[/color], pour explorer les îles et vous protégé des dangers potentiels.
 Un [color=red]chef d'équipage[/color], pour tenir tout ce monde et qu'il ne fasse pas de connerie. 
 [/ul]"""

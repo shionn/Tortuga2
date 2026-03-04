@@ -17,6 +17,10 @@ func on_interact() -> void:
 				.next(Dialog.pnjSay(self, _TEXT_PICKAXE).on_close(func():tags.add(Tags.ALLOW_PICKAXE))),
 			func() : return bag.contain(Bag.ListInvocationVent) and not bag.contain(Bag.Pioche))
 		.option_search_cartograph()
+		.option_dialog(Dialog.SEARCH_WARRIOR[0],
+			Dialog.playerSay(player, Dialog.SEARCH_WARRIOR[1])
+				.next(Dialog.pnjSay(self, _TEXT_SEARCH_WARRIOR)),
+			Dialog.SEARCH_WARRIOR_CONDITION(self))
 	)
 
 const _TEXT = """Bonjour. 
@@ -27,3 +31,5 @@ Actuellement l'armurerie est fermée, nous ouvrons quand les tambours de guerre 
 const _TEXT_PICKAXE = """Une pioche ? C’est pas une arme, enfin certain s’en servent comme une arme mais ca vaut pas une hache. 
 
 Ouai j’en ai une qui traine prend la si tu veux."""
+
+const _TEXT_SEARCH_WARRIOR = "Oui j’aime me battre, et ta proposition est tentante. Mais je dois aussi protéger MES haches ! Et puis whisp m’as promis qu’on va repartir en guerre dans peu de temps."

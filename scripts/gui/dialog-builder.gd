@@ -92,6 +92,11 @@ const  SEARCH_BOOK: Array[String] = ["Livre ?", "Je cherche un livre rouge. Il a
 Il m'a dis qu'il etais la hier soir."]
 static func SEARCH_BOOK_CONDITION(_pnj:PNJ) : return func(): return _pnj.tags.have(Tags.SEARCH_BOOK_TRANSFOPAPER) and not _pnj.bag.contain(Bag.LivreTransfo)
 
+const SEARCH_WARRIOR: Array[String] = ["Combattant ?", "Pour explorer les îles alentour, je cherche un combattant. Quelqu’un de fort, qui n’a peur de rien. 
+Est-ce que cela t'intéresse ?",
+"Désolé je n'aime pas me battre. Orco est un bagarreur, mais ce n'est pas le seul sur l'île. Kazrog n'est pas en reste non plus."]
+static func SEARCH_WARRIOR_CONDITION(_pnj:PNJ) : return func(): return _pnj.tags.have(Tags.SEARCH_WARRIOR) and not _pnj.tags.have(Tags.FOUND_WARRIOR)
+
 func option_search_forbid_fruit()                  -> Dialog : return _option_default(SEARCH_FORBID_FRUIT_CONDITION(pnj),          SEARCH_FORBID_FRUIT)
 func option_search_forbid_fruit_montain()          -> Dialog : return _option_default(SEARCH_FORBID_FRUIT_MOUNTAIN_CONDITION(pnj), SEARCH_FORBID_FRUIT_MOUNTAIN)
 func option_search_forbid_fruit_montain_teleport() -> Dialog : return _option_default(SEARCH_TELEPORT_CRYSTAL_CONDITION(pnj),      SEARCH_TELEPORT_CRYSTAL)
@@ -100,6 +105,7 @@ func option_hung_connut_search_wood()              -> Dialog : return _option_de
 func option_hung_connut_search_houblon()           -> Dialog : return _option_default(SEARCH_HOUBLON_CONDITION(pnj),               SEARCH_HOUBLON)
 func option_search_wind()                          -> Dialog : return _option_default(NO_WIND_CONDITION(pnj),                      NO_WIND)
 func option_search_cartograph()                    -> Dialog : return _option_default(SEARCH_CARTOGRAPH_CONDITION(pnj),            SEARCH_CARTOGRAPH)
+func option_search_warrior()                       -> Dialog : return _option_default(SEARCH_WARRIOR_CONDITION(pnj),               SEARCH_WARRIOR)
 
 
 

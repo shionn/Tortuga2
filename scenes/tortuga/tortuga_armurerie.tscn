@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bqwr1sdl4wvhs"]
+[gd_scene load_steps=33 format=3 uid="uid://bqwr1sdl4wvhs"]
 
 [ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="1_egqyo"]
 [ext_resource type="PackedScene" uid="uid://diuwrvkauw1fs" path="res://assets/town/walls/wall.glb" id="1_ndcds"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://cfukl3sntctpo" path="res://scripts/tortuga/armurerie/pickaxe.gd" id="5_wbxmk"]
 [ext_resource type="PackedScene" uid="uid://dsqb6308w0ec1" path="res://assets/town/road/road.glb" id="6_cjaaf"]
 [ext_resource type="PackedScene" uid="uid://bv1khuvcbts65" path="res://assets/pirate/props/cannon-ball.glb" id="7_mckex"]
+[ext_resource type="Script" uid="uid://kkx54125l5g2" path="res://scripts/tortuga/armurerie/hache-kazrog.gd" id="8_4cps0"]
 [ext_resource type="PackedScene" uid="uid://cs3boqt0gh4up" path="res://assets/town/props/stall.glb" id="8_bwvbw"]
 [ext_resource type="PackedScene" uid="uid://b5xtrnp1f2eg7" path="res://assets/pirate/props/bottle.glb" id="8_h4toq"]
 [ext_resource type="PackedScene" uid="uid://cad1yc7p0hvwn" path="res://assets/low-poly-rpg-item/axe.glb" id="9_6ujrv"]
@@ -31,6 +32,9 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yy2qo"]
 size = Vector3(1, 4.1, 2.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cxml0"]
+size = Vector3(0.2, 2.5, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4cps0"]
 size = Vector3(2, 1, 6)
@@ -60,6 +64,16 @@ script = ExtResource("5_wbxmk")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="pickaxe/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, -1.7763568e-15, 0, -2.9842795e-13, 1, 1.9073486e-06, 0.75, -0.04999733)
 shape = SubResource("BoxShape3D_yy2qo")
+
+[node name="axe2" parent="." instance=ExtResource("9_6ujrv")]
+transform = Transform3D(0.27979547, -0.10823347, 0, 0.10823347, 0.27979547, 0, 0, 0, 0.29999998, -1.9, 0.44994578, 1)
+script = ExtResource("8_4cps0")
+
+[node name="Area3D" type="Area3D" parent="axe2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="axe2/Area3D"]
+transform = Transform3D(1, -2.9802322e-08, 0, 2.9802322e-08, 1, 0, 0, 0, 0.999973, 2.861023e-06, -0.34999895, -1.66893e-06)
+shape = SubResource("BoxShape3D_cxml0")
 
 [node name="props" type="Node3D" parent="."]
 
