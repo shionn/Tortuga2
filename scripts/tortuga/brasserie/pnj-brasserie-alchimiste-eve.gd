@@ -22,6 +22,7 @@ func on_interact() -> void:
 			func(): return tags.have(Tags.SEARCH_SOBERING_POTION) and tags.have(Tags.BRASSERIE_HAVE_SOBERING_POTION)
 		)
 		.option_search_cartograph()
+		.option_search_warrior()
 	)
 
 func on_item_drop(item : Item) -> void:

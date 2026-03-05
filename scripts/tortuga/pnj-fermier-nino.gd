@@ -28,6 +28,7 @@ func on_interact() -> void:
 		)
 		.option_search_wind()
 		.option_search_cartograph()
+		.option_search_warrior()
 	)
 
 

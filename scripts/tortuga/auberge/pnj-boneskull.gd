@@ -17,6 +17,8 @@ func on_interact() -> void:
 				.next(Dialog.pnjSay(self, _TEXT_4).on_open(play_anim_no)),
 			func(): return bag.contain(Bag.ListInvocationVent) and not bag.contain(Bag.Ossement)
 		)
+		.option_search_cartograph()
+		.option_search_warrior()
 		.option_dialog(Dialog.SEARCH_BOOK[0],
 			Dialog.playerSay(player, Dialog.SEARCH_BOOK[1])
 				.next(Dialog.pnjSay(self,_TEXT_BOOK)),

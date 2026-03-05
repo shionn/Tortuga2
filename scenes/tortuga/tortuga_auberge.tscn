@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://c8y6go07dabnn"]
+[gd_scene load_steps=70 format=3 uid="uid://c8y6go07dabnn"]
 
 [ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="1_hrd0d"]
 [ext_resource type="PackedScene" uid="uid://b5i24eo4nrue3" path="res://assets/town/walls/wall-window-shutters.glb" id="2_83rxu"]
@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://r7jj88useudg" path="res://assets/town/walls/wall-detail-cross.glb" id="8_yxo8k"]
 [ext_resource type="PackedScene" uid="uid://dieherj10wt50" path="res://assets/nature/plant/flower/flower_purpleA.glb" id="9_231o3"]
 [ext_resource type="PackedScene" uid="uid://trqh3ys3a2lu" path="res://assets/town/props/stall-bench.glb" id="9_yxo8k"]
-[ext_resource type="Script" uid="uid://brms7hkbq7quj" path="res://scripts/tortuga/auberge/boneskull.gd" id="10_1kr38"]
+[ext_resource type="Script" uid="uid://brms7hkbq7quj" path="res://scripts/tortuga/auberge/pnj-boneskull.gd" id="10_1kr38"]
 [ext_resource type="PackedScene" uid="uid://cyajpvnucy6kj" path="res://assets/town/stairs/stairs-wood.glb" id="10_dqx5n"]
 [ext_resource type="PackedScene" uid="uid://dlgo6cpnx2blx" path="res://assets/food-kit/soda-glass.glb" id="10_u3s5o"]
 [ext_resource type="PackedScene" uid="uid://baslvpyulsodd" path="res://assets/character/graveyard/character-skeleton.glb" id="11_3lbvq"]
@@ -29,7 +29,9 @@
 [ext_resource type="PackedScene" uid="uid://btvgobyqm6q5i" path="res://assets/town/walls/wall-doorway-round.glb" id="12_vsl2h"]
 [ext_resource type="PackedScene" uid="uid://wsxyy7oeifnl" path="res://assets/sketchfab/pirate-asset-pack/hook.glb" id="12_w1ok7"]
 [ext_resource type="PackedScene" uid="uid://ce020gq54lbgk" path="res://assets/sketchfab/pirate_hat.glb" id="13_lmn3h"]
+[ext_resource type="Script" uid="uid://d0ol2kc7b61ca" path="res://scripts/tortuga/auberge/pnj-auberge-kazrog.gd" id="14_w8jr4"]
 [ext_resource type="PackedScene" uid="uid://cgwwol2ja1lfe" path="res://assets/town/props/overhang.glb" id="15_4iy6t"]
+[ext_resource type="PackedScene" uid="uid://cs7q7slxxr7jt" path="res://assets/character/dungeon/character-orc.glb" id="15_fhi8l"]
 [ext_resource type="PackedScene" uid="uid://fxju6y015d38" path="res://assets/low-poly-rpg-item/scroll-2.glb" id="15_ilbcv"]
 [ext_resource type="Script" uid="uid://b6m4fy6hh0b85" path="res://scripts/tortuga/auberge/auberge-menu.gd" id="15_pcc0y"]
 [ext_resource type="PackedScene" uid="uid://bl8gqk34ub2cy" path="res://assets/pirate/props/crate-bottles.glb" id="16_0avcf"]
@@ -55,8 +57,13 @@
 [ext_resource type="PackedScene" uid="uid://stlgunkahh47" path="res://assets/crafting-items/bottle-3.glb" id="40_w8jr4"]
 [ext_resource type="PackedScene" uid="uid://ctoomevb22cit" path="res://scenes/props/sign.tscn" id="43_skwom"]
 [ext_resource type="PackedScene" uid="uid://brv33ya43adf8" path="res://scenes/props/stool.tscn" id="44_o63fr"]
+[ext_resource type="PackedScene" uid="uid://bydm3t01eddok" path="res://assets/food-kit/glass.glb" id="50_qex5w"]
+[ext_resource type="Script" uid="uid://ioo42n4n80r0" path="res://scripts/tortuga/auberge/empty-glass.gd" id="51_fy5aw"]
 [ext_resource type="PackedScene" uid="uid://nmvtvksn4a00" path="res://assets/homeinteriorassets/book-red.glb" id="56_upqv7"]
 [ext_resource type="Script" uid="uid://jacsllxwpjli" path="res://scripts/tortuga/auberge/book-transfo.gd" id="57_i3bae"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qex5w"]
+size = Vector3(0.2, 0.3, 0.2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pflt5"]
 size = Vector3(0.25507814, 0.48498535, 0.2275116)
@@ -121,6 +128,58 @@ transform = Transform3D(4.808253e-09, -0.11, 1.6609539e-08, -0.11, -4.808253e-09
 
 [node name="head" parent="pnj-boneskull" instance=ExtResource("13_lmn3h")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0.2, 0)
+
+[node name="pnj-kazrog" parent="." instance=ExtResource("1_hrd0d")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.5, -10, -2.5)
+script = ExtResource("14_w8jr4")
+model = ExtResource("15_fhi8l")
+pnj_name = "Kazrog"
+pnj_role = "Guerrier"
+animation_name = "sit"
+animation_loop = false
+
+[node name="soda-glass2" parent="pnj-kazrog" instance=ExtResource("10_u3s5o")]
+transform = Transform3D(-0.3535534, 0, -0.35355335, 0, 0.5, 0, 0.35355335, 0, -0.3535534, 0, 0.119999886, 0.35000002)
+
+[node name="glass2" parent="pnj-kazrog" instance=ExtResource("50_qex5w")]
+transform = Transform3D(-2.6226834e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.6226834e-08, -0.20000005, 0.119999886, 0.6)
+script = ExtResource("51_fy5aw")
+
+[node name="Area3D" type="Area3D" parent="pnj-kazrog/glass2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pnj-kazrog/glass2/Area3D"]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0.15000057, -9.536743e-07)
+shape = SubResource("BoxShape3D_qex5w")
+
+[node name="glass3" parent="pnj-kazrog" instance=ExtResource("50_qex5w")]
+transform = Transform3D(-2.6226834e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.6226834e-08, 0.20000005, 0.119999886, 0.5)
+script = ExtResource("51_fy5aw")
+
+[node name="Area3D" type="Area3D" parent="pnj-kazrog/glass3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pnj-kazrog/glass3/Area3D"]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0.15000057, -9.536743e-07)
+shape = SubResource("BoxShape3D_qex5w")
+
+[node name="glass4" parent="pnj-kazrog" instance=ExtResource("50_qex5w")]
+transform = Transform3D(-2.6226834e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.6226834e-08, -0.4000001, 0.119999886, 0.7)
+script = ExtResource("51_fy5aw")
+
+[node name="Area3D" type="Area3D" parent="pnj-kazrog/glass4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pnj-kazrog/glass4/Area3D"]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0.15000057, -9.536743e-07)
+shape = SubResource("BoxShape3D_qex5w")
+
+[node name="glass5" parent="pnj-kazrog" instance=ExtResource("50_qex5w")]
+transform = Transform3D(-0.19042811, 0.56322205, 0.080734745, 0.2982684, 0.026314674, 0.5199457, 0.48453382, 0.20515496, -0.2883373, 0.060400724, 0.15649295, 0.6706748)
+script = ExtResource("51_fy5aw")
+
+[node name="Area3D" type="Area3D" parent="pnj-kazrog/glass5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pnj-kazrog/glass5/Area3D"]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0.15000057, -9.536743e-07)
+shape = SubResource("BoxShape3D_qex5w")
 
 [node name="cocktail" parent="." instance=ExtResource("10_u3s5o")]
 transform = Transform3D(0.35355338, 0, -0.35355338, 0, 0.5, 0, 0.35355338, 0, 0.35355338, 1.4598294, 0.38548836, -2.9)
@@ -605,100 +664,104 @@ transform = Transform3D(2.0000002, 1.1115464e-14, -4.3711395e-07, 1.6673193e-14,
 [node name="wall-detail-cross10" parent="Stair/Walls" instance=ExtResource("8_yxo8k")]
 transform = Transform3D(2.0000002, 1.1115464e-14, -4.3711395e-07, 1.6673193e-14, 2, 1.2714605e-07, 4.3711395e-07, -1.2714605e-07, 2.0000002, -5, 2.3841858e-07, -3)
 
-[node name="crate2" parent="Stair" instance=ExtResource("5_wgia6")]
+[node name="Crates" type="Node3D" parent="Stair"]
+
+[node name="crate2" parent="Stair/Crates" instance=ExtResource("5_wgia6")]
 transform = Transform3D(-0.5, 6.600236e-15, 4.371139e-08, 0, 0.5, -1.509958e-07, -4.371139e-08, -1.509958e-07, -0.5, 3.6999998, 0.4000001, -0.59999985)
 
-[node name="crate3" parent="Stair" instance=ExtResource("5_wgia6")]
+[node name="crate3" parent="Stair/Crates" instance=ExtResource("5_wgia6")]
 transform = Transform3D(-0.5, 6.600236e-15, 4.371139e-08, 0, 0.5, -1.509958e-07, -4.371139e-08, -1.509958e-07, -0.5, 3.6999998, 0, -0.59999996)
 
-[node name="stall-bench2" parent="Stair" instance=ExtResource("9_yxo8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 1.5)
+[node name="Tables" type="Node3D" parent="Stair"]
 
-[node name="stall-bench3" parent="Stair" instance=ExtResource("9_yxo8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6, 0, 1.5)
-
-[node name="stall-bench4" parent="Stair" instance=ExtResource("9_yxo8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 0, 1.5)
-
-[node name="stall-bench5" parent="Stair" instance=ExtResource("9_yxo8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6000001, 0, 1.5)
-
-[node name="stall2" parent="Stair" instance=ExtResource("6_08fns")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1.5)
-
-[node name="stall-bench6" parent="Stair" instance=ExtResource("9_yxo8k")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.3, 0, -1.5999999)
-
-[node name="stall-bench7" parent="Stair" instance=ExtResource("9_yxo8k")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.3, 0, -0.39999995)
-
-[node name="stall4" parent="Stair" instance=ExtResource("6_08fns")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.3, 0, -1)
-
-[node name="stall-bench10" parent="Stair" instance=ExtResource("9_yxo8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5999998, 0, -0.5)
-
-[node name="stall-bench11" parent="Stair" instance=ExtResource("9_yxo8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39999995, 0, -0.5)
-
-[node name="stall6" parent="Stair" instance=ExtResource("6_08fns")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9999999, 0, -0.5)
-
-[node name="stall-bench12" parent="Stair" instance=ExtResource("9_yxo8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5999998, 0, -3.5)
-
-[node name="stall-bench13" parent="Stair" instance=ExtResource("9_yxo8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39999995, 0, -3.5)
-
-[node name="stall7" parent="Stair" instance=ExtResource("6_08fns")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9999999, 0, -3.5)
-
-[node name="stall-bench14" parent="Stair" instance=ExtResource("9_yxo8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4000002, 0, -3.5)
-
-[node name="stall-bench15" parent="Stair" instance=ExtResource("9_yxo8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6, 0, -3.5)
-
-[node name="stall8" parent="Stair" instance=ExtResource("6_08fns")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0000001, 0, -3.5)
-
-[node name="stall-bench16" parent="Stair" instance=ExtResource("9_yxo8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4000002, 0, -0.5)
-
-[node name="stall-bench17" parent="Stair" instance=ExtResource("9_yxo8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6, 0, -0.5)
-
-[node name="stall9" parent="Stair" instance=ExtResource("6_08fns")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0000001, 0, -0.5)
-
-[node name="stall-bench18" parent="Stair" instance=ExtResource("9_yxo8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4000002, 0, -1.5)
-
-[node name="stall-bench19" parent="Stair" instance=ExtResource("9_yxo8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6, 0, -1.5)
-
-[node name="stall10" parent="Stair" instance=ExtResource("6_08fns")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0000001, 0, -1.5)
-
-[node name="stall-bench20" parent="Stair" instance=ExtResource("9_yxo8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5999998, 0, -2.5)
-
-[node name="stall-bench21" parent="Stair" instance=ExtResource("9_yxo8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39999998, 0, -2.5)
-
-[node name="stall11" parent="Stair" instance=ExtResource("6_08fns")]
+[node name="stall11" parent="Stair/Tables" instance=ExtResource("6_08fns")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9999999, 0, -2.5)
 
-[node name="stall-bench8" parent="Stair" instance=ExtResource("9_yxo8k")]
+[node name="stall-bench2" parent="Stair/Tables" instance=ExtResource("9_yxo8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 1.5)
+
+[node name="stall-bench3" parent="Stair/Tables" instance=ExtResource("9_yxo8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6, 0, 1.5)
+
+[node name="stall-bench4" parent="Stair/Tables" instance=ExtResource("9_yxo8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 0, 1.5)
+
+[node name="stall-bench5" parent="Stair/Tables" instance=ExtResource("9_yxo8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6000001, 0, 1.5)
+
+[node name="stall2" parent="Stair/Tables" instance=ExtResource("6_08fns")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1.5)
+
+[node name="stall-bench6" parent="Stair/Tables" instance=ExtResource("9_yxo8k")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.3, 0, -1.5999999)
+
+[node name="stall-bench7" parent="Stair/Tables" instance=ExtResource("9_yxo8k")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.3, 0, -0.39999995)
+
+[node name="stall4" parent="Stair/Tables" instance=ExtResource("6_08fns")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.3, 0, -1)
+
+[node name="stall-bench10" parent="Stair/Tables" instance=ExtResource("9_yxo8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5999998, 0, -0.5)
+
+[node name="stall-bench11" parent="Stair/Tables" instance=ExtResource("9_yxo8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39999995, 0, -0.5)
+
+[node name="stall6" parent="Stair/Tables" instance=ExtResource("6_08fns")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9999999, 0, -0.5)
+
+[node name="stall-bench12" parent="Stair/Tables" instance=ExtResource("9_yxo8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5999998, 0, -3.5)
+
+[node name="stall-bench13" parent="Stair/Tables" instance=ExtResource("9_yxo8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39999995, 0, -3.5)
+
+[node name="stall7" parent="Stair/Tables" instance=ExtResource("6_08fns")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9999999, 0, -3.5)
+
+[node name="stall-bench14" parent="Stair/Tables" instance=ExtResource("9_yxo8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4000002, 0, -3.5)
+
+[node name="stall-bench15" parent="Stair/Tables" instance=ExtResource("9_yxo8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6, 0, -3.5)
+
+[node name="stall8" parent="Stair/Tables" instance=ExtResource("6_08fns")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0000001, 0, -3.5)
+
+[node name="stall-bench16" parent="Stair/Tables" instance=ExtResource("9_yxo8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4000002, 0, -0.5)
+
+[node name="stall-bench17" parent="Stair/Tables" instance=ExtResource("9_yxo8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6, 0, -0.5)
+
+[node name="stall9" parent="Stair/Tables" instance=ExtResource("6_08fns")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0000001, 0, -0.5)
+
+[node name="stall-bench18" parent="Stair/Tables" instance=ExtResource("9_yxo8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4000002, 0, -1.5)
+
+[node name="stall-bench19" parent="Stair/Tables" instance=ExtResource("9_yxo8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6, 0, -1.5)
+
+[node name="stall10" parent="Stair/Tables" instance=ExtResource("6_08fns")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0000001, 0, -1.5)
+
+[node name="stall-bench20" parent="Stair/Tables" instance=ExtResource("9_yxo8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5999998, 0, -2.5)
+
+[node name="stall-bench21" parent="Stair/Tables" instance=ExtResource("9_yxo8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39999998, 0, -2.5)
+
+[node name="stall-bench8" parent="Stair/Tables" instance=ExtResource("9_yxo8k")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.3, 0, -3.6)
 
-[node name="stall-bench9" parent="Stair" instance=ExtResource("9_yxo8k")]
+[node name="stall-bench9" parent="Stair/Tables" instance=ExtResource("9_yxo8k")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.3, 0, -2.3999999)
 
-[node name="stall5" parent="Stair" instance=ExtResource("6_08fns")]
+[node name="stall5" parent="Stair/Tables" instance=ExtResource("6_08fns")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.3, 0, -3)
 
-[node name="stall3" parent="Stair" instance=ExtResource("6_08fns")]
+[node name="stall3" parent="Stair/Tables" instance=ExtResource("6_08fns")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1.5)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Stair"]
@@ -716,7 +779,7 @@ transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 2.99
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1, 0.3813374, -3.6)
 
 [node name="bottle3" parent="Stair" instance=ExtResource("18_css0i")]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -1, 0.3813374, -2.6999998)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -1, 0.3813374, -3.3999999)
 
 [node name="bottle4" parent="Stair" instance=ExtResource("18_css0i")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -1, 0.3813374, -0.2999998)

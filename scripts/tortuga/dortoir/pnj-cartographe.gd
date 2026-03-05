@@ -23,6 +23,7 @@ func on_interact() -> void:
 			Dialog.playerSay(player, Dialog.SEARCH_CARTOGRAPH[1])
 				.next(Dialog.pnjSay(self, _TEXT_SEARCH_CARTOGRAPH)),
 			Dialog.SEARCH_CARTOGRAPH_CONDITION(self))
+		.option_search_warrior()
 	)
 
 func on_item_drop(item : Item) -> void:

@@ -22,6 +22,7 @@ func on_interact() -> void:
 			func (): return kindle.follow && global_position.distance_to(kindle.global_position) < 10
 		)
 		.option_search_cartograph()
+		.option_search_warrior()
 	)
 	
 func on_item_drop(_item : Item) -> void:

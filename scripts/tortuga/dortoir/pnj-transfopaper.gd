@@ -46,7 +46,9 @@ func _dialog_sobre() -> void:
 					.next(Dialog.pnjSay(self, _TEXT_ASK_ABOUT_BOOK_ANSWER).on_close(
 						func() : tags.add(Tags.SEARCH_BOOK_TRANSFOPAPER))))),
 			Dialog.SEARCH_CARTOGRAPH_CONDITION(self)
-		))
+		)
+		.option_search_warrior()
+	)
 
 func _endBookReturn() -> void:
 	bag.unloot(Bag.LivreTransfo)

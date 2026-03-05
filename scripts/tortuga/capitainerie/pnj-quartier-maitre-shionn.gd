@@ -28,6 +28,8 @@ func on_interact() -> void:
 						.on_close(_start_search_equip))),
 			func(): return bag.contain(Bag.ParcheminHungConnut) and quest4_enable
 		)
+		.option_search_cartograph()
+		.option_search_warrior()
 	)
 
 func on_item_drop(item : Item) -> void:

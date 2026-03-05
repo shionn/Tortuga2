@@ -12,6 +12,8 @@ class_name  DialogNext
 @onready var _option_button3 := $PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/OptionButton3 as Button
 @onready var _option_button4 := $PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/OptionButton4 as Button
 @onready var _option_button5 := $PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/OptionButton5 as Button
+@onready var _option_button6 := $PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/OptionButton6 as Button
+@onready var _option_button7 := $PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/OptionButton7 as Button
 @onready var _close_butonn := $PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/CloseButton as Button
 
 var _dialog : Dialog
@@ -20,6 +22,8 @@ var _option2 : DialogOption
 var _option3 : DialogOption
 var _option4 : DialogOption
 var _option5 : DialogOption
+var _option6 : DialogOption
+var _option7 : DialogOption
 
 func _process(_delta: float) -> void:
 	if visible: 
@@ -48,6 +52,8 @@ func open(dialog : Dialog) -> void :
 	_option_button3.hide()
 	_option_button4.hide()
 	_option_button5.hide()
+	_option_button6.hide()
+	_option_button7.hide()
 	for opt : DialogOption in dialog.options:
 		if opt.condition.call():
 			_set_option(opt)
@@ -76,6 +82,14 @@ func _set_option(opt:DialogOption) -> void:
 		_option5 = opt
 		_option_button5.text = opt.title
 		_option_button5.show()
+	elif not _option_button6.visible:
+		_option6 = opt
+		_option_button6.text = opt.title
+		_option_button6.show()
+	elif not _option_button7.visible:
+		_option7 = opt
+		_option_button7.text = opt.title
+		_option_button7.show()
 
 
 func _on_close_button_pressed() -> void:
@@ -102,3 +116,11 @@ func _on_option_button_4_pressed() -> void:
 func _on_option_button_5_pressed() -> void:
 	self.hide()
 	_option5.action.call()
+
+func _on_option_button_6_pressed() -> void:
+	self.hide()
+	_option6.action.call()
+
+func _on_option_button_7_pressed() -> void:
+	self.hide()
+	_option7.action.call()

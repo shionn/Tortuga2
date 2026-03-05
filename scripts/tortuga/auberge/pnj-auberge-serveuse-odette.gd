@@ -13,6 +13,7 @@ func on_interact() -> void:
 			func (): return tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON) and not bag.contain(Bag.Houblon))
 		.option_search_wind()
 		.option_search_cartograph()
+		.option_search_warrior()
 		.option_dialog(Dialog.SEARCH_BOOK[0], 
 			Dialog.playerSay(player, Dialog.SEARCH_BOOK[1])
 				.next(Dialog.pnjSay(self, _TEXT_BOOK)),

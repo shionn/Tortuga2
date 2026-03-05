@@ -15,6 +15,7 @@ func on_interact() -> void:
 			.option_hung_connut_search_houblon()
 			.option_search_wind()
 			.option_search_cartograph()
+			.option_search_warrior()
 		)
 	else :
 		gui.open_dialog_next(Dialog.pnjSay(self, _TEXT)

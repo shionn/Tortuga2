@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://balodqhfj5pj3"]
+[gd_scene load_steps=64 format=3 uid="uid://balodqhfj5pj3"]
 
 [ext_resource type="Script" uid="uid://bkiatc143qsnp" path="res://scripts/gui/gui.gd" id="1_0fbet"]
 [ext_resource type="Script" uid="uid://bc3yfthowjjmn" path="res://scripts/gui/score.gd" id="2_eaefa"]
@@ -56,6 +56,7 @@
 [ext_resource type="Script" uid="uid://1gaom75emvkt" path="res://scripts/gui/cheat.gd" id="43_x3l1j"]
 [ext_resource type="Texture2D" uid="uid://cgedwc15v581d" path="res://assets/gui/papers/paper-09.png" id="45_bbm65"]
 [ext_resource type="Texture2D" uid="uid://b33pb01m44r50" path="res://assets/gui/fanatisy-magic-set/book-h-48.png" id="48_5llql"]
+[ext_resource type="Texture2D" uid="uid://m7ue3vnburhu" path="res://assets/gui/survival-tools/axe.png" id="51_lnk63"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rxp0"]
 bg_color = Color(1, 0.94509804, 0.8235294, 1)
@@ -250,6 +251,18 @@ tooltip_text = "Option"
 text = "Option"
 
 [node name="OptionButton5" type="Button" parent="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Option"
+text = "Option"
+
+[node name="OptionButton6" type="Button" parent="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Option"
+text = "Option"
+
+[node name="OptionButton7" type="Button" parent="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Option"
@@ -1012,6 +1025,17 @@ texture_normal = ExtResource("19_ukjlc")
 script = ExtResource("11_s1h2m")
 description = "Ce fruit pousse sur un arbre inaccessible. Il nous est défendu. "
 
+[node name="HacheKazrog" type="TextureButton" parent="Items"]
+layout_mode = 0
+offset_left = -155.0
+offset_top = 148.0
+offset_right = -107.0
+offset_bottom = 196.0
+tooltip_text = "Hache"
+texture_normal = ExtResource("51_lnk63")
+script = ExtResource("11_s1h2m")
+description = "La hache de Kazrog"
+
 [node name="Houblon" type="TextureButton" parent="Items"]
 layout_mode = 0
 offset_left = -27.0
@@ -1229,10 +1253,10 @@ description = "Plume d'un oiseau géant vivant dans les montagnes de tortuga."
 
 [node name="Pioche" type="TextureButton" parent="Items"]
 layout_mode = 0
-offset_left = -155.0
-offset_top = 148.0
-offset_right = -107.0
-offset_bottom = 196.0
+offset_left = -126.0
+offset_top = 156.0
+offset_right = -78.0
+offset_bottom = 204.0
 tooltip_text = "Pioche"
 texture_normal = ExtResource("32_feoca")
 script = ExtResource("11_s1h2m")
@@ -1374,16 +1398,17 @@ text = "Teleport Escalator"
 
 [node name="TeleportHungConnut" type="Button" parent="Cheat/Panel"]
 layout_mode = 0
-offset_top = 96.0
+offset_top = 224.0
 offset_right = 200.0
-offset_bottom = 128.0
+offset_bottom = 256.0
 text = "Teleport HungConnut"
 
 [node name="TeleportTwinIsland" type="Button" parent="Cheat/Panel"]
 layout_mode = 0
-offset_top = 224.0
-offset_right = 200.0
-offset_bottom = 256.0
+offset_left = 200.0
+offset_top = 96.0
+offset_right = 400.0
+offset_bottom = 128.0
 text = "Teleport TwinIsland"
 
 [node name="TeleportTeleportStone" type="Button" parent="Cheat/Panel"]
@@ -1418,6 +1443,8 @@ text = "Sauvegarder"
 [connection signal="pressed" from="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/OptionButton3" to="DialogNext" method="_on_option_button_3_pressed"]
 [connection signal="pressed" from="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/OptionButton4" to="DialogNext" method="_on_option_button_4_pressed"]
 [connection signal="pressed" from="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/OptionButton5" to="DialogNext" method="_on_option_button_5_pressed"]
+[connection signal="pressed" from="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/OptionButton6" to="DialogNext" method="_on_option_button_6_pressed"]
+[connection signal="pressed" from="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/OptionButton7" to="DialogNext" method="_on_option_button_7_pressed"]
 [connection signal="pressed" from="DialogNext/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/CloseButton" to="DialogNext" method="_on_close_button_pressed"]
 [connection signal="pressed" from="DialogAndImg/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="." method="_on_close_dialog_and_img_button_pressed"]
 [connection signal="pressed" from="Image/Panel/MarginContainer/VBoxContainer/CloseDialogButton" to="Image" method="_on_close_dialog_button_pressed"]

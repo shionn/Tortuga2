@@ -21,6 +21,7 @@ func on_interact() -> void:
 			Dialog.playerSay(player,"Il te faut un mojito ?").next(Dialog.pnjSay(self, _TEXT_MOJITO)),
 			func() : return bag.contain(Bag.ListInvocationVent))
 		.option_search_cartograph()
+		.option_search_warrior()
 	)
 
 func on_item_drop(_item : Item) -> void:

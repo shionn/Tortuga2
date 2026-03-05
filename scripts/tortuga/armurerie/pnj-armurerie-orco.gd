@@ -32,4 +32,4 @@ const _TEXT_PICKAXE = """Une pioche ? C’est pas une arme, enfin certain s’en
 
 Ouai j’en ai une qui traine prend la si tu veux."""
 
-const _TEXT_SEARCH_WARRIOR = "Oui j’aime me battre, et ta proposition est tentante. Mais je dois aussi protéger MES haches ! Et puis whisp m’as promis qu’on va repartir en guerre dans peu de temps."
+const _TEXT_SEARCH_WARRIOR = "Oui j’aime me battre, et ta proposition est tentante.q Mais je dois aussi protéger MES haches ! Et puis whisp m’as promis qu’on va repartir en guerre dans peu de temps."
