@@ -97,7 +97,7 @@ const _TEXT_ASK_ABOUT_BOOK_ANSWER = """Oui je ne retrouve plus mon livre, je l�
 C’est un livre rouge, avec des symboles runiques dessus. C’est très important que je le retrouve, si il tombe entre de mauvaises mains ça serait une catastrophe."""
 
 const _TEXT_RETURN_BOOK_1 = """Merci d'avoir retrouvé mon carnet, mais c’est quoi cette odeur ?"""
-const _TEXT_RETURN_BOOK_2 = """J’ai retrouvé le carnet dans une flaque de vomi. """
+const _TEXT_RETURN_BOOK_2 = """J’ai retrouvé le carnet comme ça. Vous avez dû renverser de l'alcool hier soir."""
 const _TEXT_RETURN_BOOK_3 = """Ha ben super alors, enfin au moins je l’ai maintenant. Merci.
 
 Comment puis-je te remercier ?"""
