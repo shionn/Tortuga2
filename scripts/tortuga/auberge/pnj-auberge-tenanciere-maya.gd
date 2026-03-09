@@ -3,6 +3,10 @@ extends "res://scripts/pnj.gd"
 @onready var _cocktail = $"../cocktail" as Node3D
 
 func on_interact() -> void:
+	var search_warrior_response = Dialog.SEARCH_WARRIOR[2];
+	if tags.have(Tags.KAZROG_AT_AUBERGE) :
+		search_warrior_response = search_warrior_response + _TEXT_KAZROG_1
+		
 	gui.open_dialog_next(Dialog.pnjSay(self, _TEXT)
 		.option_search_forbid_fruit()
 		.option_search_forbid_fruit_montain()
@@ -15,7 +19,11 @@ func on_interact() -> void:
 			func (): return tags.have(Tags.HUNG_CONNUT_SEARCH_HOUBLON) and not bag.contain(Bag.Houblon))
 		.option_search_wind()
 		.option_search_cartograph()
-		.option_search_warrior()
+		.option_dialog(Dialog.SEARCH_WARRIOR[0],
+			Dialog.playerSay(player, Dialog.SEARCH_WARRIOR[1])
+				.next(Dialog.pnjSay(self, search_warrior_response)),
+			Dialog.SEARCH_WARRIOR_CONDITION(self)
+		)
 		.option_dialog(Dialog.SEARCH_BOOK[0], 
 			Dialog.playerSay(player, Dialog.SEARCH_BOOK[1])
 				.next(Dialog.pnjSay(self, _TEXT_BOOK_1)
@@ -25,6 +33,11 @@ func on_interact() -> void:
 								.on_close(func(): tags.add(Tags.KNOW_MAYA_THROW_BOOK_TRANSFOPAPER))),
 						func(): return tags.have(Tags.KNOW_MAYA_BOOK_TRANSFOPAPER))),
 			Dialog.SEARCH_BOOK_CONDITION(self))
+		.option_dialog("Kazrog bois beaucoup.", 
+			Dialog.playerSay(player, "Kazrog bois beaucoup. Ca ne te dérange pas ?")
+				.next(Dialog.pnjSay(self, _TEXT_KAZROG_2)
+					.on_close(func(): tags.add(Tags.KAZROG_BOIS_TROP_2))),
+			func():return tags.have(Tags.KAZROG_BOIS_TROP_1) and not tags.have(Tags.KAZROG_HAVE_AXE))
 	)
 
 func on_item_drop(item : Item) -> void:
@@ -188,3 +201,8 @@ const _TEXT_BOOK_2 = "Il paraît que tu l'as mis dehors hier soir en le frappant
 const _TEXT_BOOK_3 = """Haa, oui ça me revient. Hier soir Kerim m'a foutu la honte de ma vie. Je lui ai ordonné de ne plus jamais revenir.
 [Rougie]
 J'étais furieuse j’ai pris le premier truc que j’ai trouvé, c’était peut être bien son livre, et je lui ai tapé dessus avec jusqu’à ce qu’il parte. Quand il était enfin dehors, je lui ai jeté le livre dessus."""
+
+const _TEXT_KAZROG_1 = "\n\nKazrog est à l'étage demande lui. Il adore se battre..."
+
+const _TEXT_KAZROG_2 = "C’est un habitué, pour l’instant ça va mais s'il boit trop il s’énerve. Quand il est comme ça, il n’y a que Orco qui peut le calmer. 
+J'espère qu’il arrive bientôt."
