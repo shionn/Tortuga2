@@ -21,7 +21,17 @@ func on_interact() -> void:
 			Dialog.playerSay(player, Dialog.SEARCH_WARRIOR[1])
 				.next(Dialog.pnjSay(self, _TEXT_SEARCH_WARRIOR)),
 			Dialog.SEARCH_WARRIOR_CONDITION(self))
+		.option_dialog("Kazrog bois beaucoup.", 
+			Dialog.playerSay(player, _TEXT_KAZROG_BOIS_TROP)
+				.next(Dialog.pnjSay(self, _TEXT_KAZROG_BOIS_TROP_ANSWER).on_close(_go_auberge)),
+			func(): return tags.have(Tags.KAZROG_BOIS_TROP_1) and tags.have(Tags.KAZROG_BOIS_TROP_1))
 	)
+
+func on_tag_change() -> void:
+	visible = not tags.have(Tags.ORCO_AT_AUBERGE)
+	
+func _go_auberge() -> void : 
+	gui.doTransition(func() : tags.add(Tags.ORCO_AT_AUBERGE))
 
 const _TEXT = """Bonjour. 
 Mon nom est imprononçable pour vous les humains. Vos semblables m'appellent Orco, je suis l'armurier du village. 
@@ -32,4 +42,9 @@ const _TEXT_PICKAXE = """Une pioche ? C’est pas une arme, enfin certain s’en
 
 Ouai j’en ai une qui traine prend la si tu veux."""
 
-const _TEXT_SEARCH_WARRIOR = "Oui j’aime me battre, et ta proposition est tentante.q Mais je dois aussi protéger MES haches ! Et puis whisp m’as promis qu’on va repartir en guerre dans peu de temps."
+const _TEXT_SEARCH_WARRIOR = "Oui j’aime me battre, et ta proposition est tentante. Mais je dois aussi protéger MES haches ! Et puis whisp m’as promis qu’on va repartir en guerre dans peu de temps."
+
+const _TEXT_KAZROG_BOIS_TROP = "Kazrog est à l'auberge en train d'enchaîner les verres. J’ai essayé de la calmer mais il refuse de me parler, tu devrais peut-être aller le voir."
+
+const _TEXT_KAZROG_BOIS_TROP_ANSWER = "Non d’une hache, si il boit trop il va encore tout casser comme hier soir. Et je sais pourquoi il boit, c'est à cause de sa hache confisquée ici. 
+Je vais essayer de le calmer. Ne touchez à rien." 

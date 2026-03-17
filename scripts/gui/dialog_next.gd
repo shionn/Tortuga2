@@ -65,30 +65,37 @@ func _set_option(opt:DialogOption) -> void:
 	if not _option_button1.visible:
 		_option1 = opt
 		_option_button1.text = opt.title
+		_option_button1.tooltip_text = opt.title
 		_option_button1.show()
 	elif not _option_button2.visible:
 		_option2 = opt
 		_option_button2.text = opt.title
+		_option_button2.tooltip_text = opt.title
 		_option_button2.show()
 	elif not _option_button3.visible:
 		_option3 = opt
 		_option_button3.text = opt.title
+		_option_button3.tooltip_text = opt.title
 		_option_button3.show()
 	elif not _option_button4.visible:
 		_option4 = opt
 		_option_button4.text = opt.title
+		_option_button4.tooltip_text = opt.title
 		_option_button4.show()
 	elif not _option_button5.visible:
 		_option5 = opt
 		_option_button5.text = opt.title
+		_option_button5.tooltip_text = opt.title
 		_option_button5.show()
 	elif not _option_button6.visible:
 		_option6 = opt
 		_option_button6.text = opt.title
+		_option_button6.tooltip_text = opt.title
 		_option_button6.show()
 	elif not _option_button7.visible:
 		_option7 = opt
 		_option_button7.text = opt.title
+		_option_button7.tooltip_text = opt.title
 		_option_button7.show()
 
 

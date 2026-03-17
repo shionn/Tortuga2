@@ -1,6 +1,8 @@
 extends PNJ
 
 
+
+
 func on_interact() -> void:
 	if tags.have(Tags.FOUND_WARRIOR) : 
 		gui.open_dialog_next(Dialog.pnjSay(self, _TEXT_1))
@@ -14,6 +16,15 @@ func on_interact() -> void:
 	else :
 		gui.open_dialog_next(Dialog.pnjSay(self, _TEXT_4))
 
+func on_item_drop(item : Item) -> void: 
+	if (item.name == Bag.HacheKazrog) :
+		if (tags.have(Tags.ORCO_AT_AUBERGE)) :
+			player.play_anim_no()
+			gui.open_dialog_next(Dialog.playerSay(player, "Je ne peu pas donner la hache à Kazrog devant Orco !"))
+		else :
+			pass # TODO
+	else :
+		super.on_item_drop(item)
 
 func on_tag_change() -> void:
 	visible = tags.have(Tags.KAZROG_AT_AUBERGE)

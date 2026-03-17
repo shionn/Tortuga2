@@ -67,6 +67,7 @@ func on_interact() -> void:
 
 func on_item_drop(_item : Item) -> void:
 	gui.open_dialog_next(Dialog.pnjSay(self,  "Je n'ai que faire de ça."))
+	# TODO faudrait pas lancer cette animation quand le pnj est assis
 	play_anim_no()
 
 func on_tag_change() -> void:

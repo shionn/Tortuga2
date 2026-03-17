@@ -4,14 +4,23 @@ extends "res://scripts/interactable.gd"
 
 func on_interact() -> void:
 	gui.open_dialog_next(Dialog.playerSay(player, _DESCRIPTION)
-		.next(Dialog.pnjSay(orco, _ORCO_DO_NOT_TOUCH))
+		.option_action("Oui", _on_yes)
+		.option_action("Non", func() : player.play_anim_no())
 	)
-	
-	
-	
-const _DESCRIPTION = "Sur la hache il est écrit : 
 
-[i]Propriété de Kazrog[/i]"
+func _on_yes() -> void : 
+	if (tags.have(Tags.ORCO_AT_AUBERGE)) : 
+		bag.loot(Bag.HacheKazrog)
+	else :
+		gui.open_dialog_next(Dialog.pnjSay(orco, _ORCO_DO_NOT_TOUCH))
+
+func on_item_change() -> void:
+	visible = not bag.contain(Bag.HacheKazrog)
+
+const _DESCRIPTION = "Sur la hache il est écrit : 
+[i]Propriété de Kazrog[/i]
+
+Je la prend ?"
 
 const _ORCO_DO_NOT_TOUCH = "Ne touche pas à ça. 
 

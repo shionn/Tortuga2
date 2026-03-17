@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://c8y6go07dabnn"]
+[gd_scene load_steps=71 format=3 uid="uid://c8y6go07dabnn"]
 
 [ext_resource type="PackedScene" uid="uid://cy4nht2h8osif" path="res://assets/character/pnj.tscn" id="1_hrd0d"]
 [ext_resource type="PackedScene" uid="uid://b5i24eo4nrue3" path="res://assets/town/walls/wall-window-shutters.glb" id="2_83rxu"]
@@ -37,6 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://bl8gqk34ub2cy" path="res://assets/pirate/props/crate-bottles.glb" id="16_0avcf"]
 [ext_resource type="PackedScene" uid="uid://b5xtrnp1f2eg7" path="res://assets/pirate/props/bottle.glb" id="18_css0i"]
 [ext_resource type="PackedScene" uid="uid://dhmb74ebxam80" path="res://assets/town/road/road-wood.glb" id="19_css0i"]
+[ext_resource type="Script" uid="uid://b5s6b2738u6rs" path="res://scripts/tortuga/auberge/pnj-auberge-orco.gd" id="19_fy5aw"]
 [ext_resource type="Script" uid="uid://vrseuhaxautc" path="res://scripts/fix_color.gd" id="20_qc35t"]
 [ext_resource type="PackedScene" uid="uid://ckl0cxjsbj1sn" path="res://assets/town/roof/roof-corner-round.glb" id="22_hij4y"]
 [ext_resource type="PackedScene" uid="uid://ck66mrk1gxs6f" path="res://assets/town/roof/roof-corner-inner.glb" id="23_kj4nn"]
@@ -180,6 +181,15 @@ script = ExtResource("51_fy5aw")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="pnj-kazrog/glass5/Area3D"]
 transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0.15000057, -9.536743e-07)
 shape = SubResource("BoxShape3D_qex5w")
+
+[node name="pnj-orco" parent="." instance=ExtResource("1_hrd0d")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.5, -10, -2.5)
+script = ExtResource("19_fy5aw")
+model = ExtResource("15_fhi8l")
+pnj_name = "Orco"
+pnj_role = "Armurier"
+animation_name = "sit"
+animation_loop = false
 
 [node name="cocktail" parent="." instance=ExtResource("10_u3s5o")]
 transform = Transform3D(0.35355338, 0, -0.35355338, 0, 0.5, 0, 0.35355338, 0, 0.35355338, 1.4598294, 0.38548836, -2.9)
