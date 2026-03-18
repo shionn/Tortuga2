@@ -15,7 +15,10 @@ func _on_yes() -> void :
 		gui.open_dialog_next(Dialog.pnjSay(orco, _ORCO_DO_NOT_TOUCH))
 
 func on_item_change() -> void:
-	visible = not bag.contain(Bag.HacheKazrog)
+	visible = not bag.contain(Bag.HacheKazrog) && not tags.have(Tags.KAZROG_HAVE_AXE)
+
+func on_tag_change() -> void:
+	visible = not bag.contain(Bag.HacheKazrog) && not tags.have(Tags.KAZROG_HAVE_AXE)
 
 const _DESCRIPTION = "Sur la hache il est écrit : 
 [i]Propriété de Kazrog[/i]
