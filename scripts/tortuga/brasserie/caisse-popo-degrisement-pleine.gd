@@ -10,6 +10,7 @@ J'en ai déjà."""))
 		gui.open_dialog_next(Dialog.playerSay(player, """Sur la caisse il est écrit : [i]Potion de dégrisement[/i].
 
 J'en prend une, cela peut toujours servir.""").on_close(func():bag.loot(Bag.PotionDegrisement)))
+		player.play_anim_interact()
 
 func on_tag_change() -> void:
 	visible = player.tags.have(Tags.BRASSERIE_HAVE_SOBERING_POTION)

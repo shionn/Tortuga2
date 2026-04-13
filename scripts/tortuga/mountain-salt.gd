@@ -11,8 +11,10 @@ func on_interact() -> void:
 		tries = tries + 1
 		if randi_range(0,100) > 90 or tries >= 15:
 			bag.loot(Bag.SelDeMontagne)
+			player.play_anim_interact()
 		else :
 			gui.open_dialog_next(Dialog.playerSay(player, "Il n'y a rien d'exploitable."))
+			player.play_anim_no()
 	else : 
-		player.play_anim_no()
 		gui.open_dialog_next(Dialog.playerSay(player, "Ça ressemble à du sel. Mais il me faudrait un outil pour l’extraire."))
+		player.play_anim_no()

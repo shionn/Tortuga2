@@ -15,7 +15,10 @@ func on_interact() -> void:
 			.option_hung_connut_search_houblon()
 			.option_hung_connut_search_wood()
 			.option_search_cartograph()
-			.option_search_warrior()
+			.option_dialog(Dialog.SEARCH_WARRIOR[0], 
+				Dialog.playerSay(player, Dialog.SEARCH_WARRIOR[1]),
+				Dialog.SEARCH_WARRIOR_CONDITION(self)
+			)
 		)
 	elif tags.have(Tags.ORCO_AT_AUBERGE) :
 		gui.open_dialog_next(Dialog.pnjSay(self, _TEXT_3))
