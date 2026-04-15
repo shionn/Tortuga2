@@ -57,6 +57,7 @@ func _endBookReturn() -> void:
 	tags.remove(Tags.KNOW_MAYA_BOOK_TRANSFOPAPER)
 	tags.remove(Tags.KNOW_MAYA_THROW_BOOK_TRANSFOPAPER)
 	tags.add(Tags.FOUND_CARTOGRAPH)
+	gui.append_to_console("Kerim Loralis rejoins l'équipage")
 
 func _sleep() -> void:
 	self.rotation.y = 0

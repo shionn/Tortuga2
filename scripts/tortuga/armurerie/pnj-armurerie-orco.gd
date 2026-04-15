@@ -44,7 +44,7 @@ Ouai j’en ai une qui traine prend la si tu veux."""
 
 const _TEXT_SEARCH_WARRIOR = "Oui j’aime me battre, et ta proposition est tentante. Mais je dois aussi protéger MES haches ! Et puis whisp m’as promis qu’on va repartir en guerre dans peu de temps."
 
-const _TEXT_KAZROG_BOIS_TROP = "Kazrog est à l'auberge en train d'enchaîner les verres. J’ai essayé de la calmer mais il refuse de me parler, tu devrais peut-être aller le voir."
+const _TEXT_KAZROG_BOIS_TROP = "Kazrog est à l'auberge en train d'enchaîner les verres. J’ai essayé de le calmer mais il refuse de me parler, tu devrais peut-être aller le voir."
 
 const _TEXT_KAZROG_BOIS_TROP_ANSWER = "Non d’une hache, si il boit trop il va encore tout casser comme hier soir. Et je sais pourquoi il boit, c'est à cause de sa hache confisquée ici. 
 Je vais essayer de le calmer. Ne touchez à rien." 

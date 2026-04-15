@@ -27,6 +27,12 @@ static func playerSay(_player: Player,_text: String) -> Dialog:
 	d.text = _text
 	d._gui = _player._gui
 	return d
+
+static func info(_text:String)->Dialog:
+	var d = Dialog.new()
+	d.text = _text
+	return d
+
 	
 func option(_option:DialogOption) -> Dialog:
 	options.append(_option)

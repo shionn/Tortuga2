@@ -16,7 +16,8 @@ func on_interact() -> void:
 			.option_hung_connut_search_wood()
 			.option_search_cartograph()
 			.option_dialog(Dialog.SEARCH_WARRIOR[0], 
-				Dialog.playerSay(player, Dialog.SEARCH_WARRIOR[1]),
+				Dialog.playerSay(player, Dialog.SEARCH_WARRIOR[1])
+					.next(Dialog.pnjSay(self,_TEXT_12).on_close(_recruit)),
 				Dialog.SEARCH_WARRIOR_CONDITION(self)
 			)
 		)
@@ -34,7 +35,6 @@ func on_item_drop(item : Item) -> void:
 			player.play_anim_interact()
 			gui.open_dialog_next(Dialog.playerSay(player, _TEXT_10)
 				.next(Dialog.pnjSay(self, _TEXT_11).on_close(_give_back_axe)))
-			pass # TODO
 	else :
 		super.on_item_drop(item)
 
@@ -43,6 +43,10 @@ func _give_back_axe() -> void :
 	tags.add(Tags.KAZROG_HAVE_AXE)
 	tags.remove(Tags.KAZROG_BOIS_TROP_1)
 	tags.remove(Tags.KAZROG_BOIS_TROP_2)
+	
+func _recruit() -> void : 
+	tags.add(Tags.FOUND_WARRIOR)
+	gui.append_to_console("Kazrog rejoins l'équipage")
 
 func on_tag_change() -> void:
 	visible = tags.have(Tags.KAZROG_AT_AUBERGE)
@@ -57,3 +61,4 @@ const _TEXT_10 = "Tiens j’ai récupéré ta hache, ne dis pas à Orco que c’
 const _TEXT_11 = "Merci ma hache, c’est la plus belle, regarde moi ces formes, ces courbes, son tranchant, son équilibre tout est parfait. 
 Orco n’est pas bête, il va vite tout deviner.
 Encore merci, j’ai une dette d’honneur envers toi, demande moi ce que tu veux."
+const _TEXT_12= "Tu m’as rendu ma hache, j’ai une dette d’honneur avec toi, je te suit."

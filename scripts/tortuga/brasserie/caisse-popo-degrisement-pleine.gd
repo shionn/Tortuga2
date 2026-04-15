@@ -13,4 +13,4 @@ J'en prend une, cela peut toujours servir.""").on_close(func():bag.loot(Bag.Poti
 		player.play_anim_interact()
 
 func on_tag_change() -> void:
-	visible = player.tags.have(Tags.BRASSERIE_HAVE_SOBERING_POTION)
+	visible = tags.have(Tags.BRASSERIE_HAVE_SOBERING_POTION)
