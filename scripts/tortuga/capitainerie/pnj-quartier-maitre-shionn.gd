@@ -49,11 +49,18 @@ func on_item_drop(item : Item) -> void:
 		super.on_item_drop(item)
 
 func _start_search_equip() -> void :
+	var text = ""
 	if not tags.have(Tags.FOUND_CARTOGRAPH) : tags.add(Tags.SEARCH_CARTOGRAPH)
+	else: text+= "Kerim Loralis en tans que cartographe.\n"
 	if not tags.have(Tags.FOUND_WARRIOR) : tags.add(Tags.SEARCH_WARRIOR)
+	else: text+= "Kazrog en tans que combattant.\n"
 	if not tags.have(Tags.FOUND_NAVIGATEUR) : tags.add(Tags.SEARCH_NAVIGATEUR)
 	if not tags.have(Tags.FOUND_QUARTIER_MAITRE) : tags.add(Tags.SEARCH_QUARTIER_MAITRE)
-
+	
+	if not text.is_empty():
+		text = "Pour l'instant tu as recruté : [ul]\n" + text + "[/ul]"
+		gui.open_dialog_next(Dialog.pnjSay(self,text));
+	
 const _TEXT = """Bonjour, 
 
 Je suis le chef de la capitainerie. Aucun bateau ne quitte le port sans ma permission. 

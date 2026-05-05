@@ -46,7 +46,7 @@ func open(dialog : Dialog) -> void :
 	_player_view.visible = _dialog.pnj == null or dialog.left
 	_pnj_view.visible = _dialog.pnj != null and !dialog.left
 	_text.clear()
-	_text.append_text(dialog.text)
+	_text.append_text(_fullText())
 	_option_button1.hide()
 	_option_button2.hide()
 	_option_button3.hide()
@@ -60,6 +60,11 @@ func open(dialog : Dialog) -> void :
 	_close_butonn.visible = dialog.close
 	show()
 	if dialog.on_open_action : dialog.on_open_action.call()
+
+func _fullText() -> String: 
+	if _dialog.pnj :
+		return "[color=#666666]"+_dialog.pnj.pnj_name + "[/color]: "+ _dialog.text
+	return "[color=#666666]Vous[/color]: " + _dialog.text
 
 func _set_option(opt:DialogOption) -> void:
 	if not _option_button1.visible:
